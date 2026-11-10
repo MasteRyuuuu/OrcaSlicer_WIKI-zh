@@ -1,0 +1,17 @@
+G layer height = 层高
+G belt printer = 传送带打印机
+G nozzle = 喷嘴
+G layer = 层
+G overhang = 悬垂
+G model = 模型 / 型号
+G filament = 耗材丝
+G dialog = 对话框
+G bridging = 搭桥
+G help = 帮助
+  auto-scale for nozzle = 根据喷嘴自动缩放
+  nozzle temperature = 喷嘴 温度 / 喷嘴温度
+  test model = 测试模型
+  temperature tower = 温度塔
+  temperature calibration = 温度校准
+  nozzle diameter = 喷嘴直径
+  calibration guide = 校准指南

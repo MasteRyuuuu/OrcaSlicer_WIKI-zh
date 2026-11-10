@@ -1,0 +1,448 @@
+{
+"code": [
+[
+"```gcode",
+"PRINT_START BED={bed_temperature_initial_layer_single} EXTRUDER={first_layer_temperature[initial_extruder]}",
+"```"
+],
+[
+"```gcode",
+"M117 Layer {layer_num + 1} of {total_layer_count}",
+"```"
+],
+[
+"```gcode",
+"{if layer_num >= 0}",
+"; From filament {previous_extruder + 1} to filament {next_extruder + 1}",
+"M109 S{new_filament_temp}",
+"{endif}",
+"```"
+],
+[
+"```gcode",
+"{if extrusion_role == \"ExternalPerimeter\"}",
+"M204 S1000",
+"{else}",
+"M204 S3000",
+"{endif}",
+"```"
+],
+[
+"```gcode",
+"{local purge = interpolate_table(nozzle_diameter[0], (0.2, 10), (0.4, 20), (0.8, 40))}",
+"G1 E{purge} F300",
+"```"
+],
+[
+"```gcode",
+"; Print time: {print_time}",
+"; Filament: {used_filament} m, {total_weight} g",
+"```"
+],
+[
+"```text",
+"{input_filename_base}_{filament_type[initial_tool]}_{print_time}.gcode",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "placeholders-by-g-code-field",
+"en": "Placeholders by G-code Field"
+},
+{
+"indent": 0,
+"anchor": "reading-the-tables",
+"en": "Reading the Tables"
+},
+{
+"indent": 0,
+"anchor": "expressions-and-functions",
+"en": "Expressions and Functions"
+},
+{
+"indent": 0,
+"anchor": "common-errors",
+"en": "Common Errors"
+},
+{
+"indent": 0,
+"anchor": "filaments-extruders-and-nozzles",
+"en": "Filaments, Extruders and Nozzles"
+},
+{
+"indent": 0,
+"anchor": "temperatures",
+"en": "Temperatures"
+},
+{
+"indent": 0,
+"anchor": "dimensions",
+"en": "Dimensions"
+},
+{
+"indent": 0,
+"anchor": "print-statistics",
+"en": "Print Statistics"
+},
+{
+"indent": 0,
+"anchor": "objects",
+"en": "Objects"
+},
+{
+"indent": 0,
+"anchor": "plates",
+"en": "Plates"
+},
+{
+"indent": 0,
+"anchor": "presets",
+"en": "Presets"
+},
+{
+"indent": 0,
+"anchor": "timestamps",
+"en": "Timestamps"
+},
+{
+"indent": 0,
+"anchor": "environment",
+"en": "Environment"
+},
+{
+"indent": 0,
+"anchor": "toolhead-position",
+"en": "Toolhead Position"
+},
+{
+"indent": 0,
+"anchor": "placeholders-for-specific-g-code",
+"en": "Placeholders for Specific G-code"
+},
+{
+"indent": 4,
+"anchor": "layer-placeholders",
+"en": "Layer Placeholders"
+},
+{
+"indent": 4,
+"anchor": "filament-start-and-end-g-code",
+"en": "Filament Start and End G-code"
+},
+{
+"indent": 4,
+"anchor": "layer-change-g-code",
+"en": "Layer Change G-code"
+},
+{
+"indent": 4,
+"anchor": "timelapse-and-clumping-detection-g-code",
+"en": "Timelapse and Clumping Detection G-code"
+},
+{
+"indent": 4,
+"anchor": "change-filament-g-code",
+"en": "Change Filament G-code"
+},
+{
+"indent": 4,
+"anchor": "change-extrusion-role-g-code",
+"en": "Change Extrusion Role G-code"
+},
+{
+"indent": 4,
+"anchor": "extrusion-roles",
+"en": "Extrusion Roles"
+},
+{
+"indent": 0,
+"anchor": "file-name-template",
+"en": "File Name Template"
+},
+{
+"indent": 0,
+"anchor": "examples",
+"en": "Examples"
+}
+]
+],
+"img": [
+"![variable_name](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/variable_name.png?raw=true)"
+],
+"link": [
+"#filaments-extruders-and-nozzles",
+"#temperatures",
+"#dimensions",
+"#print-statistics",
+"#objects",
+"#plates",
+"#presets",
+"#timestamps",
+"#environment",
+"#toolhead-position",
+"#layer-placeholders",
+"#filament-start-and-end-g-code",
+"#layer-placeholders",
+"#layer-placeholders",
+"#layer-change-g-code",
+"#layer-placeholders",
+"#timelapse-and-clumping-detection-g-code",
+"#layer-placeholders",
+"#layer-placeholders",
+"#change-filament-g-code",
+"#change-extrusion-role-g-code",
+"#layer-placeholders",
+"#filament-start-and-end-g-code",
+"#layer-placeholders",
+"#filament-start-and-end-g-code",
+"#file-name-template",
+"#expressions-and-functions",
+"#placeholders-by-g-code-field",
+"#file-name-template",
+"#print-statistics",
+"#filament-start-and-end-g-code",
+"printer_basic_information_adaptive_bed_mesh#available-g-code-variables-for-adaptive-bed-mesh-command",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/nightly-builds",
+"printer_multimaterial_idex_iqex",
+"printer_multimaterial_idex_iqex#modes",
+"printer_multimaterial_idex_iqex#mode-g-code",
+"#placeholders-by-g-code-field",
+"#filaments-extruders-and-nozzles",
+"#dimensions",
+"#extrusion-roles",
+"#extrusion-roles",
+"#print-statistics"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Placeholders and Expressions",
+"raw": "Placeholders and Expressions",
+"id": "placeholders-and-expressions",
+"alt": "placeholders-and-expressions"
+},
+{
+"level": 2,
+"en": "Placeholders by G-code Field",
+"raw": "Placeholders by G-code Field",
+"id": "placeholders-by-g-code-field",
+"alt": "placeholders-by-g-code-field"
+},
+{
+"level": 2,
+"en": "Reading the Tables",
+"raw": "Reading the Tables",
+"id": "reading-the-tables",
+"alt": "reading-the-tables"
+},
+{
+"level": 2,
+"en": "Expressions and Functions",
+"raw": "Expressions and Functions",
+"id": "expressions-and-functions",
+"alt": "expressions-and-functions"
+},
+{
+"level": 2,
+"en": "Common Errors",
+"raw": "Common Errors",
+"id": "common-errors",
+"alt": "common-errors"
+},
+{
+"level": 2,
+"en": "Filaments, Extruders and Nozzles",
+"raw": "Filaments, Extruders and Nozzles",
+"id": "filaments-extruders-and-nozzles",
+"alt": "filaments-extruders-and-nozzles"
+},
+{
+"level": 2,
+"en": "Temperatures",
+"raw": "Temperatures",
+"id": "temperatures",
+"alt": "temperatures"
+},
+{
+"level": 2,
+"en": "Dimensions",
+"raw": "Dimensions",
+"id": "dimensions",
+"alt": "dimensions"
+},
+{
+"level": 2,
+"en": "Print Statistics",
+"raw": "Print Statistics",
+"id": "print-statistics",
+"alt": "print-statistics"
+},
+{
+"level": 2,
+"en": "Objects",
+"raw": "Objects",
+"id": "objects",
+"alt": "objects"
+},
+{
+"level": 2,
+"en": "Plates",
+"raw": "Plates",
+"id": "plates",
+"alt": "plates"
+},
+{
+"level": 2,
+"en": "Presets",
+"raw": "Presets",
+"id": "presets",
+"alt": "presets"
+},
+{
+"level": 2,
+"en": "Timestamps",
+"raw": "Timestamps",
+"id": "timestamps",
+"alt": "timestamps"
+},
+{
+"level": 2,
+"en": "Environment",
+"raw": "Environment",
+"id": "environment",
+"alt": "environment"
+},
+{
+"level": 2,
+"en": "Toolhead Position",
+"raw": "Toolhead Position",
+"id": "toolhead-position",
+"alt": "toolhead-position"
+},
+{
+"level": 2,
+"en": "Placeholders for Specific G-code",
+"raw": "Placeholders for Specific G-code",
+"id": "placeholders-for-specific-g-code",
+"alt": "placeholders-for-specific-g-code"
+},
+{
+"level": 3,
+"en": "Layer Placeholders",
+"raw": "Layer Placeholders",
+"id": "layer-placeholders",
+"alt": "layer-placeholders"
+},
+{
+"level": 3,
+"en": "Filament Start and End G-code",
+"raw": "Filament Start and End G-code",
+"id": "filament-start-and-end-g-code",
+"alt": "filament-start-and-end-g-code"
+},
+{
+"level": 3,
+"en": "Layer Change G-code",
+"raw": "Layer Change G-code",
+"id": "layer-change-g-code",
+"alt": "layer-change-g-code"
+},
+{
+"level": 3,
+"en": "Timelapse and Clumping Detection G-code",
+"raw": "Timelapse and Clumping Detection G-code",
+"id": "timelapse-and-clumping-detection-g-code",
+"alt": "timelapse-and-clumping-detection-g-code"
+},
+{
+"level": 3,
+"en": "Change Filament G-code",
+"raw": "Change Filament G-code",
+"id": "change-filament-g-code",
+"alt": "change-filament-g-code"
+},
+{
+"level": 3,
+"en": "Change Extrusion Role G-code",
+"raw": "Change Extrusion Role G-code",
+"id": "change-extrusion-role-g-code",
+"alt": "change-extrusion-role-g-code"
+},
+{
+"level": 3,
+"en": "Extrusion Roles",
+"raw": "Extrusion Roles",
+"id": "extrusion-roles",
+"alt": "extrusion-roles"
+},
+{
+"level": 2,
+"en": "File Name Template",
+"raw": "File Name Template",
+"id": "file-name-template",
+"alt": "file-name-template"
+},
+{
+"level": 2,
+"en": "Examples",
+"raw": "Examples",
+"id": "examples",
+"alt": "examples"
+},
+{
+"level": 3,
+"en": "Start Macro with Temperatures",
+"raw": "Start Macro with Temperatures",
+"id": "start-macro-with-temperatures",
+"alt": "start-macro-with-temperatures"
+},
+{
+"level": 3,
+"en": "Layer Progress",
+"raw": "Layer Progress",
+"id": "layer-progress",
+"alt": "layer-progress"
+},
+{
+"level": 3,
+"en": "Real Tool Changes Only",
+"raw": "Real Tool Changes Only",
+"id": "real-tool-changes-only",
+"alt": "real-tool-changes-only"
+},
+{
+"level": 3,
+"en": "Settings for One Extrusion Role",
+"raw": "Settings for One Extrusion Role",
+"id": "settings-for-one-extrusion-role",
+"alt": "settings-for-one-extrusion-role"
+},
+{
+"level": 3,
+"en": "Value from a Table",
+"raw": "Value from a Table",
+"id": "value-from-a-table",
+"alt": "value-from-a-table"
+},
+{
+"level": 3,
+"en": "Print Summary in the File Header",
+"raw": "Print Summary in the File Header",
+"id": "print-summary-in-the-file-header",
+"alt": "print-summary-in-the-file-header"
+},
+{
+"level": 3,
+"en": "File Name",
+"raw": "File Name",
+"id": "file-name",
+"alt": "file-name"
+}
+],
+"src": "developer_reference/built_in_placeholders_variables.md"
+}

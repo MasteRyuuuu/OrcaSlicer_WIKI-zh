@@ -1,0 +1,6 @@
+H tool change time = 换工具头所需时间
+H filament unload time = 卸载耗材丝的时间
+H filament load time = 装载耗材丝的时间
+G tool change = 换工具头 / 换料
+G filament = 耗材丝
+  advanced settings = 高级设置

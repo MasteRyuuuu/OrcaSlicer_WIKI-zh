@@ -1,0 +1,413 @@
+S0 # V2.5.0 Alpha
+   P: This is the OrcaSlicer V2.5.0 Alpha, **the most feature-packed release in OrcaSlicer's history**, built from more than 950 pull requests by over 140 contributors. You can now extend the slicer with **Python plugins**, print on **belt printers**, design parametric parts in the experimental **Design tab**, blend new colors from the filaments you have loaded with **color mixing**, give surfaces real 3D texture with **Texture Displacement**, and print two to four parts at once on **IDEX and IQEX printers**. On top of that come the new **Speed Dial**, support for the **Bambu Lab H2C and A2L** with mixed nozzle sizes on the H2D and X2D, much faster startup, slicing and G-code export, Precise Seam modifiers, new infill options, and hundreds of fixes.
+   P: **Note:** This is an alpha build for testing. Several of the new features are experimental and may change before the stable release, so back up projects and profiles you care about and please report any problems on GitHub.
+S1 # 🧩 Plugins
+   P: OrcaSlicer 2.5.0 introduces **Python plugins**, a supported way to add your own features to the slicer without maintaining a fork. A plugin can add one-click scripts, step into slicing to reshape layers or rewrite the G-code, add its own tab or docked panel, or react to events like a finished print. Open **Plugins** from the main menu to install a plugin from a file on your computer or from Orca Cloud; a plugin must ask your permission before it reaches outside OrcaSlicer's data folder, goes online or starts other programs. The plugin system is new and its API may still change, so feedback from users and plugin authors is very welcome. [Getting started with plugins]({{L1}}) · [Plugin development guide]({{L2}})
+   P: ☁️ **Find and share plugins on [Orca Cloud]({{L3}}).** Browse the plugins the community has published and subscribe with your Orca Cloud account. OrcaSlicer installs them, offers updates when their authors release new versions, and brings them to every computer you sign in on. Built a plugin of your own? Publish it on Orca Cloud and anyone can use it.
+   1. Python plugins
+   2. Slicing-pipeline plugins
+   3. Plugin settings, globally or per preset
+   4. Plugin tabs, docked panels and windows
+   5. More for plugin authors: events, notifications and app info
+   6. Plugins can load the presets they create right away
+   7. Plugins window
+   8. Permission prompts for plugins
+S2 # ⚡ Speed Dial
+   P: The new **Speed Dial** puts everything in OrcaSlicer one search away: press **Space** to find and run any command, setting or plugin.
+   9. Speed Dial
+   10. Search the Speed Dial in English in any UI language
+S3 # 🎨 Color Mixing
+   P: **Color mixing** blends two or three of your loaded filaments into new colours that print as thin alternating layers, so a few spools can cover a much wider palette. It also powers a new importer for textured and coloured models.
+   11. Color mixing with mixed filaments
+   12. Import textured and coloured models
+S4 # 🧱 Texture Displacement
+   P: **Texture Displacement** stamps a texture onto a model as real, printable relief. When the texture is a colour image, it can also colour the print, mixing filaments to get close to the image's colours.
+   P: ☁️ **More textures on [Orca Cloud]({{L71}}).** Beyond the 40-plus built-in textures, you can download texture packs others have shared on Orca Cloud and publish your own there for everyone to use. A texture pack is a plugin, so it installs, updates and publishes the same way.
+   13. Texture Displacement
+   14. Colour from textures
+   15. Texture packs and image adjustments
+S5 # 🏭 Belt Printing
+   P: This release adds support for belt printers — conveyor ("infinite Z") machines whose gantry is tilted over a moving belt, usually at 45°. Because the belt carries printed material away from the nozzle, a part can be longer than the machine, and a row of parts can print one after another without clearing the bed. Ready-made profiles are included for the Printcepts BabyBelt Pro and the IdeaFormer IR3 V2, plus a Generic Belt Printer you can adapt to other machines such as the CR-30 family. To get started, add one of these printers and slice as usual; the belt options live in Printer settings → Basic information → Belt printer, shown in Advanced mode and above. The [Belt Printing guide]({{L91}}) walks through setup, how slicing for a belt works and what changes in your workflow.
+   16. Belt printer support
+   17. Belt brims
+   18. Supports that land on the belt
+   19. Multi-color belt printing and belt-aware arrange
+   20. Belt preview: designed and raw G-code views
+   21. Belt printer profiles
+   22. Belt printing in the regular builds
+S6 # 👯 iXex Parallel Printing for IDEX & IQEX
+   P: OrcaSlicer can now run printers with independent carriages as parallel printers. On an IDEX (two toolheads on one gantry), a dual-gantry machine, or an IQEX (two toolheads on each of two gantries), every active carriage prints its own copy of the part at the same time — either a straight copy or a mirror image — so one print produces two to four parts. OrcaSlicer slices the part once, shows exactly where each carriage will print, keeps parts out of the areas where the carriages could collide, and tells the firmware which mode to run. Ready-made Vivedino Xplorer profiles (IDEX, Dual Gantry and IQEX, plus the single-head model) are included, and any other IDEX or IQEX printer can be set up from its printer settings.
+   23. Parallel printing for IDEX and IQEX printers
+S7 # ✏️ Design Tab (Early Preview)
+   P: The Design tab is a new, experimental CAD workspace inside OrcaSlicer. Sketch a profile, constrain and dimension it, turn it into a solid and commit it to the plate — no round trip through another CAD program and an STL. What you build is an editable feature history rather than a mesh, and it is saved inside the 3MF, so you can reopen a project, change a dimension and have the whole part rebuild. The tab is off by default: tick **CAD feature (experimental)** in Preferences → General → Features and restart OrcaSlicer to try it. It is still under active development, so expect changes between builds and keep a backup of projects you care about. [Wiki]({{L130}})
+   24. Design tab: sketch-first parametric CAD
+   25. Design tab: Text and Revolve features, clearer rendering and a smoother workflow
+S8 # 🔩 Multi-Nozzle Printers & Extruder Variants
+   P: This release adds Bambu Lab's latest multi-nozzle printers and lets the left and right nozzles of the H2D and X2D be different sizes. It also brings **extruder variants** to every printer: one profile can now hold separate settings for a Standard, High Flow or Extra High Flow nozzle, a direct drive or Bowden extruder, and for each nozzle on a multi-nozzle printer. The right values are used automatically for whichever nozzle prints each part.
+   26. Bambu Lab H2C and A2L support
+   27. Mixed nozzle sizes on Bambu Lab H2D and X2D
+   28. Extruder variants on every printer
+   29. Pressure advance and cooling per nozzle variant
+   30. Compact multi-nozzle controls
+   31. Open Bambu Studio H2D projects with per-object speed overrides
+   32. Variant handling fixes
+S9 # 🌊 New Features & Improvements
+S10 ## Walls, Seams & Surfaces
+   33. Precise Seam modifiers
+   34. Top surface expansion
+   35. Wipe inward for outer walls
+   36. Print unsupported walls last
+   37. Retract amount after wipe
+   38. Arachne honors Maximum wall resolution and deviation on curves
+   39. Smoother and safer spiral lift
+   40. Limit polyhole edge count
+   41. Remember STEP import settings
+   42. Send anyway on a nozzle diameter mismatch
+   43. Plate spiral vase mode applies to every object
+S11 ## Infill
+   44. Adaptive density for Gyroid and TPMS infill
+   45. Sparse infill smooth factor
+   46. Spiral Inset pattern
+   47. Top and bottom surface fill order
+   48. Fixed top and bottom layer directions
+   49. Separated infills for assemblies
+   50. Non-crossing multiline for Cubic infill, and faster non-crossing infill
+   51. Fill pattern tops for 3D Honeycomb
+   52. Faster Gyroid infill
+S12 ## Brims, Supports, Fuzzy Skin & Cooling
+   53. Outer-only mouse ears and larger brim ears
+   54. Slow down small support areas
+   55. No fuzzy skin on bridging walls
+   56. First layer fan speed
+   57. Axis lock for support painting
+   58. Raft expansion setting
+S13 ## Prime Tower & Multi-Material
+   59. Rib wall and skip-points prime tower on all printers
+   60. Wait for the toolchange temperature at the prime tower
+   61. No more stringing between the model and the prime tower
+   62. Prime tower pauses work on Klipper
+   63. Combine sparse prime tower layers
+   64. "No sparse layers" for Type 1 (Bambu-style) prime towers
+   65. Prime tower stays on non-rectangular beds
+   66. Prime tower sized from the actual flush volumes
+   67. Prime tower preview matches the printed tower
+   68. Cyclic toolchange order and shorter travel between objects
+   69. Per-filament toolchange retraction
+   70. Turn off toolheads that have finished printing
+   71. Prime tower rotation angle setting works
+   72. Remove a floating final purge line on the prime tower
+   73. Prime tower Width greyed out for rib walls
+   74. Clumping detection asks before the prime tower is turned off
+   75. Filament change time and purge stats for Elegoo Centauri Carbon
+   76. Fix "flush volumes matrix do not match" error after enabling Single Extruder Multi Material
+   77. No flushing-volume warning for single-filament plates
+   78. OBJ colour import limited to the printer's toolheads
+   79. Fix "Label object id error!" on filament changes without objects
+S14 ## 3D View & Preview
+   80. Shadows that fall on objects
+   81. X-Ray view
+   82. Section view
+   83. Center of mass markers
+   84. Focus mode
+   85. Improved preview colors
+   86. Dim lower layers in Preview
+   87. Smoother selection outlines
+   88. Move length in Preview
+   89. Choose the default Preview view type
+   90. Smooth normals is now a separate setting
+   91. Wireframe toggle in the view menu
+   92. FPS overlay stays clear of the toolbar
+   93. Auto Perspective works with a 3D mouse
+   94. Steadier panning in perspective view
+   95. Accurate G-code listing in Preview
+   96. Open G-code files with their own settings
+   97. Tall models no longer clipped when viewing G-code files
+   98. Correct 3D view from the first frame at startup
+S15 ## Publish 3MF
+   99. Publish 3MF
+S16 ## Interface & Usability
+   100. Assignable keyboard shortcuts
+   101. Align, distribute and drop objects
+   102. Plate toolbar improvements
+   103. New color picker with saved favorites
+   104. Startup progress bar
+   105. Orca Cloud inside the Home tab
+   106. Remember last print action
+   107. Tidier Move, Rotate and Scale panels
+   108. Interface polish throughout
+   109. Unified wiki and video guide buttons, and wiki link fixes
+   110. Clearer parent preset options when saving
+   111. Bed texture and model included in printer bundles
+   112. Orca Badge handy model
+   113. Dragging continues outside the window
+   114. Menu icons on macOS and Linux
+   115. Restyled height range modifier panel
+   116. OpenGL profile in the Troubleshoot dialog
+   117. Placeholder image for printers without a picture
+   118. Consistent scrolling speed
+   119. "OK" instead of "Yes" on notices
+   120. Text polish
+S17 ## G-code & Placeholders
+   121. `regex_replace()` for placeholder templates
+   122. Print time placeholders for days, hours, minutes and seconds
+   123. Skip G-code config block
+   124. More accurate corner speeds in time estimates and the preview
+   125. Bed leveling counted once in the time estimate
+   126. Printers that read the end of the file show the print time again
+   127. First-layer temperatures in the G-code follow the filaments you print with
+   128. `{curr_bed_type}` in the G-code editor
+   129. `initial_no_support_extruder` in the filename format
+   130. Reserved-keyword check for custom G-code works everywhere
+   131. Corrected `layer_num` description
+   132. Fix preview speeds and time estimates with firmware retraction
+   133. Opened G-code files show manual filament changes
+   134. Smaller cancel-object outlines for Klipper
+   135. Timelapse G-code runs once per layer on i3 printers
+   136. Acceleration and jerk restored after custom G-code
+   137. Fan timing no longer adds moves to your filament change G-code
+   138. Fix crash with placeholders in File header G-code
+S18 ## Bambu Lab Printers
+   139. AMS filament drying
+   140. Gradient and multicolor filaments in the AMS
+   141. Smoother camera live view
+   142. Bambu network plug-in 02.08 series
+   143. Clearer network plug-in settings and dialogs
+   144. Your project's filaments first in the AMS filament list
+   145. Favorite filaments in the AMS filament list
+   146. Timelapse and SD card files load again
+   147. Stop the repeating LAN/Developer mode prompt
+   148. Fix the Virtual Camera Tools installation loop
+   149. Open Bambu Studio projects without extra pop-ups
+S19 ## Performance
+   150. Much faster startup
+   151. Faster printer switching
+   152. Faster G-code export
+   153. Faster slicing
+   154. Lower memory use when slicing and previewing
+   155. Less GPU load when moving the mouse over the 3D view
+   156. Smoother G-code preview
+   157. Smaller install
+   158. Windows builds compiled with clang-cl
+   159. OpenCASCADE 8.0.1: faster STEP import
+   160. CGAL 6.2.1: faster mesh booleans
+S20 ## Consistent Slicing Results
+   P: Slicing the same model with the same settings now gives the same G-code every time. You can compare outputs, cache G-code and trust that a re-slice changed only what you changed.
+   161. Same G-code on every slice
+   162. Same G-code on every export
+S21 ## Command Line
+   P: The command line gets new options for print farms, slicing services and scripted pipelines, plus a long run of fixes so it slices a project the same way the GUI does. [Wiki]({{L392}})
+   163. `--strict` and warnings in `result.json`
+   164. Lay parts on a chosen face with `--ground-*`, and `--inspect-mesh`
+   165. Inspect painted data with `--inspect-paint`
+   166. Print the effective settings with `--export-settings -`
+   167. Export G-code statistics as JSON
+   168. `--align-to-y-axis` for arranging
+   169. `--allow-rotations` is now off by default
+   170. Clear per-object slicing errors
+   171. Prime tower kept clear when arranging a project
+   172. Mixed filaments on the command line
+   173. Plate thumbnails from the command line
+   174. Command-line crash and correctness fixes
+   175. CLI settings match the GUI
+S22 ## Security & Robustness
+   P: OrcaSlicer is sturdier with files and data from outside sources. Damaged files fail cleanly instead of crashing, and downloads and archives stay inside the folders they belong in.
+   176. Malformed model and project files fail cleanly
+   177. Safer downloads, archives and imported bundles
+   178. Built-in pages load from any install folder
+   179. Sturdier network and cloud connections
+   180. Safe to run several OrcaSlicer windows at once
+   181. Fix files that imported incorrectly
+S23 # 📐 Calibration Improvements
+   182. Adaptive Pressure Advance: input checks and clearer labels
+   183. Nozzle-aware VFA test, plus PA and temperature tower tweaks
+   184. PA Line test: smaller print area and a correct preview
+   185. Calibrations use your printer's full speed
+   186. Retraction test turns off scarf seams
+   187. Fix PA Pattern test over-retracting with absolute extrusion
+   188. Fix crash when cancelling a calibration's model loading
+S24 # 🛠️ Bug Fixes
+S25 ## Walls, Infill & Surfaces
+   189. Keep inner walls on narrow Arachne walls with "Only one wall on top surfaces"
+   190. Keep the Inner/Outer/Inner order on narrow Arachne walls
+   191. Keep thin-walled holes printing in one direction with Classic walls
+   192. Remove leftover walls from an earlier slice
+   193. Keep Adaptive Cubic and Support Cubic density changes inside their modifier
+   194. Make layer outlines consistent on faceted models
+   195. Fuzzy skin fixes
+   196. Remove speed dips from scarf seams
+   197. Fix infill rotation templates on prints with a raft
+   198. Ironing fixes
+   199. Z contouring works with several copies of an object
+   200. Fix a memory leak from gap fill on solid surfaces
+S26 ## Bridges & Overhangs
+   201. Fix partially bridged counterbore holes
+   202. Anchor internal bridges over Hilbert Curve and Octagram Spiral infill
+   203. Stop internal bridges from stacking on top of each other
+   204. Ignore unprintable slivers when detecting overhangs
+   205. Slow down for overhangs between sharp vertical walls
+   206. Limit overhang slowdown and fan to the overhang itself
+   207. Fix overhang fan control
+   208. Improve anchoring of internal bridges over sparse infill
+   209. Apply bridge flow changes when Top Z distance is 0
+S27 ## Supports
+   210. Fix support interface layer counts, materials and angles
+   211. Keep organic tree supports off object top surfaces
+   212. Use the correct settings when connecting support infill lines
+S28 ## Brims & Skirts
+   213. Give each copy of an object its own skirt and brim
+   214. Print brims at First layer speed
+   215. Keep painted brim ears in place with a compensated outline
+S29 ## Models, Plates & Projects
+   216. Rebuilt Fix Model, plus Fix All and a working `--repair`
+   217. Keep every assembly part when using height range modifiers
+   218. Fix mirrored objects in projects and copies
+   219. Fix negative mesh Booleans with text and a rare Boolean hang
+   220. Restrict per-plate bed types to printers that support them
+   221. Assign copies to the plate they're moved to
+   222. Keep every copy of an object at the same height
+   223. Move all objects with their plate when plates are rearranged
+   224. Save arrange settings separately for By object print sequence
+   225. Keep arranged objects on the plate
+   226. Correct thumbnail entries in saved 3MF files
+   227. Correct build height check with shrinkage compensation and rafts
+S30 ## Presets & Profiles
+   228. Sync filaments from the printer you switched to
+   229. Stop re-uploading imported presets to Orca Cloud on every launch
+   230. Keep per-nozzle values when presets sync through Orca Cloud
+   231. Use the profile's default bed type for new printers
+   232. Fix profile updater issues at startup
+S31 ## Interface Fixes
+   233. Show all print validation warnings
+   234. Non-Latin text displays correctly
+   235. Error caret points at the right character
+   236. "Ignore" is honored for out-of-range layer heights
+   237. Freezes on macOS around the Slice button
+   238. Home start page opens cleanly
+   239. Undo and redo wait for background jobs
+   240. Shared-profiles notification layout
+   241. Text tool fixes
+   242. Paint brush released outside the 3D view
+   243. Typing into number fields
+   244. Language fixes
+   245. macOS color fixes
+   246. Device tab fixes
+   247. Opening files
+   248. 3D mouse settings are saved
+   249. Filament list in the setup wizard
+   250. Folding the Filament section on toolchanger and IDEX printers
+   251. STEP import progress
+S32 ## Linux, macOS & Windows Fixes
+   252. Linux Flatpak: freeze and missing toolpaths after changing a setting in Preview
+   253. Dialogs sized correctly on Linux
+   254. Dialogs match the desktop theme on Linux
+   255. Native-looking controls on Linux
+   256. Scrolling the filament list on Linux
+   257. No title bar on the splash screen under Wayland
+   258. Readable 3D view overlays on XWayland with Intel graphics
+   259. Smoother printer web pages on Linux
+   260. 3D mouse support in more Linux builds
+   261. Object outlines and thumbnails on macOS
+   262. Broken text with MacType on Windows
+   263. Windows 7 no longer stops responding
+S33 ## Crashes & Stability
+   264. Fix Linux Flatpak crash when slicing or saving
+   265. Fix slicing for multiple users on one Linux or macOS computer
+   266. Fix startup failures and lost backups when a folder can't be read
+   267. Fix Flatpak crashes from incomplete per-filament settings
+   268. Fix crash generating Arachne walls on Flatpak
+   269. Fix crash slicing painted or multi-material objects when the outer wall line width is 0
+   270. Fix crash when deleting objects or plates
+   271. Fix crash when dragging objects with By object print sequence
+   272. Fix crash when quitting with a model on the plate
+   273. Fix crash when quitting from the macOS Dock with the Bambu network plugin loaded
+   274. Fix macOS startup crash for printers with a print host
+   275. Fix rare macOS startup crash while scanning presets
+   276. Fix crash after "Replace all with 3D files" on Windows
+   277. Fix crash on Slice all in multi-plate projects
+   278. Fix crash when repairing a model
+   279. Fix occasional crash in LAN mode
+   280. Show the out-of-memory message on Windows
+   281. Report the real reason when a G-code export fails on Windows
+   282. Fix command-line crashes
+   283. Fix a rare crash when resizing list settings
+S34 ## Printer Connectivity
+   284. Start Moonraker Upload & Print on printers that power on for queued jobs
+   285. Show readable Moonraker upload errors
+   286. Moonraker filament sync works with trusted clients
+   287. Remember the Flashforge send options
+S35 # 🧰 Platform & Build
+   288. Linux ARM64 AppImage
+   289. Microsoft Store version: launch from browsers and scripts, and open more web links
+   290. Build on Windows with clang-cl and the new `build_win.bat`
+   291. Build dependencies on older GCC, Ubuntu 22.04 and openSUSE
+   292. Build on macOS 27 with Xcode 27
+S36 # 🖨️ Printer & Filament Profiles
+S37 ## Profile System
+   293. Bambu Lab printers default to 3MF output
+   294. Bambu Lab profiles synced with BambuStudio
+   295. One filament, one ID
+   296. Keep your filament presets on their printers after upgrading
+   297. Printer-specific filaments in the Orca Filament Library
+   298. Third-party Bambu Lab filament tunes moved to the Orca Filament Library
+   299. Every printer gets a working default filament
+   300. Daily over-the-air publishing of the Orca Filament Library
+   301. Smaller profile folder and refreshed printer images
+   302. Every shipped profile is test-sliced
+S38 ## New Printer Profiles
+   303. Anycubic Kobra 3 V2
+   304. Creality
+   305. FELIX Printers
+   306. Flashforge Adventurer A5
+   307. Goofoo
+   308. Lulzbot Mini 1
+   309. M3D Enabler D7500
+   310. Meltingplot
+   311. Pragostroj KINARB 1HB and 2HB
+   312. Prusa CORE One MMU3, MK4 MMU3 / MK4 MMU3 HF and CORE One INDX 4T / 8T
+   313. Qidi X-Plus 5
+   314. RH3D VIRTU E3
+   315. UltiMaker S5
+   316. UltiMaker 2+ and 2 Extended+
+   317. Wanhao Duplicator 9
+S39 ## New Filament Profiles
+   318. AnkerMake PLA+
+   319. Eryone
+   320. INSLOGIC
+   321. JAYO
+   322. PlastAR PLA and Printalot ABS
+   323. Polymaker PLA Pro
+   324. Prusament for MK3S and MK4S
+   325. School House Spools PLA and PETG
+S40 ## Profile Updates & Fixes
+   326. add:north
+   327. Anker
+   328. Blocks
+   329. Creality K1 family
+   330. Creality K2 Plus and SPARKX i7 filaments
+   331. Cubicon
+   332. DREMC
+   333. FilAr PLA-mate
+   334. Flashforge Creator 5 and Creator 5 Pro
+   335. FlyingBear Ghost7 and InfiMech EX / EX+APS
+   336. Folgertech i3 0.6 nozzle
+   337. PETG on the SuperTack plate
+   338. Prusa CORE One
+   339. Purge line waits for a hot nozzle
+   340. Qidi
+   341. Raise3D Pro3 and Pro3 Plus
+   342. RatRig
+   343. re:3D
+   344. Snapmaker U1
+   345. Sovol Zero
+   346. WonderMaker ZR Ultra S
+S41 # 🗪 Localization
+   P: * Basque pattern names aligned with the rest of the catalog by @ianalexis in [15215]({{L710}}) * Simplified Chinese translation updates by @Neko-vecter in [14896]({{L711}}) and @SoftFever in [16356]({{L712}}) and [16512]({{L713}}), which complete the catalog and align 3D view, camera and CAD terms with Chinese CAD usage * Traditional Chinese terminology aligned with Taiwan usage by @nhchiu in [14889]({{L714}}), and the catalog completed by @SoftFever in [16513]({{L715}}) * French translation completed and corrected by @foXaCe in [14277]({{L716}}), [14304]({{L717}}) and [14623]({{L718}}), @Surfoo in [14293]({{L719}}), [15106]({{L720}}) and [16161]({{L721}}), and @bistory in [15463]({{L722}}), which consistently keeps "jerk" in English * German translation updates by @hliebscher in [14352]({{L723}}), [14465]({{L724}}) and [14577]({{L725}}), and a corrected *Min print speed* tooltip by @ianalexis in [15766]({{L726}}) (fixes #14995) * Hungarian full overhaul by @kisslorand in [15024]({{L727}}): a context-aware review of the whole catalog for grammar, punctuation, natural phrasing and consistent terms * Japanese "Jerk" settings, which were mistranslated as "vibration", corrected by @ianalexis in [15488]({{L728}}) * Lithuanian translation updates and fixes by @sharanchius in [14532]({{L729}}), [14553]({{L730}}) and [14578]({{L731}}), including Lithuanian Bambu Lab printer HMS messages, with more of their updates merged by @ianalexis in [14822]({{L732}}) * Brazilian Portuguese translation updates, glossary alignment and review of the AI translations by @afmenez in [14302]({{L733}}), [14470]({{L734}}), [14629]({{L735}}), [14679]({{L736}}), [14847]({{L737}}), [14963]({{L738}}), [15080]({{L739}}), [15261]({{L740}}), [15621]({{L741}}), [16103]({{L742}}) and [16377]({{L743}}) * Russian translation updates and review of the AI translations by @Felix14-v2 in [14422]({{L744}}), [14745]({{L745}}), [14876]({{L746}}) and [15092]({{L747}}) * Spanish translation updates by @ianalexis in [14274]({{L748}}), [14620]({{L749}}), [14622]({{L750}}), [14748]({{L751}}) and [14822]({{L752}}), including one consistent term for Fuzzy Skin ("Piel rugosa") * Thai translation updates by @Icezaza2543 in [14288]({{L753}}), [15213]({{L754}}) and [15681]({{L755}}), fixing machine-translation errors such as "Orient" rendered as "east" * Turkish translation updates by @GlauTechCo in [15060]({{L756}}), [15119]({{L757}}) and [15309]({{L758}}), correcting inaccurate AI translations * Ukrainian translation update by @andm18 in [14819]({{L759}}) and a typo fix by @Tuccro in [15333]({{L760}})
+   347. Rebuilt translation catalogs, with context for words that have more than one meaning
+   348. More of the interface can be translated
+   349. AI translations fill the gaps in every language
+   350. Web dialogs and pages follow the app language
+   351. One Celsius symbol and translatable unit labels
+   352. New language: Basque
+S42 # ❤️ Support OrcaSlicer
+   P: <a href="{{L789}}">{{I168}}</a>
+   P: <a href="{{L790}}">{{I169}}</a>

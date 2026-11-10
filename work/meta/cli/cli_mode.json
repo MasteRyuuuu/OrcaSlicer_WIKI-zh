@@ -1,0 +1,151 @@
+{
+"code": [
+[
+"```",
+"orca-slicer [input files...] [options...]",
+"```"
+],
+[
+"```",
+"--slice 0",
+"--slice=0",
+"```"
+],
+[
+"```",
+"--retraction-length=0.8,0.8,1.2,0.8",
+"```"
+],
+[
+"```",
+"orca-slicer model.3mf --load-settings \"process.json;printer.json\" --load-filaments filament.json --arrange 1 --slice 0 --export-3mf output.3mf",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "invocation",
+"en": "Invocation"
+},
+{
+"indent": 0,
+"anchor": "flag-syntax",
+"en": "Flag Syntax"
+},
+{
+"indent": 4,
+"anchor": "boolean-flags",
+"en": "Boolean flags"
+},
+{
+"indent": 4,
+"anchor": "value-flags",
+"en": "Value flags"
+},
+{
+"indent": 4,
+"anchor": "vector-multi-value-flags",
+"en": "Vector (multi-value) flags"
+},
+{
+"indent": 0,
+"anchor": "setting-overrides",
+"en": "Setting Overrides"
+},
+{
+"indent": 0,
+"anchor": "reference-pages",
+"en": "Reference Pages"
+},
+{
+"indent": 0,
+"anchor": "example",
+"en": "Example"
+}
+]
+],
+"img": [],
+"link": [
+"import_export#supported-file-formats",
+"option_type#boolean",
+"#reference-pages",
+"home#printer-settings",
+"home#material-settings",
+"home#process-settings",
+"#flag-syntax",
+"how_to_create_profiles",
+"cli_actions",
+"cli_transform",
+"cli_misc"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "CLI Mode",
+"raw": "CLI Mode",
+"id": "cli-mode",
+"alt": "cli-mode"
+},
+{
+"level": 2,
+"en": "Invocation",
+"raw": "Invocation",
+"id": "invocation",
+"alt": "invocation"
+},
+{
+"level": 2,
+"en": "Flag Syntax",
+"raw": "Flag Syntax",
+"id": "flag-syntax",
+"alt": "flag-syntax"
+},
+{
+"level": 3,
+"en": "Boolean flags",
+"raw": "Boolean flags",
+"id": "boolean-flags",
+"alt": "boolean-flags"
+},
+{
+"level": 3,
+"en": "Value flags",
+"raw": "Value flags",
+"id": "value-flags",
+"alt": "value-flags"
+},
+{
+"level": 3,
+"en": "Vector (multi-value) flags",
+"raw": "Vector (multi-value) flags",
+"id": "vector-multi-value-flags",
+"alt": "vector-multi-value-flags"
+},
+{
+"level": 2,
+"en": "Setting Overrides",
+"raw": "Setting Overrides",
+"id": "setting-overrides",
+"alt": "setting-overrides"
+},
+{
+"level": 2,
+"en": "Reference Pages",
+"raw": "Reference Pages",
+"id": "reference-pages",
+"alt": "reference-pages"
+},
+{
+"level": 2,
+"en": "Example",
+"raw": "Example",
+"id": "example",
+"alt": "example"
+}
+],
+"src": "cli/cli_mode.md"
+}

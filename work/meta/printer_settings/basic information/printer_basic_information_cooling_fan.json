@@ -1,0 +1,136 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`fan_speedup_time`, `fan_speedup_overhangs`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`fan_speedup_time` (Float), `fan_speedup_overhangs` (Boolean)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fan-speedup-time=1` (`fan_speedup_time` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fan_kickstart`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fan-kickstart=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`part_cooling_fan_min_pwm`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--part-cooling-fan-min-pwm=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "fan-speed-up-time",
+"en": "Fan speed-up time"
+},
+{
+"indent": 4,
+"anchor": "only-overhangs",
+"en": "Only overhangs"
+},
+{
+"indent": 0,
+"anchor": "fan-kick-start-time",
+"en": "Fan kick-start time"
+},
+{
+"indent": 0,
+"anchor": "minimum-non-zero-part-cooling-fan-speed",
+"en": "Minimum non-zero part cooling fan speed"
+}
+]
+],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Cooling Fan",
+"raw": "Cooling Fan",
+"id": "cooling-fan",
+"alt": "cooling-fan"
+},
+{
+"level": 2,
+"en": "Fan speed-up time",
+"raw": "Fan speed-up time",
+"id": "fan-speed-up-time",
+"alt": "fan-speed-up-time"
+},
+{
+"level": 3,
+"en": "Only overhangs",
+"raw": "Only overhangs",
+"id": "only-overhangs",
+"alt": "only-overhangs"
+},
+{
+"level": 2,
+"en": "Fan kick-start time",
+"raw": "Fan kick-start time",
+"id": "fan-kick-start-time",
+"alt": "fan-kick-start-time"
+},
+{
+"level": 2,
+"en": "Minimum non-zero part cooling fan speed",
+"raw": "Minimum non-zero part cooling fan speed",
+"id": "minimum-non-zero-part-cooling-fan-speed",
+"alt": "minimum-non-zero-part-cooling-fan-speed"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_cooling_fan.md"
+}

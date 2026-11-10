@@ -1,0 +1,11 @@
+G part = 零件
+G help = 帮助
+G model = 模型 / 型号
+G line = 线 / 直线
+G filament = 耗材丝
+G artifacts = 瑕疵
+G preset = 预设
+  project file = 项目文件
+  user presets = 用户预设
+  project files = 项目文件
+  printer model = 打印机型号

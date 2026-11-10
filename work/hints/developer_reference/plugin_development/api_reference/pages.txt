@@ -1,0 +1,8 @@
+H pages = 页 / 页面
+G plugin = 插件
+G preferences = 偏好设置
+G pattern = 图案 / 阵列
+G bridge = 桥接
+  open a new window = 打开新窗口
+  visible plugin pages = 可见插件页数
+  new window = 新窗口

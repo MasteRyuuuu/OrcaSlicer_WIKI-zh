@@ -1,0 +1,240 @@
+S0 # V2.4.0 Alpha
+   P: This is the OrcaSlicer V2.4.0 Alpha release. The headline feature is **Orca Cloud** — a new centralized platform for profile sync, preset bundle sharing, and community discovery at cloud.orcaslicer.com. This release also introduces **Z Anti-Aliasing (ZAA) contouring** for smoother top surfaces, an Expert user mode, native Wayland support for Linux, Machine Input Shaping, Optimized Gyroid infill, Prusa-style combined brims, a redesigned printer selection dialog, and a large number of bug fixes and profile updates.
+   P: **Note:** Please check #13828 for known issues.
+S1 # ☁️ Orca Cloud
+   P: Orca Cloud is now live at [cloud.orcaslicer.com]({{L1}}) — a centralized platform that brings your 3D printing workflow online.
+   P: It keeps your printer, filament, and process profiles synchronized across every machine you use, lets you share finely tuned preset bundles with the community, and helps you discover configurations created by fellow makers around the world.
+   P: Think of it as the connective tissue between your slicer, your profiles, and the broader OrcaSlicer ecosystem — no more manually copying config files between computers or hunting through forums for the right profile.
+   P: **Note:** Orca Cloud is optional. Local profiles and existing OrcaSlicer workflows continue to work as before. You can keep using OrcaSlicer without logging in to Orca Cloud.
+   P: **Open ecosystem:** Orca Cloud is part of our long-term vision for an open 3D printing ecosystem. We want OrcaSlicer to connect users, contributors, printer manufacturers, filament makers, and hardware/software partners through shared profiles, better compatibility data, and smoother workflows. We welcome users, makers, manufacturers, and partners to join, integrate, and collaborate with us to build an ecosystem that benefits the whole community and the wider 3D printing industry.
+   P: This is just the beginning. We have many more features planned for Orca Cloud and the broader OrcaSlicer ecosystem.
+   P: Orca Cloud is designed with privacy in mind. Data is currently hosted in the USA. In the future, we plan to add more region-specific servers and allow users to choose their preferred data center location for improved performance, data residency, and privacy needs.
+   1. Orca Cloud — Profile Sync, Version History, Preset Bundles, and Community Sharing
+   2. Orca Cloud improvements and fixes
+   3. Add more logs to track Orca Cloud logout issues
+S2 # 🌊 New Features & Improvements
+   4. Z Anti-Aliasing (ZAA) contouring
+   5. Fuzzy skin ripple mode
+   6. Optimized Gyroid infill
+   7. Combine brims (Prusa-style brims)
+   8. Multiple dovetail cuts
+   9. Non-Crossing Tri-hexagon infill pattern
+   10. Machine Input Shaping
+   11. Kinematics (Jerk & Acceleration) visualization
+   12. Elephant foot compensation for solid layers
+   13. Max Resolution and Deviation settings exposed for Arachne
+   14. First layer travel acceleration and jerk configurable
+   15. Brim flow ratio setting
+   16. Inverse print direction for holes
+   17. Cooling: per-printer min fan PWM floor
+   18. Hybrid tree support: fix first-layer behavior and expose density
+   19. Reduce Spiral Z generation segment density
+   20. Remove "Auto" wall direction option
+   21. Fix gaps between walls and sparse infill
+   22. Correct gap fill width bounds in outer-only and mixed-wall cases
+   23. Extend short-travel smoothing to external overhang walls
+   24. Ignore Jerk values warning when using Junction Deviation
+   25. Granular exhaust fan speed control
+   26. Extrusion role change G-code in Process and Filament
+   27. Per-vendor profile version updates
+   28. Expert user mode
+   29. 3MF Export/Import with Orca version tags
+   30. CGAL Fix Model for Linux and Mac
+   31. CLI: add layer_height, sparse_infill_density, and wall_loops to results
+   32. Native Wayland support for Linux
+   33. Flatpak 2.4 update
+   34. Enhance network share experience for flatpak
+S3 ## Multi-Material
+   35. Keep painting after mesh changes
+   36. Option to always travel to wipe tower before Tx on multi-toolhead setups
+   37. Filament compatibility temperature-aware
+   38. Warn for abnormal temperature differences
+S4 ## Improved Printer Support
+   39. Repetier G-code flavor
+   40. Improved SnapmakerPrinterAgent filament sync
+   41. Add fallback for Qidi series ID matching
+   42. Support file uploads and device details for Elegoo Centauri Carbon 2
+   43. Allow printing without nozzle info from firmware
+   44. Linux: use GTK sink for Wayland Bambu liveview
+S5 ## Performance & Optimizations
+   45. Increase profile loading timeout
+   46. Speed up startup and show splash progress
+   47. Add persistent cookie storage for PrinterWebView on WebKitGTK
+S6 # 📐 Calibration Improvements
+   48. Improved flow rate calibration menu
+   49. Temperature tower nozzle-based adjustment
+   50. Preserve model placement in calibration tests
+S7 # 🎨 UI & UX
+   51. Printer selection dialog redesign
+   52. Line Type preview: display distances and amount values
+   53. Tool Position window: improved vertex info
+   54. Display tool change count after slicing
+   55. Release Notes dialog improvements
+   56. MultiChooseDialog & Profile Dependencies improvements
+   57. Restructured Painting Tool UI
+   58. Restructure Text/Emboss Tool UI
+   59. Unify Tool UI Footer
+   60. Refactor Tooltip Button
+   61. Graphics Preferences: Anti-aliasing + FPS
+S8 ## QoL Improvements
+   P: {{I97}}
+   62. Mouse button assignment (None/Pan/Rotate)
+   63. "Change type" UX as submenu with checkmarks
+   64. Auto-select external spool if it's the only installed filament
+   65. Show filament edit button or action menu dynamically
+   66. Disable "snap to build plate" option
+   67. Toggle printability with keyboard shortcut
+   68. Linux: left-side window buttons option
+   69. Require fewer clicks to change filament in object list
+   70. Show sparse infill rotation warning only once
+   71. Improve generic 3MF import
+S9 ## Text / Description Improvements
+   72. Fix "cancle" typo
+   73. Add tooltips to Transfer buttons
+   74. Fix reverse on even hint
+   75. Clarify Create nozzle for existing printer
+S10 ## Fixes & Consistency Improvements
+   76. UI fixes and improvements
+   77. Improve mode button visuals
+   78. Don't steal focus from text inputs on mouse hover
+   79. Fix FilamentGroupPopup not dismissing on macOS
+   80. Fix printer name disappearing when editing a nozzle variant
+   81. Fix UI freeze after hiding sync popup on Linux
+   82. Fix right edge of G-code viewer legend not interactive
+   83. Fix sidebar filament count for multi-extruder printers
+   84. Fix vertical alignment issues
+   85. Fix TextInput & ComboBox glitches after scrolling on scaled displays
+   86. Fix dirty-state marker for edited system printer presets
+   87. Fix ObjectTableDialog close on Escape
+   88. Auto hide/show ironing angle settings
+   89. Remove black borders on controls on Linux and fix assertion errors
+   90. Fix macOS object-list filament editor crash/glitch
+   91. Fix Windows double window and title bar issues
+   92. Fix "Jump to" links for non-print preset settings
+   93. Fix stale keyboard refresh and auto-resize flicker in Preview
+   94. Fix Flow Ratio dialog shrinking after minimize
+   95. Fix filament combobox not working after adding extruder
+   96. Fix font rendering pixelated when ClearType disabled
+   97. Fix flushing volume dialog OK/Cancel buttons clipped
+   98. Allow the flush volumes dialog to be resized
+   99. Linux: match titlebar font
+   100. Improved Splash screen rendering
+   101. Hide non-applicable settings for tree supports
+   102. Improve readability of "Only one wall" settings
+   103. Fix seams glitch on Linux
+S11 # 🛠️ Bug Fixes
+   104. Fix crash when selecting or moving wipe tower
+   105. Fix support interface semantics, gap handling, and tree support interfaces
+   106. Fix extrusion of support layers at wrong Z height
+   107. Fix support preview artifacts (missing layers)
+   108. Fix collision with the bed using tree supports
+   109. Fix tree support "on build plate only" missing interface layers
+   110. Fix role-based fan speeds lost on layer change
+   111. Fix fan stuck at wrong speed after role-based override ends
+   112. Fix first layer speed and slow down handling with rafts
+   113. Fix overhang reverse threshold being ignored
+   114. Fix crash from inconsistent draft shield layer height
+   115. Fix fuzzy skin regression with classic wall generator
+   116. Fix save custom machine profiles with different extruder count
+   117. Fix trapezoidal fill layer rotation with infill combination
+   118. Fix flush_multiplier type mismatch
+   119. Fix air filtration and chamber heater UI controls
+   120. Fix first layer toolhead preheating with 2+ extruders and ooze prevention
+   121. Fix vase mode zero flow bug
+   122. Fix collision warnings for overlapping instances
+   123. Fix outer wall for bridges
+   124. Fix auto-arrangement boundary for skirt loops
+   125. Fix sacrificial bridge layer edge case with only 2 perimeters
+   126. Fix LAN printing crashes and hangs on Bambu H2D
+   127. Fix non-ASCII path corruption on Windows
+   128. Fix "Access Violation" crash
+   129. Fix crash with painted line on corrupted models
+   130. Fix crash when returning from assembly view on Linux
+   131. Fix crash when changing SVG/TEXT type to Support Blocker/Enforcer
+   132. Fix crash with SVG "use surface"
+   133. Fix crash on launch from temporary object reference
+   134. Fix stealth mode handling
+   135. Fix per-feature filament assignments ignored at slice time
+   136. Fix one wall on top/bottom surfaces for assembly objects
+   137. Fix partial sacrificial bridge anchors
+   138. Fix false out-of-bounds validation for large paths
+   139. Skip small-area compensation validation when disabled
+   140. Fix .gcode.3mf files not displaying
+   141. Harden CLI export without OpenGL
+   142. Fix crash when embossing text
+   143. Fix assembly view crash and empty canvas on Flatpak
+   144. Ignore SIGPIPE at startup to prevent crashes on dropped printer connections
+   145. Fix possible null dereference in DeviceManager during timer refresh
+   146. Fix flatpak crash on start
+   147. Fix single-instance IPC by preserving "OrcaSlicer" suffix in title
+   148. Fix stealth mode cloud service logout
+   149. Fix wxWidgets 3.3.2 upgrade issues
+   150. Fix filament syncing with nozzle diameter guards
+   151. Fix Bambu Cloud login via embedded WebView
+   152. Fix Bambu login regression
+   153. Fix "could not load bitmap printer_preview_" crash on Linux
+   154. Fix PrinterWebView deferred URL clearing
+   155. Fix Windows test linking
+   156. Fix registration of filament_dynamic_map and filament_switcher config options
+   157. Fix input_filename_base using object name instead of project name
+   158. Fix crash on startup from low max volumetric speed
+   159. Fix model/step MIME type support on Unix
+   160. Fix crash when color was not specified
+   161. Fix generic locale fallback on all platforms
+   162. Fix CLI segfault with P1S profiles
+   163. Fix Linux segfault when loading Fluidd/Mainsail printer hosts
+   164. Fix macOS crash on close
+   165. Fix Windows file handoff when single-instance mode enabled
+   166. Fix arc fitting time progress with firmware retraction
+   167. Fix Bambu camera stream freeze on Linux
+   168. Fix filament/printer selection stuck on loading
+   169. Fix second extruder settings not handled for H2D/X2D
+   170. Fix MANUAL_TOOL_CHANGE regression for BBL printers
+   171. Fix unicode preset name crash
+S12 # 📜 Profiles
+S13 ## Profile Processing Improvements
+   172. Fix generic filaments not showing on list
+   173. Fix stray "Default Filament" preset selection
+   174. Fix preset variant truncation on load
+S14 ## New Printer Profiles
+   175. X2D Support
+   176. Bambu Lab P2S
+   177. Flashforge Artemis
+   178. Flashforge Creator 5 and Creator 5 Pro
+   179. Anycubic Kobra 3 Max
+   180. Anycubic Kobra X
+   181. re:3D
+   182. LH Stinger
+   183. Cubicon xCeler-Mini
+S15 ## New Filament Profiles
+   184. Bambu Lab Beta Filaments
+   185. GreenGate3D PETG
+   186. FILL3D PLA Basic, PETG, PP, PPCF, PA
+S16 ## Profile Updates & Fixes
+   187. Profile folder optimizations
+   188. Bambu Lab X2D
+   189. Bump printers version to propagate X2D to existing users
+   190. Snapmaker U1
+   191. Anycubic Kobra Neo
+   192. Qidi X-Max 4
+   193. Qidi X-Max 4
+   194. Qidi
+   195. Creality K2
+   196. Creality K2 Plus/K2
+   197. Creality generic ASA
+   198. Elegoo Centauri Carbon 2
+   199. Elegoo
+   200. Elegoo Centauri Carbon 2
+   201. Improved Z-Bolt Profiles
+   202. Fix custom ZBolt profile filament selection
+   203. Fix Ender-3 V3 KE
+   204. Junction Deviation profiles & calibration limits
+   205. Printer cover images
+   206. Fix K2 family chamber temperature control defaults
+   207. Fix Ender-3 V3 KE nozzle switching
+S17 # 🗪 Localization
+   P: * Brazilian Portuguese translations by @afmenez in [PR 12891]({{L270}}) * Spanish translation update by @Jo-Con-El in [PR 12981]({{L271}}), @ianalexis in [PR 13652]({{L272}}), and @peterm-m in [PR 13196]({{L273}}) * German translation updates by @hliebscher in [PR 13785]({{L274}}), STEP typo fix by @hliebscher in [PR 13100]({{L275}}) * Czech translation with full menu by @jakubhencl in [PR 13465]({{L276}}) * Turkish translations update by @GlauTechCo in [PR 13155]({{L277}}) * Italian translation updates by @Kappa971 in [PR 13585]({{L278}}), [PR 13674]({{L279}}), and [PR 13720]({{L280}}) * Hungarian language update by @kisslorand in [PR 13321]({{L281}}) * Simplified Chinese locale fixes by @Neko-vecter in [PR 13225]({{L282}}) and [PR 13235]({{L283}}) * Globally fix "milimeters" typo by @valerii-bokhan in [PR 13295]({{L284}}) * Globally fix "milisecond" typo by @afmenez in [PR 13329]({{L285}}) * Remove wrong c-format/boost-format markers from non-format strings by @afmenez in [PR 13251]({{L286}}) * Improve language on some GUI strings by @afmenez in [PR 13553]({{L287}}) * General translation and string-list refresh by @ianalexis in [PR 13622]({{L288}})
+   208. Fix Simplified Chinese locale issues
+S18 # ❤️ Support OrcaSlicer
+   P: <a href="{{L294}}">{{I150}}</a>
+   P: <a href="{{L295}}">{{I151}}</a>

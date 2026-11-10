@@ -1,0 +1,135 @@
+{
+"code": [
+[
+"```",
+"--use-relative-e-distances",
+"```"
+],
+[
+"```",
+"--use-relative-e-distances=1",
+"--use-relative-e-distances=0",
+"```"
+],
+[
+"```",
+"--mtcpp=1000000",
+"--scale=1.5",
+"--sparse-infill-density=20%",
+"```"
+],
+[
+"```",
+"--outputdir=/home/user/exports",
+"```"
+],
+[
+"```",
+"--seam-position=aligned_back",
+"```"
+],
+[
+"```",
+"--align-xy=100,100",
+"```"
+],
+[
+"```",
+"--retraction-length=0.8,0.8,1.2,0.8",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "boolean",
+"en": "Boolean"
+},
+{
+"indent": 0,
+"anchor": "integer-float-percentage",
+"en": "Integer / Float / Percentage"
+},
+{
+"indent": 0,
+"anchor": "text",
+"en": "Text"
+},
+{
+"indent": 0,
+"anchor": "choice",
+"en": "Choice"
+},
+{
+"indent": 0,
+"anchor": "point",
+"en": "Point"
+},
+{
+"indent": 0,
+"anchor": "list-types",
+"en": "List Types"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode",
+"cli_mode#vector-multi-value-flags"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Option Types",
+"raw": "Option Types",
+"id": "option-types",
+"alt": "option-types"
+},
+{
+"level": 2,
+"en": "Boolean",
+"raw": "Boolean",
+"id": "boolean",
+"alt": "boolean"
+},
+{
+"level": 2,
+"en": "Integer / Float / Percentage",
+"raw": "Integer / Float / Percentage",
+"id": "integer-float-percentage",
+"alt": "integer-float-percentage"
+},
+{
+"level": 2,
+"en": "Text",
+"raw": "Text",
+"id": "text",
+"alt": "text"
+},
+{
+"level": 2,
+"en": "Choice",
+"raw": "Choice",
+"id": "choice",
+"alt": "choice"
+},
+{
+"level": 2,
+"en": "Point",
+"raw": "Point",
+"id": "point",
+"alt": "point"
+},
+{
+"level": 2,
+"en": "List Types",
+"raw": "List Types",
+"id": "list-types",
+"alt": "list-types"
+}
+],
+"src": "general_settings/option_type.md"
+}

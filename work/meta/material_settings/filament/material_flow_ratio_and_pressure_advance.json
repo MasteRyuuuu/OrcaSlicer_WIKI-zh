@@ -1,0 +1,241 @@
+{
+"code": [
+[
+"```json",
+"[PA 1],[FLOW 1],[ACCELERATION 1]",
+"[PA 2],[FLOW 2],[ACCELERATION 2]",
+"...",
+"[PA n],[FLOW n],[ACCELERATION n]",
+"```"
+],
+[
+"```json",
+"0.04,3.96,3000",
+"0.033,3.96,10000",
+"0.029,7.91,3000",
+"0.026,7.91,10000",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_flow_ratio`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-flow-ratio=1`."
+}
+],
+[
+{
+"label": "Modes",
+"target": "option_mode",
+"value": ""
+}
+],
+[
+{
+"label": "Type",
+"target": "option_type",
+"value": "`enable_pressure_advance` (Boolean list), `pressure_advance` (Float list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-pressure-advance=1` (`enable_pressure_advance` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`adaptive_pressure_advance`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--adaptive-pressure-advance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`adaptive_pressure_advance_overhangs`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--adaptive-pressure-advance-overhangs=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`adaptive_pressure_advance_bridges`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--adaptive-pressure-advance-bridges=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "flow-ratio",
+"en": "Flow Ratio"
+},
+{
+"indent": 0,
+"anchor": "pressure-advance",
+"en": "Pressure Advance"
+},
+{
+"indent": 4,
+"anchor": "enable-adaptive-pressure-advance-beta",
+"en": "Enable adaptive Pressure Advance (beta)"
+},
+{
+"indent": 8,
+"anchor": "enable-adaptive-pressure-advance-for-overhangs-beta",
+"en": "Enable adaptive pressure advance for overhangs (beta)"
+},
+{
+"indent": 8,
+"anchor": "pressure-advance-for-bridges",
+"en": "Pressure advance for bridges"
+},
+{
+"indent": 8,
+"anchor": "adaptive-pressure-advance-measurements-beta",
+"en": "Adaptive pressure advance measurements (beta)"
+},
+{
+"indent": 12,
+"anchor": "how-to-calibrate-adaptive-pressure-advance",
+"en": "How to calibrate Adaptive Pressure Advance"
+}
+]
+],
+"img": [],
+"link": [
+"material_flow_ratio_and_pressure_advance#flow-ratio",
+"flow_ratio_calib",
+"built_in_placeholders_variables",
+"built_in_placeholders_variables",
+"https://www.klipper3d.org/Pressure_Advance.html",
+"https://docs.duet3d.com/User_manual/Tuning/Pressure_advance",
+"https://marlinfw.org/docs/features/lin_advance.html",
+"pressure_advance_calib",
+"adaptive_pressure_advance_calib",
+"adaptive_pressure_advance_calib"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Flow Ratio and Pressure Advance",
+"raw": "Material Flow Ratio and Pressure Advance",
+"id": "material-flow-ratio-and-pressure-advance",
+"alt": "material-flow-ratio-and-pressure-advance"
+},
+{
+"level": 2,
+"en": "Flow Ratio",
+"raw": "Flow Ratio",
+"id": "flow-ratio",
+"alt": "flow-ratio"
+},
+{
+"level": 2,
+"en": "Pressure Advance",
+"raw": "Pressure Advance",
+"id": "pressure-advance",
+"alt": "pressure-advance"
+},
+{
+"level": 3,
+"en": "Enable adaptive Pressure Advance (beta)",
+"raw": "Enable adaptive Pressure Advance (beta)",
+"id": "enable-adaptive-pressure-advance-beta",
+"alt": "enable-adaptive-pressure-advance-beta"
+},
+{
+"level": 4,
+"en": "Enable adaptive pressure advance for overhangs (beta)",
+"raw": "Enable adaptive pressure advance for overhangs (beta)",
+"id": "enable-adaptive-pressure-advance-for-overhangs-beta",
+"alt": "enable-adaptive-pressure-advance-for-overhangs-beta"
+},
+{
+"level": 4,
+"en": "Pressure advance for bridges",
+"raw": "Pressure advance for bridges",
+"id": "pressure-advance-for-bridges",
+"alt": "pressure-advance-for-bridges"
+},
+{
+"level": 4,
+"en": "Adaptive pressure advance measurements (beta)",
+"raw": "Adaptive pressure advance measurements (beta)",
+"id": "adaptive-pressure-advance-measurements-beta",
+"alt": "adaptive-pressure-advance-measurements-beta"
+},
+{
+"level": 5,
+"en": "How to calibrate Adaptive Pressure Advance",
+"raw": "How to calibrate Adaptive Pressure Advance",
+"id": "how-to-calibrate-adaptive-pressure-advance",
+"alt": "how-to-calibrate-adaptive-pressure-advance"
+}
+],
+"src": "material_settings/filament/material_flow_ratio_and_pressure_advance.md"
+}

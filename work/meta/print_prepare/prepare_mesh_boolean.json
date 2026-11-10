@@ -1,0 +1,39 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Mesh Boolean",
+"raw": "Mesh Boolean",
+"id": "mesh-boolean",
+"alt": "mesh-boolean"
+},
+{
+"level": 2,
+"en": "Union",
+"raw": "Union",
+"id": "union",
+"alt": "union"
+},
+{
+"level": 2,
+"en": "Difference",
+"raw": "Difference",
+"id": "difference",
+"alt": "difference"
+},
+{
+"level": 2,
+"en": "Intersection",
+"raw": "Intersection",
+"id": "intersection",
+"alt": "intersection"
+}
+],
+"src": "print_prepare/prepare_mesh_boolean.md"
+}

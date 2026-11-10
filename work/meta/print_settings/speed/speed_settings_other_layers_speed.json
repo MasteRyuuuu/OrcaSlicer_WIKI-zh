@@ -1,0 +1,513 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`outer_wall_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--outer-wall-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`inner_wall_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--inner-wall-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`small_perimeter_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--small-perimeter-speed=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`small_perimeter_threshold`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--small-perimeter-threshold=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_solid_infill_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-solid-infill-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gap_infill_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gap-infill-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`small_support_perimeter_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--small-support-perimeter-speed=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`small_support_perimeter_threshold`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--small-support-perimeter-threshold=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "speed-limitations",
+"en": "Speed limitations"
+},
+{
+"indent": 0,
+"anchor": "outer-wall",
+"en": "Outer wall"
+},
+{
+"indent": 0,
+"anchor": "inner-wall",
+"en": "Inner wall"
+},
+{
+"indent": 0,
+"anchor": "small-perimeters",
+"en": "Small perimeters"
+},
+{
+"indent": 4,
+"anchor": "small-perimeters-threshold",
+"en": "Small perimeters threshold"
+},
+{
+"indent": 0,
+"anchor": "sparse-infill",
+"en": "Sparse infill"
+},
+{
+"indent": 0,
+"anchor": "internal-solid-infill",
+"en": "Internal solid infill"
+},
+{
+"indent": 0,
+"anchor": "top-surface",
+"en": "Top surface"
+},
+{
+"indent": 0,
+"anchor": "gap-infill",
+"en": "Gap infill"
+},
+{
+"indent": 0,
+"anchor": "ironing-speed",
+"en": "Ironing speed"
+},
+{
+"indent": 0,
+"anchor": "support",
+"en": "Support"
+},
+{
+"indent": 0,
+"anchor": "support-interface",
+"en": "Support interface"
+},
+{
+"indent": 0,
+"anchor": "small-tree-support-perimeters",
+"en": "Small tree support perimeters"
+},
+{
+"indent": 4,
+"anchor": "small-tree-support-perimeters-threshold",
+"en": "Small tree support perimeters threshold"
+}
+]
+],
+"img": [],
+"link": [
+"volumetric_speed_calib",
+"speed_settings_acceleration",
+"speed_settings_jerk_xy",
+"material_cooling#slow-printing-down-for-better-layer-cooling",
+"#inner-wall",
+"vfa_calib",
+"material_cooling#slow-printing-down-for-better-layer-cooling",
+"material_cooling#dont-slow-down-outer-walls",
+"volumetric_speed_calib",
+"#small-perimeters-threshold",
+"#outer-wall",
+"#outer-wall",
+"#small-perimeters",
+"#small-perimeters",
+"#outer-wall",
+"strength_settings_infill",
+"strength_settings_infill",
+"#outer-wall",
+"#top-surface",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_top_bottom_shells",
+"#outer-wall",
+"strength_settings_infill#apply-gap-fill",
+"quality_settings_ironing",
+"support_settings_ironing",
+"material_setting_overrides#ironing",
+"support_settings_support",
+"#support",
+"#small-perimeters",
+"#small-tree-support-perimeters-threshold",
+"#support",
+"#support-interface",
+"#support",
+"#support-interface",
+"#small-tree-support-perimeters",
+"#small-perimeters-threshold"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Other layers speed",
+"raw": "Other layers speed",
+"id": "other-layers-speed",
+"alt": "other-layers-speed"
+},
+{
+"level": 2,
+"en": "Speed limitations",
+"raw": "Speed limitations",
+"id": "speed-limitations",
+"alt": "speed-limitations"
+},
+{
+"level": 2,
+"en": "Outer wall",
+"raw": "Outer wall",
+"id": "outer-wall",
+"alt": "outer-wall"
+},
+{
+"level": 2,
+"en": "Inner wall",
+"raw": "Inner wall",
+"id": "inner-wall",
+"alt": "inner-wall"
+},
+{
+"level": 2,
+"en": "Small perimeters",
+"raw": "Small perimeters",
+"id": "small-perimeters",
+"alt": "small-perimeters"
+},
+{
+"level": 3,
+"en": "Small perimeters threshold",
+"raw": "Small perimeters threshold",
+"id": "small-perimeters-threshold",
+"alt": "small-perimeters-threshold"
+},
+{
+"level": 2,
+"en": "Sparse infill",
+"raw": "Sparse infill",
+"id": "sparse-infill",
+"alt": "sparse-infill"
+},
+{
+"level": 2,
+"en": "Internal solid infill",
+"raw": "Internal solid infill",
+"id": "internal-solid-infill",
+"alt": "internal-solid-infill"
+},
+{
+"level": 2,
+"en": "Top surface",
+"raw": "Top surface",
+"id": "top-surface",
+"alt": "top-surface"
+},
+{
+"level": 2,
+"en": "Gap infill",
+"raw": "Gap infill",
+"id": "gap-infill",
+"alt": "gap-infill"
+},
+{
+"level": 2,
+"en": "Ironing speed",
+"raw": "Ironing speed",
+"id": "ironing-speed",
+"alt": "ironing-speed"
+},
+{
+"level": 2,
+"en": "Support",
+"raw": "Support",
+"id": "support",
+"alt": "support"
+},
+{
+"level": 2,
+"en": "Support interface",
+"raw": "Support interface",
+"id": "support-interface",
+"alt": "support-interface"
+},
+{
+"level": 2,
+"en": "Small tree support perimeters",
+"raw": "Small tree support perimeters",
+"id": "small-tree-support-perimeters",
+"alt": "small-tree-support-perimeters"
+},
+{
+"level": 3,
+"en": "Small tree support perimeters threshold",
+"raw": "Small tree support perimeters threshold",
+"id": "small-tree-support-perimeters-threshold",
+"alt": "small-tree-support-perimeters-threshold"
+}
+],
+"src": "print_settings/speed/speed_settings_other_layers_speed.md"
+}

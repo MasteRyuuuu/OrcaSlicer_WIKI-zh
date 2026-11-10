@@ -1,0 +1,425 @@
+{
+"code": [
+[
+"```json",
+"{",
+"  \"version\": 1,",
+"  \"generator\": \"OrcaSlicer 2.5.0\",",
+"  \"units\": { \"time\": \"s\", \"length\": \"mm\", \"volume\": \"mm3\", \"weight\": \"g\" },",
+"  \"summary\": {",
+"    \"time\": 14626.632,",
+"    \"prepare_time\": 442.673,",
+"    \"travel_time\": 1638.822,",
+"    \"travel_distance\": 195218.36,",
+"    \"layer_count\": 500,",
+"    \"volume\": 150322.628,",
+"    \"weight\": 150.3226,",
+"    \"filament_cost\": 3.01,",
+"    \"filament_changes\": 0,",
+"    \"filaments\": [",
+"      {",
+"        \"id\": 1, \"length\": 62496.89, \"volume\": 150322.628, \"weight\": 150.3226, \"cost\": 3.01,",
+"        \"model\": { \"volume\": 150322.628, \"weight\": 150.3226 },",
+"        \"support\": { \"volume\": 0, \"weight\": 0 },",
+"        \"prime_tower\": { \"volume\": 0, \"weight\": 0 },",
+"        \"flush\": { \"volume\": 0, \"weight\": 0 }",
+"      }",
+"    ],",
+"    \"features\": {",
+"      \"Sparse infill\": { \"time\": 12845.096, \"volume\": 150058.732, \"weight\": 150.0587 },",
+"      \"Custom\": { \"time\": 37.785, \"volume\": 263.887, \"weight\": 0.2639 }",
+"    }",
+"  },",
+"  \"layers\": [",
+"    {",
+"      \"z\": 0.4,",
+"      \"time\": 28.296,",
+"      \"travel_time\": 2.468,",
+"      \"volume\": 299.97,",
+"      \"weight\": 0.3,",
+"      \"features\": {",
+"        \"Sparse infill\": { \"time\": 25.651, \"volume\": 299.97, \"weight\": 0.3 }",
+"      }",
+"    }",
+"  ],",
+"  \"objects\": [",
+"    { \"name\": \"Cube\", \"instance\": 0, \"volume\": 150058.742, \"weight\": 150.0587, \"support_volume\": 0, \"support_weight\": 0 }",
+"  ]",
+"}",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "model",
+"en": "Model"
+},
+{
+"indent": 4,
+"anchor": "import-model",
+"en": "Import Model"
+},
+{
+"indent": 4,
+"anchor": "export-model",
+"en": "Export Model"
+},
+{
+"indent": 0,
+"anchor": "project",
+"en": "Project"
+},
+{
+"indent": 4,
+"anchor": "import-project",
+"en": "Import Project"
+},
+{
+"indent": 4,
+"anchor": "export-project",
+"en": "Export Project"
+},
+{
+"indent": 0,
+"anchor": "sliced",
+"en": "Sliced"
+},
+{
+"indent": 4,
+"anchor": "export-sliced",
+"en": "Export Sliced"
+},
+{
+"indent": 4,
+"anchor": "export-statistics",
+"en": "Export Statistics"
+},
+{
+"indent": 4,
+"anchor": "import-sliced",
+"en": "Import Sliced"
+},
+{
+"indent": 0,
+"anchor": "presets",
+"en": "Presets"
+},
+{
+"indent": 4,
+"anchor": "export-preset-bundle",
+"en": "Export Preset Bundle"
+},
+{
+"indent": 4,
+"anchor": "import-preset-bundle",
+"en": "Import Preset Bundle"
+},
+{
+"indent": 0,
+"anchor": "supported-file-formats",
+"en": "Supported File Formats"
+},
+{
+"indent": 4,
+"anchor": "stl",
+"en": "STL"
+},
+{
+"indent": 4,
+"anchor": "3mf",
+"en": "3MF"
+},
+{
+"indent": 4,
+"anchor": "step",
+"en": "STEP"
+},
+{
+"indent": 8,
+"anchor": "importing-step-files",
+"en": "Importing STEP files"
+},
+{
+"indent": 12,
+"anchor": "parameters",
+"en": "Parameters"
+},
+{
+"indent": 12,
+"anchor": "split-compound-and-compsolid-into-multiple-objects",
+"en": "Split compound and compsolid into multiple objects"
+},
+{
+"indent": 12,
+"anchor": "dont-show-again",
+"en": "Don't show again"
+},
+{
+"indent": 4,
+"anchor": "drc",
+"en": "DRC"
+},
+{
+"indent": 8,
+"anchor": "draco-compression",
+"en": "Draco Compression"
+},
+{
+"indent": 12,
+"anchor": "draco-quantization-bits",
+"en": "Draco Quantization Bits"
+},
+{
+"indent": 4,
+"anchor": "obj",
+"en": "OBJ"
+},
+{
+"indent": 4,
+"anchor": "amf",
+"en": "AMF"
+},
+{
+"indent": 4,
+"anchor": "svg",
+"en": "SVG"
+},
+{
+"indent": 4,
+"anchor": "zip",
+"en": "ZIP"
+}
+]
+],
+"img": [
+"![export_toolpaths_obj](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/import_export/export_toolpaths_obj.png?raw=true)",
+"![stl-transformation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation.png?raw=true)",
+"![stl-transformation-params](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation-params.svg?raw=true)",
+"![stl-transformation-split](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation-split.png?raw=true)",
+"![stl-transformation-enable](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation-enable.png?raw=true)"
+],
+"link": [
+"#supported-file-formats",
+"prepare_basic#add-objects",
+"#stl",
+"#drc",
+"#3mf",
+"cli_misc#output-logging",
+"https://en.wikipedia.org/wiki/STL_(file_format)",
+"https://en.wikipedia.org/wiki/ISO_10303-21",
+"https://dev.opencascade.org/doc/overview/html/occt_user_guides__mesh.html",
+"prepare_object_set#split-to-parts",
+"prepare_assembly_tools",
+"https://github.com/google/draco"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Import and Export",
+"raw": "Import and Export",
+"id": "import-and-export",
+"alt": "import-and-export"
+},
+{
+"level": 2,
+"en": "Model",
+"raw": "Model",
+"id": "model",
+"alt": "model"
+},
+{
+"level": 3,
+"en": "Import Model",
+"raw": "Import Model",
+"id": "import-model",
+"alt": "import-model"
+},
+{
+"level": 3,
+"en": "Export Model",
+"raw": "Export Model",
+"id": "export-model",
+"alt": "export-model"
+},
+{
+"level": 2,
+"en": "Project",
+"raw": "Project",
+"id": "project",
+"alt": "project"
+},
+{
+"level": 3,
+"en": "Import Project",
+"raw": "Import Project",
+"id": "import-project",
+"alt": "import-project"
+},
+{
+"level": 3,
+"en": "Export Project",
+"raw": "Export Project",
+"id": "export-project",
+"alt": "export-project"
+},
+{
+"level": 2,
+"en": "Sliced",
+"raw": "Sliced",
+"id": "sliced",
+"alt": "sliced"
+},
+{
+"level": 3,
+"en": "Export Sliced",
+"raw": "Export Sliced",
+"id": "export-sliced",
+"alt": "export-sliced"
+},
+{
+"level": 3,
+"en": "Export Statistics",
+"raw": "Export Statistics",
+"id": "export-statistics",
+"alt": "export-statistics"
+},
+{
+"level": 3,
+"en": "Import Sliced",
+"raw": "Import Sliced",
+"id": "import-sliced",
+"alt": "import-sliced"
+},
+{
+"level": 2,
+"en": "Presets",
+"raw": "Presets",
+"id": "presets",
+"alt": "presets"
+},
+{
+"level": 3,
+"en": "Export Preset Bundle",
+"raw": "Export Preset Bundle",
+"id": "export-preset-bundle",
+"alt": "export-preset-bundle"
+},
+{
+"level": 3,
+"en": "Import Preset Bundle",
+"raw": "Import Preset Bundle",
+"id": "import-preset-bundle",
+"alt": "import-preset-bundle"
+},
+{
+"level": 2,
+"en": "Supported File Formats",
+"raw": "Supported File Formats",
+"id": "supported-file-formats",
+"alt": "supported-file-formats"
+},
+{
+"level": 3,
+"en": "STL",
+"raw": "STL",
+"id": "stl",
+"alt": "stl"
+},
+{
+"level": 3,
+"en": "3MF",
+"raw": "3MF",
+"id": "3mf",
+"alt": "3mf"
+},
+{
+"level": 3,
+"en": "STEP",
+"raw": "STEP",
+"id": "step",
+"alt": "step"
+},
+{
+"level": 4,
+"en": "Importing STEP files",
+"raw": "Importing STEP files",
+"id": "importing-step-files",
+"alt": "importing-step-files"
+},
+{
+"level": 5,
+"en": "Parameters",
+"raw": "Parameters",
+"id": "parameters",
+"alt": "parameters"
+},
+{
+"level": 5,
+"en": "Split compound and compsolid into multiple objects",
+"raw": "Split compound and compsolid into multiple objects",
+"id": "split-compound-and-compsolid-into-multiple-objects",
+"alt": "split-compound-and-compsolid-into-multiple-objects"
+},
+{
+"level": 5,
+"en": "Don't show again",
+"raw": "Don't show again",
+"id": "dont-show-again",
+"alt": "dont-show-again"
+},
+{
+"level": 3,
+"en": "DRC",
+"raw": "DRC",
+"id": "drc",
+"alt": "drc"
+},
+{
+"level": 4,
+"en": "Draco Compression",
+"raw": "Draco Compression",
+"id": "draco-compression",
+"alt": "draco-compression"
+},
+{
+"level": 5,
+"en": "Draco Quantization Bits",
+"raw": "Draco Quantization Bits",
+"id": "draco-quantization-bits",
+"alt": "draco-quantization-bits"
+},
+{
+"level": 3,
+"en": "OBJ",
+"raw": "OBJ",
+"id": "obj",
+"alt": "obj"
+},
+{
+"level": 3,
+"en": "AMF",
+"raw": "AMF",
+"id": "amf",
+"alt": "amf"
+},
+{
+"level": 3,
+"en": "SVG",
+"raw": "SVG",
+"id": "svg",
+"alt": "svg"
+},
+{
+"level": 3,
+"en": "ZIP",
+"raw": "ZIP",
+"id": "zip",
+"alt": "zip"
+}
+],
+"src": "general_settings/import_export.md"
+}

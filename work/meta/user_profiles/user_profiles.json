@@ -1,0 +1,142 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "storage-location",
+"en": "Storage Location"
+},
+{
+"indent": 0,
+"anchor": "finding-the-configuration-folder",
+"en": "Finding the Configuration Folder"
+},
+{
+"indent": 0,
+"anchor": "user-profile-folders",
+"en": "User Profile Folders"
+},
+{
+"indent": 0,
+"anchor": "orcacloud-auto-migration",
+"en": "OrcaCloud Auto Migration"
+},
+{
+"indent": 0,
+"anchor": "manual-migration",
+"en": "Manual Migration"
+},
+{
+"indent": 0,
+"anchor": "profiles-missing-after-updating-from-bambu-cloud",
+"en": "Profiles Missing After Updating from Bambu Cloud"
+}
+]
+],
+"img": [
+"![find_configuration_folder](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/user_profiles/find_configuration_folder.png?raw=true)",
+"![user_folder](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/user_profiles/user_folder.png?raw=true)"
+],
+"link": [
+"https://cloud.orcaslicer.com/wiki/#orca-cloud-faq",
+"https://cloud.orcaslicer.com",
+"#orcacloud-auto-migration"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "OrcaSlicer User Profiles",
+"raw": "OrcaSlicer User Profiles",
+"id": "orcaslicer-user-profiles",
+"alt": "orcaslicer-user-profiles"
+},
+{
+"level": 2,
+"en": "Storage Location",
+"raw": "Storage Location",
+"id": "storage-location",
+"alt": "storage-location"
+},
+{
+"level": 2,
+"en": "Finding the Configuration Folder",
+"raw": "Finding the Configuration Folder",
+"id": "finding-the-configuration-folder",
+"alt": "finding-the-configuration-folder"
+},
+{
+"level": 2,
+"en": "User Profile Folders",
+"raw": "User Profile Folders",
+"id": "user-profile-folders",
+"alt": "user-profile-folders"
+},
+{
+"level": 3,
+"en": "default",
+"raw": "`default`",
+"id": "default",
+"alt": "default"
+},
+{
+"level": 3,
+"en": "(OrcaCloud)",
+"raw": "`<UUID>` (OrcaCloud)",
+"id": "uuid-orcacloud",
+"alt": "orcacloud"
+},
+{
+"level": 3,
+"en": "(Bambu Cloud)",
+"raw": "`<10-digit number>` (Bambu Cloud)",
+"id": "10-digit-number-bambu-cloud",
+"alt": "bambu-cloud"
+},
+{
+"level": 3,
+"en": "How OrcaSlicer Chooses a Folder",
+"raw": "How OrcaSlicer Chooses a Folder",
+"id": "how-orcaslicer-chooses-a-folder",
+"alt": "how-orcaslicer-chooses-a-folder"
+},
+{
+"level": 2,
+"en": "OrcaCloud Auto Migration",
+"raw": "OrcaCloud Auto Migration",
+"id": "orcacloud-auto-migration",
+"alt": "orcacloud-auto-migration"
+},
+{
+"level": 2,
+"en": "Manual Migration",
+"raw": "Manual Migration",
+"id": "manual-migration",
+"alt": "manual-migration"
+},
+{
+"level": 2,
+"en": "Profiles Missing After Updating from Bambu Cloud",
+"raw": "Profiles Missing After Updating from Bambu Cloud",
+"id": "profiles-missing-after-updating-from-bambu-cloud",
+"alt": "profiles-missing-after-updating-from-bambu-cloud"
+},
+{
+"level": 3,
+"en": "Option 1: Copy your profiles locally (no account needed)",
+"raw": "Option 1: Copy your profiles locally (no account needed)",
+"id": "option-1-copy-your-profiles-locally-no-account-needed",
+"alt": "option-1-copy-your-profiles-locally-no-account-needed"
+},
+{
+"level": 3,
+"en": "Option 2: Sign in to OrcaCloud (automatic)",
+"raw": "Option 2: Sign in to OrcaCloud (automatic)",
+"id": "option-2-sign-in-to-orcacloud-automatic",
+"alt": "option-2-sign-in-to-orcacloud-automatic"
+}
+],
+"src": "user_profiles/user_profiles.md"
+}

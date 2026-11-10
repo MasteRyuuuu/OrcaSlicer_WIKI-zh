@@ -1,0 +1,215 @@
+{
+"code": [
+[
+"```",
+"                         ┌──────────────────────────────────────────────┐",
+"        app startup ───► │  PluginManager  (singleton orchestrator)       │",
+"   (GUI_App::OnInit)     │   owns: CloudPluginService, PluginCatalog,     │",
+"                         │         PluginLoader                           │",
+"                         └───────┬───────────────┬───────────────┬───────┘",
+"                                 │               │               │",
+"                 discover (scan) │     install/  │   load/unload │",
+"                                 ▼      download  ▼               ▼",
+"                    ┌──────────────────┐  ┌───────────────┐  ┌────────────────────┐",
+"                    │  PluginCatalog   │  │ CloudPlugin   │  │   PluginLoader     │",
+"                    │  manifest-only   │  │ Service       │  │  threaded loads,   │",
+"                    │  inventory of    │  │ (cloud fetch/ │  │  deps (uv), audit  │",
+"                    │  PluginDescriptor│  │  download)    │  │  key, capabilities │",
+"                    └──────────────────┘  └───────────────┘  └─────────┬──────────┘",
+"                                                                       │ instantiates via",
+"                                                                       ▼",
+"   ┌─────────────────────────────────────────────────────────────────────────────────┐",
+"   │                       Embedded CPython  (PythonInterpreter, singleton)            │",
+"   │   PythonPluginBridge → `orca` module + @orca.plugin/register_capability + capture │",
+"   │   PyPluginTrampoline → C++↔Python call boundary (traceback logging + audit scope) │",
+"   │   PluginAuditManager → CPython audit hook (categorize, prompt, persist)           │",
+"   │   pluginTypes/* (gcode, script, printerAgent) → typed capability bases + tramps   │",
+"   └─────────────────────────────────────────────────────────────────────────────────┘",
+"                                                                       │ get_plugin_capability_* + dynamic_pointer_cast",
+"                                                                       ▼",
+"   workflow call sites:  PostProcessor (G-code post-processing) ·",
+"                         PluginsDialog \"Run\" (script) · NetworkAgentFactory (printer agent)",
+"```"
+],
+[
+"```",
+"1. App startup (GUI_App::OnInit, after network init)",
+"        │",
+"2. PluginManager::initialize()",
+"        │   └─ PythonInterpreter::initialize()  (MAIN THREAD ONLY)",
+"        │        ├─ start embedded CPython, set sys.path / python home",
+"        │        ├─ install the audit hook (registers CPython's audit callback)",
+"        │        ├─ tee sys.stderr → data_dir()/log/python_*.log",
+"        │        └─ release the GIL (PyEval_SaveThread)",
+"        │",
+"3. discover_plugins()  ─► PluginCatalog scans local + cloud roots",
+"        │                   → PluginDescriptor list (valid / invalid)",
+"        │   (cloud login later: fetch_plugins_from_cloud → catalog overlay)",
+"        │",
+"4. PluginLoader::load_plugin()  (worker thread, serialized)",
+"        │   ├─ install dependencies via bundled `uv`; extract bundled .whl deps onto sys.path",
+"        │   ├─ begin capture → import module (runs @orca.plugin, marking the package class)",
+"        │   ├─ finalize capture → instantiate package, call register_capabilities(),",
+"        │   │      collect its request_permissions() declarations",
+"        │   ├─ if permissions were declared, show one combined dialog;",
+"        │   │      a No aborts the load before any capability is created",
+"        │   ├─ instantiate each registered capability and cache its get_name()",
+"        │   ├─ set_audit_plugin_key(descriptor.plugin_key)   // audit identity",
+"        │   ├─ on_load()  (under the GIL)",
+"        │   └─ store the capabilities; fire on-load + on-capability-load callbacks",
+"        │",
+"5. Use:  a workflow call site resolves a capability (get_plugin_capability_by_name /",
+"        │   get_plugin_capabilities_by_type) + dynamic_pointer_cast<TypeCapability>,",
+"        │   builds the type's context, and calls the entry method (under the GIL).",
+"        │   Each call crosses a trampoline that opens a ScopedPluginAuditContext.",
+"        │",
+"6. Unload / shutdown:  set_shutting_down → unload_plugin / unload_all_plugins",
+"            (the instance's destructor runs on_unload() + Py_DECREF under the GIL)",
+"            → PythonInterpreter::shutdown()",
+"```"
+],
+[
+"```",
+"<plugin_name>;<cloud_uuid>;<capability_name>",
+"```"
+],
+[
+"```json",
+"{",
+"  \"plugins\": [",
+"    \"Sample Plugin;1f998ea9-0183-4cc5-957f-4eef659ba4e6;G-code Benchmark (.py)\",",
+"    \"master_plugin;;header-stamp\"",
+"  ],",
+"  \"post_process_plugin\": [\"G-code Benchmark (.py)\", \"header-stamp\"]",
+"}",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"plugin_development",
+"registry",
+"plugin_audit_hook",
+"#plugin-references-in-presets",
+"plugin_development",
+"lifecycle_events",
+"plugin_development",
+"plugin_audit_hook",
+"plugin_audit_hook",
+"plugin_development#how-errors-are-surfaced",
+"plugin_development",
+"registry",
+"plugin_audit_hook"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Plugin System Overview",
+"raw": "Plugin System Overview",
+"id": "plugin-system-overview",
+"alt": "plugin-system-overview"
+},
+{
+"level": 2,
+"en": "What the System Provides",
+"raw": "What the System Provides",
+"id": "what-the-system-provides",
+"alt": "what-the-system-provides"
+},
+{
+"level": 2,
+"en": "Architecture Overview",
+"raw": "Architecture Overview",
+"id": "architecture-overview",
+"alt": "architecture-overview"
+},
+{
+"level": 2,
+"en": "Core Components",
+"raw": "Core Components",
+"id": "core-components",
+"alt": "core-components"
+},
+{
+"level": 2,
+"en": "Plugin Packaging and Discovery",
+"raw": "Plugin Packaging and Discovery",
+"id": "plugin-packaging-and-discovery",
+"alt": "plugin-packaging-and-discovery"
+},
+{
+"level": 2,
+"en": "Plugin Lifecycle",
+"raw": "Plugin Lifecycle",
+"id": "plugin-lifecycle",
+"alt": "plugin-lifecycle"
+},
+{
+"level": 2,
+"en": "Execution Model",
+"raw": "Execution Model",
+"id": "execution-model",
+"alt": "execution-model"
+},
+{
+"level": 2,
+"en": "Threading and GIL",
+"raw": "Threading and GIL",
+"id": "threading-and-gil",
+"alt": "threading-and-gil"
+},
+{
+"level": 2,
+"en": "Cloud Subscriptions",
+"raw": "Cloud Subscriptions",
+"id": "cloud-subscriptions",
+"alt": "cloud-subscriptions"
+},
+{
+"level": 2,
+"en": "Plugin References in Presets",
+"raw": "Plugin References in Presets",
+"id": "plugin-references-in-presets",
+"alt": "plugin-references-in-presets"
+},
+{
+"level": 2,
+"en": "Restoring Missing Plugins",
+"raw": "Restoring Missing Plugins",
+"id": "restoring-missing-plugins",
+"alt": "restoring-missing-plugins"
+},
+{
+"level": 2,
+"en": "The Plugins Dialog",
+"raw": "The Plugins Dialog",
+"id": "the-plugins-dialog",
+"alt": "the-plugins-dialog"
+},
+{
+"level": 2,
+"en": "Security and Observability",
+"raw": "Security and Observability",
+"id": "security-and-observability",
+"alt": "security-and-observability"
+},
+{
+"level": 2,
+"en": "Related Documents",
+"raw": "Related Documents",
+"id": "related-documents",
+"alt": "related-documents"
+},
+{
+"level": 2,
+"en": "Key Files",
+"raw": "Key Files",
+"id": "key-files",
+"alt": "key-files"
+}
+],
+"src": "developer_reference/plugin_development/plugin_system.md"
+}

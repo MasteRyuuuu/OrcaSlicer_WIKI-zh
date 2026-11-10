@@ -1,0 +1,43 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`travel_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--travel-speed=1`."
+}
+]
+],
+"toc": [],
+"img": [
+"![travel-lines](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed/travel-lines.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Travel",
+"raw": "Travel",
+"id": "travel",
+"alt": "travel"
+}
+],
+"src": "print_settings/speed/speed_settings_travel.md"
+}

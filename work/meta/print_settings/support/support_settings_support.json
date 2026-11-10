@@ -1,0 +1,483 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_support`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-support=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`normal(auto), tree(auto), normal(manual), tree(manual)`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-type=normal(auto)`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_critical_regions_only`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-critical-regions-only=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_style`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`default, grid, snug, organic, tree_slim, tree_strong, tree_hybrid`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-style=default`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_threshold_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-threshold-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_threshold_overlap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-threshold-overlap=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`raft_first_layer_density`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--raft-first-layer-density=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`raft_first_layer_expansion`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--raft-first-layer-expansion=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_on_build_plate_only`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-on-build-plate-only=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_remove_small_overhang`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-remove-small-overhang=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "type",
+"en": "Type"
+},
+{
+"indent": 4,
+"anchor": "normal",
+"en": "Normal"
+},
+{
+"indent": 4,
+"anchor": "tree",
+"en": "Tree"
+},
+{
+"indent": 8,
+"anchor": "support-critical-regions-only",
+"en": "Support critical regions only"
+},
+{
+"indent": 4,
+"anchor": "auto",
+"en": "Auto"
+},
+{
+"indent": 4,
+"anchor": "manual",
+"en": "Manual"
+},
+{
+"indent": 0,
+"anchor": "style",
+"en": "Style"
+},
+{
+"indent": 4,
+"anchor": "grid",
+"en": "Grid"
+},
+{
+"indent": 4,
+"anchor": "snug",
+"en": "Snug"
+},
+{
+"indent": 4,
+"anchor": "organic",
+"en": "Organic"
+},
+{
+"indent": 4,
+"anchor": "tree-slim",
+"en": "Tree Slim"
+},
+{
+"indent": 4,
+"anchor": "tree-strong",
+"en": "Tree Strong"
+},
+{
+"indent": 4,
+"anchor": "tree-hybrid",
+"en": "Tree Hybrid"
+},
+{
+"indent": 0,
+"anchor": "threshold-angle",
+"en": "Threshold angle"
+},
+{
+"indent": 0,
+"anchor": "threshold-overlap",
+"en": "Threshold overlap"
+},
+{
+"indent": 0,
+"anchor": "initial-layer-density",
+"en": "Initial layer density"
+},
+{
+"indent": 0,
+"anchor": "initial-layer-expansion",
+"en": "Initial layer expansion"
+},
+{
+"indent": 0,
+"anchor": "on-build-plate-only",
+"en": "On build plate only"
+},
+{
+"indent": 0,
+"anchor": "ignore-small-overhangs",
+"en": "Ignore small overhangs"
+}
+]
+],
+"img": [],
+"link": [
+"#threshold-overlap",
+"#threshold-angle"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Support",
+"raw": "Support",
+"id": "support",
+"alt": "support"
+},
+{
+"level": 2,
+"en": "Type",
+"raw": "Type",
+"id": "type",
+"alt": "type"
+},
+{
+"level": 3,
+"en": "Normal",
+"raw": "Normal",
+"id": "normal",
+"alt": "normal"
+},
+{
+"level": 3,
+"en": "Tree",
+"raw": "Tree",
+"id": "tree",
+"alt": "tree"
+},
+{
+"level": 4,
+"en": "Support critical regions only",
+"raw": "Support critical regions only",
+"id": "support-critical-regions-only",
+"alt": "support-critical-regions-only"
+},
+{
+"level": 3,
+"en": "Auto",
+"raw": "Auto",
+"id": "auto",
+"alt": "auto"
+},
+{
+"level": 3,
+"en": "Manual",
+"raw": "Manual",
+"id": "manual",
+"alt": "manual"
+},
+{
+"level": 2,
+"en": "Style",
+"raw": "Style",
+"id": "style",
+"alt": "style"
+},
+{
+"level": 3,
+"en": "Grid",
+"raw": "Grid",
+"id": "grid",
+"alt": "grid"
+},
+{
+"level": 3,
+"en": "Snug",
+"raw": "Snug",
+"id": "snug",
+"alt": "snug"
+},
+{
+"level": 3,
+"en": "Organic",
+"raw": "Organic",
+"id": "organic",
+"alt": "organic"
+},
+{
+"level": 3,
+"en": "Tree Slim",
+"raw": "Tree Slim",
+"id": "tree-slim",
+"alt": "tree-slim"
+},
+{
+"level": 3,
+"en": "Tree Strong",
+"raw": "Tree Strong",
+"id": "tree-strong",
+"alt": "tree-strong"
+},
+{
+"level": 3,
+"en": "Tree Hybrid",
+"raw": "Tree Hybrid",
+"id": "tree-hybrid",
+"alt": "tree-hybrid"
+},
+{
+"level": 2,
+"en": "Threshold angle",
+"raw": "Threshold angle",
+"id": "threshold-angle",
+"alt": "threshold-angle"
+},
+{
+"level": 2,
+"en": "Threshold overlap",
+"raw": "Threshold overlap",
+"id": "threshold-overlap",
+"alt": "threshold-overlap"
+},
+{
+"level": 2,
+"en": "Initial layer density",
+"raw": "Initial layer density",
+"id": "initial-layer-density",
+"alt": "initial-layer-density"
+},
+{
+"level": 2,
+"en": "Initial layer expansion",
+"raw": "Initial layer expansion",
+"id": "initial-layer-expansion",
+"alt": "initial-layer-expansion"
+},
+{
+"level": 2,
+"en": "On build plate only",
+"raw": "On build plate only",
+"id": "on-build-plate-only",
+"alt": "on-build-plate-only"
+},
+{
+"level": 2,
+"en": "Ignore small overhangs",
+"raw": "Ignore small overhangs",
+"id": "ignore-small-overhangs",
+"alt": "ignore-small-overhangs"
+}
+],
+"src": "print_settings/support/support_settings_support.md"
+}

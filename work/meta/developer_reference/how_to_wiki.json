@@ -1,0 +1,516 @@
+{
+"code": [
+[
+"```markdown",
+"[Flow Ratio Calibration](flow_ratio_calib)",
+"```"
+],
+[
+"```markdown",
+"- [Wiki Structure](#wiki-structure)",
+"    - [Home](#home)",
+"        - [Index and Navigation](#index-and-navigation)",
+"    - [File Naming and Organization](#file-naming-and-organization)",
+"- [Orca to Wiki Redirection](#orca-to-wiki-redirection)",
+"- [Formatting and Style](#formatting-and-style)",
+"    - [Markdown Formatting](#markdown-formatting)",
+"    - [Alerts and Callouts](#alerts-and-callouts)",
+"- [Images](#images)",
+"    - [Image Sources](#image-sources)",
+"        - [OrcaSlicer Resources](#orcaslicer-resources)",
+"        - [Wiki Images](#wiki-images)",
+"            - [Image Naming](#image-naming)",
+"            - [Image Placement](#image-placement)",
+"            - [Linking Images](#linking-images)",
+"                - [Examples](#examples)",
+"    - [Avoid the Following](#avoid-the-following)",
+"        - [Resize Images](#resize-images)",
+"    - [Image Cropping and Highlighting](#image-cropping-and-highlighting)",
+"    - [Recommended Formats](#recommended-formats)",
+"- [Structuring Content](#structuring-content)",
+"- [Commands and Code Blocks](#commands-and-code-blocks)",
+"- [External Links](#external-links)",
+"```"
+],
+[
+"    ```cpp",
+"    optgroup->append_single_option_line(\"[OPTION_NAME]\"); // Option without wiki page/redirection",
+"    optgroup->append_single_option_line(\"[OPTION_NAME]\", \"[WIKI_LINK]\"); // Option with wiki page and  redirection",
+"    ```"
+],
+[
+"    ```cpp",
+"    optgroup->append_single_option_line(\"seam_gap\",\"quality_settings_seam\"); // Wiki page and redirection",
+"    optgroup->append_single_option_line(\"seam_slope_type\", \"quality_settings_seam#scarf-joint-seam\"); // Wiki  page and redirection to `Scarf Joint Seam` section",
+"    ```"
+],
+[
+"    ```cpp",
+"    option = optgroup->get_option(\"filename_format\");",
+"    option.opt.is_code = true;",
+"    optgroup->append_single_option_line(option, \"others_settings_g_code_output#filename-format\");",
+"    ```"
+],
+[
+"    ```cpp",
+"    append_option_line([optgroup], [opt_key], \"[WIKI_LINK]\");",
+"    ```"
+],
+[
+"    ```cpp",
+"    append_option_line(optgroup, \"machine_max_acceleration_x\", \"printer_motion_ability#acceleration-limitation\");",
+"    ```"
+],
+[
+"    ```cpp",
+"    line.label_path = \"[WIKI_LINK]\";",
+"    ```"
+],
+[
+"    ```cpp",
+"    Line line = { L(\"Overhang speed\"), L(\"...\") };",
+"    line.label_path = \"speed_settings_overhang_speed#slow-down-for-overhang\";",
+"    line.append_option(optgroup->get_option(\"overhang_1_4_speed\"));",
+"    optgroup->append_line(line);",
+"    ```"
+],
+[
+"```markdown",
+"## Infill/Wall Overlap",
+"",
+"The top solid infill area is slightly enlarged to overlap with walls...",
+"```"
+],
+[
+"```powershell",
+"# Preview changes without writing files",
+"pwsh ./sync-tab-options-to-wiki.ps1 -DryRun",
+"",
+"# Apply the metadata to the Markdown pages",
+"pwsh ./sync-tab-options-to-wiki.ps1",
+"```"
+],
+[
+"```powershell",
+"pwsh ./sync-tab-options-to-wiki.ps1 `",
+"    -TabCppPath \"path/to/OrcaSlicer/src/slic3r/GUI/Tab.cpp\" `",
+"    -PrintConfigCppPath \"path/to/OrcaSlicer/src/libslic3r/PrintConfig.cpp\"",
+"```"
+],
+[
+"```markdown",
+"> [!NOTE]",
+"> Useful information that readers should know.",
+"",
+"> [!TIP]",
+"> Helpful advice for doing things more easily.",
+"",
+"> [!IMPORTANT]",
+"> Key information required to achieve a goal.",
+"",
+"> [!WARNING]",
+"> Urgent information to avoid problems.",
+"",
+"> [!CAUTION]",
+"> Warnings about risks or negative outcomes.",
+"```"
+],
+[
+"```markdown",
+"> [!IMPORTANT]",
+"> NEW FEATURE: **Feature short description**  ",
+"> Available in: [Nightly builds](https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/nightly-builds) or Releases greater than **stable version number at merge time**.",
+"```"
+],
+[
+"  ```markdown",
+"  https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/",
+"  ```"
+],
+[
+"  ```markdown",
+"  ?raw=true",
+"  ```"
+],
+[
+"  ```markdown",
+"  ![calibration](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/calibration.png?raw=true)",
+"  ```"
+],
+[
+"  ```markdown",
+"  ![combobox](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/combobox.png?raw=true)",
+"  ```"
+],
+[
+"```html",
+"<img alt=\"IS_damp_marlin_print_measure\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/InputShaping/IS_damp_marlin_print_measure.jpg?raw=true\" height=\"200\">",
+"```"
+],
+[
+"````markdown",
+"```json",
+"{",
+"  \"key\": \"value\"",
+"}",
+"```",
+"````"
+],
+[
+"```json",
+"{",
+"  \"key\": \"value\"",
+"}",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "wiki-structure",
+"en": "Wiki Structure"
+},
+{
+"indent": 4,
+"anchor": "home",
+"en": "Home"
+},
+{
+"indent": 8,
+"anchor": "index-and-navigation",
+"en": "Index and Navigation"
+},
+{
+"indent": 4,
+"anchor": "file-naming-and-organization",
+"en": "File Naming and Organization"
+},
+{
+"indent": 0,
+"anchor": "orca-to-wiki-redirection",
+"en": "Orca to Wiki Redirection"
+},
+{
+"indent": 4,
+"anchor": "option-mode-and-variables-metadata",
+"en": "Option Mode and Variables Metadata"
+},
+{
+"indent": 0,
+"anchor": "formatting-and-style",
+"en": "Formatting and Style"
+},
+{
+"indent": 4,
+"anchor": "markdown-formatting",
+"en": "Markdown Formatting"
+},
+{
+"indent": 4,
+"anchor": "alerts-and-callouts",
+"en": "Alerts and Callouts"
+},
+{
+"indent": 8,
+"anchor": "new-content",
+"en": "New Content"
+},
+{
+"indent": 0,
+"anchor": "images",
+"en": "Images"
+},
+{
+"indent": 4,
+"anchor": "image-sources",
+"en": "Image Sources"
+},
+{
+"indent": 8,
+"anchor": "orcaslicer-resources",
+"en": "OrcaSlicer Resources"
+},
+{
+"indent": 8,
+"anchor": "wiki-images",
+"en": "Wiki Images"
+},
+{
+"indent": 12,
+"anchor": "image-naming",
+"en": "Image Naming"
+},
+{
+"indent": 12,
+"anchor": "image-placement",
+"en": "Image Placement"
+},
+{
+"indent": 12,
+"anchor": "linking-images",
+"en": "Linking Images"
+},
+{
+"indent": 16,
+"anchor": "examples",
+"en": "Examples"
+},
+{
+"indent": 4,
+"anchor": "avoid-the-following",
+"en": "Avoid the Following"
+},
+{
+"indent": 8,
+"anchor": "resize-images",
+"en": "Resize Images"
+},
+{
+"indent": 4,
+"anchor": "image-cropping-and-highlighting",
+"en": "Image Cropping and Highlighting"
+},
+{
+"indent": 4,
+"anchor": "recommended-formats",
+"en": "Recommended Formats"
+},
+{
+"indent": 0,
+"anchor": "structuring-content",
+"en": "Structuring Content"
+},
+{
+"indent": 0,
+"anchor": "commands-and-code-blocks",
+"en": "Commands and Code Blocks"
+},
+{
+"indent": 0,
+"anchor": "external-links",
+"en": "External Links"
+}
+]
+],
+"img": [
+"![printer](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/printer.svg?raw=true)",
+"![filament](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/filament.svg?raw=true)",
+"![process](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/process.svg?raw=true)",
+"![tab_3d_active](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/tab_3d_active.svg?raw=true)",
+"![tab_calibration_active](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/tab_calibration_active.svg?raw=true)",
+"![im_code](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/resources/images/im_code.svg?raw=true)"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/issues",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI",
+"home#printer-settings",
+"home#material-settings",
+"home#process-settings",
+"home#prepare",
+"home#calibrations",
+"home#developer-section",
+"home#process-settings",
+"home#quality-settings",
+"home#support-settings",
+"home#others-settings",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Tab.cpp",
+"#index-and-navigation",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/sync-tab-options-to-wiki.ps1",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Tab.cpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/PrintConfig.cpp",
+"https://guides.github.com/features/mastering-markdown/",
+"https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/nightly-builds",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/tree/main/images",
+"https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "How to Contribute to the Wiki",
+"raw": "How to Contribute to the Wiki",
+"id": "how-to-contribute-to-the-wiki",
+"alt": "how-to-contribute-to-the-wiki"
+},
+{
+"level": 2,
+"en": "Wiki Structure",
+"raw": "Wiki Structure",
+"id": "wiki-structure",
+"alt": "wiki-structure"
+},
+{
+"level": 3,
+"en": "Home",
+"raw": "Home",
+"id": "home",
+"alt": "home"
+},
+{
+"level": 4,
+"en": "Index and Navigation",
+"raw": "Index and Navigation",
+"id": "index-and-navigation",
+"alt": "index-and-navigation"
+},
+{
+"level": 3,
+"en": "File Naming and Organization",
+"raw": "File Naming and Organization",
+"id": "file-naming-and-organization",
+"alt": "file-naming-and-organization"
+},
+{
+"level": 2,
+"en": "Orca to Wiki Redirection",
+"raw": "Orca to Wiki Redirection",
+"id": "orca-to-wiki-redirection",
+"alt": "orca-to-wiki-redirection"
+},
+{
+"level": 3,
+"en": "Option Mode and Variables Metadata",
+"raw": "Option Mode and Variables Metadata",
+"id": "option-mode-and-variables-metadata",
+"alt": "option-mode-and-variables-metadata"
+},
+{
+"level": 2,
+"en": "Formatting and Style",
+"raw": "Formatting and Style",
+"id": "formatting-and-style",
+"alt": "formatting-and-style"
+},
+{
+"level": 3,
+"en": "Markdown Formatting",
+"raw": "Markdown Formatting",
+"id": "markdown-formatting",
+"alt": "markdown-formatting"
+},
+{
+"level": 3,
+"en": "Alerts and Callouts",
+"raw": "Alerts and Callouts",
+"id": "alerts-and-callouts",
+"alt": "alerts-and-callouts"
+},
+{
+"level": 4,
+"en": "New Content",
+"raw": "New Content",
+"id": "new-content",
+"alt": "new-content"
+},
+{
+"level": 2,
+"en": "Images",
+"raw": "Images",
+"id": "images",
+"alt": "images"
+},
+{
+"level": 3,
+"en": "Image Sources",
+"raw": "Image Sources",
+"id": "image-sources",
+"alt": "image-sources"
+},
+{
+"level": 4,
+"en": "OrcaSlicer Resources",
+"raw": "OrcaSlicer Resources",
+"id": "orcaslicer-resources",
+"alt": "orcaslicer-resources"
+},
+{
+"level": 4,
+"en": "Wiki Images",
+"raw": "Wiki Images",
+"id": "wiki-images",
+"alt": "wiki-images"
+},
+{
+"level": 5,
+"en": "Image Naming",
+"raw": "Image Naming",
+"id": "image-naming",
+"alt": "image-naming"
+},
+{
+"level": 5,
+"en": "Image Placement",
+"raw": "Image Placement",
+"id": "image-placement",
+"alt": "image-placement"
+},
+{
+"level": 5,
+"en": "Linking Images",
+"raw": "Linking Images",
+"id": "linking-images",
+"alt": "linking-images"
+},
+{
+"level": 6,
+"en": "Examples",
+"raw": "Examples",
+"id": "examples",
+"alt": "examples"
+},
+{
+"level": 3,
+"en": "Avoid the Following",
+"raw": "Avoid the Following",
+"id": "avoid-the-following",
+"alt": "avoid-the-following"
+},
+{
+"level": 4,
+"en": "Resize Images",
+"raw": "Resize Images",
+"id": "resize-images",
+"alt": "resize-images"
+},
+{
+"level": 3,
+"en": "Image Cropping and Highlighting",
+"raw": "Image Cropping and Highlighting",
+"id": "image-cropping-and-highlighting",
+"alt": "image-cropping-and-highlighting"
+},
+{
+"level": 3,
+"en": "Recommended Formats",
+"raw": "Recommended Formats",
+"id": "recommended-formats",
+"alt": "recommended-formats"
+},
+{
+"level": 2,
+"en": "Structuring Content",
+"raw": "Structuring Content",
+"id": "structuring-content",
+"alt": "structuring-content"
+},
+{
+"level": 2,
+"en": "Commands and Code Blocks",
+"raw": "Commands and Code Blocks",
+"id": "commands-and-code-blocks",
+"alt": "commands-and-code-blocks"
+},
+{
+"level": 2,
+"en": "External Links",
+"raw": "External Links",
+"id": "external-links",
+"alt": "external-links"
+}
+],
+"src": "developer_reference/how_to_wiki.md"
+}

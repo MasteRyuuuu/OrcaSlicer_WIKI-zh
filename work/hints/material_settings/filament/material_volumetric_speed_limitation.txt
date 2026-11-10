@@ -1,0 +1,13 @@
+H max volumetric speed = 最大体积流量
+H adaptive volumetric speed = 自适应体积流量
+G volumetric speed = 体积流量
+G layer height = 层高
+G layer = 层
+G filament = 耗材丝
+G volume = 体积
+G nozzle = 喷嘴
+G line = 线 / 直线
+  volumetric speed limitation = 体积流量限制
+  speed limitation = 速度限制
+  line width = 线宽
+  calibration guide = 校准指南

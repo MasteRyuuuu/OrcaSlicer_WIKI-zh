@@ -1,0 +1,730 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_prime_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-prime-tower=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_tower_skip_points`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-tower-skip-points=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_tower_interface_features`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-tower-interface-features=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_tower_interface_cooldown_during_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-tower-interface-cooldown-during-tower=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_tower_enable_framework`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-tower-enable-framework=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_tower_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-tower-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_volume`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-volume=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_tower_brim_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-tower-brim-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`prime_tower_infill_gap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--prime-tower-infill-gap=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_rotation_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-rotation-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_bridging`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-bridging=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_extra_spacing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-extra-spacing=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_extra_flow`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-extra-flow=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_max_purge_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-max-purge-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_wall_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`rectangle, cone, rib`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-wall-type=rectangle`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_cone_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-cone-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_extra_rib_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-extra-rib-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_rib_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-rib-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_fillet_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-fillet-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_no_sparse_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-no-sparse-layers=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_sparse_layers_combination`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-sparse-layers-combination=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`single_extruder_multi_material_priming`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--single-extruder-multi-material-priming=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_purge_tower_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-purge-tower-width=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"printer_multimaterial_wipe_tower",
+"#wipe-tower-rotation-angle",
+"#maximal-bridging-distance",
+"#wipe-tower-purge-lines-spacing",
+"#extra-flow-for-purge",
+"#maximum-wipe-tower-print-speed",
+"#stabilization-cone-apex-angle",
+"#cone",
+"material_multimaterial#multimaterial-wipe-tower-parameters",
+"#enable-tower-interface-features",
+"printer_multimaterial_wipe_tower#purge-in-prime-tower",
+"#wipe-tower-purge-lines-spacing",
+"#width",
+"#combine-sparse-layers",
+"others_settings_special_mode#timelapse",
+"others_settings_special_mode#enable-clumping-detection",
+"strength_settings_advanced#infill-combination",
+"#no-sparse-layers",
+"printer_extruder_basic_information#extruder-layer-height-limits",
+"#no-sparse-layers",
+"others_settings_special_mode#timelapse",
+"others_settings_special_mode#enable-clumping-detection",
+"printer_multimaterial_setup#single-extruder-multi-material",
+"printer_multimaterial_wipe_tower#belt-purge-tower"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Prime Tower",
+"raw": "Prime Tower",
+"id": "prime-tower",
+"alt": "prime-tower"
+},
+{
+"level": 2,
+"en": "Skip points",
+"raw": "Skip points",
+"id": "skip-points",
+"alt": "skip-points"
+},
+{
+"level": 2,
+"en": "Enable tower interface features",
+"raw": "Enable tower interface features",
+"id": "enable-tower-interface-features",
+"alt": "enable-tower-interface-features"
+},
+{
+"level": 3,
+"en": "Cool down from interface boost during prime tower",
+"raw": "Cool down from interface boost during prime tower",
+"id": "cool-down-from-interface-boost-during-prime-tower",
+"alt": "cool-down-from-interface-boost-during-prime-tower"
+},
+{
+"level": 2,
+"en": "Internal ribs",
+"raw": "Internal ribs",
+"id": "internal-ribs",
+"alt": "internal-ribs"
+},
+{
+"level": 2,
+"en": "Width",
+"raw": "Width",
+"id": "width",
+"alt": "width"
+},
+{
+"level": 2,
+"en": "Prime volume",
+"raw": "Prime volume",
+"id": "prime-volume",
+"alt": "prime-volume"
+},
+{
+"level": 2,
+"en": "Brim width",
+"raw": "Brim width",
+"id": "brim-width",
+"alt": "brim-width"
+},
+{
+"level": 2,
+"en": "Infill gap",
+"raw": "Infill gap",
+"id": "infill-gap",
+"alt": "infill-gap"
+},
+{
+"level": 2,
+"en": "Wipe Tower Rotation Angle",
+"raw": "Wipe Tower Rotation Angle",
+"id": "wipe-tower-rotation-angle",
+"alt": "wipe-tower-rotation-angle"
+},
+{
+"level": 2,
+"en": "Maximal bridging distance",
+"raw": "Maximal bridging distance",
+"id": "maximal-bridging-distance",
+"alt": "maximal-bridging-distance"
+},
+{
+"level": 2,
+"en": "Wipe tower purge lines spacing",
+"raw": "Wipe tower purge lines spacing",
+"id": "wipe-tower-purge-lines-spacing",
+"alt": "wipe-tower-purge-lines-spacing"
+},
+{
+"level": 2,
+"en": "Extra flow for purge",
+"raw": "Extra flow for purge",
+"id": "extra-flow-for-purge",
+"alt": "extra-flow-for-purge"
+},
+{
+"level": 2,
+"en": "Maximum wipe tower print speed",
+"raw": "Maximum wipe tower print speed",
+"id": "maximum-wipe-tower-print-speed",
+"alt": "maximum-wipe-tower-print-speed"
+},
+{
+"level": 2,
+"en": "Wall type",
+"raw": "Wall type",
+"id": "wall-type",
+"alt": "wall-type"
+},
+{
+"level": 3,
+"en": "Rectangle",
+"raw": "Rectangle",
+"id": "rectangle",
+"alt": "rectangle"
+},
+{
+"level": 3,
+"en": "Cone",
+"raw": "Cone",
+"id": "cone",
+"alt": "cone"
+},
+{
+"level": 4,
+"en": "Stabilization cone apex angle",
+"raw": "Stabilization cone apex angle",
+"id": "stabilization-cone-apex-angle",
+"alt": "stabilization-cone-apex-angle"
+},
+{
+"level": 3,
+"en": "Rib",
+"raw": "Rib",
+"id": "rib",
+"alt": "rib"
+},
+{
+"level": 4,
+"en": "Extra rib length",
+"raw": "Extra rib length",
+"id": "extra-rib-length",
+"alt": "extra-rib-length"
+},
+{
+"level": 4,
+"en": "Rib width",
+"raw": "Rib width",
+"id": "rib-width",
+"alt": "rib-width"
+},
+{
+"level": 4,
+"en": "Fillet wall",
+"raw": "Fillet wall",
+"id": "fillet-wall",
+"alt": "fillet-wall"
+},
+{
+"level": 2,
+"en": "No sparse layers",
+"raw": "No sparse layers",
+"id": "no-sparse-layers",
+"alt": "no-sparse-layers"
+},
+{
+"level": 2,
+"en": "Combine sparse layers",
+"raw": "Combine sparse layers",
+"id": "combine-sparse-layers",
+"alt": "combine-sparse-layers"
+},
+{
+"level": 2,
+"en": "Prime all printing extruders",
+"raw": "Prime all printing extruders",
+"id": "prime-all-printing-extruders",
+"alt": "prime-all-printing-extruders"
+},
+{
+"level": 2,
+"en": "Belt purge tower width",
+"raw": "Belt purge tower width",
+"id": "belt-purge-tower-width",
+"alt": "belt-purge-tower-width"
+}
+],
+"src": "print_settings/multimaterial/multimaterial_settings_prime_tower.md"
+}

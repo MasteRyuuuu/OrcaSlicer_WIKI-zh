@@ -1,0 +1,531 @@
+{
+"code": [
+[
+"```gcode",
+"M106 P2 S(0-255)",
+"```"
+],
+[
+"```ini",
+"# Part cooling fan",
+"[fan_generic fan0]",
+"pin: PA7",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"# Auxiliary fan (comment out if you don't have it)",
+"[fan_generic fan2]",
+"pin: PA8",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"# Exhaust / enclosure fan (comment out if you don't have it)",
+"[fan_generic fan3]",
+"pin: PA9",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"[gcode_macro M106]",
+"gcode:",
+"    {% set fan = 'fan' + (params.P|int if params.P is defined else 0)|string %}",
+"    {% set speed = (params.S|float / 255 if params.S is defined else 1.0) %}",
+"    SET_FAN_SPEED FAN={fan} SPEED={speed}",
+"",
+"[gcode_macro M107]",
+"gcode:",
+"    {% set fan = 'fan' + (params.P|int if params.P is defined else 0)|string %}",
+"    {% if params.P is defined %}",
+"    SET_FAN_SPEED FAN={fan} SPEED=0",
+"    {% else %}",
+"    # No P -> turn off typical defined fans",
+"    SET_FAN_SPEED FAN=fan0 SPEED=0",
+"    SET_FAN_SPEED FAN=fan2 SPEED=0",
+"    SET_FAN_SPEED FAN=fan3 SPEED=0",
+"    {% endif %}",
+"```"
+],
+[
+"```ini",
+"# Example with friendly names + comments showing OrcaSlicer index",
+"",
+"[fan_generic CPAP]        # fan 0 OrcaSlicer",
+"pin: PB7",
+"max_power: 0.8",
+"shutdown_speed: 0",
+"kick_start_time: 0.100",
+"cycle_time: 0.005",
+"hardware_pwm: False",
+"off_below: 0.10",
+"",
+"[fan_generic EXHAUST]     # fan 3 OrcaSlicer",
+"pin: PE5",
+"#max_power:",
+"#shutdown_speed:",
+"cycle_time: 0.01",
+"hardware_pwm: False",
+"#kick_start_time:",
+"off_below: 0.2",
+"",
+"# If you had another (e.g. P2) add here:",
+"# [fan_generic AUX]",
+"# pin: PXn",
+"",
+"[gcode_macro M106]",
+"description: \"Set fan speed (Orca compatible)\"",
+"gcode:",
+"    {% set fan_map = {",
+"        0: \"CPAP\",      # Orca P0 → CPAP blower",
+"        3: \"EXHAUST\",   # Orca P3 → Exhaust",
+"        # 2: \"AUX\",     # Uncomment if you define AUX",
+"    } %}",
+"    {% set p = params.P|int if 'P' in params else 0 %}",
+"    {% set fan = fan_map[p] if p in fan_map else fan_map[0] %}",
+"    {% set speed = (params.S|float / 255 if 'S' in params else 1.0) %}",
+"    SET_FAN_SPEED FAN={fan} SPEED={speed}",
+"",
+"[gcode_macro M107]",
+"description: \"Turn off fans. No P = all, P# = specific\"",
+"gcode:",
+"    {% set fan_map = {",
+"        0: \"CPAP\",",
+"        3: \"EXHAUST\",",
+"        # 2: \"AUX\",",
+"    } %}",
+"    {% if 'P' in params %}",
+"        {% set p = params.P|int %}",
+"        {% if p in fan_map %}",
+"            SET_FAN_SPEED FAN={fan_map[p]} SPEED=0",
+"        {% else %}",
+"            RESPOND PREFIX=\"warn\" MSG=\"Unknown fan index P{{p}}\"",
+"        {% endif %}",
+"    {% else %}",
+"        # No P -> turn off all mapped fans",
+"        {% for f in fan_map.values() %}",
+"            SET_FAN_SPEED FAN={f} SPEED=0",
+"        {% endfor %}",
+"    {% endif %}",
+"```"
+],
+[
+"  ```gcode",
+"  M191 S{chamber_temperature[0]}",
+"  ```"
+],
+[
+"  ```gcode",
+"  M191 S{overall_chamber_temperature}",
+"  ```"
+],
+[
+"```pwsh",
+"[heater_generic chamber_heater]",
+"heater_pin:PB10",
+"max_power:1.0",
+"# Orca note: here the temperature sensor should be the sensor you are using for chamber temperature, not the PTC sensor",
+"sensor_type:NTC 100K MGB18-104F39050L32",
+"sensor_pin:PA1",
+"control = pid",
+"pid_Kp = 63.418",
+"pid_ki = 0.960",
+"pid_kd = 1244.716",
+"min_temp:0",
+"max_temp:70",
+"",
+"[gcode_macro M141]",
+"gcode:",
+"    SET_HEATER_TEMPERATURE HEATER=chamber_heater TARGET={params.S|default(0)}",
+"",
+"[gcode_macro M191]",
+"gcode:",
+"    {% set s = params.S|float %}",
+"    {% if s == 0 %}",
+"        # If target temperature is 0, do nothing",
+"        M117 Chamber heating cancelled",
+"    {% else %}",
+"        SET_HEATER_TEMPERATURE HEATER=chamber_heater TARGET={s}",
+"        # Orca: uncomment the following line if you want to use heat bed to assist chamber heating",
+"        # M140 S100",
+"        TEMPERATURE_WAIT SENSOR=\"heater_generic chamber_heater\" MINIMUM={s-1} MAXIMUM={s+1}",
+"        M117 Chamber at target temperature",
+"    {% endif %}",
+"```"
+],
+[
+"```ini",
+"# instead of using [fan], we define the default part cooling fan with [fan_generic] here",
+"# this is the default part cooling fan",
+"[fan_generic fan0]",
+"pin: PA7",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"# this is the auxiliary fan",
+"# comment out it if you don't have auxiliary fan",
+"[fan_generic fan2]",
+"pin: PA8",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"# this is the exhaust fan",
+"# comment out it if you don't have exhaust fan",
+"[fan_generic fan3]",
+"pin: PA9",
+"cycle_time: 0.01",
+"hardware_pwm: false",
+"",
+"[gcode_macro M106]",
+"gcode:",
+"    {% set fan = 'fan' + (params.P|int if params.P is defined else 0)|string %}",
+"    {% set speed = (params.S|float / 255 if params.S is defined else 1.0) %}",
+"    SET_FAN_SPEED FAN={fan} SPEED={speed}",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`nozzle_type[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Choice list`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`undefine, hardened_steel, stainless_steel, tungsten_carbide, brass`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--nozzle-type=undefine`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`nozzle_hrc`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--nozzle-hrc=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`auxiliary_fan`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--auxiliary-fan=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_chamber_temp_control`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-chamber-temp-control=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_air_filtration`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-air-filtration=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "nozzle-type",
+"en": "Nozzle type"
+},
+{
+"indent": 0,
+"anchor": "nozzle-hrc",
+"en": "Nozzle HRC"
+},
+{
+"indent": 0,
+"anchor": "auxiliary-part-cooling-fan",
+"en": "Auxiliary Part Cooling Fan"
+},
+{
+"indent": 4,
+"anchor": "auxiliary-fan",
+"en": "Auxiliary Fan"
+},
+{
+"indent": 8,
+"anchor": "simple-option-indexes-only--fan0-fan2-fan3",
+"en": "Simple option (indexes only → fan0, fan2, fan3)"
+},
+{
+"indent": 8,
+"anchor": "advanced-option-index--name-mapping",
+"en": "Advanced option (Index ⇄ Name mapping)"
+},
+{
+"indent": 12,
+"anchor": "quick-customization",
+"en": "Quick customization"
+},
+{
+"indent": 12,
+"anchor": "usage",
+"en": "Usage"
+},
+{
+"indent": 0,
+"anchor": "support-controlling-chamber-temperature",
+"en": "Support controlling chamber temperature"
+},
+{
+"indent": 4,
+"anchor": "using-chamber-temperature-variables-in-machine-g-code",
+"en": "Using Chamber Temperature Variables in Machine G-code"
+},
+{
+"indent": 4,
+"anchor": "klipper-chamber-temperature",
+"en": "Klipper Chamber Temperature"
+},
+{
+"indent": 0,
+"anchor": "support-air-filtration",
+"en": "Support air filtration"
+}
+],
+[
+{
+"indent": 0,
+"anchor": "nozzle-type",
+"en": "Nozzle type"
+},
+{
+"indent": 0,
+"anchor": "nozzle-hrc",
+"en": "Nozzle HRC"
+},
+{
+"indent": 0,
+"anchor": "auxiliary-part-cooling-fan",
+"en": "Auxiliary Part Cooling Fan"
+},
+{
+"indent": 4,
+"anchor": "auxiliary-fan",
+"en": "Auxiliary Fan"
+},
+{
+"indent": 8,
+"anchor": "simple-option-indexes-only--fan0-fan2-fan3",
+"en": "Simple option (indexes only → fan0, fan2, fan3)"
+},
+{
+"indent": 8,
+"anchor": "advanced-option-index--name-mapping",
+"en": "Advanced option (Index ⇄ Name mapping)"
+},
+{
+"indent": 12,
+"anchor": "quick-customization",
+"en": "Quick customization"
+},
+{
+"indent": 12,
+"anchor": "usage",
+"en": "Usage"
+},
+{
+"indent": 0,
+"anchor": "support-controlling-chamber-temperature",
+"en": "Support controlling chamber temperature"
+},
+{
+"indent": 4,
+"anchor": "using-chamber-temperature-variables-in-machine-g-code",
+"en": "Using Chamber Temperature Variables in Machine G-code"
+},
+{
+"indent": 4,
+"anchor": "klipper-chamber-temperature",
+"en": "Klipper Chamber Temperature"
+},
+{
+"indent": 0,
+"anchor": "support-air-filtration",
+"en": "Support air filtration"
+}
+]
+],
+"img": [
+"![Chamber-Temperature-Control-Printer](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Chamber/Chamber-Temperature-Control-Printer.png?raw=true)",
+"![Chamber-Temperature-Control-Material](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Chamber/Chamber-Temperature-Control-Material.png?raw=true)"
+],
+"link": [
+"https://en.wikipedia.org/wiki/Rockwell_hardness_test",
+"material_cooling#auxiliary-part-cooling-fan",
+"material_temperatures#print-chamber-temperature"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Printer Accessory",
+"raw": "Printer Accessory",
+"id": "printer-accessory",
+"alt": "printer-accessory"
+},
+{
+"level": 2,
+"en": "Nozzle type",
+"raw": "Nozzle type",
+"id": "nozzle-type",
+"alt": "nozzle-type"
+},
+{
+"level": 2,
+"en": "Nozzle HRC",
+"raw": "Nozzle HRC",
+"id": "nozzle-hrc",
+"alt": "nozzle-hrc"
+},
+{
+"level": 2,
+"en": "Auxiliary Part Cooling Fan",
+"raw": "Auxiliary Part Cooling Fan",
+"id": "auxiliary-part-cooling-fan",
+"alt": "auxiliary-part-cooling-fan"
+},
+{
+"level": 3,
+"en": "Auxiliary Fan",
+"raw": "Auxiliary Fan",
+"id": "auxiliary-fan",
+"alt": "auxiliary-fan"
+},
+{
+"level": 4,
+"en": "Simple option (indexes only → fan0, fan2, fan3)",
+"raw": "Simple option (indexes only → fan0, fan2, fan3)",
+"id": "simple-option-indexes-only-fan0-fan2-fan3",
+"alt": "simple-option-indexes-only-fan0-fan2-fan3"
+},
+{
+"level": 4,
+"en": "Advanced option (Index ⇄ Name mapping)",
+"raw": "Advanced option (Index ⇄ Name mapping)",
+"id": "advanced-option-index-name-mapping",
+"alt": "advanced-option-index-name-mapping"
+},
+{
+"level": 5,
+"en": "Quick customization",
+"raw": "Quick customization",
+"id": "quick-customization",
+"alt": "quick-customization"
+},
+{
+"level": 5,
+"en": "Usage",
+"raw": "Usage",
+"id": "usage",
+"alt": "usage"
+},
+{
+"level": 2,
+"en": "Support controlling chamber temperature",
+"raw": "Support controlling chamber temperature",
+"id": "support-controlling-chamber-temperature",
+"alt": "support-controlling-chamber-temperature"
+},
+{
+"level": 3,
+"en": "Using Chamber Temperature Variables in Machine G-code",
+"raw": "Using Chamber Temperature Variables in Machine G-code",
+"id": "using-chamber-temperature-variables-in-machine-g-code",
+"alt": "using-chamber-temperature-variables-in-machine-g-code"
+},
+{
+"level": 3,
+"en": "Klipper Chamber Temperature",
+"raw": "Klipper Chamber Temperature",
+"id": "klipper-chamber-temperature",
+"alt": "klipper-chamber-temperature"
+},
+{
+"level": 2,
+"en": "Support air filtration",
+"raw": "Support air filtration",
+"id": "support-air-filtration",
+"alt": "support-air-filtration"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_accessory.md"
+}

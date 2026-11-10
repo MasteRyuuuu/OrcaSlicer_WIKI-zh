@@ -1,0 +1,12 @@
+H number of slow layers = 慢速层数量
+G sparse infill = 稀疏填充
+G layer = 层
+G travel = 空驶
+G infill = 填充
+G brim = Brim
+G bottom = 底部 / 仰视
+  for the first = 在最初的
+  first layer infill = 首层填充
+  first layer = 首层
+  travel speed = 空驶速度
+  inner walls = 内墙

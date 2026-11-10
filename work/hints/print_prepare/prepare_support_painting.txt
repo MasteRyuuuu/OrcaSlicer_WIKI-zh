@@ -1,0 +1,3 @@
+H support painting = 支撑绘制
+G support = 支撑
+G model = 模型 / 型号

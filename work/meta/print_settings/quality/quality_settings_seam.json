@@ -1,0 +1,611 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`seam_position`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`nearest, aligned, aligned_back, back, random`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--seam-position=nearest`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`staggered_inner_seams`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--staggered-inner-seams=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`seam_gap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--seam-gap=20%`."
+}
+],
+[
+{
+"label": "Modes",
+"target": "option_mode",
+"value": ""
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`role_based_wipe_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--role-based-wipe-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-speed=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_on_loops`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-on-loops=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_inward`, `wipe_inward_distance`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`wipe_inward` (Boolean), `wipe_inward_distance` (Float or Percentage)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-inward=1` (`wipe_inward` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_before_external_loop`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-before-external-loop=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "seam-position",
+"en": "Seam Position"
+},
+{
+"indent": 4,
+"anchor": "aligned",
+"en": "Aligned"
+},
+{
+"indent": 4,
+"anchor": "aligned-back",
+"en": "Aligned Back"
+},
+{
+"indent": 4,
+"anchor": "nearest",
+"en": "Nearest"
+},
+{
+"indent": 4,
+"anchor": "back",
+"en": "Back"
+},
+{
+"indent": 4,
+"anchor": "random",
+"en": "Random"
+},
+{
+"indent": 0,
+"anchor": "modifiers",
+"en": "Modifiers"
+},
+{
+"indent": 4,
+"anchor": "staggered-inner-seams",
+"en": "Staggered inner seams"
+},
+{
+"indent": 4,
+"anchor": "seam-gap",
+"en": "Seam gap"
+},
+{
+"indent": 4,
+"anchor": "scarf-joint-seam",
+"en": "Scarf joint seam"
+},
+{
+"indent": 8,
+"anchor": "scarf-joint-seam-type",
+"en": "Scarf joint seam Type"
+},
+{
+"indent": 8,
+"anchor": "conditional-scarf-joint",
+"en": "Conditional scarf joint"
+},
+{
+"indent": 8,
+"anchor": "scarf-joint-speed",
+"en": "Scarf joint speed"
+},
+{
+"indent": 8,
+"anchor": "scarf-joint-height",
+"en": "Scarf joint height"
+},
+{
+"indent": 8,
+"anchor": "scarf-around-entire-wall",
+"en": "Scarf around entire wall"
+},
+{
+"indent": 8,
+"anchor": "scarf-length",
+"en": "Scarf length"
+},
+{
+"indent": 8,
+"anchor": "scarf-steps",
+"en": "Scarf steps"
+},
+{
+"indent": 8,
+"anchor": "scarf-joint-flow-ratio",
+"en": "Scarf joint flow ratio"
+},
+{
+"indent": 8,
+"anchor": "scarf-joint-for-inner-walls",
+"en": "Scarf joint for inner walls"
+},
+{
+"indent": 4,
+"anchor": "role-based-wipe-speed",
+"en": "Role based wipe speed"
+},
+{
+"indent": 4,
+"anchor": "wipe-speed",
+"en": "Wipe speed"
+},
+{
+"indent": 4,
+"anchor": "wipe-on-loop-inward-movement",
+"en": "Wipe on loop (inward movement)"
+},
+{
+"indent": 4,
+"anchor": "wipe-inward",
+"en": "Wipe inward"
+},
+{
+"indent": 8,
+"anchor": "wipe-inward-distance",
+"en": "Wipe inward distance"
+},
+{
+"indent": 4,
+"anchor": "wipe-before-external",
+"en": "Wipe Before External"
+},
+{
+"indent": 0,
+"anchor": "tips",
+"en": "Tips"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting-seam-performance",
+"en": "Troubleshooting Seam Performance"
+},
+{
+"indent": 4,
+"anchor": "troubleshooting-the-start-of-a-seam",
+"en": "Troubleshooting the Start of a Seam"
+},
+{
+"indent": 4,
+"anchor": "troubleshooting-the-end-of-a-seam",
+"en": "Troubleshooting the End of a Seam"
+},
+{
+"indent": 4,
+"anchor": "the-role-of-wall-ordering-in-seam-appearance",
+"en": "The Role of Wall Ordering in Seam Appearance"
+}
+]
+],
+"img": [
+"![seam-aligned](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-aligned.png?raw=true)",
+"![seam-aligned-back](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-aligned-back.png?raw=true)",
+"![seam-nearest](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-nearest.png?raw=true)",
+"![seam-back](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-back.png?raw=true)",
+"![seam-random](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-random.png?raw=true)",
+"![seam-staggered-inner](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-staggered-inner.gif?raw=true)",
+"![seam-gap](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-gap.gif?raw=true)",
+"![scarf-joint-seam](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/scarf-joint-seam.png?raw=true)",
+"![seam-wipe-on-loop](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-wipe-on-loop.png?raw=true)",
+"![seam-wipe-on-loops-options](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-wipe-on-loops-options.png?raw=true)",
+"![seam-quality](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/seam/seam-quality.jpg?raw=true)"
+],
+"link": [
+"#aligned-back",
+"#aligned",
+"#back",
+"prepare_seam_painting",
+"prepare_precise_seam",
+"#random",
+"#aligned",
+"#back",
+"pressure_advance_calib",
+"retraction_calib",
+"built_in_placeholders_variables",
+"built_in_placeholders_variables",
+"others_settings_special_mode#spiral-vase",
+"belt_printing#features-that-are-not-available",
+"https://www.printables.com/model/783313-better-seams-an-orca-slicer-guide-to-using-scarf-s",
+"speed_settings_advanced",
+"#role-based-wipe-speed",
+"strength_settings_walls#wall-loops",
+"#wipe-on-loop-inward-movement",
+"printer_extruder_retraction#wipe-while-retracting",
+"printer_extruder_retraction#wipe-distance",
+"quality_settings_wall_and_surfaces#outerinner",
+"#seam-gap",
+"quality_settings_line_width",
+"pressure_advance_calib",
+"retraction_calib",
+"quality_settings_wall_and_surfaces#outerinner",
+"quality_settings_wall_and_surfaces#innerouterinner"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Seam",
+"raw": "Seam",
+"id": "seam",
+"alt": "seam"
+},
+{
+"level": 2,
+"en": "Seam Position",
+"raw": "Seam Position",
+"id": "seam-position",
+"alt": "seam-position"
+},
+{
+"level": 3,
+"en": "Aligned",
+"raw": "Aligned",
+"id": "aligned",
+"alt": "aligned"
+},
+{
+"level": 3,
+"en": "Aligned Back",
+"raw": "Aligned Back",
+"id": "aligned-back",
+"alt": "aligned-back"
+},
+{
+"level": 3,
+"en": "Nearest",
+"raw": "Nearest",
+"id": "nearest",
+"alt": "nearest"
+},
+{
+"level": 3,
+"en": "Back",
+"raw": "Back",
+"id": "back",
+"alt": "back"
+},
+{
+"level": 3,
+"en": "Random",
+"raw": "Random",
+"id": "random",
+"alt": "random"
+},
+{
+"level": 2,
+"en": "Modifiers",
+"raw": "Modifiers",
+"id": "modifiers",
+"alt": "modifiers"
+},
+{
+"level": 3,
+"en": "Staggered inner seams",
+"raw": "Staggered inner seams",
+"id": "staggered-inner-seams",
+"alt": "staggered-inner-seams"
+},
+{
+"level": 3,
+"en": "Seam gap",
+"raw": "Seam gap",
+"id": "seam-gap",
+"alt": "seam-gap"
+},
+{
+"level": 3,
+"en": "Scarf joint seam",
+"raw": "Scarf joint seam",
+"id": "scarf-joint-seam",
+"alt": "scarf-joint-seam"
+},
+{
+"level": 4,
+"en": "Scarf joint seam Type",
+"raw": "Scarf joint seam Type",
+"id": "scarf-joint-seam-type",
+"alt": "scarf-joint-seam-type"
+},
+{
+"level": 4,
+"en": "Conditional scarf joint",
+"raw": "Conditional scarf joint",
+"id": "conditional-scarf-joint",
+"alt": "conditional-scarf-joint"
+},
+{
+"level": 4,
+"en": "Scarf joint speed",
+"raw": "Scarf joint speed",
+"id": "scarf-joint-speed",
+"alt": "scarf-joint-speed"
+},
+{
+"level": 4,
+"en": "Scarf joint height",
+"raw": "Scarf joint height",
+"id": "scarf-joint-height",
+"alt": "scarf-joint-height"
+},
+{
+"level": 4,
+"en": "Scarf around entire wall",
+"raw": "Scarf around entire wall",
+"id": "scarf-around-entire-wall",
+"alt": "scarf-around-entire-wall"
+},
+{
+"level": 4,
+"en": "Scarf length",
+"raw": "Scarf length",
+"id": "scarf-length",
+"alt": "scarf-length"
+},
+{
+"level": 4,
+"en": "Scarf steps",
+"raw": "Scarf steps",
+"id": "scarf-steps",
+"alt": "scarf-steps"
+},
+{
+"level": 4,
+"en": "Scarf joint flow ratio",
+"raw": "Scarf joint flow ratio",
+"id": "scarf-joint-flow-ratio",
+"alt": "scarf-joint-flow-ratio"
+},
+{
+"level": 4,
+"en": "Scarf joint for inner walls",
+"raw": "Scarf joint for inner walls",
+"id": "scarf-joint-for-inner-walls",
+"alt": "scarf-joint-for-inner-walls"
+},
+{
+"level": 3,
+"en": "Role based wipe speed",
+"raw": "Role based wipe speed",
+"id": "role-based-wipe-speed",
+"alt": "role-based-wipe-speed"
+},
+{
+"level": 3,
+"en": "Wipe speed",
+"raw": "Wipe speed",
+"id": "wipe-speed",
+"alt": "wipe-speed"
+},
+{
+"level": 3,
+"en": "Wipe on loop (inward movement)",
+"raw": "Wipe on loop (inward movement)",
+"id": "wipe-on-loop-inward-movement",
+"alt": "wipe-on-loop-inward-movement"
+},
+{
+"level": 3,
+"en": "Wipe inward",
+"raw": "Wipe inward",
+"id": "wipe-inward",
+"alt": "wipe-inward"
+},
+{
+"level": 4,
+"en": "Wipe inward distance",
+"raw": "Wipe inward distance",
+"id": "wipe-inward-distance",
+"alt": "wipe-inward-distance"
+},
+{
+"level": 3,
+"en": "Wipe Before External",
+"raw": "Wipe Before External",
+"id": "wipe-before-external",
+"alt": "wipe-before-external"
+},
+{
+"level": 2,
+"en": "Tips",
+"raw": "Tips",
+"id": "tips",
+"alt": "tips"
+},
+{
+"level": 2,
+"en": "Troubleshooting Seam Performance",
+"raw": "Troubleshooting Seam Performance",
+"id": "troubleshooting-seam-performance",
+"alt": "troubleshooting-seam-performance"
+},
+{
+"level": 3,
+"en": "Troubleshooting the Start of a Seam",
+"raw": "Troubleshooting the Start of a Seam",
+"id": "troubleshooting-the-start-of-a-seam",
+"alt": "troubleshooting-the-start-of-a-seam"
+},
+{
+"level": 3,
+"en": "Troubleshooting the End of a Seam",
+"raw": "Troubleshooting the End of a Seam",
+"id": "troubleshooting-the-end-of-a-seam",
+"alt": "troubleshooting-the-end-of-a-seam"
+},
+{
+"level": 3,
+"en": "The Role of Wall Ordering in Seam Appearance",
+"raw": "The Role of Wall Ordering in Seam Appearance",
+"id": "the-role-of-wall-ordering-in-seam-appearance",
+"alt": "the-role-of-wall-ordering-in-seam-appearance"
+}
+],
+"src": "print_settings/quality/quality_settings_seam.md"
+}

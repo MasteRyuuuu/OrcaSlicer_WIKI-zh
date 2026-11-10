@@ -1,0 +1,524 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`support_top_z_distance`, `support_bottom_z_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-top-z-distance=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_wall_count`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-wall-count=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_base_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`default, rectilinear, rectilinear-grid, honeycomb, lightning, hollow`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-base-pattern=default`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_base_pattern_spacing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-base-pattern-spacing=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_top_layers`, `support_interface_bottom_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-top-layers=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`auto, rectilinear, concentric, spiralinset, rectilinear_interlaced, grid`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-pattern=auto`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_spacing`, `support_bottom_interface_spacing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-spacing=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_expansion`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-expansion=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_object_xy_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-object-xy-distance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_object_first_layer_gap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-object-first-layer-gap=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_no_support`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-no-support=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`max_bridge_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--max-bridge-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`independent_support_layer_height`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--independent-support-layer-height=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "z-distance",
+"en": "Z distance"
+},
+{
+"indent": 0,
+"anchor": "support-wall-loops",
+"en": "Support wall loops"
+},
+{
+"indent": 0,
+"anchor": "base-pattern",
+"en": "Base Pattern"
+},
+{
+"indent": 4,
+"anchor": "base-pattern-spacing",
+"en": "Base pattern spacing"
+},
+{
+"indent": 0,
+"anchor": "pattern-angle",
+"en": "Pattern angle"
+},
+{
+"indent": 0,
+"anchor": "interface-layers",
+"en": "Interface layers"
+},
+{
+"indent": 0,
+"anchor": "interface-pattern",
+"en": "Interface pattern"
+},
+{
+"indent": 0,
+"anchor": "interface-spacing",
+"en": "Interface spacing"
+},
+{
+"indent": 0,
+"anchor": "normal-support-expansion",
+"en": "Normal support expansion"
+},
+{
+"indent": 0,
+"anchor": "supportobject-xy-distance",
+"en": "Support/object XY distance"
+},
+{
+"indent": 0,
+"anchor": "supportobject-first-layer-gap",
+"en": "Support/object first layer gap"
+},
+{
+"indent": 0,
+"anchor": "dont-support-bridges",
+"en": "Don't support bridges"
+},
+{
+"indent": 0,
+"anchor": "max-bridge-length",
+"en": "Max bridge length"
+},
+{
+"indent": 0,
+"anchor": "independent-support-layer-height",
+"en": "Independent support layer height"
+}
+]
+],
+"img": [],
+"link": [
+"#independent-support-layer-height",
+"support_settings_support#tree-hybrid",
+"#z-distance",
+"#base-pattern",
+"support_settings_filament#interface-filament-transitions",
+"#pattern-angle",
+"support_settings_support#snug",
+"strength_settings_patterns#spiral-inset",
+"#base-pattern",
+"#interface-spacing",
+"support_settings_ironing",
+"#max-bridge-length",
+"#dont-support-bridges",
+"support_settings_tree#branch-distance",
+"#interface-layers"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Support Advanced",
+"raw": "Support Advanced",
+"id": "support-advanced",
+"alt": "support-advanced"
+},
+{
+"level": 2,
+"en": "Z distance",
+"raw": "Z distance",
+"id": "z-distance",
+"alt": "z-distance"
+},
+{
+"level": 2,
+"en": "Support wall loops",
+"raw": "Support wall loops",
+"id": "support-wall-loops",
+"alt": "support-wall-loops"
+},
+{
+"level": 2,
+"en": "Base Pattern",
+"raw": "Base Pattern",
+"id": "base-pattern",
+"alt": "base-pattern"
+},
+{
+"level": 3,
+"en": "Base pattern spacing",
+"raw": "Base pattern spacing",
+"id": "base-pattern-spacing",
+"alt": "base-pattern-spacing"
+},
+{
+"level": 2,
+"en": "Pattern angle",
+"raw": "Pattern angle",
+"id": "pattern-angle",
+"alt": "pattern-angle"
+},
+{
+"level": 2,
+"en": "Interface layers",
+"raw": "Interface layers",
+"id": "interface-layers",
+"alt": "interface-layers"
+},
+{
+"level": 2,
+"en": "Interface pattern",
+"raw": "Interface pattern",
+"id": "interface-pattern",
+"alt": "interface-pattern"
+},
+{
+"level": 2,
+"en": "Interface spacing",
+"raw": "Interface spacing",
+"id": "interface-spacing",
+"alt": "interface-spacing"
+},
+{
+"level": 2,
+"en": "Normal support expansion",
+"raw": "Normal support expansion",
+"id": "normal-support-expansion",
+"alt": "normal-support-expansion"
+},
+{
+"level": 2,
+"en": "Support/object XY distance",
+"raw": "Support/object XY distance",
+"id": "supportobject-xy-distance",
+"alt": "supportobject-xy-distance"
+},
+{
+"level": 2,
+"en": "Support/object first layer gap",
+"raw": "Support/object first layer gap",
+"id": "supportobject-first-layer-gap",
+"alt": "supportobject-first-layer-gap"
+},
+{
+"level": 2,
+"en": "Don't support bridges",
+"raw": "Don't support bridges",
+"id": "dont-support-bridges",
+"alt": "dont-support-bridges"
+},
+{
+"level": 2,
+"en": "Max bridge length",
+"raw": "Max bridge length",
+"id": "max-bridge-length",
+"alt": "max-bridge-length"
+},
+{
+"level": 2,
+"en": "Independent support layer height",
+"raw": "Independent support layer height",
+"id": "independent-support-layer-height",
+"alt": "independent-support-layer-height"
+}
+],
+"src": "print_settings/support/support_settings_advanced.md"
+}

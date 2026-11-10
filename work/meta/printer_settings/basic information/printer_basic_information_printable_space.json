@@ -1,0 +1,412 @@
+{
+"code": [
+[
+"```text",
+"20x0,45x0,45x18,20x18|8..22;115x20,145x20,145x48,115x48",
+"```"
+],
+[
+"```c++",
+"{if curr_bed_type==\"Textured PEI Plate\"}",
+"  SET_GCODE_OFFSET Z=-0.05",
+"{else}",
+"  SET_GCODE_OFFSET Z=0.0",
+"{endif}",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bed_exclude_area`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Point list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bed-exclude-area=100,100`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`bed_exclude_volumes`, `bed_exclude_volume_mode`, `extruder_bed_exclude_volumes[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`bed_exclude_volumes` (Text), `bed_exclude_volume_mode` (Choice: shared, toolhead_offset, per_extruder), `extruder_bed_exclude_volumes` (Text list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bed-exclude-volumes=value` (`bed_exclude_volumes` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`printable_height`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--printable-height=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_multi_bed_types`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-multi-bed-types=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`best_object_pos`."
+},
+{
+"label": "Type",
+"target": "option_type#point",
+"value": "`Point`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--best-object-pos=100,100`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`z_offset`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--z-offset=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`preferred_orientation`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--preferred-orientation=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "printable-area-bed-shape",
+"en": "Printable area (Bed Shape)"
+},
+{
+"indent": 4,
+"anchor": "shape",
+"en": "Shape"
+},
+{
+"indent": 4,
+"anchor": "settings",
+"en": "Settings"
+},
+{
+"indent": 4,
+"anchor": "texture",
+"en": "Texture"
+},
+{
+"indent": 4,
+"anchor": "model",
+"en": "Model"
+},
+{
+"indent": 0,
+"anchor": "excluded-bed-area",
+"en": "Excluded bed area"
+},
+{
+"indent": 0,
+"anchor": "toolhead-collision-volumes",
+"en": "Toolhead collision volumes"
+},
+{
+"indent": 4,
+"anchor": "volume-format",
+"en": "Volume format"
+},
+{
+"indent": 4,
+"anchor": "collision-volume-behavior",
+"en": "Collision volume behavior"
+},
+{
+"indent": 4,
+"anchor": "extruder-collision-volumes",
+"en": "Extruder collision volumes"
+},
+{
+"indent": 4,
+"anchor": "preview",
+"en": "Preview"
+},
+{
+"indent": 4,
+"anchor": "limitations",
+"en": "Limitations"
+},
+{
+"indent": 0,
+"anchor": "printable-height",
+"en": "Printable height"
+},
+{
+"indent": 0,
+"anchor": "support-multi-bed-types",
+"en": "Support multi bed types"
+},
+{
+"indent": 0,
+"anchor": "best-object-position",
+"en": "Best object position"
+},
+{
+"indent": 0,
+"anchor": "z-offset",
+"en": "Z offset"
+},
+{
+"indent": 0,
+"anchor": "preferred-orientation",
+"en": "Preferred orientation"
+}
+]
+],
+"img": [
+"![bed_type_selector](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bed/bed_type_selector.png?raw=true)",
+"![bed_type_material_temperature](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bed/bed_type_material_temperature.png?raw=true)"
+],
+"link": [
+"#toolhead-collision-volumes",
+"#excluded-bed-area",
+"#excluded-bed-area",
+"#printable-height",
+"#excluded-bed-area",
+"prepare_auto_arrange",
+"printer_extruder_basic_information#extruder-offset-position",
+"#extruder-collision-volumes",
+"#volume-format",
+"keyboard_shortcuts#global",
+"others_settings_skirt",
+"printer_extruder_z_hop#z-hop-type",
+"material_temperatures#bed"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Printable Space",
+"raw": "Printable Space",
+"id": "printable-space",
+"alt": "printable-space"
+},
+{
+"level": 2,
+"en": "Printable area (Bed Shape)",
+"raw": "Printable area (Bed Shape)",
+"id": "printable-area-bed-shape",
+"alt": "printable-area-bed-shape"
+},
+{
+"level": 3,
+"en": "Shape",
+"raw": "Shape",
+"id": "shape",
+"alt": "shape"
+},
+{
+"level": 3,
+"en": "Settings",
+"raw": "Settings",
+"id": "settings",
+"alt": "settings"
+},
+{
+"level": 3,
+"en": "Texture",
+"raw": "Texture",
+"id": "texture",
+"alt": "texture"
+},
+{
+"level": 3,
+"en": "Model",
+"raw": "Model",
+"id": "model",
+"alt": "model"
+},
+{
+"level": 2,
+"en": "Excluded bed area",
+"raw": "Excluded bed area",
+"id": "excluded-bed-area",
+"alt": "excluded-bed-area"
+},
+{
+"level": 2,
+"en": "Toolhead collision volumes",
+"raw": "Toolhead collision volumes",
+"id": "toolhead-collision-volumes",
+"alt": "toolhead-collision-volumes"
+},
+{
+"level": 3,
+"en": "Volume format",
+"raw": "Volume format",
+"id": "volume-format",
+"alt": "volume-format"
+},
+{
+"level": 3,
+"en": "Collision volume behavior",
+"raw": "Collision volume behavior",
+"id": "collision-volume-behavior",
+"alt": "collision-volume-behavior"
+},
+{
+"level": 3,
+"en": "Extruder collision volumes",
+"raw": "Extruder collision volumes",
+"id": "extruder-collision-volumes",
+"alt": "extruder-collision-volumes"
+},
+{
+"level": 3,
+"en": "Preview",
+"raw": "Preview",
+"id": "preview",
+"alt": "preview"
+},
+{
+"level": 3,
+"en": "Limitations",
+"raw": "Limitations",
+"id": "limitations",
+"alt": "limitations"
+},
+{
+"level": 2,
+"en": "Printable height",
+"raw": "Printable height",
+"id": "printable-height",
+"alt": "printable-height"
+},
+{
+"level": 2,
+"en": "Support multi bed types",
+"raw": "Support multi bed types",
+"id": "support-multi-bed-types",
+"alt": "support-multi-bed-types"
+},
+{
+"level": 2,
+"en": "Best object position",
+"raw": "Best object position",
+"id": "best-object-position",
+"alt": "best-object-position"
+},
+{
+"level": 2,
+"en": "Z offset",
+"raw": "Z offset",
+"id": "z-offset",
+"alt": "z-offset"
+},
+{
+"level": 2,
+"en": "Preferred orientation",
+"raw": "Preferred orientation",
+"id": "preferred-orientation",
+"alt": "preferred-orientation"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_printable_space.md"
+}

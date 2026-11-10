@@ -1,0 +1,12 @@
+H high extruder current on filament swap = 更换耗材丝时提高挤出机电流
+H single extruder multi-material parameters = 单挤出机多材料参数
+H filament parking position = 耗材丝停靠位置
+H extra loading distance = 额外加载距离
+H cooling tube position = 冷却管位置
+H cooling tube length = 冷却管长度
+G cooling tube = 冷却管
+G filament = 耗材丝
+G extruder = 挤出机
+G cooling = 冷却
+G ramming = 尖端成型
+G firmware = 固件

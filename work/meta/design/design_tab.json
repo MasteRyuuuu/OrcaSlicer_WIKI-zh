@@ -1,0 +1,137 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "enabling-the-design-tab",
+"en": "Enabling the Design Tab"
+},
+{
+"indent": 0,
+"anchor": "getting-started",
+"en": "Getting Started"
+},
+{
+"indent": 0,
+"anchor": "the-status-line",
+"en": "The Status Line"
+},
+{
+"indent": 0,
+"anchor": "selecting",
+"en": "Selecting"
+},
+{
+"indent": 0,
+"anchor": "the-offer-menu",
+"en": "The Offer Menu"
+},
+{
+"indent": 0,
+"anchor": "view-controls",
+"en": "View Controls"
+},
+{
+"indent": 0,
+"anchor": "import-and-export",
+"en": "Import and Export"
+},
+{
+"indent": 0,
+"anchor": "commit-to-plate",
+"en": "Commit to Plate"
+},
+{
+"indent": 0,
+"anchor": "limitations",
+"en": "Limitations"
+}
+]
+],
+"img": [],
+"link": [
+"design_sketching",
+"design_modeling_tools",
+"design_keyboard_shortcuts",
+"home#prepare",
+"home#prepare",
+"#import-and-export",
+"home#prepare"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Design Tab",
+"raw": "Design Tab",
+"id": "design-tab",
+"alt": "design-tab"
+},
+{
+"level": 2,
+"en": "Enabling the Design Tab",
+"raw": "Enabling the Design Tab",
+"id": "enabling-the-design-tab",
+"alt": "enabling-the-design-tab"
+},
+{
+"level": 2,
+"en": "Getting Started",
+"raw": "Getting Started",
+"id": "getting-started",
+"alt": "getting-started"
+},
+{
+"level": 2,
+"en": "The Status Line",
+"raw": "The Status Line",
+"id": "the-status-line",
+"alt": "the-status-line"
+},
+{
+"level": 2,
+"en": "Selecting",
+"raw": "Selecting",
+"id": "selecting",
+"alt": "selecting"
+},
+{
+"level": 2,
+"en": "The Offer Menu",
+"raw": "The Offer Menu",
+"id": "the-offer-menu",
+"alt": "the-offer-menu"
+},
+{
+"level": 2,
+"en": "View Controls",
+"raw": "View Controls",
+"id": "view-controls",
+"alt": "view-controls"
+},
+{
+"level": 2,
+"en": "Import and Export",
+"raw": "Import and Export",
+"id": "import-and-export",
+"alt": "import-and-export"
+},
+{
+"level": 2,
+"en": "Commit to Plate",
+"raw": "Commit to Plate",
+"id": "commit-to-plate",
+"alt": "commit-to-plate"
+},
+{
+"level": 2,
+"en": "Limitations",
+"raw": "Limitations",
+"id": "limitations",
+"alt": "limitations"
+}
+],
+"src": "design/design_tab.md"
+}

@@ -1,0 +1,30 @@
+flowchart TB
+    subgraph Vendor["打印机厂商配置包"]
+        Index["厂商索引文件"]
+        Model["打印机型号"]
+        Machine["打印机变种"]
+        MachineBase["共享打印机基础配置"]
+        Process["工艺预设"]
+        ProcessBase["共享工艺基础配置"]
+        Filament["打印机专用耗材丝"]
+
+        Index -.-> Model
+        Index -.-> Machine
+        Index -.-> MachineBase
+        Index -.-> Process
+        Index -.-> ProcessBase
+        Index -.-> Filament
+        Machine -->|printer_model| Model
+        Machine -->|inherits| MachineBase
+        Process -->|inherits| ProcessBase
+        Process -->|compatible_printers| Machine
+        Filament -->|compatible_printers| Machine
+    end
+
+    subgraph Library["OrcaFilamentLibrary"]
+        LibraryIndex["库索引文件"]
+        GlobalFilament["全局耗材丝"]
+        LibraryIndex -.-> GlobalFilament
+    end
+
+    Filament -->|inherits| GlobalFilament

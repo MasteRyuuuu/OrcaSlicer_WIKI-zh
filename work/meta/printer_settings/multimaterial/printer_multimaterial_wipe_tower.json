@@ -1,0 +1,199 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`type1, type2`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-type=type1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`purge_in_prime_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--purge-in-prime-tower=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_filament_ramming`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-filament-ramming=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tool_change_on_wipe_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tool-change-on-wipe-tower=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wait_for_temp_on_wipe_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wait-for-temp-on-wipe-tower=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_belt_purge_tower`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-belt-purge-tower=1`."
+}
+]
+],
+"toc": [],
+"img": [
+"![belt_purge_tower_printer_option](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_purge_tower_printer_option.png?raw=true)"
+],
+"link": [
+"belt_printing",
+"printer_basic_information_belt_printer#enable-belt-printing",
+"multimaterial_settings_flush_options",
+"multimaterial_settings_prime_tower#belt-purge-tower-width",
+"#purge-in-prime-tower"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Wipe Tower",
+"raw": "Wipe Tower",
+"id": "wipe-tower",
+"alt": "wipe-tower"
+},
+{
+"level": 2,
+"en": "Purge in prime tower",
+"raw": "Purge in prime tower",
+"id": "purge-in-prime-tower",
+"alt": "purge-in-prime-tower"
+},
+{
+"level": 2,
+"en": "Enable filament ramming",
+"raw": "Enable filament ramming",
+"id": "enable-filament-ramming",
+"alt": "enable-filament-ramming"
+},
+{
+"level": 2,
+"en": "Tool Change on Wipe Tower",
+"raw": "Tool Change on Wipe Tower",
+"id": "tool-change-on-wipe-tower",
+"alt": "tool-change-on-wipe-tower"
+},
+{
+"level": 2,
+"en": "Wait for Temperature on Wipe Tower",
+"raw": "Wait for Temperature on Wipe Tower",
+"id": "wait-for-temperature-on-wipe-tower",
+"alt": "wait-for-temperature-on-wipe-tower"
+},
+{
+"level": 2,
+"en": "Belt purge tower",
+"raw": "Belt purge tower",
+"id": "belt-purge-tower",
+"alt": "belt-purge-tower"
+}
+],
+"src": "printer_settings/multimaterial/printer_multimaterial_wipe_tower.md"
+}

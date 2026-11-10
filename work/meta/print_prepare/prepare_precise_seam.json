@@ -1,0 +1,131 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "adding-a-modifier",
+"en": "Adding a modifier"
+},
+{
+"indent": 0,
+"anchor": "modifier-types",
+"en": "Modifier types"
+},
+{
+"indent": 4,
+"anchor": "strong-modifiers",
+"en": "Strong modifiers"
+},
+{
+"indent": 4,
+"anchor": "weak-modifiers",
+"en": "Weak modifiers"
+},
+{
+"indent": 0,
+"anchor": "priority",
+"en": "Priority"
+},
+{
+"indent": 0,
+"anchor": "designing-a-modifier",
+"en": "Designing a modifier"
+},
+{
+"indent": 0,
+"anchor": "warnings-and-limitations",
+"en": "Warnings and limitations"
+},
+{
+"indent": 0,
+"anchor": "project-compatibility",
+"en": "Project compatibility"
+}
+]
+],
+"img": [],
+"link": [
+"prepare_seam_painting",
+"https://www.youtube.com/watch?v=F-In1N7AquQ",
+"quality_settings_seam#seam-position",
+"quality_settings_seam#seam-position",
+"prepare_seam_painting",
+"quality_settings_seam#seam-position",
+"#warnings-and-limitations",
+"quality_settings_seam#staggered-inner-seams",
+"quality_settings_seam#scarf-joint-seam",
+"quality_settings_seam#seam-gap",
+"others_settings_special_mode#spiral-vase",
+"prepare_object_manipulation#lay-on-face",
+"#designing-a-modifier"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Precise Seam",
+"raw": "Precise Seam",
+"id": "precise-seam",
+"alt": "precise-seam"
+},
+{
+"level": 2,
+"en": "Adding a modifier",
+"raw": "Adding a modifier",
+"id": "adding-a-modifier",
+"alt": "adding-a-modifier"
+},
+{
+"level": 2,
+"en": "Modifier types",
+"raw": "Modifier types",
+"id": "modifier-types",
+"alt": "modifier-types"
+},
+{
+"level": 3,
+"en": "Strong modifiers",
+"raw": "Strong modifiers",
+"id": "strong-modifiers",
+"alt": "strong-modifiers"
+},
+{
+"level": 3,
+"en": "Weak modifiers",
+"raw": "Weak modifiers",
+"id": "weak-modifiers",
+"alt": "weak-modifiers"
+},
+{
+"level": 2,
+"en": "Priority",
+"raw": "Priority",
+"id": "priority",
+"alt": "priority"
+},
+{
+"level": 2,
+"en": "Designing a modifier",
+"raw": "Designing a modifier",
+"id": "designing-a-modifier",
+"alt": "designing-a-modifier"
+},
+{
+"level": 2,
+"en": "Warnings and limitations",
+"raw": "Warnings and limitations",
+"id": "warnings-and-limitations",
+"alt": "warnings-and-limitations"
+},
+{
+"level": 2,
+"en": "Project compatibility",
+"raw": "Project compatibility",
+"id": "project-compatibility",
+"alt": "project-compatibility"
+}
+],
+"src": "print_prepare/prepare_precise_seam.md"
+}

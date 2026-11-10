@@ -1,0 +1,87 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`single_extruder_multi_material`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--single-extruder-multi-material=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`manual_filament_change`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--manual-filament-change=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"printer_machine_gcode#change-filament-g-code",
+"#manual-filament-change"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Multimaterial setup",
+"raw": "Multimaterial setup",
+"id": "multimaterial-setup",
+"alt": "multimaterial-setup"
+},
+{
+"level": 2,
+"en": "Single Extruder Multi Material",
+"raw": "Single Extruder Multi Material",
+"id": "single-extruder-multi-material",
+"alt": "single-extruder-multi-material"
+},
+{
+"level": 2,
+"en": "Extruders",
+"raw": "Extruders",
+"id": "extruders",
+"alt": "extruders"
+},
+{
+"level": 2,
+"en": "Manual Filament Change",
+"raw": "Manual Filament Change",
+"id": "manual-filament-change",
+"alt": "manual-filament-change"
+}
+],
+"src": "printer_settings/multimaterial/printer_multimaterial_setup.md"
+}

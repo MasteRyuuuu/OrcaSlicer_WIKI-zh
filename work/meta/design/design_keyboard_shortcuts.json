@@ -1,0 +1,61 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "sketch-tools",
+"en": "Sketch Tools"
+},
+{
+"indent": 0,
+"anchor": "modeling-tools",
+"en": "Modeling Tools"
+},
+{
+"indent": 0,
+"anchor": "view-and-document",
+"en": "View and Document"
+}
+]
+],
+"img": [],
+"link": [
+"design_tab",
+"design_sketching",
+"design_modeling_tools"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Design Keyboard Shortcuts",
+"raw": "Design Keyboard Shortcuts",
+"id": "design-keyboard-shortcuts",
+"alt": "design-keyboard-shortcuts"
+},
+{
+"level": 2,
+"en": "Sketch Tools",
+"raw": "Sketch Tools",
+"id": "sketch-tools",
+"alt": "sketch-tools"
+},
+{
+"level": 2,
+"en": "Modeling Tools",
+"raw": "Modeling Tools",
+"id": "modeling-tools",
+"alt": "modeling-tools"
+},
+{
+"level": 2,
+"en": "View and Document",
+"raw": "View and Document",
+"id": "view-and-document",
+"alt": "view-and-document"
+}
+],
+"src": "design/design_keyboard_shortcuts.md"
+}

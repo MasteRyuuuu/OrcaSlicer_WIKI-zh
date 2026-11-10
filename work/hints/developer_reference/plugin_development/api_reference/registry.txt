@@ -1,0 +1,14 @@
+H permissions = 权限
+G resource texture = 资源纹理
+G plugin = 插件
+G dialog = 对话框
+G texture = 纹理
+G preset = 预设
+G model = 模型 / 型号
+G instance = 实例
+G bridge = 桥接
+  printer agent = 打印机代理
+  slicing pipeline = 切片流水线
+  restore defaults = 恢复默认
+  invalid json = 无效的 JSON
+  empty string = 空字符串

@@ -1,0 +1,17 @@
+H internal solid infill = 内部实心填充
+H sparse infill = 稀疏填充
+H filament for features = 按走线类型指定耗材丝
+H outer walls = 外墙
+H wipe tower = 擦拭塔
+H inner walls = 内墙
+H top surface = 顶面
+H bottom surface = 底面
+G nozzle = 喷嘴
+G filament = 耗材丝
+G infill = 填充
+G top = 顶部 / 俯视
+G layer = 层
+G bottom = 底部 / 仰视
+G wipe = 擦拭
+G perimeter = 墙
+  bed adhesion = 热床粘接

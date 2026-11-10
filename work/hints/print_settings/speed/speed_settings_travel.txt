@@ -1,0 +1,4 @@
+H travel = 空驶
+G filament = 耗材丝
+G artifacts = 瑕疵
+  travel speed = 空驶速度

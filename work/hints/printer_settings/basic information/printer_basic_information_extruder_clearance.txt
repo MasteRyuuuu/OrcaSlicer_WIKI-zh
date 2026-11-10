@@ -1,0 +1,11 @@
+H height to rod = 到横杆高度
+H height to lid = 到顶盖高度
+H distance to rod = 到横杆的距离
+H extruder clearance = 挤出机避让空间
+H radius = 半径
+G sparse layers = 稀疏层
+G extruder = 挤出机
+G nozzle = 喷嘴
+G gantry = 龙门
+  prime tower = 擦拭塔
+  horizontal distance = 水平距离

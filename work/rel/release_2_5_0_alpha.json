@@ -1,0 +1,5034 @@
+[
+ {
+  "level": 1,
+  "title": "V2.5.0 Alpha",
+  "prose": [
+   "This is the OrcaSlicer V2.5.0 Alpha, **the most feature-packed release in OrcaSlicer's history**, built from more than 950 pull requests by over 140 contributors. You can now extend the slicer with **Python plugins**, print on **belt printers**, design parametric parts in the experimental **Design tab**, blend new colors from the filaments you have loaded with **color mixing**, give surfaces real 3D texture with **Texture Displacement**, and print two to four parts at once on **IDEX and IQEX printers**. On top of that come the new **Speed Dial**, support for the **Bambu Lab H2C and A2L** with mixed nozzle sizes on the H2D and X2D, much faster startup, slicing and G-code export, Precise Seam modifiers, new infill options, and hundreds of fixes.",
+   "**Note:** This is an alpha build for testing. Several of the new features are experimental and may change before the stable release, so back up projects and profiles you care about and please report any problems on GitHub."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🧩 Plugins",
+  "prose": [
+   "OrcaSlicer 2.5.0 introduces **Python plugins**, a supported way to add your own features to the slicer without maintaining a fork. A plugin can add one-click scripts, step into slicing to reshape layers or rewrite the G-code, add its own tab or docked panel, or react to events like a finished print. Open **Plugins** from the main menu to install a plugin from a file on your computer or from Orca Cloud; a plugin must ask your permission before it reaches outside OrcaSlicer's data folder, goes online or starts other programs. The plugin system is new and its API may still change, so feedback from users and plugin authors is very welcome. [Getting started with plugins]({{L1}}) · [Plugin development guide]({{L2}})",
+   "☁️ **Find and share plugins on [Orca Cloud]({{L3}}).** Browse the plugins the community has published and subscribe with your Orca Cloud account. OrcaSlicer installs them, offers updates when their authors release new versions, and brings them to every computer you sign in on. Built a plugin of your own? Publish it on Orca Cloud and anyone can use it."
+  ],
+  "items": [
+   {
+    "title": "Python plugins",
+    "rest": "by @peachismomo and @lamweilun in [14530]({{L4}}), [14776]({{L5}}), [16070]({{L6}}), [16473]({{L7}}) and [16552]({{L8}})",
+    "links": [
+     [
+      "14530",
+      "{{L4}}"
+     ],
+     [
+      "14776",
+      "{{L5}}"
+     ],
+     [
+      "16070",
+      "{{L6}}"
+     ],
+     [
+      "16473",
+      "{{L7}}"
+     ],
+     [
+      "16552",
+      "{{L8}}"
+     ]
+    ]
+   },
+   {
+    "title": "Slicing-pipeline plugins",
+    "rest": "by @SoftFever in [14721]({{L10}})",
+    "links": [
+     [
+      "14721",
+      "{{L10}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugin settings, globally or per preset",
+    "rest": "by @peachismomo and @SoftFever in [14746]({{L12}}), [14944]({{L13}}) and [14862]({{L14}})",
+    "links": [
+     [
+      "14746",
+      "{{L12}}"
+     ],
+     [
+      "14944",
+      "{{L13}}"
+     ],
+     [
+      "14862",
+      "{{L14}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugin tabs, docked panels and windows",
+    "rest": "by @peachismomo and @HanifKoh in [14992]({{L16}}), [15736]({{L17}}), [16257]({{L18}}), [15737]({{L19}}), [16335]({{L20}}) and [16541]({{L21}})",
+    "links": [
+     [
+      "14992",
+      "{{L16}}"
+     ],
+     [
+      "15736",
+      "{{L17}}"
+     ],
+     [
+      "16257",
+      "{{L18}}"
+     ],
+     [
+      "15737",
+      "{{L19}}"
+     ],
+     [
+      "16335",
+      "{{L20}}"
+     ],
+     [
+      "16541",
+      "{{L21}}"
+     ]
+    ]
+   },
+   {
+    "title": "More for plugin authors: events, notifications and app info",
+    "rest": "by @peachismomo, @pavluchenkor and @HanifKoh in [15293]({{L23}}), [15889]({{L24}}), [15318]({{L25}}), [14923]({{L26}}), [14997]({{L27}}) and [16324]({{L28}})",
+    "links": [
+     [
+      "15293",
+      "{{L23}}"
+     ],
+     [
+      "15889",
+      "{{L24}}"
+     ],
+     [
+      "15318",
+      "{{L25}}"
+     ],
+     [
+      "14923",
+      "{{L26}}"
+     ],
+     [
+      "14997",
+      "{{L27}}"
+     ],
+     [
+      "16324",
+      "{{L28}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins can load the presets they create right away",
+    "rest": "by @WeLizard in [15424]({{L30}})",
+    "links": [
+     [
+      "15424",
+      "{{L30}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins window",
+    "rest": "by @andrewsoonqn, @SoftFever, @yw4z, @peachismomo and @Ricky1966 in [14610]({{L31}}), [14611]({{L32}}), [14552]({{L33}}), [14946]({{L34}}), [15568]({{L35}}), [14855]({{L36}}), [14860]({{L37}}), [14859]({{L38}}), [14861]({{L39}}), [15751]({{L40}}) and [16118]({{L41}})",
+    "links": [
+     [
+      "14610",
+      "{{L31}}"
+     ],
+     [
+      "14611",
+      "{{L32}}"
+     ],
+     [
+      "14552",
+      "{{L33}}"
+     ],
+     [
+      "14946",
+      "{{L34}}"
+     ],
+     [
+      "15568",
+      "{{L35}}"
+     ],
+     [
+      "14855",
+      "{{L36}}"
+     ],
+     [
+      "14860",
+      "{{L37}}"
+     ],
+     [
+      "14859",
+      "{{L38}}"
+     ],
+     [
+      "14861",
+      "{{L39}}"
+     ],
+     [
+      "15751",
+      "{{L40}}"
+     ],
+     [
+      "16118",
+      "{{L41}}"
+     ]
+    ]
+   },
+   {
+    "title": "Permission prompts for plugins",
+    "rest": "by @SoftFever, @peachismomo and @HanifKoh in [14821]({{L43}}), [14989]({{L44}}), [16243]({{L45}}), [16248]({{L46}}), [16254]({{L47}}), [16255]({{L48}}) and [16253]({{L49}})",
+    "links": [
+     [
+      "14821",
+      "{{L43}}"
+     ],
+     [
+      "14989",
+      "{{L44}}"
+     ],
+     [
+      "16243",
+      "{{L45}}"
+     ],
+     [
+      "16248",
+      "{{L46}}"
+     ],
+     [
+      "16254",
+      "{{L47}}"
+     ],
+     [
+      "16255",
+      "{{L48}}"
+     ],
+     [
+      "16253",
+      "{{L49}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "⚡ Speed Dial",
+  "prose": [
+   "The new **Speed Dial** puts everything in OrcaSlicer one search away: press **Space** to find and run any command, setting or plugin."
+  ],
+  "items": [
+   {
+    "title": "Speed Dial",
+    "rest": "by @andrewsoonqn and @lamweilun in [14697]({{L51}}), [15562]({{L52}}), [15867]({{L53}}), [15817]({{L54}}), [15822]({{L55}}), [16315]({{L56}}) and [16505]({{L57}})",
+    "links": [
+     [
+      "14697",
+      "{{L51}}"
+     ],
+     [
+      "15562",
+      "{{L52}}"
+     ],
+     [
+      "15867",
+      "{{L53}}"
+     ],
+     [
+      "15817",
+      "{{L54}}"
+     ],
+     [
+      "15822",
+      "{{L55}}"
+     ],
+     [
+      "16315",
+      "{{L56}}"
+     ],
+     [
+      "16505",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "Search the Speed Dial in English in any UI language",
+    "rest": "by @SoftFever and @lamweilun in [16369]({{L60}}) and [16371]({{L61}})",
+    "links": [
+     [
+      "16369",
+      "{{L60}}"
+     ],
+     [
+      "16371",
+      "{{L61}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🎨 Color Mixing",
+  "prose": [
+   "**Color mixing** blends two or three of your loaded filaments into new colours that print as thin alternating layers, so a few spools can cover a much wider palette. It also powers a new importer for textured and coloured models."
+  ],
+  "items": [
+   {
+    "title": "Color mixing with mixed filaments",
+    "rest": "by @SoftFever, @ianalexis, @yw4z, @thelegendtubaguy and @HanifKoh in [15347]({{L62}}), [15375]({{L63}}), [15385]({{L64}}), [15432]({{L65}}), [15728]({{L66}}) and [16435]({{L67}})",
+    "links": [
+     [
+      "15347",
+      "{{L62}}"
+     ],
+     [
+      "15375",
+      "{{L63}}"
+     ],
+     [
+      "15385",
+      "{{L64}}"
+     ],
+     [
+      "15432",
+      "{{L65}}"
+     ],
+     [
+      "15728",
+      "{{L66}}"
+     ],
+     [
+      "16435",
+      "{{L67}}"
+     ]
+    ]
+   },
+   {
+    "title": "Import textured and coloured models",
+    "rest": "by @SoftFever and @HanifKoh in [15347]({{L68}}), [15977]({{L69}}) and [16122]({{L70}})",
+    "links": [
+     [
+      "15347",
+      "{{L68}}"
+     ],
+     [
+      "15977",
+      "{{L69}}"
+     ],
+     [
+      "16122",
+      "{{L70}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🧱 Texture Displacement",
+  "prose": [
+   "**Texture Displacement** stamps a texture onto a model as real, printable relief. When the texture is a colour image, it can also colour the print, mixing filaments to get close to the image's colours.",
+   "☁️ **More textures on [Orca Cloud]({{L71}}).** Beyond the 40-plus built-in textures, you can download texture packs others have shared on Orca Cloud and publish your own there for everyone to use. A texture pack is a plugin, so it installs, updates and publishes the same way."
+  ],
+  "items": [
+   {
+    "title": "Texture Displacement",
+    "rest": "by @ExPikaPaka, @SoftFever, @kisslorand and @lamweilun in [14662]({{L72}}), [16147]({{L73}}), [16149]({{L74}}), [16076]({{L75}}), [16148]({{L76}}), [16394]({{L77}}), [16395]({{L78}}), [16472]({{L79}}), [16393]({{L80}}), [16409]({{L81}}) and [16430]({{L82}})",
+    "links": [
+     [
+      "14662",
+      "{{L72}}"
+     ],
+     [
+      "16147",
+      "{{L73}}"
+     ],
+     [
+      "16149",
+      "{{L74}}"
+     ],
+     [
+      "16076",
+      "{{L75}}"
+     ],
+     [
+      "16148",
+      "{{L76}}"
+     ],
+     [
+      "16394",
+      "{{L77}}"
+     ],
+     [
+      "16395",
+      "{{L78}}"
+     ],
+     [
+      "16472",
+      "{{L79}}"
+     ],
+     [
+      "16393",
+      "{{L80}}"
+     ],
+     [
+      "16409",
+      "{{L81}}"
+     ],
+     [
+      "16430",
+      "{{L82}}"
+     ]
+    ]
+   },
+   {
+    "title": "Colour from textures",
+    "rest": "by @ExPikaPaka and @SoftFever in [16242]({{L84}}), [16320]({{L85}}), [16392]({{L86}}) and [16394]({{L87}})",
+    "links": [
+     [
+      "16242",
+      "{{L84}}"
+     ],
+     [
+      "16320",
+      "{{L85}}"
+     ],
+     [
+      "16392",
+      "{{L86}}"
+     ],
+     [
+      "16394",
+      "{{L87}}"
+     ]
+    ]
+   },
+   {
+    "title": "Texture packs and image adjustments",
+    "rest": "by @lamweilun and @ExPikaPaka in [16473]({{L88}}), [16391]({{L89}}) and [16547]({{L90}})",
+    "links": [
+     [
+      "16473",
+      "{{L88}}"
+     ],
+     [
+      "16391",
+      "{{L89}}"
+     ],
+     [
+      "16547",
+      "{{L90}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🏭 Belt Printing",
+  "prose": [
+   "This release adds support for belt printers — conveyor (\"infinite Z\") machines whose gantry is tilted over a moving belt, usually at 45°. Because the belt carries printed material away from the nozzle, a part can be longer than the machine, and a row of parts can print one after another without clearing the bed. Ready-made profiles are included for the Printcepts BabyBelt Pro and the IdeaFormer IR3 V2, plus a Generic Belt Printer you can adapt to other machines such as the CR-30 family. To get started, add one of these printers and slice as usual; the belt options live in Printer settings → Basic information → Belt printer, shown in Advanced mode and above. The [Belt Printing guide]({{L91}}) walks through setup, how slicing for a belt works and what changes in your workflow."
+  ],
+  "items": [
+   {
+    "title": "Belt printer support",
+    "rest": "by @HarrierPigeon and @SoftFever in [14394]({{L92}}), [14385]({{L93}}), [14393]({{L94}}), [14425]({{L95}}), [14446]({{L96}}), [15087]({{L97}}), [15181]({{L98}}), [15526]({{L99}}), [16145]({{L100}}), [16168]({{L101}}), [16192]({{L102}}), [16195]({{L103}}), [16196]({{L104}}), [16198]({{L105}}), [16226]({{L106}}), [16240]({{L107}}), [16262]({{L108}}), [16277]({{L109}}) and [16441]({{L110}})",
+    "links": [
+     [
+      "14394",
+      "{{L92}}"
+     ],
+     [
+      "14385",
+      "{{L93}}"
+     ],
+     [
+      "14393",
+      "{{L94}}"
+     ],
+     [
+      "14425",
+      "{{L95}}"
+     ],
+     [
+      "14446",
+      "{{L96}}"
+     ],
+     [
+      "15087",
+      "{{L97}}"
+     ],
+     [
+      "15181",
+      "{{L98}}"
+     ],
+     [
+      "15526",
+      "{{L99}}"
+     ],
+     [
+      "16145",
+      "{{L100}}"
+     ],
+     [
+      "16168",
+      "{{L101}}"
+     ],
+     [
+      "16192",
+      "{{L102}}"
+     ],
+     [
+      "16195",
+      "{{L103}}"
+     ],
+     [
+      "16196",
+      "{{L104}}"
+     ],
+     [
+      "16198",
+      "{{L105}}"
+     ],
+     [
+      "16226",
+      "{{L106}}"
+     ],
+     [
+      "16240",
+      "{{L107}}"
+     ],
+     [
+      "16262",
+      "{{L108}}"
+     ],
+     [
+      "16277",
+      "{{L109}}"
+     ],
+     [
+      "16441",
+      "{{L110}}"
+     ]
+    ]
+   },
+   {
+    "title": "Belt brims",
+    "rest": "by @HarrierPigeon in [15155]({{L112}}), [15156]({{L113}}) and [16292]({{L114}})",
+    "links": [
+     [
+      "15155",
+      "{{L112}}"
+     ],
+     [
+      "15156",
+      "{{L113}}"
+     ],
+     [
+      "16292",
+      "{{L114}}"
+     ]
+    ]
+   },
+   {
+    "title": "Supports that land on the belt",
+    "rest": "by @HarrierPigeon in [14395]({{L116}}), [16236]({{L117}}) and [16263]({{L118}})",
+    "links": [
+     [
+      "14395",
+      "{{L116}}"
+     ],
+     [
+      "16236",
+      "{{L117}}"
+     ],
+     [
+      "16263",
+      "{{L118}}"
+     ]
+    ]
+   },
+   {
+    "title": "Multi-color belt printing and belt-aware arrange",
+    "rest": "by @HarrierPigeon in [15361]({{L119}}) and [16127]({{L120}})",
+    "links": [
+     [
+      "15361",
+      "{{L119}}"
+     ],
+     [
+      "16127",
+      "{{L120}}"
+     ]
+    ]
+   },
+   {
+    "title": "Belt preview: designed and raw G-code views",
+    "rest": "by @HarrierPigeon in [16241]({{L122}}), [16245]({{L123}}) and [16173]({{L124}})",
+    "links": [
+     [
+      "16241",
+      "{{L122}}"
+     ],
+     [
+      "16245",
+      "{{L123}}"
+     ],
+     [
+      "16173",
+      "{{L124}}"
+     ]
+    ]
+   },
+   {
+    "title": "Belt printer profiles",
+    "rest": "by @HarrierPigeon in [14424]({{L125}}) and [15127]({{L126}})",
+    "links": [
+     [
+      "14424",
+      "{{L125}}"
+     ],
+     [
+      "15127",
+      "{{L126}}"
+     ]
+    ]
+   },
+   {
+    "title": "Belt printing in the regular builds",
+    "rest": "by @SoftFever in [16308]({{L127}})",
+    "links": [
+     [
+      "16308",
+      "{{L127}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "👯 iXex Parallel Printing for IDEX & IQEX",
+  "prose": [
+   "OrcaSlicer can now run printers with independent carriages as parallel printers. On an IDEX (two toolheads on one gantry), a dual-gantry machine, or an IQEX (two toolheads on each of two gantries), every active carriage prints its own copy of the part at the same time — either a straight copy or a mirror image — so one print produces two to four parts. OrcaSlicer slices the part once, shows exactly where each carriage will print, keeps parts out of the areas where the carriages could collide, and tells the firmware which mode to run. Ready-made Vivedino Xplorer profiles (IDEX, Dual Gantry and IQEX, plus the single-head model) are included, and any other IDEX or IQEX printer can be set up from its printer settings."
+  ],
+  "items": [
+   {
+    "title": "Parallel printing for IDEX and IQEX printers",
+    "rest": "by @cgarwood82 in [13086]({{L128}})",
+    "links": [
+     [
+      "13086",
+      "{{L128}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "✏️ Design Tab (Early Preview)",
+  "prose": [
+   "The Design tab is a new, experimental CAD workspace inside OrcaSlicer. Sketch a profile, constrain and dimension it, turn it into a solid and commit it to the plate — no round trip through another CAD program and an STL. What you build is an editable feature history rather than a mesh, and it is saved inside the 3MF, so you can reopen a project, change a dimension and have the whole part rebuild. The tab is off by default: tick **CAD feature (experimental)** in Preferences → General → Features and restart OrcaSlicer to try it. It is still under active development, so expect changes between builds and keep a backup of projects you care about. [Wiki]({{L130}})"
+  ],
+  "items": [
+   {
+    "title": "Design tab: sketch-first parametric CAD",
+    "rest": "by @tommasobbianchi and @raistlin7447 in [15238]({{L131}}) and [15762]({{L132}})",
+    "links": [
+     [
+      "15238",
+      "{{L131}}"
+     ],
+     [
+      "15762",
+      "{{L132}}"
+     ]
+    ]
+   },
+   {
+    "title": "Design tab: Text and Revolve features, clearer rendering and a smoother workflow",
+    "rest": "by @tommasobbianchi and @SoftFever in [16019]({{L134}}) and [16158]({{L135}})",
+    "links": [
+     [
+      "16019",
+      "{{L134}}"
+     ],
+     [
+      "16158",
+      "{{L135}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🔩 Multi-Nozzle Printers & Extruder Variants",
+  "prose": [
+   "This release adds Bambu Lab's latest multi-nozzle printers and lets the left and right nozzles of the H2D and X2D be different sizes. It also brings **extruder variants** to every printer: one profile can now hold separate settings for a Standard, High Flow or Extra High Flow nozzle, a direct drive or Bowden extruder, and for each nozzle on a multi-nozzle printer. The right values are used automatically for whichever nozzle prints each part."
+  ],
+  "items": [
+   {
+    "title": "Bambu Lab H2C and A2L support",
+    "rest": "by @SoftFever, @dnevera and @raistlin7447 in [14685]({{L136}}), [14800]({{L137}}) and [14758]({{L138}})",
+    "links": [
+     [
+      "14685",
+      "{{L136}}"
+     ],
+     [
+      "14800",
+      "{{L137}}"
+     ],
+     [
+      "14758",
+      "{{L138}}"
+     ]
+    ]
+   },
+   {
+    "title": "Mixed nozzle sizes on Bambu Lab H2D and X2D",
+    "rest": "by @LixNix in [14125]({{L139}})",
+    "links": [
+     [
+      "14125",
+      "{{L139}}"
+     ]
+    ]
+   },
+   {
+    "title": "Extruder variants on every printer",
+    "rest": "by @Noisyfox, @SoftFever, @HanifKoh, @raistlin7447 and @kisslorand in [13712]({{L141}}), [15964]({{L142}}), [16046]({{L143}}), [16107]({{L144}}), [14572]({{L145}}), [15221]({{L146}}), [14930]({{L147}}), [14931]({{L148}}) and [16176]({{L149}})",
+    "links": [
+     [
+      "13712",
+      "{{L141}}"
+     ],
+     [
+      "15964",
+      "{{L142}}"
+     ],
+     [
+      "16046",
+      "{{L143}}"
+     ],
+     [
+      "16107",
+      "{{L144}}"
+     ],
+     [
+      "14572",
+      "{{L145}}"
+     ],
+     [
+      "15221",
+      "{{L146}}"
+     ],
+     [
+      "14930",
+      "{{L147}}"
+     ],
+     [
+      "14931",
+      "{{L148}}"
+     ],
+     [
+      "16176",
+      "{{L149}}"
+     ]
+    ]
+   },
+   {
+    "title": "Pressure advance and cooling per nozzle variant",
+    "rest": "by @SoftFever and @nuclearmistake in [15986]({{L150}}) and [16007]({{L151}})",
+    "links": [
+     [
+      "15986",
+      "{{L150}}"
+     ],
+     [
+      "16007",
+      "{{L151}}"
+     ]
+    ]
+   },
+   {
+    "title": "Compact multi-nozzle controls",
+    "rest": "by @yw4z in [15083]({{L152}}), [16075]({{L153}}) and [16162]({{L154}})",
+    "links": [
+     [
+      "15083",
+      "{{L152}}"
+     ],
+     [
+      "16075",
+      "{{L153}}"
+     ],
+     [
+      "16162",
+      "{{L154}}"
+     ]
+    ]
+   },
+   {
+    "title": "Open Bambu Studio H2D projects with per-object speed overrides",
+    "rest": "by @Noisyfox in [14700]({{L155}})",
+    "links": [
+     [
+      "14700",
+      "{{L155}}"
+     ]
+    ]
+   },
+   {
+    "title": "Variant handling fixes",
+    "rest": "by @cgarwood82, @kisslorand and @HanifKoh in [15456]({{L156}}), [15515]({{L157}}) and [15639]({{L158}})",
+    "links": [
+     [
+      "15456",
+      "{{L156}}"
+     ],
+     [
+      "15515",
+      "{{L157}}"
+     ],
+     [
+      "15639",
+      "{{L158}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Walls, Seams & Surfaces",
+  "prose": [],
+  "items": [
+   {
+    "title": "Precise Seam modifiers",
+    "rest": "by @DImagine in [12974]({{L159}}), [16072]({{L160}}) and [16170]({{L161}})",
+    "links": [
+     [
+      "12974",
+      "{{L159}}"
+     ],
+     [
+      "16072",
+      "{{L160}}"
+     ],
+     [
+      "16170",
+      "{{L161}}"
+     ]
+    ]
+   },
+   {
+    "title": "Top surface expansion",
+    "rest": "by @ianalexis in [14296]({{L164}})",
+    "links": [
+     [
+      "14296",
+      "{{L164}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wipe inward for outer walls",
+    "rest": "by @valerii-bokhan in [15407]({{L166}})",
+    "links": [
+     [
+      "15407",
+      "{{L166}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print unsupported walls last",
+    "rest": "by @ianalexis in [15411]({{L168}})",
+    "links": [
+     [
+      "15411",
+      "{{L168}}"
+     ]
+    ]
+   },
+   {
+    "title": "Retract amount after wipe",
+    "rest": "by @valerii-bokhan in [11015]({{L170}})",
+    "links": [
+     [
+      "11015",
+      "{{L170}}"
+     ]
+    ]
+   },
+   {
+    "title": "Arachne honors Maximum wall resolution and deviation on curves",
+    "rest": "by @ianalexis in [15314]({{L172}})",
+    "links": [
+     [
+      "15314",
+      "{{L172}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother and safer spiral lift",
+    "rest": "by @SoftFever and @RF47 in [15118]({{L173}}) and [13634]({{L174}})",
+    "links": [
+     [
+      "15118",
+      "{{L173}}"
+     ],
+     [
+      "13634",
+      "{{L174}}"
+     ]
+    ]
+   },
+   {
+    "title": "Limit polyhole edge count",
+    "rest": "by @fuyarovh in [12349]({{L176}})",
+    "links": [
+     [
+      "12349",
+      "{{L176}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remember STEP import settings",
+    "rest": "by @ianalexis in [14484]({{L178}})",
+    "links": [
+     [
+      "14484",
+      "{{L178}}"
+     ]
+    ]
+   },
+   {
+    "title": "Send anyway on a nozzle diameter mismatch",
+    "rest": "by @ianalexis in [14890]({{L180}})",
+    "links": [
+     [
+      "14890",
+      "{{L180}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plate spiral vase mode applies to every object",
+    "rest": "by @thelegendtubaguy in [16091]({{L181}})",
+    "links": [
+     [
+      "16091",
+      "{{L181}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Infill",
+  "prose": [],
+  "items": [
+   {
+    "title": "Adaptive density for Gyroid and TPMS infill",
+    "rest": "by @ianalexis in [16005]({{L182}})",
+    "links": [
+     [
+      "16005",
+      "{{L182}}"
+     ]
+    ]
+   },
+   {
+    "title": "Sparse infill smooth factor",
+    "rest": "by @valerii-bokhan, @ianalexis and @RF47 in [14969]({{L184}}), [15205]({{L185}}), [16172]({{L186}}) and [15287]({{L187}})",
+    "links": [
+     [
+      "14969",
+      "{{L184}}"
+     ],
+     [
+      "15205",
+      "{{L185}}"
+     ],
+     [
+      "16172",
+      "{{L186}}"
+     ],
+     [
+      "15287",
+      "{{L187}}"
+     ]
+    ]
+   },
+   {
+    "title": "Spiral Inset pattern",
+    "rest": "by @RF47 in [15085]({{L189}}) and [15705]({{L190}})",
+    "links": [
+     [
+      "15085",
+      "{{L189}}"
+     ],
+     [
+      "15705",
+      "{{L190}}"
+     ]
+    ]
+   },
+   {
+    "title": "Top and bottom surface fill order",
+    "rest": "by @Mqrius in [14179]({{L191}}) and [14786]({{L192}})",
+    "links": [
+     [
+      "14179",
+      "{{L191}}"
+     ],
+     [
+      "14786",
+      "{{L192}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fixed top and bottom layer directions",
+    "rest": "by @ianalexis in [13631]({{L194}}) and [14734]({{L195}})",
+    "links": [
+     [
+      "13631",
+      "{{L194}}"
+     ],
+     [
+      "14734",
+      "{{L195}}"
+     ]
+    ]
+   },
+   {
+    "title": "Separated infills for assemblies",
+    "rest": "by @pi-squared-studio and @ianalexis in [11682]({{L197}}), [14674]({{L198}}) and [16274]({{L199}})",
+    "links": [
+     [
+      "11682",
+      "{{L197}}"
+     ],
+     [
+      "14674",
+      "{{L198}}"
+     ],
+     [
+      "16274",
+      "{{L199}}"
+     ]
+    ]
+   },
+   {
+    "title": "Non-crossing multiline for Cubic infill, and faster non-crossing infill",
+    "rest": "by @ianalexis and @RF47 in [15887]({{L201}}) and [15931]({{L202}})",
+    "links": [
+     [
+      "15887",
+      "{{L201}}"
+     ],
+     [
+      "15931",
+      "{{L202}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fill pattern tops for 3D Honeycomb",
+    "rest": "by @gringer and @ianalexis in [12541]({{L204}}) and [16214]({{L205}})",
+    "links": [
+     [
+      "12541",
+      "{{L204}}"
+     ],
+     [
+      "16214",
+      "{{L205}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster Gyroid infill",
+    "rest": "by @ianalexis in [16002]({{L207}})",
+    "links": [
+     [
+      "16002",
+      "{{L207}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Brims, Supports, Fuzzy Skin & Cooling",
+  "prose": [],
+  "items": [
+   {
+    "title": "Outer-only mouse ears and larger brim ears",
+    "rest": "by @maddavo and @ianalexis in [15015]({{L208}}) and [15115]({{L209}})",
+    "links": [
+     [
+      "15015",
+      "{{L208}}"
+     ],
+     [
+      "15115",
+      "{{L209}}"
+     ]
+    ]
+   },
+   {
+    "title": "Slow down small support areas",
+    "rest": "by @valerii-bokhan in [13459]({{L211}})",
+    "links": [
+     [
+      "13459",
+      "{{L211}}"
+     ]
+    ]
+   },
+   {
+    "title": "No fuzzy skin on bridging walls",
+    "rest": "by @RF47 in [13891]({{L213}})",
+    "links": [
+     [
+      "13891",
+      "{{L213}}"
+     ]
+    ]
+   },
+   {
+    "title": "First layer fan speed",
+    "rest": "by @igiannakas in [14270]({{L214}})",
+    "links": [
+     [
+      "14270",
+      "{{L214}}"
+     ]
+    ]
+   },
+   {
+    "title": "Axis lock for support painting",
+    "rest": "by @mlugo-apx in [14262]({{L216}})",
+    "links": [
+     [
+      "14262",
+      "{{L216}}"
+     ]
+    ]
+   },
+   {
+    "title": "Raft expansion setting",
+    "rest": "by @RF47 and @acceleratorlastorder in [16416]({{L217}})",
+    "links": [
+     [
+      "16416",
+      "{{L217}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Prime Tower & Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "Rib wall and skip-points prime tower on all printers",
+    "rest": "by @SoftFever in [15035]({{L219}})",
+    "links": [
+     [
+      "15035",
+      "{{L219}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wait for the toolchange temperature at the prime tower",
+    "rest": "by @SoftFever in [15144]({{L221}})",
+    "links": [
+     [
+      "15144",
+      "{{L221}}"
+     ]
+    ]
+   },
+   {
+    "title": "No more stringing between the model and the prime tower",
+    "rest": "by @SoftFever in [15038]({{L223}})",
+    "links": [
+     [
+      "15038",
+      "{{L223}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower pauses work on Klipper",
+    "rest": "by @SoftFever in [15133]({{L224}})",
+    "links": [
+     [
+      "15133",
+      "{{L224}}"
+     ]
+    ]
+   },
+   {
+    "title": "Combine sparse prime tower layers",
+    "rest": "by @ianalexis in [15841]({{L225}})",
+    "links": [
+     [
+      "15841",
+      "{{L225}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"No sparse layers\" for Type 1 (Bambu-style) prime towers",
+    "rest": "by @ianalexis in [15485]({{L227}})",
+    "links": [
+     [
+      "15485",
+      "{{L227}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower stays on non-rectangular beds",
+    "rest": "by @SoftFever in [15146]({{L229}})",
+    "links": [
+     [
+      "15146",
+      "{{L229}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower sized from the actual flush volumes",
+    "rest": "by @SoftFever in [15149]({{L230}})",
+    "links": [
+     [
+      "15149",
+      "{{L230}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower preview matches the printed tower",
+    "rest": "by @HanifKoh and @SoftFever in [15532]({{L231}}) and [15760]({{L232}})",
+    "links": [
+     [
+      "15532",
+      "{{L231}}"
+     ],
+     [
+      "15760",
+      "{{L232}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cyclic toolchange order and shorter travel between objects",
+    "rest": "by @ianalexis and @mpyrozhok in [13582]({{L233}}), [14868]({{L234}}), [13578]({{L235}}) and [14784]({{L236}})",
+    "links": [
+     [
+      "13582",
+      "{{L233}}"
+     ],
+     [
+      "14868",
+      "{{L234}}"
+     ],
+     [
+      "13578",
+      "{{L235}}"
+     ],
+     [
+      "14784",
+      "{{L236}}"
+     ]
+    ]
+   },
+   {
+    "title": "Per-filament toolchange retraction",
+    "rest": "by @SoftFever in [15039]({{L238}})",
+    "links": [
+     [
+      "15039",
+      "{{L238}}"
+     ]
+    ]
+   },
+   {
+    "title": "Turn off toolheads that have finished printing",
+    "rest": "by @tejas-devkar in [15849]({{L239}})",
+    "links": [
+     [
+      "15849",
+      "{{L239}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower rotation angle setting works",
+    "rest": "by @jimmy-brightz in [15227]({{L240}})",
+    "links": [
+     [
+      "15227",
+      "{{L240}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove a floating final purge line on the prime tower",
+    "rest": "by @RF47 in [14416]({{L241}})",
+    "links": [
+     [
+      "14416",
+      "{{L241}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower Width greyed out for rib walls",
+    "rest": "by @RJAudas in [14625]({{L242}})",
+    "links": [
+     [
+      "14625",
+      "{{L242}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clumping detection asks before the prime tower is turned off",
+    "rest": "by @ianalexis in [16458]({{L243}})",
+    "links": [
+     [
+      "16458",
+      "{{L243}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filament change time and purge stats for Elegoo Centauri Carbon",
+    "rest": "by @anjis-elegoo in [14663]({{L244}})",
+    "links": [
+     [
+      "14663",
+      "{{L244}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"flush volumes matrix do not match\" error after enabling Single Extruder Multi Material",
+    "rest": "by @kisslorand in [15223]({{L245}})",
+    "links": [
+     [
+      "15223",
+      "{{L245}}"
+     ]
+    ]
+   },
+   {
+    "title": "No flushing-volume warning for single-filament plates",
+    "rest": "by @RJAudas in [14704]({{L246}})",
+    "links": [
+     [
+      "14704",
+      "{{L246}}"
+     ]
+    ]
+   },
+   {
+    "title": "OBJ colour import limited to the printer's toolheads",
+    "rest": "by @Noisyfox in [14275]({{L247}})",
+    "links": [
+     [
+      "14275",
+      "{{L247}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"Label object id error!\" on filament changes without objects",
+    "rest": "by @kisslorand in [15666]({{L248}})",
+    "links": [
+     [
+      "15666",
+      "{{L248}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "3D View & Preview",
+  "prose": [],
+  "items": [
+   {
+    "title": "Shadows that fall on objects",
+    "rest": "by @RF47 in [14702]({{L249}})",
+    "links": [
+     [
+      "14702",
+      "{{L249}}"
+     ]
+    ]
+   },
+   {
+    "title": "X-Ray view",
+    "rest": "by @ianalexis in [15770]({{L250}})",
+    "links": [
+     [
+      "15770",
+      "{{L250}}"
+     ]
+    ]
+   },
+   {
+    "title": "Section view",
+    "rest": "by @ianalexis in [15879]({{L251}})",
+    "links": [
+     [
+      "15879",
+      "{{L251}}"
+     ]
+    ]
+   },
+   {
+    "title": "Center of mass markers",
+    "rest": "by @ianalexis in [16291]({{L252}})",
+    "links": [
+     [
+      "16291",
+      "{{L252}}"
+     ]
+    ]
+   },
+   {
+    "title": "Focus mode",
+    "rest": "by @RF47 in [16325]({{L253}})",
+    "links": [
+     [
+      "16325",
+      "{{L253}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improved preview colors",
+    "rest": "by @ianalexis and @RF47 in [15809]({{L254}}) and [15865]({{L255}})",
+    "links": [
+     [
+      "15809",
+      "{{L254}}"
+     ],
+     [
+      "15865",
+      "{{L255}}"
+     ]
+    ]
+   },
+   {
+    "title": "Dim lower layers in Preview",
+    "rest": "by @ianalexis in [14705]({{L256}}) and [15001]({{L257}})",
+    "links": [
+     [
+      "14705",
+      "{{L256}}"
+     ],
+     [
+      "15001",
+      "{{L257}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother selection outlines",
+    "rest": "by @RF47 in [14835]({{L258}}), [14741]({{L259}}) and [15776]({{L260}})",
+    "links": [
+     [
+      "14835",
+      "{{L258}}"
+     ],
+     [
+      "14741",
+      "{{L259}}"
+     ],
+     [
+      "15776",
+      "{{L260}}"
+     ]
+    ]
+   },
+   {
+    "title": "Move length in Preview",
+    "rest": "by @ianalexis in [15326]({{L261}})",
+    "links": [
+     [
+      "15326",
+      "{{L261}}"
+     ]
+    ]
+   },
+   {
+    "title": "Choose the default Preview view type",
+    "rest": "by @ianalexis in [15769]({{L262}})",
+    "links": [
+     [
+      "15769",
+      "{{L262}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smooth normals is now a separate setting",
+    "rest": "by @RF47 in [14724]({{L263}})",
+    "links": [
+     [
+      "14724",
+      "{{L263}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wireframe toggle in the view menu",
+    "rest": "by @yw4z in [14469]({{L264}})",
+    "links": [
+     [
+      "14469",
+      "{{L264}}"
+     ]
+    ]
+   },
+   {
+    "title": "FPS overlay stays clear of the toolbar",
+    "rest": "by @ianalexis in [16215]({{L265}})",
+    "links": [
+     [
+      "16215",
+      "{{L265}}"
+     ]
+    ]
+   },
+   {
+    "title": "Auto Perspective works with a 3D mouse",
+    "rest": "by @Noisyfox in [14768]({{L266}})",
+    "links": [
+     [
+      "14768",
+      "{{L266}}"
+     ]
+    ]
+   },
+   {
+    "title": "Steadier panning in perspective view",
+    "rest": "by @valerii-bokhan in [15212]({{L267}})",
+    "links": [
+     [
+      "15212",
+      "{{L267}}"
+     ]
+    ]
+   },
+   {
+    "title": "Accurate G-code listing in Preview",
+    "rest": "by @ExPikaPaka and @raistlin7447 in [15005]({{L268}}) and [15448]({{L269}})",
+    "links": [
+     [
+      "15005",
+      "{{L268}}"
+     ],
+     [
+      "15448",
+      "{{L269}}"
+     ]
+    ]
+   },
+   {
+    "title": "Open G-code files with their own settings",
+    "rest": "by @SoftFever in [16463]({{L270}})",
+    "links": [
+     [
+      "16463",
+      "{{L270}}"
+     ]
+    ]
+   },
+   {
+    "title": "Tall models no longer clipped when viewing G-code files",
+    "rest": "by @anjis-elegoo in [15360]({{L271}})",
+    "links": [
+     [
+      "15360",
+      "{{L271}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct 3D view from the first frame at startup",
+    "rest": "by @raistlin7447 in [15830]({{L272}})",
+    "links": [
+     [
+      "15830",
+      "{{L272}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Publish 3MF",
+  "prose": [],
+  "items": [
+   {
+    "title": "Publish 3MF",
+    "rest": "by @lamweilun and @kisslorand in [15251]({{L273}}), [15690]({{L274}}), [15695]({{L275}}), [15718]({{L276}}) and [16543]({{L277}})",
+    "links": [
+     [
+      "15251",
+      "{{L273}}"
+     ],
+     [
+      "15690",
+      "{{L274}}"
+     ],
+     [
+      "15695",
+      "{{L275}}"
+     ],
+     [
+      "15718",
+      "{{L276}}"
+     ],
+     [
+      "16543",
+      "{{L277}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface & Usability",
+  "prose": [],
+  "items": [
+   {
+    "title": "Assignable keyboard shortcuts",
+    "rest": "by @raistlin7447 in [15706]({{L280}}) and [15862]({{L281}})",
+    "links": [
+     [
+      "15706",
+      "{{L280}}"
+     ],
+     [
+      "15862",
+      "{{L281}}"
+     ]
+    ]
+   },
+   {
+    "title": "Align, distribute and drop objects",
+    "rest": "by @Swoy, @SoftFever, @kisslorand and @Eldenroot in [13373]({{L283}}), [16479]({{L284}}), [16498]({{L285}}) and [16323]({{L286}})",
+    "links": [
+     [
+      "13373",
+      "{{L283}}"
+     ],
+     [
+      "16479",
+      "{{L284}}"
+     ],
+     [
+      "16498",
+      "{{L285}}"
+     ],
+     [
+      "16323",
+      "{{L286}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plate toolbar improvements",
+    "rest": "by @yw4z in [14292]({{L287}})",
+    "links": [
+     [
+      "14292",
+      "{{L287}}"
+     ]
+    ]
+   },
+   {
+    "title": "New color picker with saved favorites",
+    "rest": "by @Noisyfox and @yw4z in [16197]({{L288}})",
+    "links": [
+     [
+      "16197",
+      "{{L288}}"
+     ]
+    ]
+   },
+   {
+    "title": "Startup progress bar",
+    "rest": "by @KrishManan in [14155]({{L289}})",
+    "links": [
+     [
+      "14155",
+      "{{L289}}"
+     ]
+    ]
+   },
+   {
+    "title": "Orca Cloud inside the Home tab",
+    "rest": "by @peachismomo in [16402]({{L290}}) and [16489]({{L291}})",
+    "links": [
+     [
+      "16402",
+      "{{L290}}"
+     ],
+     [
+      "16489",
+      "{{L291}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remember last print action",
+    "rest": "by @RF47 in [15774]({{L292}})",
+    "links": [
+     [
+      "15774",
+      "{{L292}}"
+     ]
+    ]
+   },
+   {
+    "title": "Tidier Move, Rotate and Scale panels",
+    "rest": "by @yw4z in [14410]({{L293}})",
+    "links": [
+     [
+      "14410",
+      "{{L293}}"
+     ]
+    ]
+   },
+   {
+    "title": "Interface polish throughout",
+    "rest": "by @yw4z in [14186]({{L294}}) and [15074]({{L295}})",
+    "links": [
+     [
+      "14186",
+      "{{L294}}"
+     ],
+     [
+      "15074",
+      "{{L295}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unified wiki and video guide buttons, and wiki link fixes",
+    "rest": "by @yw4z, @ianalexis, @thelegendtubaguy and @SoftFever in [16159]({{L296}}), [14731]({{L297}}), [14887]({{L298}}), [15172]({{L299}}), [15738]({{L300}}), [16451]({{L301}}) and [16515]({{L302}})",
+    "links": [
+     [
+      "16159",
+      "{{L296}}"
+     ],
+     [
+      "14731",
+      "{{L297}}"
+     ],
+     [
+      "14887",
+      "{{L298}}"
+     ],
+     [
+      "15172",
+      "{{L299}}"
+     ],
+     [
+      "15738",
+      "{{L300}}"
+     ],
+     [
+      "16451",
+      "{{L301}}"
+     ],
+     [
+      "16515",
+      "{{L302}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clearer parent preset options when saving",
+    "rest": "by @yw4z and @kisslorand in [15076]({{L303}}), [15558]({{L304}}) and [15520]({{L305}})",
+    "links": [
+     [
+      "15076",
+      "{{L303}}"
+     ],
+     [
+      "15558",
+      "{{L304}}"
+     ],
+     [
+      "15520",
+      "{{L305}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bed texture and model included in printer bundles",
+    "rest": "by @Klober81 in [15965]({{L306}})",
+    "links": [
+     [
+      "15965",
+      "{{L306}}"
+     ]
+    ]
+   },
+   {
+    "title": "Orca Badge handy model",
+    "rest": "by @yw4z in [14487]({{L307}})",
+    "links": [
+     [
+      "14487",
+      "{{L307}}"
+     ]
+    ]
+   },
+   {
+    "title": "Dragging continues outside the window",
+    "rest": "by @yw4z and @raistlin7447 in [14999]({{L308}}) and [15312]({{L309}})",
+    "links": [
+     [
+      "14999",
+      "{{L308}}"
+     ],
+     [
+      "15312",
+      "{{L309}}"
+     ]
+    ]
+   },
+   {
+    "title": "Menu icons on macOS and Linux",
+    "rest": "by @yw4z in [15620]({{L310}})",
+    "links": [
+     [
+      "15620",
+      "{{L310}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restyled height range modifier panel",
+    "rest": "by @yw4z in [15703]({{L311}})",
+    "links": [
+     [
+      "15703",
+      "{{L311}}"
+     ]
+    ]
+   },
+   {
+    "title": "OpenGL profile in the Troubleshoot dialog",
+    "rest": "by @Noisyfox in [14464]({{L312}})",
+    "links": [
+     [
+      "14464",
+      "{{L312}}"
+     ]
+    ]
+   },
+   {
+    "title": "Placeholder image for printers without a picture",
+    "rest": "by @yw4z in [16235]({{L313}})",
+    "links": [
+     [
+      "16235",
+      "{{L313}}"
+     ]
+    ]
+   },
+   {
+    "title": "Consistent scrolling speed",
+    "rest": "by @kisslorand in [15902]({{L314}})",
+    "links": [
+     [
+      "15902",
+      "{{L314}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"OK\" instead of \"Yes\" on notices",
+    "rest": "by @raistlin7447 in [16332]({{L315}})",
+    "links": [
+     [
+      "16332",
+      "{{L315}}"
+     ]
+    ]
+   },
+   {
+    "title": "Text polish",
+    "rest": "by @ndrwrbgs, @afmenez and @lamweilun in [15454]({{L316}}), [15468]({{L317}}), [14848]({{L318}}) and [15814]({{L319}})",
+    "links": [
+     [
+      "15454",
+      "{{L316}}"
+     ],
+     [
+      "15468",
+      "{{L317}}"
+     ],
+     [
+      "14848",
+      "{{L318}}"
+     ],
+     [
+      "15814",
+      "{{L319}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "G-code & Placeholders",
+  "prose": [],
+  "items": [
+   {
+    "title": "`regex_replace()` for placeholder templates",
+    "rest": "by @raistlin7447 in [14650]({{L320}})",
+    "links": [
+     [
+      "14650",
+      "{{L320}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print time placeholders for days, hours, minutes and seconds",
+    "rest": "by @matiasyocca in [13063]({{L322}})",
+    "links": [
+     [
+      "13063",
+      "{{L322}}"
+     ]
+    ]
+   },
+   {
+    "title": "Skip G-code config block",
+    "rest": "by @Felixoid and @manzari in [12455]({{L323}}) and [13507]({{L324}})",
+    "links": [
+     [
+      "12455",
+      "{{L323}}"
+     ],
+     [
+      "13507",
+      "{{L324}}"
+     ]
+    ]
+   },
+   {
+    "title": "More accurate corner speeds in time estimates and the preview",
+    "rest": "by @ianalexis in [15304]({{L326}}) and [15308]({{L327}})",
+    "links": [
+     [
+      "15304",
+      "{{L326}}"
+     ],
+     [
+      "15308",
+      "{{L327}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bed leveling counted once in the time estimate",
+    "rest": "by @thelegendtubaguy in [15274]({{L328}})",
+    "links": [
+     [
+      "15274",
+      "{{L328}}"
+     ]
+    ]
+   },
+   {
+    "title": "Printers that read the end of the file show the print time again",
+    "rest": "by @fer-marino in [15897]({{L329}})",
+    "links": [
+     [
+      "15897",
+      "{{L329}}"
+     ]
+    ]
+   },
+   {
+    "title": "First-layer temperatures in the G-code follow the filaments you print with",
+    "rest": "by @xNoVoSx in [16422]({{L330}})",
+    "links": [
+     [
+      "16422",
+      "{{L330}}"
+     ]
+    ]
+   },
+   {
+    "title": "`{curr_bed_type}` in the G-code editor",
+    "rest": "by @tejas-devkar in [15987]({{L331}})",
+    "links": [
+     [
+      "15987",
+      "{{L331}}"
+     ]
+    ]
+   },
+   {
+    "title": "`initial_no_support_extruder` in the filename format",
+    "rest": "by @peachismomo in [15950]({{L332}})",
+    "links": [
+     [
+      "15950",
+      "{{L332}}"
+     ]
+    ]
+   },
+   {
+    "title": "Reserved-keyword check for custom G-code works everywhere",
+    "rest": "by @raistlin7447 in [14908]({{L333}})",
+    "links": [
+     [
+      "14908",
+      "{{L333}}"
+     ]
+    ]
+   },
+   {
+    "title": "Corrected `layer_num` description",
+    "rest": "by @tejas-devkar in [15984]({{L334}})",
+    "links": [
+     [
+      "15984",
+      "{{L334}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix preview speeds and time estimates with firmware retraction",
+    "rest": "by @kisslorand in [15066]({{L335}})",
+    "links": [
+     [
+      "15066",
+      "{{L335}}"
+     ]
+    ]
+   },
+   {
+    "title": "Opened G-code files show manual filament changes",
+    "rest": "by @hikaru0602 in [15379]({{L336}})",
+    "links": [
+     [
+      "15379",
+      "{{L336}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smaller cancel-object outlines for Klipper",
+    "rest": "by @pbannykh in [15291]({{L337}})",
+    "links": [
+     [
+      "15291",
+      "{{L337}}"
+     ]
+    ]
+   },
+   {
+    "title": "Timelapse G-code runs once per layer on i3 printers",
+    "rest": "by @kisslorand in [15734]({{L338}})",
+    "links": [
+     [
+      "15734",
+      "{{L338}}"
+     ]
+    ]
+   },
+   {
+    "title": "Acceleration and jerk restored after custom G-code",
+    "rest": "by @kisslorand in [14613]({{L339}})",
+    "links": [
+     [
+      "14613",
+      "{{L339}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fan timing no longer adds moves to your filament change G-code",
+    "rest": "by @fer-marino in [15904]({{L340}})",
+    "links": [
+     [
+      "15904",
+      "{{L340}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash with placeholders in File header G-code",
+    "rest": "by @kisslorand in [15915]({{L341}})",
+    "links": [
+     [
+      "15915",
+      "{{L341}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Bambu Lab Printers",
+  "prose": [],
+  "items": [
+   {
+    "title": "AMS filament drying",
+    "rest": "by @Noisyfox in [14637]({{L342}})",
+    "links": [
+     [
+      "14637",
+      "{{L342}}"
+     ]
+    ]
+   },
+   {
+    "title": "Gradient and multicolor filaments in the AMS",
+    "rest": "by @Noisyfox in [16252]({{L343}})",
+    "links": [
+     [
+      "16252",
+      "{{L343}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother camera live view",
+    "rest": "by @Noisyfox in [15234]({{L344}})",
+    "links": [
+     [
+      "15234",
+      "{{L344}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu network plug-in 02.08 series",
+    "rest": "by @SoftFever, @HanifKoh and @peachismomo in [14837]({{L345}}), [16202]({{L346}}), [16203]({{L347}}), [14966]({{L348}}) and [16438]({{L349}})",
+    "links": [
+     [
+      "14837",
+      "{{L345}}"
+     ],
+     [
+      "16202",
+      "{{L346}}"
+     ],
+     [
+      "16203",
+      "{{L347}}"
+     ],
+     [
+      "14966",
+      "{{L348}}"
+     ],
+     [
+      "16438",
+      "{{L349}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clearer network plug-in settings and dialogs",
+    "rest": "by @yw4z and @Wegerich in [14720]({{L350}}) and [14265]({{L351}})",
+    "links": [
+     [
+      "14720",
+      "{{L350}}"
+     ],
+     [
+      "14265",
+      "{{L351}}"
+     ]
+    ]
+   },
+   {
+    "title": "Your project's filaments first in the AMS filament list",
+    "rest": "by @ansonl in [11293]({{L352}}) and [11306]({{L353}})",
+    "links": [
+     [
+      "11293",
+      "{{L352}}"
+     ],
+     [
+      "11306",
+      "{{L353}}"
+     ]
+    ]
+   },
+   {
+    "title": "Favorite filaments in the AMS filament list",
+    "rest": "by @KrishManan in [13946]({{L354}})",
+    "links": [
+     [
+      "13946",
+      "{{L354}}"
+     ]
+    ]
+   },
+   {
+    "title": "Timelapse and SD card files load again",
+    "rest": "by @nvs1-cinci in [14688]({{L355}})",
+    "links": [
+     [
+      "14688",
+      "{{L355}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stop the repeating LAN/Developer mode prompt",
+    "rest": "by @raistlin7447 in [14774]({{L356}})",
+    "links": [
+     [
+      "14774",
+      "{{L356}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix the Virtual Camera Tools installation loop",
+    "rest": "by @raistlin7447 in [15540]({{L357}})",
+    "links": [
+     [
+      "15540",
+      "{{L357}}"
+     ]
+    ]
+   },
+   {
+    "title": "Open Bambu Studio projects without extra pop-ups",
+    "rest": "by @HanifKoh in [16153]({{L358}})",
+    "links": [
+     [
+      "16153",
+      "{{L358}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Performance",
+  "prose": [],
+  "items": [
+   {
+    "title": "Much faster startup",
+    "rest": "by @ExPikaPaka, @raistlin7447 and @peachismomo in [14217]({{L359}}), [15943]({{L360}}), [15811]({{L361}}) and [15627]({{L362}})",
+    "links": [
+     [
+      "14217",
+      "{{L359}}"
+     ],
+     [
+      "15943",
+      "{{L360}}"
+     ],
+     [
+      "15811",
+      "{{L361}}"
+     ],
+     [
+      "15627",
+      "{{L362}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster printer switching",
+    "rest": "by @Noisyfox in [14437]({{L363}})",
+    "links": [
+     [
+      "14437",
+      "{{L363}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster G-code export",
+    "rest": "by @raistlin7447 in [16026]({{L364}}), [16028]({{L365}}), [16050]({{L366}}), [16031]({{L367}}), [16108]({{L368}}) and [16167]({{L369}})",
+    "links": [
+     [
+      "16026",
+      "{{L364}}"
+     ],
+     [
+      "16028",
+      "{{L365}}"
+     ],
+     [
+      "16050",
+      "{{L366}}"
+     ],
+     [
+      "16031",
+      "{{L367}}"
+     ],
+     [
+      "16108",
+      "{{L368}}"
+     ],
+     [
+      "16167",
+      "{{L369}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster slicing",
+    "rest": "by @ianalexis and @raistlin7447 in [15969]({{L370}}), [16113]({{L371}}) and [16183]({{L372}})",
+    "links": [
+     [
+      "15969",
+      "{{L370}}"
+     ],
+     [
+      "16113",
+      "{{L371}}"
+     ],
+     [
+      "16183",
+      "{{L372}}"
+     ]
+    ]
+   },
+   {
+    "title": "Lower memory use when slicing and previewing",
+    "rest": "by @ExPikaPaka and @SoftFever in [16065]({{L373}}), [16066]({{L374}}) and [16440]({{L375}})",
+    "links": [
+     [
+      "16065",
+      "{{L373}}"
+     ],
+     [
+      "16066",
+      "{{L374}}"
+     ],
+     [
+      "16440",
+      "{{L375}}"
+     ]
+    ]
+   },
+   {
+    "title": "Less GPU load when moving the mouse over the 3D view",
+    "rest": "by @raistlin7447 in [15674]({{L376}}) and [15664]({{L377}})",
+    "links": [
+     [
+      "15674",
+      "{{L376}}"
+     ],
+     [
+      "15664",
+      "{{L377}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother G-code preview",
+    "rest": "by @HanifKoh and @ianalexis in [15833]({{L378}}), [15883]({{L379}}), [15884]({{L380}}) and [16389]({{L381}})",
+    "links": [
+     [
+      "15833",
+      "{{L378}}"
+     ],
+     [
+      "15883",
+      "{{L379}}"
+     ],
+     [
+      "15884",
+      "{{L380}}"
+     ],
+     [
+      "16389",
+      "{{L381}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smaller install",
+    "rest": "by @yw4z in [16111]({{L382}})",
+    "links": [
+     [
+      "16111",
+      "{{L382}}"
+     ]
+    ]
+   },
+   {
+    "title": "Windows builds compiled with clang-cl",
+    "rest": "by @raistlin7447 in [15428]({{L383}})",
+    "links": [
+     [
+      "15428",
+      "{{L383}}"
+     ]
+    ]
+   },
+   {
+    "title": "OpenCASCADE 8.0.1: faster STEP import",
+    "rest": "by @raistlin7447 in [16089]({{L384}})",
+    "links": [
+     [
+      "16089",
+      "{{L384}}"
+     ]
+    ]
+   },
+   {
+    "title": "CGAL 6.2.1: faster mesh booleans",
+    "rest": "by @ianalexis in [16258]({{L385}})",
+    "links": [
+     [
+      "16258",
+      "{{L385}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Consistent Slicing Results",
+  "prose": [
+   "Slicing the same model with the same settings now gives the same G-code every time. You can compare outputs, cache G-code and trust that a re-slice changed only what you changed."
+  ],
+  "items": [
+   {
+    "title": "Same G-code on every slice",
+    "rest": "by @raistlin7447, @HanifKoh and @igiannakas in [15311]({{L386}}), [15563]({{L387}}), [15565]({{L388}}), [15899]({{L389}}) and [16115]({{L390}})",
+    "links": [
+     [
+      "15311",
+      "{{L386}}"
+     ],
+     [
+      "15563",
+      "{{L387}}"
+     ],
+     [
+      "15565",
+      "{{L388}}"
+     ],
+     [
+      "15899",
+      "{{L389}}"
+     ],
+     [
+      "16115",
+      "{{L390}}"
+     ]
+    ]
+   },
+   {
+    "title": "Same G-code on every export",
+    "rest": "by @raistlin7447 in [16025]({{L391}})",
+    "links": [
+     [
+      "16025",
+      "{{L391}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Command Line",
+  "prose": [
+   "The command line gets new options for print farms, slicing services and scripted pipelines, plus a long run of fixes so it slices a project the same way the GUI does. [Wiki]({{L392}})"
+  ],
+  "items": [
+   {
+    "title": "`--strict` and warnings in `result.json`",
+    "rest": "by @packerlschupfer in [14601]({{L393}})",
+    "links": [
+     [
+      "14601",
+      "{{L393}}"
+     ]
+    ]
+   },
+   {
+    "title": "Lay parts on a chosen face with `--ground-*`, and `--inspect-mesh`",
+    "rest": "by @packerlschupfer in [15073]({{L394}})",
+    "links": [
+     [
+      "15073",
+      "{{L394}}"
+     ]
+    ]
+   },
+   {
+    "title": "Inspect painted data with `--inspect-paint`",
+    "rest": "by @packerlschupfer in [14608]({{L395}})",
+    "links": [
+     [
+      "14608",
+      "{{L395}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print the effective settings with `--export-settings -`",
+    "rest": "by @packerlschupfer in [15698]({{L396}})",
+    "links": [
+     [
+      "15698",
+      "{{L396}}"
+     ]
+    ]
+   },
+   {
+    "title": "Export G-code statistics as JSON",
+    "rest": "by @ianalexis in [16487]({{L397}})",
+    "links": [
+     [
+      "16487",
+      "{{L397}}"
+     ]
+    ]
+   },
+   {
+    "title": "`--align-to-y-axis` for arranging",
+    "rest": "by @HanifKoh in [15836]({{L399}})",
+    "links": [
+     [
+      "15836",
+      "{{L399}}"
+     ]
+    ]
+   },
+   {
+    "title": "`--allow-rotations` is now off by default",
+    "rest": "by @packerlschupfer in [15033]({{L401}}) and [16339]({{L402}})",
+    "links": [
+     [
+      "15033",
+      "{{L401}}"
+     ],
+     [
+      "16339",
+      "{{L402}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clear per-object slicing errors",
+    "rest": "by @HanifKoh in [15834]({{L403}})",
+    "links": [
+     [
+      "15834",
+      "{{L403}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower kept clear when arranging a project",
+    "rest": "by @HanifKoh in [15837]({{L404}})",
+    "links": [
+     [
+      "15837",
+      "{{L404}}"
+     ]
+    ]
+   },
+   {
+    "title": "Mixed filaments on the command line",
+    "rest": "by @HanifKoh in [15636]({{L405}}) and [16247]({{L406}})",
+    "links": [
+     [
+      "15636",
+      "{{L405}}"
+     ],
+     [
+      "16247",
+      "{{L406}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plate thumbnails from the command line",
+    "rest": "by @chrisbennight and @HanifKoh in [15745]({{L407}}), [16010]({{L408}}) and [15866]({{L409}})",
+    "links": [
+     [
+      "15745",
+      "{{L407}}"
+     ],
+     [
+      "16010",
+      "{{L408}}"
+     ],
+     [
+      "15866",
+      "{{L409}}"
+     ]
+    ]
+   },
+   {
+    "title": "Command-line crash and correctness fixes",
+    "rest": "by @packerlschupfer, @HanifKoh, @raistlin7447, @leolobato and @fa1k3 in [14580]({{L410}}), [14415]({{L411}}), [15477]({{L412}}), [15478]({{L413}}), [15479]({{L414}}), [15978]({{L415}}), [16004]({{L416}}), [13429]({{L417}}), [14803]({{L418}}) and [16312]({{L419}})",
+    "links": [
+     [
+      "14580",
+      "{{L410}}"
+     ],
+     [
+      "14415",
+      "{{L411}}"
+     ],
+     [
+      "15477",
+      "{{L412}}"
+     ],
+     [
+      "15478",
+      "{{L413}}"
+     ],
+     [
+      "15479",
+      "{{L414}}"
+     ],
+     [
+      "15978",
+      "{{L415}}"
+     ],
+     [
+      "16004",
+      "{{L416}}"
+     ],
+     [
+      "13429",
+      "{{L417}}"
+     ],
+     [
+      "14803",
+      "{{L418}}"
+     ],
+     [
+      "16312",
+      "{{L419}}"
+     ]
+    ]
+   },
+   {
+    "title": "CLI settings match the GUI",
+    "rest": "by @mazzanfar, @packerlschupfer and @HanifKoh in [15438]({{L420}}), [15449]({{L421}}), [15595]({{L422}}), [15642]({{L423}}), [15953]({{L424}}), [16038]({{L425}}), [16157]({{L426}}), [15693]({{L427}}) and [16047]({{L428}})",
+    "links": [
+     [
+      "15438",
+      "{{L420}}"
+     ],
+     [
+      "15449",
+      "{{L421}}"
+     ],
+     [
+      "15595",
+      "{{L422}}"
+     ],
+     [
+      "15642",
+      "{{L423}}"
+     ],
+     [
+      "15953",
+      "{{L424}}"
+     ],
+     [
+      "16038",
+      "{{L425}}"
+     ],
+     [
+      "16157",
+      "{{L426}}"
+     ],
+     [
+      "15693",
+      "{{L427}}"
+     ],
+     [
+      "16047",
+      "{{L428}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Security & Robustness",
+  "prose": [
+   "OrcaSlicer is sturdier with files and data from outside sources. Damaged files fail cleanly instead of crashing, and downloads and archives stay inside the folders they belong in."
+  ],
+  "items": [
+   {
+    "title": "Malformed model and project files fail cleanly",
+    "rest": "by @HanifKoh, @MAVProxyUser, @ExPikaPaka, @ocidburn and @Eldenroot in [15959]({{L429}}), [15958]({{L430}}), [15948]({{L431}}), [15594]({{L432}}), [16059]({{L433}}), [16060]({{L434}}), [16014]({{L435}}), [15451]({{L436}}) and [16341]({{L437}})",
+    "links": [
+     [
+      "15959",
+      "{{L429}}"
+     ],
+     [
+      "15958",
+      "{{L430}}"
+     ],
+     [
+      "15948",
+      "{{L431}}"
+     ],
+     [
+      "15594",
+      "{{L432}}"
+     ],
+     [
+      "16059",
+      "{{L433}}"
+     ],
+     [
+      "16060",
+      "{{L434}}"
+     ],
+     [
+      "16014",
+      "{{L435}}"
+     ],
+     [
+      "15451",
+      "{{L436}}"
+     ],
+     [
+      "16341",
+      "{{L437}}"
+     ]
+    ]
+   },
+   {
+    "title": "Safer downloads, archives and imported bundles",
+    "rest": "by @HanifKoh in [15955]({{L438}}), [15957]({{L439}}), [15608]({{L440}}) and [15956]({{L441}})",
+    "links": [
+     [
+      "15955",
+      "{{L438}}"
+     ],
+     [
+      "15957",
+      "{{L439}}"
+     ],
+     [
+      "15608",
+      "{{L440}}"
+     ],
+     [
+      "15956",
+      "{{L441}}"
+     ]
+    ]
+   },
+   {
+    "title": "Built-in pages load from any install folder",
+    "rest": "by @HanifKoh in [15961]({{L442}})",
+    "links": [
+     [
+      "15961",
+      "{{L442}}"
+     ]
+    ]
+   },
+   {
+    "title": "Sturdier network and cloud connections",
+    "rest": "by @HanifKoh, @AveryanAlex and @hberntsen in [15947]({{L443}}), [15391]({{L444}}), [15979]({{L445}}) and [16128]({{L446}})",
+    "links": [
+     [
+      "15947",
+      "{{L443}}"
+     ],
+     [
+      "15391",
+      "{{L444}}"
+     ],
+     [
+      "15979",
+      "{{L445}}"
+     ],
+     [
+      "16128",
+      "{{L446}}"
+     ]
+    ]
+   },
+   {
+    "title": "Safe to run several OrcaSlicer windows at once",
+    "rest": "by @HanifKoh in [15861]({{L447}})",
+    "links": [
+     [
+      "15861",
+      "{{L447}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix files that imported incorrectly",
+    "rest": "by @thelegendtubaguy, @raistlin7447 and @anjis-elegoo in [16130]({{L448}}), [15406]({{L449}}) and [14633]({{L450}})",
+    "links": [
+     [
+      "16130",
+      "{{L448}}"
+     ],
+     [
+      "15406",
+      "{{L449}}"
+     ],
+     [
+      "14633",
+      "{{L450}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "📐 Calibration Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Adaptive Pressure Advance: input checks and clearer labels",
+    "rest": "by @ianalexis and @Wegerich in [14198]({{L451}}), [14271]({{L452}}) and [14411]({{L453}})",
+    "links": [
+     [
+      "14198",
+      "{{L451}}"
+     ],
+     [
+      "14271",
+      "{{L452}}"
+     ],
+     [
+      "14411",
+      "{{L453}}"
+     ]
+    ]
+   },
+   {
+    "title": "Nozzle-aware VFA test, plus PA and temperature tower tweaks",
+    "rest": "by @ianalexis in [14759]({{L455}})",
+    "links": [
+     [
+      "14759",
+      "{{L455}}"
+     ]
+    ]
+   },
+   {
+    "title": "PA Line test: smaller print area and a correct preview",
+    "rest": "by @Wegerich in [14440]({{L457}})",
+    "links": [
+     [
+      "14440",
+      "{{L457}}"
+     ]
+    ]
+   },
+   {
+    "title": "Calibrations use your printer's full speed",
+    "rest": "by @ianalexis in [13658]({{L458}})",
+    "links": [
+     [
+      "13658",
+      "{{L458}}"
+     ]
+    ]
+   },
+   {
+    "title": "Retraction test turns off scarf seams",
+    "rest": "by @Wegerich in [15543]({{L459}})",
+    "links": [
+     [
+      "15543",
+      "{{L459}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix PA Pattern test over-retracting with absolute extrusion",
+    "rest": "by @raistlin7447 in [14473]({{L460}})",
+    "links": [
+     [
+      "14473",
+      "{{L460}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when cancelling a calibration's model loading",
+    "rest": "by @raistlin7447 in [14546]({{L461}})",
+    "links": [
+     [
+      "14546",
+      "{{L461}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Walls, Infill & Surfaces",
+  "prose": [],
+  "items": [
+   {
+    "title": "Keep inner walls on narrow Arachne walls with \"Only one wall on top surfaces\"",
+    "rest": "by @igiannakas in [16174]({{L462}})",
+    "links": [
+     [
+      "16174",
+      "{{L462}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep the Inner/Outer/Inner order on narrow Arachne walls",
+    "rest": "by @igiannakas in [15924]({{L463}})",
+    "links": [
+     [
+      "15924",
+      "{{L463}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep thin-walled holes printing in one direction with Classic walls",
+    "rest": "by @ianalexis in [16051]({{L464}})",
+    "links": [
+     [
+      "16051",
+      "{{L464}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove leftover walls from an earlier slice",
+    "rest": "by @kisslorand in [15662]({{L465}})",
+    "links": [
+     [
+      "15662",
+      "{{L465}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep Adaptive Cubic and Support Cubic density changes inside their modifier",
+    "rest": "by @ianalexis in [16295]({{L466}})",
+    "links": [
+     [
+      "16295",
+      "{{L466}}"
+     ]
+    ]
+   },
+   {
+    "title": "Make layer outlines consistent on faceted models",
+    "rest": "by @valerii-bokhan in [15316]({{L467}}) and [15366]({{L468}})",
+    "links": [
+     [
+      "15316",
+      "{{L467}}"
+     ],
+     [
+      "15366",
+      "{{L468}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fuzzy skin fixes",
+    "rest": "by @Noisyfox, @ianalexis and @HanifKoh in [14309]({{L469}}), [15378]({{L470}}) and [15566]({{L471}})",
+    "links": [
+     [
+      "14309",
+      "{{L469}}"
+     ],
+     [
+      "15378",
+      "{{L470}}"
+     ],
+     [
+      "15566",
+      "{{L471}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove speed dips from scarf seams",
+    "rest": "by @HanifKoh in [15832]({{L472}})",
+    "links": [
+     [
+      "15832",
+      "{{L472}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix infill rotation templates on prints with a raft",
+    "rest": "by @raistlin7447 in [14894]({{L473}})",
+    "links": [
+     [
+      "14894",
+      "{{L473}}"
+     ]
+    ]
+   },
+   {
+    "title": "Ironing fixes",
+    "rest": "by @kisslorand and @HanifKoh in [15082]({{L474}}) and [15949]({{L475}})",
+    "links": [
+     [
+      "15082",
+      "{{L474}}"
+     ],
+     [
+      "15949",
+      "{{L475}}"
+     ]
+    ]
+   },
+   {
+    "title": "Z contouring works with several copies of an object",
+    "rest": "by @Art-Porto in [16461]({{L476}})",
+    "links": [
+     [
+      "16461",
+      "{{L476}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix a memory leak from gap fill on solid surfaces",
+    "rest": "by @thelegendtubaguy in [16137]({{L477}})",
+    "links": [
+     [
+      "16137",
+      "{{L477}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Bridges & Overhangs",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix partially bridged counterbore holes",
+    "rest": "by @kisslorand and @ianalexis in [15100]({{L478}}) and [15387]({{L479}})",
+    "links": [
+     [
+      "15100",
+      "{{L478}}"
+     ],
+     [
+      "15387",
+      "{{L479}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anchor internal bridges over Hilbert Curve and Octagram Spiral infill",
+    "rest": "by @valerii-bokhan in [15206]({{L480}})",
+    "links": [
+     [
+      "15206",
+      "{{L480}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stop internal bridges from stacking on top of each other",
+    "rest": "by @kisslorand in [16177]({{L481}})",
+    "links": [
+     [
+      "16177",
+      "{{L481}}"
+     ]
+    ]
+   },
+   {
+    "title": "Ignore unprintable slivers when detecting overhangs",
+    "rest": "by @ianalexis in [15694]({{L482}})",
+    "links": [
+     [
+      "15694",
+      "{{L482}}"
+     ]
+    ]
+   },
+   {
+    "title": "Slow down for overhangs between sharp vertical walls",
+    "rest": "by @RJAudas in [14735]({{L483}})",
+    "links": [
+     [
+      "14735",
+      "{{L483}}"
+     ]
+    ]
+   },
+   {
+    "title": "Limit overhang slowdown and fan to the overhang itself",
+    "rest": "by @igiannakas in [15945]({{L484}})",
+    "links": [
+     [
+      "15945",
+      "{{L484}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix overhang fan control",
+    "rest": "by @kisslorand in [14788]({{L485}}) and [15158]({{L486}})",
+    "links": [
+     [
+      "14788",
+      "{{L485}}"
+     ],
+     [
+      "15158",
+      "{{L486}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improve anchoring of internal bridges over sparse infill",
+    "rest": "by @kisslorand in [16056]({{L487}})",
+    "links": [
+     [
+      "16056",
+      "{{L487}}"
+     ]
+    ]
+   },
+   {
+    "title": "Apply bridge flow changes when Top Z distance is 0",
+    "rest": "by @kisslorand in [15626]({{L488}})",
+    "links": [
+     [
+      "15626",
+      "{{L488}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Supports",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix support interface layer counts, materials and angles",
+    "rest": "by @kisslorand in [14678]({{L489}}) and [15525]({{L490}})",
+    "links": [
+     [
+      "14678",
+      "{{L489}}"
+     ],
+     [
+      "15525",
+      "{{L490}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep organic tree supports off object top surfaces",
+    "rest": "by @kisslorand in [15539]({{L491}})",
+    "links": [
+     [
+      "15539",
+      "{{L491}}"
+     ]
+    ]
+   },
+   {
+    "title": "Use the correct settings when connecting support infill lines",
+    "rest": "by @HanifKoh in [15564]({{L492}})",
+    "links": [
+     [
+      "15564",
+      "{{L492}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Brims & Skirts",
+  "prose": [],
+  "items": [
+   {
+    "title": "Give each copy of an object its own skirt and brim",
+    "rest": "by @kisslorand in [14683]({{L493}}) and [14991]({{L494}})",
+    "links": [
+     [
+      "14683",
+      "{{L493}}"
+     ],
+     [
+      "14991",
+      "{{L494}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print brims at First layer speed",
+    "rest": "by @RJAudas in [14616]({{L495}})",
+    "links": [
+     [
+      "14616",
+      "{{L495}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep painted brim ears in place with a compensated outline",
+    "rest": "by @kisslorand in [14606]({{L496}})",
+    "links": [
+     [
+      "14606",
+      "{{L496}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Models, Plates & Projects",
+  "prose": [],
+  "items": [
+   {
+    "title": "Rebuilt Fix Model, plus Fix All and a working `--repair`",
+    "rest": "by @ianalexis in [16366]({{L497}})",
+    "links": [
+     [
+      "16366",
+      "{{L497}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep every assembly part when using height range modifiers",
+    "rest": "by @kisslorand in [15499]({{L498}})",
+    "links": [
+     [
+      "15499",
+      "{{L498}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix mirrored objects in projects and copies",
+    "rest": "by @thelegendtubaguy and @ianalexis in [15731]({{L499}}) and [16131]({{L500}})",
+    "links": [
+     [
+      "15731",
+      "{{L499}}"
+     ],
+     [
+      "16131",
+      "{{L500}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix negative mesh Booleans with text and a rare Boolean hang",
+    "rest": "by @RF47 and @raistlin7447 in [16275]({{L501}}) and [16330]({{L502}})",
+    "links": [
+     [
+      "16275",
+      "{{L501}}"
+     ],
+     [
+      "16330",
+      "{{L502}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restrict per-plate bed types to printers that support them",
+    "rest": "by @kisslorand in [15916]({{L503}}) and [16365]({{L504}})",
+    "links": [
+     [
+      "15916",
+      "{{L503}}"
+     ],
+     [
+      "16365",
+      "{{L504}}"
+     ]
+    ]
+   },
+   {
+    "title": "Assign copies to the plate they're moved to",
+    "rest": "by @HanifKoh in [15613]({{L505}})",
+    "links": [
+     [
+      "15613",
+      "{{L505}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep every copy of an object at the same height",
+    "rest": "by @Noisyfox in [15465]({{L506}})",
+    "links": [
+     [
+      "15465",
+      "{{L506}}"
+     ]
+    ]
+   },
+   {
+    "title": "Move all objects with their plate when plates are rearranged",
+    "rest": "by @kisslorand in [14850]({{L507}})",
+    "links": [
+     [
+      "14850",
+      "{{L507}}"
+     ]
+    ]
+   },
+   {
+    "title": "Save arrange settings separately for By object print sequence",
+    "rest": "by @raistlin7447 in [15425]({{L508}})",
+    "links": [
+     [
+      "15425",
+      "{{L508}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep arranged objects on the plate",
+    "rest": "by @thelegendtubaguy in [15733]({{L509}})",
+    "links": [
+     [
+      "15733",
+      "{{L509}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct thumbnail entries in saved 3MF files",
+    "rest": "by @packerlschupfer in [16306]({{L510}}) and [16307]({{L511}})",
+    "links": [
+     [
+      "16306",
+      "{{L510}}"
+     ],
+     [
+      "16307",
+      "{{L511}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct build height check with shrinkage compensation and rafts",
+    "rest": "by @fa1k3 in [16313]({{L512}})",
+    "links": [
+     [
+      "16313",
+      "{{L512}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Presets & Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Sync filaments from the printer you switched to",
+    "rest": "by @bobomb in [14587]({{L513}})",
+    "links": [
+     [
+      "14587",
+      "{{L513}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stop re-uploading imported presets to Orca Cloud on every launch",
+    "rest": "by @peachismomo in [16246]({{L514}})",
+    "links": [
+     [
+      "16246",
+      "{{L514}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep per-nozzle values when presets sync through Orca Cloud",
+    "rest": "by @HanifKoh in [16355]({{L515}})",
+    "links": [
+     [
+      "16355",
+      "{{L515}}"
+     ]
+    ]
+   },
+   {
+    "title": "Use the profile's default bed type for new printers",
+    "rest": "by @thelegendtubaguy in [15273]({{L516}})",
+    "links": [
+     [
+      "15273",
+      "{{L516}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix profile updater issues at startup",
+    "rest": "by @peachismomo in [14993]({{L517}})",
+    "links": [
+     [
+      "14993",
+      "{{L517}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Show all print validation warnings",
+    "rest": "by @raistlin7447 in [14112]({{L518}})",
+    "links": [
+     [
+      "14112",
+      "{{L518}}"
+     ]
+    ]
+   },
+   {
+    "title": "Non-Latin text displays correctly",
+    "rest": "by @raistlin7447 in [15419]({{L519}})",
+    "links": [
+     [
+      "15419",
+      "{{L519}}"
+     ]
+    ]
+   },
+   {
+    "title": "Error caret points at the right character",
+    "rest": "by @raistlin7447 in [14886]({{L520}})",
+    "links": [
+     [
+      "14886",
+      "{{L520}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"Ignore\" is honored for out-of-range layer heights",
+    "rest": "by @raistlin7447 in [14369]({{L521}})",
+    "links": [
+     [
+      "14369",
+      "{{L521}}"
+     ]
+    ]
+   },
+   {
+    "title": "Freezes on macOS around the Slice button",
+    "rest": "by @HanifKoh in [16284]({{L522}}), [16359]({{L523}}) and [16358]({{L524}})",
+    "links": [
+     [
+      "16284",
+      "{{L522}}"
+     ],
+     [
+      "16359",
+      "{{L523}}"
+     ],
+     [
+      "16358",
+      "{{L524}}"
+     ]
+    ]
+   },
+   {
+    "title": "Home start page opens cleanly",
+    "rest": "by @raistlin7447 in [15878]({{L525}})",
+    "links": [
+     [
+      "15878",
+      "{{L525}}"
+     ]
+    ]
+   },
+   {
+    "title": "Undo and redo wait for background jobs",
+    "rest": "by @ExPikaPaka in [16015]({{L526}})",
+    "links": [
+     [
+      "16015",
+      "{{L526}}"
+     ]
+    ]
+   },
+   {
+    "title": "Shared-profiles notification layout",
+    "rest": "by @yw4z and @Wegerich in [14604]({{L527}}) and [14875]({{L528}})",
+    "links": [
+     [
+      "14604",
+      "{{L527}}"
+     ],
+     [
+      "14875",
+      "{{L528}}"
+     ]
+    ]
+   },
+   {
+    "title": "Text tool fixes",
+    "rest": "by @Noisyfox and @yw4z in [15095]({{L529}}), [15052]({{L530}}) and [14612]({{L531}})",
+    "links": [
+     [
+      "15095",
+      "{{L529}}"
+     ],
+     [
+      "15052",
+      "{{L530}}"
+     ],
+     [
+      "14612",
+      "{{L531}}"
+     ]
+    ]
+   },
+   {
+    "title": "Paint brush released outside the 3D view",
+    "rest": "by @SoftFever in [16409]({{L532}})",
+    "links": [
+     [
+      "16409",
+      "{{L532}}"
+     ]
+    ]
+   },
+   {
+    "title": "Typing into number fields",
+    "rest": "by @yw4z and @valerii-bokhan in [15002]({{L533}}) and [15392]({{L534}})",
+    "links": [
+     [
+      "15002",
+      "{{L533}}"
+     ],
+     [
+      "15392",
+      "{{L534}}"
+     ]
+    ]
+   },
+   {
+    "title": "Language fixes",
+    "rest": "by @thelegendtubaguy and @kisslorand in [15567]({{L535}}) and [15600]({{L536}})",
+    "links": [
+     [
+      "15567",
+      "{{L535}}"
+     ],
+     [
+      "15600",
+      "{{L536}}"
+     ]
+    ]
+   },
+   {
+    "title": "macOS color fixes",
+    "rest": "by @SoftFever and @thelegendtubaguy in [14846]({{L537}}) and [15283]({{L538}})",
+    "links": [
+     [
+      "14846",
+      "{{L537}}"
+     ],
+     [
+      "15283",
+      "{{L538}}"
+     ]
+    ]
+   },
+   {
+    "title": "Device tab fixes",
+    "rest": "by @ExPikaPaka and @persano in [14547]({{L539}}) and [15911]({{L540}})",
+    "links": [
+     [
+      "14547",
+      "{{L539}}"
+     ],
+     [
+      "15911",
+      "{{L540}}"
+     ]
+    ]
+   },
+   {
+    "title": "Opening files",
+    "rest": "by @kisslorand and @Noisyfox in [15665]({{L541}}) and [14715]({{L542}})",
+    "links": [
+     [
+      "15665",
+      "{{L541}}"
+     ],
+     [
+      "14715",
+      "{{L542}}"
+     ]
+    ]
+   },
+   {
+    "title": "3D mouse settings are saved",
+    "rest": "by @yota9 in [15397]({{L543}})",
+    "links": [
+     [
+      "15397",
+      "{{L543}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filament list in the setup wizard",
+    "rest": "by @lamweilun in [15855]({{L544}})",
+    "links": [
+     [
+      "15855",
+      "{{L544}}"
+     ]
+    ]
+   },
+   {
+    "title": "Folding the Filament section on toolchanger and IDEX printers",
+    "rest": "by @yw4z in [14406]({{L545}})",
+    "links": [
+     [
+      "14406",
+      "{{L545}}"
+     ]
+    ]
+   },
+   {
+    "title": "STEP import progress",
+    "rest": "by @nmschulte in [14994]({{L546}})",
+    "links": [
+     [
+      "14994",
+      "{{L546}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Linux, macOS & Windows Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Linux Flatpak: freeze and missing toolpaths after changing a setting in Preview",
+    "rest": "by @raistlin7447 in [16109]({{L547}})",
+    "links": [
+     [
+      "16109",
+      "{{L547}}"
+     ]
+    ]
+   },
+   {
+    "title": "Dialogs sized correctly on Linux",
+    "rest": "by @Noisyfox in [14948]({{L548}})",
+    "links": [
+     [
+      "14948",
+      "{{L548}}"
+     ]
+    ]
+   },
+   {
+    "title": "Dialogs match the desktop theme on Linux",
+    "rest": "by @HanifKoh in [16390]({{L549}})",
+    "links": [
+     [
+      "16390",
+      "{{L549}}"
+     ]
+    ]
+   },
+   {
+    "title": "Native-looking controls on Linux",
+    "rest": "by @yw4z in [14873]({{L550}}) and [15043]({{L551}})",
+    "links": [
+     [
+      "14873",
+      "{{L550}}"
+     ],
+     [
+      "15043",
+      "{{L551}}"
+     ]
+    ]
+   },
+   {
+    "title": "Scrolling the filament list on Linux",
+    "rest": "by @lamweilun in [16460]({{L552}})",
+    "links": [
+     [
+      "16460",
+      "{{L552}}"
+     ]
+    ]
+   },
+   {
+    "title": "No title bar on the splash screen under Wayland",
+    "rest": "by @misterff1 in [15019]({{L553}})",
+    "links": [
+     [
+      "15019",
+      "{{L553}}"
+     ]
+    ]
+   },
+   {
+    "title": "Readable 3D view overlays on XWayland with Intel graphics",
+    "rest": "by @pedrosland in [11557]({{L554}})",
+    "links": [
+     [
+      "11557",
+      "{{L554}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother printer web pages on Linux",
+    "rest": "by @lamweilun, @cjavad and @HanifKoh in [16385]({{L555}}), [15104]({{L556}}) and [16466]({{L557}})",
+    "links": [
+     [
+      "16385",
+      "{{L555}}"
+     ],
+     [
+      "15104",
+      "{{L556}}"
+     ],
+     [
+      "16466",
+      "{{L557}}"
+     ]
+    ]
+   },
+   {
+    "title": "3D mouse support in more Linux builds",
+    "rest": "by @lodriguez in [14223]({{L558}})",
+    "links": [
+     [
+      "14223",
+      "{{L558}}"
+     ]
+    ]
+   },
+   {
+    "title": "Object outlines and thumbnails on macOS",
+    "rest": "by @Noisyfox in [14769]({{L559}}) and [14794]({{L560}})",
+    "links": [
+     [
+      "14769",
+      "{{L559}}"
+     ],
+     [
+      "14794",
+      "{{L560}}"
+     ]
+    ]
+   },
+   {
+    "title": "Broken text with MacType on Windows",
+    "rest": "by @Noisyfox in [14696]({{L561}})",
+    "links": [
+     [
+      "14696",
+      "{{L561}}"
+     ]
+    ]
+   },
+   {
+    "title": "Windows 7 no longer stops responding",
+    "rest": "by @fer-marino in [15919]({{L562}})",
+    "links": [
+     [
+      "15919",
+      "{{L562}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Crashes & Stability",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix Linux Flatpak crash when slicing or saving",
+    "rest": "by @raistlin7447 in [15873]({{L563}})",
+    "links": [
+     [
+      "15873",
+      "{{L563}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix slicing for multiple users on one Linux or macOS computer",
+    "rest": "by @raistlin7447 in [14607]({{L564}}) and [14619]({{L565}})",
+    "links": [
+     [
+      "14607",
+      "{{L564}}"
+     ],
+     [
+      "14619",
+      "{{L565}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix startup failures and lost backups when a folder can't be read",
+    "rest": "by @packerlschupfer in [15669]({{L566}}), [15654]({{L567}}) and [16431]({{L568}})",
+    "links": [
+     [
+      "15669",
+      "{{L566}}"
+     ],
+     [
+      "15654",
+      "{{L567}}"
+     ],
+     [
+      "16431",
+      "{{L568}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Flatpak crashes from incomplete per-filament settings",
+    "rest": "by @raistlin7447 in [14665]({{L569}}), [14695]({{L570}}), [14789]({{L571}}) and [15289]({{L572}})",
+    "links": [
+     [
+      "14665",
+      "{{L569}}"
+     ],
+     [
+      "14695",
+      "{{L570}}"
+     ],
+     [
+      "14789",
+      "{{L571}}"
+     ],
+     [
+      "15289",
+      "{{L572}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash generating Arachne walls on Flatpak",
+    "rest": "by @raistlin7447 in [14656]({{L573}})",
+    "links": [
+     [
+      "14656",
+      "{{L573}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash slicing painted or multi-material objects when the outer wall line width is 0",
+    "rest": "by @raistlin7447 in [14455]({{L574}})",
+    "links": [
+     [
+      "14455",
+      "{{L574}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when deleting objects or plates",
+    "rest": "by @raistlin7447 in [14523]({{L575}})",
+    "links": [
+     [
+      "14523",
+      "{{L575}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when dragging objects with By object print sequence",
+    "rest": "by @matiasyocca in [16029]({{L576}})",
+    "links": [
+     [
+      "16029",
+      "{{L576}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when quitting with a model on the plate",
+    "rest": "by @walterioo in [14588]({{L577}})",
+    "links": [
+     [
+      "14588",
+      "{{L577}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when quitting from the macOS Dock with the Bambu network plugin loaded",
+    "rest": "by @raistlin7447 in [16212]({{L578}})",
+    "links": [
+     [
+      "16212",
+      "{{L578}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix macOS startup crash for printers with a print host",
+    "rest": "by @raistlin7447 in [14747]({{L579}})",
+    "links": [
+     [
+      "14747",
+      "{{L579}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix rare macOS startup crash while scanning presets",
+    "rest": "by @SoftFever in [14686]({{L580}})",
+    "links": [
+     [
+      "14686",
+      "{{L580}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash after \"Replace all with 3D files\" on Windows",
+    "rest": "by @kisslorand in [15102]({{L581}})",
+    "links": [
+     [
+      "15102",
+      "{{L581}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash on Slice all in multi-plate projects",
+    "rest": "by @raistlin7447 in [15117]({{L582}})",
+    "links": [
+     [
+      "15117",
+      "{{L582}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when repairing a model",
+    "rest": "by @wenghaishi in [15395]({{L583}})",
+    "links": [
+     [
+      "15395",
+      "{{L583}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix occasional crash in LAN mode",
+    "rest": "by @raistlin7447 in [16191]({{L584}})",
+    "links": [
+     [
+      "16191",
+      "{{L584}}"
+     ]
+    ]
+   },
+   {
+    "title": "Show the out-of-memory message on Windows",
+    "rest": "by @raistlin7447 in [14807]({{L585}})",
+    "links": [
+     [
+      "14807",
+      "{{L585}}"
+     ]
+    ]
+   },
+   {
+    "title": "Report the real reason when a G-code export fails on Windows",
+    "rest": "by @raistlin7447 in [15582]({{L586}})",
+    "links": [
+     [
+      "15582",
+      "{{L586}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix command-line crashes",
+    "rest": "by @ExPikaPaka and @gloth-3ds in [16016]({{L587}}) and [15367]({{L588}})",
+    "links": [
+     [
+      "16016",
+      "{{L587}}"
+     ],
+     [
+      "15367",
+      "{{L588}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix a rare crash when resizing list settings",
+    "rest": "by @Noisyfox in [15877]({{L589}})",
+    "links": [
+     [
+      "15877",
+      "{{L589}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Printer Connectivity",
+  "prose": [],
+  "items": [
+   {
+    "title": "Start Moonraker Upload & Print on printers that power on for queued jobs",
+    "rest": "by @packerlschupfer in [15032]({{L590}})",
+    "links": [
+     [
+      "15032",
+      "{{L590}}"
+     ]
+    ]
+   },
+   {
+    "title": "Show readable Moonraker upload errors",
+    "rest": "by @raistlin7447 in [14841]({{L591}})",
+    "links": [
+     [
+      "14841",
+      "{{L591}}"
+     ]
+    ]
+   },
+   {
+    "title": "Moonraker filament sync works with trusted clients",
+    "rest": "by @thelegendtubaguy in [15550]({{L592}})",
+    "links": [
+     [
+      "15550",
+      "{{L592}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remember the Flashforge send options",
+    "rest": "by @thelegendtubaguy in [16092]({{L593}})",
+    "links": [
+     [
+      "16092",
+      "{{L593}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🧰 Platform & Build",
+  "prose": [],
+  "items": [
+   {
+    "title": "Linux ARM64 AppImage",
+    "rest": "by @SoftFever in [14285]({{L594}})",
+    "links": [
+     [
+      "14285",
+      "{{L594}}"
+     ]
+    ]
+   },
+   {
+    "title": "Microsoft Store version: launch from browsers and scripts, and open more web links",
+    "rest": "by @raistlin7447 in [14799]({{L595}})",
+    "links": [
+     [
+      "14799",
+      "{{L595}}"
+     ]
+    ]
+   },
+   {
+    "title": "Build on Windows with clang-cl and the new `build_win.bat`",
+    "rest": "by @Gabriel-Hiss and @raistlin7447 in [14375]({{L596}}), [15436]({{L597}}) and [15721]({{L598}})",
+    "links": [
+     [
+      "14375",
+      "{{L596}}"
+     ],
+     [
+      "15436",
+      "{{L597}}"
+     ],
+     [
+      "15721",
+      "{{L598}}"
+     ]
+    ]
+   },
+   {
+    "title": "Build dependencies on older GCC, Ubuntu 22.04 and openSUSE",
+    "rest": "by @karailker and @mosfet80 in [15151]({{L600}}) and [15384]({{L601}})",
+    "links": [
+     [
+      "15151",
+      "{{L600}}"
+     ],
+     [
+      "15384",
+      "{{L601}}"
+     ]
+    ]
+   },
+   {
+    "title": "Build on macOS 27 with Xcode 27",
+    "rest": "by @igiannakas in [15923]({{L603}})",
+    "links": [
+     [
+      "15923",
+      "{{L603}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Profile System",
+  "prose": [],
+  "items": [
+   {
+    "title": "Bambu Lab printers default to 3MF output",
+    "rest": "by @cjavad in [14767]({{L604}})",
+    "links": [
+     [
+      "14767",
+      "{{L604}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab profiles synced with BambuStudio",
+    "rest": "by @SoftFever, @Bingo2023, @misterff1 and @thelegendtubaguy in [15851]({{L605}}), [15869]({{L606}}), [14778]({{L607}}), [14853]({{L608}}), [15967]({{L609}}), [16319]({{L610}}) and [16201]({{L611}})",
+    "links": [
+     [
+      "15851",
+      "{{L605}}"
+     ],
+     [
+      "15869",
+      "{{L606}}"
+     ],
+     [
+      "14778",
+      "{{L607}}"
+     ],
+     [
+      "14853",
+      "{{L608}}"
+     ],
+     [
+      "15967",
+      "{{L609}}"
+     ],
+     [
+      "16319",
+      "{{L610}}"
+     ],
+     [
+      "16201",
+      "{{L611}}"
+     ]
+    ]
+   },
+   {
+    "title": "One filament, one ID",
+    "rest": "by @SoftFever in [15513]({{L612}})",
+    "links": [
+     [
+      "15513",
+      "{{L612}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep your filament presets on their printers after upgrading",
+    "rest": "by @HanifKoh and @SoftFever in [16367]({{L613}}) and [16523]({{L614}})",
+    "links": [
+     [
+      "16367",
+      "{{L613}}"
+     ],
+     [
+      "16523",
+      "{{L614}}"
+     ]
+    ]
+   },
+   {
+    "title": "Printer-specific filaments in the Orca Filament Library",
+    "rest": "by @SoftFever in [15101]({{L615}})",
+    "links": [
+     [
+      "15101",
+      "{{L615}}"
+     ]
+    ]
+   },
+   {
+    "title": "Third-party Bambu Lab filament tunes moved to the Orca Filament Library",
+    "rest": "by @SoftFever in [15850]({{L617}})",
+    "links": [
+     [
+      "15850",
+      "{{L617}}"
+     ]
+    ]
+   },
+   {
+    "title": "Every printer gets a working default filament",
+    "rest": "by @SoftFever in [15741]({{L618}})",
+    "links": [
+     [
+      "15741",
+      "{{L618}}"
+     ]
+    ]
+   },
+   {
+    "title": "Daily over-the-air publishing of the Orca Filament Library",
+    "rest": "by @peachismomo in [15870]({{L619}})",
+    "links": [
+     [
+      "15870",
+      "{{L619}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smaller profile folder and refreshed printer images",
+    "rest": "by @yw4z in [16259]({{L620}}) and [15267]({{L621}})",
+    "links": [
+     [
+      "16259",
+      "{{L620}}"
+     ],
+     [
+      "15267",
+      "{{L621}}"
+     ]
+    ]
+   },
+   {
+    "title": "Every shipped profile is test-sliced",
+    "rest": "by @SoftFever in [14771]({{L622}}) and [15966]({{L623}})",
+    "links": [
+     [
+      "14771",
+      "{{L622}}"
+     ],
+     [
+      "15966",
+      "{{L623}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Printer Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Anycubic Kobra 3 V2",
+    "rest": "— machine, process and filament profiles from Anycubic for 0.2–0.8 mm nozzles, with bed model and cover, by @Dark98 in [15229]({{L624}})",
+    "links": [
+     [
+      "15229",
+      "{{L624}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality",
+    "rest": "— 16 more printers ported from CrealityPrint 7.1: CR-10, CR-10 Smart, CR-10 Smart Pro, CR-10S Pro V2, CR-20 Pro, CR-M4 SE, Ender-2 Pro, Ender-3 Max, Ender-3 Max Neo, Ender-3 Neo, Ender-3 S1 Sonic, Ender-5 S1 Sonic, Sermoon D3, Sermoon D3 Pro, Sermoon M300 and Sermoon V1 Pro. Profiles for existing Ender, CR and older Creality printers are also updated to CrealityPrint 7.1 values. By @hamham999 in [13948]({{L625}})",
+    "links": [
+     [
+      "13948",
+      "{{L625}}"
+     ]
+    ]
+   },
+   {
+    "title": "FELIX Printers",
+    "rest": "— new vendor with the Pro 3, Pro L 3.0, Pro XL 3.0 and Tec 4, plus the FELIX Food Single, Double and Switch, by @wpsimon09 in [16314]({{L626}})",
+    "links": [
+     [
+      "16314",
+      "{{L626}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge Adventurer A5",
+    "rest": "— 0.25–0.8 mm nozzles with 14 process and 43 filament presets, taken from Flashforge's own OrcaSlicer build, by @jordanhubbard in [14733]({{L627}})",
+    "links": [
+     [
+      "14733",
+      "{{L627}}"
+     ]
+    ]
+   },
+   {
+    "title": "Goofoo",
+    "rest": "— new vendor with the GP1, TurboM, Velo+ (0.2–0.6 mm nozzles) and the two-toolhead Velo+ Tool, plus 20 Goofoo filaments in the Orca Filament Library, from PLA, PETG and ABS to PA-CF, PP-GF and PVA, by @sun-yi-geng in [16283]({{L628}})",
+    "links": [
+     [
+      "16283",
+      "{{L628}}"
+     ]
+    ]
+   },
+   {
+    "title": "Lulzbot Mini 1",
+    "rest": "— 0.5 mm nozzle and 2.85 mm filament, with values from LulzBot's Cura LE and a start G-code that reproduces the Mini's nozzle wipe and four-washer bed probing, by @j2043 in [15476]({{L629}})",
+    "links": [
+     [
+      "15476",
+      "{{L629}}"
+     ]
+    ]
+   },
+   {
+    "title": "M3D Enabler D7500",
+    "rest": "— new printer with 0.15 mm and 0.20 mm process presets. The Enabler D8500 is reworked with High Detail, High Strength, Fuzzy Skin, Vase Mode, Mesh Design and Rapid Draft presets, and both printers get an Enabler PLA filament profile. By @Bilal7828 in [11973]({{L630}})",
+    "links": [
+     [
+      "11973",
+      "{{L630}}"
+     ]
+    ]
+   },
+   {
+    "title": "Meltingplot",
+    "rest": "— new vendor with the CHX 350 and MBL 133, 136, 308 and 480 large-format RepRapFirmware printers, 0.4–1.2 mm nozzles and 2.85 mm filament profiles, by @timschneider in [14756]({{L631}})",
+    "links": [
+     [
+      "14756",
+      "{{L631}}"
+     ]
+    ]
+   },
+   {
+    "title": "Pragostroj KINARB 1HB and 2HB",
+    "rest": "— new vendor with 0.4–1.6 mm nozzles and PLA, PETG, PP and HIPS presets, by @MNKczPragostroj in [16045]({{L632}})",
+    "links": [
+     [
+      "16045",
+      "{{L632}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prusa CORE One MMU3, MK4 MMU3 / MK4 MMU3 HF and CORE One INDX 4T / 8T",
+    "rest": "— dedicated profiles for Prusa's multi-material setups. Filament changes use the same settings as PrusaSlicer 3.0 for reliable swaps: per-material ramming, load and unload speeds and cooling moves on the MMU3, and multi-tool ramming and minimal purge on the INDX. By @nuclearmistake and @SoftFever in [15757]({{L633}}), [15903]({{L634}}) and [16209]({{L635}})",
+    "links": [
+     [
+      "15757",
+      "{{L633}}"
+     ],
+     [
+      "15903",
+      "{{L634}}"
+     ],
+     [
+      "16209",
+      "{{L635}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi X-Plus 5",
+    "rest": "— machine, filament and process profiles for 0.2–0.8 mm nozzles. Arc fitting is off, filament changes skip a tool that is already loaded at startup, and PA, ABS and PPS filaments heat the chamber. By @thelegendtubaguy in [15163]({{L636}}) and [15556]({{L637}})",
+    "links": [
+     [
+      "15163",
+      "{{L636}}"
+     ],
+     [
+      "15556",
+      "{{L637}}"
+     ]
+    ]
+   },
+   {
+    "title": "RH3D VIRTU E3",
+    "rest": "— new printer with 0.2–0.6 mm nozzles, filament and process presets, bed model and texture. The E3NG v1.2S gets more print profiles, updated settings and a new bed texture and cover. By @RH3D in [14707]({{L638}})",
+    "links": [
+     [
+      "14707",
+      "{{L638}}"
+     ]
+    ]
+   },
+   {
+    "title": "UltiMaker S5",
+    "rest": "— single- and dual-extruder profiles and a new \"UltiMaker\" host type for sending jobs over the network. Choose **Generate API Key** in the physical printer dialog and approve the request on the printer, and OrcaSlicer can queue prints on the S5. By @DrewWing in [14062]({{L639}})",
+    "links": [
+     [
+      "14062",
+      "{{L639}}"
+     ]
+    ]
+   },
+   {
+    "title": "UltiMaker 2+ and 2 Extended+",
+    "rest": "— new printers with 0.4, 0.6 and 0.8 mm nozzles. The UltiMaker 2 profile is reworked to use the correct 2.85 mm filament and speeds based on Cura's, so it prints out of the box. By @ChrisRiddell in [15383]({{L640}})",
+    "links": [
+     [
+      "15383",
+      "{{L640}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wanhao Duplicator 9",
+    "rest": "— D9/300, D9/400 and D9/500 in MK1, MK1 with BLTouch kit, MK2 and MK3 versions (12 printers), by @Le-Syl21 in [15773]({{L641}})",
+    "links": [
+     [
+      "15773",
+      "{{L641}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "AnkerMake PLA+",
+    "rest": "— Basic, Matte, Metallic, Silk and Glitter for the M5, M5 All-Metal and M5C, with values from eufyMake Studio, by @meowteusz in [16293]({{L642}})",
+    "links": [
+     [
+      "16293",
+      "{{L642}}"
+     ]
+    ]
+   },
+   {
+    "title": "Eryone",
+    "rest": "— 13 new filament profiles for the Thinker X400 (PLA+ HS, PLA Matte, PLA Ultra Silk, ABS+ HS, ABS-GF, several PETG variants and ASA-HS), by @wu66-tech in [14797]({{L643}})",
+    "links": [
+     [
+      "14797",
+      "{{L643}}"
+     ]
+    ]
+   },
+   {
+    "title": "INSLOGIC",
+    "rest": "— official PLA Pro, PETG Pro, PA6-CF and PA6-66 profiles, tuned for the Bambu Lab P1S/X1 series, Bambu Lab P2S and Prusa CORE One / CORE One L, by @inslogic3d in [15398]({{L644}})",
+    "links": [
+     [
+      "15398",
+      "{{L644}}"
+     ]
+    ]
+   },
+   {
+    "title": "JAYO",
+    "rest": "— official PLA, PLA Classic and PETG profiles for the Bambu Lab A1 and P2S and the Creality K2 Pro, by @JAYO3D-Official in [15481]({{L645}})",
+    "links": [
+     [
+      "15481",
+      "{{L645}}"
+     ]
+    ]
+   },
+   {
+    "title": "PlastAR PLA and Printalot ABS",
+    "rest": "— two Argentine filament lines, 14 colors each, by @lelalexi in [14825]({{L646}})",
+    "links": [
+     [
+      "14825",
+      "{{L646}}"
+     ]
+    ]
+   },
+   {
+    "title": "Polymaker PLA Pro",
+    "rest": "— now available for every printer, not only the Snapmaker U1 and Anycubic Kobra S1, by @YeeP79 in [15046]({{L647}})",
+    "links": [
+     [
+      "15046",
+      "{{L647}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prusament for MK3S and MK4S",
+    "rest": "— Prusament filament profiles from PrusaSlicer for the MK3/MK3S and MK4/MK4S, including the MK4S High Flow nozzles, by @jkuhl-dev in [15336]({{L648}})",
+    "links": [
+     [
+      "15336",
+      "{{L648}}"
+     ]
+    ]
+   },
+   {
+    "title": "School House Spools PLA and PETG",
+    "rest": "— official profiles in the Orca Filament Library, by @getsmart77 in [15429]({{L649}})",
+    "links": [
+     [
+      "15429",
+      "{{L649}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Profile Updates & Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "add:north",
+    "rest": "— add:north filaments are now available on the Bambu Lab H2C and A2L, by @valerii-bokhan in [14764]({{L650}})",
+    "links": [
+     [
+      "14764",
+      "{{L650}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anker",
+    "rest": "— G-code files now start with the estimated print time in their file header so the printer can read it, by @robertbaker in [15339]({{L651}})",
+    "links": [
+     [
+      "15339",
+      "{{L651}}"
+     ]
+    ]
+   },
+   {
+    "title": "Blocks",
+    "rest": "— fixes the RF50 0.6 mm start G-code, where two commands on one line made prints fail. Adds bed type selection (Textured PEI and Smooth High Temp) and longer retraction on the RF50. Blocks-branded filaments replace the tuned generic ones, and Pro S100 presets are renamed to match the other models. By @HugoCLSC in [15804]({{L652}})",
+    "links": [
+     [
+      "15804",
+      "{{L652}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality K1 family",
+    "rest": "— Arc fitting is off by default in K1-series process presets, which cuts down \"Timer too close\" MCU errors. The K1, K1C and K1 SE now use the CrealityPrint host type by default, bringing CFS filament sync to the K1 family (confirmed on the K1 SE). By @RodentVienna, @ianalexis, @koen01 and @grant0013 in [14654]({{L653}}), [15157]({{L654}}) and [14089]({{L655}})",
+    "links": [
+     [
+      "14654",
+      "{{L653}}"
+     ],
+     [
+      "15157",
+      "{{L654}}"
+     ],
+     [
+      "14089",
+      "{{L655}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality K2 Plus and SPARKX i7 filaments",
+    "rest": "— Creality-brand filaments for the K2 Plus use Creality's latest values, and the SPARKX i7 Generic PLA and PETG profiles are updated to CrealityPrint 7.1, by @ArtytheSecond2nd and @DD3Boh in [15237]({{L656}}) and [14388]({{L657}})",
+    "links": [
+     [
+      "15237",
+      "{{L656}}"
+     ],
+     [
+      "14388",
+      "{{L657}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cubicon",
+    "rest": "— retuned filament, process and xCeler-Plus machine settings, and Cubicon filaments now work with the xCeler-Mini, by @Hyvision in [14660]({{L658}})",
+    "links": [
+     [
+      "14660",
+      "{{L658}}"
+     ]
+    ]
+   },
+   {
+    "title": "DREMC",
+    "rest": "— DREMC filaments that were missing from the filament list now appear, by @dremc in [14659]({{L659}})",
+    "links": [
+     [
+      "14659",
+      "{{L659}}"
+     ]
+    ]
+   },
+   {
+    "title": "FilAr PLA-mate",
+    "rest": "— bed temperature lowered from 60 °C to 50 °C, following the manufacturer's updated guidance, by @gyarros in [14489]({{L660}})",
+    "links": [
+     [
+      "14489",
+      "{{L660}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge Creator 5 and Creator 5 Pro",
+    "rest": "— adds 0.25 mm nozzle profiles from Flashforge's slicer. Fixes #15248. By @thelegendtubaguy in [15282]({{L661}})",
+    "links": [
+     [
+      "15282",
+      "{{L661}}"
+     ]
+    ]
+   },
+   {
+    "title": "FlyingBear Ghost7 and InfiMech EX / EX+APS",
+    "rest": "— Z-hop type changed from Normal to Auto, by @InfimechOfficial in [15707]({{L662}})",
+    "links": [
+     [
+      "15707",
+      "{{L662}}"
+     ]
+    ]
+   },
+   {
+    "title": "Folgertech i3 0.6 nozzle",
+    "rest": "— the bed was defined as a narrow triangle and most of it couldn't be used for printing. It is now the correct 200 × 200 mm square. By @HanifKoh in [15577]({{L663}})",
+    "links": [
+     [
+      "15577",
+      "{{L663}}"
+     ]
+    ]
+   },
+   {
+    "title": "PETG on the SuperTack plate",
+    "rest": "— Flashforge and Anycubic PETG profiles now use 60 °C for the Cool Plate (SuperTack) instead of 35 °C, by @mschfh in [15189]({{L664}})",
+    "links": [
+     [
+      "15189",
+      "{{L664}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prusa CORE One",
+    "rest": "— base CORE One filament profiles now send the pressure advance command (`M572`) on the CORE One and CORE One L. Before, only the older `M900` command was sent. By @jorymorrison in [16093]({{L665}})",
+    "links": [
+     [
+      "16093",
+      "{{L665}}"
+     ]
+    ]
+   },
+   {
+    "title": "Purge line waits for a hot nozzle",
+    "rest": "— start G-code on the Creality Ender-3 V4, K1 family and SPARKX i7 and on the Anycubic Vyper waits for the nozzle to reach temperature before the purge line. The Ender-3 V3 SE sets absolute extrusion before purging, so a cancelled earlier print can no longer make it over-extrude. By @RodentVienna, @chenshj73 and @paulcakeface in [14652]({{L666}}), [16216]({{L667}}) and [15489]({{L668}})",
+    "links": [
+     [
+      "14652",
+      "{{L666}}"
+     ],
+     [
+      "16216",
+      "{{L667}}"
+     ],
+     [
+      "15489",
+      "{{L668}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi",
+    "rest": "— on the Q2, Q2C, X-Max 4 and X-Plus 4, starting a print no longer runs a full filament cut, unload and purge when the requested filament is already loaded. X-Max 4 PA12-CF, PAHT-CF and PAHT-GF profiles no longer run the exhaust fan, which shut off the chamber heater mid-print. With **Support multi bed types** on, the X-Max 3, X-Plus 3, X-Smart 3, X-Plus 4, Q1 Pro and X-CF Pro start G-code heats the bed for the selected plate type instead of always using the Smooth PEI / High Temp Plate temperature. By @thelegendtubaguy and @bsamorodov in [15096]({{L669}}), [15244]({{L670}}) and [16372]({{L671}})",
+    "links": [
+     [
+      "15096",
+      "{{L669}}"
+     ],
+     [
+      "15244",
+      "{{L670}}"
+     ],
+     [
+      "16372",
+      "{{L671}}"
+     ]
+    ]
+   },
+   {
+    "title": "Raise3D Pro3 and Pro3 Plus",
+    "rest": "— printable area corrected to 300 × 300 mm with a single extruder and 255 × 300 mm in dual mode. Before, every variant was set to 340 mm wide, which risked gantry or nozzle collisions. By @snevermind in [15243]({{L672}})",
+    "links": [
+     [
+      "15243",
+      "{{L672}}"
+     ]
+    ]
+   },
+   {
+    "title": "RatRig",
+    "rest": "— the single-toolhead start G-code passes the `EXTRUDER_OTHER_LAYER_TEMP` parameter that RatOS 2.1 requires, so prints no longer abort at `START_PRINT` with a missing-parameter error. This covers the V-Core 3, V-Core 4, V-Core 4 HYBRID, V-Cast and V-Minion. By @vvchik in [16444]({{L673}})",
+    "links": [
+     [
+      "16444",
+      "{{L673}}"
+     ]
+    ]
+   },
+   {
+    "title": "re:3D",
+    "rest": "— updated speeds and accelerations, a generic re3D rPETG in place of the GreenGate rPETG profile, rPP set up as a proper PP filament, and the extruder number added to sliced file names, by @re3Dev in [15169]({{L674}})",
+    "links": [
+     [
+      "15169",
+      "{{L674}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker U1",
+    "rest": "— adds High Flow nozzle variants with matching filament profiles, and sliced files now record which flow type each nozzle was sliced for so the printer can compare it with the installed nozzles. The U1 also gets a bed type selector (Fixes #15132). ABS, ASA, Fiberon ASA-CF08 and PPS-GF20 bed temperatures are capped at the bed's 100 °C maximum, and file names show the filament actually used instead of the one in slot 1 (Fixes #13311). By @nuclearmistake, @thelegendtubaguy, @Nopraz and @Wegerich in [16043]({{L675}}), [15174]({{L676}}), [15483]({{L677}}) and [15349]({{L678}})",
+    "links": [
+     [
+      "16043",
+      "{{L675}}"
+     ],
+     [
+      "15174",
+      "{{L676}}"
+     ],
+     [
+      "15483",
+      "{{L677}}"
+     ],
+     [
+      "15349",
+      "{{L678}}"
+     ]
+    ]
+   },
+   {
+    "title": "Sovol Zero",
+    "rest": "— adds 0.2, 0.6, 0.8 and 1.0 mm nozzles and hardened-steel nozzle variants, plus a PLA profile that reproduces Sovol's pre-sliced speed Benchy, by @nuclearmistake in [15756]({{L679}})",
+    "links": [
+     [
+      "15756",
+      "{{L679}}"
+     ]
+    ]
+   },
+   {
+    "title": "WonderMaker ZR Ultra S",
+    "rest": "— the 0.6 and 0.8 mm profiles are now set up as four-tool printers (they were treated as single-extruder), by @anselor in [15179]({{L680}})",
+    "links": [
+     [
+      "15179",
+      "{{L680}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [
+   "* Basque pattern names aligned with the rest of the catalog by @ianalexis in [15215]({{L710}}) * Simplified Chinese translation updates by @Neko-vecter in [14896]({{L711}}) and @SoftFever in [16356]({{L712}}) and [16512]({{L713}}), which complete the catalog and align 3D view, camera and CAD terms with Chinese CAD usage * Traditional Chinese terminology aligned with Taiwan usage by @nhchiu in [14889]({{L714}}), and the catalog completed by @SoftFever in [16513]({{L715}}) * French translation completed and corrected by @foXaCe in [14277]({{L716}}), [14304]({{L717}}) and [14623]({{L718}}), @Surfoo in [14293]({{L719}}), [15106]({{L720}}) and [16161]({{L721}}), and @bistory in [15463]({{L722}}), which consistently keeps \"jerk\" in English * German translation updates by @hliebscher in [14352]({{L723}}), [14465]({{L724}}) and [14577]({{L725}}), and a corrected *Min print speed* tooltip by @ianalexis in [15766]({{L726}}) (fixes #14995) * Hungarian full overhaul by @kisslorand in [15024]({{L727}}): a context-aware review of the whole catalog for grammar, punctuation, natural phrasing and consistent terms * Japanese \"Jerk\" settings, which were mistranslated as \"vibration\", corrected by @ianalexis in [15488]({{L728}}) * Lithuanian translation updates and fixes by @sharanchius in [14532]({{L729}}), [14553]({{L730}}) and [14578]({{L731}}), including Lithuanian Bambu Lab printer HMS messages, with more of their updates merged by @ianalexis in [14822]({{L732}}) * Brazilian Portuguese translation updates, glossary alignment and review of the AI translations by @afmenez in [14302]({{L733}}), [14470]({{L734}}), [14629]({{L735}}), [14679]({{L736}}), [14847]({{L737}}), [14963]({{L738}}), [15080]({{L739}}), [15261]({{L740}}), [15621]({{L741}}), [16103]({{L742}}) and [16377]({{L743}}) * Russian translation updates and review of the AI translations by @Felix14-v2 in [14422]({{L744}}), [14745]({{L745}}), [14876]({{L746}}) and [15092]({{L747}}) * Spanish translation updates by @ianalexis in [14274]({{L748}}), [14620]({{L749}}), [14622]({{L750}}), [14748]({{L751}}) and [14822]({{L752}}), including one consistent term for Fuzzy Skin (\"Piel rugosa\") * Thai translation updates by @Icezaza2543 in [14288]({{L753}}), [15213]({{L754}}) and [15681]({{L755}}), fixing machine-translation errors such as \"Orient\" rendered as \"east\" * Turkish translation updates by @GlauTechCo in [15060]({{L756}}), [15119]({{L757}}) and [15309]({{L758}}), correcting inaccurate AI translations * Ukrainian translation update by @andm18 in [14819]({{L759}}) and a typo fix by @Tuccro in [15333]({{L760}})"
+  ],
+  "items": [
+   {
+    "title": "Rebuilt translation catalogs, with context for words that have more than one meaning",
+    "rest": "by @ianalexis, @afmenez and @SoftFever in [14254]({{L681}}), [14272]({{L682}}), [14291]({{L683}}), [14361]({{L684}}), [14642]({{L685}}), [14646]({{L686}}), [14867]({{L687}}), [14907]({{L688}}), [16134]({{L689}}) and [16346]({{L690}})",
+    "links": [
+     [
+      "14254",
+      "{{L681}}"
+     ],
+     [
+      "14272",
+      "{{L682}}"
+     ],
+     [
+      "14291",
+      "{{L683}}"
+     ],
+     [
+      "14361",
+      "{{L684}}"
+     ],
+     [
+      "14642",
+      "{{L685}}"
+     ],
+     [
+      "14646",
+      "{{L686}}"
+     ],
+     [
+      "14867",
+      "{{L687}}"
+     ],
+     [
+      "14907",
+      "{{L688}}"
+     ],
+     [
+      "16134",
+      "{{L689}}"
+     ],
+     [
+      "16346",
+      "{{L690}}"
+     ]
+    ]
+   },
+   {
+    "title": "More of the interface can be translated",
+    "rest": "by @foXaCe and @ianalexis in [14555]({{L691}}), [14729]({{L692}}), [15739]({{L693}}), [16142]({{L694}}) and [16436]({{L695}})",
+    "links": [
+     [
+      "14555",
+      "{{L691}}"
+     ],
+     [
+      "14729",
+      "{{L692}}"
+     ],
+     [
+      "15739",
+      "{{L693}}"
+     ],
+     [
+      "16142",
+      "{{L694}}"
+     ],
+     [
+      "16436",
+      "{{L695}}"
+     ]
+    ]
+   },
+   {
+    "title": "AI translations fill the gaps in every language",
+    "rest": "by @ianalexis in [14970]({{L696}}), [15018]({{L697}}), [15300]({{L698}}), [15497]({{L699}}), [16227]({{L700}}), [16436]({{L701}}) and [16458]({{L702}})",
+    "links": [
+     [
+      "14970",
+      "{{L696}}"
+     ],
+     [
+      "15018",
+      "{{L697}}"
+     ],
+     [
+      "15300",
+      "{{L698}}"
+     ],
+     [
+      "15497",
+      "{{L699}}"
+     ],
+     [
+      "16227",
+      "{{L700}}"
+     ],
+     [
+      "16436",
+      "{{L701}}"
+     ],
+     [
+      "16458",
+      "{{L702}}"
+     ]
+    ]
+   },
+   {
+    "title": "Web dialogs and pages follow the app language",
+    "rest": "by @SoftFever in [16363]({{L704}})",
+    "links": [
+     [
+      "16363",
+      "{{L704}}"
+     ]
+    ]
+   },
+   {
+    "title": "One Celsius symbol and translatable unit labels",
+    "rest": "by @afmenez in [14631]({{L705}}), [14849]({{L706}}) and [16135]({{L707}})",
+    "links": [
+     [
+      "14631",
+      "{{L705}}"
+     ],
+     [
+      "14849",
+      "{{L706}}"
+     ],
+     [
+      "16135",
+      "{{L707}}"
+     ]
+    ]
+   },
+   {
+    "title": "New language: Basque",
+    "rest": "by @mgoiogana in [14782]({{L708}}) and [14863]({{L709}})",
+    "links": [
+     [
+      "14782",
+      "{{L708}}"
+     ],
+     [
+      "14863",
+      "{{L709}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L789}}\">{{I168}}</a>",
+   "<a href=\"{{L790}}\">{{I169}}</a>"
+  ],
+  "items": []
+ }
+]

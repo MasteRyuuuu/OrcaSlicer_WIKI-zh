@@ -1,0 +1,136 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_ironing`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-ironing=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_ironing_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`rectilinear, concentric`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-ironing-pattern=rectilinear`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_ironing_flow`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-ironing-flow=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_ironing_spacing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-ironing-spacing=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"support_settings_advanced#interface-layers",
+"support_settings_raft"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Support Ironing",
+"raw": "Support Ironing",
+"id": "support-ironing",
+"alt": "support-ironing"
+},
+{
+"level": 2,
+"en": "Pattern",
+"raw": "Pattern",
+"id": "pattern",
+"alt": "pattern"
+},
+{
+"level": 2,
+"en": "Flow",
+"raw": "Flow",
+"id": "flow",
+"alt": "flow"
+},
+{
+"level": 2,
+"en": "Line Spacing",
+"raw": "Line Spacing",
+"id": "line-spacing",
+"alt": "line-spacing"
+}
+],
+"src": "print_settings/support/support_settings_ironing.md"
+}

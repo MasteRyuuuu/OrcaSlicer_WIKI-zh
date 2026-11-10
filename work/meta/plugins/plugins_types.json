@@ -1,0 +1,96 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slicing_pipeline_plugin`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Text list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slicing-pipeline-plugin=value`."
+}
+]
+],
+"toc": [],
+"img": [
+"![local-plugin-activated-capabilities](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/local-plugin-activated-capabilities.png?raw=true)",
+"![script-plugin-run-result](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/script-plugin-run-result.png?raw=true)"
+],
+"link": [
+"speed_dial",
+"plugins_management#plugin-status"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Plugin Types",
+"raw": "Plugin Types",
+"id": "plugin-types",
+"alt": "plugin-types"
+},
+{
+"level": 2,
+"en": "Script",
+"raw": "Script",
+"id": "script",
+"alt": "script"
+},
+{
+"level": 2,
+"en": "Slicing Pipeline",
+"raw": "Slicing Pipeline",
+"id": "slicing-pipeline",
+"alt": "slicing-pipeline"
+},
+{
+"level": 2,
+"en": "Pages",
+"raw": "Pages",
+"id": "pages",
+"alt": "pages"
+},
+{
+"level": 2,
+"en": "Resource Textures",
+"raw": "Resource Textures",
+"id": "resource-textures",
+"alt": "resource-textures"
+},
+{
+"level": 2,
+"en": "Plugin Configuration",
+"raw": "Plugin Configuration",
+"id": "plugin-configuration",
+"alt": "plugin-configuration"
+},
+{
+"level": 2,
+"en": "Speed Dial",
+"raw": "Speed Dial",
+"id": "speed-dial",
+"alt": "speed-dial"
+},
+{
+"level": 2,
+"en": "Printer Connection",
+"raw": "Printer Connection",
+"id": "printer-connection",
+"alt": "printer-connection"
+}
+],
+"src": "plugins/plugins_types.md"
+}

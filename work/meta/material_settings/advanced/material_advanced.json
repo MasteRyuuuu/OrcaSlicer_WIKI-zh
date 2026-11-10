@@ -1,0 +1,44 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"built_in_placeholders_variables#extrusion-roles",
+"others_settings_g_code_output#change-extrusion-role-g-code",
+"printer_machine_gcode#change-extrusion-role-g-code",
+"printer_machine_gcode#change-extrusion-role-g-code"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Advanced Material Settings",
+"raw": "Advanced Material Settings",
+"id": "advanced-material-settings",
+"alt": "advanced-material-settings"
+},
+{
+"level": 2,
+"en": "Filament start G-code",
+"raw": "Filament start G-code",
+"id": "filament-start-g-code",
+"alt": "filament-start-g-code"
+},
+{
+"level": 2,
+"en": "Filament end G-code",
+"raw": "Filament end G-code",
+"id": "filament-end-g-code",
+"alt": "filament-end-g-code"
+},
+{
+"level": 2,
+"en": "Change extrusion role G-code",
+"raw": "Change extrusion role G-code",
+"id": "change-extrusion-role-g-code",
+"alt": "change-extrusion-role-g-code"
+}
+],
+"src": "material_settings/advanced/material_advanced.md"
+}

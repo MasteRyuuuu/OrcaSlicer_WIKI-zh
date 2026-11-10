@@ -1,0 +1,87 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "when-to-use-pro-mode",
+"en": "When to use Pro mode"
+},
+{
+"indent": 0,
+"anchor": "order-of-operations",
+"en": "Order of operations"
+},
+{
+"indent": 0,
+"anchor": "subdivision",
+"en": "Subdivision"
+},
+{
+"indent": 0,
+"anchor": "remeshing",
+"en": "Remeshing"
+},
+{
+"indent": 0,
+"anchor": "result",
+"en": "Result"
+}
+]
+],
+"img": [],
+"link": [
+"prepare_texture_displacement",
+"#remeshing",
+"#result",
+"prepare_stl_transformation#simplify-model",
+"prepare_texture_displacement#colours"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Texture Displacement Pro Mode",
+"raw": "Texture Displacement Pro Mode",
+"id": "texture-displacement-pro-mode",
+"alt": "texture-displacement-pro-mode"
+},
+{
+"level": 2,
+"en": "When to use Pro mode",
+"raw": "When to use Pro mode",
+"id": "when-to-use-pro-mode",
+"alt": "when-to-use-pro-mode"
+},
+{
+"level": 2,
+"en": "Order of operations",
+"raw": "Order of operations",
+"id": "order-of-operations",
+"alt": "order-of-operations"
+},
+{
+"level": 2,
+"en": "Subdivision",
+"raw": "Subdivision",
+"id": "subdivision",
+"alt": "subdivision"
+},
+{
+"level": 2,
+"en": "Remeshing",
+"raw": "Remeshing",
+"id": "remeshing",
+"alt": "remeshing"
+},
+{
+"level": 2,
+"en": "Result",
+"raw": "Result",
+"id": "result",
+"alt": "result"
+}
+],
+"src": "print_prepare/prepare_texture_displacement_pro.md"
+}

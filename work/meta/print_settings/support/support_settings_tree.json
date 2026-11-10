@@ -1,0 +1,293 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_tip_diameter`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-tip-diameter=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_branch_distance`, `tree_support_branch_distance_organic`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-branch-distance=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_top_rate`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-top-rate=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_branch_diameter`, `tree_support_branch_diameter_organic`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-branch-diameter=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_branch_diameter_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-branch-diameter-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_branch_angle`, `tree_support_branch_angle_organic`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-branch-angle=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_angle_slow`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-angle-slow=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_auto_brim`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-auto-brim=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`tree_support_brim_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--tree-support-brim-width=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"#tip-diameter",
+"#branch-density",
+"#branch-diameter-angle",
+"#preferred-branch-angle",
+"support_settings_support#organic",
+"#branch-distance",
+"#branch-diameter",
+"#branch-angle",
+"#auto-brim-width",
+"#tree-support-brim-width",
+"support_settings_support#initial-layer-expansion",
+"#auto-brim-width"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Tree Support",
+"raw": "Tree Support",
+"id": "tree-support",
+"alt": "tree-support"
+},
+{
+"level": 2,
+"en": "Tip Diameter",
+"raw": "Tip Diameter",
+"id": "tip-diameter",
+"alt": "tip-diameter"
+},
+{
+"level": 2,
+"en": "Branch Distance",
+"raw": "Branch Distance",
+"id": "branch-distance",
+"alt": "branch-distance"
+},
+{
+"level": 2,
+"en": "Branch Density",
+"raw": "Branch Density",
+"id": "branch-density",
+"alt": "branch-density"
+},
+{
+"level": 2,
+"en": "Branch Diameter",
+"raw": "Branch Diameter",
+"id": "branch-diameter",
+"alt": "branch-diameter"
+},
+{
+"level": 2,
+"en": "Branch Diameter Angle",
+"raw": "Branch Diameter Angle",
+"id": "branch-diameter-angle",
+"alt": "branch-diameter-angle"
+},
+{
+"level": 2,
+"en": "Branch Angle",
+"raw": "Branch Angle",
+"id": "branch-angle",
+"alt": "branch-angle"
+},
+{
+"level": 3,
+"en": "Preferred Branch Angle",
+"raw": "Preferred Branch Angle",
+"id": "preferred-branch-angle",
+"alt": "preferred-branch-angle"
+},
+{
+"level": 2,
+"en": "Auto brim width",
+"raw": "Auto brim width",
+"id": "auto-brim-width",
+"alt": "auto-brim-width"
+},
+{
+"level": 3,
+"en": "Tree support brim width",
+"raw": "Tree support brim width",
+"id": "tree-support-brim-width",
+"alt": "tree-support-brim-width"
+}
+],
+"src": "print_settings/support/support_settings_tree.md"
+}

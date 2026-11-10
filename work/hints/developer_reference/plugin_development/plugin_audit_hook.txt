@@ -1,0 +1,15 @@
+G plugin = 插件
+G dialog = 对话框
+G instance = 实例
+G line = 线 / 直线
+G layer = 层
+G primitive = 标准模型
+G model = 模型 / 型号
+G body = 实体
+  read and write = 读写
+  read write = 读写
+  http network = HTTP 网络
+  audit events = 审计事件
+  send all = 发送所有盘
+  plugin permissions = 插件权限
+  empty string = 空字符串

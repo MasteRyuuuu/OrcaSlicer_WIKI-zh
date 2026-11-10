@@ -1,0 +1,35 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![open-plugins-menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/open-plugins-menu.png?raw=true)",
+"![plugins-dialog-empty](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/plugins-dialog-empty.png?raw=true)",
+"![plugins-browse-menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/plugins-browse-menu.png?raw=true)"
+],
+"link": [
+"plugins_local",
+"plugins_cloud",
+"plugins_types",
+"plugins_management",
+"plugin_development#capability-configuration"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Getting Started",
+"raw": "Getting Started",
+"id": "getting-started",
+"alt": "getting-started"
+},
+{
+"level": 2,
+"en": "Open the Plugins Window",
+"raw": "Open the Plugins Window",
+"id": "open-the-plugins-window",
+"alt": "open-the-plugins-window"
+}
+],
+"src": "plugins/plugins_getting_started.md"
+}

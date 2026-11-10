@@ -1,0 +1,14 @@
+H pattern = 图案 / 阵列
+H support ironing = 支撑熨烫
+H flow = 流量 / 挤出流量
+G support interface = 支撑面
+G interface layer = 接触层
+G support = 支撑
+G ironing = 熨烫
+G top = 顶部 / 俯视
+G raft = 筏层
+G line = 线 / 直线
+G layer = 层
+G extrude = 拉伸 / 挤出
+  top interface layers = 顶部支撑面层数
+  ironing pattern = 熨烫图案

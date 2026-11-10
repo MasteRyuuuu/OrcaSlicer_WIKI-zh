@@ -1,0 +1,11 @@
+H adaptive bed mesh = 自适应网床
+H probe point distance = 网格点间距离
+H mesh margin = 网床边缘外扩
+H klipper = Klipper
+G firmware = 固件
+G support = 支撑
+G grid = 网格
+  bed mesh min = 网床最小点
+  bed mesh max = 网床最大点
+  machine start g-code = 打印机起始G-code
+  start g-code = 起始G-code

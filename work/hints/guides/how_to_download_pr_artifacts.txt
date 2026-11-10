@@ -1,0 +1,3 @@
+G artifacts = 瑕疵
+G top = 顶部 / 俯视
+G backup = 备份

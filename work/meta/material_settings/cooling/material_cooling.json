@@ -1,0 +1,728 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`close_fan_the_first_x_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--close-fan-the-first-x-layers=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`full_fan_speed_layer`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--full-fan-speed-layer=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`fan_min_speed`, `fan_cooling_layer_time`, `fan_max_speed`, `slow_down_layer_time`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fan-min-speed=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`reduce_fan_stop_start_freq`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--reduce-fan-stop-start-freq=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slow_down_for_layer_cooling`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slow-down-for-layer-cooling=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`dont_slow_down_outer_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--dont-slow-down-outer-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slow_down_min_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slow-down-min-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_overhang_bridge_fan`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-overhang-bridge-fan=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_fan_threshold`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Choice list`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`0%, 10%, 25%, 50%, 75%, 95%`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-fan-threshold=0%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_bridge_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-bridge-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_material_interface_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-material-interface-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`additional_cooling_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--additional-cooling-fan-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`activate_air_filtration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--activate-air-filtration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`activate_air_filtration_during_print`, `during_print_exhaust_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`activate_air_filtration_during_print` (Boolean list), `during_print_exhaust_fan_speed` (Integer list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--activate-air-filtration-during-print=1` (`activate_air_filtration_during_print` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`activate_air_filtration_on_completion`, `complete_print_exhaust_fan_speed`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`activate_air_filtration_on_completion` (Boolean list), `complete_print_exhaust_fan_speed` (Integer list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--activate-air-filtration-on-completion=1` (`activate_air_filtration_on_completion` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "material-cooling-for-specific-layer",
+"en": "Material Cooling for Specific Layer"
+},
+{
+"indent": 4,
+"anchor": "no-cooling-for-the-first",
+"en": "No cooling for the first"
+},
+{
+"indent": 4,
+"anchor": "first-layer-fan-speed",
+"en": "First layer fan speed"
+},
+{
+"indent": 4,
+"anchor": "full-fan-speed-at-layer",
+"en": "Full fan speed at layer"
+},
+{
+"indent": 0,
+"anchor": "material-part-cooling-fan",
+"en": "Material Part Cooling Fan"
+},
+{
+"indent": 4,
+"anchor": "fan-speed-threshold",
+"en": "Fan speed threshold"
+},
+{
+"indent": 8,
+"anchor": "min-fan-speed-threshold",
+"en": "Min fan speed threshold"
+},
+{
+"indent": 8,
+"anchor": "max-fan-speed-threshold",
+"en": "Max fan speed threshold"
+},
+{
+"indent": 4,
+"anchor": "keep-fan-always-on",
+"en": "Keep fan always on"
+},
+{
+"indent": 4,
+"anchor": "slow-printing-down-for-better-layer-cooling",
+"en": "Slow printing down for better layer cooling"
+},
+{
+"indent": 8,
+"anchor": "how-the-slowdown-is-calculated",
+"en": "How the slowdown is calculated"
+},
+{
+"indent": 4,
+"anchor": "dont-slow-down-outer-walls",
+"en": "Don't slow down outer walls"
+},
+{
+"indent": 4,
+"anchor": "min-print-speed",
+"en": "Min print speed"
+},
+{
+"indent": 4,
+"anchor": "force-cooling-for-overhangs-and-bridges",
+"en": "Force cooling for overhangs and bridges"
+},
+{
+"indent": 4,
+"anchor": "overhang-cooling-activation-threshold",
+"en": "Overhang cooling activation threshold"
+},
+{
+"indent": 4,
+"anchor": "overhangs-and-external-bridges-fan-speed",
+"en": "Overhangs and external bridges fan speed"
+},
+{
+"indent": 4,
+"anchor": "internal-bridges-fan-speed",
+"en": "Internal bridges fan speed"
+},
+{
+"indent": 4,
+"anchor": "support-interface-fan-speed",
+"en": "Support interface fan speed"
+},
+{
+"indent": 4,
+"anchor": "ironing-fan-speed",
+"en": "Ironing fan speed"
+},
+{
+"indent": 4,
+"anchor": "auxiliary-part-cooling-fan",
+"en": "Auxiliary part cooling fan"
+},
+{
+"indent": 4,
+"anchor": "exhaust-fan",
+"en": "Exhaust fan"
+},
+{
+"indent": 8,
+"anchor": "activate-air-filtration",
+"en": "Activate air filtration"
+},
+{
+"indent": 8,
+"anchor": "during-print",
+"en": "During print"
+},
+{
+"indent": 8,
+"anchor": "complete-print",
+"en": "Complete print"
+}
+]
+],
+"img": [],
+"link": [
+"#full-fan-speed-at-layer",
+"#no-cooling-for-the-first",
+"#no-cooling-for-the-first",
+"#no-cooling-for-the-first",
+"#no-cooling-for-the-first",
+"#no-cooling-for-the-first",
+"#max-fan-speed-threshold",
+"speed_settings_other_layers_speed",
+"#min-print-speed",
+"#min-print-speed",
+"speed_settings_other_layers_speed#outer-wall",
+"#min-print-speed",
+"#how-the-slowdown-is-calculated",
+"#how-the-slowdown-is-calculated",
+"printer_basic_information_accessory#auxiliary-part-cooling-fan",
+"#no-cooling-for-the-first"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Cooling",
+"raw": "Material Cooling",
+"id": "material-cooling",
+"alt": "material-cooling"
+},
+{
+"level": 2,
+"en": "Material Cooling for Specific Layer",
+"raw": "Material Cooling for Specific Layer",
+"id": "material-cooling-for-specific-layer",
+"alt": "material-cooling-for-specific-layer"
+},
+{
+"level": 3,
+"en": "No cooling for the first",
+"raw": "No cooling for the first",
+"id": "no-cooling-for-the-first",
+"alt": "no-cooling-for-the-first"
+},
+{
+"level": 3,
+"en": "First layer fan speed",
+"raw": "First layer fan speed",
+"id": "first-layer-fan-speed",
+"alt": "first-layer-fan-speed"
+},
+{
+"level": 3,
+"en": "Full fan speed at layer",
+"raw": "Full fan speed at layer",
+"id": "full-fan-speed-at-layer",
+"alt": "full-fan-speed-at-layer"
+},
+{
+"level": 2,
+"en": "Material Part Cooling Fan",
+"raw": "Material Part Cooling Fan",
+"id": "material-part-cooling-fan",
+"alt": "material-part-cooling-fan"
+},
+{
+"level": 3,
+"en": "Fan speed threshold",
+"raw": "Fan speed threshold",
+"id": "fan-speed-threshold",
+"alt": "fan-speed-threshold"
+},
+{
+"level": 4,
+"en": "Min fan speed threshold",
+"raw": "Min fan speed threshold",
+"id": "min-fan-speed-threshold",
+"alt": "min-fan-speed-threshold"
+},
+{
+"level": 4,
+"en": "Max fan speed threshold",
+"raw": "Max fan speed threshold",
+"id": "max-fan-speed-threshold",
+"alt": "max-fan-speed-threshold"
+},
+{
+"level": 3,
+"en": "Keep fan always on",
+"raw": "Keep fan always on",
+"id": "keep-fan-always-on",
+"alt": "keep-fan-always-on"
+},
+{
+"level": 3,
+"en": "Slow printing down for better layer cooling",
+"raw": "Slow printing down for better layer cooling",
+"id": "slow-printing-down-for-better-layer-cooling",
+"alt": "slow-printing-down-for-better-layer-cooling"
+},
+{
+"level": 4,
+"en": "How the slowdown is calculated",
+"raw": "How the slowdown is calculated",
+"id": "how-the-slowdown-is-calculated",
+"alt": "how-the-slowdown-is-calculated"
+},
+{
+"level": 3,
+"en": "Don't slow down outer walls",
+"raw": "Don't slow down outer walls",
+"id": "dont-slow-down-outer-walls",
+"alt": "dont-slow-down-outer-walls"
+},
+{
+"level": 3,
+"en": "Min print speed",
+"raw": "Min print speed",
+"id": "min-print-speed",
+"alt": "min-print-speed"
+},
+{
+"level": 3,
+"en": "Force cooling for overhangs and bridges",
+"raw": "Force cooling for overhangs and bridges",
+"id": "force-cooling-for-overhangs-and-bridges",
+"alt": "force-cooling-for-overhangs-and-bridges"
+},
+{
+"level": 3,
+"en": "Overhang cooling activation threshold",
+"raw": "Overhang cooling activation threshold",
+"id": "overhang-cooling-activation-threshold",
+"alt": "overhang-cooling-activation-threshold"
+},
+{
+"level": 3,
+"en": "Overhangs and external bridges fan speed",
+"raw": "Overhangs and external bridges fan speed",
+"id": "overhangs-and-external-bridges-fan-speed",
+"alt": "overhangs-and-external-bridges-fan-speed"
+},
+{
+"level": 3,
+"en": "Internal bridges fan speed",
+"raw": "Internal bridges fan speed",
+"id": "internal-bridges-fan-speed",
+"alt": "internal-bridges-fan-speed"
+},
+{
+"level": 3,
+"en": "Support interface fan speed",
+"raw": "Support interface fan speed",
+"id": "support-interface-fan-speed",
+"alt": "support-interface-fan-speed"
+},
+{
+"level": 3,
+"en": "Ironing fan speed",
+"raw": "Ironing fan speed",
+"id": "ironing-fan-speed",
+"alt": "ironing-fan-speed"
+},
+{
+"level": 3,
+"en": "Auxiliary part cooling fan",
+"raw": "Auxiliary part cooling fan",
+"id": "auxiliary-part-cooling-fan",
+"alt": "auxiliary-part-cooling-fan"
+},
+{
+"level": 3,
+"en": "Exhaust fan",
+"raw": "Exhaust fan",
+"id": "exhaust-fan",
+"alt": "exhaust-fan"
+},
+{
+"level": 4,
+"en": "Activate air filtration",
+"raw": "Activate air filtration",
+"id": "activate-air-filtration",
+"alt": "activate-air-filtration"
+},
+{
+"level": 4,
+"en": "During print",
+"raw": "During print",
+"id": "during-print",
+"alt": "during-print"
+},
+{
+"level": 4,
+"en": "Complete print",
+"raw": "Complete print",
+"id": "complete-print",
+"alt": "complete-print"
+}
+],
+"src": "material_settings/cooling/material_cooling.md"
+}

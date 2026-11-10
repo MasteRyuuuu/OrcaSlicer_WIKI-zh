@@ -1,0 +1,145 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "add-material",
+"en": "Add Material"
+},
+{
+"indent": 0,
+"anchor": "surfaces",
+"en": "Surfaces"
+},
+{
+"indent": 0,
+"anchor": "dress-up",
+"en": "Dress-up"
+},
+{
+"indent": 0,
+"anchor": "holes-and-threads",
+"en": "Holes and Threads"
+},
+{
+"indent": 0,
+"anchor": "placement",
+"en": "Placement"
+},
+{
+"indent": 0,
+"anchor": "combining",
+"en": "Combining"
+},
+{
+"indent": 0,
+"anchor": "reference-geometry",
+"en": "Reference Geometry"
+},
+{
+"indent": 0,
+"anchor": "assemblies",
+"en": "Assemblies"
+},
+{
+"indent": 0,
+"anchor": "variables-and-expressions",
+"en": "Variables and Expressions"
+},
+{
+"indent": 0,
+"anchor": "the-feature-tree",
+"en": "The Feature Tree"
+}
+]
+],
+"img": [],
+"link": [
+"design_sketching",
+"design_tab",
+"#assemblies"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Modeling Tools",
+"raw": "Modeling Tools",
+"id": "modeling-tools",
+"alt": "modeling-tools"
+},
+{
+"level": 2,
+"en": "Add Material",
+"raw": "Add Material",
+"id": "add-material",
+"alt": "add-material"
+},
+{
+"level": 2,
+"en": "Surfaces",
+"raw": "Surfaces",
+"id": "surfaces",
+"alt": "surfaces"
+},
+{
+"level": 2,
+"en": "Dress-up",
+"raw": "Dress-up",
+"id": "dress-up",
+"alt": "dress-up"
+},
+{
+"level": 2,
+"en": "Holes and Threads",
+"raw": "Holes and Threads",
+"id": "holes-and-threads",
+"alt": "holes-and-threads"
+},
+{
+"level": 2,
+"en": "Placement",
+"raw": "Placement",
+"id": "placement",
+"alt": "placement"
+},
+{
+"level": 2,
+"en": "Combining",
+"raw": "Combining",
+"id": "combining",
+"alt": "combining"
+},
+{
+"level": 2,
+"en": "Reference Geometry",
+"raw": "Reference Geometry",
+"id": "reference-geometry",
+"alt": "reference-geometry"
+},
+{
+"level": 2,
+"en": "Assemblies",
+"raw": "Assemblies",
+"id": "assemblies",
+"alt": "assemblies"
+},
+{
+"level": 2,
+"en": "Variables and Expressions",
+"raw": "Variables and Expressions",
+"id": "variables-and-expressions",
+"alt": "variables-and-expressions"
+},
+{
+"level": 2,
+"en": "The Feature Tree",
+"raw": "The Feature Tree",
+"id": "the-feature-tree",
+"alt": "the-feature-tree"
+}
+],
+"src": "design/design_modeling_tools.md"
+}

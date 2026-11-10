@@ -1,0 +1,604 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`filament_minimal_purge_on_wipe_tower`, `filament_tower_interface_pre_extrusion_dist`, `filament_tower_interface_pre_extrusion_length`, `filament_tower_ironing_area`, `filament_tower_interface_purge_volume`, `filament_tower_interface_print_temp`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`filament_minimal_purge_on_wipe_tower` (Float list), `filament_tower_interface_pre_extrusion_dist` (Float list), `filament_tower_interface_pre_extrusion_length` (Float list), `filament_tower_ironing_area` (Float list), `filament_tower_interface_purge_volume` (Float list), `filament_tower_interface_print_temp` (Integer list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-minimal-purge-on-wipe-tower=1` (`filament_minimal_purge_on_wipe_tower` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`long_retractions_when_ec`, `retraction_distances_when_ec`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`long_retractions_when_ec` (Boolean list), `retraction_distances_when_ec` (Float list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--long-retractions-when-ec=1` (`long_retractions_when_ec` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_loading_speed_start`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-loading-speed-start=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_loading_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-loading-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_unloading_speed_start`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-unloading-speed-start=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_unloading_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-unloading-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_toolchange_delay`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-toolchange-delay=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_cooling_moves`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-cooling-moves=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_cooling_initial_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-cooling-initial-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_cooling_final_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-cooling-final-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_stamping_loading_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-stamping-loading-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_stamping_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-stamping-distance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_multitool_ramming`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-multitool-ramming=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_multitool_ramming_volume`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-multitool-ramming-volume=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_multitool_ramming_flow`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-multitool-ramming-flow=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "multimaterial-wipe-tower-parameters",
+"en": "Multimaterial Wipe Tower Parameters"
+},
+{
+"indent": 4,
+"anchor": "minimal-purge-on-wipe-tower",
+"en": "Minimal purge on wipe tower"
+},
+{
+"indent": 0,
+"anchor": "multi-filament",
+"en": "Multi Filament"
+},
+{
+"indent": 0,
+"anchor": "tool-change-parameters-with-single-extruder",
+"en": "Tool change parameters with single extruder"
+},
+{
+"indent": 4,
+"anchor": "loading-speed-at-the-start",
+"en": "Loading speed at the start"
+},
+{
+"indent": 4,
+"anchor": "loading-speed",
+"en": "Loading speed"
+},
+{
+"indent": 4,
+"anchor": "unloading-speed-at-the-start",
+"en": "Unloading speed at the start"
+},
+{
+"indent": 4,
+"anchor": "unloading-speed",
+"en": "Unloading speed"
+},
+{
+"indent": 4,
+"anchor": "delay-after-unloading",
+"en": "Delay after unloading"
+},
+{
+"indent": 4,
+"anchor": "number-of-cooling-moves",
+"en": "Number of cooling moves"
+},
+{
+"indent": 4,
+"anchor": "speed-of-the-first-cooling-move",
+"en": "Speed of the first cooling move"
+},
+{
+"indent": 4,
+"anchor": "speed-of-the-last-cooling-move",
+"en": "Speed of the last cooling move"
+},
+{
+"indent": 4,
+"anchor": "stamping-loading-speed",
+"en": "Stamping loading speed"
+},
+{
+"indent": 4,
+"anchor": "stamping-distance",
+"en": "Stamping distance"
+},
+{
+"indent": 4,
+"anchor": "ramming-parameters",
+"en": "Ramming parameters"
+},
+{
+"indent": 8,
+"anchor": "total-ramming",
+"en": "Total ramming"
+},
+{
+"indent": 8,
+"anchor": "ramming-line",
+"en": "Ramming line"
+},
+{
+"indent": 0,
+"anchor": "tool-change-parameters-with-multi-extruder",
+"en": "Tool change parameters with multi extruder"
+},
+{
+"indent": 4,
+"anchor": "enable-ramming-for-multi-tool-setups",
+"en": "Enable ramming for multi-tool setups"
+},
+{
+"indent": 8,
+"anchor": "multi-tool-ramming-volume",
+"en": "Multi-tool ramming volume"
+},
+{
+"indent": 8,
+"anchor": "multi-tool-ramming-flow",
+"en": "Multi-tool ramming flow"
+}
+]
+],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Multimaterial Settings",
+"raw": "Material Multimaterial Settings",
+"id": "material-multimaterial-settings",
+"alt": "material-multimaterial-settings"
+},
+{
+"level": 2,
+"en": "Multimaterial Wipe Tower Parameters",
+"raw": "Multimaterial Wipe Tower Parameters",
+"id": "multimaterial-wipe-tower-parameters",
+"alt": "multimaterial-wipe-tower-parameters"
+},
+{
+"level": 3,
+"en": "Minimal purge on wipe tower",
+"raw": "Minimal purge on wipe tower",
+"id": "minimal-purge-on-wipe-tower",
+"alt": "minimal-purge-on-wipe-tower"
+},
+{
+"level": 2,
+"en": "Multi Filament",
+"raw": "Multi Filament",
+"id": "multi-filament",
+"alt": "multi-filament"
+},
+{
+"level": 2,
+"en": "Tool change parameters with single extruder",
+"raw": "Tool change parameters with single extruder",
+"id": "tool-change-parameters-with-single-extruder",
+"alt": "tool-change-parameters-with-single-extruder"
+},
+{
+"level": 3,
+"en": "Loading speed at the start",
+"raw": "Loading speed at the start",
+"id": "loading-speed-at-the-start",
+"alt": "loading-speed-at-the-start"
+},
+{
+"level": 3,
+"en": "Loading speed",
+"raw": "Loading speed",
+"id": "loading-speed",
+"alt": "loading-speed"
+},
+{
+"level": 3,
+"en": "Unloading speed at the start",
+"raw": "Unloading speed at the start",
+"id": "unloading-speed-at-the-start",
+"alt": "unloading-speed-at-the-start"
+},
+{
+"level": 3,
+"en": "Unloading speed",
+"raw": "Unloading speed",
+"id": "unloading-speed",
+"alt": "unloading-speed"
+},
+{
+"level": 3,
+"en": "Delay after unloading",
+"raw": "Delay after unloading",
+"id": "delay-after-unloading",
+"alt": "delay-after-unloading"
+},
+{
+"level": 3,
+"en": "Number of cooling moves",
+"raw": "Number of cooling moves",
+"id": "number-of-cooling-moves",
+"alt": "number-of-cooling-moves"
+},
+{
+"level": 3,
+"en": "Speed of the first cooling move",
+"raw": "Speed of the first cooling move",
+"id": "speed-of-the-first-cooling-move",
+"alt": "speed-of-the-first-cooling-move"
+},
+{
+"level": 3,
+"en": "Speed of the last cooling move",
+"raw": "Speed of the last cooling move",
+"id": "speed-of-the-last-cooling-move",
+"alt": "speed-of-the-last-cooling-move"
+},
+{
+"level": 3,
+"en": "Stamping loading speed",
+"raw": "Stamping loading speed",
+"id": "stamping-loading-speed",
+"alt": "stamping-loading-speed"
+},
+{
+"level": 3,
+"en": "Stamping distance",
+"raw": "Stamping distance",
+"id": "stamping-distance",
+"alt": "stamping-distance"
+},
+{
+"level": 3,
+"en": "Ramming parameters",
+"raw": "Ramming parameters",
+"id": "ramming-parameters",
+"alt": "ramming-parameters"
+},
+{
+"level": 4,
+"en": "Total ramming",
+"raw": "Total ramming",
+"id": "total-ramming",
+"alt": "total-ramming"
+},
+{
+"level": 4,
+"en": "Ramming line",
+"raw": "Ramming line",
+"id": "ramming-line",
+"alt": "ramming-line"
+},
+{
+"level": 2,
+"en": "Tool change parameters with multi extruder",
+"raw": "Tool change parameters with multi extruder",
+"id": "tool-change-parameters-with-multi-extruder",
+"alt": "tool-change-parameters-with-multi-extruder"
+},
+{
+"level": 3,
+"en": "Enable ramming for multi-tool setups",
+"raw": "Enable ramming for multi-tool setups",
+"id": "enable-ramming-for-multi-tool-setups",
+"alt": "enable-ramming-for-multi-tool-setups"
+},
+{
+"level": 4,
+"en": "Multi-tool ramming volume",
+"raw": "Multi-tool ramming volume",
+"id": "multi-tool-ramming-volume",
+"alt": "multi-tool-ramming-volume"
+},
+{
+"level": 4,
+"en": "Multi-tool ramming flow",
+"raw": "Multi-tool ramming flow",
+"id": "multi-tool-ramming-flow",
+"alt": "multi-tool-ramming-flow"
+}
+],
+"src": "material_settings/multimaterial/material_multimaterial.md"
+}

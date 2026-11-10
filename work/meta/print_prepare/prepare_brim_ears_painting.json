@@ -1,0 +1,28 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm",
+"others_settings_brim#brim-ears-outer-only"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Brim ears Painting",
+"raw": "Brim ears Painting",
+"id": "brim-ears-painting",
+"alt": "brim-ears-painting"
+},
+{
+"level": 2,
+"en": "Parameters",
+"raw": "Parameters",
+"id": "parameters",
+"alt": "parameters"
+}
+],
+"src": "print_prepare/prepare_brim_ears_painting.md"
+}

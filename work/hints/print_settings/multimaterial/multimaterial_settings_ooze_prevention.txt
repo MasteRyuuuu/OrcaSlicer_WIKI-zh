@@ -1,0 +1,10 @@
+H ooze prevention = 防渗料
+H temperature variation = 温度变化
+H preheat time = 预热时间
+H preheat steps = 预热步数
+G tool change = 换工具头 / 换料
+G ooze = 渗料
+G filament = 耗材丝
+G extruder = 挤出机
+  idle temperature = 待机温度
+  filament settings = 耗材丝设置

@@ -1,0 +1,47 @@
+{
+"code": [
+[
+"```pwsh",
+"\"C:\\Your\\Path\\To\\Python\\python.exe\" \"C:\\Your\\Path\\To\\Script\\pythonScript.py\" -parameterToScript 1994;",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`post_process`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Text list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--post-process=value`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Post-Processing Scripts",
+"raw": "Post-Processing Scripts",
+"id": "post-processing-scripts",
+"alt": "post-processing-scripts"
+}
+],
+"src": "print_settings/others/others_settings_post_processing_scripts.md"
+}

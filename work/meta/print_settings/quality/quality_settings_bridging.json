@@ -1,0 +1,249 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_flow`, `internal_bridge_flow`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-flow=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_density`, `internal_bridge_density`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-density=20%` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`thick_bridges`, `thick_internal_bridges`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--thick-bridges=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_extra_bridge_layer`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`disabled, external_bridge_only, internal_bridge_only, apply_to_all`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-extra-bridge-layer=disabled`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`dont_filter_internal_bridges`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`disabled, limited, nofilter`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--dont-filter-internal-bridges=disabled`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`counterbore_hole_bridging`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`none, partiallybridge, sacrificiallayer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--counterbore-hole-bridging=none`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "flow-ratio",
+"en": "Flow ratio"
+},
+{
+"indent": 0,
+"anchor": "bridge-density",
+"en": "Bridge density"
+},
+{
+"indent": 0,
+"anchor": "thick-bridges",
+"en": "Thick bridges"
+},
+{
+"indent": 0,
+"anchor": "extra-bridge-layers",
+"en": "Extra bridge layers"
+},
+{
+"indent": 0,
+"anchor": "filter-out-small-internal-bridges",
+"en": "Filter out small internal bridges"
+},
+{
+"indent": 0,
+"anchor": "bridge-counterbore-hole",
+"en": "Bridge Counterbore hole"
+}
+]
+],
+"img": [
+"![thick-bridges](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/thick-bridges.png?raw=true)",
+"![bridge-counterbore-none](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-counterbore-none.png?raw=true)",
+"![bridge-counterbore-partially](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-counterbore-partially.gif?raw=true)",
+"![bridge-counterbore-sacrificial](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-counterbore-sacrificial.png?raw=true)"
+],
+"link": [
+"material_flow_ratio_and_pressure_advance#flow-ratio",
+"#flow-ratio"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Bridging",
+"raw": "Bridging",
+"id": "bridging",
+"alt": "bridging"
+},
+{
+"level": 2,
+"en": "Flow ratio",
+"raw": "Flow ratio",
+"id": "flow-ratio",
+"alt": "flow-ratio"
+},
+{
+"level": 2,
+"en": "Bridge density",
+"raw": "Bridge density",
+"id": "bridge-density",
+"alt": "bridge-density"
+},
+{
+"level": 2,
+"en": "Thick bridges",
+"raw": "Thick bridges",
+"id": "thick-bridges",
+"alt": "thick-bridges"
+},
+{
+"level": 2,
+"en": "Extra bridge layers",
+"raw": "Extra bridge layers",
+"id": "extra-bridge-layers",
+"alt": "extra-bridge-layers"
+},
+{
+"level": 2,
+"en": "Filter out small internal bridges",
+"raw": "Filter out small internal bridges",
+"id": "filter-out-small-internal-bridges",
+"alt": "filter-out-small-internal-bridges"
+},
+{
+"level": 2,
+"en": "Bridge Counterbore hole",
+"raw": "Bridge Counterbore hole",
+"id": "bridge-counterbore-hole",
+"alt": "bridge-counterbore-hole"
+}
+],
+"src": "print_settings/quality/quality_settings_bridging.md"
+}

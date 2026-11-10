@@ -1,0 +1,175 @@
+{
+"code": [
+[
+"```json",
+"0.036 , 3.84 , 1000",
+"0.036 , 7.68 , 1000",
+"0.036 , 11.51 , 1000",
+"0.036 , 15.35 , 1000",
+"0.036 , 3.84 , 2000",
+"0.03 , 7.68 , 2000",
+"0.029 , 11.51 , 2000",
+"0.028 , 15.35 , 2000",
+"0.032 , 3.84 , 4000",
+"0.028 , 7.68 , 4000",
+"0.026 , 11.51 , 4000",
+"0.024 , 15.35 , 4000",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [
+"![apa-material-config](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-material-config.png?raw=true)",
+"![apa-expected-results](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-expected-results.jpg?raw=true)",
+"![apa-expected-seam](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-expected-seam.jpg?raw=true)",
+"![apa-expected-solid-infill](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-expected-solid-infill.jpg?raw=true)",
+"![apa-unexpected-solid-infill](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-unexpected-solid-infill.jpg?raw=true)",
+"![apa-test](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-test.png?raw=true)",
+"![apa-test210](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-test210.png?raw=true)",
+"![pa-pattern-general](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-general.png?raw=true)",
+"![pa-pattern-batch](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-batch.png?raw=true)",
+"![apa-setup-result-speed](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-setup-result-speed.png?raw=true)",
+"![apa-setup-result-acceleration-jerk](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-setup-result-acceleration-jerk.png?raw=true)",
+"![apa-profile](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-profile.png?raw=true)",
+"![apa-identify-too-high](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-identify-too-high.jpg?raw=true)",
+"![apa-identify-too-low](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-identify-too-low.jpg?raw=true)",
+"![apa-identify-optimal](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/apa-identify-optimal.jpg?raw=true)"
+],
+"link": [
+"material_flow_ratio_and_pressure_advance#enable-adaptive-pressure-advance-beta",
+"calibration_guide",
+"https://github.com/Klipper3d/klipper/commit/c84d78f3f169bc5163d11b74837f9880b0b7dba4",
+"calibration_guide"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Adaptive Pressure Advance",
+"raw": "Adaptive Pressure Advance",
+"id": "adaptive-pressure-advance",
+"alt": "adaptive-pressure-advance"
+},
+{
+"level": 2,
+"en": "Settings Overview",
+"raw": "Settings Overview",
+"id": "settings-overview",
+"alt": "settings-overview"
+},
+{
+"level": 2,
+"en": "Pre-Requisites",
+"raw": "Pre-Requisites",
+"id": "pre-requisites",
+"alt": "pre-requisites"
+},
+{
+"level": 2,
+"en": "Use case (what to expect)",
+"raw": "Use case (what to expect)",
+"id": "use-case-what-to-expect",
+"alt": "use-case-what-to-expect"
+},
+{
+"level": 3,
+"en": "Expected results",
+"raw": "Expected results",
+"id": "expected-results",
+"alt": "expected-results"
+},
+{
+"level": 2,
+"en": "How to calibrate the adaptive pressure advance model",
+"raw": "How to calibrate the adaptive pressure advance model",
+"id": "how-to-calibrate-the-adaptive-pressure-advance-model",
+"alt": "how-to-calibrate-the-adaptive-pressure-advance-model"
+},
+{
+"level": 3,
+"en": "Defining the calibration sets",
+"raw": "Defining the calibration sets",
+"id": "defining-the-calibration-sets",
+"alt": "defining-the-calibration-sets"
+},
+{
+"level": 3,
+"en": "Identifying the flow rates from the print speed",
+"raw": "Identifying the flow rates from the print speed",
+"id": "identifying-the-flow-rates-from-the-print-speed",
+"alt": "identifying-the-flow-rates-from-the-print-speed"
+},
+{
+"level": 4,
+"en": "OrcaSlicer 2.2.0 and later",
+"raw": "OrcaSlicer 2.2.0 and later",
+"id": "orcaslicer-220-and-later",
+"alt": "orcaslicer-220-and-later"
+},
+{
+"level": 4,
+"en": "OrcaSlicer 2.1.0 and older",
+"raw": "OrcaSlicer 2.1.0 and older",
+"id": "orcaslicer-210-and-older",
+"alt": "orcaslicer-210-and-older"
+},
+{
+"level": 3,
+"en": "Running the tests",
+"raw": "Running the tests",
+"id": "running-the-tests",
+"alt": "running-the-tests"
+},
+{
+"level": 4,
+"en": "General tips",
+"raw": "General tips",
+"id": "general-tips",
+"alt": "general-tips"
+},
+{
+"level": 4,
+"en": "OrcaSlicer 2.3.0 and newer",
+"raw": "OrcaSlicer 2.3.0 and newer",
+"id": "orcaslicer-230-and-newer",
+"alt": "orcaslicer-230-and-newer"
+},
+{
+"level": 4,
+"en": "OrcaSlicer 2.2.0 and older",
+"raw": "OrcaSlicer 2.2.0 and older",
+"id": "orcaslicer-220-and-older",
+"alt": "orcaslicer-220-and-older"
+},
+{
+"level": 4,
+"en": "Test results processing",
+"raw": "Test results processing",
+"id": "test-results-processing",
+"alt": "test-results-processing"
+},
+{
+"level": 3,
+"en": "Tips",
+"raw": "Tips",
+"id": "tips",
+"alt": "tips"
+},
+{
+"level": 4,
+"en": "Model input",
+"raw": "Model input",
+"id": "model-input",
+"alt": "model-input"
+},
+{
+"level": 4,
+"en": "Identifying the right PA",
+"raw": "Identifying the right PA",
+"id": "identifying-the-right-pa",
+"alt": "identifying-the-right-pa"
+}
+],
+"src": "calibration/adaptive_pressure_advance_calib.md"
+}

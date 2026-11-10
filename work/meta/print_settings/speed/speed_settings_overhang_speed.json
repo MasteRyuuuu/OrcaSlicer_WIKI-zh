@@ -1,0 +1,148 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_overhang_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-overhang-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slowdown_for_curled_perimeters`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slowdown-for-curled-perimeters=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_1_4_speed`, `overhang_2_4_speed`, `overhang_3_4_speed`, `overhang_4_4_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-1-4-speed=20%` (same pattern for the other variables above)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "slow-down-for-overhang",
+"en": "Slow down for overhang"
+},
+{
+"indent": 4,
+"anchor": "slow-down-for-curled-perimeters",
+"en": "Slow down for curled perimeters"
+},
+{
+"indent": 4,
+"anchor": "speed",
+"en": "Speed"
+},
+{
+"indent": 0,
+"anchor": "bridge-speed",
+"en": "Bridge speed"
+}
+]
+],
+"img": [
+"![slow-down-for-curled-perimeters](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed/slow-down-for-curled-perimeters.png?raw=true)"
+],
+"link": [
+"speed_settings_advanced",
+"#speed",
+"#bridge-speed",
+"quality_settings_line_width",
+"speed_settings_other_layers_speed#outer-wall",
+"speed_settings_other_layers_speed#inner-wall",
+"#slow-down-for-overhang",
+"#slow-down-for-curled-perimeters",
+"#speed"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Overhang Speed",
+"raw": "Overhang Speed",
+"id": "overhang-speed",
+"alt": "overhang-speed"
+},
+{
+"level": 2,
+"en": "Slow down for overhang",
+"raw": "Slow down for overhang",
+"id": "slow-down-for-overhang",
+"alt": "slow-down-for-overhang"
+},
+{
+"level": 3,
+"en": "Slow down for curled perimeters",
+"raw": "Slow down for curled perimeters",
+"id": "slow-down-for-curled-perimeters",
+"alt": "slow-down-for-curled-perimeters"
+},
+{
+"level": 3,
+"en": "Speed",
+"raw": "Speed",
+"id": "speed",
+"alt": "speed"
+},
+{
+"level": 2,
+"en": "Bridge speed",
+"raw": "Bridge speed",
+"id": "bridge-speed",
+"alt": "bridge-speed"
+}
+],
+"src": "print_settings/speed/speed_settings_overhang_speed.md"
+}

@@ -1,0 +1,72 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "export",
+"en": "Export"
+},
+{
+"indent": 0,
+"anchor": "slicing",
+"en": "Slicing"
+},
+{
+"indent": 0,
+"anchor": "model-info",
+"en": "Model Info"
+},
+{
+"indent": 0,
+"anchor": "misc-actions",
+"en": "Misc Actions"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode",
+"cli_transform#object-handling"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "CLI Actions",
+"raw": "CLI Actions",
+"id": "cli-actions",
+"alt": "cli-actions"
+},
+{
+"level": 2,
+"en": "Export",
+"raw": "Export",
+"id": "export",
+"alt": "export"
+},
+{
+"level": 2,
+"en": "Slicing",
+"raw": "Slicing",
+"id": "slicing",
+"alt": "slicing"
+},
+{
+"level": 2,
+"en": "Model Info",
+"raw": "Model Info",
+"id": "model-info",
+"alt": "model-info"
+},
+{
+"level": 2,
+"en": "Misc Actions",
+"raw": "Misc Actions",
+"id": "misc-actions",
+"alt": "misc-actions"
+}
+],
+"src": "cli/cli_actions.md"
+}

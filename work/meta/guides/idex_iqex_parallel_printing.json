@@ -1,0 +1,238 @@
+{
+"code": [
+[
+"```json",
+"\"physical_extruder_map\": [\"0\", \"0\", \"0\", \"0\", \"1\", \"2\", \"3\"]",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "how-parallel-printing-works",
+"en": "How parallel printing works"
+},
+{
+"indent": 4,
+"anchor": "supported-layouts",
+"en": "Supported layouts"
+},
+{
+"indent": 0,
+"anchor": "setting-up-a-printer",
+"en": "Setting up a printer"
+},
+{
+"indent": 4,
+"anchor": "firmware",
+"en": "Firmware"
+},
+{
+"indent": 4,
+"anchor": "mmu-and-afc",
+"en": "MMU and AFC"
+},
+{
+"indent": 4,
+"anchor": "firmware-managed-zones",
+"en": "Firmware-managed zones"
+},
+{
+"indent": 0,
+"anchor": "working-with-parallel-printing",
+"en": "Working with parallel printing"
+},
+{
+"indent": 4,
+"anchor": "choosing-a-mode-for-a-plate",
+"en": "Choosing a mode for a plate"
+},
+{
+"indent": 4,
+"anchor": "placing-parts",
+"en": "Placing parts"
+},
+{
+"indent": 4,
+"anchor": "ghost-copies",
+"en": "Ghost copies"
+},
+{
+"indent": 4,
+"anchor": "multi-color-printing",
+"en": "Multi-color printing"
+},
+{
+"indent": 4,
+"anchor": "temperatures-and-pressure-advance",
+"en": "Temperatures and pressure advance"
+},
+{
+"indent": 4,
+"anchor": "preview",
+"en": "Preview"
+},
+{
+"indent": 4,
+"anchor": "checks-before-slicing",
+"en": "Checks before slicing"
+},
+{
+"indent": 0,
+"anchor": "limitations",
+"en": "Limitations"
+}
+]
+],
+"img": [
+"![idex_iqex_plate_mode_menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_plate_mode_menu.png?raw=true)",
+"![idex_iqex_mirror_plate](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_mirror_plate.png?raw=true)",
+"![idex_iqex_copy_plate](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_copy_plate.png?raw=true)",
+"![idex_iqex_preview](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_preview.png?raw=true)",
+"![idex_iqex_pre_slice_warning](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_pre_slice_warning.png?raw=true)"
+],
+"link": [
+"printer_multimaterial_idex_iqex",
+"#multi-color-printing",
+"#firmware-managed-zones",
+"printer_multimaterial_setup#extruders",
+"#mmu-and-afc",
+"printer_multimaterial_idex_iqex#idexiqex-printer",
+"printer_multimaterial_idex_iqex#gantry-count",
+"printer_multimaterial_idex_iqex#tools-per-gantry",
+"printer_multimaterial_idex_iqex#tool-0-position",
+"printer_multimaterial_idex_iqex#nozzle-clearance-x",
+"printer_multimaterial_idex_iqex#nozzle-clearance-y",
+"printer_multimaterial_idex_iqex#modes",
+"#firmware",
+"printer_multimaterial_idex_iqex#mode-g-code",
+"user_profiles#finding-the-configuration-folder",
+"https://docs.duet3d.com/User_manual/Machine_configuration/Configuration_IDEX",
+"printer_multimaterial_idex_iqex#firmware-managed-zones",
+"#multi-color-printing",
+"printer_multimaterial_idex_iqex#safety-margin",
+"#multi-color-printing",
+"printer_multimaterial_idex_iqex#tool-roles",
+"#firmware-managed-zones",
+"#multi-color-printing",
+"printer_multimaterial_idex_iqex#pre-slice-warnings"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "IDEX/IQEX Parallel Printing",
+"raw": "IDEX/IQEX Parallel Printing",
+"id": "idexiqex-parallel-printing",
+"alt": "idexiqex-parallel-printing"
+},
+{
+"level": 2,
+"en": "How parallel printing works",
+"raw": "How parallel printing works",
+"id": "how-parallel-printing-works",
+"alt": "how-parallel-printing-works"
+},
+{
+"level": 3,
+"en": "Supported layouts",
+"raw": "Supported layouts",
+"id": "supported-layouts",
+"alt": "supported-layouts"
+},
+{
+"level": 2,
+"en": "Setting up a printer",
+"raw": "Setting up a printer",
+"id": "setting-up-a-printer",
+"alt": "setting-up-a-printer"
+},
+{
+"level": 3,
+"en": "Firmware",
+"raw": "Firmware",
+"id": "firmware",
+"alt": "firmware"
+},
+{
+"level": 3,
+"en": "MMU and AFC",
+"raw": "MMU and AFC",
+"id": "mmu-and-afc",
+"alt": "mmu-and-afc"
+},
+{
+"level": 3,
+"en": "Firmware-managed zones",
+"raw": "Firmware-managed zones",
+"id": "firmware-managed-zones",
+"alt": "firmware-managed-zones"
+},
+{
+"level": 2,
+"en": "Working with parallel printing",
+"raw": "Working with parallel printing",
+"id": "working-with-parallel-printing",
+"alt": "working-with-parallel-printing"
+},
+{
+"level": 3,
+"en": "Choosing a mode for a plate",
+"raw": "Choosing a mode for a plate",
+"id": "choosing-a-mode-for-a-plate",
+"alt": "choosing-a-mode-for-a-plate"
+},
+{
+"level": 3,
+"en": "Placing parts",
+"raw": "Placing parts",
+"id": "placing-parts",
+"alt": "placing-parts"
+},
+{
+"level": 3,
+"en": "Ghost copies",
+"raw": "Ghost copies",
+"id": "ghost-copies",
+"alt": "ghost-copies"
+},
+{
+"level": 3,
+"en": "Multi-color printing",
+"raw": "Multi-color printing",
+"id": "multi-color-printing",
+"alt": "multi-color-printing"
+},
+{
+"level": 3,
+"en": "Temperatures and pressure advance",
+"raw": "Temperatures and pressure advance",
+"id": "temperatures-and-pressure-advance",
+"alt": "temperatures-and-pressure-advance"
+},
+{
+"level": 3,
+"en": "Preview",
+"raw": "Preview",
+"id": "preview",
+"alt": "preview"
+},
+{
+"level": 3,
+"en": "Checks before slicing",
+"raw": "Checks before slicing",
+"id": "checks-before-slicing",
+"alt": "checks-before-slicing"
+},
+{
+"level": 2,
+"en": "Limitations",
+"raw": "Limitations",
+"id": "limitations",
+"alt": "limitations"
+}
+],
+"src": "guides/idex_iqex_parallel_printing.md"
+}

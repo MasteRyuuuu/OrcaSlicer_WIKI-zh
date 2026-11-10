@@ -1,0 +1,80 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_adaptive_volumetric_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-adaptive-volumetric-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_max_volumetric_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-max-volumetric-speed=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"speed_settings_other_layers_speed",
+"volumetric_speed_calib"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Volumetric Speed Limitation",
+"raw": "Material Volumetric Speed Limitation",
+"id": "material-volumetric-speed-limitation",
+"alt": "material-volumetric-speed-limitation"
+},
+{
+"level": 2,
+"en": "Adaptive volumetric speed",
+"raw": "Adaptive volumetric speed",
+"id": "adaptive-volumetric-speed",
+"alt": "adaptive-volumetric-speed"
+},
+{
+"level": 2,
+"en": "Max volumetric speed",
+"raw": "Max volumetric speed",
+"id": "max-volumetric-speed",
+"alt": "max-volumetric-speed"
+}
+],
+"src": "material_settings/filament/material_volumetric_speed_limitation.md"
+}

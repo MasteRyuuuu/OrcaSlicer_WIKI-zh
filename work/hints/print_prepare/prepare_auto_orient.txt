@@ -1,0 +1,8 @@
+H auto orientation = 自动朝向
+G support interface = 支撑面
+G support = 支撑
+G part = 零件
+G overhang = 悬垂
+G layer = 层
+G bottom = 底部 / 仰视
+  3d models = 3D 模型

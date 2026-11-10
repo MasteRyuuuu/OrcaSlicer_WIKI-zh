@@ -1,0 +1,164 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`cooling_tube_retraction`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--cooling-tube-retraction=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`cooling_tube_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--cooling-tube-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`parking_pos_retraction`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--parking-pos-retraction=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extra_loading_move`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extra-loading-move=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`high_current_on_filament_swap`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--high-current-on-filament-swap=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Single Extruder Multi-Material Parameters",
+"raw": "Single Extruder Multi-Material Parameters",
+"id": "single-extruder-multi-material-parameters",
+"alt": "single-extruder-multi-material-parameters"
+},
+{
+"level": 2,
+"en": "Cooling tube position",
+"raw": "Cooling tube position",
+"id": "cooling-tube-position",
+"alt": "cooling-tube-position"
+},
+{
+"level": 2,
+"en": "Cooling tube length",
+"raw": "Cooling tube length",
+"id": "cooling-tube-length",
+"alt": "cooling-tube-length"
+},
+{
+"level": 2,
+"en": "Filament parking position",
+"raw": "Filament parking position",
+"id": "filament-parking-position",
+"alt": "filament-parking-position"
+},
+{
+"level": 2,
+"en": "Extra loading distance",
+"raw": "Extra loading distance",
+"id": "extra-loading-distance",
+"alt": "extra-loading-distance"
+},
+{
+"level": 2,
+"en": "High extruder current on filament swap",
+"raw": "High extruder current on filament swap",
+"id": "high-extruder-current-on-filament-swap",
+"alt": "high-extruder-current-on-filament-swap"
+}
+],
+"src": "printer_settings/multimaterial/printer_multimaterial_semm_parameters.md"
+}

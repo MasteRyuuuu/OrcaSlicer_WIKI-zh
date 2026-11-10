@@ -1,0 +1,113 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`flush_into_infill`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--flush-into-infill=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`flush_into_objects`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--flush-into-objects=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`flush_into_support`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--flush-into-support=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"printer_multimaterial_wipe_tower",
+"printer_multimaterial_wipe_tower#purge-in-prime-tower",
+"printer_multimaterial_wipe_tower",
+"printer_multimaterial_wipe_tower#purge-in-prime-tower",
+"printer_multimaterial_wipe_tower",
+"printer_multimaterial_wipe_tower#purge-in-prime-tower"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Flush Options",
+"raw": "Flush Options",
+"id": "flush-options",
+"alt": "flush-options"
+},
+{
+"level": 2,
+"en": "Flush into objects' infill",
+"raw": "Flush into objects' infill",
+"id": "flush-into-objects-infill",
+"alt": "flush-into-objects-infill"
+},
+{
+"level": 2,
+"en": "Flush into this object",
+"raw": "Flush into this object",
+"id": "flush-into-this-object",
+"alt": "flush-into-this-object"
+},
+{
+"level": 2,
+"en": "Flush into objects' support",
+"raw": "Flush into objects' support",
+"id": "flush-into-objects-support",
+"alt": "flush-into-objects-support"
+}
+],
+"src": "print_settings/multimaterial/multimaterial_settings_flush_options.md"
+}

@@ -1,0 +1,3 @@
+G plugin = 插件
+  install local plugin = 安装本地插件
+  open file = 打开文件

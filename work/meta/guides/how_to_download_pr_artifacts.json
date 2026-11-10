@@ -1,0 +1,28 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![pr-artifacts-1](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pr-artifacts/pr-artifacts-1.png?raw=true)",
+"![pr-artifacts-2](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pr-artifacts/pr-artifacts-2.png?raw=true)",
+"![pr-artifacts-3](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pr-artifacts/pr-artifacts-3.png?raw=true)"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/pulls",
+"import_export#export-preset-bundle",
+"https://www.orcaslicer.com/wiki/how_to_download_pr_artifacts"
+],
+"url": [
+"https://www.orcaslicer.com/wiki/how_to_download_pr_artifacts"
+],
+"headings": [
+{
+"level": 1,
+"en": "How to Download Pull Requests Artifacts for Testing",
+"raw": "How to Download Pull Requests Artifacts for Testing",
+"id": "how-to-download-pull-requests-artifacts-for-testing",
+"alt": "how-to-download-pull-requests-artifacts-for-testing"
+}
+],
+"src": "guides/how_to_download_pr_artifacts.md"
+}

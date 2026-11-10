@@ -1,0 +1,55 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![full-sidebar](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/full-sidebar.png?raw=true)",
+"![combobox](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/combobox.png?raw=true)",
+"![tab-popup](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/tab-popup.png?raw=true)"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Plater.hpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Plater.hpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Widgets/ComboBox.hpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Tab.hpp"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Application Structure Overview",
+"raw": "Application Structure Overview",
+"id": "application-structure-overview",
+"alt": "application-structure-overview"
+},
+{
+"level": 2,
+"en": "Plater",
+"raw": "[`Plater`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Plater.hpp)",
+"id": "platerhttpsgithubcomorcaslicerorcaslicerblobmainsrcslic3rguiplaterhpp",
+"alt": "plater"
+},
+{
+"level": 2,
+"en": "Sidebar",
+"raw": "[`Sidebar`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Plater.hpp)",
+"id": "sidebarhttpsgithubcomorcaslicerorcaslicerblobmainsrcslic3rguiplaterhpp",
+"alt": "sidebar"
+},
+{
+"level": 2,
+"en": "ComboBox",
+"raw": "[`ComboBox`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Widgets/ComboBox.hpp)",
+"id": "comboboxhttpsgithubcomorcaslicerorcaslicerblobmainsrcslic3rguiwidgetscomboboxhpp",
+"alt": "combobox"
+},
+{
+"level": 2,
+"en": "Tab",
+"raw": "[`Tab`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/slic3r/GUI/Tab.hpp)",
+"id": "tabhttpsgithubcomorcaslicerorcaslicerblobmainsrcslic3rguitabhpp",
+"alt": "tab"
+}
+],
+"src": "developer_reference/plater_sidebar_tab_combobox.md"
+}

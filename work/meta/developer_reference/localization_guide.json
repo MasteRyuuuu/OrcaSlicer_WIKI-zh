@@ -1,0 +1,196 @@
+{
+"code": [
+[
+"```C++",
+"auto msg = L(\"This message to be localized\")",
+"```"
+],
+[
+"```C++",
+"_u8L_CONTEXT(\"in\", \"inside\")    // \"in\" meaning inside",
+"_u8L_CONTEXT(\"in\", \"inches\")    // \"in\" as the unit inches",
+"```"
+],
+[
+"    ```C++",
+"    {\"run\", _u8L(\"Run\")},",
+"    {\"exit_code\", _u8L(\"Process exited with code: %s\")},",
+"    ```"
+],
+[
+"    ```html",
+"    <button id=\"run-btn\" data-i18n=\"run\">Run</button>",
+"    ```"
+],
+[
+"    ```pwsh",
+"    xgettext --keyword=L --add-comments=TRN --from-code=UTF-8 --debug -o OrcaSlicer.pot -f list.txt",
+"    ```"
+],
+[
+"    ```pwsh",
+"    msgmerge -N -o new.po old.po new.pot",
+"    ```"
+],
+[
+"    ```pwsh",
+"    msgcat -o new.po old.po",
+"    ```"
+],
+[
+"   ```pwsh",
+"   msgen -o new.po old.po",
+"   ```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"https://www.gnu.org/software/gettext/",
+"https://poedit.net",
+"http://www.gnu.org/software/gettext/manual/gettext.html",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/localization/i18n/list.txt",
+"localization_glossary",
+"https://github.com/OrcaSlicer/OrcaSlicer/wiki",
+"localization_glossary"
+],
+"url": [
+"http://www.gnu.org/software/gettext/manual/gettext.html",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n",
+"https://github.com/OrcaSlicer/OrcaSlicer/tree/master/localization/i18n"
+],
+"headings": [
+{
+"level": 1,
+"en": "Localization and translation guide",
+"raw": "Localization and translation guide",
+"id": "localization-and-translation-guide",
+"alt": "localization-and-translation-guide"
+},
+{
+"level": 2,
+"en": "Scenarios for translators",
+"raw": "Scenarios for translators",
+"id": "scenarios-for-translators",
+"alt": "scenarios-for-translators"
+},
+{
+"level": 3,
+"en": "Scenario 1. How do I add a translation or fix an existing translation",
+"raw": "Scenario 1. How do I add a translation or fix an existing translation",
+"id": "scenario-1-how-do-i-add-a-translation-or-fix-an-existing-translation",
+"alt": "scenario-1-how-do-i-add-a-translation-or-fix-an-existing-translation"
+},
+{
+"level": 3,
+"en": "Scenario 2. How do I add a new language support",
+"raw": "Scenario 2. How do I add a new language support",
+"id": "scenario-2-how-do-i-add-a-new-language-support",
+"alt": "scenario-2-how-do-i-add-a-new-language-support"
+},
+{
+"level": 3,
+"en": "Scenario 3. How do I add a new text resource when implementing a feature to OrcaSlicer",
+"raw": "Scenario 3. How do I add a new text resource when implementing a feature to OrcaSlicer",
+"id": "scenario-3-how-do-i-add-a-new-text-resource-when-implementing-a-feature-to-orcaslicer",
+"alt": "scenario-3-how-do-i-add-a-new-text-resource-when-implementing-a-feature-to-orcaslicer"
+},
+{
+"level": 4,
+"en": "Adding a context to disambiguate translations",
+"raw": "Adding a context to disambiguate translations",
+"id": "adding-a-context-to-disambiguate-translations",
+"alt": "adding-a-context-to-disambiguate-translations"
+},
+{
+"level": 4,
+"en": "Text in the bundled web pages",
+"raw": "Text in the bundled web pages",
+"id": "text-in-the-bundled-web-pages",
+"alt": "text-in-the-bundled-web-pages"
+},
+{
+"level": 3,
+"en": "Scenario 4. How do I use GNUgettext to localize my own application taking OrcaSlicer as an example",
+"raw": "Scenario 4. How do I use GNUgettext to localize my own application taking OrcaSlicer as an example",
+"id": "scenario-4-how-do-i-use-gnugettext-to-localize-my-own-application-taking-orcaslicer-as-an-example",
+"alt": "scenario-4-how-do-i-use-gnugettext-to-localize-my-own-application-taking-orcaslicer-as-an-example"
+},
+{
+"level": 2,
+"en": "Translation principles",
+"raw": "Translation principles",
+"id": "translation-principles",
+"alt": "translation-principles"
+},
+{
+"level": 3,
+"en": "Localize, don't translate word-for-word",
+"raw": "Localize, don't translate word-for-word",
+"id": "localize-dont-translate-word-for-word",
+"alt": "localize-dont-translate-word-for-word"
+},
+{
+"level": 3,
+"en": "Keep boilerplate messages consistent",
+"raw": "Keep boilerplate messages consistent",
+"id": "keep-boilerplate-messages-consistent",
+"alt": "keep-boilerplate-messages-consistent"
+},
+{
+"level": 3,
+"en": "English terms are sometimes overloaded — translate the meaning",
+"raw": "English terms are sometimes overloaded — translate the meaning",
+"id": "english-terms-are-sometimes-overloaded-translate-the-meaning",
+"alt": "english-terms-are-sometimes-overloaded-translate-the-meaning"
+},
+{
+"level": 3,
+"en": "Expand descriptions where they help",
+"raw": "Expand descriptions where they help",
+"id": "expand-descriptions-where-they-help",
+"alt": "expand-descriptions-where-they-help"
+},
+{
+"level": 3,
+"en": "Simplify the phrasing (\"semantic optimization\")",
+"raw": "Simplify the phrasing (\"semantic optimization\")",
+"id": "simplify-the-phrasing-semantic-optimization",
+"alt": "simplify-the-phrasing-semantic-optimization"
+},
+{
+"level": 3,
+"en": "Find the balance",
+"raw": "Find the balance",
+"id": "find-the-balance",
+"alt": "find-the-balance"
+},
+{
+"level": 3,
+"en": "Remember the audience",
+"raw": "Remember the audience",
+"id": "remember-the-audience",
+"alt": "remember-the-audience"
+},
+{
+"level": 2,
+"en": "General guidelines for OrcaSlicer translators",
+"raw": "General guidelines for OrcaSlicer translators",
+"id": "general-guidelines-for-orcaslicer-translators",
+"alt": "general-guidelines-for-orcaslicer-translators"
+},
+{
+"level": 2,
+"en": "Machine translations and entries that need human review",
+"raw": "Machine translations and entries that need human review",
+"id": "machine-translations-and-entries-that-need-human-review",
+"alt": "machine-translations-and-entries-that-need-human-review"
+}
+],
+"src": "developer_reference/localization_guide.md"
+}

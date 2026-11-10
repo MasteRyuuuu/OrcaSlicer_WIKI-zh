@@ -1,0 +1,233 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`outer_wall_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--outer-wall-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`inner_wall_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--inner-wall-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_solid_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-solid-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bottom_surface_filament_id`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bottom-surface-filament-id=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_tower_filament`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-tower-filament=1`."
+}
+]
+],
+"toc": [],
+"img": [
+"<img alt=\"filament-for-features-video\" src=\"https://img.youtube.com/vi/hcuQw55OzjU/maxresdefault.jpg\">",
+"![filament_for_features](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/filament-for-features/filament_for_features.png?raw=true)"
+],
+"link": [
+"mixed_nozzle_sizes",
+"mixed_nozzle_sizes",
+"mixed_nozzle_sizes",
+"mixed_nozzle_sizes",
+"mixed_nozzle_sizes",
+"mixed_nozzle_sizes",
+"https://www.youtube.com/watch?v=hcuQw55OzjU"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Filament for Features",
+"raw": "Filament for Features",
+"id": "filament-for-features",
+"alt": "filament-for-features"
+},
+{
+"level": 2,
+"en": "Outer Walls",
+"raw": "Outer Walls",
+"id": "outer-walls",
+"alt": "outer-walls"
+},
+{
+"level": 2,
+"en": "Inner Walls",
+"raw": "Inner Walls",
+"id": "inner-walls",
+"alt": "inner-walls"
+},
+{
+"level": 2,
+"en": "Sparse Infill",
+"raw": "Sparse Infill",
+"id": "sparse-infill",
+"alt": "sparse-infill"
+},
+{
+"level": 2,
+"en": "Internal Solid Infill",
+"raw": "Internal Solid Infill",
+"id": "internal-solid-infill",
+"alt": "internal-solid-infill"
+},
+{
+"level": 2,
+"en": "Top Surface",
+"raw": "Top Surface",
+"id": "top-surface",
+"alt": "top-surface"
+},
+{
+"level": 2,
+"en": "Bottom Surface",
+"raw": "Bottom Surface",
+"id": "bottom-surface",
+"alt": "bottom-surface"
+},
+{
+"level": 2,
+"en": "Wipe Tower",
+"raw": "Wipe Tower",
+"id": "wipe-tower",
+"alt": "wipe-tower"
+}
+],
+"src": "print_settings/multimaterial/multimaterial_settings_filament_for_features.md"
+}

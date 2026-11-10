@@ -1,0 +1,13 @@
+H variable layer height = 可变层高
+H adaptive = 自适应
+H smooth = 平滑 / 平滑模式
+H manual = 手动
+G layer height = 层高
+G layer = 层
+G model = 模型 / 型号
+G help = 帮助
+G extruder = 挤出机
+  right mouse button = 鼠标右键
+  left mouse button = 鼠标左键
+  right mouse = 鼠标右键
+  left mouse = 鼠标左键

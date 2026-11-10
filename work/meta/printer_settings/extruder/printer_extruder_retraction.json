@@ -1,0 +1,434 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retraction_length[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retraction-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_restart_extra[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-restart-extra=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retraction_speed[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retraction-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`deretraction_speed[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--deretraction-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retraction_minimum_travel[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retraction-minimum-travel=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_when_changing_layer[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-when-changing-layer=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wipe_distance[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wipe-distance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_before_wipe[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-before-wipe=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_after_wipe[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-after-wipe=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`retract_length_toolchange[extruder_idx]`, `retract_restart_extra_toolchange[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-length-toolchange=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`long_retractions_when_cut[extruder_idx]`, `retraction_distances_when_cut[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`long_retractions_when_cut` (Boolean list), `retraction_distances_when_cut` (Float list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--long-retractions-when-cut=1` (`long_retractions_when_cut` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "length",
+"en": "Length"
+},
+{
+"indent": 0,
+"anchor": "extra-length-on-restart",
+"en": "Extra length on restart"
+},
+{
+"indent": 0,
+"anchor": "retraction-speed",
+"en": "Retraction speed"
+},
+{
+"indent": 0,
+"anchor": "deretraction-speed",
+"en": "Deretraction speed"
+},
+{
+"indent": 0,
+"anchor": "travel-distance-threshold",
+"en": "Travel distance threshold"
+},
+{
+"indent": 0,
+"anchor": "retract-on-layer-change",
+"en": "Retract on layer change"
+},
+{
+"indent": 0,
+"anchor": "wipe-while-retracting",
+"en": "Wipe while retracting"
+},
+{
+"indent": 0,
+"anchor": "wipe-distance",
+"en": "Wipe distance"
+},
+{
+"indent": 0,
+"anchor": "retract-amount-before-wipe",
+"en": "Retract amount before wipe"
+},
+{
+"indent": 0,
+"anchor": "retract-amount-after-wipe",
+"en": "Retract amount after wipe"
+},
+{
+"indent": 0,
+"anchor": "retraction-when-switching-materials",
+"en": "Retraction When Switching Materials"
+},
+{
+"indent": 4,
+"anchor": "long-retraction-when-cut-beta",
+"en": "Long retraction when cut (beta)"
+}
+]
+],
+"img": [],
+"link": [
+"material_setting_overrides#retraction",
+"retraction_calib",
+"#retract-amount-before-wipe"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Retraction",
+"raw": "Retraction",
+"id": "retraction",
+"alt": "retraction"
+},
+{
+"level": 2,
+"en": "Length",
+"raw": "Length",
+"id": "length",
+"alt": "length"
+},
+{
+"level": 2,
+"en": "Extra length on restart",
+"raw": "Extra length on restart",
+"id": "extra-length-on-restart",
+"alt": "extra-length-on-restart"
+},
+{
+"level": 2,
+"en": "Retraction speed",
+"raw": "Retraction speed",
+"id": "retraction-speed",
+"alt": "retraction-speed"
+},
+{
+"level": 2,
+"en": "Deretraction speed",
+"raw": "Deretraction speed",
+"id": "deretraction-speed",
+"alt": "deretraction-speed"
+},
+{
+"level": 2,
+"en": "Travel distance threshold",
+"raw": "Travel distance threshold",
+"id": "travel-distance-threshold",
+"alt": "travel-distance-threshold"
+},
+{
+"level": 2,
+"en": "Retract on layer change",
+"raw": "Retract on layer change",
+"id": "retract-on-layer-change",
+"alt": "retract-on-layer-change"
+},
+{
+"level": 2,
+"en": "Wipe while retracting",
+"raw": "Wipe while retracting",
+"id": "wipe-while-retracting",
+"alt": "wipe-while-retracting"
+},
+{
+"level": 2,
+"en": "Wipe distance",
+"raw": "Wipe distance",
+"id": "wipe-distance",
+"alt": "wipe-distance"
+},
+{
+"level": 2,
+"en": "Retract amount before wipe",
+"raw": "Retract amount before wipe",
+"id": "retract-amount-before-wipe",
+"alt": "retract-amount-before-wipe"
+},
+{
+"level": 2,
+"en": "Retract amount after wipe",
+"raw": "Retract amount after wipe",
+"id": "retract-amount-after-wipe",
+"alt": "retract-amount-after-wipe"
+},
+{
+"level": 2,
+"en": "Retraction When Switching Materials",
+"raw": "Retraction When Switching Materials",
+"id": "retraction-when-switching-materials",
+"alt": "retraction-when-switching-materials"
+},
+{
+"level": 3,
+"en": "Long retraction when cut (beta)",
+"raw": "Long retraction when cut (beta)",
+"id": "long-retraction-when-cut-beta",
+"alt": "long-retraction-when-cut-beta"
+}
+],
+"src": "printer_settings/extruder/printer_extruder_retraction.md"
+}

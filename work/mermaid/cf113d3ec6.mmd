@@ -1,0 +1,30 @@
+flowchart TB
+    subgraph Vendor["Printer vendor bundle"]
+        Index["Vendor index file"]
+        Model["Printer model"]
+        Machine["Printer variant"]
+        MachineBase["Shared printer base"]
+        Process["Process preset"]
+        ProcessBase["Shared process base"]
+        Filament["Printer-specific filament"]
+
+        Index -.-> Model
+        Index -.-> Machine
+        Index -.-> MachineBase
+        Index -.-> Process
+        Index -.-> ProcessBase
+        Index -.-> Filament
+        Machine -->|printer_model| Model
+        Machine -->|inherits| MachineBase
+        Process -->|inherits| ProcessBase
+        Process -->|compatible_printers| Machine
+        Filament -->|compatible_printers| Machine
+    end
+
+    subgraph Library["OrcaFilamentLibrary"]
+        LibraryIndex["Library index file"]
+        GlobalFilament["Global filament"]
+        LibraryIndex -.-> GlobalFilament
+    end
+
+    Filament -->|inherits| GlobalFilament

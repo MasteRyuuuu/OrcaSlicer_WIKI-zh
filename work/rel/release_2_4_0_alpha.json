@@ -1,0 +1,2442 @@
+[
+ {
+  "level": 1,
+  "title": "V2.4.0 Alpha",
+  "prose": [
+   "This is the OrcaSlicer V2.4.0 Alpha release. The headline feature is **Orca Cloud** — a new centralized platform for profile sync, preset bundle sharing, and community discovery at cloud.orcaslicer.com. This release also introduces **Z Anti-Aliasing (ZAA) contouring** for smoother top surfaces, an Expert user mode, native Wayland support for Linux, Machine Input Shaping, Optimized Gyroid infill, Prusa-style combined brims, a redesigned printer selection dialog, and a large number of bug fixes and profile updates.",
+   "**Note:** Please check #13828 for known issues."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "☁️ Orca Cloud",
+  "prose": [
+   "Orca Cloud is now live at [cloud.orcaslicer.com]({{L1}}) — a centralized platform that brings your 3D printing workflow online.",
+   "It keeps your printer, filament, and process profiles synchronized across every machine you use, lets you share finely tuned preset bundles with the community, and helps you discover configurations created by fellow makers around the world.",
+   "Think of it as the connective tissue between your slicer, your profiles, and the broader OrcaSlicer ecosystem — no more manually copying config files between computers or hunting through forums for the right profile.",
+   "**Note:** Orca Cloud is optional. Local profiles and existing OrcaSlicer workflows continue to work as before. You can keep using OrcaSlicer without logging in to Orca Cloud.",
+   "**Open ecosystem:** Orca Cloud is part of our long-term vision for an open 3D printing ecosystem. We want OrcaSlicer to connect users, contributors, printer manufacturers, filament makers, and hardware/software partners through shared profiles, better compatibility data, and smoother workflows. We welcome users, makers, manufacturers, and partners to join, integrate, and collaborate with us to build an ecosystem that benefits the whole community and the wider 3D printing industry.",
+   "This is just the beginning. We have many more features planned for Orca Cloud and the broader OrcaSlicer ecosystem.",
+   "Orca Cloud is designed with privacy in mind. Data is currently hosted in the USA. In the future, we plan to add more region-specific servers and allow users to choose their preferred data center location for improved performance, data residency, and privacy needs."
+  ],
+  "items": [
+   {
+    "title": "Orca Cloud — Profile Sync, Version History, Preset Bundles, and Community Sharing",
+    "rest": "[PR 13414]({{L2}})",
+    "links": [
+     [
+      "PR 13414",
+      "{{L2}}"
+     ]
+    ]
+   },
+   {
+    "title": "Orca Cloud improvements and fixes",
+    "rest": "by @peachismomo, @ExPikaPaka, @SoftFever, @andrewsoonqn, and @erpalma in [PR 13755]({{L4}}), [PR 13745]({{L5}}), [PR 13757]({{L6}}), [PR 13778]({{L7}}), [PR 13673]({{L8}}), [PR 13738]({{L9}}), [PR 13793]({{L10}}), [PR 13645]({{L11}}), [PR 13756]({{L12}}), [PR 13779]({{L13}}), [PR 13776]({{L14}}), [PR 13781]({{L15}}), [PR 13796]({{L16}}), and [PR 13797]({{L17}})",
+    "links": [
+     [
+      "PR 13755",
+      "{{L4}}"
+     ],
+     [
+      "PR 13745",
+      "{{L5}}"
+     ],
+     [
+      "PR 13757",
+      "{{L6}}"
+     ],
+     [
+      "PR 13778",
+      "{{L7}}"
+     ],
+     [
+      "PR 13673",
+      "{{L8}}"
+     ],
+     [
+      "PR 13738",
+      "{{L9}}"
+     ],
+     [
+      "PR 13793",
+      "{{L10}}"
+     ],
+     [
+      "PR 13645",
+      "{{L11}}"
+     ],
+     [
+      "PR 13756",
+      "{{L12}}"
+     ],
+     [
+      "PR 13779",
+      "{{L13}}"
+     ],
+     [
+      "PR 13776",
+      "{{L14}}"
+     ],
+     [
+      "PR 13781",
+      "{{L15}}"
+     ],
+     [
+      "PR 13796",
+      "{{L16}}"
+     ],
+     [
+      "PR 13797",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Add more logs to track Orca Cloud logout issues",
+    "rest": "by @peachismomo in [PR 13713]({{L18}})",
+    "links": [
+     [
+      "PR 13713",
+      "{{L18}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Z Anti-Aliasing (ZAA) contouring",
+    "rest": "by @adob in [PR 12736]({{L19}}) with fixes and improvements by @valerii-bokhan, @RF47, and @ianalexis in [PR 13452]({{L20}}), [PR 13508]({{L21}}), [PR 13510]({{L22}}), [PR 13450]({{L23}}), [PR 13766]({{L24}}), and [PR 13446]({{L25}})",
+    "links": [
+     [
+      "PR 12736",
+      "{{L19}}"
+     ],
+     [
+      "PR 13452",
+      "{{L20}}"
+     ],
+     [
+      "PR 13508",
+      "{{L21}}"
+     ],
+     [
+      "PR 13510",
+      "{{L22}}"
+     ],
+     [
+      "PR 13450",
+      "{{L23}}"
+     ],
+     [
+      "PR 13766",
+      "{{L24}}"
+     ],
+     [
+      "PR 13446",
+      "{{L25}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fuzzy skin ripple mode",
+    "rest": "by @GeordieTomo in [PR 13471]({{L27}}) with improvements by @ianalexis in [PR 13506]({{L28}}) and [PR 12479]({{L29}})",
+    "links": [
+     [
+      "PR 13471",
+      "{{L27}}"
+     ],
+     [
+      "PR 13506",
+      "{{L28}}"
+     ],
+     [
+      "PR 12479",
+      "{{L29}}"
+     ]
+    ]
+   },
+   {
+    "title": "Optimized Gyroid infill",
+    "rest": "by @peyton-marcotte in [PR 13379]({{L31}})",
+    "links": [
+     [
+      "PR 13379",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "Combine brims (Prusa-style brims)",
+    "rest": "by @RF47 in [PR 12343]({{L32}})",
+    "links": [
+     [
+      "PR 12343",
+      "{{L32}}"
+     ]
+    ]
+   },
+   {
+    "title": "Multiple dovetail cuts",
+    "rest": "by @Xipit in [PR 12318]({{L34}})",
+    "links": [
+     [
+      "PR 12318",
+      "{{L34}}"
+     ]
+    ]
+   },
+   {
+    "title": "Non-Crossing Tri-hexagon infill pattern",
+    "rest": "by @RF47 in [PR 13433]({{L35}}) and [PR 13422]({{L36}})",
+    "links": [
+     [
+      "PR 13433",
+      "{{L35}}"
+     ],
+     [
+      "PR 13422",
+      "{{L36}}"
+     ]
+    ]
+   },
+   {
+    "title": "Machine Input Shaping",
+    "rest": "by @ianalexis in [PR 11202]({{L37}}) with wiki and calibration updates in [PR 13569]({{L38}}) and [PR 13571]({{L39}})",
+    "links": [
+     [
+      "PR 11202",
+      "{{L37}}"
+     ],
+     [
+      "PR 13569",
+      "{{L38}}"
+     ],
+     [
+      "PR 13571",
+      "{{L39}}"
+     ]
+    ]
+   },
+   {
+    "title": "Kinematics (Jerk & Acceleration) visualization",
+    "rest": "by @ianalexis in [PR 13169]({{L41}})",
+    "links": [
+     [
+      "PR 13169",
+      "{{L41}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elephant foot compensation for solid layers",
+    "rest": "by @pi-squared-studio in [PR 11526]({{L42}}) with fixes by @ianalexis in [PR 13476]({{L43}}) and [PR 13523]({{L44}})",
+    "links": [
+     [
+      "PR 11526",
+      "{{L42}}"
+     ],
+     [
+      "PR 13476",
+      "{{L43}}"
+     ],
+     [
+      "PR 13523",
+      "{{L44}}"
+     ]
+    ]
+   },
+   {
+    "title": "Max Resolution and Deviation settings exposed for Arachne",
+    "rest": "by @valerii-bokhan in [PR 11925]({{L46}})",
+    "links": [
+     [
+      "PR 11925",
+      "{{L46}}"
+     ]
+    ]
+   },
+   {
+    "title": "First layer travel acceleration and jerk configurable",
+    "rest": "by @rcopra in [PR 11674]({{L47}}) with toggle improvements by @kisslorand in [PR 13320]({{L48}}) and wiki by @ianalexis in [PR 13324]({{L49}})",
+    "links": [
+     [
+      "PR 11674",
+      "{{L47}}"
+     ],
+     [
+      "PR 13320",
+      "{{L48}}"
+     ],
+     [
+      "PR 13324",
+      "{{L49}}"
+     ]
+    ]
+   },
+   {
+    "title": "Brim flow ratio setting",
+    "rest": "by @valerii-bokhan in [PR 11876]({{L50}})",
+    "links": [
+     [
+      "PR 11876",
+      "{{L50}}"
+     ]
+    ]
+   },
+   {
+    "title": "Inverse print direction for holes",
+    "rest": "by @RF47 in [PR 12669]({{L51}})",
+    "links": [
+     [
+      "PR 12669",
+      "{{L51}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cooling: per-printer min fan PWM floor",
+    "rest": "by @igiannakas in [PR 13715]({{L52}})",
+    "links": [
+     [
+      "PR 13715",
+      "{{L52}}"
+     ]
+    ]
+   },
+   {
+    "title": "Hybrid tree support: fix first-layer behavior and expose density",
+    "rest": "by @kisslorand in [PR 13454]({{L53}})",
+    "links": [
+     [
+      "PR 13454",
+      "{{L53}}"
+     ]
+    ]
+   },
+   {
+    "title": "Reduce Spiral Z generation segment density",
+    "rest": "by @igiannakas in [PR 12564]({{L54}})",
+    "links": [
+     [
+      "PR 12564",
+      "{{L54}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove \"Auto\" wall direction option",
+    "rest": "by @vovodroid in [PR 6193]({{L55}})",
+    "links": [
+     [
+      "PR 6193",
+      "{{L55}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix gaps between walls and sparse infill",
+    "rest": "by @echipachenko in [PR 12770]({{L56}})",
+    "links": [
+     [
+      "PR 12770",
+      "{{L56}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct gap fill width bounds in outer-only and mixed-wall cases",
+    "rest": "by @kisslorand in [PR 12057]({{L57}})",
+    "links": [
+     [
+      "PR 12057",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "Extend short-travel smoothing to external overhang walls",
+    "rest": "by @kisslorand in [PR 11975]({{L58}})",
+    "links": [
+     [
+      "PR 11975",
+      "{{L58}}"
+     ]
+    ]
+   },
+   {
+    "title": "Ignore Jerk values warning when using Junction Deviation",
+    "rest": "by @ianalexis in [PR 13575]({{L59}})",
+    "links": [
+     [
+      "PR 13575",
+      "{{L59}}"
+     ]
+    ]
+   },
+   {
+    "title": "Granular exhaust fan speed control",
+    "rest": "by @misterff1 in [PR 13228]({{L60}})",
+    "links": [
+     [
+      "PR 13228",
+      "{{L60}}"
+     ]
+    ]
+   },
+   {
+    "title": "Extrusion role change G-code in Process and Filament",
+    "rest": "by @ianalexis in [PR 11784]({{L61}})",
+    "links": [
+     [
+      "PR 11784",
+      "{{L61}}"
+     ]
+    ]
+   },
+   {
+    "title": "Per-vendor profile version updates",
+    "rest": "by @softfever and @peachismomo in [PR 13394]({{L62}})",
+    "links": [
+     [
+      "PR 13394",
+      "{{L62}}"
+     ]
+    ]
+   },
+   {
+    "title": "Expert user mode",
+    "rest": "by @SoftFever in [PR 13348]({{L63}})",
+    "links": [
+     [
+      "PR 13348",
+      "{{L63}}"
+     ]
+    ]
+   },
+   {
+    "title": "3MF Export/Import with Orca version tags",
+    "rest": "by @ianalexis in [PR 12509]({{L65}})",
+    "links": [
+     [
+      "PR 12509",
+      "{{L65}}"
+     ]
+    ]
+   },
+   {
+    "title": "CGAL Fix Model for Linux and Mac",
+    "rest": "by @ianalexis in [PR 12155]({{L66}})",
+    "links": [
+     [
+      "PR 12155",
+      "{{L66}}"
+     ]
+    ]
+   },
+   {
+    "title": "CLI: add layer_height, sparse_infill_density, and wall_loops to results",
+    "rest": "by @Eldenroot in [PR 13001]({{L67}})",
+    "links": [
+     [
+      "PR 13001",
+      "{{L67}}"
+     ]
+    ]
+   },
+   {
+    "title": "Native Wayland support for Linux",
+    "rest": "by @SoftFever in [PR 13197]({{L68}}) with additional fixes by @thomashenauer, @SoftFever, and @yw4z in [PR 13707]({{L69}}), [PR 13721]({{L70}}), [PR 13723]({{L71}}), [PR 13563]({{L72}}), and [PR 13747]({{L73}})",
+    "links": [
+     [
+      "PR 13197",
+      "{{L68}}"
+     ],
+     [
+      "PR 13707",
+      "{{L69}}"
+     ],
+     [
+      "PR 13721",
+      "{{L70}}"
+     ],
+     [
+      "PR 13723",
+      "{{L71}}"
+     ],
+     [
+      "PR 13563",
+      "{{L72}}"
+     ],
+     [
+      "PR 13747",
+      "{{L73}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flatpak 2.4 update",
+    "rest": "by @SoftFever in [PR 13799]({{L74}})",
+    "links": [
+     [
+      "PR 13799",
+      "{{L74}}"
+     ]
+    ]
+   },
+   {
+    "title": "Enhance network share experience for flatpak",
+    "rest": "by @SoftFever in [PR 13809]({{L75}})",
+    "links": [
+     [
+      "PR 13809",
+      "{{L75}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "Keep painting after mesh changes",
+    "rest": "by @Noisyfox in [PR 13472]({{L76}})",
+    "links": [
+     [
+      "PR 13472",
+      "{{L76}}"
+     ]
+    ]
+   },
+   {
+    "title": "Option to always travel to wipe tower before Tx on multi-toolhead setups",
+    "rest": "by @igiannakas in [PR 13703]({{L77}})",
+    "links": [
+     [
+      "PR 13703",
+      "{{L77}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filament compatibility temperature-aware",
+    "rest": "by @ianalexis in [PR 13522]({{L78}})",
+    "links": [
+     [
+      "PR 13522",
+      "{{L78}}"
+     ]
+    ]
+   },
+   {
+    "title": "Warn for abnormal temperature differences",
+    "rest": "by @kisslorand in [PR 12345]({{L79}})",
+    "links": [
+     [
+      "PR 12345",
+      "{{L79}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Improved Printer Support",
+  "prose": [],
+  "items": [
+   {
+    "title": "Repetier G-code flavor",
+    "rest": "by @yogihybo in [PR 13126]({{L80}})",
+    "links": [
+     [
+      "PR 13126",
+      "{{L80}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improved SnapmakerPrinterAgent filament sync",
+    "rest": "by @gaaat98 in [PR 13265]({{L81}})",
+    "links": [
+     [
+      "PR 13265",
+      "{{L81}}"
+     ]
+    ]
+   },
+   {
+    "title": "Add fallback for Qidi series ID matching",
+    "rest": "by @thelegendtubaguy in [PR 13065]({{L82}})",
+    "links": [
+     [
+      "PR 13065",
+      "{{L82}}"
+     ]
+    ]
+   },
+   {
+    "title": "Support file uploads and device details for Elegoo Centauri Carbon 2",
+    "rest": "by @anjis-elegoo in [PR 13212]({{L83}})",
+    "links": [
+     [
+      "PR 13212",
+      "{{L83}}"
+     ]
+    ]
+   },
+   {
+    "title": "Allow printing without nozzle info from firmware",
+    "rest": "by @lynaghk in [PR 12814]({{L84}})",
+    "links": [
+     [
+      "PR 12814",
+      "{{L84}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux: use GTK sink for Wayland Bambu liveview",
+    "rest": "by @thomashenauer in [PR 13432]({{L85}})",
+    "links": [
+     [
+      "PR 13432",
+      "{{L85}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Performance & Optimizations",
+  "prose": [],
+  "items": [
+   {
+    "title": "Increase profile loading timeout",
+    "rest": "by @SoftFever in [PR 13661]({{L86}})",
+    "links": [
+     [
+      "PR 13661",
+      "{{L86}}"
+     ]
+    ]
+   },
+   {
+    "title": "Speed up startup and show splash progress",
+    "rest": "by @JustNotesa in [PR 13667]({{L87}})",
+    "links": [
+     [
+      "PR 13667",
+      "{{L87}}"
+     ]
+    ]
+   },
+   {
+    "title": "Add persistent cookie storage for PrinterWebView on WebKitGTK",
+    "rest": "by @Ocraftyone in [PR 13135]({{L88}})",
+    "links": [
+     [
+      "PR 13135",
+      "{{L88}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "📐 Calibration Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Improved flow rate calibration menu",
+    "rest": "by @tome9111991 in [PR 11956]({{L89}})",
+    "links": [
+     [
+      "PR 11956",
+      "{{L89}}"
+     ]
+    ]
+   },
+   {
+    "title": "Temperature tower nozzle-based adjustment",
+    "rest": "by @ianalexis in [PR 12269]({{L90}})",
+    "links": [
+     [
+      "PR 12269",
+      "{{L90}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preserve model placement in calibration tests",
+    "rest": "by @ianalexis in [PR 13252]({{L91}})",
+    "links": [
+     [
+      "PR 13252",
+      "{{L91}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🎨 UI & UX",
+  "prose": [],
+  "items": [
+   {
+    "title": "Printer selection dialog redesign",
+    "rest": "by @yw4z in [PR 12248]({{L92}})",
+    "links": [
+     [
+      "PR 12248",
+      "{{L92}}"
+     ]
+    ]
+   },
+   {
+    "title": "Line Type preview: display distances and amount values",
+    "rest": "by @ianalexis in [PR 13681]({{L93}})",
+    "links": [
+     [
+      "PR 13681",
+      "{{L93}}"
+     ]
+    ]
+   },
+   {
+    "title": "Tool Position window: improved vertex info",
+    "rest": "by @yw4z in [PR 12614]({{L94}})",
+    "links": [
+     [
+      "PR 12614",
+      "{{L94}}"
+     ]
+    ]
+   },
+   {
+    "title": "Display tool change count after slicing",
+    "rest": "by @unixunion in [PR 12474]({{L95}})",
+    "links": [
+     [
+      "PR 12474",
+      "{{L95}}"
+     ]
+    ]
+   },
+   {
+    "title": "Release Notes dialog improvements",
+    "rest": "by @yw4z in [PR 12265]({{L96}})",
+    "links": [
+     [
+      "PR 12265",
+      "{{L96}}"
+     ]
+    ]
+   },
+   {
+    "title": "MultiChooseDialog & Profile Dependencies improvements",
+    "rest": "by @yw4z in [PR 9971]({{L97}})",
+    "links": [
+     [
+      "PR 9971",
+      "{{L97}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restructured Painting Tool UI",
+    "rest": "by @Xipit in [PR 12852]({{L98}}) with follow-ups by @Xipit and @yw4z in [PR 13340]({{L99}}), [PR 13421]({{L100}}), and [PR 13365]({{L101}})",
+    "links": [
+     [
+      "PR 12852",
+      "{{L98}}"
+     ],
+     [
+      "PR 13340",
+      "{{L99}}"
+     ],
+     [
+      "PR 13421",
+      "{{L100}}"
+     ],
+     [
+      "PR 13365",
+      "{{L101}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restructure Text/Emboss Tool UI",
+    "rest": "by @Xipit in [PR 12864]({{L102}})",
+    "links": [
+     [
+      "PR 12864",
+      "{{L102}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unify Tool UI Footer",
+    "rest": "by @Xipit in [PR 12850]({{L103}})",
+    "links": [
+     [
+      "PR 12850",
+      "{{L103}}"
+     ]
+    ]
+   },
+   {
+    "title": "Refactor Tooltip Button",
+    "rest": "by @Xipit in [PR 12848]({{L104}})",
+    "links": [
+     [
+      "PR 12848",
+      "{{L104}}"
+     ]
+    ]
+   },
+   {
+    "title": "Graphics Preferences: Anti-aliasing + FPS",
+    "rest": "by @ianalexis in [PR 13538]({{L105}})",
+    "links": [
+     [
+      "PR 13538",
+      "{{L105}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "QoL Improvements",
+  "prose": [
+   "{{I97}}"
+  ],
+  "items": [
+   {
+    "title": "Mouse button assignment (None/Pan/Rotate)",
+    "rest": "by @r3dbaba in [PR 10736]({{L106}})",
+    "links": [
+     [
+      "PR 10736",
+      "{{L106}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"Change type\" UX as submenu with checkmarks",
+    "rest": "by @Eldenroot in [PR 12205]({{L107}})",
+    "links": [
+     [
+      "PR 12205",
+      "{{L107}}"
+     ]
+    ]
+   },
+   {
+    "title": "Auto-select external spool if it's the only installed filament",
+    "rest": "by @Noisyfox in [PR 13356]({{L108}})",
+    "links": [
+     [
+      "PR 13356",
+      "{{L108}}"
+     ]
+    ]
+   },
+   {
+    "title": "Show filament edit button or action menu dynamically",
+    "rest": "by @yw4z in [PR 12651]({{L109}})",
+    "links": [
+     [
+      "PR 12651",
+      "{{L109}}"
+     ]
+    ]
+   },
+   {
+    "title": "Disable \"snap to build plate\" option",
+    "rest": "by @Xipit in [PR 11801]({{L110}})",
+    "links": [
+     [
+      "PR 11801",
+      "{{L110}}"
+     ]
+    ]
+   },
+   {
+    "title": "Toggle printability with keyboard shortcut",
+    "rest": "by @datapaganism in [PR 13279]({{L111}})",
+    "links": [
+     [
+      "PR 13279",
+      "{{L111}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux: left-side window buttons option",
+    "rest": "by @yw4z in [PR 12831]({{L112}})",
+    "links": [
+     [
+      "PR 12831",
+      "{{L112}}"
+     ]
+    ]
+   },
+   {
+    "title": "Require fewer clicks to change filament in object list",
+    "rest": "by @Xipit in [PR 12603]({{L113}})",
+    "links": [
+     [
+      "PR 12603",
+      "{{L113}}"
+     ]
+    ]
+   },
+   {
+    "title": "Show sparse infill rotation warning only once",
+    "rest": "by @RF47 in [PR 13461]({{L114}})",
+    "links": [
+     [
+      "PR 13461",
+      "{{L114}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improve generic 3MF import",
+    "rest": "by @ianalexis in [PR 13403]({{L115}})",
+    "links": [
+     [
+      "PR 13403",
+      "{{L115}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Text / Description Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix \"cancle\" typo",
+    "rest": "by @theshantanujoshi in [PR 13769]({{L116}})",
+    "links": [
+     [
+      "PR 13769",
+      "{{L116}}"
+     ]
+    ]
+   },
+   {
+    "title": "Add tooltips to Transfer buttons",
+    "rest": "by @ianalexis in [PR 13535]({{L117}})",
+    "links": [
+     [
+      "PR 13535",
+      "{{L117}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix reverse on even hint",
+    "rest": "by @igiannakas in [PR 13739]({{L118}})",
+    "links": [
+     [
+      "PR 13739",
+      "{{L118}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clarify Create nozzle for existing printer",
+    "rest": "by @yw4z in [PR 11773]({{L119}})",
+    "links": [
+     [
+      "PR 11773",
+      "{{L119}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Fixes & Consistency Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "UI fixes and improvements",
+    "rest": "by @yw4z in [PR 12513]({{L120}})",
+    "links": [
+     [
+      "PR 12513",
+      "{{L120}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improve mode button visuals",
+    "rest": "by @yw4z in [PR 13795]({{L121}})",
+    "links": [
+     [
+      "PR 13795",
+      "{{L121}}"
+     ]
+    ]
+   },
+   {
+    "title": "Don't steal focus from text inputs on mouse hover",
+    "rest": "by @RF47 in [PR 12834]({{L122}})",
+    "links": [
+     [
+      "PR 12834",
+      "{{L122}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix FilamentGroupPopup not dismissing on macOS",
+    "rest": "by @SoftFever in [PR 13574]({{L123}})",
+    "links": [
+     [
+      "PR 13574",
+      "{{L123}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix printer name disappearing when editing a nozzle variant",
+    "rest": "by @Noisyfox in [PR 13653]({{L124}})",
+    "links": [
+     [
+      "PR 13653",
+      "{{L124}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix UI freeze after hiding sync popup on Linux",
+    "rest": "by @erpalma in [PR 13657]({{L125}})",
+    "links": [
+     [
+      "PR 13657",
+      "{{L125}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix right edge of G-code viewer legend not interactive",
+    "rest": "by @kisslorand in [PR 11899]({{L126}})",
+    "links": [
+     [
+      "PR 11899",
+      "{{L126}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix sidebar filament count for multi-extruder printers",
+    "rest": "by @SoftFever in [PR 13706]({{L127}})",
+    "links": [
+     [
+      "PR 13706",
+      "{{L127}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix vertical alignment issues",
+    "rest": "by @yw4z in [PR 13133]({{L128}})",
+    "links": [
+     [
+      "PR 13133",
+      "{{L128}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix TextInput & ComboBox glitches after scrolling on scaled displays",
+    "rest": "by @yw4z in [PR 13805]({{L129}})",
+    "links": [
+     [
+      "PR 13805",
+      "{{L129}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix dirty-state marker for edited system printer presets",
+    "rest": "by @kisslorand in [PR 11900]({{L130}})",
+    "links": [
+     [
+      "PR 11900",
+      "{{L130}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix ObjectTableDialog close on Escape",
+    "rest": "by @Jo-Con-El in [PR 12979]({{L131}})",
+    "links": [
+     [
+      "PR 12979",
+      "{{L131}}"
+     ]
+    ]
+   },
+   {
+    "title": "Auto hide/show ironing angle settings",
+    "rest": "by @ansonl in [PR 11451]({{L132}})",
+    "links": [
+     [
+      "PR 11451",
+      "{{L132}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove black borders on controls on Linux and fix assertion errors",
+    "rest": "by @yw4z in [PR 13718]({{L133}}), [PR 13362]({{L134}}), and [PR 13363]({{L135}})",
+    "links": [
+     [
+      "PR 13718",
+      "{{L133}}"
+     ],
+     [
+      "PR 13362",
+      "{{L134}}"
+     ],
+     [
+      "PR 13363",
+      "{{L135}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix macOS object-list filament editor crash/glitch",
+    "rest": "by @thelegendtubaguy in [PR 13700]({{L136}})",
+    "links": [
+     [
+      "PR 13700",
+      "{{L136}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Windows double window and title bar issues",
+    "rest": "by @ianalexis, @Noisyfox, and @yw4z in [PR 13074]({{L137}}), [PR 13020]({{L138}}), and [PR 13117]({{L139}})",
+    "links": [
+     [
+      "PR 13074",
+      "{{L137}}"
+     ],
+     [
+      "PR 13020",
+      "{{L138}}"
+     ],
+     [
+      "PR 13117",
+      "{{L139}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"Jump to\" links for non-print preset settings",
+    "rest": "by @kisslorand in [PR 13381]({{L140}})",
+    "links": [
+     [
+      "PR 13381",
+      "{{L140}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stale keyboard refresh and auto-resize flicker in Preview",
+    "rest": "by @kisslorand in [PR 12707]({{L141}})",
+    "links": [
+     [
+      "PR 12707",
+      "{{L141}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Flow Ratio dialog shrinking after minimize",
+    "rest": "by @packerlschupfer in [PR 13545]({{L142}})",
+    "links": [
+     [
+      "PR 13545",
+      "{{L142}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix filament combobox not working after adding extruder",
+    "rest": "by @Noisyfox in [PR 13194]({{L143}})",
+    "links": [
+     [
+      "PR 13194",
+      "{{L143}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix font rendering pixelated when ClearType disabled",
+    "rest": "by @yw4z in [PR 12201]({{L144}})",
+    "links": [
+     [
+      "PR 12201",
+      "{{L144}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix flushing volume dialog OK/Cancel buttons clipped",
+    "rest": "by @Blumlaut in [PR 13762]({{L145}})",
+    "links": [
+     [
+      "PR 13762",
+      "{{L145}}"
+     ]
+    ]
+   },
+   {
+    "title": "Allow the flush volumes dialog to be resized",
+    "rest": "by @erpalma in [PR 13663]({{L146}})",
+    "links": [
+     [
+      "PR 13663",
+      "{{L146}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux: match titlebar font",
+    "rest": "by @yw4z in [PR 12828]({{L147}})",
+    "links": [
+     [
+      "PR 12828",
+      "{{L147}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improved Splash screen rendering",
+    "rest": "by @yw4z in [PR 12586]({{L148}})",
+    "links": [
+     [
+      "PR 12586",
+      "{{L148}}"
+     ]
+    ]
+   },
+   {
+    "title": "Hide non-applicable settings for tree supports",
+    "rest": "by @kisslorand in [PR 12367]({{L149}})",
+    "links": [
+     [
+      "PR 12367",
+      "{{L149}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improve readability of \"Only one wall\" settings",
+    "rest": "by @yw4z in [PR 13121]({{L150}})",
+    "links": [
+     [
+      "PR 13121",
+      "{{L150}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix seams glitch on Linux",
+    "rest": "by @RF47 in [PR 13233]({{L151}})",
+    "links": [
+     [
+      "PR 13233",
+      "{{L151}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix crash when selecting or moving wipe tower",
+    "rest": "by @icedrone in [PR 13243]({{L152}})",
+    "links": [
+     [
+      "PR 13243",
+      "{{L152}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix support interface semantics, gap handling, and tree support interfaces",
+    "rest": "by @kisslorand in [PR 11812]({{L153}})",
+    "links": [
+     [
+      "PR 11812",
+      "{{L153}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix extrusion of support layers at wrong Z height",
+    "rest": "by @kisslorand in [PR 13327]({{L154}}) and [PR 13460]({{L155}})",
+    "links": [
+     [
+      "PR 13327",
+      "{{L154}}"
+     ],
+     [
+      "PR 13460",
+      "{{L155}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix support preview artifacts (missing layers)",
+    "rest": "by @kisslorand in [PR 13310]({{L156}})",
+    "links": [
+     [
+      "PR 13310",
+      "{{L156}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix collision with the bed using tree supports",
+    "rest": "by @RF47 in [PR 13524]({{L157}})",
+    "links": [
+     [
+      "PR 13524",
+      "{{L157}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix tree support \"on build plate only\" missing interface layers",
+    "rest": "by @Argolein in [PR 13192]({{L158}})",
+    "links": [
+     [
+      "PR 13192",
+      "{{L158}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix role-based fan speeds lost on layer change",
+    "rest": "by @kisslorand in [PR 13390]({{L159}})",
+    "links": [
+     [
+      "PR 13390",
+      "{{L159}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix fan stuck at wrong speed after role-based override ends",
+    "rest": "by @kisslorand in [PR 13336]({{L160}})",
+    "links": [
+     [
+      "PR 13336",
+      "{{L160}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix first layer speed and slow down handling with rafts",
+    "rest": "by @yogihybo in [PR 13224]({{L161}}) and [PR 13415]({{L162}})",
+    "links": [
+     [
+      "PR 13224",
+      "{{L161}}"
+     ],
+     [
+      "PR 13415",
+      "{{L162}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix overhang reverse threshold being ignored",
+    "rest": "by @kisslorand in [PR 13061]({{L163}})",
+    "links": [
+     [
+      "PR 13061",
+      "{{L163}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash from inconsistent draft shield layer height",
+    "rest": "by @RF47 in [PR 12937]({{L164}})",
+    "links": [
+     [
+      "PR 12937",
+      "{{L164}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix fuzzy skin regression with classic wall generator",
+    "rest": "by @RF47 in [PR 12920]({{L165}})",
+    "links": [
+     [
+      "PR 12920",
+      "{{L165}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix save custom machine profiles with different extruder count",
+    "rest": "by @RF47 in [PR 13035]({{L166}})",
+    "links": [
+     [
+      "PR 13035",
+      "{{L166}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix trapezoidal fill layer rotation with infill combination",
+    "rest": "by @RF47 in [PR 13276]({{L167}})",
+    "links": [
+     [
+      "PR 13276",
+      "{{L167}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix flush_multiplier type mismatch",
+    "rest": "by @SoftFever in [PR 13062]({{L168}})",
+    "links": [
+     [
+      "PR 13062",
+      "{{L168}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix air filtration and chamber heater UI controls",
+    "rest": "by @kisslorand in [PR 12525]({{L169}}), [PR 13384]({{L170}}), and [PR 13440]({{L171}}), and by @brandonfhall in [PR 13393]({{L172}})",
+    "links": [
+     [
+      "PR 12525",
+      "{{L169}}"
+     ],
+     [
+      "PR 13384",
+      "{{L170}}"
+     ],
+     [
+      "PR 13440",
+      "{{L171}}"
+     ],
+     [
+      "PR 13393",
+      "{{L172}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix first layer toolhead preheating with 2+ extruders and ooze prevention",
+    "rest": "by @igiannakas in [PR 13741]({{L173}})",
+    "links": [
+     [
+      "PR 13741",
+      "{{L173}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix vase mode zero flow bug",
+    "rest": "by @RF47 in [PR 13517]({{L174}})",
+    "links": [
+     [
+      "PR 13517",
+      "{{L174}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix collision warnings for overlapping instances",
+    "rest": "by @tome9111991 in [PR 12122]({{L175}})",
+    "links": [
+     [
+      "PR 12122",
+      "{{L175}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix outer wall for bridges",
+    "rest": "by @kisslorand in [PR 13411]({{L176}})",
+    "links": [
+     [
+      "PR 13411",
+      "{{L176}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix auto-arrangement boundary for skirt loops",
+    "rest": "by @Eldenroot in [PR 12999]({{L177}})",
+    "links": [
+     [
+      "PR 12999",
+      "{{L177}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix sacrificial bridge layer edge case with only 2 perimeters",
+    "rest": "by @RF47 in [PR 13018]({{L178}})",
+    "links": [
+     [
+      "PR 13018",
+      "{{L178}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix LAN printing crashes and hangs on Bambu H2D",
+    "rest": "by @hyiger in [PR 13296]({{L179}})",
+    "links": [
+     [
+      "PR 13296",
+      "{{L179}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix non-ASCII path corruption on Windows",
+    "rest": "by @SoftFever in [PR 13036]({{L181}})",
+    "links": [
+     [
+      "PR 13036",
+      "{{L181}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"Access Violation\" crash",
+    "rest": "by @RF47 in [PR 12856]({{L182}})",
+    "links": [
+     [
+      "PR 12856",
+      "{{L182}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash with painted line on corrupted models",
+    "rest": "by @RF47 in [PR 12806]({{L183}})",
+    "links": [
+     [
+      "PR 12806",
+      "{{L183}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when returning from assembly view on Linux",
+    "rest": "by @RF47 in [PR 13091]({{L184}})",
+    "links": [
+     [
+      "PR 13091",
+      "{{L184}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when changing SVG/TEXT type to Support Blocker/Enforcer",
+    "rest": "by @yw4z in [PR 13120]({{L185}}) and @DImagine in [PR 13281]({{L186}})",
+    "links": [
+     [
+      "PR 13120",
+      "{{L185}}"
+     ],
+     [
+      "PR 13281",
+      "{{L186}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash with SVG \"use surface\"",
+    "rest": "by @RF47 in [PR 13262]({{L187}})",
+    "links": [
+     [
+      "PR 13262",
+      "{{L187}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash on launch from temporary object reference",
+    "rest": "by @Noisyfox in [PR 13341]({{L188}})",
+    "links": [
+     [
+      "PR 13341",
+      "{{L188}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stealth mode handling",
+    "rest": "by @RF47 in [PR 13285]({{L189}})",
+    "links": [
+     [
+      "PR 13285",
+      "{{L189}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix per-feature filament assignments ignored at slice time",
+    "rest": "by @ianalexis in [PR 13607]({{L190}})",
+    "links": [
+     [
+      "PR 13607",
+      "{{L190}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix one wall on top/bottom surfaces for assembly objects",
+    "rest": "by @igiannakas in [PR 13714]({{L191}})",
+    "links": [
+     [
+      "PR 13714",
+      "{{L191}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix partial sacrificial bridge anchors",
+    "rest": "by @ianalexis in [PR 13052]({{L192}})",
+    "links": [
+     [
+      "PR 13052",
+      "{{L192}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix false out-of-bounds validation for large paths",
+    "rest": "by @ianalexis in [PR 13179]({{L193}})",
+    "links": [
+     [
+      "PR 13179",
+      "{{L193}}"
+     ]
+    ]
+   },
+   {
+    "title": "Skip small-area compensation validation when disabled",
+    "rest": "by @ianalexis in [PR 12528]({{L194}})",
+    "links": [
+     [
+      "PR 12528",
+      "{{L194}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix .gcode.3mf files not displaying",
+    "rest": "by @Noisyfox in [PR 13360]({{L195}})",
+    "links": [
+     [
+      "PR 13360",
+      "{{L195}}"
+     ]
+    ]
+   },
+   {
+    "title": "Harden CLI export without OpenGL",
+    "rest": "by @mwnickerson in [PR 13532]({{L196}})",
+    "links": [
+     [
+      "PR 13532",
+      "{{L196}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when embossing text",
+    "rest": "by @Noisyfox in [PR 13772]({{L197}})",
+    "links": [
+     [
+      "PR 13772",
+      "{{L197}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix assembly view crash and empty canvas on Flatpak",
+    "rest": "by @yw4z in [PR 13413]({{L198}})",
+    "links": [
+     [
+      "PR 13413",
+      "{{L198}}"
+     ]
+    ]
+   },
+   {
+    "title": "Ignore SIGPIPE at startup to prevent crashes on dropped printer connections",
+    "rest": "by @zsiddique in [PR 13788]({{L199}})",
+    "links": [
+     [
+      "PR 13788",
+      "{{L199}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix possible null dereference in DeviceManager during timer refresh",
+    "rest": "by @SoftFever in [PR 13802]({{L200}})",
+    "links": [
+     [
+      "PR 13802",
+      "{{L200}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix flatpak crash on start",
+    "rest": "by @SoftFever in [PR 13808]({{L201}})",
+    "links": [
+     [
+      "PR 13808",
+      "{{L201}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix single-instance IPC by preserving \"OrcaSlicer\" suffix in title",
+    "rest": "by @AMoo-Miki in [PR 13017]({{L202}})",
+    "links": [
+     [
+      "PR 13017",
+      "{{L202}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stealth mode cloud service logout",
+    "rest": "by @SoftFever in [PR 13531]({{L203}})",
+    "links": [
+     [
+      "PR 13531",
+      "{{L203}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix wxWidgets 3.3.2 upgrade issues",
+    "rest": "by @SoftFever in [PR 13740]({{L204}}), @bwees in [PR 13737]({{L205}}), @thomashenauer in [PR 13707]({{L206}}), and @SoftFever in [PR 13747]({{L207}})",
+    "links": [
+     [
+      "PR 13740",
+      "{{L204}}"
+     ],
+     [
+      "PR 13737",
+      "{{L205}}"
+     ],
+     [
+      "PR 13707",
+      "{{L206}}"
+     ],
+     [
+      "PR 13747",
+      "{{L207}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix filament syncing with nozzle diameter guards",
+    "rest": "by @lynaghk in [PR 13330]({{L208}})",
+    "links": [
+     [
+      "PR 13330",
+      "{{L208}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Bambu Cloud login via embedded WebView",
+    "rest": "by @andrewsoonqn in [PR 13768]({{L209}})",
+    "links": [
+     [
+      "PR 13768",
+      "{{L209}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Bambu login regression",
+    "rest": "by @SoftFever in [PR 13407]({{L210}})",
+    "links": [
+     [
+      "PR 13407",
+      "{{L210}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"could not load bitmap printer_preview_\" crash on Linux",
+    "rest": "by @yw4z in [PR 12425]({{L211}})",
+    "links": [
+     [
+      "PR 12425",
+      "{{L211}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix PrinterWebView deferred URL clearing",
+    "rest": "by @RobertKuszmar in [PR 11508]({{L212}})",
+    "links": [
+     [
+      "PR 11508",
+      "{{L212}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Windows test linking",
+    "rest": "by @Wachhund in [PR 12939]({{L213}})",
+    "links": [
+     [
+      "PR 12939",
+      "{{L213}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix registration of filament_dynamic_map and filament_switcher config options",
+    "rest": "by @malventano in [PR 13623]({{L214}})",
+    "links": [
+     [
+      "PR 13623",
+      "{{L214}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix input_filename_base using object name instead of project name",
+    "rest": "by @raistlin7447 in [PR 13753]({{L215}})",
+    "links": [
+     [
+      "PR 13753",
+      "{{L215}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash on startup from low max volumetric speed",
+    "rest": "by @yw4z in [PR 13716]({{L216}})",
+    "links": [
+     [
+      "PR 13716",
+      "{{L216}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix model/step MIME type support on Unix",
+    "rest": "by @Eldenroot in [PR 13000]({{L217}})",
+    "links": [
+     [
+      "PR 13000",
+      "{{L217}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when color was not specified",
+    "rest": "by @Eldenroot in [PR 13002]({{L218}})",
+    "links": [
+     [
+      "PR 13002",
+      "{{L218}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix generic locale fallback on all platforms",
+    "rest": "by @icedrone in [PR 12948]({{L219}})",
+    "links": [
+     [
+      "PR 12948",
+      "{{L219}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix CLI segfault with P1S profiles",
+    "rest": "by @sparkleHazard in [PR 13193]({{L220}})",
+    "links": [
+     [
+      "PR 13193",
+      "{{L220}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Linux segfault when loading Fluidd/Mainsail printer hosts",
+    "rest": "by @SoftFever in [PR 13724]({{L221}})",
+    "links": [
+     [
+      "PR 13724",
+      "{{L221}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix macOS crash on close",
+    "rest": "by @Noisyfox in [PR 13215]({{L222}})",
+    "links": [
+     [
+      "PR 13215",
+      "{{L222}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Windows file handoff when single-instance mode enabled",
+    "rest": "by @kisslorand in [PR 12944]({{L223}})",
+    "links": [
+     [
+      "PR 12944",
+      "{{L223}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix arc fitting time progress with firmware retraction",
+    "rest": "by @vovodroid in [PR 12888]({{L224}})",
+    "links": [
+     [
+      "PR 12888",
+      "{{L224}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Bambu camera stream freeze on Linux",
+    "rest": "by @tofublock in [PR 13359]({{L225}})",
+    "links": [
+     [
+      "PR 13359",
+      "{{L225}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix filament/printer selection stuck on loading",
+    "rest": "by @yw4z in [PR 13492]({{L226}})",
+    "links": [
+     [
+      "PR 13492",
+      "{{L226}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix second extruder settings not handled for H2D/X2D",
+    "rest": "by @Noisyfox in [PR 13648]({{L227}})",
+    "links": [
+     [
+      "PR 13648",
+      "{{L227}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix MANUAL_TOOL_CHANGE regression for BBL printers",
+    "rest": "by @SoftFever in [PR 13516]({{L228}})",
+    "links": [
+     [
+      "PR 13516",
+      "{{L228}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix unicode preset name crash",
+    "rest": "by @SoftFever and @Noisyfox in [PR 13458]({{L229}}) and [PR 13503]({{L230}})",
+    "links": [
+     [
+      "PR 13458",
+      "{{L229}}"
+     ],
+     [
+      "PR 13503",
+      "{{L230}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "📜 Profiles",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Profile Processing Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix generic filaments not showing on list",
+    "rest": "by @Sabriel-Koh in [PR 13037]({{L231}})",
+    "links": [
+     [
+      "PR 13037",
+      "{{L231}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stray \"Default Filament\" preset selection",
+    "rest": "by @SoftFever in [PR 13570]({{L232}})",
+    "links": [
+     [
+      "PR 13570",
+      "{{L232}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix preset variant truncation on load",
+    "rest": "by @cgarwood82 in [PR 13316]({{L233}})",
+    "links": [
+     [
+      "PR 13316",
+      "{{L233}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Printer Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "X2D Support",
+    "rest": "by @glowstab in [PR 13388]({{L234}})",
+    "links": [
+     [
+      "PR 13388",
+      "{{L234}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab P2S",
+    "rest": "printer and process profile updates matching latest official tweaks by @misterff1 in [PR 13118]({{L235}}) and [PR 13355]({{L236}})",
+    "links": [
+     [
+      "PR 13118",
+      "{{L235}}"
+     ],
+     [
+      "PR 13355",
+      "{{L236}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge Artemis",
+    "rest": "printer profile by @midnight-creator in [PR 11902]({{L237}})",
+    "links": [
+     [
+      "PR 11902",
+      "{{L237}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge Creator 5 and Creator 5 Pro",
+    "rest": "printer profiles by @FlashforgeOfficial in [PR 13259]({{L238}})",
+    "links": [
+     [
+      "PR 13259",
+      "{{L238}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anycubic Kobra 3 Max",
+    "rest": "printer profile by @robertbaker in [PR 11586]({{L239}})",
+    "links": [
+     [
+      "PR 11586",
+      "{{L239}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anycubic Kobra X",
+    "rest": "printer profile by @CSLRDoesntGameDev in [PR 13529]({{L240}}) and [PR 13677]({{L241}})",
+    "links": [
+     [
+      "PR 13529",
+      "{{L240}}"
+     ],
+     [
+      "PR 13677",
+      "{{L241}}"
+     ]
+    ]
+   },
+   {
+    "title": "re:3D",
+    "rest": "printer profiles by @re3Dev in [PR 12935]({{L242}})",
+    "links": [
+     [
+      "PR 12935",
+      "{{L242}}"
+     ]
+    ]
+   },
+   {
+    "title": "LH Stinger",
+    "rest": "printer profiles by @lhndo in [PR 13410]({{L243}})",
+    "links": [
+     [
+      "PR 13410",
+      "{{L243}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cubicon xCeler-Mini",
+    "rest": "printer and material profiles by @Hyvision in [PR 13172]({{L244}})",
+    "links": [
+     [
+      "PR 13172",
+      "{{L244}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Bambu Lab Beta Filaments",
+    "rest": "(PLA, PETG, ABS, TPU) profiles by @ericwong-person in [PR 13318]({{L245}})",
+    "links": [
+     [
+      "PR 13318",
+      "{{L245}}"
+     ]
+    ]
+   },
+   {
+    "title": "GreenGate3D PETG",
+    "rest": "filament profile by @stringlapse in [PR 13448]({{L246}})",
+    "links": [
+     [
+      "PR 13448",
+      "{{L246}}"
+     ]
+    ]
+   },
+   {
+    "title": "FILL3D PLA Basic, PETG, PP, PPCF, PA",
+    "rest": "filament profiles by @julianramirezarango-source in [PR 12973]({{L247}})",
+    "links": [
+     [
+      "PR 12973",
+      "{{L247}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Profile Updates & Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Profile folder optimizations",
+    "rest": "— SVG textures fır best quality, 50% size reduction (68MB → 34MB), bed model optimizations and updates HQ covers for Anet, Anker, Anycubic, Artillery, BIQU, Creality, Elegoo, Flashforge, FLSUN, Prusa, Qidi, Re3D, Rh3D, Snapmaker, Sovol, and more by @yw4z in [PR 13149]({{L248}})",
+    "links": [
+     [
+      "PR 13149",
+      "{{L248}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab X2D",
+    "rest": "printer definition, machine/process/filament presets, and dual-nozzle support by @glowstab in [PR 13388]({{L249}})",
+    "links": [
+     [
+      "PR 13388",
+      "{{L249}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bump printers version to propagate X2D to existing users",
+    "rest": "by @RJAudas in [PR 13806]({{L250}})",
+    "links": [
+     [
+      "PR 13806",
+      "{{L250}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker U1",
+    "rest": "— 5 bug fixes and new 0.6mm/mixed-nozzle profiles by @kbaker827 in [PR 12824]({{L251}})",
+    "links": [
+     [
+      "PR 12824",
+      "{{L251}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anycubic Kobra Neo",
+    "rest": "0.4mm nozzle profiles by @AndyHazz in [PR 12913]({{L252}})",
+    "links": [
+     [
+      "PR 12913",
+      "{{L252}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi X-Max 4",
+    "rest": "nozzle profile updates by @HYzd766 in [PR 13526]({{L253}})",
+    "links": [
+     [
+      "PR 13526",
+      "{{L253}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi X-Max 4",
+    "rest": "hotbed temperature adjustments by @HYzd766 in [PR 13717]({{L254}})",
+    "links": [
+     [
+      "PR 13717",
+      "{{L254}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi",
+    "rest": "disable Reduce infill retraction by @HYzd766 in [PR 13267]({{L255}})",
+    "links": [
+     [
+      "PR 13267",
+      "{{L255}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality K2",
+    "rest": "STL and texture updates by @folofse in [PR 13098]({{L256}})",
+    "links": [
+     [
+      "PR 13098",
+      "{{L256}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality K2 Plus/K2",
+    "rest": "adaptive bed mesh bounding box by @imammedo in [PR 13290]({{L257}})",
+    "links": [
+     [
+      "PR 13290",
+      "{{L257}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality generic ASA",
+    "rest": "first layer temp adjusted from 60°C to 100°C by @pghwinter in [PR 13558]({{L258}})",
+    "links": [
+     [
+      "PR 13558",
+      "{{L258}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo Centauri Carbon 2",
+    "rest": "filament_type fix by @Wegerich in [PR 13012]({{L259}})",
+    "links": [
+     [
+      "PR 13012",
+      "{{L259}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo",
+    "rest": "profile cleanup by @SoftFever in [PR 13148]({{L260}})",
+    "links": [
+     [
+      "PR 13148",
+      "{{L260}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo Centauri Carbon 2",
+    "rest": "file upload and device details support by @anjis-elegoo in [PR 13212]({{L261}})",
+    "links": [
+     [
+      "PR 13212",
+      "{{L261}}"
+     ]
+    ]
+   },
+   {
+    "title": "Improved Z-Bolt Profiles",
+    "rest": "— filament renaming, G-code thumbnails, 0.6mm processes, and macros by @Transistor427 in [PR 13240]({{L262}})",
+    "links": [
+     [
+      "PR 13240",
+      "{{L262}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix custom ZBolt profile filament selection",
+    "rest": "showing only @system by @peachismomo in [PR 13468]({{L263}})",
+    "links": [
+     [
+      "PR 13468",
+      "{{L263}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Ender-3 V3 KE",
+    "rest": "nozzle switching by @dennisklappe in [PR 13438]({{L264}})",
+    "links": [
+     [
+      "PR 13438",
+      "{{L264}}"
+     ]
+    ]
+   },
+   {
+    "title": "Junction Deviation profiles & calibration limits",
+    "rest": "— JD values updated across Marlin printer profiles, with calibration capped at 0.3 and a warning above 0.25 by @ianalexis in [PR 13241]({{L265}}) and [PR 13253]({{L266}})",
+    "links": [
+     [
+      "PR 13241",
+      "{{L265}}"
+     ],
+     [
+      "PR 13253",
+      "{{L266}}"
+     ]
+    ]
+   },
+   {
+    "title": "Printer cover images",
+    "rest": "added and improved (RatRig, Centauri Carbon, Kingroon, and more) by @ianalexis in [PR 13660]({{L267}})",
+    "links": [
+     [
+      "PR 13660",
+      "{{L267}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix K2 family chamber temperature control defaults",
+    "rest": "by @brandonfhall in [PR 13399]({{L268}})",
+    "links": [
+     [
+      "PR 13399",
+      "{{L268}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Ender-3 V3 KE nozzle switching",
+    "rest": "by @dennisklappe in [PR 13438]({{L269}})",
+    "links": [
+     [
+      "PR 13438",
+      "{{L269}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [
+   "* Brazilian Portuguese translations by @afmenez in [PR 12891]({{L270}}) * Spanish translation update by @Jo-Con-El in [PR 12981]({{L271}}), @ianalexis in [PR 13652]({{L272}}), and @peterm-m in [PR 13196]({{L273}}) * German translation updates by @hliebscher in [PR 13785]({{L274}}), STEP typo fix by @hliebscher in [PR 13100]({{L275}}) * Czech translation with full menu by @jakubhencl in [PR 13465]({{L276}}) * Turkish translations update by @GlauTechCo in [PR 13155]({{L277}}) * Italian translation updates by @Kappa971 in [PR 13585]({{L278}}), [PR 13674]({{L279}}), and [PR 13720]({{L280}}) * Hungarian language update by @kisslorand in [PR 13321]({{L281}}) * Simplified Chinese locale fixes by @Neko-vecter in [PR 13225]({{L282}}) and [PR 13235]({{L283}}) * Globally fix \"milimeters\" typo by @valerii-bokhan in [PR 13295]({{L284}}) * Globally fix \"milisecond\" typo by @afmenez in [PR 13329]({{L285}}) * Remove wrong c-format/boost-format markers from non-format strings by @afmenez in [PR 13251]({{L286}}) * Improve language on some GUI strings by @afmenez in [PR 13553]({{L287}}) * General translation and string-list refresh by @ianalexis in [PR 13622]({{L288}})"
+  ],
+  "items": [
+   {
+    "title": "Fix Simplified Chinese locale issues",
+    "rest": "by @Neko-vecter in [PR 13225]({{L289}})",
+    "links": [
+     [
+      "PR 13225",
+      "{{L289}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L294}}\">{{I150}}</a>",
+   "<a href=\"{{L295}}\">{{I151}}</a>"
+  ],
+  "items": []
+ }
+]

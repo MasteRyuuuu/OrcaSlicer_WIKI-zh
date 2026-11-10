@@ -1,0 +1,27 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![retraction_test](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/retraction/retraction_test.gif?raw=true)",
+"![retraction_test_menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/retraction/retraction_test_menu.png?raw=true)",
+"![retraction_test_print](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/retraction/retraction_test_print.jpg?raw=true)",
+"![retraction_test_measure](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/retraction/retraction_test_measure.png?raw=true)"
+],
+"link": [
+"printer_extruder_retraction",
+"calibration_guide",
+"printer_extruder_retraction#retract-amount-before-wipe"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Retraction test",
+"raw": "Retraction test",
+"id": "retraction-test",
+"alt": "retraction-test"
+}
+],
+"src": "calibration/retraction_calib.md"
+}

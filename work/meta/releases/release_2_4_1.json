@@ -1,0 +1,128 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"<img width=\"700\" alt=\"Minimal and Target chamber temperature fields\" src=\"https://github.com/user-attachments/assets/77ac6670-ab21-4f58-bd9b-6b18406b2acb\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/87e02fa7-d449-4981-90f9-4ddb1cb9d9fc\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/9ea5ab4d-7d91-4102-8644-11561dd9d195\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/b5f074ba-5758-4509-8a06-21ec2cd4cae7\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/748f5471-a300-4d81-a41d-2e9ad9ea15e4\" />",
+"<img width=\"600\" alt=\"Profile sync change warning dialog\" src=\"https://github.com/user-attachments/assets/cffc477f-d947-4745-ac1f-d45259d142af\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/fb33e80f-c95d-49db-a162-b880b92a0d85\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/c71980da-276f-4565-ba33-8a6d80c54cae\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/db8d2124-9490-4ded-ae58-5ff809deab56\" />",
+"<img width=\"400\" src=\"https://github.com/user-attachments/assets/10bf048a-0af3-4f80-a852-502361d6c118\" />",
+"<img width=\"500\" alt=\"Snapmaker U1 correct bed dimensions\" src=\"https://github.com/user-attachments/assets/0917bd1e-894b-4f3b-bc12-52978695b312\" />",
+"<img width=\"500\" alt=\"Elegoo Centauri 2\" src=\"https://github.com/user-attachments/assets/08bc1de2-5ff3-42be-89de-0aa186fb008d\" />",
+"<img src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"Support on Ko-fi\">",
+"<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"Donate via PayPal\">"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14059",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14381",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14340",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14333",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14377",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14404",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/12060",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14398",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14432",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14459",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14429",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14430",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14287",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14316",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14382",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14403",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14408",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14120",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14344",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14326",
+"https://github.com/OrcaSlicer/OrcaSlicer/commit/19db9aa9c3f6720bceaff2d4c9c377362c440f4f",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14378",
+"https://github.com/OrcaSlicer/OrcaSlicer/commit/f9693c4c967b93f2c483ae0dd32e0545221913ff",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14339",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14305",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14391",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14402",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14334",
+"https://github.com/OrcaSlicer/OrcaSlicer/commit/e3eca45f3dc440f1b37162716bc439ec76270fb5",
+"https://ko-fi.com/G2G5IP3CP",
+"https://paypal.me/softfever3d"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "V2.4.1",
+"raw": "V2.4.1",
+"id": "v241",
+"alt": "v241"
+},
+{
+"level": 1,
+"en": "🌊 New Features & Improvements",
+"raw": "🌊 New Features & Improvements",
+"id": "-new-features-improvements",
+"alt": "new-features-improvements"
+},
+{
+"level": 1,
+"en": "🛠️ Bug Fixes",
+"raw": "🛠️ Bug Fixes",
+"id": "-bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 2,
+"en": "Profiles & presets",
+"raw": "Profiles & presets",
+"id": "profiles-presets",
+"alt": "profiles-presets"
+},
+{
+"level": 2,
+"en": "Slicing & printing",
+"raw": "Slicing & printing",
+"id": "slicing-printing",
+"alt": "slicing-printing"
+},
+{
+"level": 2,
+"en": "Connectivity & hosts",
+"raw": "Connectivity & hosts",
+"id": "connectivity-hosts",
+"alt": "connectivity-hosts"
+},
+{
+"level": 2,
+"en": "Platform & UI",
+"raw": "Platform & UI",
+"id": "platform-ui",
+"alt": "platform-ui"
+},
+{
+"level": 1,
+"en": "🖨️ Printer & Filament Profiles",
+"raw": "🖨️ Printer & Filament Profiles",
+"id": "-printer-filament-profiles",
+"alt": "printer-filament-profiles"
+},
+{
+"level": 1,
+"en": "🗪 Localization",
+"raw": "🗪 Localization",
+"id": "-localization",
+"alt": "localization"
+},
+{
+"level": 1,
+"en": "❤️ Support OrcaSlicer",
+"raw": "❤️ Support OrcaSlicer",
+"id": "-support-orcaslicer",
+"alt": "support-orcaslicer"
+}
+],
+"src": "releases/release_2_4_1.md"
+}

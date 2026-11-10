@@ -1,0 +1,90 @@
+{
+"code": [
+[
+"```bash",
+"brew install cmake gettext libtool automake autoconf texinfo pkgconf",
+"```"
+],
+[
+"```bash",
+"sudo xcode-select -s /Applications/Xcode.app/Contents/Developer",
+"sudo xcodebuild -license accept   # if you haven't accepted it yet",
+"```"
+],
+[
+"   ```bash",
+"   git clone https://github.com/OrcaSlicer/OrcaSlicer",
+"   cd OrcaSlicer",
+"   ```"
+],
+[
+"   ```bash",
+"   ./build_release_macos.sh",
+"   ```"
+],
+[
+"   ```bash",
+"   open build/arm64/OrcaSlicer/OrcaSlicer.app",
+"   ```"
+],
+[
+"   ```bash",
+"   open build/arm64/OrcaSlicer.xcodeproj",
+"   ```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "macos-tools-required",
+"en": "MacOS Tools Required"
+},
+{
+"indent": 0,
+"anchor": "macos-instructions",
+"en": "MacOS Instructions"
+},
+{
+"indent": 0,
+"anchor": "debugging-in-xcode",
+"en": "Debugging in Xcode"
+}
+]
+],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Build on macOS",
+"raw": "Build on macOS",
+"id": "build-on-macos",
+"alt": "build-on-macos"
+},
+{
+"level": 2,
+"en": "MacOS Tools Required",
+"raw": "MacOS Tools Required",
+"id": "macos-tools-required",
+"alt": "macos-tools-required"
+},
+{
+"level": 2,
+"en": "MacOS Instructions",
+"raw": "MacOS Instructions",
+"id": "macos-instructions",
+"alt": "macos-instructions"
+},
+{
+"level": 2,
+"en": "Debugging in Xcode",
+"raw": "Debugging in Xcode",
+"id": "debugging-in-xcode",
+"alt": "debugging-in-xcode"
+}
+],
+"src": "developer_reference/how_to_build/how_to_build_macos.md"
+}

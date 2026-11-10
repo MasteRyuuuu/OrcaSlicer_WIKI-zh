@@ -1,0 +1,501 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slice_closing_radius`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slice-closing-radius=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`resolution`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--resolution=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_arc_fitting`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`disabled, enabled, sparse_infill`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-arc-fitting=disabled`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`xy_hole_compensation`, `xy_contour_compensation`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--xy-hole-compensation=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`elefant_foot_compensation`, `elefant_foot_compensation_layers`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`elefant_foot_compensation` (Float), `elefant_foot_compensation_layers` (Integer)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--elefant-foot-compensation=1` (`elefant_foot_compensation` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`elefant_foot_layers_density`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--elefant-foot-layers-density=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`precise_outer_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--precise-outer-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`precise_z_height`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--precise-z-height=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`hole_to_polyhole`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--hole-to-polyhole=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`hole_to_polyhole_threshold`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--hole-to-polyhole-threshold=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`hole_to_polyhole_twisted`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--hole-to-polyhole-twisted=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`hole_to_polyhole_max_edges`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--hole-to-polyhole-max-edges=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "slice-gap-closing-radius",
+"en": "Slice gap closing radius"
+},
+{
+"indent": 0,
+"anchor": "resolution",
+"en": "Resolution"
+},
+{
+"indent": 0,
+"anchor": "arc-fitting",
+"en": "Arc fitting"
+},
+{
+"indent": 0,
+"anchor": "x-y-compensation",
+"en": "X-Y Compensation"
+},
+{
+"indent": 4,
+"anchor": "x-y-hole-compensation",
+"en": "X-Y hole compensation"
+},
+{
+"indent": 4,
+"anchor": "x-y-contour-compensation",
+"en": "X-Y contour compensation"
+},
+{
+"indent": 0,
+"anchor": "elephant-foot-compensation",
+"en": "Elephant foot compensation"
+},
+{
+"indent": 4,
+"anchor": "elephant-foot-compensation-density",
+"en": "Elephant Foot Compensation Density"
+},
+{
+"indent": 0,
+"anchor": "precise-wall",
+"en": "Precise wall"
+},
+{
+"indent": 4,
+"anchor": "technical-explanation",
+"en": "Technical explanation"
+},
+{
+"indent": 0,
+"anchor": "precise-z-height",
+"en": "Precise Z Height"
+},
+{
+"indent": 0,
+"anchor": "polyholes",
+"en": "Polyholes"
+},
+{
+"indent": 4,
+"anchor": "polyhole-detection-margin",
+"en": "Polyhole detection margin"
+},
+{
+"indent": 4,
+"anchor": "polyhole-twist",
+"en": "Polyhole twist"
+},
+{
+"indent": 4,
+"anchor": "maximum-polyhole-edge-count",
+"en": "Maximum Polyhole edge count"
+}
+]
+],
+"img": [
+"![arc-fitting](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/arc-fitting.svg?raw=true)",
+"![elephant-foot](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/elephant-foot.svg?raw=true)",
+"![elephant-foot-compensation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/elephant-foot-compensation.png?raw=true)",
+"![PreciseWallOff](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/PreciseWallOff.svg?raw=true)",
+"![PreciseWallOn](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/PreciseWallOn.svg?raw=true)",
+"![PreciseZOff](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/PreciseZOff.png?raw=true)",
+"![PreciseZOn](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/PreciseZOn.png?raw=true)",
+"![PolyHoles](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/PolyHoles.png?raw=true)"
+],
+"link": [
+"https://marlinfw.org/docs/gcode/G002-G003.html",
+"strength_settings_infill#sparse-infill-smooth-factor",
+"#resolution",
+"belt_printing#features-that-are-not-available",
+"speed_settings_advanced",
+"printer_basic_information_advanced#power-loss-recovery",
+"https://www.klipper3d.org/Config_Reference.html#gcode_arcs",
+"https://github.com/Klipper3d/klipper/issues/202",
+"calibration_guide",
+"tolerance_calib",
+"support_settings_raft",
+"others_settings_brim#brim-use-efc-outline",
+"strength_settings_infill#internal-solid-infill",
+"#elephant-foot-compensation",
+"strength_settings_top_bottom_shells#shell-layers",
+"quality_settings_wall_and_surfaces#innerouter",
+"https://manual.slic3r.org/advanced/flow-math",
+"quality_settings_layer_height",
+"https://github.com/supermerill/SuperSlicer/wiki/Polyholes",
+"https://hydraraptor.blogspot.com/2011/02/polyholes.html"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Precision",
+"raw": "Precision",
+"id": "precision",
+"alt": "precision"
+},
+{
+"level": 2,
+"en": "Slice gap closing radius",
+"raw": "Slice gap closing radius",
+"id": "slice-gap-closing-radius",
+"alt": "slice-gap-closing-radius"
+},
+{
+"level": 2,
+"en": "Resolution",
+"raw": "Resolution",
+"id": "resolution",
+"alt": "resolution"
+},
+{
+"level": 2,
+"en": "Arc fitting",
+"raw": "Arc fitting",
+"id": "arc-fitting",
+"alt": "arc-fitting"
+},
+{
+"level": 2,
+"en": "X-Y Compensation",
+"raw": "X-Y Compensation",
+"id": "x-y-compensation",
+"alt": "x-y-compensation"
+},
+{
+"level": 3,
+"en": "X-Y hole compensation",
+"raw": "X-Y hole compensation",
+"id": "x-y-hole-compensation",
+"alt": "x-y-hole-compensation"
+},
+{
+"level": 3,
+"en": "X-Y contour compensation",
+"raw": "X-Y contour compensation",
+"id": "x-y-contour-compensation",
+"alt": "x-y-contour-compensation"
+},
+{
+"level": 2,
+"en": "Elephant foot compensation",
+"raw": "Elephant foot compensation",
+"id": "elephant-foot-compensation",
+"alt": "elephant-foot-compensation"
+},
+{
+"level": 3,
+"en": "Elephant Foot Compensation Density",
+"raw": "Elephant Foot Compensation Density",
+"id": "elephant-foot-compensation-density",
+"alt": "elephant-foot-compensation-density"
+},
+{
+"level": 2,
+"en": "Precise wall",
+"raw": "Precise wall",
+"id": "precise-wall",
+"alt": "precise-wall"
+},
+{
+"level": 3,
+"en": "Technical explanation",
+"raw": "Technical explanation",
+"id": "technical-explanation",
+"alt": "technical-explanation"
+},
+{
+"level": 2,
+"en": "Precise Z Height",
+"raw": "Precise Z Height",
+"id": "precise-z-height",
+"alt": "precise-z-height"
+},
+{
+"level": 2,
+"en": "Polyholes",
+"raw": "Polyholes",
+"id": "polyholes",
+"alt": "polyholes"
+},
+{
+"level": 3,
+"en": "Polyhole detection margin",
+"raw": "Polyhole detection margin",
+"id": "polyhole-detection-margin",
+"alt": "polyhole-detection-margin"
+},
+{
+"level": 3,
+"en": "Polyhole twist",
+"raw": "Polyhole twist",
+"id": "polyhole-twist",
+"alt": "polyhole-twist"
+},
+{
+"level": 3,
+"en": "Maximum Polyhole edge count",
+"raw": "Maximum Polyhole edge count",
+"id": "maximum-polyhole-edge-count",
+"alt": "maximum-polyhole-edge-count"
+}
+],
+"src": "print_settings/quality/quality_settings_precision.md"
+}

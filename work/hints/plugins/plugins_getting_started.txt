@@ -1,0 +1,5 @@
+G plugin = 插件
+  install local plugin = 安装本地插件
+  plugin info = 插件信息
+  plugin configuration = 插件配置
+  install plugins = 安装插件

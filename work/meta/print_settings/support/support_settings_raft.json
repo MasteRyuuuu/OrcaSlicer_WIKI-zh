@@ -1,0 +1,129 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`raft_layers`, `raft_contact_distance`, `raft_expansion`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`raft_layers` (Integer), `raft_contact_distance` (Float), `raft_expansion` (Float)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--raft-layers=1` (`raft_layers` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "how-a-raft-is-built",
+"en": "How a raft is built"
+},
+{
+"indent": 0,
+"anchor": "layers",
+"en": "Layers"
+},
+{
+"indent": 0,
+"anchor": "contact-z-distance",
+"en": "Contact Z distance"
+},
+{
+"indent": 0,
+"anchor": "expansion",
+"en": "Expansion"
+},
+{
+"indent": 0,
+"anchor": "interaction-with-other-settings",
+"en": "Interaction with other settings"
+}
+]
+],
+"img": [],
+"link": [
+"others_settings_brim",
+"support_settings_support",
+"quality_settings_layer_height#first-layer-height",
+"support_settings_support#initial-layer-density",
+"support_settings_support#initial-layer-expansion",
+"support_settings_advanced#base-pattern-spacing",
+"support_settings_filament#base",
+"support_settings_advanced#interface-spacing",
+"support_settings_filament#interface",
+"#contact-z-distance",
+"quality_settings_layer_height",
+"support_settings_advanced#independent-support-layer-height",
+"support_settings_advanced#z-distance",
+"#layers",
+"support_settings_support#tree-slim",
+"support_settings_support#tree-strong",
+"support_settings_support#tree-hybrid",
+"support_settings_support#initial-layer-expansion",
+"support_settings_support#initial-layer-expansion",
+"prepare_auto_arrange",
+"quality_settings_precision#elephant-foot-compensation",
+"support_settings_ironing",
+"multimaterial_settings_prime_tower",
+"belt_printing#features-that-are-not-available"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Raft",
+"raw": "Raft",
+"id": "raft",
+"alt": "raft"
+},
+{
+"level": 2,
+"en": "How a raft is built",
+"raw": "How a raft is built",
+"id": "how-a-raft-is-built",
+"alt": "how-a-raft-is-built"
+},
+{
+"level": 2,
+"en": "Layers",
+"raw": "Layers",
+"id": "layers",
+"alt": "layers"
+},
+{
+"level": 2,
+"en": "Contact Z distance",
+"raw": "Contact Z distance",
+"id": "contact-z-distance",
+"alt": "contact-z-distance"
+},
+{
+"level": 2,
+"en": "Expansion",
+"raw": "Expansion",
+"id": "expansion",
+"alt": "expansion"
+},
+{
+"level": 2,
+"en": "Interaction with other settings",
+"raw": "Interaction with other settings",
+"id": "interaction-with-other-settings",
+"alt": "interaction-with-other-settings"
+}
+],
+"src": "print_settings/support/support_settings_raft.md"
+}

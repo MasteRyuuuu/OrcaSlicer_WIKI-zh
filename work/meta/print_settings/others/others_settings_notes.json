@@ -1,0 +1,47 @@
+{
+"code": [
+[
+"```gcode",
+"; notes = Sliced with OrcaSlicer, the best slicer.",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`notes`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--notes=value`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Notes",
+"raw": "Notes",
+"id": "notes",
+"alt": "notes"
+}
+],
+"src": "print_settings/others/others_settings_notes.md"
+}

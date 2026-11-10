@@ -1,0 +1,109 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "starting-a-sketch",
+"en": "Starting a Sketch"
+},
+{
+"indent": 0,
+"anchor": "the-sketch-environment",
+"en": "The Sketch Environment"
+},
+{
+"indent": 0,
+"anchor": "entities",
+"en": "Entities"
+},
+{
+"indent": 0,
+"anchor": "editing",
+"en": "Editing"
+},
+{
+"indent": 0,
+"anchor": "constraints-and-dimensions",
+"en": "Constraints and Dimensions"
+},
+{
+"indent": 0,
+"anchor": "finishing-a-sketch",
+"en": "Finishing a Sketch"
+},
+{
+"indent": 0,
+"anchor": "reopening-a-sketch",
+"en": "Reopening a Sketch"
+}
+]
+],
+"img": [],
+"link": [
+"design_tab",
+"design_modeling_tools",
+"design_keyboard_shortcuts"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Sketching",
+"raw": "Sketching",
+"id": "sketching",
+"alt": "sketching"
+},
+{
+"level": 2,
+"en": "Starting a Sketch",
+"raw": "Starting a Sketch",
+"id": "starting-a-sketch",
+"alt": "starting-a-sketch"
+},
+{
+"level": 2,
+"en": "The Sketch Environment",
+"raw": "The Sketch Environment",
+"id": "the-sketch-environment",
+"alt": "the-sketch-environment"
+},
+{
+"level": 2,
+"en": "Entities",
+"raw": "Entities",
+"id": "entities",
+"alt": "entities"
+},
+{
+"level": 2,
+"en": "Editing",
+"raw": "Editing",
+"id": "editing",
+"alt": "editing"
+},
+{
+"level": 2,
+"en": "Constraints and Dimensions",
+"raw": "Constraints and Dimensions",
+"id": "constraints-and-dimensions",
+"alt": "constraints-and-dimensions"
+},
+{
+"level": 2,
+"en": "Finishing a Sketch",
+"raw": "Finishing a Sketch",
+"id": "finishing-a-sketch",
+"alt": "finishing-a-sketch"
+},
+{
+"level": 2,
+"en": "Reopening a Sketch",
+"raw": "Reopening a Sketch",
+"id": "reopening-a-sketch",
+"alt": "reopening-a-sketch"
+}
+],
+"src": "design/design_sketching.md"
+}

@@ -1,0 +1,541 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_type`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Text list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-type=value`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_vendor`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Text list`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_soluble`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-soluble=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_is_support`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Boolean list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-is-support=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_change_length`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-change-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`required_nozzle_HRC`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--required-nozzle-HRC=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`default_filament_colour`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Text list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--default-filament-colour=value`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_diameter`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-diameter=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_adhesiveness_category`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-adhesiveness-category=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_density`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-density=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_shrink`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-shrink=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_shrinkage_compensation_z`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-shrinkage-compensation-z=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filament_cost`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filament-cost=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`temperature_vitrification`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--temperature-vitrification=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`idle_temperature`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--idle-temperature=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "type",
+"en": "Type"
+},
+{
+"indent": 0,
+"anchor": "vendor",
+"en": "Vendor"
+},
+{
+"indent": 0,
+"anchor": "soluble-material",
+"en": "Soluble material"
+},
+{
+"indent": 0,
+"anchor": "support-material",
+"en": "Support material"
+},
+{
+"indent": 0,
+"anchor": "filament-ramming-length",
+"en": "Filament ramming length"
+},
+{
+"indent": 0,
+"anchor": "required-nozzle-hrc",
+"en": "Required nozzle HRC"
+},
+{
+"indent": 0,
+"anchor": "default-color",
+"en": "Default color"
+},
+{
+"indent": 0,
+"anchor": "diameter",
+"en": "Diameter"
+},
+{
+"indent": 0,
+"anchor": "adhesiveness-category",
+"en": "Adhesiveness Category"
+},
+{
+"indent": 0,
+"anchor": "density",
+"en": "Density"
+},
+{
+"indent": 0,
+"anchor": "shrinkage-xy",
+"en": "Shrinkage (XY)"
+},
+{
+"indent": 0,
+"anchor": "shrinkage-z",
+"en": "Shrinkage (Z)"
+},
+{
+"indent": 0,
+"anchor": "price",
+"en": "Price"
+},
+{
+"indent": 0,
+"anchor": "softening-temperature",
+"en": "Softening temperature"
+},
+{
+"indent": 0,
+"anchor": "idle-temperature",
+"en": "Idle temperature"
+},
+{
+"indent": 0,
+"anchor": "recommended-nozzle-temperature",
+"en": "Recommended nozzle temperature"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode#setting-overrides"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Basic Information",
+"raw": "Material Basic Information",
+"id": "material-basic-information",
+"alt": "material-basic-information"
+},
+{
+"level": 2,
+"en": "Type",
+"raw": "Type",
+"id": "type",
+"alt": "type"
+},
+{
+"level": 2,
+"en": "Vendor",
+"raw": "Vendor",
+"id": "vendor",
+"alt": "vendor"
+},
+{
+"level": 2,
+"en": "Soluble material",
+"raw": "Soluble material",
+"id": "soluble-material",
+"alt": "soluble-material"
+},
+{
+"level": 2,
+"en": "Support material",
+"raw": "Support material",
+"id": "support-material",
+"alt": "support-material"
+},
+{
+"level": 2,
+"en": "Filament ramming length",
+"raw": "Filament ramming length",
+"id": "filament-ramming-length",
+"alt": "filament-ramming-length"
+},
+{
+"level": 2,
+"en": "Required nozzle HRC",
+"raw": "Required nozzle HRC",
+"id": "required-nozzle-hrc",
+"alt": "required-nozzle-hrc"
+},
+{
+"level": 2,
+"en": "Default color",
+"raw": "Default color",
+"id": "default-color",
+"alt": "default-color"
+},
+{
+"level": 2,
+"en": "Diameter",
+"raw": "Diameter",
+"id": "diameter",
+"alt": "diameter"
+},
+{
+"level": 2,
+"en": "Adhesiveness Category",
+"raw": "Adhesiveness Category",
+"id": "adhesiveness-category",
+"alt": "adhesiveness-category"
+},
+{
+"level": 2,
+"en": "Density",
+"raw": "Density",
+"id": "density",
+"alt": "density"
+},
+{
+"level": 2,
+"en": "Shrinkage (XY)",
+"raw": "Shrinkage (XY)",
+"id": "shrinkage-xy",
+"alt": "shrinkage-xy"
+},
+{
+"level": 2,
+"en": "Shrinkage (Z)",
+"raw": "Shrinkage (Z)",
+"id": "shrinkage-z",
+"alt": "shrinkage-z"
+},
+{
+"level": 2,
+"en": "Price",
+"raw": "Price",
+"id": "price",
+"alt": "price"
+},
+{
+"level": 2,
+"en": "Softening temperature",
+"raw": "Softening temperature",
+"id": "softening-temperature",
+"alt": "softening-temperature"
+},
+{
+"level": 2,
+"en": "Idle temperature",
+"raw": "Idle temperature",
+"id": "idle-temperature",
+"alt": "idle-temperature"
+},
+{
+"level": 2,
+"en": "Recommended nozzle temperature",
+"raw": "Recommended nozzle temperature",
+"id": "recommended-nozzle-temperature",
+"alt": "recommended-nozzle-temperature"
+}
+],
+"src": "material_settings/filament/material_basic_information.md"
+}

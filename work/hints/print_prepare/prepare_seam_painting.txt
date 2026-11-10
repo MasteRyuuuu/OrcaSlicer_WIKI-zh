@@ -1,0 +1,4 @@
+H seam painting = 接缝绘制
+G precise seam = 精确接缝
+G seam = 接缝
+G model = 模型 / 型号

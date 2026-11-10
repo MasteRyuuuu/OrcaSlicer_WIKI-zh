@@ -1,0 +1,10 @@
+H orca tolerance test = Orca公差测试
+G filament = 耗材丝
+G model = 模型 / 型号
+G plate = 盘
+G help = 帮助
+  x-y hole compensation = X-Y 孔洞尺寸补偿
+  x-y contour compensation = X-Y 外轮廓尺寸补偿
+  precise z height = 精准 Z 高度
+  precise wall = 精准外墙尺寸
+  calibration guide = 校准指南

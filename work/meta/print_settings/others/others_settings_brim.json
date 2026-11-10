@@ -1,0 +1,578 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`auto_brim, brim_ears, painted, outer_only, inner_only, outer_and_inner, no_brim, leading_edge_only`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-type=auto_brim`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_ears_max_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-ears-max-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_ears_detection_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-ears-detection-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_ears_outer_only`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-ears-outer-only=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`leading_brim_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--leading-brim-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extra_brim_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extra-brim-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_object_gap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-object-gap=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_flow_ratio`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-flow-ratio=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`brim_use_efc_outline`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--brim-use-efc-outline=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`combine_brims`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--combine-brims=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "type",
+"en": "Type"
+},
+{
+"indent": 4,
+"anchor": "auto",
+"en": "Auto"
+},
+{
+"indent": 4,
+"anchor": "painted",
+"en": "Painted"
+},
+{
+"indent": 4,
+"anchor": "outer",
+"en": "Outer"
+},
+{
+"indent": 4,
+"anchor": "inner",
+"en": "Inner"
+},
+{
+"indent": 4,
+"anchor": "outer-and-inner",
+"en": "Outer and Inner"
+},
+{
+"indent": 4,
+"anchor": "mouse-ears",
+"en": "Mouse Ears"
+},
+{
+"indent": 8,
+"anchor": "ear-max-angle",
+"en": "Ear max angle"
+},
+{
+"indent": 8,
+"anchor": "ear-detection-radius",
+"en": "Ear detection radius"
+},
+{
+"indent": 4,
+"anchor": "no-brim",
+"en": "No-brim"
+},
+{
+"indent": 4,
+"anchor": "leading-edge-only",
+"en": "Leading edge only"
+},
+{
+"indent": 0,
+"anchor": "brim-ears-outer-only",
+"en": "Brim ears outer only"
+},
+{
+"indent": 0,
+"anchor": "width",
+"en": "Width"
+},
+{
+"indent": 0,
+"anchor": "leading-length",
+"en": "Leading length"
+},
+{
+"indent": 0,
+"anchor": "extra-width",
+"en": "Extra width"
+},
+{
+"indent": 0,
+"anchor": "brim-object-gap",
+"en": "Brim-Object Gap"
+},
+{
+"indent": 4,
+"anchor": "brim-flow-ratio",
+"en": "Brim Flow Ratio"
+},
+{
+"indent": 4,
+"anchor": "brim-use-efc-outline",
+"en": "Brim use EFC outline"
+},
+{
+"indent": 0,
+"anchor": "combine-brims",
+"en": "Combine brims"
+},
+{
+"indent": 4,
+"anchor": "combined",
+"en": "Combined"
+},
+{
+"indent": 4,
+"anchor": "uncombined",
+"en": "Uncombined"
+},
+{
+"indent": 0,
+"anchor": "brim-on-belt-printers",
+"en": "Brim on belt printers"
+}
+]
+],
+"img": [
+"![brim](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim.png?raw=true)",
+"![brim-outer](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim-outer.png?raw=true)",
+"![brim-inner](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim-inner.png?raw=true)",
+"![brim-outer-inner](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim-outer-inner.png?raw=true)",
+"![brim-mouse-ears](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim-mouse-ears.png?raw=true)",
+"![brim-use-efc-outline](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/brim-use-efc-outline.svg?raw=true)",
+"![combined-brims](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/combined-brims.gif?raw=true)",
+"![uncombined-brims](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/brim/uncombined-brims.gif?raw=true)"
+],
+"link": [
+"prepare_brim_ears_painting",
+"support_settings_raft",
+"belt_printing",
+"#leading-length",
+"#outer",
+"#brim-on-belt-printers",
+"prepare_brim_ears_painting",
+"#width",
+"#brim-object-gap",
+"#brim-flow-ratio",
+"prepare_auto_arrange",
+"#width",
+"#width",
+"#leading-length",
+"#brim",
+"quality_settings_wall_and_surfaces#surface-flow-ratio",
+"material_flow_ratio_and_pressure_advance#flow-ratio",
+"quality_settings_wall_and_surfaces#surface-flow-ratio",
+"quality_settings_precision#elephant-foot-compensation",
+"quality_settings_precision#elephant-foot-compensation",
+"belt_printing",
+"#outer",
+"#inner",
+"#outer-and-inner",
+"#leading-edge-only",
+"#auto",
+"#mouse-ears",
+"#painted",
+"#width",
+"#leading-length",
+"#extra-width",
+"#brim-use-efc-outline",
+"#combine-brims",
+"others_settings_special_mode#spiral-vase",
+"printer_basic_information_belt_printer#belt-tilt"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Brim",
+"raw": "Brim",
+"id": "brim",
+"alt": "brim"
+},
+{
+"level": 2,
+"en": "Type",
+"raw": "Type",
+"id": "type",
+"alt": "type"
+},
+{
+"level": 3,
+"en": "Auto",
+"raw": "Auto",
+"id": "auto",
+"alt": "auto"
+},
+{
+"level": 3,
+"en": "Painted",
+"raw": "Painted",
+"id": "painted",
+"alt": "painted"
+},
+{
+"level": 3,
+"en": "Outer",
+"raw": "Outer",
+"id": "outer",
+"alt": "outer"
+},
+{
+"level": 3,
+"en": "Inner",
+"raw": "Inner",
+"id": "inner",
+"alt": "inner"
+},
+{
+"level": 3,
+"en": "Outer and Inner",
+"raw": "Outer and Inner",
+"id": "outer-and-inner",
+"alt": "outer-and-inner"
+},
+{
+"level": 3,
+"en": "Mouse Ears",
+"raw": "Mouse Ears",
+"id": "mouse-ears",
+"alt": "mouse-ears"
+},
+{
+"level": 4,
+"en": "Ear max angle",
+"raw": "Ear max angle",
+"id": "ear-max-angle",
+"alt": "ear-max-angle"
+},
+{
+"level": 4,
+"en": "Ear detection radius",
+"raw": "Ear detection radius",
+"id": "ear-detection-radius",
+"alt": "ear-detection-radius"
+},
+{
+"level": 3,
+"en": "No-brim",
+"raw": "No-brim",
+"id": "no-brim",
+"alt": "no-brim"
+},
+{
+"level": 3,
+"en": "Leading edge only",
+"raw": "Leading edge only",
+"id": "leading-edge-only",
+"alt": "leading-edge-only"
+},
+{
+"level": 2,
+"en": "Brim ears outer only",
+"raw": "Brim ears outer only",
+"id": "brim-ears-outer-only",
+"alt": "brim-ears-outer-only"
+},
+{
+"level": 2,
+"en": "Width",
+"raw": "Width",
+"id": "width",
+"alt": "width"
+},
+{
+"level": 2,
+"en": "Leading length",
+"raw": "Leading length",
+"id": "leading-length",
+"alt": "leading-length"
+},
+{
+"level": 2,
+"en": "Extra width",
+"raw": "Extra width",
+"id": "extra-width",
+"alt": "extra-width"
+},
+{
+"level": 2,
+"en": "Brim-Object Gap",
+"raw": "Brim-Object Gap",
+"id": "brim-object-gap",
+"alt": "brim-object-gap"
+},
+{
+"level": 3,
+"en": "Brim Flow Ratio",
+"raw": "Brim Flow Ratio",
+"id": "brim-flow-ratio",
+"alt": "brim-flow-ratio"
+},
+{
+"level": 3,
+"en": "Brim use EFC outline",
+"raw": "Brim use EFC outline",
+"id": "brim-use-efc-outline",
+"alt": "brim-use-efc-outline"
+},
+{
+"level": 2,
+"en": "Combine brims",
+"raw": "Combine brims",
+"id": "combine-brims",
+"alt": "combine-brims"
+},
+{
+"level": 3,
+"en": "Combined",
+"raw": "Combined",
+"id": "combined",
+"alt": "combined"
+},
+{
+"level": 3,
+"en": "Uncombined",
+"raw": "Uncombined",
+"id": "uncombined",
+"alt": "uncombined"
+},
+{
+"level": 2,
+"en": "Brim on belt printers",
+"raw": "Brim on belt printers",
+"id": "brim-on-belt-printers",
+"alt": "brim-on-belt-printers"
+}
+],
+"src": "print_settings/others/others_settings_brim.md"
+}

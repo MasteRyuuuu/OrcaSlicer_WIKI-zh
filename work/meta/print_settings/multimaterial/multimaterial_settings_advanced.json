@@ -1,0 +1,406 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_beam`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-beam=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`toolchange_ordering`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`default, cyclic`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--toolchange-ordering=default`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`toolchange_cyclic_order`, `toolchange_cyclic_first_layer`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`toolchange_cyclic_order` (Text), `toolchange_cyclic_first_layer` (Boolean)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--toolchange-cyclic-order=value` (`toolchange_cyclic_order` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interface_shells`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interface-shells=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`mmu_segmented_region_max_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--mmu-segmented-region-max-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`mmu_segmented_region_interlocking_depth`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--mmu-segmented-region-interlocking-depth=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_beam_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-beam-width=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_orientation`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-orientation=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_beam_layer_count`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-beam-layer-count=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_depth`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-depth=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`interlocking_boundary_avoidance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--interlocking-boundary-avoidance=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "interlocking-beam",
+"en": "Interlocking Beam"
+},
+{
+"indent": 0,
+"anchor": "toolchange-ordering",
+"en": "Toolchange Ordering"
+},
+{
+"indent": 4,
+"anchor": "toolchange-order",
+"en": "Toolchange Order"
+},
+{
+"indent": 0,
+"anchor": "interface-shells",
+"en": "Interface Shells"
+},
+{
+"indent": 0,
+"anchor": "maximum-width-of-segmented-region",
+"en": "Maximum Width of Segmented Region"
+},
+{
+"indent": 0,
+"anchor": "interlocking-depth-of-segmented-region",
+"en": "Interlocking depth of Segmented Region"
+},
+{
+"indent": 0,
+"anchor": "interlocking-beam-width",
+"en": "Interlocking Beam Width"
+},
+{
+"indent": 0,
+"anchor": "interlocking-direction",
+"en": "Interlocking Direction"
+},
+{
+"indent": 0,
+"anchor": "interlocking-beam-layers",
+"en": "Interlocking Beam Layers"
+},
+{
+"indent": 0,
+"anchor": "interlocking-depth",
+"en": "Interlocking Depth"
+},
+{
+"indent": 0,
+"anchor": "interlocking-boundary-avoidance",
+"en": "Interlocking Boundary Avoidance"
+}
+]
+],
+"img": [],
+"link": [
+"#toolchange-ordering",
+"#interlocking-beam",
+"#maximum-width-of-segmented-region",
+"#interlocking-beam"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Multimaterial Advanced",
+"raw": "Multimaterial Advanced",
+"id": "multimaterial-advanced",
+"alt": "multimaterial-advanced"
+},
+{
+"level": 2,
+"en": "Interlocking Beam",
+"raw": "Interlocking Beam",
+"id": "interlocking-beam",
+"alt": "interlocking-beam"
+},
+{
+"level": 2,
+"en": "Toolchange Ordering",
+"raw": "Toolchange Ordering",
+"id": "toolchange-ordering",
+"alt": "toolchange-ordering"
+},
+{
+"level": 3,
+"en": "Toolchange Order",
+"raw": "Toolchange Order",
+"id": "toolchange-order",
+"alt": "toolchange-order"
+},
+{
+"level": 2,
+"en": "Interface Shells",
+"raw": "Interface Shells",
+"id": "interface-shells",
+"alt": "interface-shells"
+},
+{
+"level": 2,
+"en": "Maximum Width of Segmented Region",
+"raw": "Maximum Width of Segmented Region",
+"id": "maximum-width-of-segmented-region",
+"alt": "maximum-width-of-segmented-region"
+},
+{
+"level": 2,
+"en": "Interlocking depth of Segmented Region",
+"raw": "Interlocking depth of Segmented Region",
+"id": "interlocking-depth-of-segmented-region",
+"alt": "interlocking-depth-of-segmented-region"
+},
+{
+"level": 2,
+"en": "Interlocking Beam Width",
+"raw": "Interlocking Beam Width",
+"id": "interlocking-beam-width",
+"alt": "interlocking-beam-width"
+},
+{
+"level": 2,
+"en": "Interlocking Direction",
+"raw": "Interlocking Direction",
+"id": "interlocking-direction",
+"alt": "interlocking-direction"
+},
+{
+"level": 2,
+"en": "Interlocking Beam Layers",
+"raw": "Interlocking Beam Layers",
+"id": "interlocking-beam-layers",
+"alt": "interlocking-beam-layers"
+},
+{
+"level": 2,
+"en": "Interlocking Depth",
+"raw": "Interlocking Depth",
+"id": "interlocking-depth",
+"alt": "interlocking-depth"
+},
+{
+"level": 2,
+"en": "Interlocking Boundary Avoidance",
+"raw": "Interlocking Boundary Avoidance",
+"id": "interlocking-boundary-avoidance",
+"alt": "interlocking-boundary-avoidance"
+}
+],
+"src": "print_settings/multimaterial/multimaterial_settings_advanced.md"
+}

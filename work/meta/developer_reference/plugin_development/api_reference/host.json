@@ -1,0 +1,143 @@
+{
+"code": [
+[
+"```python",
+"import orca",
+"model  = orca.host.model()           # the active Model",
+"plater = orca.host.plater()          # the Plater",
+"bundle = orca.host.preset_bundle()   # presets (prints/printers/filaments/...)",
+"lang   = orca.host.app_language()    # UI language code, e.g. \"en_US\", \"ru_RU\"",
+"store  = orca.host.plugin.storage()  # this plugin's private storage folder",
+"```"
+],
+[
+"```python",
+"bundles = orca.host.preset.bundles",
+"for bundle_id in bundles.list_ids():",
+"    bundles.reload_local(bundle_id)",
+"```"
+],
+[
+"```python",
+"# /// script",
+"# dependencies = [\"numpy\"]",
+"# ///",
+"import orca, numpy as np",
+"",
+"class MeshReport(orca.script.ScriptPluginCapabilityBase):",
+"    def get_name(self): return \"Mesh Report\"",
+"    def execute(self):",
+"        model = orca.host.model()",
+"        for obj in model.objects():",
+"            for vol in obj.volumes():",
+"                mesh = vol.mesh()",
+"                V = np.asarray(mesh.vertices())          # (N, 3) float32, read-only",
+"                T = np.asarray(mesh.triangles())         # (M, 3) int32",
+"                # World-space coordinates for the first instance (row-vector convention):",
+"                M = obj.instance(0).matrix() @ vol.matrix()      # 4x4 float64",
+"                world = (np.c_[V.astype(np.float64), np.ones(len(V))] @ M.T)[:, :3]",
+"                print(vol.name, V.shape, T.shape, world.min(0), world.max(0))",
+"        return orca.ExecutionResult.success()",
+"",
+"@orca.plugin",
+"class MeshReportPlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(MeshReport)",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"#local-bundle-reload"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Host",
+"raw": "Host",
+"id": "host",
+"alt": "host"
+},
+{
+"level": 2,
+"en": "Entry Points",
+"raw": "Entry Points",
+"id": "entry-points",
+"alt": "entry-points"
+},
+{
+"level": 2,
+"en": "Model Graph",
+"raw": "Model Graph",
+"id": "model-graph",
+"alt": "model-graph"
+},
+{
+"level": 2,
+"en": "Presets",
+"raw": "Presets",
+"id": "presets",
+"alt": "presets"
+},
+{
+"level": 3,
+"en": "Collections",
+"raw": "Collections",
+"id": "collections",
+"alt": "collections"
+},
+{
+"level": 3,
+"en": "Preset",
+"raw": "Preset",
+"id": "preset",
+"alt": "preset"
+},
+{
+"level": 3,
+"en": "Current presets and full configuration",
+"raw": "Current presets and full configuration",
+"id": "current-presets-and-full-configuration",
+"alt": "current-presets-and-full-configuration"
+},
+{
+"level": 3,
+"en": "PresetType",
+"raw": "PresetType",
+"id": "presettype",
+"alt": "presettype"
+},
+{
+"level": 3,
+"en": "Local bundle reload",
+"raw": "Local bundle reload",
+"id": "local-bundle-reload",
+"alt": "local-bundle-reload"
+},
+{
+"level": 2,
+"en": "Mesh Geometry",
+"raw": "Mesh Geometry",
+"id": "mesh-geometry",
+"alt": "mesh-geometry"
+},
+{
+"level": 2,
+"en": "Worked Example",
+"raw": "Worked Example",
+"id": "worked-example",
+"alt": "worked-example"
+},
+{
+"level": 2,
+"en": "numpy Requirement",
+"raw": "numpy Requirement",
+"id": "numpy-requirement",
+"alt": "numpy-requirement"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/host.md"
+}

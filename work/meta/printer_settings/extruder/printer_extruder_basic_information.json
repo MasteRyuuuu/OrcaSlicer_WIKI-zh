@@ -1,0 +1,195 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`nozzle_diameter[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--nozzle-diameter=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`nozzle_volume[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--nozzle-volume=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_printable_height[extruder_idx]`, `min_layer_height[extruder_idx]`, `max_layer_height[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-printable-height=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_printable_area[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Point group list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-printable-area=value`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_offset[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Point list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-offset=100,100`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "nozzle-diameter",
+"en": "Nozzle diameter"
+},
+{
+"indent": 0,
+"anchor": "nozzle-volume",
+"en": "Nozzle volume"
+},
+{
+"indent": 0,
+"anchor": "extruder-layer-height-limits",
+"en": "Extruder Layer Height Limits"
+},
+{
+"indent": 0,
+"anchor": "extruder-printable-area",
+"en": "Extruder printable area"
+},
+{
+"indent": 0,
+"anchor": "extruder-offset-position",
+"en": "Extruder offset Position"
+}
+]
+],
+"img": [],
+"link": [
+"mixed_nozzle_sizes",
+"printer_basic_information_printable_space#printable-area-bed-shape"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Basic Extruder Information",
+"raw": "Basic Extruder Information",
+"id": "basic-extruder-information",
+"alt": "basic-extruder-information"
+},
+{
+"level": 2,
+"en": "Nozzle diameter",
+"raw": "Nozzle diameter",
+"id": "nozzle-diameter",
+"alt": "nozzle-diameter"
+},
+{
+"level": 2,
+"en": "Nozzle volume",
+"raw": "Nozzle volume",
+"id": "nozzle-volume",
+"alt": "nozzle-volume"
+},
+{
+"level": 2,
+"en": "Extruder Layer Height Limits",
+"raw": "Extruder Layer Height Limits",
+"id": "extruder-layer-height-limits",
+"alt": "extruder-layer-height-limits"
+},
+{
+"level": 2,
+"en": "Extruder printable area",
+"raw": "Extruder printable area",
+"id": "extruder-printable-area",
+"alt": "extruder-printable-area"
+},
+{
+"level": 2,
+"en": "Extruder offset Position",
+"raw": "Extruder offset Position",
+"id": "extruder-offset-position",
+"alt": "extruder-offset-position"
+}
+],
+"src": "printer_settings/extruder/printer_extruder_basic_information.md"
+}

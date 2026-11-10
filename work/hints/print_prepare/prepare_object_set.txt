@@ -1,0 +1,9 @@
+H part = 零件
+H instance = 实例
+H split to parts = 拆分为零件
+H split to objects = 拆分为对象
+G fuzzy skin = 绒毛表面
+G model = 模型 / 型号
+  to parts = 拆分到零件
+  to objects = 拆分到对象
+  3d models = 3D 模型

@@ -1,0 +1,5 @@
+H compatible process profiles = 兼容的工艺预设
+H compatible printers = 兼容打印机
+G help = 帮助
+  setting overrides = 参数覆盖
+  not available = 无法使用

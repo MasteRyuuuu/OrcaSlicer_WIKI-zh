@@ -1,0 +1,146 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_infill_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-infill-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_travel_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-travel-speed=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slow_down_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slow-down-layers=1`."
+}
+]
+],
+"toc": [],
+"img": [
+"![number-of-slow-layers](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed/number-of-slow-layers.png?raw=true)"
+],
+"link": [
+"strength_settings_walls",
+"strength_settings_top_bottom_shells",
+"strength_settings_infill",
+"strength_settings_top_bottom_shells#shell-layers",
+"#initial-layer-infill",
+"strength_settings_top_bottom_shells#shell-layers",
+"speed_settings_travel",
+"speed_settings_travel"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Initial layer speed",
+"raw": "Initial layer speed",
+"id": "initial-layer-speed",
+"alt": "initial-layer-speed"
+},
+{
+"level": 2,
+"en": "Initial layer",
+"raw": "Initial layer",
+"id": "initial-layer",
+"alt": "initial-layer"
+},
+{
+"level": 2,
+"en": "Initial layer infill",
+"raw": "Initial layer infill",
+"id": "initial-layer-infill",
+"alt": "initial-layer-infill"
+},
+{
+"level": 2,
+"en": "Initial layer travel speed",
+"raw": "Initial layer travel speed",
+"id": "initial-layer-travel-speed",
+"alt": "initial-layer-travel-speed"
+},
+{
+"level": 2,
+"en": "Number of slow layers",
+"raw": "Number of slow layers",
+"id": "number-of-slow-layers",
+"alt": "number-of-slow-layers"
+}
+],
+"src": "print_settings/speed/speed_settings_initial_layer_speed.md"
+}

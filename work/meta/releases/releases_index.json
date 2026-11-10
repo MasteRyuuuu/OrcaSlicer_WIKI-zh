@@ -1,0 +1,32 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"release_2_5_0_alpha",
+"release_2_4_2",
+"release_2_4_1",
+"release_2_4_0",
+"release_2_4_0_beta",
+"release_2_4_0_alpha"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Releases",
+"raw": "Releases",
+"id": "releases",
+"alt": "releases"
+},
+{
+"level": 2,
+"en": "History",
+"raw": "History",
+"id": "history",
+"alt": "history"
+}
+],
+"src": "releases/releases_index.md"
+}

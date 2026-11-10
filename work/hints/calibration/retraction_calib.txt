@@ -1,0 +1,13 @@
+G direct drive = 近程挤出机
+G retraction = 回抽
+G filament = 耗材丝
+G wipe = 擦拭
+G top = 顶部 / 俯视
+G nozzle = 喷嘴
+G dialog = 对话框
+G bowden = 远程挤出机
+  retract amount before wipe = 擦拭前的回抽量
+  end retraction length = 结束回抽长度
+  start retraction length = 起始回抽长度
+  retraction length = 回抽长度
+  calibration guide = 校准指南

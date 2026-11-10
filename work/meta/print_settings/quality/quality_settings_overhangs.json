@@ -1,0 +1,344 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`detect_overhang_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--detect-overhang-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`unsupported_wall_last`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--unsupported-wall-last=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`make_overhang_printable`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--make-overhang-printable=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`make_overhang_printable_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--make-overhang-printable-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`make_overhang_printable_hole_size`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--make-overhang-printable-hole-size=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extra_perimeters_on_overhangs`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extra-perimeters-on-overhangs=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_reverse`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-reverse=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_reverse_internal_only`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-reverse-internal-only=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`overhang_reverse_threshold`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--overhang-reverse-threshold=20%`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "detect-overhang-wall",
+"en": "Detect overhang wall"
+},
+{
+"indent": 0,
+"anchor": "unsupported-wall-last",
+"en": "Unsupported wall last"
+},
+{
+"indent": 0,
+"anchor": "make-overhang-printable",
+"en": "Make overhang printable"
+},
+{
+"indent": 4,
+"anchor": "maximum-angle",
+"en": "Maximum angle"
+},
+{
+"indent": 4,
+"anchor": "hole-area",
+"en": "Hole area"
+},
+{
+"indent": 0,
+"anchor": "extra-perimeters-on-overhangs",
+"en": "Extra perimeters on overhangs"
+},
+{
+"indent": 0,
+"anchor": "reverse-on-even",
+"en": "Reverse on even"
+},
+{
+"indent": 4,
+"anchor": "reverse-internal-only",
+"en": "Reverse internal only"
+},
+{
+"indent": 4,
+"anchor": "reverse-threshold",
+"en": "Reverse threshold"
+}
+]
+],
+"img": [
+"![overhang](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/overhangs/overhang.png?raw=true)",
+"![overhang-printable](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/overhangs/overhang-printable.png?raw=true)",
+"![extra-perimeters-on-overhangs](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/overhangs/extra-perimeters-on-overhangs.png?raw=true)",
+"![reverse-odd-texture](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/reverse-odd-texture.png?raw=true)"
+],
+"link": [
+"quality_settings_wall_and_surfaces#walls-printing-order",
+"quality_settings_wall_and_surfaces#print-infill-first",
+"#detect-overhang-wall",
+"#maximum-angle",
+"#detect-overhang-wall",
+"#reverse-threshold",
+"quality_settings_wall_and_surfaces#innerouter",
+"#detect-overhang-wall",
+"#reverse-on-even",
+"#reverse-internal-only"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Overhangs",
+"raw": "Overhangs",
+"id": "overhangs",
+"alt": "overhangs"
+},
+{
+"level": 2,
+"en": "Detect overhang wall",
+"raw": "Detect overhang wall",
+"id": "detect-overhang-wall",
+"alt": "detect-overhang-wall"
+},
+{
+"level": 2,
+"en": "Unsupported wall last",
+"raw": "Unsupported wall last",
+"id": "unsupported-wall-last",
+"alt": "unsupported-wall-last"
+},
+{
+"level": 2,
+"en": "Make overhang printable",
+"raw": "Make overhang printable",
+"id": "make-overhang-printable",
+"alt": "make-overhang-printable"
+},
+{
+"level": 3,
+"en": "Maximum angle",
+"raw": "Maximum angle",
+"id": "maximum-angle",
+"alt": "maximum-angle"
+},
+{
+"level": 3,
+"en": "Hole area",
+"raw": "Hole area",
+"id": "hole-area",
+"alt": "hole-area"
+},
+{
+"level": 2,
+"en": "Extra perimeters on overhangs",
+"raw": "Extra perimeters on overhangs",
+"id": "extra-perimeters-on-overhangs",
+"alt": "extra-perimeters-on-overhangs"
+},
+{
+"level": 2,
+"en": "Reverse on even",
+"raw": "Reverse on even",
+"id": "reverse-on-even",
+"alt": "reverse-on-even"
+},
+{
+"level": 3,
+"en": "Reverse internal only",
+"raw": "Reverse internal only",
+"id": "reverse-internal-only",
+"alt": "reverse-internal-only"
+},
+{
+"level": 3,
+"en": "Reverse threshold",
+"raw": "Reverse threshold",
+"id": "reverse-threshold",
+"alt": "reverse-threshold"
+}
+],
+"src": "print_settings/quality/quality_settings_overhangs.md"
+}

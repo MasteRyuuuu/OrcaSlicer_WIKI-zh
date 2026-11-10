@@ -1,0 +1,12 @@
+H wall loops = 墙层数
+H alternate extra wall = 交替添加额外内墙
+H walls = 墙
+G layer = 层
+G infill = 填充
+G shell = 外壳 / 抽壳
+G line = 线 / 直线
+G model = 模型 / 型号
+G lightning = 闪电
+  ensure vertical shell thickness = 确保垂直外壳厚度
+  detect thin walls = 检查薄壁
+  wall generator = 墙生成器

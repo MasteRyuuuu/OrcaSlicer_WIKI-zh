@@ -1,0 +1,55 @@
+{
+"code": [
+[
+"```python",
+"import orca",
+"",
+"PAGE = \"\"\"",
+"<h2>Stats</h2><pre id=\"out\">waiting...</pre>",
+"<script>",
+"  orca.onMessage(d => document.getElementById('out').textContent = JSON.stringify(d, null, 2));",
+"  orca.postMessage({type: 'ready'});",
+"</script>",
+"\"\"\"",
+"",
+"class StatsPage(orca.pages.PagesPluginCapabilityBase):",
+"    def get_name(self): return \"Stats\"",
+"    def get_ui(self): return PAGE",
+"",
+"    def on_message(self, data):",
+"        if data.get(\"type\") == \"ready\":",
+"            self.post_message({\"objects\": len(orca.host.model().objects())})",
+"",
+"@orca.plugin",
+"class StatsPlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(StatsPage)",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"host_ui#theming",
+"registry"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Pages",
+"raw": "Pages",
+"id": "pages",
+"alt": "pages"
+},
+{
+"level": 2,
+"en": "Behavior",
+"raw": "Behavior",
+"id": "behavior",
+"alt": "behavior"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/pages.md"
+}

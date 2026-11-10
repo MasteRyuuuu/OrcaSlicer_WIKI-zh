@@ -1,0 +1,11 @@
+H layer height = 层高
+H first layer height = 首层层高
+G layer = 层
+G nozzle = 喷嘴
+G support = 支撑
+G overhang = 悬垂
+  variable layer height = 可变层高
+  nozzle diameter = 喷嘴直径
+  first layer = 首层
+  support material = 支撑材料
+  bed adhesion = 热床粘接

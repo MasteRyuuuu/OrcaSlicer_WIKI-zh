@@ -1,0 +1,671 @@
+{
+"code": [
+[
+"```text",
+"resources/profiles/",
+"├── Orca 3D.json                         # Vendor index file",
+"├── Orca 3D/",
+"│   ├── machine/",
+"│   │   ├── fdm_machine_common.json      # Shared printer settings",
+"│   │   ├── Orca 3D Fuse1.json            # Printer model",
+"│   │   └── Orca 3D Fuse1 0.4 nozzle.json # Selectable printer variant",
+"│   ├── process/",
+"│   │   ├── fdm_process_common.json      # Shared process settings",
+"│   │   └── 0.20mm Standard @Orca 3D Fuse1 0.4.json",
+"│   └── filament/                       # Optional printer-specific tuning",
+"│       └── Generic ABS @Orca 3D Fuse1.json",
+"├── OrcaFilamentLibrary.json             # Shared filament index",
+"└── OrcaFilamentLibrary/",
+"    └── filament/                       # Generic and branded materials",
+"```"
+],
+[
+"```json",
+"{",
+"    \"name\": \"Orca 3D\",",
+"    \"version\": \"01.00.00.00\",",
+"    \"force_update\": \"0\",",
+"    \"description\": \"Orca 3D printer profiles\",",
+"    \"machine_model_list\": [",
+"        {",
+"            \"name\": \"Orca 3D Fuse1\",",
+"            \"sub_path\": \"machine/Orca 3D Fuse1.json\"",
+"        }",
+"    ],",
+"    \"machine_list\": [",
+"        {",
+"            \"name\": \"fdm_machine_common\",",
+"            \"sub_path\": \"machine/fdm_machine_common.json\"",
+"        },",
+"        {",
+"            \"name\": \"Orca 3D Fuse1 0.4 nozzle\",",
+"            \"sub_path\": \"machine/Orca 3D Fuse1 0.4 nozzle.json\"",
+"        }",
+"    ],",
+"    \"process_list\": [",
+"        {",
+"            \"name\": \"fdm_process_common\",",
+"            \"sub_path\": \"process/fdm_process_common.json\"",
+"        },",
+"        {",
+"            \"name\": \"0.20mm Standard @Orca 3D Fuse1 0.4\",",
+"            \"sub_path\": \"process/0.20mm Standard @Orca 3D Fuse1 0.4.json\"",
+"        }",
+"    ],",
+"    \"filament_list\": [",
+"        {",
+"            \"name\": \"Generic ABS @Orca 3D Fuse1\",",
+"            \"sub_path\": \"filament/Generic ABS @Orca 3D Fuse1.json\"",
+"        }",
+"    ]",
+"}",
+"```"
+],
+[
+"```sh",
+"python3 scripts/orca_profile_tool.py update-index --vendor \"Orca 3D\"",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"machine_model\",",
+"    \"name\": \"Orca 3D Fuse1\",",
+"    \"nozzle_diameter\": \"0.4\",",
+"    \"bed_model\": \"fuse1_bed.stl\",",
+"    \"bed_texture\": \"fuse1_texture.svg\",",
+"    \"model_id\": \"Fuse1\",",
+"    \"family\": \"Orca 3D\",",
+"    \"machine_tech\": \"FFF\",",
+"    \"default_materials\": \"Generic PLA @System;Generic PETG @System\"",
+"}",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"machine\",",
+"    \"name\": \"Orca 3D Fuse1 0.4 nozzle\",",
+"    \"inherits\": \"fdm_machine_common\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"true\",",
+"    \"nozzle_diameter\": [\"0.4\"],",
+"    \"printer_model\": \"Orca 3D Fuse1\",",
+"    \"printer_variant\": \"0.4\",",
+"    \"default_filament_profile\": [\"Generic PLA @System\"],",
+"    \"default_print_profile\": \"0.20mm Standard @Orca 3D Fuse1 0.4\",",
+"    \"printable_area\": [\"0x0\", \"235x0\", \"235x235\", \"0x235\"],",
+"    \"nozzle_type\": \"brass\"",
+"}",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"process\",",
+"    \"name\": \"0.20mm Standard @Orca 3D Fuse1 0.4\",",
+"    \"inherits\": \"fdm_process_common\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"true\",",
+"    \"layer_height\": \"0.2\",",
+"    \"compatible_printers\": [\"Orca 3D Fuse1 0.4 nozzle\"]",
+"}",
+"```"
+],
+[
+"    ```json",
+"    {",
+"        \"type\": \"filament\",",
+"        \"name\": \"Generic PLA-GF @System\",",
+"        \"from\": \"system\",",
+"        \"instantiation\": \"true\",",
+"        \"inherits\": \"fdm_filament_pla\",",
+"        \"filament_type\": [\"PLA-GF\"],",
+"        \"filament_flow_ratio\": [\"0.96\"],",
+"        \"compatible_printers\": []",
+"    }",
+"    ```"
+],
+[
+"    ```json",
+"    {",
+"        \"name\": \"Generic PLA-GF @System\",",
+"        \"sub_path\": \"filament/Generic PLA-GF @System.json\"",
+"    }",
+"    ```"
+],
+[
+"    ```sh",
+"    python3 scripts/orca_profile_tool.py generate-id",
+"    python3 scripts/orca_profile_tool.py update-snapshot",
+"    ```"
+],
+[
+"    ```json",
+"    {",
+"        \"type\": \"filament\",",
+"        \"name\": \"Generic PLA-GF @System\",",
+"        \"from\": \"system\",",
+"        \"setting_id\": \"DdFPsBKVwzyATCwK\",",
+"        \"filament_id\": \"OFkuMukj\",",
+"        \"instantiation\": \"true\",",
+"        \"inherits\": \"fdm_filament_pla\",",
+"        \"filament_type\": [\"PLA-GF\"],",
+"        \"filament_flow_ratio\": [\"0.96\"],",
+"        \"compatible_printers\": []",
+"    }",
+"    ```"
+],
+[
+"```text",
+"resources/profiles/",
+"    └── OrcaFilamentLibrary/",
+"        └── filament/",
+"            └── Polymaker/",
+"                ├── PolyLite PLA @base.json",
+"                ├── PolyLite PLA @System.json",
+"                ├── BBL/",
+"                │   └── PolyLite PLA @BBL P1S 0.4 nozzle.json",
+"                └── Qidi/",
+"                    └── PolyLite PLA @Qidi Q2 0.4 nozzle.json",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"filament\",",
+"    \"name\": \"PolyLite PLA @base\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"false\",",
+"    \"inherits\": \"fdm_filament_pla\",",
+"    \"filament_vendor\": [\"Polymaker\"]",
+"}",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"filament\",",
+"    \"name\": \"PolyLite PLA @System\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"true\",",
+"    \"inherits\": \"PolyLite PLA @base\",",
+"    \"compatible_printers\": []",
+"}",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"filament\",",
+"    \"name\": \"PolyLite PLA @BBL P1S 0.4 nozzle\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"true\",",
+"    \"inherits\": \"PolyLite PLA @base\",",
+"    \"filament_max_volumetric_speed\": [\"18\"],",
+"    \"compatible_printers\": [",
+"        \"Bambu Lab P1S 0.4 nozzle\"",
+"    ]",
+"}",
+"```"
+],
+[
+"```json",
+"{",
+"    \"type\": \"filament\",",
+"    \"name\": \"Generic ABS @Orca 3D Fuse1\",",
+"    \"from\": \"system\",",
+"    \"instantiation\": \"true\",",
+"    \"inherits\": \"Generic ABS @System\",",
+"    \"filament_flow_ratio\": [\"0.98\"],",
+"    \"filament_max_volumetric_speed\": [\"12\"],",
+"    \"compatible_printers\": [\"Orca 3D Fuse1 0.4 nozzle\"]",
+"}",
+"```"
+],
+[
+"```sh",
+"python3 scripts/orca_profile_tool.py normalize --vendor \"Orca 3D\"",
+"python3 scripts/orca_profile_tool.py update-index --vendor \"Orca 3D\"",
+"python3 scripts/orca_profile_tool.py generate-id --vendor \"Orca 3D\"",
+"python3 scripts/orca_profile_tool.py update-snapshot",
+"python3 scripts/orca_profile_tool.py check",
+"```"
+],
+[
+"```text",
+"setting_id = base62_16( uuid5(namespace, \"<vendor>/<type>/<name>\") )",
+"```"
+],
+[
+"```sh",
+"python3 scripts/orca_profile_tool.py generate-id",
+"```"
+],
+[
+"```text",
+"filament_id = \"OF\" + base62_6( uuid5(namespace, \"filament_product/<filament_vendor>/<filament_type>/<filament_name>\") )",
+"```"
+],
+[
+"```sh",
+"python3 scripts/orca_profile_tool.py generate-id --dry-run  # preview the IDs",
+"python3 scripts/orca_profile_tool.py generate-id            # write filament_id and setting_id",
+"python3 scripts/orca_profile_tool.py update-snapshot        # update scripts/filament_id_snapshot.json",
+"./scripts/check_profile.sh                                  # validate (.\\scripts\\check_profile.bat on Windows)",
+"```"
+],
+[
+"```json",
+"{",
+"    \"renamed_from\": \"Old Product PLA @System\"",
+"}",
+"```"
+],
+[
+"```sh",
+"./scripts/check_profile.sh",
+"```"
+],
+[
+"```bat",
+".\\scripts\\check_profile.bat",
+"```"
+],
+[
+"```sh",
+"./scripts/check_profile.sh --vendor \"Orca 3D\"",
+"```"
+],
+[
+"```bat",
+".\\scripts\\check_profile.bat -Vendor \"Orca 3D\"",
+"```"
+],
+[
+"```text",
+"==> summary",
+"    PASS  profile_tool",
+"    PASS  validate_system",
+"    PASS  validate_slice",
+"    PASS  validate_filament_subtypes",
+"    PASS  validate_custom",
+"",
+"All checks passed. Logs: /path/to/OrcaSlicer/.test/check_profiles/logs",
+"```"
+],
+[
+"```sh",
+"python3 scripts/orca_profile_tool.py check                      # profile_tool",
+"OrcaSlicer_profile_validator -p resources/profiles -l 2         # validate_system",
+"OrcaSlicer_profile_validator -p resources/profiles -s -l 2      # validate_slice",
+"OrcaSlicer_profile_validator -p resources/profiles -l 2 -f      # validate_filament_subtypes",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "high-level-overview",
+"en": "High-level Overview"
+},
+{
+"indent": 0,
+"anchor": "file-structure-and-templates",
+"en": "File Structure and Templates"
+},
+{
+"indent": 0,
+"anchor": "create-or-update-a-profile-bundle",
+"en": "Create or Update a Profile Bundle"
+},
+{
+"indent": 0,
+"anchor": "vendor-index-file",
+"en": "Vendor Index File"
+},
+{
+"indent": 0,
+"anchor": "printer-model-profiles",
+"en": "Printer Model Profiles"
+},
+{
+"indent": 0,
+"anchor": "printer-variant-profiles",
+"en": "Printer Variant Profiles"
+},
+{
+"indent": 0,
+"anchor": "process-profiles",
+"en": "Process Profiles"
+},
+{
+"indent": 0,
+"anchor": "filament-profiles",
+"en": "Filament Profiles"
+},
+{
+"indent": 4,
+"anchor": "adding-filament-profiles-to-the-global-library",
+"en": "Adding Filament Profiles to the Global Library"
+},
+{
+"indent": 4,
+"anchor": "adding-a-filament-brand",
+"en": "Adding a Filament Brand"
+},
+{
+"indent": 4,
+"anchor": "adding-filament-profiles-to-printer-vendor-library",
+"en": "Adding Filament Profiles to Printer Vendor Library"
+},
+{
+"indent": 0,
+"anchor": "the-profile-tool",
+"en": "The Profile Tool"
+},
+{
+"indent": 0,
+"anchor": "setting-ids",
+"en": "Setting IDs"
+},
+{
+"indent": 0,
+"anchor": "filament-ids",
+"en": "Filament IDs"
+},
+{
+"indent": 0,
+"anchor": "testing-profile-changes",
+"en": "Testing Profile Changes"
+},
+{
+"indent": 0,
+"anchor": "validate-profiles",
+"en": "Validate Profiles"
+}
+]
+],
+"img": [
+"![go-to-configuration-folder](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/go-to-configuration-folder.png?raw=true)",
+"![profile-delete-system-folder](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/profile-delete-system-folder.png?raw=true)"
+],
+"link": [
+"#the-profile-tool",
+"#setting-ids",
+"#filament-ids",
+"#vendor-index-file",
+"#the-profile-tool",
+"#the-profile-tool",
+"#validate-profiles",
+"#filament-profiles",
+"#the-profile-tool",
+"#validate-profiles",
+"#adding-a-filament-brand",
+"#generating-the-id",
+"#validate-profiles",
+"#generating-the-id",
+"#checking-one-vendor",
+"#adding-a-filament-brand",
+"#filament-ids",
+"#generating-the-id",
+"#validate-profiles",
+"#setting-ids",
+"#filament-ids",
+"#the-profile-tool",
+"#filament-ids",
+"#validate-profiles",
+"#the-profile-tool",
+"#validate-profiles",
+"#compatibility-chooses-where-a-preset-is-available",
+"#the-profile-tool",
+"#the-profile-tool",
+"#setting-ids",
+"#filament-ids",
+"#the-profile-tool"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Guide: Develop Profiles for OrcaSlicer",
+"raw": "Guide: Develop Profiles for OrcaSlicer",
+"id": "guide-develop-profiles-for-orcaslicer",
+"alt": "guide-develop-profiles-for-orcaslicer"
+},
+{
+"level": 2,
+"en": "High-level Overview",
+"raw": "High-level Overview",
+"id": "high-level-overview",
+"alt": "high-level-overview"
+},
+{
+"level": 3,
+"en": "Three Presets Describe a Print",
+"raw": "Three Presets Describe a Print",
+"id": "three-presets-describe-a-print",
+"alt": "three-presets-describe-a-print"
+},
+{
+"level": 3,
+"en": "Models, Variants and Bundles",
+"raw": "Models, Variants and Bundles",
+"id": "models-variants-and-bundles",
+"alt": "models-variants-and-bundles"
+},
+{
+"level": 3,
+"en": "Inheritance Reuses Settings",
+"raw": "Inheritance Reuses Settings",
+"id": "inheritance-reuses-settings",
+"alt": "inheritance-reuses-settings"
+},
+{
+"level": 3,
+"en": "Compatibility Chooses Where a Preset Is Available",
+"raw": "Compatibility Chooses Where a Preset Is Available",
+"id": "compatibility-chooses-where-a-preset-is-available",
+"alt": "compatibility-chooses-where-a-preset-is-available"
+},
+{
+"level": 3,
+"en": "How the Files Connect",
+"raw": "How the Files Connect",
+"id": "how-the-files-connect",
+"alt": "how-the-files-connect"
+},
+{
+"level": 3,
+"en": "Two IDs Serve Different Purposes",
+"raw": "Two IDs Serve Different Purposes",
+"id": "two-ids-serve-different-purposes",
+"alt": "two-ids-serve-different-purposes"
+},
+{
+"level": 2,
+"en": "File Structure and Templates",
+"raw": "File Structure and Templates",
+"id": "file-structure-and-templates",
+"alt": "file-structure-and-templates"
+},
+{
+"level": 3,
+"en": "Common Profile Fields",
+"raw": "Common Profile Fields",
+"id": "common-profile-fields",
+"alt": "common-profile-fields"
+},
+{
+"level": 2,
+"en": "Create or Update a Profile Bundle",
+"raw": "Create or Update a Profile Bundle",
+"id": "create-or-update-a-profile-bundle",
+"alt": "create-or-update-a-profile-bundle"
+},
+{
+"level": 2,
+"en": "Vendor Index File",
+"raw": "Vendor Index File",
+"id": "vendor-index-file",
+"alt": "vendor-index-file"
+},
+{
+"level": 2,
+"en": "Printer Model Profiles",
+"raw": "Printer Model Profiles",
+"id": "printer-model-profiles",
+"alt": "printer-model-profiles"
+},
+{
+"level": 3,
+"en": "Models",
+"raw": "Models",
+"id": "models",
+"alt": "models"
+},
+{
+"level": 2,
+"en": "Printer Variant Profiles",
+"raw": "Printer Variant Profiles",
+"id": "printer-variant-profiles",
+"alt": "printer-variant-profiles"
+},
+{
+"level": 2,
+"en": "Process Profiles",
+"raw": "Process Profiles",
+"id": "process-profiles",
+"alt": "process-profiles"
+},
+{
+"level": 2,
+"en": "Filament Profiles",
+"raw": "Filament Profiles",
+"id": "filament-profiles",
+"alt": "filament-profiles"
+},
+{
+"level": 3,
+"en": "Adding Filament Profiles to the Global Library",
+"raw": "Adding Filament Profiles to the Global Library",
+"id": "adding-filament-profiles-to-the-global-library",
+"alt": "adding-filament-profiles-to-the-global-library"
+},
+{
+"level": 3,
+"en": "Adding a Filament Brand",
+"raw": "Adding a Filament Brand",
+"id": "adding-a-filament-brand",
+"alt": "adding-a-filament-brand"
+},
+{
+"level": 3,
+"en": "Adding Filament Profiles to Printer Vendor Library",
+"raw": "Adding Filament Profiles to Printer Vendor Library",
+"id": "adding-filament-profiles-to-printer-vendor-library",
+"alt": "adding-filament-profiles-to-printer-vendor-library"
+},
+{
+"level": 2,
+"en": "The Profile Tool",
+"raw": "The Profile Tool",
+"id": "the-profile-tool",
+"alt": "the-profile-tool"
+},
+{
+"level": 2,
+"en": "Setting IDs",
+"raw": "Setting IDs",
+"id": "setting-ids",
+"alt": "setting-ids"
+},
+{
+"level": 2,
+"en": "Filament IDs",
+"raw": "Filament IDs",
+"id": "filament-ids",
+"alt": "filament-ids"
+},
+{
+"level": 3,
+"en": "How the ID Is Generated",
+"raw": "How the ID Is Generated",
+"id": "how-the-id-is-generated",
+"alt": "how-the-id-is-generated"
+},
+{
+"level": 3,
+"en": "Do I Need a New ID?",
+"raw": "Do I Need a New ID?",
+"id": "do-i-need-a-new-id",
+"alt": "do-i-need-a-new-id"
+},
+{
+"level": 3,
+"en": "Generating the ID",
+"raw": "Generating the ID",
+"id": "generating-the-id",
+"alt": "generating-the-id"
+},
+{
+"level": 3,
+"en": "Renaming or Correcting a Filament",
+"raw": "Renaming or Correcting a Filament",
+"id": "renaming-or-correcting-a-filament",
+"alt": "renaming-or-correcting-a-filament"
+},
+{
+"level": 2,
+"en": "Testing Profile Changes",
+"raw": "Testing Profile Changes",
+"id": "testing-profile-changes",
+"alt": "testing-profile-changes"
+},
+{
+"level": 2,
+"en": "Validate Profiles",
+"raw": "Validate Profiles",
+"id": "validate-profiles",
+"alt": "validate-profiles"
+},
+{
+"level": 3,
+"en": "The Profile Validator",
+"raw": "The Profile Validator",
+"id": "the-profile-validator",
+"alt": "the-profile-validator"
+},
+{
+"level": 3,
+"en": "Options",
+"raw": "Options",
+"id": "options",
+"alt": "options"
+},
+{
+"level": 3,
+"en": "Checking One Vendor",
+"raw": "Checking One Vendor",
+"id": "checking-one-vendor",
+"alt": "checking-one-vendor"
+},
+{
+"level": 3,
+"en": "Reading the Results",
+"raw": "Reading the Results",
+"id": "reading-the-results",
+"alt": "reading-the-results"
+},
+{
+"level": 3,
+"en": "Running a Check on Its Own",
+"raw": "Running a Check on Its Own",
+"id": "running-a-check-on-its-own",
+"alt": "running-a-check-on-its-own"
+}
+],
+"src": "developer_reference/how_to_create_profiles.md"
+}

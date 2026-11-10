@@ -1,0 +1,17 @@
+G layer height = 层高
+G sparse infill = 稀疏填充
+G model = 模型 / 型号
+G layer = 层
+G infill = 填充
+G shell = 外壳 / 抽壳
+G modifier = 修改器
+G bottom = 底部 / 仰视
+G top = 顶部 / 俯视
+G cubic = 立方体
+G rectilinear = 直线
+  bottom shell layers = 底部外壳层数
+  top shell layers = 顶部外壳层数
+  top and bottom = 顶面和底面
+  model height = 模型高度
+  layer number = 层编号
+  height range = 高度范围

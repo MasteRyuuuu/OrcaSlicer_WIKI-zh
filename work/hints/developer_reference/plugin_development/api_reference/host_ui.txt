@@ -1,0 +1,11 @@
+G plugin = 插件
+G dialog = 对话框
+G mirror = 镜像
+G bottom = 底部 / 仰视
+G body = 实体
+  dock panel = 停靠面板
+  remaining time = 剩余时间
+  new project = 新建项目
+  estimated time = 预估打印时间 / 预计时间
+  elapsed time = 已用时间
+  context menu = 右键菜单

@@ -1,0 +1,41 @@
+{
+"code": [
+[
+"```python",
+"import orca",
+"",
+"class HelloScript(orca.script.ScriptPluginCapabilityBase):",
+"    def get_name(self):",
+"        return \"Hello Script\"",
+"",
+"    def execute(self):",
+"        return orca.ExecutionResult.success(\"Hello from a script plugin\")",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"lifecycle_events",
+"registry"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Script",
+"raw": "Script",
+"id": "script",
+"alt": "script"
+},
+{
+"level": 2,
+"en": "Minimal Shape",
+"raw": "Minimal Shape",
+"id": "minimal-shape",
+"alt": "minimal-shape"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/script.md"
+}

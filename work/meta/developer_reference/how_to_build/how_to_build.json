@@ -1,0 +1,59 @@
+{
+"code": [
+[
+"```text",
+"OrcaSlicer.exe",
+"data_dir/",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"how_to_build_windows",
+"how_to_build_macos",
+"how_to_build_linux",
+"compiler_caching",
+"how_to_test"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Build Overview",
+"raw": "Build Overview",
+"id": "build-overview",
+"alt": "build-overview"
+},
+{
+"level": 2,
+"en": "Build Stages",
+"raw": "Build Stages",
+"id": "build-stages",
+"alt": "build-stages"
+},
+{
+"level": 2,
+"en": "Running the Tests",
+"raw": "Running the Tests",
+"id": "running-the-tests",
+"alt": "running-the-tests"
+},
+{
+"level": 2,
+"en": "Portable User Configuration",
+"raw": "Portable User Configuration",
+"id": "portable-user-configuration",
+"alt": "portable-user-configuration"
+},
+{
+"level": 3,
+"en": "Example Folder Structure",
+"raw": "Example Folder Structure",
+"id": "example-folder-structure",
+"alt": "example-folder-structure"
+}
+],
+"src": "developer_reference/how_to_build/how_to_build.md"
+}

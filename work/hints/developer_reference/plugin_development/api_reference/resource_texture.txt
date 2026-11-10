@@ -1,0 +1,3 @@
+H resource texture = 资源纹理
+G texture = 纹理
+G plugin = 插件

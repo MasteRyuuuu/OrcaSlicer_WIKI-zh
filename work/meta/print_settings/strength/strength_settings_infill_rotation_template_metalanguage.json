@@ -1,0 +1,267 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_rotate_template`, `solid_infill_rotate_template`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-rotate-template=value` (same pattern for the other variables above)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "basic-instructions",
+"en": "Basic instructions"
+},
+{
+"indent": 0,
+"anchor": "quick-examples",
+"en": "Quick examples"
+},
+{
+"indent": 4,
+"anchor": "defined-angle",
+"en": "Defined angle"
+},
+{
+"indent": 4,
+"anchor": "runtime-instructions",
+"en": "Runtime instructions"
+},
+{
+"indent": 4,
+"anchor": "joint-sign",
+"en": "Joint sign"
+},
+{
+"indent": 4,
+"anchor": "counting",
+"en": "Counting"
+},
+{
+"indent": 4,
+"anchor": "length-modifier",
+"en": "Length modifier"
+},
+{
+"indent": 0,
+"anchor": "description-of-instructions-and-examples",
+"en": "Description of instructions and examples"
+},
+{
+"indent": 4,
+"anchor": "simple-absolute-instructions",
+"en": "Simple absolute instructions"
+},
+{
+"indent": 4,
+"anchor": "relative-instructions",
+"en": "Relative instructions"
+},
+{
+"indent": 4,
+"anchor": "repetitive-adjusting-and-one-time-instructions",
+"en": "Repetitive, adjusting and one-time instructions"
+},
+{
+"indent": 4,
+"anchor": "range-instructions",
+"en": "Range instructions"
+},
+{
+"indent": 4,
+"anchor": "constant-layer-number-instructions",
+"en": "Constant layer number instructions"
+},
+{
+"indent": 0,
+"anchor": "complex-template-examples",
+"en": "Complex template examples"
+},
+{
+"indent": 0,
+"anchor": "credits",
+"en": "Credits"
+}
+]
+],
+"img": [
+"![linear-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/linear-joint.png?raw=true)",
+"![multiple-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/multiple-joint.png?raw=true)",
+"![multiple-joint-initial-angle](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/multiple-joint-initial-angle.png?raw=true)",
+"![multiple-joint-middle-angle](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/multiple-joint-middle-angle.png?raw=true)",
+"![v-sinus-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/v-sinus-joint.png?raw=true)",
+"![v-sinus-joint-lazy](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/v-sinus-joint-lazy.png?raw=true)",
+"![z-h-sinus-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/z-h-sinus-joint.png?raw=true)",
+"![h-sinus-joint-lazy](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/h-sinus-joint-lazy.png?raw=true)",
+"![vh-quarter-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/vh-quarter-joint.png?raw=true)",
+"![hv-quarter-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/hv-quarter-joint.png?raw=true)",
+"![squared-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/squared-joint.png?raw=true)",
+"![squared-joint-inverse](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/squared-joint-inverse.png?raw=true)",
+"![cubic-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/cubic-joint.png?raw=true)",
+"![cubic-joint-inverse](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/cubic-joint-inverse.png?raw=true)",
+"![arcsinus-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/arcsinus-joint.png?raw=true)",
+"![random-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/random-joint.png?raw=true)",
+"![pseudorandom-joint](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/pseudorandom-joint.png?raw=true)",
+"![infill-counting](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/infill-counting.png?raw=true)",
+"![infill-counting-flipped](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/infill-counting-flipped.png?raw=true)",
+"![0](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/0.png?raw=true)",
+"![45](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/45.png?raw=true)",
+"![0-30](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/0-30.png?raw=true)",
+"![90](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/90.png?raw=true)",
+"![+30](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+30.png?raw=true)",
+"![+45](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+45.png?raw=true)",
+"![+90](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+90.png?raw=true)",
+"![+30+90](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+30+90.png?raw=true)",
+"![0+30+90](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/0+30+90.png?raw=true)",
+"![+45-100](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+45-100.png?raw=true)",
+"![+45-50](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+45-50.png?raw=true)",
+"![10period](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/10period.png?raw=true)",
+"![+30-10](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+30-10.png?raw=true)",
+"![+360-100p](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/Template-metalanguage/+360-100p.png?raw=true)"
+],
+"link": [
+"strength_settings_infill#direction-and-rotation",
+"strength_settings_patterns",
+"strength_settings_top_bottom_shells#shell-layers",
+"strength_settings_top_bottom_shells#shell-layers",
+"strength_settings_infill#direction",
+"#joint-sign",
+"#length-modifier",
+"https://github.com/pi-squared-studio"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Infill rotation template metalanguage",
+"raw": "Infill rotation template metalanguage",
+"id": "infill-rotation-template-metalanguage",
+"alt": "infill-rotation-template-metalanguage"
+},
+{
+"level": 2,
+"en": "Basic instructions",
+"raw": "Basic instructions",
+"id": "basic-instructions",
+"alt": "basic-instructions"
+},
+{
+"level": 2,
+"en": "Quick examples",
+"raw": "Quick examples",
+"id": "quick-examples",
+"alt": "quick-examples"
+},
+{
+"level": 3,
+"en": "Defined angle",
+"raw": "Defined angle",
+"id": "defined-angle",
+"alt": "defined-angle"
+},
+{
+"level": 3,
+"en": "Runtime instructions",
+"raw": "Runtime instructions",
+"id": "runtime-instructions",
+"alt": "runtime-instructions"
+},
+{
+"level": 3,
+"en": "Joint sign",
+"raw": "Joint sign",
+"id": "joint-sign",
+"alt": "joint-sign"
+},
+{
+"level": 3,
+"en": "Counting",
+"raw": "Counting",
+"id": "counting",
+"alt": "counting"
+},
+{
+"level": 3,
+"en": "Length modifier",
+"raw": "Length modifier",
+"id": "length-modifier",
+"alt": "length-modifier"
+},
+{
+"level": 2,
+"en": "Description of instructions and examples",
+"raw": "Description of instructions and examples",
+"id": "description-of-instructions-and-examples",
+"alt": "description-of-instructions-and-examples"
+},
+{
+"level": 3,
+"en": "Simple absolute instructions",
+"raw": "Simple absolute instructions",
+"id": "simple-absolute-instructions",
+"alt": "simple-absolute-instructions"
+},
+{
+"level": 3,
+"en": "Relative instructions",
+"raw": "Relative instructions",
+"id": "relative-instructions",
+"alt": "relative-instructions"
+},
+{
+"level": 3,
+"en": "Repetitive, adjusting and one-time instructions",
+"raw": "Repetitive, adjusting and one-time instructions",
+"id": "repetitive-adjusting-and-one-time-instructions",
+"alt": "repetitive-adjusting-and-one-time-instructions"
+},
+{
+"level": 3,
+"en": "Range instructions",
+"raw": "Range instructions",
+"id": "range-instructions",
+"alt": "range-instructions"
+},
+{
+"level": 3,
+"en": "Constant layer number instructions",
+"raw": "Constant layer number instructions",
+"id": "constant-layer-number-instructions",
+"alt": "constant-layer-number-instructions"
+},
+{
+"level": 2,
+"en": "Complex template examples",
+"raw": "Complex template examples",
+"id": "complex-template-examples",
+"alt": "complex-template-examples"
+},
+{
+"level": 2,
+"en": "Credits",
+"raw": "Credits",
+"id": "credits",
+"alt": "credits"
+}
+],
+"src": "print_settings/strength/strength_settings_infill_rotation_template_metalanguage.md"
+}

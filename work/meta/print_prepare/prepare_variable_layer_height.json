@@ -1,0 +1,42 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"quality_settings_layer_height",
+"printer_extruder_basic_information#extruder-layer-height-limits"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Variable Layer Height",
+"raw": "Variable Layer Height",
+"id": "variable-layer-height",
+"alt": "variable-layer-height"
+},
+{
+"level": 2,
+"en": "Adaptive",
+"raw": "Adaptive",
+"id": "adaptive",
+"alt": "adaptive"
+},
+{
+"level": 2,
+"en": "Smooth",
+"raw": "Smooth",
+"id": "smooth",
+"alt": "smooth"
+},
+{
+"level": 2,
+"en": "Manual",
+"raw": "Manual",
+"id": "manual",
+"alt": "manual"
+}
+],
+"src": "print_prepare/prepare_variable_layer_height.md"
+}

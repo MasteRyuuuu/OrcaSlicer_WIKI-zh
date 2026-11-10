@@ -1,0 +1,8 @@
+H permissions = 权限
+G plugin = 插件
+  show in folder = 在文件夹中显示
+  printer connection = 打印机连接
+  plugin info = 插件信息
+  missing plugins = 缺失的插件
+  latest version = 最新版本
+  installed version = 已安装版本

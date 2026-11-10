@@ -1,0 +1,658 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`none, external, hole, all, allwalls, disabled_fuzzy`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin=none`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_mode`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`displacement, extrusion, combined`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-mode=displacement`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_noise_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`classic, perlin, billow, ridgedmulti, voronoi, ripple`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-noise-type=classic`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_ripples_per_layer`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-ripples-per-layer=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_ripple_offset`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-ripple-offset=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_layers_between_ripple_offset`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-layers-between-ripple-offset=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_point_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-point-distance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_thickness`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-thickness=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_scale`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-scale=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_octaves`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-octaves=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_persistence`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-persistence=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fuzzy_skin_first_layer`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fuzzy-skin-first-layer=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "fuzzy-skin-mode",
+"en": "Fuzzy Skin Mode"
+},
+{
+"indent": 4,
+"anchor": "contour",
+"en": "Contour"
+},
+{
+"indent": 4,
+"anchor": "hole",
+"en": "Hole"
+},
+{
+"indent": 4,
+"anchor": "contour-and-hole",
+"en": "Contour and Hole"
+},
+{
+"indent": 4,
+"anchor": "painted-only",
+"en": "Painted Only"
+},
+{
+"indent": 4,
+"anchor": "all-walls",
+"en": "All Walls"
+},
+{
+"indent": 4,
+"anchor": "disabled",
+"en": "Disabled"
+},
+{
+"indent": 0,
+"anchor": "fuzzy-skin-generator-mode",
+"en": "Fuzzy Skin Generator Mode"
+},
+{
+"indent": 4,
+"anchor": "displacement",
+"en": "Displacement"
+},
+{
+"indent": 4,
+"anchor": "extrusion",
+"en": "Extrusion"
+},
+{
+"indent": 4,
+"anchor": "combined",
+"en": "Combined"
+},
+{
+"indent": 0,
+"anchor": "noise-type",
+"en": "Noise Type"
+},
+{
+"indent": 4,
+"anchor": "classic",
+"en": "Classic"
+},
+{
+"indent": 4,
+"anchor": "perlin",
+"en": "Perlin"
+},
+{
+"indent": 4,
+"anchor": "billow",
+"en": "Billow"
+},
+{
+"indent": 4,
+"anchor": "ridged-multifractal",
+"en": "Ridged Multifractal"
+},
+{
+"indent": 4,
+"anchor": "voronoi",
+"en": "Voronoi"
+},
+{
+"indent": 4,
+"anchor": "ripple",
+"en": "Ripple"
+},
+{
+"indent": 8,
+"anchor": "ripples-per-layer",
+"en": "Ripples per layer"
+},
+{
+"indent": 8,
+"anchor": "ripple-offset",
+"en": "Ripple offset"
+},
+{
+"indent": 8,
+"anchor": "layers-between-ripple-offset",
+"en": "Layers between ripple offset"
+},
+{
+"indent": 0,
+"anchor": "point-distance",
+"en": "Point distance"
+},
+{
+"indent": 0,
+"anchor": "skin-thickness",
+"en": "Skin thickness"
+},
+{
+"indent": 0,
+"anchor": "skin-feature-size",
+"en": "Skin feature size"
+},
+{
+"indent": 0,
+"anchor": "skin-noise-octaves",
+"en": "Skin Noise Octaves"
+},
+{
+"indent": 0,
+"anchor": "skin-noise-persistence",
+"en": "Skin Noise Persistence"
+},
+{
+"indent": 0,
+"anchor": "apply-fuzzy-skin-to-first-layer",
+"en": "Apply fuzzy skin to first layer"
+},
+{
+"indent": 0,
+"anchor": "credits",
+"en": "Credits"
+}
+]
+],
+"img": [
+"![Fuzzy-skin-Displacement-mode](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-Displacement-mode.png?raw=true)",
+"![Fuzzy-skin-Extrusion-mode](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-Extrusion-mode.png?raw=true)",
+"![Fuzzy-skin-Combined-mode](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-Combined-mode.png?raw=true)",
+"![Fuzzy-skin-classic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-classic.png?raw=true)",
+"![Fuzzy-skin-perlin](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-perlin.png?raw=true)",
+"![Fuzzy-skin-billow](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-billow.png?raw=true)",
+"![Fuzzy-skin-ridged-multifractal](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-ridged-multifractal.png?raw=true)",
+"![Fuzzy-skin-voronoi](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-voronoi.png?raw=true)",
+"![Fuzzy-skin-ripple](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-ripple.png?raw=true)",
+"![Fuzzy-skin-ripple-example](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Fuzzy-skin/Fuzzy-skin-ripple-example.jpg?raw=true)"
+],
+"link": [
+"prepare_paint_on_fuzzy_skin",
+"prepare_paint_on_fuzzy_skin",
+"#painted-only",
+"quality_settings_wall_generator#arachne",
+"https://en.wikipedia.org/wiki/Perlin_noise",
+"https://en.wikipedia.org/wiki/Worley_noise",
+"#layers-between-ripple-offset",
+"#ripple-offset",
+"https://github.com/pi-squared-studio"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Fuzzy Skin",
+"raw": "Fuzzy Skin",
+"id": "fuzzy-skin",
+"alt": "fuzzy-skin"
+},
+{
+"level": 2,
+"en": "Fuzzy Skin Mode",
+"raw": "Fuzzy Skin Mode",
+"id": "fuzzy-skin-mode",
+"alt": "fuzzy-skin-mode"
+},
+{
+"level": 3,
+"en": "Contour",
+"raw": "Contour",
+"id": "contour",
+"alt": "contour"
+},
+{
+"level": 3,
+"en": "Hole",
+"raw": "Hole",
+"id": "hole",
+"alt": "hole"
+},
+{
+"level": 3,
+"en": "Contour and Hole",
+"raw": "Contour and Hole",
+"id": "contour-and-hole",
+"alt": "contour-and-hole"
+},
+{
+"level": 3,
+"en": "Painted Only",
+"raw": "Painted Only",
+"id": "painted-only",
+"alt": "painted-only"
+},
+{
+"level": 3,
+"en": "All Walls",
+"raw": "All Walls",
+"id": "all-walls",
+"alt": "all-walls"
+},
+{
+"level": 3,
+"en": "Disabled",
+"raw": "Disabled",
+"id": "disabled",
+"alt": "disabled"
+},
+{
+"level": 2,
+"en": "Fuzzy Skin Generator Mode",
+"raw": "Fuzzy Skin Generator Mode",
+"id": "fuzzy-skin-generator-mode",
+"alt": "fuzzy-skin-generator-mode"
+},
+{
+"level": 3,
+"en": "Displacement",
+"raw": "Displacement",
+"id": "displacement",
+"alt": "displacement"
+},
+{
+"level": 3,
+"en": "Extrusion",
+"raw": "Extrusion",
+"id": "extrusion",
+"alt": "extrusion"
+},
+{
+"level": 3,
+"en": "Combined",
+"raw": "Combined",
+"id": "combined",
+"alt": "combined"
+},
+{
+"level": 2,
+"en": "Noise Type",
+"raw": "Noise Type",
+"id": "noise-type",
+"alt": "noise-type"
+},
+{
+"level": 3,
+"en": "Classic",
+"raw": "Classic",
+"id": "classic",
+"alt": "classic"
+},
+{
+"level": 3,
+"en": "Perlin",
+"raw": "Perlin",
+"id": "perlin",
+"alt": "perlin"
+},
+{
+"level": 3,
+"en": "Billow",
+"raw": "Billow",
+"id": "billow",
+"alt": "billow"
+},
+{
+"level": 3,
+"en": "Ridged Multifractal",
+"raw": "Ridged Multifractal",
+"id": "ridged-multifractal",
+"alt": "ridged-multifractal"
+},
+{
+"level": 3,
+"en": "Voronoi",
+"raw": "Voronoi",
+"id": "voronoi",
+"alt": "voronoi"
+},
+{
+"level": 3,
+"en": "Ripple",
+"raw": "Ripple",
+"id": "ripple",
+"alt": "ripple"
+},
+{
+"level": 4,
+"en": "Ripples per layer",
+"raw": "Ripples per layer",
+"id": "ripples-per-layer",
+"alt": "ripples-per-layer"
+},
+{
+"level": 4,
+"en": "Ripple offset",
+"raw": "Ripple offset",
+"id": "ripple-offset",
+"alt": "ripple-offset"
+},
+{
+"level": 4,
+"en": "Layers between ripple offset",
+"raw": "Layers between ripple offset",
+"id": "layers-between-ripple-offset",
+"alt": "layers-between-ripple-offset"
+},
+{
+"level": 2,
+"en": "Point distance",
+"raw": "Point distance",
+"id": "point-distance",
+"alt": "point-distance"
+},
+{
+"level": 2,
+"en": "Skin thickness",
+"raw": "Skin thickness",
+"id": "skin-thickness",
+"alt": "skin-thickness"
+},
+{
+"level": 2,
+"en": "Skin feature size",
+"raw": "Skin feature size",
+"id": "skin-feature-size",
+"alt": "skin-feature-size"
+},
+{
+"level": 2,
+"en": "Skin Noise Octaves",
+"raw": "Skin Noise Octaves",
+"id": "skin-noise-octaves",
+"alt": "skin-noise-octaves"
+},
+{
+"level": 2,
+"en": "Skin Noise Persistence",
+"raw": "Skin Noise Persistence",
+"id": "skin-noise-persistence",
+"alt": "skin-noise-persistence"
+},
+{
+"level": 2,
+"en": "Apply fuzzy skin to first layer",
+"raw": "Apply fuzzy skin to first layer",
+"id": "apply-fuzzy-skin-to-first-layer",
+"alt": "apply-fuzzy-skin-to-first-layer"
+},
+{
+"level": 2,
+"en": "Credits",
+"raw": "Credits",
+"id": "credits",
+"alt": "credits"
+}
+],
+"src": "print_settings/others/others_settings_fuzzy_skin.md"
+}

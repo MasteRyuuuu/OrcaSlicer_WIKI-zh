@@ -1,0 +1,5 @@
+H tab = Tab
+G preset = 预设
+G model = 模型 / 型号
+G filament = 耗材丝
+  filament preset = 耗材丝预设

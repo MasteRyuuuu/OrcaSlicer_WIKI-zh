@@ -1,0 +1,9 @@
+{
+  "repo": "https://github.com/OrcaSlicer/OrcaSlicer_WIKI.git",
+  "branch": "main",
+  "commit": "1691ffa575e7af6c1c9ab0ebcfff8cdd3598444c",
+  "date": "2026-11-09",
+  "subject": "Remove the new feature notes for features released in 2.5.0 (#432)",
+  "po_repo": "https://github.com/OrcaSlicer/OrcaSlicer.git",
+  "po_path": "localization/i18n/zh_CN/OrcaSlicer_zh_CN.po"
+}

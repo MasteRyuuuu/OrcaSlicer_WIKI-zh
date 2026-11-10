@@ -1,0 +1,149 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`zaa_enabled`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--zaa-enabled=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`zaa_minimize_perimeter_height`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--zaa-minimize-perimeter-height=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`zaa_min_z`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--zaa-min-z=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`zaa_dont_alternate_fill_direction`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--zaa-dont-alternate-fill-direction=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "minimize-wall-height-angle",
+"en": "Minimize wall height angle"
+},
+{
+"indent": 0,
+"anchor": "minimum-z-height",
+"en": "Minimum z height"
+},
+{
+"indent": 0,
+"anchor": "dont-alternate-fill-direction",
+"en": "Don't alternate fill direction"
+}
+]
+],
+"img": [
+"![z-contouring](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/z-contouring/z-contouring.jpg?raw=true)",
+"![z-contouring](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/z-contouring/z-contouring.gif?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Z Contouring",
+"raw": "Z Contouring",
+"id": "z-contouring",
+"alt": "z-contouring"
+},
+{
+"level": 2,
+"en": "Minimize wall height angle",
+"raw": "Minimize wall height angle",
+"id": "minimize-wall-height-angle",
+"alt": "minimize-wall-height-angle"
+},
+{
+"level": 2,
+"en": "Minimum z height",
+"raw": "Minimum z height",
+"id": "minimum-z-height",
+"alt": "minimum-z-height"
+},
+{
+"level": 2,
+"en": "Don't alternate fill direction",
+"raw": "Don't alternate fill direction",
+"id": "dont-alternate-fill-direction",
+"alt": "dont-alternate-fill-direction"
+}
+],
+"src": "print_settings/quality/quality_settings_z_contouring.md"
+}

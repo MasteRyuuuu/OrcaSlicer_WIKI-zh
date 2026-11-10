@@ -1,0 +1,297 @@
+{
+"code": [
+[
+"```python",
+"@orca.plugin",
+"class MyPrinterPlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(MyAgent)",
+"```"
+],
+[
+"```python",
+"def bind_detect(self, dev_ip, sec_link, detect):",
+"    detect.dev_id = dev_ip",
+"    detect.dev_name = \"My Printer\"",
+"    return 0",
+"```"
+],
+[
+"```python",
+"# /// script",
+"# [tool.orcaslicer.plugin]",
+"# name = \"Example Printer Agent\"",
+"# description = \"Minimal printer-agent capability.\"",
+"# author = \"Your Name\"",
+"# version = \"1.0.0\"",
+"# ///",
+"import json",
+"import orca",
+"",
+"pa = orca.printer_agent",
+"",
+"",
+"class ExampleAgent(pa.PrinterAgentBase):",
+"    def __init__(self):",
+"        super().__init__()",
+"        self.callbacks = {}",
+"        self.selected = \"\"",
+"        self.params = None",
+"",
+"    def get_name(self):",
+"        return \"Example Printer Agent\"",
+"",
+"    def get_agent_info(self):",
+"        return pa.AgentInfo(\"example_agent\", \"Example\", \"1.0.0\", \"Example printer agent\")",
+"",
+"    # Host callbacks: store them, they may be None",
+"    def _store(self, key, fn):",
+"        self.callbacks[key] = fn",
+"        return 0",
+"",
+"    def set_on_ssdp_msg_fn(self, fn): return self._store(\"ssdp\", fn)",
+"    def set_on_local_connect_fn(self, fn): return self._store(\"local_connect\", fn)",
+"    def set_on_local_message_fn(self, fn): return self._store(\"local_message\", fn)",
+"    def set_on_message_fn(self, fn): return self._store(\"message\", fn)",
+"    def set_on_user_message_fn(self, fn): return self._store(\"user_message\", fn)",
+"    def set_on_printer_connected_fn(self, fn): return self._store(\"printer_connected\", fn)",
+"    def set_on_subscribe_failure_fn(self, fn): return self._store(\"subscribe_failure\", fn)",
+"    def set_server_callback(self, fn): return self._store(\"server_error\", fn)",
+"    def set_queue_on_main_fn(self, fn): return self._store(\"queue_on_main\", fn)",
+"",
+"    def _emit(self, key, *args):",
+"        fn = self.callbacks.get(key)",
+"        if fn is not None:",
+"            fn(*args)",
+"",
+"    # Discovery and selection",
+"    def start_discovery(self, start, sending):",
+"        if start:",
+"            self._emit(\"ssdp\", json.dumps({",
+"                \"dev_id\": \"192.168.1.50\", \"dev_name\": \"Example\", \"dev_ip\": \"192.168.1.50\",",
+"                \"dev_type\": \"\", \"dev_signal\": \"\", \"connect_type\": \"lan\", \"bind_state\": \"free\",",
+"            }))",
+"        return True",
+"",
+"    def get_user_selected_machine(self):",
+"        return self.selected",
+"",
+"    def set_user_selected_machine(self, dev_id):",
+"        self.selected = dev_id",
+"        return 0",
+"",
+"    # Connection",
+"    def connect_printer(self, params):",
+"        self.params = params   # TODO: open the connection (on your own thread if slow)",
+"        self._emit(\"local_connect\", 0, params.dev_id, \"\")",
+"        return 0",
+"",
+"    def disconnect_printer(self):",
+"        self.params = None     # TODO: close the connection, stop threads",
+"        return 0",
+"",
+"    def send_message(self, dev_id, json_str, qos, flag):",
+"        return -7010           # no cloud path",
+"",
+"    def send_message_to_printer(self, dev_id, json_str, qos, flag):",
+"        return -7010           # TODO: translate the JSON command",
+"",
+"    # Jobs",
+"    def start_send_gcode_to_sdcard(self, params, update_fn, cancel_fn, wait_fn):",
+"        return 0               # TODO: upload params.filename (also used for \"verify_job\")",
+"",
+"    def start_local_print(self, params, update_fn, cancel_fn):",
+"        return 0               # TODO: upload params.filename and start it",
+"",
+"    def start_print(self, params, update_fn, cancel_fn, wait_fn):",
+"        return -7010",
+"",
+"    def start_local_print_with_record(self, params, update_fn, cancel_fn, wait_fn):",
+"        return self.start_local_print(params, update_fn, cancel_fn)",
+"",
+"    def start_sdcard_print(self, params, update_fn, cancel_fn):",
+"        return -7010",
+"",
+"    # Binding / certificates: nothing to do for this printer",
+"    def bind_detect(self, dev_ip, sec_link, detect):",
+"        detect.dev_id = dev_ip",
+"        detect.dev_name = \"Example\"",
+"        detect.connect_type = \"lan\"",
+"        detect.bind_state = \"free\"",
+"        return 0",
+"",
+"    def check_cert(self): return 0",
+"    def ping_bind(self, ping_code): return 0",
+"    def bind(self, dev_ip, dev_id, dev_model, sec_link, timezone, improved, update_fn): return 0",
+"    def unbind(self, dev_id): return 0",
+"    def request_bind_ticket(self): return (0, \"\")",
+"",
+"",
+"@orca.plugin",
+"class ExamplePrinterPlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(ExampleAgent)",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "enabling-printer-agents",
+"en": "Enabling printer agents"
+},
+{
+"indent": 0,
+"anchor": "registration-and-agent-ids",
+"en": "Registration and agent IDs"
+},
+{
+"indent": 0,
+"anchor": "methods",
+"en": "Methods"
+},
+{
+"indent": 0,
+"anchor": "data-types",
+"en": "Data types"
+},
+{
+"indent": 0,
+"anchor": "host-callbacks",
+"en": "Host callbacks"
+},
+{
+"indent": 0,
+"anchor": "threading",
+"en": "Threading"
+},
+{
+"indent": 0,
+"anchor": "error-handling",
+"en": "Error handling"
+},
+{
+"indent": 0,
+"anchor": "lifecycle",
+"en": "Lifecycle"
+},
+{
+"indent": 0,
+"anchor": "minimal-example",
+"en": "Minimal example"
+}
+]
+],
+"img": [],
+"link": [
+"#methods",
+"printer_basic_information_advanced",
+"registry",
+"#lifecycle",
+"#host-callbacks",
+"#registration-and-agent-ids",
+"host_ui",
+"plugin_audit_hook",
+"plugin_development#how-errors-are-surfaced",
+"lifecycle_events",
+"registry",
+"plugin_development"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Printer Agent",
+"raw": "Printer Agent",
+"id": "printer-agent",
+"alt": "printer-agent"
+},
+{
+"level": 2,
+"en": "Enabling printer agents",
+"raw": "Enabling printer agents",
+"id": "enabling-printer-agents",
+"alt": "enabling-printer-agents"
+},
+{
+"level": 2,
+"en": "Registration and agent IDs",
+"raw": "Registration and agent IDs",
+"id": "registration-and-agent-ids",
+"alt": "registration-and-agent-ids"
+},
+{
+"level": 2,
+"en": "Methods",
+"raw": "Methods",
+"id": "methods",
+"alt": "methods"
+},
+{
+"level": 3,
+"en": "Core methods",
+"raw": "Core methods",
+"id": "core-methods",
+"alt": "core-methods"
+},
+{
+"level": 3,
+"en": "Optional methods",
+"raw": "Optional methods",
+"id": "optional-methods",
+"alt": "optional-methods"
+},
+{
+"level": 3,
+"en": "Not available to Python",
+"raw": "Not available to Python",
+"id": "not-available-to-python",
+"alt": "not-available-to-python"
+},
+{
+"level": 2,
+"en": "Data types",
+"raw": "Data types",
+"id": "data-types",
+"alt": "data-types"
+},
+{
+"level": 2,
+"en": "Host callbacks",
+"raw": "Host callbacks",
+"id": "host-callbacks",
+"alt": "host-callbacks"
+},
+{
+"level": 2,
+"en": "Threading",
+"raw": "Threading",
+"id": "threading",
+"alt": "threading"
+},
+{
+"level": 2,
+"en": "Error handling",
+"raw": "Error handling",
+"id": "error-handling",
+"alt": "error-handling"
+},
+{
+"level": 2,
+"en": "Lifecycle",
+"raw": "Lifecycle",
+"id": "lifecycle",
+"alt": "lifecycle"
+},
+{
+"level": 2,
+"en": "Minimal example",
+"raw": "Minimal example",
+"id": "minimal-example",
+"alt": "minimal-example"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/printer_agent.md"
+}

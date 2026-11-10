@@ -1,0 +1,238 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_printer`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-printer=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_printer_infinite_y`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-printer-infinite-y=1`."
+}
+],
+[
+{
+"label": "Type",
+"target": "option_type",
+"value": "`belt_slice_rotation_angle` (Float), `belt_slice_rotation` (Choice: none, x, y, z)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-slice-rotation-angle=45` (`belt_slice_rotation_angle` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_slice_rotation_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-slice-rotation-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_slice_rotation`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`none, x, y, z`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-slice-rotation=none`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`belt_support_floor_offset`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-support-floor-offset=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "enable-belt-printing",
+"en": "Enable belt printing"
+},
+{
+"indent": 0,
+"anchor": "infinite-y-axis",
+"en": "Infinite Y axis"
+},
+{
+"indent": 0,
+"anchor": "belt-tilt",
+"en": "Belt tilt"
+},
+{
+"indent": 4,
+"anchor": "tilt-angle",
+"en": "Tilt angle"
+},
+{
+"indent": 4,
+"anchor": "tilt-axis",
+"en": "Tilt axis"
+},
+{
+"indent": 0,
+"anchor": "support-floor-z-offset",
+"en": "Support floor Z offset"
+}
+]
+],
+"img": [
+"![belt_printer_settings_group](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_printer_settings_group.png?raw=true)",
+"![belt_printer_settings_developer](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_printer_settings_developer.png?raw=true)"
+],
+"link": [
+"#enable-belt-printing",
+"belt_printing",
+"#tilt-angle",
+"#belt-tilt",
+"others_settings_brim",
+"printer_multimaterial_wipe_tower#belt-purge-tower",
+"belt_printing#features-that-are-not-available",
+"printer_basic_information_printable_space#printable-height",
+"printer_basic_information_machine_frame_transforms#machine-frame-tilt",
+"printer_basic_information_advanced#build-plate-tilt",
+"printer_multimaterial_wipe_tower#belt-purge-tower",
+"prepare_auto_arrange",
+"option_mode"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Belt Printer",
+"raw": "Belt Printer",
+"id": "belt-printer",
+"alt": "belt-printer"
+},
+{
+"level": 2,
+"en": "Enable belt printing",
+"raw": "Enable belt printing",
+"id": "enable-belt-printing",
+"alt": "enable-belt-printing"
+},
+{
+"level": 2,
+"en": "Infinite Y axis",
+"raw": "Infinite Y axis",
+"id": "infinite-y-axis",
+"alt": "infinite-y-axis"
+},
+{
+"level": 2,
+"en": "Belt tilt",
+"raw": "Belt tilt",
+"id": "belt-tilt",
+"alt": "belt-tilt"
+},
+{
+"level": 3,
+"en": "Tilt angle",
+"raw": "Tilt angle",
+"id": "tilt-angle",
+"alt": "tilt-angle"
+},
+{
+"level": 3,
+"en": "Tilt axis",
+"raw": "Tilt axis",
+"id": "tilt-axis",
+"alt": "tilt-axis"
+},
+{
+"level": 2,
+"en": "Support floor Z offset",
+"raw": "Support floor Z offset",
+"id": "support-floor-z-offset",
+"alt": "support-floor-z-offset"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_belt_printer.md"
+}

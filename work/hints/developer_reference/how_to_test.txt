@@ -1,0 +1,12 @@
+G model = 模型 / 型号
+G filament = 耗材丝
+G plugin = 插件
+G line = 线 / 直线
+G top = 顶部 / 俯视
+G support = 支撑
+G part = 零件
+  slicing state = 切片状态
+  slicing pipeline = 切片流水线
+  shared by = 分享
+  printer parts = 打印机零件
+  print settings = 打印设置

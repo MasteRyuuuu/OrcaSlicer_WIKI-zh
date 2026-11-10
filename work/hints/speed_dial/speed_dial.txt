@@ -1,0 +1,15 @@
+H speed dial = 快捷面板
+H preferences = 偏好设置
+H video = 录像
+H plugins = 插件
+G inner wall = 内墙
+G top = 顶部 / 俯视
+G slice = 切片
+G plugin = 插件
+G plate = 盘
+G help = 帮助
+  open the speed dial = 打开快捷面板
+  open speed dial = 打开快捷面板
+  recent actions = 最近的操作
+  video guide = 视频指南
+  process settings = 工艺设置

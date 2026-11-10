@@ -1,0 +1,889 @@
+{
+"code": [
+[
+"```c++",
+"0,90",
+"```"
+],
+[
+"```c++",
+"0,45,90",
+"```"
+],
+[
+"```c++",
+"0,60,120,180",
+"```"
+],
+[
+"```text",
+"5 or 5#1    # Insert 1 solid layer every 5 layers",
+"5#          # Same as 5#1",
+"10#2        # Insert 2 consecutive solid layers every 10 layers",
+"```"
+],
+[
+"```text",
+"1,7,9       # Insert solid layers at layers 1, 7, and 9",
+"5,15,25     # Insert solid layers at layers 5, 15, and 25",
+"5,9#2,18    # Insert at 5; at 9 and 10 (because #2); and at 18",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_density`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-density=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`fill_multiline`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--fill-multiline=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`infill_direction`, `solid_infill_direction`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-direction=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`symmetric_infill_y_axis`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--symmetric-infill-y-axis=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`infill_wall_overlap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-wall-overlap=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gap_fill_target`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`everywhere, topbottom, nowhere`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gap-fill-target=everywhere`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filter_out_gap_fill`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filter-out-gap-fill=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`infill_anchor_max`, `infill_anchor`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-anchor-max=20%` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_solid_infill_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`monotonic, monotonicline, rectilinear, alignedrectilinear, concentric, spiralinset, hilbertcurve, archimedeanchords, octagramspiral`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-solid-infill-pattern=monotonic`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extra_solid_infills`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extra-solid-infills=value`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`rectilinear, alignedrectilinear, zigzag, crosszag, lockedzag, line, grid, triangles, tri-hexagon, cubic, adaptivecubic, quartercubic, supportcubic, lightning, honeycomb, 3dhoneycomb, lateral-honeycomb, lateral-lattice, crosshatch, tpmsd, tpmsfk, gyroid, concentric, hilbertcurve, archimedeanchords, octagramspiral`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-pattern=rectilinear`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_smooth_factor`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-smooth-factor=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_layer_direction`, `bottom_layer_direction`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-layer-direction=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`separated_infills`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--separated-infills=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "sparse-infill-density",
+"en": "Sparse infill density"
+},
+{
+"indent": 0,
+"anchor": "fill-multiline",
+"en": "Fill Multiline"
+},
+{
+"indent": 4,
+"anchor": "use-cases",
+"en": "Use cases"
+},
+{
+"indent": 4,
+"anchor": "print-time",
+"en": "Print time"
+},
+{
+"indent": 4,
+"anchor": "strategy",
+"en": "Strategy"
+},
+{
+"indent": 8,
+"anchor": "classic-strategy",
+"en": "Classic Strategy"
+},
+{
+"indent": 8,
+"anchor": "non-crossing-strategy",
+"en": "Non-Crossing Strategy"
+},
+{
+"indent": 0,
+"anchor": "direction-and-rotation",
+"en": "Direction and Rotation"
+},
+{
+"indent": 4,
+"anchor": "direction",
+"en": "Direction"
+},
+{
+"indent": 4,
+"anchor": "rotation",
+"en": "Rotation"
+},
+{
+"indent": 4,
+"anchor": "symmetric-infill-y-axis",
+"en": "Symmetric infill Y axis"
+},
+{
+"indent": 0,
+"anchor": "infill-wall-overlap",
+"en": "Infill Wall Overlap"
+},
+{
+"indent": 0,
+"anchor": "apply-gap-fill",
+"en": "Apply gap fill"
+},
+{
+"indent": 0,
+"anchor": "filter-out-tiny-gaps",
+"en": "Filter out tiny gaps"
+},
+{
+"indent": 0,
+"anchor": "anchor",
+"en": "Anchor"
+},
+{
+"indent": 0,
+"anchor": "internal-solid-infill",
+"en": "Internal Solid Infill"
+},
+{
+"indent": 0,
+"anchor": "extra-solid-infill",
+"en": "Extra Solid Infill"
+},
+{
+"indent": 4,
+"anchor": "interval-pattern",
+"en": "Interval Pattern"
+},
+{
+"indent": 4,
+"anchor": "explicit-layer-list",
+"en": "Explicit Layer List"
+},
+{
+"indent": 0,
+"anchor": "sparse-infill-pattern",
+"en": "Sparse Infill Pattern"
+},
+{
+"indent": 0,
+"anchor": "sparse-infill-smooth-factor",
+"en": "Sparse Infill Smooth Factor"
+},
+{
+"indent": 4,
+"anchor": "how-rounded-corners-are-printed",
+"en": "How rounded corners are printed"
+},
+{
+"indent": 4,
+"anchor": "print-time-and-material",
+"en": "Print time and material"
+},
+{
+"indent": 4,
+"anchor": "best-smooth-factor-for-speed",
+"en": "Best smooth factor for speed"
+},
+{
+"indent": 4,
+"anchor": "supported-patterns",
+"en": "Supported patterns"
+},
+{
+"indent": 4,
+"anchor": "corners-left-sharp",
+"en": "Corners left sharp"
+},
+{
+"indent": 0,
+"anchor": "top-bottom-direction",
+"en": "Top-Bottom Direction"
+},
+{
+"indent": 0,
+"anchor": "separated-infills",
+"en": "Separated Infills"
+},
+{
+"indent": 0,
+"anchor": "credits",
+"en": "Credits"
+}
+]
+],
+"img": [
+"![multiline-infill](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/multiline-infill.png?raw=true)",
+"![infill-multiline-aesthetic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-multiline-aesthetic.gif?raw=true)",
+"![infill-multiline-closed-loops](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-multiline-closed-loops.png?raw=true)",
+"![infill-multiline-non-crossing](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-multiline-non-crossing.gif?raw=true)",
+"![fill-direction](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/fill-direction.png?raw=true)",
+"![fill-rotation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/fill-rotation.png?raw=true)",
+"![symmetric_infill_y_axis](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/symmetric_infill_y_axis.png?raw=true)",
+"![InfillWallOverlapOff](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/InfillWallOverlapOff.svg?raw=true)",
+"![InfillWallOverlapOn](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/InfillWallOverlapOn.svg?raw=true)",
+"![InfillAnchorOff](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/InfillAnchorOff.png?raw=true)",
+"![InfillAnchorOn](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/InfillAnchorOn.png?raw=true)",
+"![extra-solid-infill](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/extra-solid-infill.gif?raw=true)",
+"![infill-smooth-factor-0](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-smooth-factor-0.png?raw=true)",
+"![infill-smooth-factor-50](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-smooth-factor-50.png?raw=true)",
+"![infill-smooth-factor-100](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/infill-smooth-factor-100.png?raw=true)",
+"![top-direction](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/directions/top-direction.png?raw=true)",
+"![separated-infills](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/separated-infills.png?raw=true)",
+"![separated_infills_off](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/separated_infills_off.png?raw=true)",
+"![separated_infills_on](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/separated_infills_on.png?raw=true)"
+],
+"link": [
+"strength_settings_patterns",
+"#sparse-infill-pattern",
+"#sparse-infill-density",
+"strength_settings_patterns_quick_reference",
+"strength_settings_patterns",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#lightning",
+"strength_settings_patterns#multiline",
+"strength_settings_patterns#gyroid",
+"strength_settings_patterns#tpms-d",
+"strength_settings_patterns#tpms-fk",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#3d-honeycomb",
+"strength_settings_patterns#hilbert-curve",
+"#non-crossing-strategy",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#adaptive-cubic",
+"strength_settings_patterns#support-cubic",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns",
+"others_settings_g_code_output#reduce-infill-retraction",
+"strength_settings_advanced#infill-combination",
+"#sparse-infill-smooth-factor",
+"#print-time-and-material",
+"#how-rounded-corners-are-printed",
+"strength_settings_patterns#gyroid",
+"strength_settings_patterns#gyroid",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#adaptive-cubic",
+"strength_settings_patterns#support-cubic",
+"strength_settings_patterns#3d-honeycomb",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/nightly-builds",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#adaptive-cubic",
+"strength_settings_patterns#support-cubic",
+"strength_settings_patterns#adaptive-cubic",
+"strength_settings_patterns#support-cubic",
+"#rotation",
+"strength_settings_advanced#align-directions-to-model",
+"#direction",
+"strength_settings_infill_rotation_template_metalanguage",
+"strength_settings_patterns",
+"strength_settings_patterns#zig-zag",
+"strength_settings_patterns#cross-zag",
+"strength_settings_patterns#locked-zag",
+"quality_settings_wall_generator#classic",
+"quality_settings_wall_generator#arachne",
+"#filter-out-tiny-gaps",
+"quality_settings_wall_generator#classic",
+"quality_settings_wall_generator#arachne",
+"quality_settings_wall_generator#classic",
+"#fill-multiline",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#line",
+"strength_settings_advanced#detect-narrow-internal-solid-infill",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns",
+"strength_settings_patterns#octagram-spiral",
+"quality_settings_precision#resolution",
+"strength_settings_patterns#hilbert-curve",
+"quality_settings_precision#resolution",
+"strength_settings_patterns_quick_reference",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_patterns#3d-honeycomb",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#hilbert-curve",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#cross-hatch",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#lightning",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_patterns#hilbert-curve",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#hilbert-curve",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#triangles",
+"quality_settings_precision#resolution",
+"strength_settings_patterns",
+"strength_settings_patterns#hilbert-curve",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_patterns#lightning",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#3d-honeycomb",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#cross-hatch",
+"#fill-multiline",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#quarter-cubic",
+"strength_settings_patterns#grid",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#tri-hexagon",
+"strength_settings_patterns#cubic",
+"strength_settings_patterns#quarter-cubic",
+"#non-crossing-strategy",
+"strength_settings_patterns#lightning",
+"strength_settings_patterns#3d-honeycomb",
+"strength_settings_patterns#cross-hatch",
+"strength_settings_patterns#triangles",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#lightning",
+"#fill-multiline",
+"#direction",
+"strength_settings_top_bottom_shells#center-surface-pattern-on",
+"strength_settings_patterns",
+"#rotation",
+"strength_settings_patterns#honeycomb",
+"strength_settings_patterns#3d-honeycomb",
+"strength_settings_patterns#cross-hatch",
+"strength_settings_patterns#gyroid",
+"strength_settings_patterns#tpms-d",
+"strength_settings_patterns#tpms-fk",
+"strength_settings_patterns#adaptive-cubic",
+"strength_settings_patterns#support-cubic",
+"strength_settings_patterns#lightning",
+"strength_settings_patterns#concentric",
+"#fill-multiline",
+"https://github.com/RF47",
+"https://github.com/IanAlexis"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Infill",
+"raw": "Infill",
+"id": "infill",
+"alt": "infill"
+},
+{
+"level": 2,
+"en": "Sparse infill density",
+"raw": "Sparse infill density",
+"id": "sparse-infill-density",
+"alt": "sparse-infill-density"
+},
+{
+"level": 2,
+"en": "Fill Multiline",
+"raw": "Fill Multiline",
+"id": "fill-multiline",
+"alt": "fill-multiline"
+},
+{
+"level": 3,
+"en": "Use cases",
+"raw": "Use cases",
+"id": "use-cases",
+"alt": "use-cases"
+},
+{
+"level": 3,
+"en": "Print time",
+"raw": "Print time",
+"id": "print-time",
+"alt": "print-time"
+},
+{
+"level": 3,
+"en": "Strategy",
+"raw": "Strategy",
+"id": "strategy",
+"alt": "strategy"
+},
+{
+"level": 4,
+"en": "Classic Strategy",
+"raw": "Classic Strategy",
+"id": "classic-strategy",
+"alt": "classic-strategy"
+},
+{
+"level": 4,
+"en": "Non-Crossing Strategy",
+"raw": "Non-Crossing Strategy",
+"id": "non-crossing-strategy",
+"alt": "non-crossing-strategy"
+},
+{
+"level": 2,
+"en": "Direction and Rotation",
+"raw": "Direction and Rotation",
+"id": "direction-and-rotation",
+"alt": "direction-and-rotation"
+},
+{
+"level": 3,
+"en": "Direction",
+"raw": "Direction",
+"id": "direction",
+"alt": "direction"
+},
+{
+"level": 3,
+"en": "Rotation",
+"raw": "Rotation",
+"id": "rotation",
+"alt": "rotation"
+},
+{
+"level": 3,
+"en": "Symmetric infill Y axis",
+"raw": "Symmetric infill Y axis",
+"id": "symmetric-infill-y-axis",
+"alt": "symmetric-infill-y-axis"
+},
+{
+"level": 2,
+"en": "Infill Wall Overlap",
+"raw": "Infill Wall Overlap",
+"id": "infill-wall-overlap",
+"alt": "infill-wall-overlap"
+},
+{
+"level": 2,
+"en": "Apply gap fill",
+"raw": "Apply gap fill",
+"id": "apply-gap-fill",
+"alt": "apply-gap-fill"
+},
+{
+"level": 2,
+"en": "Filter out tiny gaps",
+"raw": "Filter out tiny gaps",
+"id": "filter-out-tiny-gaps",
+"alt": "filter-out-tiny-gaps"
+},
+{
+"level": 2,
+"en": "Anchor",
+"raw": "Anchor",
+"id": "anchor",
+"alt": "anchor"
+},
+{
+"level": 2,
+"en": "Internal Solid Infill",
+"raw": "Internal Solid Infill",
+"id": "internal-solid-infill",
+"alt": "internal-solid-infill"
+},
+{
+"level": 2,
+"en": "Extra Solid Infill",
+"raw": "Extra Solid Infill",
+"id": "extra-solid-infill",
+"alt": "extra-solid-infill"
+},
+{
+"level": 3,
+"en": "Interval Pattern",
+"raw": "Interval Pattern",
+"id": "interval-pattern",
+"alt": "interval-pattern"
+},
+{
+"level": 3,
+"en": "Explicit Layer List",
+"raw": "Explicit Layer List",
+"id": "explicit-layer-list",
+"alt": "explicit-layer-list"
+},
+{
+"level": 2,
+"en": "Sparse Infill Pattern",
+"raw": "Sparse Infill Pattern",
+"id": "sparse-infill-pattern",
+"alt": "sparse-infill-pattern"
+},
+{
+"level": 2,
+"en": "Sparse Infill Smooth Factor",
+"raw": "Sparse Infill Smooth Factor",
+"id": "sparse-infill-smooth-factor",
+"alt": "sparse-infill-smooth-factor"
+},
+{
+"level": 3,
+"en": "How rounded corners are printed",
+"raw": "How rounded corners are printed",
+"id": "how-rounded-corners-are-printed",
+"alt": "how-rounded-corners-are-printed"
+},
+{
+"level": 3,
+"en": "Print time and material",
+"raw": "Print time and material",
+"id": "print-time-and-material",
+"alt": "print-time-and-material"
+},
+{
+"level": 3,
+"en": "Best smooth factor for speed",
+"raw": "Best smooth factor for speed",
+"id": "best-smooth-factor-for-speed",
+"alt": "best-smooth-factor-for-speed"
+},
+{
+"level": 3,
+"en": "Supported patterns",
+"raw": "Supported patterns",
+"id": "supported-patterns",
+"alt": "supported-patterns"
+},
+{
+"level": 3,
+"en": "Corners left sharp",
+"raw": "Corners left sharp",
+"id": "corners-left-sharp",
+"alt": "corners-left-sharp"
+},
+{
+"level": 2,
+"en": "Top-Bottom Direction",
+"raw": "Top-Bottom Direction",
+"id": "top-bottom-direction",
+"alt": "top-bottom-direction"
+},
+{
+"level": 2,
+"en": "Separated Infills",
+"raw": "Separated Infills",
+"id": "separated-infills",
+"alt": "separated-infills"
+},
+{
+"level": 2,
+"en": "Credits",
+"raw": "Credits",
+"id": "credits",
+"alt": "credits"
+}
+],
+"src": "print_settings/strength/strength_settings_infill.md"
+}

@@ -1,0 +1,171 @@
+{
+"code": [
+[
+"```pwsh",
+"git clone https://github.com/OrcaSlicer/OrcaSlicer && cd OrcaSlicer && ./scripts/DockerBuild.sh && ./scripts/DockerRun.sh",
+"```"
+],
+[
+"   ```pwsh",
+"   ./build_linux.sh -u",
+"   ```"
+],
+[
+"   ```pwsh",
+"   ./build_linux.sh -d",
+"   ```"
+],
+[
+"   ```pwsh",
+"   ./build_linux.sh -st",
+"   ```"
+],
+[
+"   ```pwsh",
+"   ./build_linux.sh -i",
+"   ```"
+],
+[
+"   ```pwsh",
+"   ./build_linux.sh -dsti",
+"   ```"
+],
+[
+"```bash",
+"./build_linux.sh -s -- -DCMAKE_CXX_FLAGS=\"-O2 -march=native\"",
+"./build_linux.sh -s -- -DCMAKE_C_COMPILER=gcc-14 -DCMAKE_CXX_COMPILER=g++-14",
+"./build_linux.sh -s -- -DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=mold -DCMAKE_SHARED_LINKER_FLAGS=-fuse-ld=mold",
+"./build_linux.sh -g -st -- -DSLIC3R_PCH=OFF",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "using-docker",
+"en": "Using Docker"
+},
+{
+"indent": 4,
+"anchor": "docker-dependencies",
+"en": "Docker Dependencies"
+},
+{
+"indent": 4,
+"anchor": "docker-instructions",
+"en": "Docker Instructions"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting",
+"en": "Troubleshooting"
+},
+{
+"indent": 0,
+"anchor": "linux-build",
+"en": "Linux Build"
+},
+{
+"indent": 4,
+"anchor": "dependencies",
+"en": "Dependencies"
+},
+{
+"indent": 8,
+"anchor": "common-dependencies-across-distributions",
+"en": "Common dependencies across distributions"
+},
+{
+"indent": 8,
+"anchor": "additional-dependencies-for-specific-distributions",
+"en": "Additional dependencies for specific distributions"
+},
+{
+"indent": 4,
+"anchor": "linux-instructions",
+"en": "Linux Instructions"
+}
+]
+],
+"img": [],
+"link": [
+"#using-docker",
+"#linux-build"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Build on Linux",
+"raw": "Build on Linux",
+"id": "build-on-linux",
+"alt": "build-on-linux"
+},
+{
+"level": 2,
+"en": "Using Docker",
+"raw": "Using Docker",
+"id": "using-docker",
+"alt": "using-docker"
+},
+{
+"level": 3,
+"en": "Docker Dependencies",
+"raw": "Docker Dependencies",
+"id": "docker-dependencies",
+"alt": "docker-dependencies"
+},
+{
+"level": 3,
+"en": "Docker Instructions",
+"raw": "Docker Instructions",
+"id": "docker-instructions",
+"alt": "docker-instructions"
+},
+{
+"level": 2,
+"en": "Troubleshooting",
+"raw": "Troubleshooting",
+"id": "troubleshooting",
+"alt": "troubleshooting"
+},
+{
+"level": 2,
+"en": "Linux Build",
+"raw": "Linux Build",
+"id": "linux-build",
+"alt": "linux-build"
+},
+{
+"level": 3,
+"en": "Dependencies",
+"raw": "Dependencies",
+"id": "dependencies",
+"alt": "dependencies"
+},
+{
+"level": 4,
+"en": "Common dependencies across distributions",
+"raw": "Common dependencies across distributions",
+"id": "common-dependencies-across-distributions",
+"alt": "common-dependencies-across-distributions"
+},
+{
+"level": 4,
+"en": "Additional dependencies for specific distributions",
+"raw": "Additional dependencies for specific distributions",
+"id": "additional-dependencies-for-specific-distributions",
+"alt": "additional-dependencies-for-specific-distributions"
+},
+{
+"level": 3,
+"en": "Linux Instructions",
+"raw": "Linux Instructions",
+"id": "linux-instructions",
+"alt": "linux-instructions"
+}
+],
+"src": "developer_reference/how_to_build/how_to_build_linux.md"
+}

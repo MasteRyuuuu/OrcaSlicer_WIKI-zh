@@ -1,0 +1,139 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_filament`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-filament=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_filament`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-filament=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_interface_not_for_body`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-interface-not-for-body=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "base",
+"en": "Base"
+},
+{
+"indent": 0,
+"anchor": "interface",
+"en": "Interface"
+},
+{
+"indent": 4,
+"anchor": "avoid-interface-filament-for-base",
+"en": "Avoid interface filament for base"
+},
+{
+"indent": 4,
+"anchor": "interface-filament-transitions",
+"en": "Interface filament transitions"
+}
+]
+],
+"img": [],
+"link": [
+"support_settings_advanced#interface-layers",
+"support_settings_advanced#z-distance"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Support Filament",
+"raw": "Support Filament",
+"id": "support-filament",
+"alt": "support-filament"
+},
+{
+"level": 2,
+"en": "Base",
+"raw": "Base",
+"id": "base",
+"alt": "base"
+},
+{
+"level": 2,
+"en": "Interface",
+"raw": "Interface",
+"id": "interface",
+"alt": "interface"
+},
+{
+"level": 3,
+"en": "Avoid interface filament for base",
+"raw": "Avoid interface filament for base",
+"id": "avoid-interface-filament-for-base",
+"alt": "avoid-interface-filament-for-base"
+},
+{
+"level": 3,
+"en": "Interface filament transitions",
+"raw": "Interface filament transitions",
+"id": "interface-filament-transitions",
+"alt": "interface-filament-transitions"
+}
+],
+"src": "print_settings/support/support_settings_filament.md"
+}

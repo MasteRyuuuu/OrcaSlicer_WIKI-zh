@@ -1,0 +1,373 @@
+[
+ {
+  "level": 1,
+  "title": "V2.4.0",
+  "prose": [
+   "This is the OrcaSlicer V2.4.0 release. It focuses on bug fixes, a smoother Orca Cloud experience, and new features such as sending sliced jobs to the printer as a packaged 3MF. On the Orca Cloud side, you now stay logged in while offline, a sync can no longer overwrite a locally recreated preset, and a notification tells you when a subscribed preset has an update available. Other additions include a new Microsoft Store install channel for Windows (submission currently under review), faster slice-to-preview processing (with the largest gains on Klipper-flavor printers), a skirt-generation overhaul, and filament-list quality-of-life improvements — alongside a broad round of bug fixes (tree supports, calibration, motion-ability settings, and Linux/Flatpak) and refreshed translations, including Chinese.",
+   "**Note:** Everything from the 2.4.0 Alpha and 2.4.0 Beta is included in this build — Orca Cloud, Z Anti-Aliasing (ZAA) contouring, Machine Input Shaping, Optimized Gyroid infill, the redesigned printer selection dialog, Realistic View rendering, the bridging overhaul, expanded per-feature filament assignment, the Troubleshoot Center, native Moonraker and 3DPrinterOS hosts, and Creality K-series support.",
+   "See the [2.4.0 Alpha]({{L1}}) and [2.4.0 Beta]({{L2}}) release notes for details on those."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Send sliced jobs to the printer as a packaged 3MF",
+    "rest": "by @SoftFever in [14238]({{L3}})",
+    "links": [
+     [
+      "14238",
+      "{{L3}}"
+     ]
+    ]
+   },
+   {
+    "title": "Microsoft Store (MSIX) install channel for Windows",
+    "rest": "by @SoftFever in [14142]({{L4}})",
+    "links": [
+     [
+      "14142",
+      "{{L4}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stay logged in to Orca Cloud while offline",
+    "rest": "by @Noisyfox in [14235]({{L5}})",
+    "links": [
+     [
+      "14235",
+      "{{L5}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filament list improvements: count badge, auto-scroll, and auto-unfold",
+    "rest": "by @yw4z in [14158]({{L6}})",
+    "links": [
+     [
+      "14158",
+      "{{L6}}"
+     ]
+    ]
+   },
+   {
+    "title": "Show the active printer name on the collapsed printer header",
+    "rest": "by @yw4z in [14148]({{L7}})",
+    "links": [
+     [
+      "14148",
+      "{{L7}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster slicing by caching G-code post-processing patterns",
+    "rest": "by @grant0013 in [14166]({{L8}})",
+    "links": [
+     [
+      "14166",
+      "{{L8}}"
+     ]
+    ]
+   },
+   {
+    "title": "Notification when subscribed presets have updates available",
+    "rest": "by @peachismomo in [14121]({{L9}})",
+    "links": [
+     [
+      "14121",
+      "{{L9}}"
+     ]
+    ]
+   },
+   {
+    "title": "Open the Troubleshoot Center from the sidebar dev button",
+    "rest": "by @yw4z in [14178]({{L10}})",
+    "links": [
+     [
+      "14178",
+      "{{L10}}"
+     ]
+    ]
+   },
+   {
+    "title": "Allow drop of sunken objects",
+    "rest": "by @vovodroid in [14243]({{L11}})",
+    "links": [
+     [
+      "14243",
+      "{{L11}}"
+     ]
+    ]
+   },
+   {
+    "title": "Skirt overhaul: collision-aware per-object skirts and correct skirt → brim order",
+    "rest": "by @kisslorand in [14130]({{L12}})",
+    "links": [
+     [
+      "14130",
+      "{{L12}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother object shading in the 3D view",
+    "rest": "by @RF47 in [14080]({{L13}})",
+    "links": [
+     [
+      "14080",
+      "{{L13}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Keep non-organic tree supports clear of object surfaces",
+    "rest": "by @kisslorand in [14128]({{L14}})",
+    "links": [
+     [
+      "14128",
+      "{{L14}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preserve the chosen preview view mode on multi-color prints",
+    "rest": "by @malventano in [13625]({{L15}})",
+    "links": [
+     [
+      "13625",
+      "{{L15}}"
+     ]
+    ]
+   },
+   {
+    "title": "Apply motion ability settings correctly on multi-variant printers",
+    "rest": "by @Noisyfox in [14253]({{L16}})",
+    "links": [
+     [
+      "14253",
+      "{{L16}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix unclickable window title-bar buttons on Windows",
+    "rest": "by @Noisyfox in [14139]({{L17}})",
+    "links": [
+     [
+      "14139",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct the top-row tile order in YOLO Perfectionist flow calibration",
+    "rest": "by @raistlin7447 in [14132]({{L18}})",
+    "links": [
+     [
+      "14132",
+      "{{L18}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix print uploads to Creality printers with non-ASCII filenames",
+    "rest": "by @totrytakeoff in [13833]({{L19}})",
+    "links": [
+     [
+      "13833",
+      "{{L19}}"
+     ]
+    ]
+   },
+   {
+    "title": "Don't let cloud sync delete a locally recreated preset",
+    "rest": "by @peachismomo in [14116]({{L20}})",
+    "links": [
+     [
+      "14116",
+      "{{L20}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix source-build dependency installation on Arch Linux",
+    "rest": "by @dielectric-coder in [14171]({{L21}})",
+    "links": [
+     [
+      "14171",
+      "{{L21}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Flatpak config migration from older installs",
+    "rest": "by @SoftFever in [3ffb958]({{L22}})",
+    "links": [
+     [
+      "3ffb958",
+      "{{L22}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Elegoo Centauri Carbon 2",
+    "rest": "layer-progress G-code fix, plus restored compatibility for renamed Elegoo Giga presets and system filaments by @wujie-elegoo in [14136]({{L23}}). Fixes #14129.",
+    "links": [
+     [
+      "14136",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "QIDI Q2",
+    "rest": "start G-code update that fixes a bed collision at the end of the purge line by @ianalexis in [14111]({{L24}})",
+    "links": [
+     [
+      "14111",
+      "{{L24}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality K1 / K2 series",
+    "rest": "start G-code update — normalizes the K1 variants and adds the marker newer K2 firmware expects to avoid a print-time warning by @hamham999 in [14118]({{L25}})",
+    "links": [
+     [
+      "14118",
+      "{{L25}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality filament",
+    "rest": "volumetric speed correction to match current CrealityPrint values by @hamham999 in [14237]({{L26}})",
+    "links": [
+     [
+      "14237",
+      "{{L26}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [],
+  "items": [
+   {
+    "title": "German (de)",
+    "rest": "translation updates by @hliebscher in [14135]({{L27}}) and [14201]({{L28}})",
+    "links": [
+     [
+      "14135",
+      "{{L27}}"
+     ],
+     [
+      "14201",
+      "{{L28}}"
+     ]
+    ]
+   },
+   {
+    "title": "French (fr)",
+    "rest": "translation completed, with untranslated runtime strings fixed and previously hardcoded strings extracted for translation by @foXaCe in [14164]({{L29}})",
+    "links": [
+     [
+      "14164",
+      "{{L29}}"
+     ]
+    ]
+   },
+   {
+    "title": "Spanish (es)",
+    "rest": "translation update, plus reworded bridge-related tooltips by @ianalexis in [14165]({{L30}})",
+    "links": [
+     [
+      "14165",
+      "{{L30}}"
+     ]
+    ]
+   },
+   {
+    "title": "Brazilian Portuguese (pt-BR)",
+    "rest": "translation improvements by @afmenez in [14252]({{L31}})",
+    "links": [
+     [
+      "14252",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "Czech (cs)",
+    "rest": "translation improvements by @jakubhencl in [13666]({{L32}})",
+    "links": [
+     [
+      "13666",
+      "{{L32}}"
+     ]
+    ]
+   },
+   {
+    "title": "Chinese (zh_CN, zh_TW)",
+    "rest": "translation updates by @SoftFever in [927c5ef]({{L33}})",
+    "links": [
+     [
+      "927c5ef",
+      "{{L33}}"
+     ]
+    ]
+   },
+   {
+    "title": "Locale catalog error fixes",
+    "rest": "across the bundled languages by @SoftFever in [81951fd]({{L34}})",
+    "links": [
+     [
+      "81951fd",
+      "{{L34}}"
+     ]
+    ]
+   },
+   {
+    "title": "English UI string consistency fixes",
+    "rest": "(capitalization, \"G-code\" hyphenation, and grammar) by @afmenez in [14047]({{L35}})",
+    "links": [
+     [
+      "14047",
+      "{{L35}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L36}}\">{{I22}}</a>",
+   "<a href=\"{{L37}}\">{{I23}}</a>"
+  ],
+  "items": []
+ }
+]

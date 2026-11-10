@@ -1,0 +1,12 @@
+H change extrusion role g-code = 挤出类型更换G-code
+H filament start g-code = 耗材丝起始G-code
+H filament end g-code = 耗材丝结束G-code
+G extrusion role = 挤出类型
+G filament = 耗材丝
+G nozzle = 喷嘴
+  printer settings = 打印机设置
+  material settings = 材料设置
+  custom g-code = 自定义G-code
+  start g-code = 起始G-code
+  process settings = 工艺设置
+  end g-code = 结尾G-code

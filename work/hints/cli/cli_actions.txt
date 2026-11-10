@@ -1,0 +1,13 @@
+H slicing = 正在切片
+H export = 导出
+G model = 模型 / 型号
+G plate = 盘
+G slice = 切片
+G filament = 耗材丝
+G help = 帮助
+G instance = 实例
+  export slicing data = 导出切片数据
+  data directory = 数据目录
+  per object = 按对象
+  filament settings = 耗材丝设置
+  all plates = 所有盘

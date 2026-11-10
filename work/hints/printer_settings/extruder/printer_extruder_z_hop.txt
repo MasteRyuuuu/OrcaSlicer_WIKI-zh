@@ -1,0 +1,13 @@
+H only lift z above = 仅在高度以上抬Z
+H only lift z below = 仅在高度以下抬Z
+H z-hop type = Z抬升类型
+H traveling angle = 空驶抬高角度
+H z-hop height = Z抬升高度
+H on surfaces = 仅表面抬Z
+G nozzle = 喷嘴
+G retraction = 回抽
+G travel = 空驶
+G plate = 盘
+G pattern = 图案 / 阵列
+G overhang = 悬垂
+G help = 帮助

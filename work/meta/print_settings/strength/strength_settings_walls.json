@@ -1,0 +1,135 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_loops`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-loops=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`alternate_extra_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--alternate-extra-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`detect_thin_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--detect-thin-wall=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "wall-loops",
+"en": "Wall loops"
+},
+{
+"indent": 0,
+"anchor": "alternate-extra-wall",
+"en": "Alternate extra wall"
+},
+{
+"indent": 0,
+"anchor": "detect-thin-wall",
+"en": "Detect thin wall"
+}
+]
+],
+"img": [
+"<img alt=\"makers-muse-walls-strength\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/video/makers-muse-walls-strength.png?raw=true\">",
+"![walls](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/walls/walls.png?raw=true)",
+"![walls-small-detect-thin-off](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/walls/walls-small-detect-thin-off.png?raw=true)",
+"![walls-small-detect-thin-on](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/walls/walls-small-detect-thin-on.png?raw=true)",
+"![walls-big-detect-thin-off-on](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/walls/walls-big-detect-thin-off-on.png?raw=true)"
+],
+"link": [
+"strength_settings_patterns#lightning",
+"strength_settings_advanced#ensure-vertical-shell-thickness",
+"quality_settings_wall_generator#arachne",
+"https://www.youtube.com/watch?v=c7CI6yBTKMc"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Walls",
+"raw": "Walls",
+"id": "walls",
+"alt": "walls"
+},
+{
+"level": 2,
+"en": "Wall loops",
+"raw": "Wall loops",
+"id": "wall-loops",
+"alt": "wall-loops"
+},
+{
+"level": 2,
+"en": "Alternate extra wall",
+"raw": "Alternate extra wall",
+"id": "alternate-extra-wall",
+"alt": "alternate-extra-wall"
+},
+{
+"level": 2,
+"en": "Detect thin wall",
+"raw": "Detect thin wall",
+"id": "detect-thin-wall",
+"alt": "detect-thin-wall"
+}
+],
+"src": "print_settings/strength/strength_settings_walls.md"
+}

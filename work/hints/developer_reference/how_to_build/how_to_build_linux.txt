@@ -1,0 +1,5 @@
+H dependencies = 依赖
+G shell = 外壳 / 抽壳
+G line = 线 / 直线
+G help = 帮助
+  for the first = 在最初的

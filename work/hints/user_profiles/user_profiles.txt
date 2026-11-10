@@ -1,0 +1,8 @@
+H default = 默认
+G help = 帮助
+G support = 支撑
+G backup = 备份
+  show configuration folder = 打开配置文件夹
+  not signed in = 未登录
+  for the first = 在最初的
+  go to = 前往

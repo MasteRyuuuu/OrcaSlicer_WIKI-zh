@@ -1,0 +1,129 @@
+{
+"code": [
+[
+"```bash",
+"python generate_glossary.py --update   # rewrite the table in this page",
+"```"
+],
+[
+"```bash",
+"python generate_glossary.py              # print the table and report problems or a stale page",
+"python generate_glossary.py --sync --prune   # also drop rows whose term was removed from terms.tsv",
+"python generate_glossary.py --check      # exit 1 on an inconsistent file or a stale page",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "kept-in-english-do-not-translate",
+"en": "Kept in English (do not translate)"
+},
+{
+"indent": 0,
+"anchor": "translation-table-glossary",
+"en": "Translation table glossary"
+},
+{
+"indent": 4,
+"anchor": "updating-the-glossary",
+"en": "Updating the glossary"
+},
+{
+"indent": 0,
+"anchor": "language-specifics",
+"en": "Language specifics"
+},
+{
+"indent": 4,
+"anchor": "russian-ru",
+"en": "Russian (ru)"
+},
+{
+"indent": 4,
+"anchor": "turkish-tr",
+"en": "Turkish (tr)"
+},
+{
+"indent": 4,
+"anchor": "french-fr",
+"en": "French (fr)"
+}
+]
+],
+"img": [],
+"link": [
+"localization_guide",
+"#translation-table-glossary",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/developer_reference/localization_glossary.tsv?raw=true",
+"#updating-the-glossary",
+"#translation-table-glossary",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14970",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15119",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15309",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15309",
+"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/pull/396"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Translation Glossary",
+"raw": "Translation Glossary",
+"id": "translation-glossary",
+"alt": "translation-glossary"
+},
+{
+"level": 2,
+"en": "Kept in English (do not translate)",
+"raw": "Kept in English (do not translate)",
+"id": "kept-in-english-do-not-translate",
+"alt": "kept-in-english-do-not-translate"
+},
+{
+"level": 2,
+"en": "Translation table glossary",
+"raw": "Translation table glossary",
+"id": "translation-table-glossary",
+"alt": "translation-table-glossary"
+},
+{
+"level": 3,
+"en": "Updating the glossary",
+"raw": "Updating the glossary",
+"id": "updating-the-glossary",
+"alt": "updating-the-glossary"
+},
+{
+"level": 2,
+"en": "Language specifics",
+"raw": "Language specifics",
+"id": "language-specifics",
+"alt": "language-specifics"
+},
+{
+"level": 3,
+"en": "Russian (ru)",
+"raw": "Russian (ru)",
+"id": "russian-ru",
+"alt": "russian-ru"
+},
+{
+"level": 3,
+"en": "Turkish (tr)",
+"raw": "Turkish (tr)",
+"id": "turkish-tr",
+"alt": "turkish-tr"
+},
+{
+"level": 3,
+"en": "French (fr)",
+"raw": "French (fr)",
+"id": "french-fr",
+"alt": "french-fr"
+}
+],
+"src": "developer_reference/localization_glossary.md"
+}

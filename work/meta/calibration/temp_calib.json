@@ -1,0 +1,54 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "nozzle-temp-tower",
+"en": "Nozzle Temp Tower"
+},
+{
+"indent": 4,
+"anchor": "interpreting-results",
+"en": "Interpreting results"
+}
+]
+],
+"img": [
+"![temp-tower_test](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Temp-calib/temp-tower_test.png?raw=true)",
+"![temp-tower_test_menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Temp-calib/temp-tower_test_menu.png?raw=true)",
+"![temp-tower](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Temp-calib/temp-tower.jpg?raw=true)"
+],
+"link": [
+"calibration_guide",
+"speed_settings_other_layers_speed",
+"volumetric_speed_calib",
+"belt_printing"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Temp Calibration",
+"raw": "Temp Calibration",
+"id": "temp-calibration",
+"alt": "temp-calibration"
+},
+{
+"level": 2,
+"en": "Nozzle Temp Tower",
+"raw": "Nozzle Temp Tower",
+"id": "nozzle-temp-tower",
+"alt": "nozzle-temp-tower"
+},
+{
+"level": 3,
+"en": "Interpreting results",
+"raw": "Interpreting results",
+"id": "interpreting-results",
+"alt": "interpreting-results"
+}
+],
+"src": "calibration/temp_calib.md"
+}

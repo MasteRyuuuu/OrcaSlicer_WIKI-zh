@@ -1,0 +1,41 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![local-plugin-context-menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/local-plugin-context-menu.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Managing Plugins",
+"raw": "Managing Plugins",
+"id": "managing-plugins",
+"alt": "managing-plugins"
+},
+{
+"level": 2,
+"en": "Plugin Status",
+"raw": "Plugin Status",
+"id": "plugin-status",
+"alt": "plugin-status"
+},
+{
+"level": 2,
+"en": "Orphaned and Missing Plugins",
+"raw": "Orphaned and Missing Plugins",
+"id": "orphaned-and-missing-plugins",
+"alt": "orphaned-and-missing-plugins"
+},
+{
+"level": 2,
+"en": "Permissions",
+"raw": "Permissions",
+"id": "permissions",
+"alt": "permissions"
+}
+],
+"src": "plugins/plugins_management.md"
+}

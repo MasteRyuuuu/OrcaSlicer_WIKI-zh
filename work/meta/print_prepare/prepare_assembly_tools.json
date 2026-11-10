@@ -1,0 +1,53 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![assembly_bed_view](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/assembly/assembly_bed_view.png?raw=true)",
+"![assembly_view](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/assembly/assembly_view.png?raw=true)"
+],
+"link": [
+"prepare_object_set",
+"import_export#split-compound-and-compsolid-into-multiple-objects",
+"prepare_object_set#split-to-objects"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Assembly Tools",
+"raw": "Assembly Tools",
+"id": "assembly-tools",
+"alt": "assembly-tools"
+},
+{
+"level": 2,
+"en": "Assemble",
+"raw": "Assemble",
+"id": "assemble",
+"alt": "assemble"
+},
+{
+"level": 3,
+"en": "Point and Point Assembly",
+"raw": "Point and Point Assembly",
+"id": "point-and-point-assembly",
+"alt": "point-and-point-assembly"
+},
+{
+"level": 3,
+"en": "Face and Face Assembly",
+"raw": "Face and Face Assembly",
+"id": "face-and-face-assembly",
+"alt": "face-and-face-assembly"
+},
+{
+"level": 2,
+"en": "Assembly View",
+"raw": "Assembly View",
+"id": "assembly-view",
+"alt": "assembly-view"
+}
+],
+"src": "print_prepare/prepare_assembly_tools.md"
+}

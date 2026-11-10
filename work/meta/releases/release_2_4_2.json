@@ -1,0 +1,118 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"<img width=\"700\" alt=\"first_object_name filename placeholder\" src=\"https://github.com/user-attachments/assets/edcca01f-25cb-4160-b1ba-74a096eaca49\" />",
+"<img width=\"550\" alt=\"Wiki link support in the Preferences dialog\" src=\"https://github.com/user-attachments/assets/0c9a94bb-a5e5-4f26-9725-d31fdd5c9e30\" />",
+"<img width=\"600\" alt=\"Export full source paths option in Preferences\" src=\"https://github.com/user-attachments/assets/506dfe74-c119-4f98-bfd5-fb6bd9d3e5a4\" />",
+"<img width=\"600\" alt=\"add:north filaments in the Filament Library\" src=\"https://github.com/user-attachments/assets/3d966dd3-e10b-4488-88d7-4b3f124103b5\" />",
+"<img src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"Support on Ko-fi\">",
+"<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"Donate via PayPal\">"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14497",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/13857",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14526",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14592",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14595",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14507",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14504",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14481",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14550",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14617",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14531",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14511",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14528",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14462",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14573",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14499",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14538",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14447",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/14591",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/13366",
+"https://ko-fi.com/G2G5IP3CP",
+"https://paypal.me/softfever3d"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "V2.4.2",
+"raw": "V2.4.2",
+"id": "v242",
+"alt": "v242"
+},
+{
+"level": 1,
+"en": "🌊 New Features & Improvements",
+"raw": "🌊 New Features & Improvements",
+"id": "-new-features-improvements",
+"alt": "new-features-improvements"
+},
+{
+"level": 1,
+"en": "🛠️ Bug Fixes",
+"raw": "🛠️ Bug Fixes",
+"id": "-bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 2,
+"en": "Profiles & presets",
+"raw": "Profiles & presets",
+"id": "profiles-presets",
+"alt": "profiles-presets"
+},
+{
+"level": 2,
+"en": "Cloud sync & accounts",
+"raw": "Cloud sync & accounts",
+"id": "cloud-sync-accounts",
+"alt": "cloud-sync-accounts"
+},
+{
+"level": 2,
+"en": "Networking plugin",
+"raw": "Networking plugin",
+"id": "networking-plugin",
+"alt": "networking-plugin"
+},
+{
+"level": 2,
+"en": "Slicing & G-code",
+"raw": "Slicing & G-code",
+"id": "slicing-g-code",
+"alt": "slicing-g-code"
+},
+{
+"level": 2,
+"en": "Crashes",
+"raw": "Crashes",
+"id": "crashes",
+"alt": "crashes"
+},
+{
+"level": 2,
+"en": "Models & project",
+"raw": "Models & project",
+"id": "models-project",
+"alt": "models-project"
+},
+{
+"level": 1,
+"en": "🖨️ Printer & Filament Profiles",
+"raw": "🖨️ Printer & Filament Profiles",
+"id": "-printer-filament-profiles",
+"alt": "printer-filament-profiles"
+},
+{
+"level": 1,
+"en": "❤️ Support OrcaSlicer",
+"raw": "❤️ Support OrcaSlicer",
+"id": "-support-orcaslicer",
+"alt": "support-orcaslicer"
+}
+],
+"src": "releases/release_2_4_2.md"
+}

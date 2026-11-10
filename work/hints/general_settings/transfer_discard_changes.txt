@@ -1,0 +1,6 @@
+G preset = 预设
+G dialog = 对话框
+  transfer or discard changes = 迁移或放弃更改
+  the new profile = 新预设
+  unsaved changes = 未保存的更改
+  new value = 新值

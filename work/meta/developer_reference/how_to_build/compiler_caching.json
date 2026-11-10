@@ -1,0 +1,184 @@
+{
+"code": [
+[
+"```pwsh",
+"winget install --id=Ccache.Ccache -e",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -s -l -x --cache ccache",
+"```"
+],
+[
+"```text",
+"Precompiled header: off",
+"Compiler cache: C:/Strawberry/c/bin/ccache.exe",
+"```"
+],
+[
+"```json",
+"\"CMAKE_C_COMPILER_LAUNCHER\": \"ccache\",",
+"\"CMAKE_CXX_COMPILER_LAUNCHER\": \"ccache\",",
+"\"SLIC3R_PCH\": { \"type\": \"BOOL\", \"value\": \"OFF\" },",
+"\"SLIC3R_RELATIVE_DEBUG_PATHS\": { \"type\": \"BOOL\", \"value\": \"ON\" }",
+"```"
+],
+[
+"```bash",
+"CMAKE_CCACHE=ccache ./build_linux.sh -s",
+"```"
+],
+[
+"```bash",
+"CMAKE_CCACHE=ccache ./build_release_macos.sh -s",
+"```"
+],
+[
+"```text",
+"sloppiness = pch_defines,time_macros,include_file_mtime,include_file_ctime,clang_index_store",
+"depend_mode = true",
+"```"
+],
+[
+"```pwsh",
+"ccache -M 20G",
+"```"
+],
+[
+"```text",
+"base_dir = /path/that/contains/your/checkouts",
+"hash_dir = false",
+"```"
+],
+[
+"```pwsh",
+"ccache -s",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "what-it-costs",
+"en": "What It Costs"
+},
+{
+"indent": 0,
+"anchor": "windows",
+"en": "Windows"
+},
+{
+"indent": 0,
+"anchor": "linux",
+"en": "Linux"
+},
+{
+"indent": 0,
+"anchor": "macos",
+"en": "macOS"
+},
+{
+"indent": 0,
+"anchor": "cache-size",
+"en": "Cache Size"
+},
+{
+"indent": 0,
+"anchor": "sharing-one-cache-between-build-directories",
+"en": "Sharing One Cache Between Build Directories"
+},
+{
+"indent": 0,
+"anchor": "checking-it-works",
+"en": "Checking It Works"
+}
+]
+],
+"img": [],
+"link": [
+"https://ccache.dev/",
+"https://github.com/mozilla/sccache",
+"https://strawberryperl.com/",
+"how_to_build_windows#the-build-script",
+"how_to_build_windows#the-preset-file",
+"how_to_build_linux",
+"how_to_build_macos"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Compiler Caching",
+"raw": "Compiler Caching",
+"id": "compiler-caching",
+"alt": "compiler-caching"
+},
+{
+"level": 2,
+"en": "What It Costs",
+"raw": "What It Costs",
+"id": "what-it-costs",
+"alt": "what-it-costs"
+},
+{
+"level": 2,
+"en": "Windows",
+"raw": "Windows",
+"id": "windows",
+"alt": "windows"
+},
+{
+"level": 3,
+"en": "Visual Studio and VS Code",
+"raw": "Visual Studio and VS Code",
+"id": "visual-studio-and-vs-code",
+"alt": "visual-studio-and-vs-code"
+},
+{
+"level": 2,
+"en": "Linux",
+"raw": "Linux",
+"id": "linux",
+"alt": "linux"
+},
+{
+"level": 2,
+"en": "macOS",
+"raw": "macOS",
+"id": "macos",
+"alt": "macos"
+},
+{
+"level": 3,
+"en": "Building from the Xcode app",
+"raw": "Building from the Xcode app",
+"id": "building-from-the-xcode-app",
+"alt": "building-from-the-xcode-app"
+},
+{
+"level": 2,
+"en": "Cache Size",
+"raw": "Cache Size",
+"id": "cache-size",
+"alt": "cache-size"
+},
+{
+"level": 2,
+"en": "Sharing One Cache Between Build Directories",
+"raw": "Sharing One Cache Between Build Directories",
+"id": "sharing-one-cache-between-build-directories",
+"alt": "sharing-one-cache-between-build-directories"
+},
+{
+"level": 2,
+"en": "Checking It Works",
+"raw": "Checking It Works",
+"id": "checking-it-works",
+"alt": "checking-it-works"
+}
+],
+"src": "developer_reference/how_to_build/compiler_caching.md"
+}

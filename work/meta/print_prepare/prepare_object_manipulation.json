@@ -1,0 +1,46 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Object Manipulation",
+"raw": "Object Manipulation",
+"id": "object-manipulation",
+"alt": "object-manipulation"
+},
+{
+"level": 2,
+"en": "Move",
+"raw": "Move",
+"id": "move",
+"alt": "move"
+},
+{
+"level": 2,
+"en": "Rotate",
+"raw": "Rotate",
+"id": "rotate",
+"alt": "rotate"
+},
+{
+"level": 2,
+"en": "Scale",
+"raw": "Scale",
+"id": "scale",
+"alt": "scale"
+},
+{
+"level": 2,
+"en": "Lay on Face",
+"raw": "Lay on Face",
+"id": "lay-on-face",
+"alt": "lay-on-face"
+}
+],
+"src": "print_prepare/prepare_object_manipulation.md"
+}

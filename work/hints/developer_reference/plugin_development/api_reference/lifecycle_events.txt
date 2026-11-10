@@ -1,0 +1,14 @@
+H events = 事件
+G preset = 预设
+G plate = 盘
+G model = 模型 / 型号
+G plugin = 插件
+G volume = 体积
+G slice = 切片
+G filament = 耗材丝
+  project file = 项目文件
+  plate name = 盘名称
+  object name = 对象名称
+  model name = 模型名字 / 模型名称
+  learn more = 了解更多
+  empty string = 空字符串

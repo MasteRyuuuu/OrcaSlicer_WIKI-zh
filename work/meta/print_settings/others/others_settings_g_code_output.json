@@ -1,0 +1,346 @@
+{
+"code": [
+[
+"```c++",
+"{input_filename_base}_{filament_type[initial_tool]}_{print_time}.gcode",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`reduce_infill_retraction`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--reduce-infill-retraction=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_add_line_number`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-add-line-number=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_comments`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-comments=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`high_precision_gcode`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--high-precision-gcode=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_label_objects`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-label-objects=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`exclude_object`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--exclude-object=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`exclude_object_tolerance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--exclude-object-tolerance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`filename_format`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--filename-format={input_filename_base}_{filament_type[initial_tool]}_{print_time}.gcode`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`process_change_extrusion_role_gcode`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--process-change-extrusion-role-gcode=value`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "reduce-infill-retraction",
+"en": "Reduce Infill Retraction"
+},
+{
+"indent": 0,
+"anchor": "add-line-number",
+"en": "Add line number"
+},
+{
+"indent": 0,
+"anchor": "verbose-g-code",
+"en": "Verbose G-code"
+},
+{
+"indent": 0,
+"anchor": "high-precision-g-code",
+"en": "High precision G-code"
+},
+{
+"indent": 0,
+"anchor": "label-objects",
+"en": "Label Objects"
+},
+{
+"indent": 0,
+"anchor": "exclude-objects",
+"en": "Exclude Objects"
+},
+{
+"indent": 0,
+"anchor": "filename-format",
+"en": "Filename Format"
+},
+{
+"indent": 0,
+"anchor": "change-extrusion-role-g-code",
+"en": "Change extrusion role G-code"
+}
+]
+],
+"img": [],
+"link": [
+"printer_extruder_retraction#length",
+"printer_extruder_retraction#retraction-speed",
+"printer_extruder_retraction#deretraction-speed",
+"printer_extruder_retraction#extra-length-on-restart",
+"printer_extruder_retraction#wipe-while-retracting",
+"printer_extruder_retraction#wipe-distance",
+"printer_extruder_z_hop#z-hop-height",
+"printer_extruder_retraction#travel-distance-threshold",
+"strength_settings_infill#anchor",
+"printer_basic_information_advanced#use-relative-e-distances",
+"calibration_guide",
+"built_in_placeholders_variables#file-name-template",
+"built_in_placeholders_variables#extrusion-roles",
+"material_advanced#change-extrusion-role-g-code",
+"printer_machine_gcode#change-extrusion-role-g-code",
+"printer_machine_gcode#change-extrusion-role-g-code"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "G-Code Output",
+"raw": "G-Code Output",
+"id": "g-code-output",
+"alt": "g-code-output"
+},
+{
+"level": 2,
+"en": "Reduce Infill Retraction",
+"raw": "Reduce Infill Retraction",
+"id": "reduce-infill-retraction",
+"alt": "reduce-infill-retraction"
+},
+{
+"level": 2,
+"en": "Add line number",
+"raw": "Add line number",
+"id": "add-line-number",
+"alt": "add-line-number"
+},
+{
+"level": 2,
+"en": "Verbose G-code",
+"raw": "Verbose G-code",
+"id": "verbose-g-code",
+"alt": "verbose-g-code"
+},
+{
+"level": 2,
+"en": "High precision G-code",
+"raw": "High precision G-code",
+"id": "high-precision-g-code",
+"alt": "high-precision-g-code"
+},
+{
+"level": 2,
+"en": "Label Objects",
+"raw": "Label Objects",
+"id": "label-objects",
+"alt": "label-objects"
+},
+{
+"level": 2,
+"en": "Exclude Objects",
+"raw": "Exclude Objects",
+"id": "exclude-objects",
+"alt": "exclude-objects"
+},
+{
+"level": 3,
+"en": "Outline Tolerance",
+"raw": "Outline Tolerance",
+"id": "outline-tolerance",
+"alt": "outline-tolerance"
+},
+{
+"level": 2,
+"en": "Filename Format",
+"raw": "Filename Format",
+"id": "filename-format",
+"alt": "filename-format"
+},
+{
+"level": 2,
+"en": "Change extrusion role G-code",
+"raw": "Change extrusion role G-code",
+"id": "change-extrusion-role-g-code",
+"alt": "change-extrusion-role-g-code"
+}
+],
+"src": "print_settings/others/others_settings_g_code_output.md"
+}

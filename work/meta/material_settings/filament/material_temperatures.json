@@ -1,0 +1,157 @@
+{
+"code": [
+[
+"```pwsh",
+"PRINT_START (other variables) CHAMBER_TEMP=[chamber_temperature]",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`nozzle_temperature_initial_layer`, `nozzle_temperature`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--nozzle-temperature-initial-layer=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`supertack_plate_temp_initial_layer`, `supertack_plate_temp`, `cool_plate_temp_initial_layer`, `cool_plate_temp`, `textured_cool_plate_temp_initial_layer`, `textured_cool_plate_temp`, `eng_plate_temp_initial_layer`, `eng_plate_temp`, `hot_plate_temp_initial_layer`, `hot_plate_temp`, `textured_plate_temp_initial_layer`, `textured_plate_temp`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Integer list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--supertack-plate-temp-initial-layer=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`activate_chamber_temp_control`, `chamber_temperature`, `chamber_minimal_temperature`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`activate_chamber_temp_control` (Boolean list), `chamber_temperature` (Integer list), `chamber_minimal_temperature` (Integer list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--activate-chamber-temp-control=1` (`activate_chamber_temp_control` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "standard-temperature-ranges",
+"en": "Standard Temperature Ranges"
+},
+{
+"indent": 0,
+"anchor": "nozzle",
+"en": "Nozzle"
+},
+{
+"indent": 0,
+"anchor": "bed",
+"en": "Bed"
+},
+{
+"indent": 0,
+"anchor": "print-chamber-temperature",
+"en": "Print Chamber Temperature"
+}
+]
+],
+"img": [],
+"link": [
+"temp_calib",
+"temp_calib",
+"#nozzle",
+"#bed",
+"#print-chamber-temperature",
+"quality_settings_precision#elephant-foot-compensation",
+"printer_basic_information_printable_space#support-multi-bed-types",
+"quality_settings_precision#elephant-foot-compensation",
+"#print-chamber-temperature",
+"quality_settings_precision#elephant-foot-compensation",
+"https://en.wikipedia.org/wiki/Glass_transition",
+"https://magigoo.com/blog/prevent-warping-temperature-and-first-layer-adhesion-magigoo/",
+"#print-chamber-temperature",
+"printer_basic_information_accessory#support-controlling-chamber-temperature"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Temperatures",
+"raw": "Material Temperatures",
+"id": "material-temperatures",
+"alt": "material-temperatures"
+},
+{
+"level": 2,
+"en": "Standard Temperature Ranges",
+"raw": "Standard Temperature Ranges",
+"id": "standard-temperature-ranges",
+"alt": "standard-temperature-ranges"
+},
+{
+"level": 2,
+"en": "Nozzle",
+"raw": "Nozzle",
+"id": "nozzle",
+"alt": "nozzle"
+},
+{
+"level": 2,
+"en": "Bed",
+"raw": "Bed",
+"id": "bed",
+"alt": "bed"
+},
+{
+"level": 2,
+"en": "Print Chamber Temperature",
+"raw": "Print Chamber Temperature",
+"id": "print-chamber-temperature",
+"alt": "print-chamber-temperature"
+}
+],
+"src": "material_settings/filament/material_temperatures.md"
+}

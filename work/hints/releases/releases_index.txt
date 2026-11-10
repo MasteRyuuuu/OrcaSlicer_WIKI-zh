@@ -1,0 +1,9 @@
+G texture displacement = 纹理置换
+G parallel printing = 并行打印
+G texture = 纹理
+G support = 支撑
+G skirt = 裙边
+G preset = 预设
+G contouring = Z 层抗锯齿
+G brim = Brim
+G bridging = 搭桥

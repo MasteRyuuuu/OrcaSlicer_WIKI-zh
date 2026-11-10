@@ -1,0 +1,127 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "quick-start",
+"en": "Quick start"
+},
+{
+"indent": 0,
+"anchor": "choosing-the-picture",
+"en": "Choosing the picture"
+},
+{
+"indent": 0,
+"anchor": "placing-it",
+"en": "Placing it"
+},
+{
+"indent": 0,
+"anchor": "correcting-the-colours",
+"en": "Correcting the colours"
+},
+{
+"indent": 0,
+"anchor": "removing-the-background",
+"en": "Removing the background"
+},
+{
+"indent": 0,
+"anchor": "how-sharp-it-comes-out",
+"en": "How sharp it comes out"
+},
+{
+"indent": 0,
+"anchor": "applying",
+"en": "Applying"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting",
+"en": "Troubleshooting"
+}
+]
+],
+"img": [
+"<img alt=\"td-image-tool-panel\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-tool-panel.png?raw=true\" height=\"620\">",
+"![td-image-tool-result](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-tool-result.png?raw=true)",
+"![td-image-colors-off](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-colors-off.png?raw=true)",
+"![td-image-colors-4](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-colors-4.png?raw=true)",
+"![td-image-background-kept](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-background-kept.png?raw=true)",
+"![td-image-background-removed](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-background-removed.png?raw=true)"
+],
+"link": [
+"prepare_texture_displacement",
+"prepare_color_painting"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Image",
+"raw": "Image",
+"id": "image",
+"alt": "image"
+},
+{
+"level": 2,
+"en": "Quick start",
+"raw": "Quick start",
+"id": "quick-start",
+"alt": "quick-start"
+},
+{
+"level": 2,
+"en": "Choosing the picture",
+"raw": "Choosing the picture",
+"id": "choosing-the-picture",
+"alt": "choosing-the-picture"
+},
+{
+"level": 2,
+"en": "Placing it",
+"raw": "Placing it",
+"id": "placing-it",
+"alt": "placing-it"
+},
+{
+"level": 2,
+"en": "Correcting the colours",
+"raw": "Correcting the colours",
+"id": "correcting-the-colours",
+"alt": "correcting-the-colours"
+},
+{
+"level": 2,
+"en": "Removing the background",
+"raw": "Removing the background",
+"id": "removing-the-background",
+"alt": "removing-the-background"
+},
+{
+"level": 2,
+"en": "How sharp it comes out",
+"raw": "How sharp it comes out",
+"id": "how-sharp-it-comes-out",
+"alt": "how-sharp-it-comes-out"
+},
+{
+"level": 2,
+"en": "Applying",
+"raw": "Applying",
+"id": "applying",
+"alt": "applying"
+},
+{
+"level": 2,
+"en": "Troubleshooting",
+"raw": "Troubleshooting",
+"id": "troubleshooting",
+"alt": "troubleshooting"
+}
+],
+"src": "print_prepare/prepare_image_tool.md"
+}

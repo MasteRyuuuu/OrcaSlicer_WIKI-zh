@@ -1,0 +1,4 @@
+H add plate = 添加新盘 / 添加盘
+G plate = 盘
+G model = 模型 / 型号
+  print plate = 打印单盘

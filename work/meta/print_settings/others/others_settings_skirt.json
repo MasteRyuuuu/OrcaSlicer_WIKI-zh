@@ -1,0 +1,372 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_loops`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-loops=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`combined, perobject`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-type=combined`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`min_skirt_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--min-skirt-length=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-distance=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_start_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-start-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_speed`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-speed=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`skirt_height`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--skirt-height=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`draft_shield`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`disabled, enabled`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--draft-shield=disabled`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`single_loop_draft_shield`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--single-loop-draft-shield=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "loops",
+"en": "Loops"
+},
+{
+"indent": 0,
+"anchor": "type",
+"en": "Type"
+},
+{
+"indent": 4,
+"anchor": "combined",
+"en": "Combined"
+},
+{
+"indent": 4,
+"anchor": "per-object",
+"en": "Per object"
+},
+{
+"indent": 0,
+"anchor": "minimum-extrusion-length",
+"en": "Minimum extrusion Length"
+},
+{
+"indent": 0,
+"anchor": "distance",
+"en": "Distance"
+},
+{
+"indent": 0,
+"anchor": "start-point",
+"en": "Start point"
+},
+{
+"indent": 0,
+"anchor": "speed",
+"en": "Speed"
+},
+{
+"indent": 0,
+"anchor": "height",
+"en": "Height"
+},
+{
+"indent": 0,
+"anchor": "shield",
+"en": "Shield"
+},
+{
+"indent": 0,
+"anchor": "single-loop-after-first-layer",
+"en": "Single loop after first layer"
+}
+]
+],
+"img": [
+"![skirt](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/skirt/skirt.png?raw=true)",
+"![skirt-combined](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/skirt/skirt-combined.png?raw=true)",
+"![skirt-per-object](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/skirt/skirt-per-object.png?raw=true)"
+],
+"link": [
+"others_settings_special_mode#by-object",
+"speed_settings_initial_layer_speed#initial-layer-infill",
+"speed_settings_other_layers_speed#support",
+"#height",
+"#distance"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Skirt",
+"raw": "Skirt",
+"id": "skirt",
+"alt": "skirt"
+},
+{
+"level": 2,
+"en": "Loops",
+"raw": "Loops",
+"id": "loops",
+"alt": "loops"
+},
+{
+"level": 2,
+"en": "Type",
+"raw": "Type",
+"id": "type",
+"alt": "type"
+},
+{
+"level": 3,
+"en": "Combined",
+"raw": "Combined",
+"id": "combined",
+"alt": "combined"
+},
+{
+"level": 3,
+"en": "Per object",
+"raw": "Per object",
+"id": "per-object",
+"alt": "per-object"
+},
+{
+"level": 2,
+"en": "Minimum extrusion Length",
+"raw": "Minimum extrusion Length",
+"id": "minimum-extrusion-length",
+"alt": "minimum-extrusion-length"
+},
+{
+"level": 2,
+"en": "Distance",
+"raw": "Distance",
+"id": "distance",
+"alt": "distance"
+},
+{
+"level": 2,
+"en": "Start point",
+"raw": "Start point",
+"id": "start-point",
+"alt": "start-point"
+},
+{
+"level": 2,
+"en": "Speed",
+"raw": "Speed",
+"id": "speed",
+"alt": "speed"
+},
+{
+"level": 2,
+"en": "Height",
+"raw": "Height",
+"id": "height",
+"alt": "height"
+},
+{
+"level": 2,
+"en": "Shield",
+"raw": "Shield",
+"id": "shield",
+"alt": "shield"
+},
+{
+"level": 2,
+"en": "Single loop after first layer",
+"raw": "Single loop after first layer",
+"id": "single-loop-after-first-layer",
+"alt": "single-loop-after-first-layer"
+}
+],
+"src": "print_settings/others/others_settings_skirt.md"
+}

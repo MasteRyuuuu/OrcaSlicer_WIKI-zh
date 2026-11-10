@@ -1,0 +1,87 @@
+{
+"code": [
+[
+"```python",
+"orca.ExecutionResult.success(message=\"\", data=\"\")",
+"orca.ExecutionResult.skipped(message=\"\")",
+"orca.ExecutionResult.failure(status, message, data=\"\")   # status is an orca.PluginResult",
+"```"
+],
+[
+"```python",
+"@orca.plugin",
+"class SamplePlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(GCodeBenchmark)",
+"        orca.register_capability(EnvironmentReport)",
+"```"
+],
+[
+"```python",
+"orca.request_permissions(",
+"    fs_read=[],           # filesystem paths to read",
+"    fs_readwrite=[],      # filesystem paths to read/write",
+"    network_http=[],      # URLs",
+"    network_socket=[],    # socket addresses, as str() renders them",
+"    process=[],           # commands / argv",
+"    threading=False)      # True requests the fixed \"thread\" target",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"lifecycle_events",
+"#permissions",
+"slicing",
+"script",
+"pages",
+"resource_texture",
+"printer_agent",
+"host",
+"host_ui",
+"lifecycle_events",
+"plugin_development#capability-configuration",
+"plugin_audit_hook"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Registry",
+"raw": "Registry",
+"id": "registry",
+"alt": "registry"
+},
+{
+"level": 2,
+"en": "Execution Results",
+"raw": "Execution Results",
+"id": "execution-results",
+"alt": "execution-results"
+},
+{
+"level": 2,
+"en": "Registration",
+"raw": "Registration",
+"id": "registration",
+"alt": "registration"
+},
+{
+"level": 2,
+"en": "Permissions",
+"raw": "Permissions",
+"id": "permissions",
+"alt": "permissions"
+},
+{
+"level": 2,
+"en": "Capability Names and Types",
+"raw": "Capability Names and Types",
+"id": "capability-names-and-types",
+"alt": "capability-names-and-types"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/registry.md"
+}

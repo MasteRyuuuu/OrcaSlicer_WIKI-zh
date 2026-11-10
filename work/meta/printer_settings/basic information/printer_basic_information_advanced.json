@@ -1,0 +1,551 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`printer_structure`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`undefine, corexy, i3, hbot, delta`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--printer-structure=undefine`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_flavor`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`marlin, klipper, reprapfirmware, repetier, marlin2`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-flavor=marlin`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_skip_config_block`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-skip-config-block=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`pellet_flow_coefficient`, `pellet_modded_printer`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`pellet_flow_coefficient` (Float list), `pellet_modded_printer` (Boolean)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--pellet-flow-coefficient=1` (`pellet_flow_coefficient` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bbl_use_printhost`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`printer_agent`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text` (shown as a dropdown of registered agents)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`scan_first_layer`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--scan-first-layer=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_power_loss_recovery`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`printer_configuration, enable, disable`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-power-loss-recovery=printer_configuration`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`disable_m73`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--disable-m73=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`thumbnails`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--thumbnails=48x48/PNG,300x300/PNG`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`use_relative_e_distances`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--use-relative-e-distances=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`use_firmware_retraction`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--use-firmware-retraction=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bed_temperature_formula`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`by_first_filament, by_highest_temp`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bed-temperature-formula=by_first_filament`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`time_cost`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--time-cost=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`build_plate_tilt_x`, `build_plate_tilt_y`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--build-plate-tilt-x=1` (same pattern for the other variables above)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "printer-structure",
+"en": "Printer structure"
+},
+{
+"indent": 0,
+"anchor": "g-code-flavor",
+"en": "G-code flavor"
+},
+{
+"indent": 0,
+"anchor": "skip-g-code-config-block",
+"en": "Skip G-code config block"
+},
+{
+"indent": 0,
+"anchor": "pellet-modded-printer",
+"en": "Pellet Modded Printer"
+},
+{
+"indent": 0,
+"anchor": "use-3rd-party-print-host",
+"en": "Use 3rd-party print host"
+},
+{
+"indent": 0,
+"anchor": "printer-agent",
+"en": "Printer Agent"
+},
+{
+"indent": 0,
+"anchor": "scan-first-layer",
+"en": "Scan first layer"
+},
+{
+"indent": 0,
+"anchor": "power-loss-recovery",
+"en": "Power Loss Recovery"
+},
+{
+"indent": 0,
+"anchor": "disable-set-remaining-print-time",
+"en": "Disable set remaining print time"
+},
+{
+"indent": 0,
+"anchor": "g-code-thumbnails",
+"en": "G-code thumbnails"
+},
+{
+"indent": 0,
+"anchor": "use-relative-e-distances",
+"en": "Use relative E distances"
+},
+{
+"indent": 0,
+"anchor": "use-firmware-retraction",
+"en": "Use firmware retraction"
+},
+{
+"indent": 0,
+"anchor": "bed-temperature-type",
+"en": "Bed temperature type"
+},
+{
+"indent": 0,
+"anchor": "time-cost",
+"en": "Time cost"
+},
+{
+"indent": 0,
+"anchor": "build-plate-tilt",
+"en": "Build plate tilt"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode#setting-overrides",
+"cli_mode#setting-overrides",
+"printer_agent",
+"https://wiki.bambulab.com/en/knowledge-sharing/power-loss-recovery",
+"https://marlinfw.org/docs/gcode/M413.html",
+"quality_settings_precision#arc-fitting",
+"printer_basic_information_belt_printer",
+"printer_basic_information_belt_printer#belt-tilt"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Advanced Printer Settings",
+"raw": "Advanced Printer Settings",
+"id": "advanced-printer-settings",
+"alt": "advanced-printer-settings"
+},
+{
+"level": 2,
+"en": "Printer structure",
+"raw": "Printer structure",
+"id": "printer-structure",
+"alt": "printer-structure"
+},
+{
+"level": 2,
+"en": "G-code flavor",
+"raw": "G-code flavor",
+"id": "g-code-flavor",
+"alt": "g-code-flavor"
+},
+{
+"level": 2,
+"en": "Skip G-code config block",
+"raw": "Skip G-code config block",
+"id": "skip-g-code-config-block",
+"alt": "skip-g-code-config-block"
+},
+{
+"level": 2,
+"en": "Pellet Modded Printer",
+"raw": "Pellet Modded Printer",
+"id": "pellet-modded-printer",
+"alt": "pellet-modded-printer"
+},
+{
+"level": 2,
+"en": "Use 3rd-party print host",
+"raw": "Use 3rd-party print host",
+"id": "use-3rd-party-print-host",
+"alt": "use-3rd-party-print-host"
+},
+{
+"level": 2,
+"en": "Printer Agent",
+"raw": "Printer Agent",
+"id": "printer-agent",
+"alt": "printer-agent"
+},
+{
+"level": 2,
+"en": "Scan first layer",
+"raw": "Scan first layer",
+"id": "scan-first-layer",
+"alt": "scan-first-layer"
+},
+{
+"level": 2,
+"en": "Power Loss Recovery",
+"raw": "Power Loss Recovery",
+"id": "power-loss-recovery",
+"alt": "power-loss-recovery"
+},
+{
+"level": 2,
+"en": "Disable set remaining print time",
+"raw": "Disable set remaining print time",
+"id": "disable-set-remaining-print-time",
+"alt": "disable-set-remaining-print-time"
+},
+{
+"level": 2,
+"en": "G-code thumbnails",
+"raw": "G-code thumbnails",
+"id": "g-code-thumbnails",
+"alt": "g-code-thumbnails"
+},
+{
+"level": 2,
+"en": "Use relative E distances",
+"raw": "Use relative E distances",
+"id": "use-relative-e-distances",
+"alt": "use-relative-e-distances"
+},
+{
+"level": 2,
+"en": "Use firmware retraction",
+"raw": "Use firmware retraction",
+"id": "use-firmware-retraction",
+"alt": "use-firmware-retraction"
+},
+{
+"level": 2,
+"en": "Bed temperature type",
+"raw": "Bed temperature type",
+"id": "bed-temperature-type",
+"alt": "bed-temperature-type"
+},
+{
+"level": 2,
+"en": "Time cost",
+"raw": "Time cost",
+"id": "time-cost",
+"alt": "time-cost"
+},
+{
+"level": 2,
+"en": "Build plate tilt",
+"raw": "Build plate tilt",
+"id": "build-plate-tilt",
+"alt": "build-plate-tilt"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_advanced.md"
+}

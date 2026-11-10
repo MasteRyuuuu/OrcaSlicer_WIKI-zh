@@ -1,0 +1,6 @@
+H boolean = 布尔
+H text = 文字
+H point = 点
+G line = 线 / 直线
+G filament = 耗材丝
+G extruder = 挤出机

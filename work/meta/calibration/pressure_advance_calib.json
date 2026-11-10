@@ -1,0 +1,92 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "calibration",
+"en": "Calibration"
+},
+{
+"indent": 4,
+"anchor": "tower-method",
+"en": "Tower method"
+},
+{
+"indent": 4,
+"anchor": "pattern-method",
+"en": "Pattern method"
+},
+{
+"indent": 4,
+"anchor": "line-method",
+"en": "Line method"
+}
+]
+],
+"img": [
+"![flowrate-Bambulab-uncheck](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowrate-Bambulab-uncheck.png?raw=true)",
+"![pressure_advance_enable](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pressure_advance_enable.png?raw=true)",
+"![pa-tower](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-tower.jpg?raw=true)",
+"![pa-tower-preview](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-tower-preview.png?raw=true)",
+"![pa-tower-measure](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-tower-measure.jpg?raw=true)",
+"![pa-tower-measure](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-tower-measure.png?raw=true)",
+"![pa-pattern-single](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-single.png?raw=true)",
+"![pa-pattern-batch](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-batch.png?raw=true)",
+"![pa-pattern-batch-plater](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-batch-plater.png?raw=true)",
+"![pa-pattern-batch-objects](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-pattern-batch-objects.png?raw=true)",
+"![pa-lines](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-lines.png?raw=true)",
+"![pa-line-0-016](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/pa/pa-line-0-016.png?raw=true)"
+],
+"link": [
+"material_flow_ratio_and_pressure_advance#pressure-advance",
+"calibration_guide",
+"adaptive_pressure_advance_calib",
+"belt_printing",
+"#tower-method",
+"https://github.com/ItsDeidara/Orca-Slicer-Assistant",
+"https://ellis3dp.com/Pressure_Linear_Advance_Tool/",
+"https://marlinfw.org/tools/lin_advance/k-factor.html",
+"https://github.com/Sineos/k-factorjs"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Pressure Advance",
+"raw": "Pressure Advance",
+"id": "pressure-advance",
+"alt": "pressure-advance"
+},
+{
+"level": 2,
+"en": "Calibration",
+"raw": "Calibration",
+"id": "calibration",
+"alt": "calibration"
+},
+{
+"level": 3,
+"en": "Tower method",
+"raw": "Tower method",
+"id": "tower-method",
+"alt": "tower-method"
+},
+{
+"level": 3,
+"en": "Pattern method",
+"raw": "Pattern method",
+"id": "pattern-method",
+"alt": "pattern-method"
+},
+{
+"level": 3,
+"en": "Line method",
+"raw": "Line method",
+"id": "line-method",
+"alt": "line-method"
+}
+],
+"src": "calibration/pressure_advance_calib.md"
+}

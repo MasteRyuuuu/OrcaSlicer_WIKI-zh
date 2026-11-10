@@ -1,0 +1,446 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`default_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--default-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`outer_wall_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--outer-wall-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`inner_wall_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--inner-wall-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-acceleration=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-acceleration=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_solid_infill_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-solid-infill-acceleration=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_travel_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-travel-acceleration=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`travel_acceleration`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--travel-acceleration=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`accel_to_decel_enable`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--accel-to-decel-enable=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`accel_to_decel_factor`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--accel-to-decel-factor=20%`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "normal-printing",
+"en": "Normal printing"
+},
+{
+"indent": 0,
+"anchor": "outer-wall",
+"en": "Outer wall"
+},
+{
+"indent": 0,
+"anchor": "inner-wall",
+"en": "Inner wall"
+},
+{
+"indent": 0,
+"anchor": "bridge",
+"en": "Bridge"
+},
+{
+"indent": 0,
+"anchor": "sparse-infill",
+"en": "Sparse infill"
+},
+{
+"indent": 0,
+"anchor": "internal-solid-infill",
+"en": "Internal solid infill"
+},
+{
+"indent": 0,
+"anchor": "initial-layer",
+"en": "Initial layer"
+},
+{
+"indent": 0,
+"anchor": "initial-layer-travel",
+"en": "Initial layer travel"
+},
+{
+"indent": 0,
+"anchor": "top-surface",
+"en": "Top surface"
+},
+{
+"indent": 0,
+"anchor": "travel",
+"en": "Travel"
+},
+{
+"indent": 0,
+"anchor": "enable-accel-to-decel",
+"en": "Enable accel to decel"
+},
+{
+"indent": 4,
+"anchor": "accel-to-decel",
+"en": "Accel to decel"
+}
+]
+],
+"img": [],
+"link": [
+"#normal-printing",
+"speed_settings_other_layers_speed#outer-wall",
+"speed_settings_other_layers_speed#inner-wall",
+"speed_settings_overhang_speed#bridge-speed",
+"speed_settings_other_layers_speed#sparse-infill",
+"speed_settings_other_layers_speed#internal-solid-infill",
+"speed_settings_initial_layer_speed",
+"speed_settings_initial_layer_speed#initial-layer-travel-speed",
+"#travel",
+"speed_settings_other_layers_speed#top-surface",
+"#outer-wall",
+"speed_settings_travel",
+"#accel-to-decel",
+"printer_basic_information_advanced#g-code-flavor",
+"#enable-accel-to-decel"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Acceleration",
+"raw": "Acceleration",
+"id": "acceleration",
+"alt": "acceleration"
+},
+{
+"level": 2,
+"en": "Normal printing",
+"raw": "Normal printing",
+"id": "normal-printing",
+"alt": "normal-printing"
+},
+{
+"level": 2,
+"en": "Outer wall",
+"raw": "Outer wall",
+"id": "outer-wall",
+"alt": "outer-wall"
+},
+{
+"level": 2,
+"en": "Inner wall",
+"raw": "Inner wall",
+"id": "inner-wall",
+"alt": "inner-wall"
+},
+{
+"level": 2,
+"en": "Bridge",
+"raw": "Bridge",
+"id": "bridge",
+"alt": "bridge"
+},
+{
+"level": 2,
+"en": "Sparse infill",
+"raw": "Sparse infill",
+"id": "sparse-infill",
+"alt": "sparse-infill"
+},
+{
+"level": 2,
+"en": "Internal solid infill",
+"raw": "Internal solid infill",
+"id": "internal-solid-infill",
+"alt": "internal-solid-infill"
+},
+{
+"level": 2,
+"en": "Initial layer",
+"raw": "Initial layer",
+"id": "initial-layer",
+"alt": "initial-layer"
+},
+{
+"level": 2,
+"en": "Initial layer travel",
+"raw": "Initial layer travel",
+"id": "initial-layer-travel",
+"alt": "initial-layer-travel"
+},
+{
+"level": 2,
+"en": "Top surface",
+"raw": "Top surface",
+"id": "top-surface",
+"alt": "top-surface"
+},
+{
+"level": 2,
+"en": "Travel",
+"raw": "Travel",
+"id": "travel",
+"alt": "travel"
+},
+{
+"level": 2,
+"en": "Enable accel to decel",
+"raw": "Enable accel to decel",
+"id": "enable-accel-to-decel",
+"alt": "enable-accel-to-decel"
+},
+{
+"level": 3,
+"en": "Accel to decel",
+"raw": "Accel to decel",
+"id": "accel-to-decel",
+"alt": "accel-to-decel"
+}
+],
+"src": "print_settings/speed/speed_settings_acceleration.md"
+}

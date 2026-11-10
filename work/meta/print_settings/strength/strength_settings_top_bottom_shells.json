@@ -1,0 +1,489 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_shell_layers`, `bottom_shell_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-shell-layers=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_shell_thickness`, `bottom_shell_thickness`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-shell-thickness=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_color_penetration_layers`, `bottom_color_penetration_layers`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-color-penetration-layers=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_density`, `bottom_surface_density`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-density=20%` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_bottom_infill_wall_overlap`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-bottom-infill-wall-overlap=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_pattern`, `bottom_surface_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`monotonic, monotonicline, rectilinear, alignedrectilinear, concentric, spiralinset, hilbertcurve, archimedeanchords, octagramspiral`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-pattern=monotonic` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_expansion`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-expansion=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_expansion_margin`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-expansion-margin=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_expansion_direction`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`inward_and_outward, inward, outward`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-expansion-direction=inward_and_outward`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`center_of_surface_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`each_surface, each_model, each_assembly`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--center-of-surface-pattern=each_surface`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_fill_order`, `bottom_surface_fill_order`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`default, outward, inward`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-fill-order=default` (same pattern for the other variables above)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "shell-layers",
+"en": "Shell Layers"
+},
+{
+"indent": 0,
+"anchor": "shell-thickness",
+"en": "Shell Thickness"
+},
+{
+"indent": 0,
+"anchor": "paint-penetration-layers",
+"en": "Paint Penetration Layers"
+},
+{
+"indent": 0,
+"anchor": "surface-density",
+"en": "Surface Density"
+},
+{
+"indent": 0,
+"anchor": "infillwall-overlap",
+"en": "Infill/Wall Overlap"
+},
+{
+"indent": 0,
+"anchor": "surface-pattern",
+"en": "Surface Pattern"
+},
+{
+"indent": 0,
+"anchor": "surface-expansion",
+"en": "Surface Expansion"
+},
+{
+"indent": 4,
+"anchor": "surface-expansion-margin",
+"en": "Surface Expansion Margin"
+},
+{
+"indent": 4,
+"anchor": "surface-expansion-direction",
+"en": "Surface Expansion Direction"
+},
+{
+"indent": 4,
+"anchor": "surface-expansion-and-only-one-wall",
+"en": "Surface Expansion and Only One Wall"
+},
+{
+"indent": 0,
+"anchor": "center-surface-pattern-on",
+"en": "Center Surface Pattern On"
+},
+{
+"indent": 0,
+"anchor": "fill-order",
+"en": "Fill Order"
+}
+]
+],
+"img": [
+"![top-bottom-shells](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/top-bottom-shells.png?raw=true)",
+"![surface_expansion_original](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_original.png?raw=true)",
+"![surface_expansion_direction_inward_and_outward](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_direction_inward_and_outward.png?raw=true)",
+"![surface_expansion_concentric_before](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_concentric_before.png?raw=true)",
+"![surface_expansion_concentric_after](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_concentric_after.png?raw=true)",
+"![surface_expansion_margin](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_margin.png?raw=true)",
+"![surface_expansion_direction_inward](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_direction_inward.png?raw=true)",
+"![surface_expansion_direction_outward](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_direction_outward.png?raw=true)",
+"![surface_expansion_direction_inward_and_outward](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/surface_expansion_direction_inward_and_outward.png?raw=true)",
+"![center_of_surface_pattern_each_surface](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/center_of_surface_pattern_each_surface.png?raw=true)",
+"![center_of_surface_pattern_each_model](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/center_of_surface_pattern_each_model.png?raw=true)",
+"![center_of_surface_pattern_each_assembly](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/top-bottom-shells/center_of_surface_pattern_each_assembly.png?raw=true)",
+"![fill-order](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/directions/fill-order.jpg?raw=true)"
+],
+"link": [
+"#shell-thickness",
+"strength_settings_infill",
+"#shell-layers",
+"prepare_color_painting",
+"#shell-layers",
+"#shell-layers",
+"#shell-thickness",
+"strength_settings_infill",
+"quality_settings_wall_generator#classic",
+"quality_settings_wall_generator#arachne",
+"strength_settings_patterns#monotonic-line",
+"strength_settings_patterns#monotonic",
+"strength_settings_patterns#rectilinear",
+"#shell-layers",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_patterns",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#rectilinear",
+"strength_settings_patterns#monotonic",
+"strength_settings_patterns#monotonic-line",
+"strength_settings_patterns#aligned-rectilinear",
+"strength_settings_patterns#spiral-inset",
+"strength_settings_patterns#hilbert-curve",
+"strength_settings_patterns#archimedean-chords",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_advanced#align-directions-to-model",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#concentric",
+"#shell-layers",
+"#surface-density",
+"#surface-expansion",
+"quality_settings_wall_and_surfaces#only-one-wall",
+"#surface-expansion",
+"quality_settings_wall_and_surfaces#only-one-wall",
+"strength_settings_walls#wall-loops",
+"quality_settings_wall_generator#classic",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_advanced#ensure-vertical-shell-thickness",
+"quality_settings_wall_generator#arachne",
+"#surface-density",
+"strength_settings_patterns#archimedean-chords",
+"strength_settings_patterns#octagram-spiral",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#spiral-inset",
+"strength_settings_patterns#archimedean-chords",
+"strength_settings_patterns#octagram-spiral"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Top and Bottom Shells",
+"raw": "Top and Bottom Shells",
+"id": "top-and-bottom-shells",
+"alt": "top-and-bottom-shells"
+},
+{
+"level": 2,
+"en": "Shell Layers",
+"raw": "Shell Layers",
+"id": "shell-layers",
+"alt": "shell-layers"
+},
+{
+"level": 2,
+"en": "Shell Thickness",
+"raw": "Shell Thickness",
+"id": "shell-thickness",
+"alt": "shell-thickness"
+},
+{
+"level": 2,
+"en": "Paint Penetration Layers",
+"raw": "Paint Penetration Layers",
+"id": "paint-penetration-layers",
+"alt": "paint-penetration-layers"
+},
+{
+"level": 2,
+"en": "Surface Density",
+"raw": "Surface Density",
+"id": "surface-density",
+"alt": "surface-density"
+},
+{
+"level": 2,
+"en": "Infill/Wall Overlap",
+"raw": "Infill/Wall Overlap",
+"id": "infillwall-overlap",
+"alt": "infillwall-overlap"
+},
+{
+"level": 2,
+"en": "Surface Pattern",
+"raw": "Surface Pattern",
+"id": "surface-pattern",
+"alt": "surface-pattern"
+},
+{
+"level": 2,
+"en": "Surface Expansion",
+"raw": "Surface Expansion",
+"id": "surface-expansion",
+"alt": "surface-expansion"
+},
+{
+"level": 3,
+"en": "Surface Expansion Margin",
+"raw": "Surface Expansion Margin",
+"id": "surface-expansion-margin",
+"alt": "surface-expansion-margin"
+},
+{
+"level": 3,
+"en": "Surface Expansion Direction",
+"raw": "Surface Expansion Direction",
+"id": "surface-expansion-direction",
+"alt": "surface-expansion-direction"
+},
+{
+"level": 3,
+"en": "Surface Expansion and Only One Wall",
+"raw": "Surface Expansion and Only One Wall",
+"id": "surface-expansion-and-only-one-wall",
+"alt": "surface-expansion-and-only-one-wall"
+},
+{
+"level": 2,
+"en": "Center Surface Pattern On",
+"raw": "Center Surface Pattern On",
+"id": "center-surface-pattern-on",
+"alt": "center-surface-pattern-on"
+},
+{
+"level": 2,
+"en": "Fill Order",
+"raw": "Fill Order",
+"id": "fill-order",
+"alt": "fill-order"
+}
+],
+"src": "print_settings/strength/strength_settings_top_bottom_shells.md"
+}

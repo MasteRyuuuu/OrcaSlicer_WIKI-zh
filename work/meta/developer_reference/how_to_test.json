@@ -1,0 +1,435 @@
+{
+"code": [
+[
+"```pwsh",
+"build_win.bat -s --tests",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -s --tests --slicer-target libslic3r_tests",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -s --run-tests",
+"```"
+],
+[
+"```pwsh",
+"ctest --test-dir build/tests -C Release --output-on-failure",
+"```"
+],
+[
+"```pwsh",
+"ctest --test-dir build/tests/libslic3r -C Release",
+"```"
+],
+[
+"```pwsh",
+"build\\tests\\libslic3r\\Release\\libslic3r_tests.exe \"[Geometry]\"",
+"```"
+],
+[
+"```bash",
+"./build_release_macos.sh -s -a arm64 -T",
+"```"
+],
+[
+"```bash",
+"cmake --build build/arm64 --config Release --target libslic3r_tests",
+"```"
+],
+[
+"```bash",
+"ctest --test-dir build/arm64/tests -C Release --output-on-failure",
+"```"
+],
+[
+"```bash",
+"ctest --test-dir build/arm64/tests/libslic3r -C Release",
+"```"
+],
+[
+"```bash",
+"build/arm64/tests/libslic3r/Release/libslic3r_tests \"[Geometry]\"",
+"```"
+],
+[
+"```bash",
+"build_linux.sh -t",
+"```"
+],
+[
+"```bash",
+"cmake --build build --config Release --target tests/all",
+"```"
+],
+[
+"```bash",
+"cmake --build build --config Release --target libslic3r_tests",
+"```"
+],
+[
+"```bash",
+"cd build",
+"ctest --test-dir tests --output-on-failure",
+"```"
+],
+[
+"```bash",
+"ctest --test-dir tests/libslic3r",
+"```"
+],
+[
+"```bash",
+"build/tests/libslic3r/Release/libslic3r_tests \"[Geometry]\"",
+"```"
+],
+[
+"```cpp",
+"#include <catch2/catch_all.hpp>",
+"#include \"libslic3r/TriangleMesh.hpp\"",
+"#include \"test_utils.hpp\"",
+"",
+"using namespace Slic3r;",
+"",
+"TEST_CASE(\"A loaded cube has positive volume\", \"[TriangleMesh]\") {",
+"    TriangleMesh cube = load_model(\"20mm_cube.obj\");",
+"    REQUIRE(cube.volume() > 0);",
+"}",
+"```"
+],
+[
+"```cpp",
+"TEST_CASE(\"Skirt is emitted once per layer it spans\", \"[SkirtBrim]\")   // good",
+"TEST_CASE(\"Print: Skirt generation\", \"[Print]\")                        // avoid",
+"```"
+],
+[
+"```cpp",
+"// good: 20mm of cube at 2mm layers is 10, and the test says both parts",
+"Slic3r::Test::init_and_process_print({cube(20)}, print, {",
+"    { \"layer_height\",    2 },",
+"    { \"nozzle_diameter\", 3 }",
+"});",
+"REQUIRE(print.objects().front()->layers().size() == 10);",
+"",
+"// avoid: 10 is only right while the default layer height happens to be 2",
+"Slic3r::Test::init_and_process_print({cube(20)}, print, {",
+"    { \"nozzle_diameter\", 3 }",
+"});",
+"REQUIRE(print.objects().front()->layers().size() == 10);",
+"```"
+],
+[
+"```cpp",
+"REQUIRE(role_passes(gcode, \"perimeter\") > 0);   // good",
+"REQUIRE(gcode.size() == 24196);                 // avoid",
+"```"
+],
+[
+"```cpp",
+"REQUIRE_THAT(gcode, Catch::Matchers::ContainsSubstring(\"; skirt\"));   // good",
+"REQUIRE(line == \"G1 X10.5 Y10.5 F1800 ; skirt\");                      // avoid",
+"```"
+],
+[
+"```cpp",
+"REQUIRE_THAT(layers.front()->print_z, Catch::Matchers::WithinAbs(2.0, 1e-4));   // good",
+"REQUIRE(layers.front()->print_z == 2.0);                                        // avoid",
+"```"
+],
+[
+"```cmake",
+"get_filename_component(_TEST_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)",
+"",
+"add_executable(${_TEST_NAME}_tests",
+"  ${_TEST_NAME}_tests.cpp",
+"  test_<subsystem>.cpp",
+")",
+"",
+"target_link_libraries(${_TEST_NAME}_tests test_common libslic3r Catch2::Catch2WithMain)",
+"set_property(TARGET ${_TEST_NAME}_tests PROPERTY FOLDER \"tests\")",
+"",
+"orcaslicer_copy_test_dlls()",
+"",
+"orcaslicer_discover_tests(${_TEST_NAME}_tests)",
+"```"
+],
+[
+"```cmake",
+"add_subdirectory(<suite>)",
+"```"
+],
+[
+"```cmake",
+"if (TARGET OpenVDB::openvdb)",
+"    target_sources(${_TEST_NAME}_tests PRIVATE test_hollowing.cpp)",
+"endif()",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "windows",
+"en": "Windows"
+},
+{
+"indent": 4,
+"anchor": "building-tests-on-windows",
+"en": "Building Tests on Windows"
+},
+{
+"indent": 4,
+"anchor": "faster-rebuilds-on-windows",
+"en": "Faster Rebuilds on Windows"
+},
+{
+"indent": 4,
+"anchor": "running-tests-on-windows",
+"en": "Running Tests on Windows"
+},
+{
+"indent": 0,
+"anchor": "macos",
+"en": "macOS"
+},
+{
+"indent": 4,
+"anchor": "building-tests-on-macos",
+"en": "Building Tests on macOS"
+},
+{
+"indent": 4,
+"anchor": "faster-rebuilds-on-macos",
+"en": "Faster Rebuilds on macOS"
+},
+{
+"indent": 4,
+"anchor": "running-tests-on-macos",
+"en": "Running Tests on macOS"
+},
+{
+"indent": 0,
+"anchor": "linux",
+"en": "Linux"
+},
+{
+"indent": 4,
+"anchor": "building-tests-on-linux",
+"en": "Building Tests on Linux"
+},
+{
+"indent": 4,
+"anchor": "faster-rebuilds-on-linux",
+"en": "Faster Rebuilds on Linux"
+},
+{
+"indent": 4,
+"anchor": "running-tests-on-linux",
+"en": "Running Tests on Linux"
+},
+{
+"indent": 0,
+"anchor": "the-test-suites",
+"en": "The Test Suites"
+},
+{
+"indent": 0,
+"anchor": "where-a-test-goes",
+"en": "Where a Test Goes"
+},
+{
+"indent": 0,
+"anchor": "test-helpers",
+"en": "Test Helpers"
+},
+{
+"indent": 0,
+"anchor": "writing-a-test",
+"en": "Writing a Test"
+},
+{
+"indent": 4,
+"anchor": "naming-and-tags",
+"en": "Naming and Tags"
+},
+{
+"indent": 4,
+"anchor": "test-style",
+"en": "Test Style"
+},
+{
+"indent": 4,
+"anchor": "test-design",
+"en": "Test Design"
+},
+{
+"indent": 0,
+"anchor": "adding-a-new-suite",
+"en": "Adding a New Suite"
+}
+]
+],
+"img": [],
+"link": [
+"https://github.com/catchorg/Catch2",
+"https://github.com/catchorg/Catch2/blob/devel/docs/Readme.md",
+"how_to_build_windows#the-build-script"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "How to Test",
+"raw": "How to Test",
+"id": "how-to-test",
+"alt": "how-to-test"
+},
+{
+"level": 2,
+"en": "Windows",
+"raw": "Windows",
+"id": "windows",
+"alt": "windows"
+},
+{
+"level": 3,
+"en": "Building Tests on Windows",
+"raw": "Building Tests on Windows",
+"id": "building-tests-on-windows",
+"alt": "building-tests-on-windows"
+},
+{
+"level": 3,
+"en": "Faster Rebuilds on Windows",
+"raw": "Faster Rebuilds on Windows",
+"id": "faster-rebuilds-on-windows",
+"alt": "faster-rebuilds-on-windows"
+},
+{
+"level": 3,
+"en": "Running Tests on Windows",
+"raw": "Running Tests on Windows",
+"id": "running-tests-on-windows",
+"alt": "running-tests-on-windows"
+},
+{
+"level": 2,
+"en": "macOS",
+"raw": "macOS",
+"id": "macos",
+"alt": "macos"
+},
+{
+"level": 3,
+"en": "Building Tests on macOS",
+"raw": "Building Tests on macOS",
+"id": "building-tests-on-macos",
+"alt": "building-tests-on-macos"
+},
+{
+"level": 3,
+"en": "Faster Rebuilds on macOS",
+"raw": "Faster Rebuilds on macOS",
+"id": "faster-rebuilds-on-macos",
+"alt": "faster-rebuilds-on-macos"
+},
+{
+"level": 3,
+"en": "Running Tests on macOS",
+"raw": "Running Tests on macOS",
+"id": "running-tests-on-macos",
+"alt": "running-tests-on-macos"
+},
+{
+"level": 2,
+"en": "Linux",
+"raw": "Linux",
+"id": "linux",
+"alt": "linux"
+},
+{
+"level": 3,
+"en": "Building Tests on Linux",
+"raw": "Building Tests on Linux",
+"id": "building-tests-on-linux",
+"alt": "building-tests-on-linux"
+},
+{
+"level": 3,
+"en": "Faster Rebuilds on Linux",
+"raw": "Faster Rebuilds on Linux",
+"id": "faster-rebuilds-on-linux",
+"alt": "faster-rebuilds-on-linux"
+},
+{
+"level": 3,
+"en": "Running Tests on Linux",
+"raw": "Running Tests on Linux",
+"id": "running-tests-on-linux",
+"alt": "running-tests-on-linux"
+},
+{
+"level": 2,
+"en": "The Test Suites",
+"raw": "The Test Suites",
+"id": "the-test-suites",
+"alt": "the-test-suites"
+},
+{
+"level": 2,
+"en": "Where a Test Goes",
+"raw": "Where a Test Goes",
+"id": "where-a-test-goes",
+"alt": "where-a-test-goes"
+},
+{
+"level": 2,
+"en": "Test Helpers",
+"raw": "Test Helpers",
+"id": "test-helpers",
+"alt": "test-helpers"
+},
+{
+"level": 2,
+"en": "Writing a Test",
+"raw": "Writing a Test",
+"id": "writing-a-test",
+"alt": "writing-a-test"
+},
+{
+"level": 3,
+"en": "Naming and Tags",
+"raw": "Naming and Tags",
+"id": "naming-and-tags",
+"alt": "naming-and-tags"
+},
+{
+"level": 3,
+"en": "Test Style",
+"raw": "Test Style",
+"id": "test-style",
+"alt": "test-style"
+},
+{
+"level": 3,
+"en": "Test Design",
+"raw": "Test Design",
+"id": "test-design",
+"alt": "test-design"
+},
+{
+"level": 2,
+"en": "Adding a New Suite",
+"raw": "Adding a New Suite",
+"id": "adding-a-new-suite",
+"alt": "adding-a-new-suite"
+}
+],
+"src": "developer_reference/how_to_test.md"
+}

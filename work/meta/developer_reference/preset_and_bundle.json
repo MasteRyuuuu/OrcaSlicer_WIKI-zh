@@ -1,0 +1,47 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![process-preset-full](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/process-preset-full.png?raw=true)",
+"![filament-preset](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/filament-preset.png?raw=true)",
+"![printer-preset](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/printer-preset.png?raw=true)"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/Preset.hpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/PresetBundle.hpp",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/Preset.hpp"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Preset and Bundle",
+"raw": "Preset and Bundle",
+"id": "preset-and-bundle",
+"alt": "preset-and-bundle"
+},
+{
+"level": 2,
+"en": "Preset",
+"raw": "[`Preset`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/Preset.hpp)",
+"id": "presethttpsgithubcomorcaslicerorcaslicerblobmainsrclibslic3rpresethpp",
+"alt": "preset"
+},
+{
+"level": 2,
+"en": "PresetBundle",
+"raw": "[`PresetBundle`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/PresetBundle.hpp)",
+"id": "presetbundlehttpsgithubcomorcaslicerorcaslicerblobmainsrclibslic3rpresetbundlehpp",
+"alt": "presetbundle"
+},
+{
+"level": 2,
+"en": "PresetCollection",
+"raw": "[`PresetCollection`](https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/Preset.hpp)",
+"id": "presetcollectionhttpsgithubcomorcaslicerorcaslicerblobmainsrclibslic3rpresethpp",
+"alt": "presetcollection"
+}
+],
+"src": "developer_reference/preset_and_bundle.md"
+}

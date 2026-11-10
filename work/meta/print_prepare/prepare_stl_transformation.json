@@ -1,0 +1,98 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "running-fix-model",
+"en": "Running Fix Model"
+},
+{
+"indent": 0,
+"anchor": "what-it-fixes",
+"en": "What it fixes"
+},
+{
+"indent": 0,
+"anchor": "parts",
+"en": "Parts"
+},
+{
+"indent": 0,
+"anchor": "painting",
+"en": "Painting"
+}
+]
+],
+"img": [
+"![stl-transformation-smooth-rough](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation-smooth-rough.png?raw=true)",
+"![simplify-menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/simplify-menu.png?raw=true)"
+],
+"link": [
+"import_export#importing-step-files",
+"prepare_cutting_tool",
+"cli_transform#geometry",
+"prepare_object_set#split-to-parts"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "STL Transformation",
+"raw": "STL Transformation",
+"id": "stl-transformation",
+"alt": "stl-transformation"
+},
+{
+"level": 2,
+"en": "Simplify model",
+"raw": "Simplify model",
+"id": "simplify-model",
+"alt": "simplify-model"
+},
+{
+"level": 3,
+"en": "You can Simplify your model using the following options",
+"raw": "You can Simplify your model using the following options",
+"id": "you-can-simplify-your-model-using-the-following-options",
+"alt": "you-can-simplify-your-model-using-the-following-options"
+},
+{
+"level": 2,
+"en": "Fix Model",
+"raw": "Fix Model",
+"id": "fix-model",
+"alt": "fix-model"
+},
+{
+"level": 3,
+"en": "Running Fix Model",
+"raw": "Running Fix Model",
+"id": "running-fix-model",
+"alt": "running-fix-model"
+},
+{
+"level": 3,
+"en": "What it fixes",
+"raw": "What it fixes",
+"id": "what-it-fixes",
+"alt": "what-it-fixes"
+},
+{
+"level": 3,
+"en": "Parts",
+"raw": "Parts",
+"id": "parts",
+"alt": "parts"
+},
+{
+"level": 3,
+"en": "Painting",
+"raw": "Painting",
+"id": "painting",
+"alt": "painting"
+}
+],
+"src": "print_prepare/prepare_stl_transformation.md"
+}

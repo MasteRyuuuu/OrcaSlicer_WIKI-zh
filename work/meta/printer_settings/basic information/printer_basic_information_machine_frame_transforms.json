@@ -1,0 +1,203 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`gcode_remap_x`, `gcode_remap_y`, `gcode_remap_z`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`pos_x, pos_y, pos_z, neg_x, neg_y, neg_z, rev_x, rev_y, rev_z`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--gcode-remap-x=pos_x` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`belt_frame_tilt_decouple`, `belt_frame_tilt_angle`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`belt_frame_tilt_decouple` (Boolean), `belt_frame_tilt_angle` (Float)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--belt-frame-tilt-decouple=1` (`belt_frame_tilt_decouple` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "how-axis-remapping-works",
+"en": "How axis remapping works"
+},
+{
+"indent": 4,
+"anchor": "remap-values",
+"en": "Remap values"
+},
+{
+"indent": 4,
+"anchor": "example-the-belt-profiles",
+"en": "Example: the belt profiles"
+},
+{
+"indent": 4,
+"anchor": "where-the-remap-is-applied",
+"en": "Where the remap is applied"
+},
+{
+"indent": 4,
+"anchor": "what-to-watch-for",
+"en": "What to watch for"
+},
+{
+"indent": 0,
+"anchor": "g-code-axis-remap",
+"en": "G-code axis remap"
+},
+{
+"indent": 0,
+"anchor": "machine-frame-tilt",
+"en": "Machine-frame tilt"
+},
+{
+"indent": 4,
+"anchor": "decouple-machine-frame-tilt",
+"en": "Decouple machine-frame tilt"
+},
+{
+"indent": 4,
+"anchor": "machine-frame-tilt-angle",
+"en": "Machine-frame tilt angle"
+}
+]
+],
+"img": [
+"![belt_machine_frame_transforms](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_machine_frame_transforms.png?raw=true)",
+"![belt_machine_frame](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_machine_frame.svg?raw=true)"
+],
+"link": [
+"printer_basic_information_belt_printer#enable-belt-printing",
+"#g-code-axis-remap",
+"#machine-frame-tilt",
+"belt_printing",
+"belt_printing#preview",
+"printer_basic_information_printable_space#printable-area-bed-shape",
+"printer_basic_information_printable_space#printable-height",
+"#g-code-axis-remap",
+"#machine-frame-tilt",
+"printer_basic_information_belt_printer#belt-tilt",
+"printer_machine_gcode",
+"quality_settings_precision#arc-fitting",
+"#how-axis-remapping-works",
+"option_mode",
+"#machine-frame-tilt",
+"#example-the-belt-profiles",
+"printer_basic_information_belt_printer#belt-tilt",
+"printer_basic_information_belt_printer#tilt-angle",
+"printer_basic_information_belt_printer#tilt-axis",
+"#decouple-machine-frame-tilt"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Machine Frame Transforms",
+"raw": "Machine Frame Transforms",
+"id": "machine-frame-transforms",
+"alt": "machine-frame-transforms"
+},
+{
+"level": 2,
+"en": "How axis remapping works",
+"raw": "How axis remapping works",
+"id": "how-axis-remapping-works",
+"alt": "how-axis-remapping-works"
+},
+{
+"level": 3,
+"en": "Remap values",
+"raw": "Remap values",
+"id": "remap-values",
+"alt": "remap-values"
+},
+{
+"level": 3,
+"en": "Example: the belt profiles",
+"raw": "Example: the belt profiles",
+"id": "example-the-belt-profiles",
+"alt": "example-the-belt-profiles"
+},
+{
+"level": 3,
+"en": "Where the remap is applied",
+"raw": "Where the remap is applied",
+"id": "where-the-remap-is-applied",
+"alt": "where-the-remap-is-applied"
+},
+{
+"level": 3,
+"en": "What to watch for",
+"raw": "What to watch for",
+"id": "what-to-watch-for",
+"alt": "what-to-watch-for"
+},
+{
+"level": 2,
+"en": "G-code axis remap",
+"raw": "G-code axis remap",
+"id": "g-code-axis-remap",
+"alt": "g-code-axis-remap"
+},
+{
+"level": 2,
+"en": "Machine-frame tilt",
+"raw": "Machine-frame tilt",
+"id": "machine-frame-tilt",
+"alt": "machine-frame-tilt"
+},
+{
+"level": 3,
+"en": "Decouple machine-frame tilt",
+"raw": "Decouple machine-frame tilt",
+"id": "decouple-machine-frame-tilt",
+"alt": "decouple-machine-frame-tilt"
+},
+{
+"level": 3,
+"en": "Machine-frame tilt angle",
+"raw": "Machine-frame tilt angle",
+"id": "machine-frame-tilt-angle",
+"alt": "machine-frame-tilt-angle"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_machine_frame_transforms.md"
+}

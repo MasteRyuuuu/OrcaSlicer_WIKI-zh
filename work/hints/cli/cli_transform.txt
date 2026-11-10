@@ -1,0 +1,9 @@
+G plate = 盘
+G part = 零件
+G model = 模型 / 型号
+G top = 顶部 / 俯视
+G slice = 切片
+G line = 线 / 直线
+  scale factor = 缩放比例
+  fix model = 修复模型
+  close holes = 闭孔

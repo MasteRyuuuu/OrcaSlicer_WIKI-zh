@@ -1,0 +1,203 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_lift_enforce[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Choice list`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`All Surfaces, Top Only, Bottom Only, Top and Bottom`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-lift-enforce=\"All Surfaces\"`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`z_hop_types[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Choice list`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`Auto Lift, Normal Lift, Slope Lift, Spiral Lift`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--z-hop-types=\"Auto Lift\"`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`z_hop[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--z-hop=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`travel_slope[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--travel-slope=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_lift_above[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-lift-above=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`retract_lift_below[extruder_idx]`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--retract-lift-below=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Z Hop",
+"raw": "Z Hop",
+"id": "z-hop",
+"alt": "z-hop"
+},
+{
+"level": 2,
+"en": "On surfaces",
+"raw": "On surfaces",
+"id": "on-surfaces",
+"alt": "on-surfaces"
+},
+{
+"level": 2,
+"en": "Z-hop type",
+"raw": "Z-hop type",
+"id": "z-hop-type",
+"alt": "z-hop-type"
+},
+{
+"level": 2,
+"en": "Z-hop height",
+"raw": "Z-hop height",
+"id": "z-hop-height",
+"alt": "z-hop-height"
+},
+{
+"level": 2,
+"en": "Traveling angle",
+"raw": "Traveling angle",
+"id": "traveling-angle",
+"alt": "traveling-angle"
+},
+{
+"level": 2,
+"en": "Only lift Z above",
+"raw": "Only lift Z above",
+"id": "only-lift-z-above",
+"alt": "only-lift-z-above"
+},
+{
+"level": 2,
+"en": "Only lift Z below",
+"raw": "Only lift Z below",
+"id": "only-lift-z-below",
+"alt": "only-lift-z-below"
+}
+],
+"src": "printer_settings/extruder/printer_extruder_z_hop.md"
+}

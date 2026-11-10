@@ -1,0 +1,387 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`default_junction_deviation`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--default-junction-deviation=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`default_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--default-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`outer_wall_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--outer-wall-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`inner_wall_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--inner-wall-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`infill_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-jerk=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_travel_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float or Percentage list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-travel-jerk=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`travel_jerk`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--travel-jerk=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "key-effects",
+"en": "Key Effects"
+},
+{
+"indent": 0,
+"anchor": "cornering-control-types",
+"en": "Cornering Control Types"
+},
+{
+"indent": 4,
+"anchor": "junction-deviation",
+"en": "Junction Deviation"
+},
+{
+"indent": 0,
+"anchor": "default",
+"en": "Default"
+},
+{
+"indent": 4,
+"anchor": "outer-wall",
+"en": "Outer wall"
+},
+{
+"indent": 4,
+"anchor": "inner-wall",
+"en": "Inner wall"
+},
+{
+"indent": 4,
+"anchor": "infill",
+"en": "Infill"
+},
+{
+"indent": 4,
+"anchor": "top-surface",
+"en": "Top surface"
+},
+{
+"indent": 4,
+"anchor": "initial-layer",
+"en": "Initial layer"
+},
+{
+"indent": 4,
+"anchor": "initial-layer-travel",
+"en": "Initial layer travel"
+},
+{
+"indent": 4,
+"anchor": "travel",
+"en": "Travel"
+},
+{
+"indent": 0,
+"anchor": "useful-links",
+"en": "Useful links"
+}
+]
+],
+"img": [],
+"link": [
+"pressure_advance_calib",
+"adaptive_pressure_advance_calib",
+"input_shaping_calib",
+"calibration_guide",
+"https://www.klipper3d.org/Config_Reference.html#printer",
+"https://docs.duet3d.com/User_manual/Reference/Gcodes#m566-set-allowable-instantaneous-speed-change",
+"https://marlinfw.org/docs/configuration/configuration.html#jerk-",
+"https://marlinfw.org/docs/configuration/configuration.html#junction-deviation-",
+"https://marlinfw.org/docs/configuration/configuration.html#jerk-",
+"#junction-deviation",
+"cornering_calib",
+"speed_settings_acceleration",
+"printer_motion_ability#maximum-junction-deviation",
+"printer_motion_ability#maximum-junction-deviation",
+"#travel",
+"https://www.klipper3d.org/Kinematics.html?h=accelerat#acceleration",
+"https://marlinfw.org/docs/configuration/configuration.html#junction-deviation-",
+"https://reprap.org/forum/read.php?1,739819",
+"https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html",
+"https://onehossshay.wordpress.com/2011/09/24/improving_grbl_cornering_algorithm/",
+"pressure_advance_calib",
+"adaptive_pressure_advance_calib"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Jerk XY",
+"raw": "Jerk XY",
+"id": "jerk-xy",
+"alt": "jerk-xy"
+},
+{
+"level": 2,
+"en": "Key Effects",
+"raw": "Key Effects",
+"id": "key-effects",
+"alt": "key-effects"
+},
+{
+"level": 2,
+"en": "Cornering Control Types",
+"raw": "Cornering Control Types",
+"id": "cornering-control-types",
+"alt": "cornering-control-types"
+},
+{
+"level": 3,
+"en": "Junction Deviation",
+"raw": "Junction Deviation",
+"id": "junction-deviation",
+"alt": "junction-deviation"
+},
+{
+"level": 2,
+"en": "Default",
+"raw": "Default",
+"id": "default",
+"alt": "default"
+},
+{
+"level": 3,
+"en": "Outer wall",
+"raw": "Outer wall",
+"id": "outer-wall",
+"alt": "outer-wall"
+},
+{
+"level": 3,
+"en": "Inner wall",
+"raw": "Inner wall",
+"id": "inner-wall",
+"alt": "inner-wall"
+},
+{
+"level": 3,
+"en": "Infill",
+"raw": "Infill",
+"id": "infill",
+"alt": "infill"
+},
+{
+"level": 3,
+"en": "Top surface",
+"raw": "Top surface",
+"id": "top-surface",
+"alt": "top-surface"
+},
+{
+"level": 3,
+"en": "Initial layer",
+"raw": "Initial layer",
+"id": "initial-layer",
+"alt": "initial-layer"
+},
+{
+"level": 3,
+"en": "Initial layer travel",
+"raw": "Initial layer travel",
+"id": "initial-layer-travel",
+"alt": "initial-layer-travel"
+},
+{
+"level": 3,
+"en": "Travel",
+"raw": "Travel",
+"id": "travel",
+"alt": "travel"
+},
+{
+"level": 2,
+"en": "Useful links",
+"raw": "Useful links",
+"id": "useful-links",
+"alt": "useful-links"
+}
+],
+"src": "print_settings/speed/speed_settings_jerk_xy.md"
+}

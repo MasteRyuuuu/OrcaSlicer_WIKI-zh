@@ -1,0 +1,875 @@
+# Plugin Development
+
+This page describes how to write Python plugins for OrcaSlicer and how to add new plugin
+types in C++. Python plugins run inside an embedded CPython interpreter, so they can extend
+OrcaSlicer without recompiling the application.
+
+This page is for two audiences:
+
+1. **Plugin authors** - writing a new Python plugin, modifying an existing one, and
+   debugging it during development.
+2. **OrcaSlicer contributors** - adding a brand-new *plugin type* in C++ (a new contract
+   that Python plugins can implement and that the app invokes at some point in its
+   workflow).
+
+The related plugin development pages cover adjacent topics:
+
+- [API Reference]({{L1}}) - the embedded `orca` module, registration,
+  host access, UI helpers, and each capability module.
+- [Plugin Audit Hook]({{L2}}) - the CPython audit hook that prompts the
+  user before plugin code performs a sensitive filesystem, network, or process-spawn
+  operation, and remembers the answer. Anyone adding a new trampoline method must read it;
+  every C++ to Python call opens an audit context.
+- [Plugin System Overview]({{L3}}) - the catalog/loader/cloud-subscription side of the
+  system (discovery, install, update).
+
+> [!NOTE]
+> All file paths below are under `src/slic3r/plugin/` unless stated otherwise.
+
+## Part 1: Python Plugin Development
+
+### Where plugins live and how they are discovered
+
+Plugins are loaded from two roots under the OrcaSlicer data directory (`data_dir()`):
+
+| Root | Purpose |
+|---|---|
+| `data_dir()/orca_plugins/` | locally installed / side-loaded plugins |
+| `data_dir()/orca_plugins/_subscribed/<user_id>/` | cloud-subscribed plugins |
+
+Each plugin lives in **its own subdirectory** containing exactly one entry file: either a
+single `.py` file or a single `.whl` (wheel). Subdirectories whose name starts with `.` or
+`__` are ignored. Discovery is driven by `PluginCatalog` (scan) and `PluginLoader` (load);
+see `PluginCatalog.cpp` and `PluginLoader.cpp` (`find_installed_plugin_entry` in
+`PythonFileUtils.cpp` decides which file in a folder is the entry point).
+
+> [!NOTE]
+> There are **no bundled example plugins in the repository.** The plugin snippets in this
+> document are illustrative. They were written against the real bindings below, but are not
+> copied from a shipped, verified plugin. Treat them as starting points and test them.
+
+### Anatomy of a plugin
+
+A plugin is packaged in **one of two forms**, and the entry file in its folder is what
+distinguishes them:
+
+- **A single `.py` file** - the simplest form, covered first below. Metadata lives in a
+  PEP 723 comment block at the top of the file.
+- **A wheel (`.whl`)** - a normal built Python package, for plugins that need multiple
+  modules or compiled code. Metadata comes from the wheel's own files instead of a PEP 723
+  block. See [Wheel (`.whl`) plugins]({{L4}}) below.
+
+**One plugin, many capabilities.** A plugin is a *package* that registers one or more
+**capabilities**. Each capability is a single typed unit of functionality: a script you can
+run, a G-code post-processor, a printer agent, with its own display name. A plugin's *types*
+are derived from the capabilities it registers (they are descriptive tags, not a single fixed
+role), so one plugin can, for example, offer both a script capability and a post-processing
+capability at once.
+
+**Both forms register the same way**: OrcaSlicer imports your code, instantiates the one
+**package class** you marked with `@orca.plugin`, and calls its `register_capabilities()`
+method to collect the capabilities it offers. Only the packaging and the metadata source
+differ.
+
+A single-file (`.py`) plugin has three parts:
+
+1. A **PEP 723 inline metadata block** (a special comment header) declaring identity and
+   dependencies.
+2. One or more **capability classes**, each subclassing a typed base exposed by the embedded
+`orca` module (a script, slicing-pipeline, or printer-agent capability) and
+   implementing `get_name()` plus its entry method.
+3. A **package class** decorated with `@orca.plugin` (subclassing `orca.base`) whose
+   `register_capabilities()` method calls `orca.register_capability(...)` once per capability.
+
+#### 1. The metadata block (PEP 723)
+
+OrcaSlicer reads identity and dependency metadata from a PEP 723 *inline script metadata*
+block: a comment block delimited by `# /// script` and `# ///`, with each content line
+prefixed by `# `. Identity fields live in a `[tool.orcaslicer.plugin]` table; dependency
+fields live at the TOML root. Parsing is implemented in
+`PythonFileUtils.cpp::parse_pep723_toml` / `read_python_plugin_metadata`.
+
+{{C1}}
+
+| Field | Location | Required | Notes |
+|---|---|---|---|
+| `name` | `[tool.orcaslicer.plugin]` | recommended | display name in the Plugins dialog |
+| `description` | `[tool.orcaslicer.plugin]` | recommended | shown in the plugin **Description** tab |
+| `author` | `[tool.orcaslicer.plugin]` | optional | |
+| `version` | `[tool.orcaslicer.plugin]` | recommended | |
+| `dependencies` | TOML root | optional | array of pip requirements (see [Dependencies]({{L5}})) |
+| `requires-python` | TOML root | optional | **read but not stored or enforced** against the bundled interpreter today |
+
+> [!NOTE]
+> The metadata block no longer declares a `type`. A plugin's type(s) are derived from the
+> capability classes it registers (each capability's `get_type()`), so the same metadata block
+> is used whether the plugin offers one capability or several. The PEP 723 parser
+> (`parse_pep723_toml`) reads only `name`, `description`, `author`, `version`,
+> `requires-python`, and `dependencies`; any other key (including a stray `type = ...`) is
+> ignored. The same applies to `.whl` plugins: identity comes from the wheel's `METADATA`,
+> and the served types come from the registered capabilities.
+
+#### 2. The plugin API
+
+The detailed API reference is split into [Registry]({{L6}}),
+[Host]({{L7}}), [Host UI]({{L8}}), [Lifecycle Events]({{L9}}),
+[Script]({{L10}}), [Pages]({{L11}}), [Slicing Pipeline]({{L12}}),
+[Resource Texture]({{L13}}), and
+[Printer Agent]({{L14}}). The summary below covers the main symbols
+used when writing a plugin.
+
+The interpreter exposes a single embedded module named **`orca`**
+(`PYBIND11_EMBEDDED_MODULE(orca, ...)` in `PythonPluginBridge.cpp`). It provides the capability
+base classes, the package base, and capability registration, plus the **`orca.host`** submodule
+for read-only access to the live slicer model graph, presets, and mesh geometry (see
+[The `orca.host` module]({{L15}})). It contains:
+
+| Symbol | Kind | Members / purpose |
+|---|---|---|
+| `orca.PluginType` | enum | `PrinterConnection`, `Pages`, `Analysis`, `Importer`, `Exporter`, `Visualization`, `Script`, `SlicingPipeline`, `ResourceTexture`, `Unknown` |
+| `orca.PluginResult` | enum | `Success`, `Skipped`, `RecoverableError`, `FatalError` |
+| `orca.PluginContext` | class | base context, field `orca_version: str` |
+| `orca.ExecutionResult` | class | fields `status`, `message`, `data`; factories below |
+| `orca.LifecycleEvent`, `orca.LifecycleEvtCode`, `orca.LifecycleEventContext` | enum / enum / class | the event, outcome code and payload passed to `on_lifecycle_event` ([Lifecycle Events]({{L16}})) |
+| `orca.PythonPluginBase` | class | the root **capability** base; subclasses must implement `get_name()` |
+| `orca.base` | class | the **package** base; subclass it and override `register_capabilities()` |
+| `orca.plugin` | decorator | marks the single package class for the file (exactly one per file) |
+| `orca.register_capability(cls)` | function | register one capability class; call it inside `register_capabilities()` |
+| `orca.request_permissions(...)` | function | declare filesystem, network, process, and thread permissions up front; one combined prompt after registration ([Registry]({{L17}})) |
+| `orca.pages` | submodule | [Pages]({{L18}}): `PagesPluginCapabilityBase`, a plugin tab in the main window |
+| `orca.slicing` | submodule | [Slicing Pipeline]({{L19}}): `Step`, `SlicingPipelineContext`, `SlicingPipelineCapabilityBase` |
+| `orca.script` | submodule | `ScriptPluginCapabilityBase` |
+| `orca.resource_texture` | submodule | `ResourceTexturePluginCapabilityBase` and `get_texture_dir()` |
+| `orca.printer_agent` | submodule | `PrinterAgentBase` and its data types |
+| `orca.host` | submodule | read-only host access: live `Model` graph, presets/bundle, and zero-copy mesh geometry |
+
+`ExecutionResult` is how a plugin reports the outcome of a run:
+
+{{C2}}
+
+- `status` - an `orca.PluginResult`.
+- `message` - human-readable text; this is what surfaces in error/result dialogs.
+- `data` - a free-form string whose meaning is defined by the plugin/workflow (not
+  interpreted by the framework).
+
+#### Capability configuration
+
+Every capability has a JSON configuration, regardless of its capability type. The **Config** tab
+in the Plugins dialog uses the host's JSON editor unless the capability supplies a custom HTML UI.
+The global configuration is stored under `data_dir()/orca_plugins/config.json` and is keyed by the
+full capability identity (plugin key, capability type, and capability name).
+
+The configuration methods are available on `orca.PythonPluginBase`:
+
+| Method | Purpose |
+|---|---|
+| `has_config_ui() -> bool` | Return `True` to use the custom UI returned by `get_config_ui()` instead of the JSON editor. |
+| `get_config_ui() -> str` | Return a self-contained HTML string. An empty or failing result falls back to the JSON editor. |
+| `get_default_config() -> str` | Override the method to return a Python `dict`; OrcaSlicer exposes the resulting JSON as a string and uses it when the user restores global defaults. Without an override, the default is `{}`. |
+| `get_config() -> str` | Return this capability's effective stored configuration as a JSON string. It is `{}` when no configuration has been saved. |
+| `get_config_version() -> str` | Return the plugin version that last saved the configuration. Use this to detect and migrate an older schema. |
+| `save_config(config: str) -> bool` | Persist a JSON string for this capability. Use `json.dumps(config_dict)` and check the return value. |
+
+Example:
+
+{{C3}}
+
+`save_config()` supplies the plugin identity and current version automatically; a plugin cannot
+write another capability's configuration through this API. Preset-specific overrides are edited
+from a preset's plugin configuration dialog and are stored inside the preset. When an override is
+present, `get_config()` returns that override; otherwise it returns the global configuration.
+
+For a custom UI, return a complete page from `get_config_ui()` and set `has_config_ui()` to `True`:
+
+{{C4}}
+
+The page runs in a sandboxed frame. It can use only the injected `window.orca.getConfig()` and
+`window.orca.saveConfig(value)` bridge for configuration; keep the page self-contained and do not
+assume same-origin access to the host.
+
+#### The `orca.host` module: read-only host access
+
+`orca.host` (bound in `src/slic3r/plugin/host/`) gives plugins **read-only** access to the running
+slicer. It is intended for analysis, reporting, and export plugins; nothing here mutates the
+model. **Script plugins run on the main/UI thread**, so within one `execute()` the model cannot
+change under you; **slicing-pipeline plugins run on a background thread** while the GUI keeps
+running, and **printer-agent methods can be called on the UI thread** (select, discover,
+connect, callback registration) **or on job threads** (`start_*` print/send jobs). Either way, treat everything as a momentary snapshot and do not stash
+references across runs.
+
+**Entry points** (each raises `RuntimeError` if called before the GUI/model is ready):
+
+{{C5}}
+
+**Model graph:** `Model.objects()` -> `ModelObject`; each object has `volumes()`/`volume(i)`
+(-> `ModelVolume`) and `instances()`/`instance(i)` (-> `ModelInstance`). Bounding boxes are a
+`host.BoundingBox` value type (`min`/`max`/`size`/`center` as `(x, y, z)` mm tuples, plus
+`radius`/`defined`).
+
+**Mesh geometry:** `ModelVolume.mesh()` -> `host.TriangleMesh`
+
+| Member | Returns | Notes |
+|---|---|---|
+| `vertex_count()` / `triangle_count()` (`facets_count()`) / `is_empty()` | `int` / `bool` | numpy-free |
+| `vertex(i)` / `triangle(i)` | `(x, y, z)` / `(a, b, c)` tuple | numpy-free, bounds-checked |
+| `vertices()` | `(N, 3)` float32 ndarray | **read-only, zero-copy**, requires numpy |
+| `triangles()` | `(M, 3)` int32 ndarray | vertex indices; **read-only, zero-copy**, requires numpy |
+| `face_normals()` | `(M, 3)` float32 ndarray | computed copy, requires numpy |
+| `volume()` / `bounding_box()` / `is_manifold()` | `float` / `BoundingBox` / `bool` | numpy-free |
+
+Coordinates are **local** (the volume's own frame, in mm). The `vertices()`/`triangles()`
+arrays are zero-copy views into the live mesh and are marked read-only; writing to them raises
+`ValueError`. Their lifetime is pinned to an immutable mesh snapshot, so they stay valid even if
+the volume's mesh is later replaced.
+
+**Worked example** (declare numpy in the PEP 723 block so the bundled `uv` installs it):
+
+{{C6}}
+
+> [!NOTE]
+> If the instance is mirrored (`instance.is_left_handed()` is `True`, i.e. `det(M) < 0`), flip
+> triangle winding / negate face normals when computing outward-facing normals in world space.
+
+**numpy requirement:** `vertices()`, `triangles()`, `face_normals()`, and the `matrix()`
+accessors on `ModelVolume`/`ModelInstance` require numpy and raise a clear `ImportError` if it
+is not installed (declare `dependencies = ["numpy"]`). Everything else - counts, `vertex(i)`/
+`triangle(i)`, `volume()`, `bounding_box()`, `is_manifold()`, and the `offset`/`rotation`/
+`scaling_factor`/`mirror` tuple accessors - works without numpy.
+
+#### The `orca.host.ui` module: dialogs and interactive windows
+
+`orca.host.ui` lets a plugin show host-owned UI: a native message box, a native progress
+dialog, a modal HTML dialog, non-modal interactive windows, and a panel docked beside the 3D
+view. **A plugin must never import
+its own GUI toolkit**
+(PyQt/wxPython/tkinter): a `script` plugin shares the host's UI thread, so a second toolkit's
+event loop would clash with wxWidgets, and a `gcode`/`printer-agent` plugin can run off the
+main thread where toolkit calls would crash. These host calls run on the main thread for you and
+block the calling code until they return.
+
+{{C7}}
+
+`message` arguments: `buttons` is `"ok"|"ok_cancel"|"yes_no"|"yes_no_cancel"`; `icon` is
+`"info"|"warning"|"error"|"question"`.
+
+**Docked panels:**
+
+`create_dock_panel()` puts your page in a pane of the same dock area as the sidebar, instead of
+a separate window. The user can drag it to another edge, float it, resize it or close it.
+Opened again, it comes back where and how big it was when the window layout was last saved,
+which happens when a new project is started, not on exit. `dock` is `"left"`, `"right"`,
+`"bottom"` or `"float"`; `width` and `height` are in DIPs. It belongs to the Prepare and Preview
+tabs, and is hidden while the user is on another tab.
+
+{{C8}}
+
+The page talks to the plugin exactly as in a window, except `orca.submit()`, which only applies
+to modal dialogs.
+
+**Progress dialogs:**
+
+Use `create_progress_dialog()` for host-owned native progress. It returns a
+`ProgressDialog` handle and also works as a context manager, so `close()` is called on exit.
+The default style is `PD_APP_MODAL | PD_AUTO_HIDE`; add `PD_CAN_ABORT` if the user should be
+able to cancel. `maximum` defaults to `100` (values `<= 0` are treated as `100`).
+
+For script plugins, put the dialog inside `execute(self)` and update it between chunks of
+work. Do not create the dialog and then run one long uninterrupted operation such as a single
+`time.sleep(...)` or blocking network call; the dialog only gets useful repaint/cancel
+checkpoints when you call `update()` or `pulse()`.
+
+{{C9}}
+
+For indeterminate work, pulse the dialog instead of setting a numeric value:
+
+{{C10}}
+
+Handle methods:
+
+| Python call | Effect |
+|---|---|
+| `progress.update(value, message="")` | set the determinate progress value; returns `False` if closed/cancelled |
+| `progress.pulse(message="")` | advance an indeterminate progress step; returns `False` if closed/cancelled |
+| `progress.start_pulse(interval_ms=100, message="")` | start timer-driven pulsing on the UI thread |
+| `progress.stop_pulse()` | stop timer-driven pulsing |
+| `progress.close()` | close the dialog |
+| `progress.is_open()` | return whether the host still has the dialog registered |
+
+Because `start_pulse()` has no return value, use explicit `update()` or `pulse()` calls at
+natural cancellation points if the dialog includes `PD_CAN_ABORT`.
+
+The style constants exposed by `orca.host.ui` mirror `wxProgressDialog`: `PD_APP_MODAL`,
+`PD_AUTO_HIDE`, `PD_CAN_ABORT`, `PD_CAN_SKIP`, `PD_ELAPSED_TIME`, `PD_ESTIMATED_TIME`, and
+`PD_REMAINING_TIME`. `PD_CAN_SKIP` is available for style parity, but the current Python
+handle does not expose a separate "skip" state.
+
+**The page talks back through `window.orca`** (injected automatically; the page supplies raw,
+self-contained HTML/CSS/JS):
+
+| JS call | Effect |
+|---|---|
+| `orca.postMessage(obj)` | deliver `obj` to the plugin's `on_message(obj)` |
+| `orca.onMessage(cb)` | `cb(data)` runs for each `win.post(data)` (and modal pushes) |
+| `orca.submit(obj)` | (modal) close and return `obj` from `show_dialog` |
+| `orca.close()` | close the dialog / window |
+
+**Theming (automatic light/dark):**
+
+The host injects a stylesheet that matches OrcaSlicer's **current theme** (the active
+light/dark mode, fonts, background/foreground, accent and border colors) *before* your page
+renders. An unstyled page already looks native: `<body>`, headings, `button`,
+`input`/`select`/`textarea`, `table`, links and scrollbars get sensible themed defaults, and
+the theme is also exposed as CSS variables so you can match the rest of the UI:
+
+| Variable | Meaning |
+|---|---|
+| `--orca-bg` | window/background color |
+| `--orca-fg` | primary text color |
+| `--orca-muted` | secondary / label text color |
+| `--orca-accent` | accent color (buttons, links, focus) |
+| `--orca-accent-fg` | text color on the accent |
+| `--orca-border` | subtle border / separator / row-hover color |
+| `--orca-font` | UI font stack |
+
+The injected rules use only low specificity and never `!important`, so **any CSS your page
+ships overrides them**. Prefer the variables (e.g. `border:1px solid var(--orca-border)`) over
+hardcoded colors so your dialog follows light *and* dark mode automatically. The UI sample
+`host_ui_panel.py` relies on this and uses no fixed colors.
+
+**Threading & lifecycle:**
+
+- Host UI calls run on the main thread and **block the calling code** until they return
+  (`message`/`show_dialog` when the dialog closes; `create_window`/`create_progress_dialog`
+  as soon as the window/dialog is shown; progress updates after the host applies them). From
+  a `script` plugin, already on the UI thread, they run inline; from a background-thread
+  plugin (`gcode`/`printer-agent`) they marshal to the main thread first.
+- `on_message(data)` runs on the **UI thread**; keep it quick; offload heavy work to a
+  `threading.Thread` and push results back with `win.post(...)`.
+- A **modal** dialog (`show_dialog`) fits a one-shot `execute()`. A **persistent** panel
+  (`create_window` or `create_dock_panel`) is best opened from `on_load()` so it lives for the
+  plugin's lifetime; the host closes a plugin's windows and panels automatically when it is
+  unloaded/reloaded or the app exits, without calling `on_close`.
+- Content is loaded as raw HTML; prefer **self-contained** pages (inline CSS/JS). There is no
+  CSP and developer tools are disabled.
+
+See `host_ui_panel.py` for a non-modal interactive panel that browses the whole `orca.host`
+read-only API.
+
+**Notifications:** `orca.host.ui.push_notification(level, text, hyper_text="", on_click=None)`
+shows a notification in the 3D view, optionally with a clickable link. See
+[Plater Notifications]({{L20}}).
+
+#### 3. Registration
+
+Registration has two parts, both resolved at **module import / load time**.
+
+**Capabilities** - each capability is a class that subclasses a typed base (see
+[Capability types and entry points]({{L21}})) and implements
+`get_name(self) -> str`. The name is how the capability appears in the UI and how presets
+refer to it, so it must be **unique within the plugin** and **must not contain a `;`**. That
+character is reserved as a separator in preset references, and a `;` in a capability name
+fails the load.
+
+**The package** - exactly one class per file is decorated with `@orca.plugin` and subclasses
+`orca.base`. Its `register_capabilities(self)` method calls `orca.register_capability(Cls)`
+once for each capability class you want to expose:
+
+{{C11}}
+
+OrcaSlicer instantiates the package class (it must be callable as `SamplePlugin()` with no
+arguments), calls `register_capabilities()`, then instantiates each registered capability.
+`orca.request_permissions(...)` is optional; when it is called, the declarations are collected
+during registration and shown as **one combined Yes/No dialog after `register_capabilities()`
+returns and before any capability instance is created**. Targets already granted to the plugin
+are not asked for again, and denying the request aborts the load with an error. See
+[Registry]({{L22}}) for the parameters and [Plugin Audit Hook]({{L23}})
+for how the grants are enforced.
+
+Rules enforced when a plugin loads (most in `PythonPluginBridge.cpp`):
+
+- The `@orca.plugin` class **must** subclass `orca.base`, and there must be **exactly one**
+  per file. A second `@orca.plugin` fails the load.
+- Each class passed to `orca.register_capability` must subclass a capability base (ultimately
+  `orca.PythonPluginBase`); otherwise it raises `value_error`.
+- Every capability must resolve `get_name()` (checked in the bridge); the loader
+  (`PluginLoader.cpp`) additionally rejects the plugin if the resulting `(type, name)` pair is
+  not unique across it.
+- A capability class you never pass to `register_capability` is **invisible** to OrcaSlicer,
+  even if it is defined in the file.
+- If the plugin calls `orca.request_permissions(...)`, the user must accept the combined
+  dialog that follows registration; declining it fails the load.
+
+#### Wheel (`.whl`) plugins
+
+For anything beyond a single file, such as multiple modules, packaged resources, or compiled
+extensions, ship a standard Python **wheel** as the plugin folder's entry file. The plugin
+*code* is identical to the `.py` case: somewhere in the importable package's top-level code
+(typically its `__init__.py`) you define your capability classes and the `@orca.plugin`
+package class that registers them. What changes is **where metadata comes from** and that the
+wheel is validated on install (`read_wheel_plugin_metadata` in `PythonFileUtils.cpp`).
+
+Identity and dependencies are read from the wheel's `*.dist-info/` files instead of a
+PEP 723 block:
+
+| Plugin field | Wheel source |
+|---|---|
+| `name` | `METADATA` -> `Name` (**required**) |
+| `version` | `METADATA` -> `Version` (**required**) |
+| `description` | `METADATA` -> `Summary` |
+| `author` | `METADATA` -> `Author` |
+| `dependencies` | `METADATA` -> `Requires-Dist` |
+
+As with `.py` plugins, the wheel does **not** declare a type. The plugin's served types come
+from the capabilities its `@orca.plugin` package class registers at load time.
+
+Additional wheel rules enforced at install time:
+
+- The wheel must contain exactly **one `.dist-info` directory** with `METADATA`, `WHEEL`,
+  and `RECORD` present.
+- **Platform/ABI compatibility is checked** from the `WHEEL` file's `Tag:` lines. Pure
+  Python wheels (`*-none-any`) are accepted everywhere; platform-specific wheels must match
+  the current interpreter's ABI tag and OS (see `PythonInterpreter::python_abi_tag()`).
+  Ship a pure-Python wheel unless you genuinely need a compiled extension.
+- The importable entry package is chosen in priority order: core-metadata `Import-Name`,
+  then `top_level.txt` (if it names a single package), then the normalized `Name`.
+
+### Capability Types and Entry Points
+
+Each typed base defines the method(s) OrcaSlicer will call and the type returned by
+`get_type()`. Every capability **must** implement `get_name(self) -> str`. Lifecycle hooks
+`on_load()` / `on_unload()` are optional and available on every capability (defaults do
+nothing). Any capability can also override `on_lifecycle_event(event, ctx)` to observe
+application events (project open/save, slicing, object and plate edits, presets, printer and
+job activity); see [Lifecycle Events]({{L24}}).
+
+The API Reference keeps the per-module details in separate pages:
+[Script]({{L25}}), [Pages]({{L26}}), [Slicing Pipeline]({{L27}}),
+[Resource Texture]({{L28}}), and
+[Printer Agent]({{L29}}).
+
+| Base class | `get_type()` returns | Required methods | Invoked by |
+|---|---|---|---|
+| `orca.script.ScriptPluginCapabilityBase` | `Script` | `get_name()`, `execute(self) -> ExecutionResult` | the **Plugins dialog -> Run** action |
+| `orca.pages.PagesPluginCapabilityBase` | `Pages` | `get_name()`, `get_ui(self) -> str` | a **main-window tab** added while the capability is enabled |
+| `orca.slicing.SlicingPipelineCapabilityBase` | `SlicingPipeline` | `get_name()`, `execute(self, ctx) -> ExecutionResult` | configured slicing steps and **G-code export / post-processing** |
+| `orca.printer_agent.PrinterAgentBase` | `PrinterConnection` | `get_name()` + ~30 agent methods (`get_agent_info`, `connect_printer`, ...) | the **network / printer-agent** layer on load; it receives print jobs only when **Preferences > Developer > Experimental Features > Use printer agents instead of print hosts** is enabled (off by default), and the printer preset's `printer_agent` field selects the agent ID |
+| `orca.resource_texture.ResourceTexturePluginCapabilityBase` | `ResourceTexture` | `get_name()`, `get_texture_dir(self) -> str` | OrcaSlicer, when the capability is materialized |
+
+> [!NOTE]
+> `get_name()` is required; `get_type()` usually is not. Every capability must implement
+> `get_name()`. It is pure virtual on the root base, and a missing override fails the load.
+> The typed C++ bases already implement `get_type()` (e.g. `ScriptPluginCapability::get_type()`
+> returns `Script`), so a subclass of a *typed* base does **not** need to override it. Only a
+> capability that subclasses the **root** `orca.PythonPluginBase` directly must set its own
+> `get_type()`.
+
+> [!IMPORTANT]
+> `ScriptPluginCapabilityBase.execute()` runs on the **main/UI thread**: live
+> host handles are safe to read for the whole call and `orca.host.ui` dialogs open inline, but a
+> slow `execute()` **freezes the UI**. Keep it quick; offload heavy work to your own
+> `threading.Thread` (which must not touch the model) and surface results through a
+> `create_window` panel. `SlicingPipelineCapabilityBase` runs on the background slicing thread.
+> `PrinterAgentBase` methods are called on the UI thread (select / discover / connect /
+> callback registration) or on job threads (`start_*`); the host marshals the agent's
+> callbacks back to the UI thread.
+
+The slicing context (`orca.slicing.SlicingPipelineContext`) is passed to `execute` and exposes
+the live slicing graph during geometry steps. At `Step.psGCodePostProcess`, the graph fields are
+`None` and the context instead exposes the working G-code file:
+
+| Field | Meaning |
+|---|---|
+| `orca_version` | OrcaSlicer version string (inherited from `PluginContext`) |
+| `step` | the pipeline step currently being executed |
+| `print` | the live print graph, or `None` at `psGCodePostProcess` |
+| `object` | the current print object for object-scoped steps, or `None` |
+| `gcode_path` | the working G-code path, set at `psGCodePostProcess` |
+| `host` | target host, when exporting to a network printer |
+| `output_name` | the output file name |
+| `config_value(key)` | the resolved print configuration value, or `None` if absent |
+| `cancelled()` | whether the active print has been cancelled |
+
+> [!IMPORTANT]
+> Filesystem, network, process, and thread-creation access are audited. While `execute()` runs,
+> a sensitive operation (a file read/write/create/delete, an HTTP/socket connection, spawning
+> a process, or starting a thread) prompts the user with a Yes/No dialog naming the target; a
+> "Yes" is remembered for that plugin so the same target does not prompt again. Thread
+> creation is granted once per plugin: the work the spawned thread then runs is **not** audited.
+> An operation inside a pre-determined allowed folder — `data_dir()`, the read-only
+> `resources_dir()`, or (at `psGCodePostProcess`) the current G-code file's folder — needs no
+> prompt at all; a `secrets`/`cert`/`conf`-like path is blocked outright, with no prompt
+> either. To avoid first-use prompts, declare what you need with
+> `orca.request_permissions(...)` in `register_capabilities()`. See
+> [Plugin Audit Hook]({{L30}}).
+
+### Complete Examples
+
+**Minimal script plugin:** one capability, runs from the Plugins dialog, no context.
+
+{{C12}}
+
+**Multi-capability plugin:** one package that exposes a slicing-pipeline capability *and* a
+script capability.
+
+{{C13}}
+
+> [!NOTE]
+> When a capability is chosen for a setting (for example a post-processing capability), its
+> `get_name()` is what the preset stores. The full reference saved alongside it is
+> `<plugin_name>;<cloud_uuid>;<capability_name>`, which is why a
+> capability name may not contain `;`. See
+> [Plugin references in presets]({{L31}}) for how this
+> is used to restore missing plugins.
+
+### Dependencies
+
+List third-party requirements in the PEP 723 root `dependencies` array. On install,
+OrcaSlicer resolves them with a bundled `uv` into the plugin's environment
+(`PluginLoader.cpp`):
+
+{{C14}}
+
+Keep dependencies minimal. Every dependency is code that runs under the same audit policy
+as your plugin and must be fetched at install time.
+
+### Modifying an existing plugin
+
+1. Locate its folder under `data_dir()/orca_plugins/<plugin>/` (or, for subscribed plugins,
+   under `.../_subscribed/<user_id>/`).
+2. Edit the `.py` entry file. If you change the metadata block, bump `version` so the change
+   is visible in the Plugins dialog.
+3. Reload (see the iteration workflow below). Note that plugin instances are captured at
+   load time; a running OrcaSlicer will not pick up source edits until the plugin is
+   reloaded or the app is restarted.
+
+> [!NOTE]
+> Editing a `.whl` plugin in place is not supported. Rebuild and reinstall the wheel.
+
+### How Errors Are Surfaced
+
+There are **three distinct error surfaces**. Knowing which one you are looking at tells you
+what kind of failure occurred.
+
+**1. A message box:** a *runtime* failure of an explicit run. You get one when:
+
+- your `execute()` **raised an exception** - it is caught at the C++ to Python trampoline
+  boundary, the full traceback is logged, and the exception is rethrown and shown; or
+- your `execute()` **returned a failure** (`ExecutionResult.failure(...)`, i.e. status
+  `RecoverableError` / `FatalError`).
+
+For **script** plugins the dialog title is *"Script Plugin Failed"* (or *"Script Plugin"*
+for a returned failure / success), and the body text is the exception message or your
+`ExecutionResult.message`. For **slicing-pipeline** plugins the failure is raised as a
+slicing error (`"Post-processing plugin <name> failed/raised..."`) and surfaces through the
+normal slicing-error path. Source: `PluginsDialog.cpp` (`run_script_plugin`,
+`complete_with_error`) and `PostProcessor.cpp`.
+
+**2. The plugin details / description area:** a *persistent* error
+state stored on the plugin descriptor, not a single run. When a plugin fails to load or has
+invalid metadata, the descriptor records an error (`set_error` / `normalized_error` in
+`PluginDescriptor.hpp`); for a metadata-invalid plugin **the error text replaces the
+description** shown in the dialog (`PluginsDialog.cpp`). This reflects *state* ("this
+plugin is currently broken") rather than the result of one execution.
+
+**3. The Python log file:** the full traceback. `sys.stderr` is teed to:
+
+{{C15}}
+
+(`install_python_stderr_redirect` in `PythonInterpreter.cpp`.) This is the **only** place
+errors from background threads your plugin spawns will appear; those never cross back to
+C++ and never produce a dialog. C++-side context (load/discovery messages) goes to the main
+session log via Boost.
+
+**How to act on each:**
+
+- **Message box** -> read the message line, then open the `python_*.log` for the file/line
+  of the traceback. Dialogs show only the message, not the stack.
+- **Details-area / Diagnostics error** -> the plugin didn't load; usually a registration
+  problem (a capability that doesn't subclass a typed base, a missing `get_name()`, a
+  duplicate capability name, or no `@orca.plugin` package class), an import error, or a denied
+  `orca.request_permissions(...)` dialog. Fix it, then reload.
+- **Anything blocked with a `PermissionError`** -> the user answered "No" to the audit
+  hook's prompt for that operation (or it was auto-denied). See the *Debugging* section of
+  [Plugin Audit Hook]({{L32}}) and the `[AUDIT BLOCKED]` log line.
+
+**Prefer returning a result over raising** for failures you anticipate:
+`ExecutionResult.failure(orca.PluginResult.RecoverableError, "clear user-facing reason")`
+gives the user a clean message. Raise for genuine bugs; you'll get a full traceback in the
+log to debug from.
+
+### Testing and Iterating During Development
+
+A practical loop:
+
+1. **Edit** the plugin source in its `orca_plugins/<plugin>/` folder.
+2. **Reload** - reopen the Plugins dialog / re-trigger discovery, or restart OrcaSlicer if
+   in doubt (instances are captured at load time).
+3. **Run** - for a script plugin use the Plugins dialog **Run** action; for a
+   slicing-pipeline plugin run a slice/export so the pipeline invokes it.
+4. **Watch the log** - keep `data_dir()/log/python_*.log` open (e.g. `tail -f`). Tracebacks,
+   `print()` output, and audit blocks all land there.
+5. **Iterate.** Use `ExecutionResult` messages for expected outcomes; rely on the log for
+   stack traces.
+
+Tips:
+
+- Confirm the plugin shows the right name and version in the Plugins dialog, and that **each
+  capability you registered** appears (with the expected type) in its expandable capability
+  list. A capability that is never passed to `orca.register_capability` will not appear.
+- Develop against small, fast inputs; for slicing-pipeline plugins keep a tiny test model so
+  each export cycle is quick.
+- Remember that filesystem/network/process/thread actions prompt on first use per plugin: a
+  surprise `PermissionError` usually means an earlier prompt was answered "No" — or, for a
+  path with `secret`/`cert`/`conf` in it, that it's categorically denied and was never
+  prompted for at all. Off the main thread a prompt is posted asynchronously and the current
+  attempt is denied; accepting it lets a later attempt through. See
+  [Plugin Audit Hook]({{L33}}).
+
+## Part 2: Adding a New Plugin Type in C++
+
+This part is for OrcaSlicer contributors extending the plugin *framework* with a new
+contract, such as an "importer" capability type. The system has no per-type registry/switch for
+*instantiation*: a capability's Python class subclasses a typed base, the package's
+`register_capabilities()` registers it via `register_capability`, and the rest of the app
+reaches the loaded capability instance by `std::dynamic_pointer_cast<ConcreteType>` at the
+call site. So adding a type means: define a base + context + result, add a trampoline that
+forwards into Python through the audit macro, register pybind11 bindings, wire one call site,
+and add the files to the build.
+
+Use the existing `slicingPipeline`, `script`, and `printerAgent` types under
+`src/slic3r/plugin/pluginTypes/` as references. `script` is the simplest,
+`slicingPipeline` shows a live graph context plus a per-call `audit_setup` callback, and
+`printerAgent` shows a wide multi-method interface.
+
+### Step 1: Define the Plugin Contract
+
+Create `pluginTypes/<type>/<Type>PluginCapability.hpp`. Subclass `PluginCapabilityInterface`, hardcode
+`get_type()` to your `PluginCapabilityType`, declare your pure-virtual entry method(s) and any
+context struct, and declare a static `RegisterBindings`. The current slicing-pipeline base
+(`pluginTypes/slicingPipeline/SlicingPipelinePluginCapability.hpp`) is the canonical context example:
+
+{{C16}}
+
+The shared building blocks come from `PythonPluginInterface.hpp`:
+
+- `PluginCapabilityInterface` - `virtual std::string get_name() const = 0` (the capability's
+  name, provided by Python), `virtual PluginCapabilityType get_type() const` (defaults to
+  `Unknown`; typed bases override it), virtual `on_load()` / `on_unload()`, plus the C++-only
+  audit identity (`set_audit_plugin_key`).
+- `struct PluginContext { std::string orca_version; }` - derive your context from this.
+- `struct ExecutionResult { PluginResult status; std::string message, data; }` with static
+  `success` / `skipped` / `failure`.
+- `enum class PluginCapabilityType { ... }` and the `plugin_capability_type_to_string` /
+  `plugin_capability_type_from_string` / `plugin_capability_type_display_name` maps.
+
+If your type needs a new `PluginCapabilityType` value, **add it to the enum and to all three
+maps** in `PythonPluginInterface.hpp`, choosing the string the maps translate. Reuse an
+existing value (e.g. `Analysis`) if it fits.
+
+### Step 2: Decide the API Surface
+
+Decide exactly what the plugin must receive and return, and expose **only that**:
+
+- **Inputs** go in the context struct (mirror `SlicingPipelineContext`). Keep it to data the
+  plugin legitimately needs.
+- **Outputs** should be an `ExecutionResult` (status + message + `data` string) unless your
+  type genuinely needs richer return data. In that case, define and bind a small result
+  struct.
+- **Keep it minimal and stable.** The bindings are an API surface plugins depend on;
+  removing or renaming a bound field/method breaks existing plugins. Add fields rather than
+  repurpose them, and prefer the smallest interface that does the job.
+- **Avoid exposing internal slicer/GUI types.** The current API deliberately exposes only
+  plain data (strings, enums). Passing raw engine objects to plugins widens both the
+  compatibility and the security surface.
+
+### Step 3: Add the Trampoline
+
+Create `pluginTypes/<type>/<Type>PluginCapabilityTrampoline.hpp`. Subclass
+`PyPluginCommonTrampoline<YourBase>` (which already provides the `get_name` and
+`on_load`/`on_unload` trampolines) and forward each virtual into Python via
+`ORCA_PY_OVERRIDE_AUDITED`. The slicing-pipeline trampoline
+(`pluginTypes/slicingPipeline/SlicingPipelinePluginCapabilityTrampoline.hpp`) follows this pattern:
+
+{{C17}}
+
+The macros (`PyPluginTrampoline.hpp`) do two jobs at this single boundary: log + rethrow the
+Python traceback, and open the audit context.
+
+{{C18}}
+
+| Argument | Meaning |
+|---|---|
+| `audit_setup` | a lambda run *after* the audit context is opened; use it to `add_scoped_allowed_root(...)` if your call needs one. Pass `[] {}` if none |
+| `override_macro` | pybind11's own `PYBIND11_OVERRIDE` (has a C++ fallback) or `PYBIND11_OVERRIDE_PURE` (pure virtual, no fallback) |
+| `ret, base, name, ...` | the standard pybind11 override arguments |
+
+> [!IMPORTANT]
+> Every new trampoline method must go through `ORCA_PY_OVERRIDE_AUDITED` (or call
+> `ORCA_PY_AUDIT_SCOPE()` directly if you need to hand-unpack the Python return value). There
+> is no mode to choose — read [Plugin Audit Hook]({{L34}}) to understand what gets
+> prompted and persisted for the events your new type's Python surface can trigger.
+
+### Step 4: Register the Python Bindings
+
+Implement `RegisterBindings` in `pluginTypes/<type>/<Type>PluginCapability.cpp`: create a submodule,
+bind the context/result structs, and bind the base class with its trampoline. The slicing-pipeline
+implementation (`pluginTypes/slicingPipeline/SlicingPipelinePluginCapability.cpp`) follows this shape:
+
+{{C19}}
+
+The base class is bound as `SlicingPipelineCapabilityBase` (the name plugin authors subclass) and
+inherits `get_name` from the root `PythonPluginBase`, so you only bind the type-specific
+methods here. Then **call your `RegisterBindings` from `bind_python_api`** in
+`PythonPluginBridge.cpp`, next to the existing ones (look for the
+`// Make sure you register your bindings here` comment):
+
+{{C20}}
+
+The shared `PluginCapabilityType` / `PluginResult` / `PluginContext` / `ExecutionResult` /
+`PythonPluginBase` bindings, the package base (`orca.base`), and the `@orca.plugin` /
+`orca.register_capability` entry points are already defined once in that same function. You
+only add your type-specific submodule.
+
+### Step 5: Add Audit Hooks
+
+Auditing is not optional. Each trampoline method you wrote in Step 3 already opens an audit
+context through `ORCA_PY_OVERRIDE_AUDITED`, so any filesystem/network/process operation your
+type's Python surface performs is automatically categorized, prompted, and (for most
+categories) persisted per plugin — see [Plugin Audit Hook]({{L35}}) for the
+category table. If your type performs a sensitive operation the current event map doesn't
+cover, add the CPython event to `audit_event_categories` in `PluginAuditManager.cpp` rather
+than inventing a parallel check. Read the audit doc before finalizing your trampoline.
+
+### Step 6: Hook the Type Into an OrcaSlicer Workflow
+
+Nothing runs your plugin until some part of the app invokes it. Pick the invocation pattern
+that matches your type and model it on an existing one:
+
+| Type | Where it's invoked | Pattern |
+|---|---|---|
+| `slicingPipeline` | `Print.cpp` and `PostProcessor.cpp` | resolve the preset's capability refs, cast to `SlicingPipelinePluginCapability`, build `SlicingPipelineContext`, and call `execute(ctx)` under the GIL |
+| `script` | `PluginsDialog.cpp` (Run action) | `get_plugin_capability_by_name(...)`, `dynamic_pointer_cast<ScriptPluginCapability>(cap->instance)`, call `execute()` |
+| `printerAgent` | `NetworkAgentFactory.cpp`, wired in `GUI_App.cpp` | register via `subscribe_on_capability_load_callback` / `subscribe_on_capability_unload_callback`; the callback filters by `capability.type == PluginCapabilityType::PrinterConnection`, then registers/deregisters an agent |
+| `resourceTexture` | `GUI_App.cpp` (`init_plugin_gui_wiring`) | register via the capability load/unload callbacks; the callback filters by `capability.type == PluginCapabilityType::ResourceTexture` and updates `PluginResourceTextures`, which consumers read a pack's cached directory from |
+
+For your new type, add a call site (or an on-capability-load callback) that:
+
+1. obtains a loaded capability (via `PluginLoader::get_plugin_capabilities_by_type(...)` or
+   `get_plugin_capability_by_name(...)`) and does
+   `std::dynamic_pointer_cast<YourTypeCapability>(cap->instance)`;
+2. on a successful cast, builds the context and invokes your entry method under the GIL;
+3. if your type needs unload cleanup, add a case to the capability-teardown switch (keyed on
+   `PluginCapabilityType`) in `PluginLoader.cpp`.
+
+> [!IMPORTANT]
+> Disabled / missing plugins must not change existing behavior. Every existing path is
+> gated on a successful `dynamic_pointer_cast` (or a `type ==` check) and iterates only over
+> installed/selected plugins, so when none of your type is installed the loop or callback
+> simply finds nothing and does nothing. Follow the same pattern: never run unconditional
+> work on behalf of a plugin type that isn't present.
+
+### Step 7: Add the Files to the Build
+
+List your new `.hpp` / `.cpp` files in `src/slic3r/CMakeLists.txt`, alongside the existing
+plugin-type sources (search for `plugin/pluginTypes/slicingPipeline/SlicingPipelinePluginCapability.cpp`; the block is
+around lines 615-623):
+
+{{C21}}
+
+### Recipe at a Glance
+
+1. **Enum/maps** (if new type): add a `PluginCapabilityType` value + the three string maps in
+   `PythonPluginInterface.hpp`.
+2. **Contract**: `pluginTypes/<type>/<Type>PluginCapability.hpp` - base + context + result + static
+   `RegisterBindings`.
+3. **Trampoline**: `pluginTypes/<type>/<Type>PluginCapabilityTrampoline.hpp` - forward each virtual via
+   `ORCA_PY_OVERRIDE_AUDITED`.
+4. **Bindings**: `pluginTypes/<type>/<Type>PluginCapability.cpp` `RegisterBindings`, then call it from
+   `bind_python_api` in `PythonPluginBridge.cpp`.
+5. **Audit**: confirm the events your type's Python surface can trigger are categorized
+   correctly per [Plugin Audit Hook]({{L36}}).
+6. **Workflow**: add a call site / on-load callback that casts and invokes; gate it so an
+   absent type is a no-op.
+7. **Build**: add the files to `src/slic3r/CMakeLists.txt`.
+
+## Part 3: Testing and Verification
+
+There is **no dedicated automated test suite for the Python plugin system today.**
+Verification is primarily manual, with targeted Catch2 tests where the logic is pure C++.
+
+### Manual Testing
+
+- **Loading** - install/side-load a plugin into `data_dir()/orca_plugins/<name>/`, open the
+  Plugins dialog, and confirm it appears with the correct name and version and that each
+  registered capability is listed (with the expected type). A plugin that fails to load shows
+  its error in the Diagnostics tab (see
+  [How errors are surfaced]({{L37}})).
+- **Execution** - script plugins: use the dialog **Run** action. Slicing-pipeline plugins:
+  run a slice/export and confirm the plugin ran (e.g. its effect on the G-code, plus log
+  output). Printer-agent plugins: verify the agent registers on load and deregisters on
+  unload.
+- **Error handling** - deliberately make the plugin (a) raise an exception and (b) return
+  `ExecutionResult.failure(...)`; confirm the message box text, and that the full traceback
+  appears in `data_dir()/log/python_*.log`. Confirm an invalid-metadata plugin surfaces its
+  error in the details area rather than crashing.
+- **Audit** - trigger a filesystem/network/process/thread action, confirm the Yes/No dialog
+  names the right target, and that answering **No** blocks it with a `PermissionError` and an
+  `[AUDIT BLOCKED]` log line while answering **Yes** lets it through and persists the grant
+  so a repeat of the same action does not prompt again.
+- **Declared permissions** - call `orca.request_permissions(...)` from
+  `register_capabilities()`, then reload: confirm one combined dialog appears after
+  registration, that already-granted targets are skipped on the next load, and that **No**
+  aborts the load (Diagnostics shows the error and no capability appears).
+
+### Automated Tests Where Appropriate
+
+Add **targeted Catch2 tests** (under `tests/`) for the pure-C++ pieces that don't need a
+running interpreter or GUI. For example:
+
+- PEP 723 metadata parsing (`parse_pep723_toml` / `read_python_plugin_metadata` in
+  `PythonFileUtils.cpp`): valid blocks, missing fields, malformed arrays.
+- Capability reference parsing/serialization (`parse_capability_ref` in `Config.cpp`) - see
+  `tests/libslic3r/test_config.cpp` and `tests/slic3rutils/test_plugin_capability_identifier.cpp`
+  for local vs. cloud refs and malformed input.
+- The allowed-root/denied-path logic (`PluginAuditManager::check_open`,
+  `is_inside_allowed_root`, `is_denied_path_keyword`) that `tests/slic3rutils/test_plugin_audit.cpp`
+  already covers: inside/outside roots, read-only roots, `..` traversal, read vs write,
+  denied filenames and keywords. See
+  [Plugin Audit Hook]({{L38}}).
+- Type-string round-trips (`plugin_capability_type_from_string` / `plugin_capability_type_to_string`).
+
+Anything that requires the embedded interpreter, file installs, or GUI dialogs is currently
+best covered by the manual steps above.
+
+### Cross-Platform and Regression Checks
+
+- **Cross-platform** - the plugin code must build and run on Windows, macOS, and Linux. Be
+  careful with path handling (audit target extraction canonicalizes paths via `PyOS_FSPath`;
+  keep using `std::filesystem` / the existing helpers), and with line endings in the PEP 723
+  parser (it already strips `\r`).
+- **No regressions** - changes to the framework must not alter behavior when no plugin of a
+  given type is installed (Step 6). When touching the trampoline/audit headers, note that
+  `PyPluginTrampoline.hpp` and `PluginAuditManager.hpp` are included by many translation
+  units; a header-only change may need a clean rebuild of the affected targets to take
+  effect (see the audit doc's *Debugging* section).
+- **Backward compatibility** - don't rename or remove bound fields/methods or
+  `PluginCapabilityType` values that existing plugins or installed profiles may depend on; add
+  rather than repurpose.
+
+## Key Files
+
+| File | Responsibility |
+|---|---|
+| `src/slic3r/plugin/PythonPluginInterface.hpp` | `PluginCapabilityType`, `PluginContext`, `PluginResult`, `ExecutionResult`, `PluginCapabilityInterface`, type-string maps |
+| `src/slic3r/plugin/PythonPluginBridge.{hpp,cpp}` | the `orca` module (`bind_python_api`), `@orca.plugin` / `register_capability` / `request_permissions`, package + capability capture/instantiation |
+| `src/slic3r/plugin/PyPluginPackage.hpp` | the package base (`orca.base`) and its `register_capabilities` |
+| `src/slic3r/plugin/PyPluginTrampoline.hpp` | the `ORCA_PY_*` trampoline macros (traceback logging + audit scope) and common trampolines |
+| `src/slic3r/plugin/pluginTypes/<type>/` | per-type capability base (`*PluginCapability.hpp/.cpp`) and trampoline (`*PluginCapabilityTrampoline.hpp`) |
+| `src/slic3r/plugin/PluginDescriptor.hpp` | per-plugin metadata + error state (`set_error`, `normalized_error`, `is_metadata_valid`) |
+| `src/slic3r/plugin/PythonFileUtils.cpp` | PEP 723 / wheel metadata parsing, entry-file discovery |
+| `src/slic3r/plugin/PluginCatalog.cpp`, `PluginLoader.cpp` | discovery, install, load lifecycle, dependency install |
+| `src/slic3r/plugin/PythonInterpreter.cpp` | interpreter init, audit-hook install, traceback formatting, `stderr` -> log file |
+| `src/slic3r/GUI/PluginsDialog.cpp` | Plugins dialog: details/error area, script **Run**, error dialogs |
+| `src/slic3r/GUI/PostProcessor.cpp` | resolves the preset's plugin refs and invokes post-processing (G-code) capabilities during export |
+| `src/slic3r/CMakeLists.txt` (~609-623) | build list for plugin sources |
+| [Plugin Audit Hook]({{L39}}) | the audit hook: categories, prompting/persistence, extending it |

@@ -1,0 +1,318 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`align_infill_direction_to_model`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--align-infill-direction-to-model=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_angle`, `internal_bridge_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-angle=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`relative_bridge_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--relative-bridge-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`minimum_sparse_infill_area`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--minimum-sparse-infill-area=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`infill_combination`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-combination=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`infill_combination_max_layer_height`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--infill-combination-max-layer-height=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`detect_narrow_internal_solid_infill`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--detect-narrow-internal-solid-infill=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ensure_vertical_shell_thickness`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`none, ensure_critical_only, ensure_moderate, ensure_all`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ensure-vertical-shell-thickness=none`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "align-directions-to-model",
+"en": "Align directions to model"
+},
+{
+"indent": 0,
+"anchor": "bridge-infill-direction",
+"en": "Bridge infill direction"
+},
+{
+"indent": 0,
+"anchor": "relative-bridge-angle",
+"en": "Relative Bridge Angle"
+},
+{
+"indent": 0,
+"anchor": "minimum-sparse-infill-threshold",
+"en": "Minimum sparse infill threshold"
+},
+{
+"indent": 0,
+"anchor": "infill-combination",
+"en": "Infill Combination"
+},
+{
+"indent": 4,
+"anchor": "max-layer-height",
+"en": "Max layer height"
+},
+{
+"indent": 0,
+"anchor": "detect-narrow-internal-solid-infill",
+"en": "Detect narrow internal solid infill"
+},
+{
+"indent": 0,
+"anchor": "ensure-vertical-shell-thickness",
+"en": "Ensure vertical shell thickness"
+}
+]
+],
+"img": [
+"![fill-direction-to-model](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/fill-direction-to-model.png?raw=true)",
+"![bridge-angle-0](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-angle-0.png?raw=true)",
+"![bridge-angle-2](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-angle-2.png?raw=true)",
+"![bridge-angle-8](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge-angle-8.png?raw=true)",
+"![fill-combination](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/fill/fill-combination.png?raw=true)"
+],
+"link": [
+"strength_settings_infill#direction",
+"#bridge-infill-direction",
+"quality_settings_ironing#angle-offset",
+"strength_settings_top_bottom_shells#surface-pattern",
+"#align-directions-to-model",
+"#relative-bridge-angle",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_infill",
+"quality_settings_layer_height",
+"strength_settings_patterns#concentric",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_patterns#rectilinear"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Strength Advanced",
+"raw": "Strength Advanced",
+"id": "strength-advanced",
+"alt": "strength-advanced"
+},
+{
+"level": 2,
+"en": "Align directions to model",
+"raw": "Align directions to model",
+"id": "align-directions-to-model",
+"alt": "align-directions-to-model"
+},
+{
+"level": 2,
+"en": "Bridge infill direction",
+"raw": "Bridge infill direction",
+"id": "bridge-infill-direction",
+"alt": "bridge-infill-direction"
+},
+{
+"level": 2,
+"en": "Relative Bridge Angle",
+"raw": "Relative Bridge Angle",
+"id": "relative-bridge-angle",
+"alt": "relative-bridge-angle"
+},
+{
+"level": 2,
+"en": "Minimum sparse infill threshold",
+"raw": "Minimum sparse infill threshold",
+"id": "minimum-sparse-infill-threshold",
+"alt": "minimum-sparse-infill-threshold"
+},
+{
+"level": 2,
+"en": "Infill Combination",
+"raw": "Infill Combination",
+"id": "infill-combination",
+"alt": "infill-combination"
+},
+{
+"level": 3,
+"en": "Max layer height",
+"raw": "Max layer height",
+"id": "max-layer-height",
+"alt": "max-layer-height"
+},
+{
+"level": 2,
+"en": "Detect narrow internal solid infill",
+"raw": "Detect narrow internal solid infill",
+"id": "detect-narrow-internal-solid-infill",
+"alt": "detect-narrow-internal-solid-infill"
+},
+{
+"level": 2,
+"en": "Ensure vertical shell thickness",
+"raw": "Ensure vertical shell thickness",
+"id": "ensure-vertical-shell-thickness",
+"alt": "ensure-vertical-shell-thickness"
+}
+],
+"src": "print_settings/strength/strength_settings_advanced.md"
+}

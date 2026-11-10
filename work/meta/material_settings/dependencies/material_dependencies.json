@@ -1,0 +1,84 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`compatible_printers_condition`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`compatible_prints_condition`."
+},
+{
+"label": "Type",
+"target": "option_type#text",
+"value": "`Text`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"cli_mode#setting-overrides",
+"cli_mode#setting-overrides"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Dependencies",
+"raw": "Material Dependencies",
+"id": "material-dependencies",
+"alt": "material-dependencies"
+},
+{
+"level": 2,
+"en": "Compatible printers",
+"raw": "Compatible printers",
+"id": "compatible-printers",
+"alt": "compatible-printers"
+},
+{
+"level": 3,
+"en": "Printer Condition",
+"raw": "Printer Condition",
+"id": "printer-condition",
+"alt": "printer-condition"
+},
+{
+"level": 2,
+"en": "Compatible process profiles",
+"raw": "Compatible process profiles",
+"id": "compatible-process-profiles",
+"alt": "compatible-process-profiles"
+},
+{
+"level": 3,
+"en": "Process Condition",
+"raw": "Process Condition",
+"id": "process-condition",
+"alt": "process-condition"
+}
+],
+"src": "material_settings/dependencies/material_dependencies.md"
+}

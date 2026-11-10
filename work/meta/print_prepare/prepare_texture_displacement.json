@@ -1,0 +1,261 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "quick-start",
+"en": "Quick start"
+},
+{
+"indent": 0,
+"anchor": "the-panel",
+"en": "The panel"
+},
+{
+"indent": 0,
+"anchor": "standard-and-pro",
+"en": "Standard and Pro"
+},
+{
+"indent": 0,
+"anchor": "painting-the-area",
+"en": "Painting the area"
+},
+{
+"indent": 0,
+"anchor": "seeing-what-you-will-get",
+"en": "Seeing what you will get"
+},
+{
+"indent": 0,
+"anchor": "textures",
+"en": "Textures"
+},
+{
+"indent": 4,
+"anchor": "adjusting-the-image",
+"en": "Adjusting the image"
+},
+{
+"indent": 0,
+"anchor": "stacking-layers",
+"en": "Stacking layers"
+},
+{
+"indent": 0,
+"anchor": "shaping-the-relief",
+"en": "Shaping the relief"
+},
+{
+"indent": 0,
+"anchor": "mapping",
+"en": "Mapping"
+},
+{
+"indent": 0,
+"anchor": "colours",
+"en": "Colours"
+},
+{
+"indent": 0,
+"anchor": "baking",
+"en": "Baking"
+},
+{
+"indent": 0,
+"anchor": "saving-the-project",
+"en": "Saving the project"
+},
+{
+"indent": 0,
+"anchor": "recipes",
+"en": "Recipes"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting",
+"en": "Troubleshooting"
+},
+{
+"indent": 0,
+"anchor": "limitations",
+"en": "Limitations"
+}
+]
+],
+"img": [
+"<img alt=\"td-shot-panel\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-shot-panel.png?raw=true\" height=\"620\">",
+"<img alt=\"td-image-adjust\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-adjust.png?raw=true\" height=\"440\">",
+"<img alt=\"td-image-adjust-hue\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-image-adjust-hue.png?raw=true\" height=\"440\">",
+"![td-shot-result](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-shot-result.png?raw=true)",
+"![td-how-it-works](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-how-it-works.svg?raw=true)",
+"![td-texture-library](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-texture-library.png?raw=true)",
+"![td-blend-override](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-blend-override.png?raw=true)",
+"![td-midlevel](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-midlevel.svg?raw=true)",
+"![td-mapping](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-mapping.svg?raw=true)",
+"![td-model-uv](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-model-uv.png?raw=true)",
+"![td-orientation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-orientation.png?raw=true)",
+"![td-resolution](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-resolution.svg?raw=true)"
+],
+"link": [
+"prepare_paint_on_fuzzy_skin",
+"#baking",
+"prepare_texture_displacement_uv_editor",
+"prepare_texture_displacement_pro",
+"prepare_image_tool",
+"prepare_texture_displacement_pro",
+"#shaping-the-relief",
+"plugins_types",
+"#baking",
+"prepare_texture_displacement_uv_editor",
+"prepare_color_painting",
+"prepare_color_painting",
+"prepare_texture_displacement_uv_editor"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Texture Displacement",
+"raw": "Texture Displacement",
+"id": "texture-displacement",
+"alt": "texture-displacement"
+},
+{
+"level": 2,
+"en": "Quick start",
+"raw": "Quick start",
+"id": "quick-start",
+"alt": "quick-start"
+},
+{
+"level": 2,
+"en": "The panel",
+"raw": "The panel",
+"id": "the-panel",
+"alt": "the-panel"
+},
+{
+"level": 2,
+"en": "Standard and Pro",
+"raw": "Standard and Pro",
+"id": "standard-and-pro",
+"alt": "standard-and-pro"
+},
+{
+"level": 2,
+"en": "Painting the area",
+"raw": "Painting the area",
+"id": "painting-the-area",
+"alt": "painting-the-area"
+},
+{
+"level": 2,
+"en": "Seeing what you will get",
+"raw": "Seeing what you will get",
+"id": "seeing-what-you-will-get",
+"alt": "seeing-what-you-will-get"
+},
+{
+"level": 2,
+"en": "Textures",
+"raw": "Textures",
+"id": "textures",
+"alt": "textures"
+},
+{
+"level": 3,
+"en": "Adjusting the image",
+"raw": "Adjusting the image",
+"id": "adjusting-the-image",
+"alt": "adjusting-the-image"
+},
+{
+"level": 2,
+"en": "Stacking layers",
+"raw": "Stacking layers",
+"id": "stacking-layers",
+"alt": "stacking-layers"
+},
+{
+"level": 2,
+"en": "Shaping the relief",
+"raw": "Shaping the relief",
+"id": "shaping-the-relief",
+"alt": "shaping-the-relief"
+},
+{
+"level": 2,
+"en": "Mapping",
+"raw": "Mapping",
+"id": "mapping",
+"alt": "mapping"
+},
+{
+"level": 2,
+"en": "Colours",
+"raw": "Colours",
+"id": "colours",
+"alt": "colours"
+},
+{
+"level": 2,
+"en": "Baking",
+"raw": "Baking",
+"id": "baking",
+"alt": "baking"
+},
+{
+"level": 2,
+"en": "Saving the project",
+"raw": "Saving the project",
+"id": "saving-the-project",
+"alt": "saving-the-project"
+},
+{
+"level": 2,
+"en": "Recipes",
+"raw": "Recipes",
+"id": "recipes",
+"alt": "recipes"
+},
+{
+"level": 3,
+"en": "A knurled grip on a round handle",
+"raw": "A knurled grip on a round handle",
+"id": "a-knurled-grip-on-a-round-handle",
+"alt": "a-knurled-grip-on-a-round-handle"
+},
+{
+"level": 3,
+"en": "An engraved logo on a flat face",
+"raw": "An engraved logo on a flat face",
+"id": "an-engraved-logo-on-a-flat-face",
+"alt": "an-engraved-logo-on-a-flat-face"
+},
+{
+"level": 3,
+"en": "Wood grain over a whole model",
+"raw": "Wood grain over a whole model",
+"id": "wood-grain-over-a-whole-model",
+"alt": "wood-grain-over-a-whole-model"
+},
+{
+"level": 2,
+"en": "Troubleshooting",
+"raw": "Troubleshooting",
+"id": "troubleshooting",
+"alt": "troubleshooting"
+},
+{
+"level": 2,
+"en": "Limitations",
+"raw": "Limitations",
+"id": "limitations",
+"alt": "limitations"
+}
+],
+"src": "print_prepare/prepare_texture_displacement.md"
+}

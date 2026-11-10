@@ -1,0 +1,87 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![publish_dialog](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_dialog.png?raw=true)",
+"![publish_dialog_printer_settings](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_dialog_printer_settings.png?raw=true)",
+"![publish_dialog_filament_settings](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_dialog_filament_settings.png?raw=true)",
+"![publish_dialog_mixed_filament_warning](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_dialog_mixed_filament_warning.png?raw=true)",
+"![publish_dialog_process_settings](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_dialog_process_settings.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "For creators",
+"raw": "For creators",
+"id": "for-creators",
+"alt": "for-creators"
+},
+{
+"level": 2,
+"en": "Publishing a project",
+"raw": "Publishing a project",
+"id": "publishing-a-project",
+"alt": "publishing-a-project"
+},
+{
+"level": 3,
+"en": "Opening the dialog",
+"raw": "Opening the dialog",
+"id": "opening-the-dialog",
+"alt": "opening-the-dialog"
+},
+{
+"level": 3,
+"en": "Choosing what to include",
+"raw": "Choosing what to include",
+"id": "choosing-what-to-include",
+"alt": "choosing-what-to-include"
+},
+{
+"level": 3,
+"en": "Printer tab",
+"raw": "Printer tab",
+"id": "printer-tab",
+"alt": "printer-tab"
+},
+{
+"level": 3,
+"en": "Filament tab",
+"raw": "Filament tab",
+"id": "filament-tab",
+"alt": "filament-tab"
+},
+{
+"level": 3,
+"en": "Mixed filaments",
+"raw": "Mixed filaments",
+"id": "mixed-filaments",
+"alt": "mixed-filaments"
+},
+{
+"level": 3,
+"en": "Process tab",
+"raw": "Process tab",
+"id": "process-tab",
+"alt": "process-tab"
+},
+{
+"level": 2,
+"en": "Tips",
+"raw": "Tips",
+"id": "tips",
+"alt": "tips"
+},
+{
+"level": 2,
+"en": "Things to note",
+"raw": "Things to note",
+"id": "things-to-note",
+"alt": "things-to-note"
+}
+],
+"src": "publishing_3mf/publish_3mf_creators.md"
+}

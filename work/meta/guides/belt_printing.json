@@ -1,0 +1,305 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "how-a-belt-printer-differs",
+"en": "How a belt printer differs"
+},
+{
+"indent": 0,
+"anchor": "setting-up-a-belt-printer",
+"en": "Setting up a belt printer"
+},
+{
+"indent": 4,
+"anchor": "starter-profiles",
+"en": "Starter profiles"
+},
+{
+"indent": 4,
+"anchor": "a-printer-that-is-not-listed",
+"en": "A printer that is not listed"
+},
+{
+"indent": 0,
+"anchor": "how-orcaslicer-slices-for-a-belt",
+"en": "How OrcaSlicer slices for a belt"
+},
+{
+"indent": 4,
+"anchor": "1-pre-slice-rotation",
+"en": "1. Pre-slice rotation"
+},
+{
+"indent": 4,
+"anchor": "2-slice",
+"en": "2. Slice"
+},
+{
+"indent": 4,
+"anchor": "3-supports-and-brim",
+"en": "3. Supports and brim"
+},
+{
+"indent": 4,
+"anchor": "4-back-transform",
+"en": "4. Back-transform"
+},
+{
+"indent": 4,
+"anchor": "5-machine-frame",
+"en": "5. Machine frame"
+},
+{
+"indent": 0,
+"anchor": "working-with-a-belt-printer",
+"en": "Working with a belt printer"
+},
+{
+"indent": 4,
+"anchor": "placing-and-arranging-parts",
+"en": "Placing and arranging parts"
+},
+{
+"indent": 4,
+"anchor": "first-layer",
+"en": "First layer"
+},
+{
+"indent": 4,
+"anchor": "brim",
+"en": "Brim"
+},
+{
+"indent": 4,
+"anchor": "supports",
+"en": "Supports"
+},
+{
+"indent": 4,
+"anchor": "multi-color-printing",
+"en": "Multi-color printing"
+},
+{
+"indent": 4,
+"anchor": "preview",
+"en": "Preview"
+},
+{
+"indent": 4,
+"anchor": "calibration",
+"en": "Calibration"
+},
+{
+"indent": 0,
+"anchor": "features-that-are-not-available",
+"en": "Features that are not available"
+}
+]
+],
+"img": [
+"![belt_flat_bed_vs_belt](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_flat_bed_vs_belt.svg?raw=true)",
+"![belt_printer_wizard](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_printer_wizard.png?raw=true)",
+"![belt_prepare_plate](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_prepare_plate.png?raw=true)",
+"![belt_brim_options](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_brim_options.png?raw=true)",
+"![belt_purge_tower_prepare](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_purge_tower_prepare.png?raw=true)",
+"![belt_preview_designed](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_preview_designed.png?raw=true)",
+"![belt_preview_view_menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_preview_view_menu.png?raw=true)",
+"![belt_preview_raw](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_preview_raw.png?raw=true)",
+"![belt_temp_tower_dialog](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/belt/belt_temp_tower_dialog.png?raw=true)"
+],
+"link": [
+"printer_basic_information_belt_printer",
+"printer_basic_information_machine_frame_transforms",
+"printer_basic_information_belt_printer#enable-belt-printing",
+"printer_basic_information_printable_space",
+"printer_basic_information_printable_space#printable-height",
+"printer_basic_information_belt_printer#belt-tilt",
+"printer_machine_gcode",
+"printer_motion_ability",
+"built_in_placeholders_variables",
+"printer_basic_information_belt_printer#belt-tilt",
+"printer_basic_information_machine_frame_transforms#g-code-axis-remap",
+"printer_basic_information_machine_frame_transforms#machine-frame-tilt",
+"printer_basic_information_belt_printer#infinite-y-axis",
+"printer_basic_information_printable_space#printable-height",
+"prepare_auto_arrange",
+"printer_multimaterial_wipe_tower#belt-purge-tower",
+"quality_settings_layer_height#first-layer-height",
+"material_cooling#no-cooling-for-the-first",
+"others_settings_brim",
+"others_settings_brim#leading-length",
+"others_settings_brim#extra-width",
+"others_settings_brim#leading-edge-only",
+"support_settings_support",
+"prepare_support_painting",
+"prepare_seam_painting",
+"multimaterial_settings_prime_tower",
+"printer_multimaterial_wipe_tower#belt-purge-tower",
+"temp_calib",
+"pressure_advance_calib",
+"others_settings_skirt",
+"support_settings_raft",
+"multimaterial_settings_prime_tower",
+"printer_multimaterial_wipe_tower#belt-purge-tower",
+"quality_settings_precision#arc-fitting",
+"quality_settings_seam#scarf-joint-seam",
+"others_settings_special_mode#spiral-vase",
+"printer_extruder_z_hop",
+"others_settings_brim#type"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Belt Printing",
+"raw": "Belt Printing",
+"id": "belt-printing",
+"alt": "belt-printing"
+},
+{
+"level": 2,
+"en": "How a belt printer differs",
+"raw": "How a belt printer differs",
+"id": "how-a-belt-printer-differs",
+"alt": "how-a-belt-printer-differs"
+},
+{
+"level": 2,
+"en": "Setting up a belt printer",
+"raw": "Setting up a belt printer",
+"id": "setting-up-a-belt-printer",
+"alt": "setting-up-a-belt-printer"
+},
+{
+"level": 3,
+"en": "Starter profiles",
+"raw": "Starter profiles",
+"id": "starter-profiles",
+"alt": "starter-profiles"
+},
+{
+"level": 3,
+"en": "A printer that is not listed",
+"raw": "A printer that is not listed",
+"id": "a-printer-that-is-not-listed",
+"alt": "a-printer-that-is-not-listed"
+},
+{
+"level": 2,
+"en": "How OrcaSlicer slices for a belt",
+"raw": "How OrcaSlicer slices for a belt",
+"id": "how-orcaslicer-slices-for-a-belt",
+"alt": "how-orcaslicer-slices-for-a-belt"
+},
+{
+"level": 3,
+"en": "1. Pre-slice rotation",
+"raw": "1. Pre-slice rotation",
+"id": "1-pre-slice-rotation",
+"alt": "1-pre-slice-rotation"
+},
+{
+"level": 3,
+"en": "2. Slice",
+"raw": "2. Slice",
+"id": "2-slice",
+"alt": "2-slice"
+},
+{
+"level": 3,
+"en": "3. Supports and brim",
+"raw": "3. Supports and brim",
+"id": "3-supports-and-brim",
+"alt": "3-supports-and-brim"
+},
+{
+"level": 3,
+"en": "4. Back-transform",
+"raw": "4. Back-transform",
+"id": "4-back-transform",
+"alt": "4-back-transform"
+},
+{
+"level": 3,
+"en": "5. Machine frame",
+"raw": "5. Machine frame",
+"id": "5-machine-frame",
+"alt": "5-machine-frame"
+},
+{
+"level": 2,
+"en": "Working with a belt printer",
+"raw": "Working with a belt printer",
+"id": "working-with-a-belt-printer",
+"alt": "working-with-a-belt-printer"
+},
+{
+"level": 3,
+"en": "Placing and arranging parts",
+"raw": "Placing and arranging parts",
+"id": "placing-and-arranging-parts",
+"alt": "placing-and-arranging-parts"
+},
+{
+"level": 3,
+"en": "First layer",
+"raw": "First layer",
+"id": "first-layer",
+"alt": "first-layer"
+},
+{
+"level": 3,
+"en": "Brim",
+"raw": "Brim",
+"id": "brim",
+"alt": "brim"
+},
+{
+"level": 3,
+"en": "Supports",
+"raw": "Supports",
+"id": "supports",
+"alt": "supports"
+},
+{
+"level": 3,
+"en": "Multi-color printing",
+"raw": "Multi-color printing",
+"id": "multi-color-printing",
+"alt": "multi-color-printing"
+},
+{
+"level": 3,
+"en": "Preview",
+"raw": "Preview",
+"id": "preview",
+"alt": "preview"
+},
+{
+"level": 3,
+"en": "Calibration",
+"raw": "Calibration",
+"id": "calibration",
+"alt": "calibration"
+},
+{
+"level": 2,
+"en": "Features that are not available",
+"raw": "Features that are not available",
+"id": "features-that-are-not-available",
+"alt": "features-that-are-not-available"
+},
+{
+"level": 2,
+"en": "Fun things to try",
+"raw": "Fun things to try",
+"id": "fun-things-to-try",
+"alt": "fun-things-to-try"
+}
+],
+"src": "guides/belt_printing.md"
+}

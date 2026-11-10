@@ -1,0 +1,445 @@
+{
+"code": [
+[
+"    ```pwsh",
+"    winget install --id=Microsoft.VisualStudio.Community -e --override \"--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --passive --wait\"",
+"    ```"
+],
+[
+"    ```pwsh",
+"    winget install --id=Kitware.CMake -e",
+"    ```"
+],
+[
+"    ```pwsh",
+"    winget install --id=StrawberryPerl.StrawberryPerl -e",
+"    ```"
+],
+[
+"    ```pwsh",
+"    winget install --id=Git.Git -e",
+"    ```"
+],
+[
+"```pwsh",
+"git clone https://github.com/OrcaSlicer/OrcaSlicer",
+"```"
+],
+[
+"```pwsh",
+"cd path\\to\\OrcaSlicer",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat --install-vs ide",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -d",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -d --config debug",
+"```"
+],
+[
+"    ```pwsh",
+"    build_win.bat -s",
+"    ```"
+],
+[
+"    ```text",
+"    -------------------------------------------------------------",
+"    Build completed in 0h 33m 4s",
+"      OrcaSlicer    C:\\src\\OrcaSlicer\\build\\src\\Release\\orca-slicer.exe",
+"      Solution      C:\\src\\OrcaSlicer\\build\\OrcaSlicer.slnx",
+"",
+"    Next",
+"        Run it                build\\src\\Release\\orca-slicer.exe",
+"        Open in Visual Studio build\\OrcaSlicer.slnx",
+"        Rebuild after edits   build_win.bat -s --no-configure",
+"    -------------------------------------------------------------",
+"    ```"
+],
+[
+"    ```pwsh",
+"    build\\src\\Release\\orca-slicer.exe",
+"    ```"
+],
+[
+"```pwsh",
+"build_win.bat -s --config debug",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat --install-vs ide -l",
+"```"
+],
+[
+"```pwsh",
+"winget install --id=Ninja-build.Ninja -e",
+"```"
+],
+[
+"```json",
+"{",
+"  \"version\": 3,",
+"  \"configurePresets\": [",
+"    {",
+"      \"name\": \"x64-clang\",",
+"      \"displayName\": \"x64 Clang\",",
+"      \"description\": \"Matches build_win.bat -s -l -x --tests (build-clang), plus RelWithDebInfo and MinSizeRel in the same directory\",",
+"      \"generator\": \"Ninja Multi-Config\",",
+"      \"binaryDir\": \"${sourceDir}/build-clang\",",
+"      \"architecture\": { \"value\": \"x64\", \"strategy\": \"external\" },",
+"      \"toolset\": { \"value\": \"host=x64\", \"strategy\": \"external\" },",
+"      \"environment\": {",
+"        \"NINJA_STATUS\": \"[%f/%t %p :: %w / %W] \"",
+"      },",
+"      \"cacheVariables\": {",
+"        \"CMAKE_C_COMPILER\": \"clang-cl\",",
+"        \"CMAKE_CXX_COMPILER\": \"clang-cl\",",
+"        \"CMAKE_CONFIGURATION_TYPES\": \"Release;RelWithDebInfo;MinSizeRel\",",
+"        \"ORCA_TOOLS\": { \"type\": \"BOOL\", \"value\": \"ON\" },",
+"        \"BUILD_TESTS\": { \"type\": \"BOOL\", \"value\": \"ON\" }",
+"      },",
+"      \"vendor\": {",
+"        \"microsoft.com/VisualStudioSettings/CMake/1.0\": {",
+"          \"hostOS\": [ \"Windows\" ],",
+"          \"intelliSenseMode\": \"windows-clang-x64\"",
+"        }",
+"      }",
+"    },",
+"    {",
+"      \"name\": \"x64-clang-debug\",",
+"      \"displayName\": \"x64 Clang Debug\",",
+"      \"description\": \"Matches build_win.bat -s -l -x --tests --config debug (build-dbg-clang)\",",
+"      \"generator\": \"Ninja Multi-Config\",",
+"      \"binaryDir\": \"${sourceDir}/build-dbg-clang\",",
+"      \"architecture\": { \"value\": \"x64\", \"strategy\": \"external\" },",
+"      \"toolset\": { \"value\": \"host=x64\", \"strategy\": \"external\" },",
+"      \"environment\": {",
+"        \"NINJA_STATUS\": \"[%f/%t %p :: %w / %W] \"",
+"      },",
+"      \"cacheVariables\": {",
+"        \"CMAKE_C_COMPILER\": \"clang-cl\",",
+"        \"CMAKE_CXX_COMPILER\": \"clang-cl\",",
+"        \"ORCA_TOOLS\": { \"type\": \"BOOL\", \"value\": \"ON\" },",
+"        \"BUILD_TESTS\": { \"type\": \"BOOL\", \"value\": \"ON\" }",
+"      },",
+"      \"vendor\": {",
+"        \"microsoft.com/VisualStudioSettings/CMake/1.0\": {",
+"          \"hostOS\": [ \"Windows\" ],",
+"          \"intelliSenseMode\": \"windows-clang-x64\"",
+"        }",
+"      }",
+"    }",
+"  ],",
+"  \"buildPresets\": [",
+"    { \"name\": \"x64-clang-release\",        \"configurePreset\": \"x64-clang\", \"configuration\": \"Release\" },",
+"    { \"name\": \"x64-clang-relwithdebinfo\", \"configurePreset\": \"x64-clang\", \"configuration\": \"RelWithDebInfo\" },",
+"    { \"name\": \"x64-clang-minsizerel\",     \"configurePreset\": \"x64-clang\", \"configuration\": \"MinSizeRel\" },",
+"    { \"name\": \"x64-clang-debug-build\",    \"configurePreset\": \"x64-clang-debug\", \"configuration\": \"Debug\" }",
+"  ],",
+"  \"testPresets\": [",
+"    {",
+"      \"name\": \"x64-clang-test-release\",",
+"      \"configurePreset\": \"x64-clang\",",
+"      \"configuration\": \"Release\",",
+"      \"output\": { \"outputOnFailure\": true }",
+"    },",
+"    {",
+"      \"name\": \"x64-clang-test-relwithdebinfo\",",
+"      \"configurePreset\": \"x64-clang\",",
+"      \"configuration\": \"RelWithDebInfo\",",
+"      \"output\": { \"outputOnFailure\": true }",
+"    },",
+"    {",
+"      \"name\": \"x64-clang-test-debug\",",
+"      \"configurePreset\": \"x64-clang-debug\",",
+"      \"configuration\": \"Debug\",",
+"      \"output\": { \"outputOnFailure\": true }",
+"    }",
+"  ]",
+"}",
+"```"
+],
+[
+"    ```pwsh",
+"    build-clang\\src\\Release\\orca-slicer.exe",
+"    ```"
+],
+[
+"```json",
+"{",
+"  \"version\": \"0.2.0\",",
+"  \"configurations\": [",
+"    {",
+"      \"name\": \"OrcaSlicer\",",
+"      \"type\": \"cppvsdbg\",",
+"      \"request\": \"launch\",",
+"      \"program\": \"${command:cmake.launchTargetPath}\",",
+"      \"args\": [],",
+"      \"cwd\": \"${command:cmake.launchTargetDirectory}\",",
+"      \"stopAtEntry\": false,",
+"      \"console\": \"internalConsole\"",
+"    }",
+"  ]",
+"}",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat -d -l -x",
+"build_win.bat -s -l -x",
+"```"
+],
+[
+"```pwsh",
+"build-clang\\src\\Release\\orca-slicer.exe",
+"```"
+],
+[
+"```pwsh",
+"cmake --preset x64-clang",
+"cmake --build --preset x64-clang-release",
+"ctest --preset x64-clang-test-release",
+"```"
+],
+[
+"```pwsh",
+"build-clang\\src\\Release\\orca-slicer.exe",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "tools-required",
+"en": "Tools Required"
+},
+{
+"indent": 0,
+"anchor": "hardware-requirements",
+"en": "Hardware Requirements"
+},
+{
+"indent": 0,
+"anchor": "get-the-source",
+"en": "Get the Source"
+},
+{
+"indent": 0,
+"anchor": "the-build-script",
+"en": "The Build Script"
+},
+{
+"indent": 0,
+"anchor": "build-the-dependencies",
+"en": "Build the Dependencies"
+},
+{
+"indent": 0,
+"anchor": "building-with-msvc",
+"en": "Building with MSVC"
+},
+{
+"indent": 0,
+"anchor": "building-with-clang-cl",
+"en": "Building with clang-cl"
+},
+{
+"indent": 4,
+"anchor": "additional-tools",
+"en": "Additional Tools"
+},
+{
+"indent": 4,
+"anchor": "the-preset-file",
+"en": "The Preset File"
+},
+{
+"indent": 4,
+"anchor": "visual-studio",
+"en": "Visual Studio"
+},
+{
+"indent": 4,
+"anchor": "vs-code",
+"en": "VS Code"
+},
+{
+"indent": 4,
+"anchor": "command-line",
+"en": "Command Line"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting",
+"en": "Troubleshooting"
+},
+{
+"indent": 4,
+"anchor": "dependencies",
+"en": "Dependencies"
+},
+{
+"indent": 4,
+"anchor": "windows-sdk",
+"en": "Windows SDK"
+},
+{
+"indent": 4,
+"anchor": "clang-cl",
+"en": "clang-cl"
+}
+]
+],
+"img": [
+"![windows_variables_path](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/windows_variables_path.png?raw=true)",
+"![windows_variables_order](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/windows_variables_order.png?raw=true)",
+"![compile_vs_local_debugger](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/develop/compile_vs_local_debugger.png?raw=true)"
+],
+"link": [
+"#the-build-script",
+"https://visualstudio.microsoft.com/vs/",
+"https://cmake.org/",
+"https://strawberryperl.com/",
+"https://git-scm.com/",
+"https://desktop.github.com/",
+"compiler_caching",
+"how_to_test",
+"#command-line",
+"how_to_test",
+"compiler_caching"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Build on Windows",
+"raw": "Build on Windows",
+"id": "build-on-windows",
+"alt": "build-on-windows"
+},
+{
+"level": 2,
+"en": "Tools Required",
+"raw": "Tools Required",
+"id": "tools-required",
+"alt": "tools-required"
+},
+{
+"level": 2,
+"en": "Hardware Requirements",
+"raw": "Hardware Requirements",
+"id": "hardware-requirements",
+"alt": "hardware-requirements"
+},
+{
+"level": 2,
+"en": "Get the Source",
+"raw": "Get the Source",
+"id": "get-the-source",
+"alt": "get-the-source"
+},
+{
+"level": 2,
+"en": "The Build Script",
+"raw": "The Build Script",
+"id": "the-build-script",
+"alt": "the-build-script"
+},
+{
+"level": 2,
+"en": "Build the Dependencies",
+"raw": "Build the Dependencies",
+"id": "build-the-dependencies",
+"alt": "build-the-dependencies"
+},
+{
+"level": 2,
+"en": "Building with MSVC",
+"raw": "Building with MSVC",
+"id": "building-with-msvc",
+"alt": "building-with-msvc"
+},
+{
+"level": 2,
+"en": "Building with clang-cl",
+"raw": "Building with clang-cl",
+"id": "building-with-clang-cl",
+"alt": "building-with-clang-cl"
+},
+{
+"level": 3,
+"en": "Additional Tools",
+"raw": "Additional Tools",
+"id": "additional-tools",
+"alt": "additional-tools"
+},
+{
+"level": 3,
+"en": "The Preset File",
+"raw": "The Preset File",
+"id": "the-preset-file",
+"alt": "the-preset-file"
+},
+{
+"level": 3,
+"en": "Visual Studio",
+"raw": "Visual Studio",
+"id": "visual-studio",
+"alt": "visual-studio"
+},
+{
+"level": 3,
+"en": "VS Code",
+"raw": "VS Code",
+"id": "vs-code",
+"alt": "vs-code"
+},
+{
+"level": 3,
+"en": "Command Line",
+"raw": "Command Line",
+"id": "command-line",
+"alt": "command-line"
+},
+{
+"level": 2,
+"en": "Troubleshooting",
+"raw": "Troubleshooting",
+"id": "troubleshooting",
+"alt": "troubleshooting"
+},
+{
+"level": 3,
+"en": "Dependencies",
+"raw": "Dependencies",
+"id": "dependencies",
+"alt": "dependencies"
+},
+{
+"level": 3,
+"en": "Windows SDK",
+"raw": "Windows SDK",
+"id": "windows-sdk",
+"alt": "windows-sdk"
+},
+{
+"level": 3,
+"en": "clang-cl",
+"raw": "clang-cl",
+"id": "clang-cl",
+"alt": "clang-cl"
+}
+],
+"src": "developer_reference/how_to_build/how_to_build_windows.md"
+}

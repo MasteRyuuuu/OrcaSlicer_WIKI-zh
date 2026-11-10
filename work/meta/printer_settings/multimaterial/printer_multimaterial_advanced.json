@@ -1,0 +1,106 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`machine_load_filament_time`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-load-filament-time=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`machine_unload_filament_time`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-unload-filament-time=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`machine_tool_change_time`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-tool-change-time=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Advanced Multi-Material Settings",
+"raw": "Advanced Multi-Material Settings",
+"id": "advanced-multi-material-settings",
+"alt": "advanced-multi-material-settings"
+},
+{
+"level": 2,
+"en": "Filament load time",
+"raw": "Filament load time",
+"id": "filament-load-time",
+"alt": "filament-load-time"
+},
+{
+"level": 2,
+"en": "Filament unload time",
+"raw": "Filament unload time",
+"id": "filament-unload-time",
+"alt": "filament-unload-time"
+},
+{
+"level": 2,
+"en": "Tool change time",
+"raw": "Tool change time",
+"id": "tool-change-time",
+"alt": "tool-change-time"
+}
+],
+"src": "printer_settings/multimaterial/printer_multimaterial_advanced.md"
+}

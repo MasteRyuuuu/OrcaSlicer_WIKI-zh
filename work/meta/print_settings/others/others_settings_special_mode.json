@@ -1,0 +1,468 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`slicing_mode`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`regular, even_odd, close_holes`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--slicing-mode=regular`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`print_sequence`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`by layer, by object`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--print-sequence=\"by layer\"`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`print_order`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`default, as_obj_list, best_of, snake`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--print-order=default`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`spiral_mode`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--spiral-mode=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`spiral_mode_smooth`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--spiral-mode-smooth=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`spiral_mode_max_xy_smoothing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--spiral-mode-max-xy-smoothing=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`spiral_starting_flow_ratio`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--spiral-starting-flow-ratio=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`spiral_finishing_flow_ratio`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--spiral-finishing-flow-ratio=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`timelapse_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`0, 1`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--timelapse-type=0`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`enable_wrapping_detection`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--enable-wrapping-detection=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "slicing-mode",
+"en": "Slicing Mode"
+},
+{
+"indent": 4,
+"anchor": "regular",
+"en": "Regular"
+},
+{
+"indent": 4,
+"anchor": "close-holes",
+"en": "Close Holes"
+},
+{
+"indent": 4,
+"anchor": "even-odd",
+"en": "Even Odd"
+},
+{
+"indent": 0,
+"anchor": "print-sequence",
+"en": "Print Sequence"
+},
+{
+"indent": 4,
+"anchor": "by-layer",
+"en": "By Layer"
+},
+{
+"indent": 4,
+"anchor": "by-object",
+"en": "By Object"
+},
+{
+"indent": 0,
+"anchor": "intra-layer-order",
+"en": "Intra-layer order"
+},
+{
+"indent": 0,
+"anchor": "spiral-vase",
+"en": "Spiral vase"
+},
+{
+"indent": 4,
+"anchor": "smooth-spiral",
+"en": "Smooth Spiral"
+},
+{
+"indent": 8,
+"anchor": "max-xy-smoothing",
+"en": "Max XY Smoothing"
+},
+{
+"indent": 4,
+"anchor": "spiral-starting-flow-ratio",
+"en": "Spiral starting flow ratio"
+},
+{
+"indent": 4,
+"anchor": "spiral-finishing-flow-ratio",
+"en": "Spiral finishing flow ratio"
+},
+{
+"indent": 0,
+"anchor": "timelapse",
+"en": "Timelapse"
+},
+{
+"indent": 0,
+"anchor": "enable-clumping-detection",
+"en": "Enable clumping detection"
+}
+]
+],
+"img": [
+"![close-holes](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/slicing-mode/close-holes.png?raw=true)"
+],
+"link": [
+"https://3dlabprint.com",
+"#intra-layer-order",
+"printer_extruder_z_hop",
+"quality_settings_wall_and_surfaces#avoid-crossing-walls",
+"#by-object",
+"#by-object",
+"printer_basic_information_printable_space#printable-height",
+"printer_basic_information_extruder_clearance#height-to-lid",
+"printer_basic_information_extruder_clearance#height-to-rod",
+"#by-object",
+"strength_settings_patterns#grid",
+"printer_basic_information_advanced#use-relative-e-distances",
+"printer_basic_information_advanced#use-relative-e-distances",
+"printer_machine_gcode#timelapse-g-code",
+"multimaterial_settings_prime_tower",
+"multimaterial_settings_prime_tower#no-sparse-layers",
+"#by-object",
+"#spiral-vase",
+"printer_machine_gcode#clumping-detection-g-code",
+"multimaterial_settings_prime_tower",
+"#by-object",
+"#spiral-vase",
+"multimaterial_settings_prime_tower#no-sparse-layers"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Special Mode",
+"raw": "Special Mode",
+"id": "special-mode",
+"alt": "special-mode"
+},
+{
+"level": 2,
+"en": "Slicing Mode",
+"raw": "Slicing Mode",
+"id": "slicing-mode",
+"alt": "slicing-mode"
+},
+{
+"level": 3,
+"en": "Regular",
+"raw": "Regular",
+"id": "regular",
+"alt": "regular"
+},
+{
+"level": 3,
+"en": "Close Holes",
+"raw": "Close Holes",
+"id": "close-holes",
+"alt": "close-holes"
+},
+{
+"level": 3,
+"en": "Even Odd",
+"raw": "Even Odd",
+"id": "even-odd",
+"alt": "even-odd"
+},
+{
+"level": 2,
+"en": "Print Sequence",
+"raw": "Print Sequence",
+"id": "print-sequence",
+"alt": "print-sequence"
+},
+{
+"level": 3,
+"en": "By Layer",
+"raw": "By Layer",
+"id": "by-layer",
+"alt": "by-layer"
+},
+{
+"level": 3,
+"en": "By Object",
+"raw": "By Object",
+"id": "by-object",
+"alt": "by-object"
+},
+{
+"level": 2,
+"en": "Intra-layer order",
+"raw": "Intra-layer order",
+"id": "intra-layer-order",
+"alt": "intra-layer-order"
+},
+{
+"level": 2,
+"en": "Spiral vase",
+"raw": "Spiral vase",
+"id": "spiral-vase",
+"alt": "spiral-vase"
+},
+{
+"level": 3,
+"en": "Smooth Spiral",
+"raw": "Smooth Spiral",
+"id": "smooth-spiral",
+"alt": "smooth-spiral"
+},
+{
+"level": 4,
+"en": "Max XY Smoothing",
+"raw": "Max XY Smoothing",
+"id": "max-xy-smoothing",
+"alt": "max-xy-smoothing"
+},
+{
+"level": 3,
+"en": "Spiral starting flow ratio",
+"raw": "Spiral starting flow ratio",
+"id": "spiral-starting-flow-ratio",
+"alt": "spiral-starting-flow-ratio"
+},
+{
+"level": 3,
+"en": "Spiral finishing flow ratio",
+"raw": "Spiral finishing flow ratio",
+"id": "spiral-finishing-flow-ratio",
+"alt": "spiral-finishing-flow-ratio"
+},
+{
+"level": 2,
+"en": "Timelapse",
+"raw": "Timelapse",
+"id": "timelapse",
+"alt": "timelapse"
+},
+{
+"level": 2,
+"en": "Enable clumping detection",
+"raw": "Enable clumping detection",
+"id": "enable-clumping-detection",
+"alt": "enable-clumping-detection"
+}
+],
+"src": "print_settings/others/others_settings_special_mode.md"
+}

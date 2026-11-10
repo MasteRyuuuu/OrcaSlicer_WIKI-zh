@@ -1,0 +1,263 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`no ironing, top, topmost, solid`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-type=\"no ironing\"`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_pattern`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`rectilinear, concentric`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-pattern=rectilinear`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_flow`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-flow=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_spacing`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-spacing=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_inset`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-inset=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ironing_angle_fixed`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ironing-angle-fixed=1`."
+}
+]
+],
+"toc": [],
+"img": [
+"![ironing](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ironing/ironing.png?raw=true)",
+"![ironing-top-surfaces](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ironing/ironing-top-surfaces.png?raw=true)",
+"![ironing-topmost-surface](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ironing/ironing-topmost-surface.png?raw=true)",
+"![ironing-all-solid-layers](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ironing/ironing-all-solid-layers.png?raw=true)",
+"![ironing-inset](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ironing/ironing-inset.png?raw=true)"
+],
+"link": [
+"#flow",
+"#pattern",
+"material_setting_overrides#ironing",
+"strength_settings_top_bottom_shells",
+"strength_settings_top_bottom_shells",
+"strength_settings_infill#internal-solid-infill",
+"strength_settings_top_bottom_shells",
+"strength_settings_patterns",
+"strength_settings_patterns#concentric",
+"strength_settings_patterns#rectilinear",
+"#pattern",
+"#pattern",
+"https://github.com/OrcaSlicer/OrcaSlicer/issues/10834#issuecomment-3322628589",
+"strength_settings_advanced#align-directions-to-model",
+"#angle-offset",
+"#pattern",
+"speed_settings_other_layers_speed#ironing-speed"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Ironing",
+"raw": "Ironing",
+"id": "ironing",
+"alt": "ironing"
+},
+{
+"level": 2,
+"en": "Type",
+"raw": "Type",
+"id": "type",
+"alt": "type"
+},
+{
+"level": 2,
+"en": "Pattern",
+"raw": "Pattern",
+"id": "pattern",
+"alt": "pattern"
+},
+{
+"level": 2,
+"en": "Flow",
+"raw": "Flow",
+"id": "flow",
+"alt": "flow"
+},
+{
+"level": 2,
+"en": "Line spacing",
+"raw": "Line spacing",
+"id": "line-spacing",
+"alt": "line-spacing"
+},
+{
+"level": 2,
+"en": "Inset",
+"raw": "Inset",
+"id": "inset",
+"alt": "inset"
+},
+{
+"level": 2,
+"en": "Angle Offset",
+"raw": "Angle Offset",
+"id": "angle-offset",
+"alt": "angle-offset"
+},
+{
+"level": 2,
+"en": "Fixed Angle",
+"raw": "Fixed Angle",
+"id": "fixed-angle",
+"alt": "fixed-angle"
+},
+{
+"level": 2,
+"en": "Speed",
+"raw": "Speed",
+"id": "speed",
+"alt": "speed"
+}
+],
+"src": "print_settings/quality/quality_settings_ironing.md"
+}

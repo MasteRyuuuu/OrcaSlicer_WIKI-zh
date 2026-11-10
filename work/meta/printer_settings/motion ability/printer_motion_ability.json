@@ -1,0 +1,349 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`emit_machine_limits_to_gcode`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--emit-machine-limits-to-gcode=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`resonance_avoidance`, `min_resonance_avoidance_speed`, `max_resonance_avoidance_speed`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`resonance_avoidance` (Boolean), `min_resonance_avoidance_speed` (Float), `max_resonance_avoidance_speed` (Float)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--resonance-avoidance=1` (`resonance_avoidance` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`input_shaping_emit`, `input_shaping_freq_x`, `input_shaping_freq_y`, `input_shaping_damp_x`, `input_shaping_damp_y`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`input_shaping_emit` (Boolean), `input_shaping_freq_x` (Float), `input_shaping_freq_y` (Float), `input_shaping_damp_x` (Float), `input_shaping_damp_y` (Float)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--input-shaping-emit=1` (`input_shaping_emit` shown; other variables above follow their own type)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`input_shaping_type`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`Default, MZV, ZV, ZVD, ZVDD, ZVDDD, EI, EI2, 2HUMP_EI, EI3, 3HUMP_EI, DAA, Disable`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--input-shaping-type=Default`."
+}
+],
+[
+{
+"label": "Modes",
+"target": "option_mode",
+"value": ""
+}
+],
+[
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-max-acceleration-x=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`machine_max_jerk_x`, `machine_max_jerk_y`, `machine_max_jerk_z`, `machine_max_jerk_e`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-max-jerk-x=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`machine_max_junction_deviation`."
+},
+{
+"label": "Type",
+"target": "option_type#list-types",
+"value": "`Float list`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--machine-max-junction-deviation=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "emit-limits-to-g-code",
+"en": "Emit limits to G-code"
+},
+{
+"indent": 0,
+"anchor": "resonance-compensation",
+"en": "Resonance Compensation"
+},
+{
+"indent": 4,
+"anchor": "resonance-avoidance",
+"en": "Resonance Avoidance"
+},
+{
+"indent": 4,
+"anchor": "input-shaping",
+"en": "Input Shaping"
+},
+{
+"indent": 8,
+"anchor": "input-shaping-type",
+"en": "Input Shaping Type"
+},
+{
+"indent": 12,
+"anchor": "default",
+"en": "Default"
+},
+{
+"indent": 12,
+"anchor": "version-table",
+"en": "Version Table"
+},
+{
+"indent": 16,
+"anchor": "fixed-time-motion",
+"en": "Fixed-Time Motion"
+},
+{
+"indent": 0,
+"anchor": "speed-limitation",
+"en": "Speed limitation"
+},
+{
+"indent": 0,
+"anchor": "acceleration-limitation",
+"en": "Acceleration limitation"
+},
+{
+"indent": 0,
+"anchor": "jerk-limitation",
+"en": "Jerk limitation"
+},
+{
+"indent": 4,
+"anchor": "maximum-jerk",
+"en": "Maximum Jerk"
+},
+{
+"indent": 4,
+"anchor": "maximum-junction-deviation",
+"en": "Maximum Junction Deviation"
+}
+]
+],
+"img": [
+"![inputshaping_printer](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/InputShaping/inputshaping_printer.png?raw=true)"
+],
+"link": [
+"vfa_calib",
+"input_shaping_calib",
+"https://www.klipper3d.org/Resonance_Compensation.html#technical-details",
+"https://docs.duet3d.com/User_manual/Reference/Gcodes#m593-configure-input-shaping",
+"https://marlinfw.org/docs/features/ft_motion.html#more-complexity-zv-input-shaper",
+"https://marlinfw.org/docs/features/ft_motion.html#fixed-time-motion-by-ulendo",
+"https://marlinfw.org/docs/gcode/M493.html",
+"built_in_placeholders_variables",
+"built_in_placeholders_variables",
+"cornering_calib",
+"speed_settings_jerk_xy",
+"speed_settings_jerk_xy#junction-deviation"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Motion Ability",
+"raw": "Motion Ability",
+"id": "motion-ability",
+"alt": "motion-ability"
+},
+{
+"level": 2,
+"en": "Emit limits to G-code",
+"raw": "Emit limits to G-code",
+"id": "emit-limits-to-g-code",
+"alt": "emit-limits-to-g-code"
+},
+{
+"level": 2,
+"en": "Resonance Compensation",
+"raw": "Resonance Compensation",
+"id": "resonance-compensation",
+"alt": "resonance-compensation"
+},
+{
+"level": 3,
+"en": "Resonance Avoidance",
+"raw": "Resonance Avoidance",
+"id": "resonance-avoidance",
+"alt": "resonance-avoidance"
+},
+{
+"level": 3,
+"en": "Input Shaping",
+"raw": "Input Shaping",
+"id": "input-shaping",
+"alt": "input-shaping"
+},
+{
+"level": 4,
+"en": "Input Shaping Type",
+"raw": "Input Shaping Type",
+"id": "input-shaping-type",
+"alt": "input-shaping-type"
+},
+{
+"level": 5,
+"en": "Default",
+"raw": "Default",
+"id": "default",
+"alt": "default"
+},
+{
+"level": 5,
+"en": "Version Table",
+"raw": "Version Table",
+"id": "version-table",
+"alt": "version-table"
+},
+{
+"level": 6,
+"en": "Fixed-Time Motion",
+"raw": "Fixed-Time Motion",
+"id": "fixed-time-motion",
+"alt": "fixed-time-motion"
+},
+{
+"level": 2,
+"en": "Speed limitation",
+"raw": "Speed limitation",
+"id": "speed-limitation",
+"alt": "speed-limitation"
+},
+{
+"level": 2,
+"en": "Acceleration limitation",
+"raw": "Acceleration limitation",
+"id": "acceleration-limitation",
+"alt": "acceleration-limitation"
+},
+{
+"level": 2,
+"en": "Jerk limitation",
+"raw": "Jerk limitation",
+"id": "jerk-limitation",
+"alt": "jerk-limitation"
+},
+{
+"level": 3,
+"en": "Maximum Jerk",
+"raw": "Maximum Jerk",
+"id": "maximum-jerk",
+"alt": "maximum-jerk"
+},
+{
+"level": 3,
+"en": "Maximum Junction Deviation",
+"raw": "Maximum Junction Deviation",
+"id": "maximum-junction-deviation",
+"alt": "maximum-junction-deviation"
+}
+],
+"src": "printer_settings/motion ability/printer_motion_ability.md"
+}

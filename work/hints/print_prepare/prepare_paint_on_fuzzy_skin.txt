@@ -1,0 +1,3 @@
+G fuzzy skin = 绒毛表面
+G texture = 纹理
+G model = 模型 / 型号

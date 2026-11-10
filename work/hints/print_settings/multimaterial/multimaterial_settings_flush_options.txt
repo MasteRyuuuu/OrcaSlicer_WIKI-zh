@@ -1,0 +1,17 @@
+H flush into this object = 冲刷到这个对象
+H flush into objects' support = 冲刷到对象的支撑
+H flush into objects' infill = 冲刷到对象的填充
+H flush options = 换料冲刷选项
+G filament = 耗材丝
+G infill = 填充
+G wipe = 擦拭
+G extruder = 挤出机
+G support = 支撑
+G plate = 盘
+  purge in prime tower = 冲刷进擦拭塔
+  prime tower = 擦拭塔
+  wipe tower = 擦拭塔
+  type 2 = 类型 2
+  filament change = 更换耗材丝
+  process settings = 工艺设置
+  to objects = 拆分到对象

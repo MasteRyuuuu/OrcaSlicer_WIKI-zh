@@ -1,0 +1,59 @@
+{
+"code": [
+[
+"```python",
+"import orca",
+"",
+"class ProjectWatcher(orca.script.ScriptPluginCapabilityBase):",
+"    def get_name(self): return \"Project Watcher\"",
+"    def execute(self): return orca.ExecutionResult.success()",
+"",
+"    def on_lifecycle_event(self, event, ctx):",
+"        if event == orca.LifecycleEvent.ProjectAfterSave:",
+"            print(\"saved\", ctx.name)",
+"        elif event == orca.LifecycleEvent.SlicingJobComplete and ctx.code == orca.LifecycleEvtCode.Error:",
+"            print(\"slicing failed:\", ctx.msg)",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"host",
+"plugin_audit_hook",
+"registry"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Lifecycle Events",
+"raw": "Lifecycle Events",
+"id": "lifecycle-events",
+"alt": "lifecycle-events"
+},
+{
+"level": 2,
+"en": "Events",
+"raw": "Events",
+"id": "events",
+"alt": "events"
+},
+{
+"level": 2,
+"en": "Payload",
+"raw": "Payload",
+"id": "payload",
+"alt": "payload"
+},
+{
+"level": 2,
+"en": "Delivery Rules",
+"raw": "Delivery Rules",
+"id": "delivery-rules",
+"alt": "delivery-rules"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/lifecycle_events.md"
+}

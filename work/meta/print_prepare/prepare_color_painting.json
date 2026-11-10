@@ -1,0 +1,71 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"multimaterial_settings_filament_for_features",
+"mixed_nozzle_sizes",
+"strength_settings_top_bottom_shells#paint-penetration-layers"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Color Painting",
+"raw": "Color Painting",
+"id": "color-painting",
+"alt": "color-painting"
+},
+{
+"level": 2,
+"en": "Tools",
+"raw": "Tools",
+"id": "tools",
+"alt": "tools"
+},
+{
+"level": 3,
+"en": "Circle",
+"raw": "Circle",
+"id": "circle",
+"alt": "circle"
+},
+{
+"level": 3,
+"en": "Sphere",
+"raw": "Sphere",
+"id": "sphere",
+"alt": "sphere"
+},
+{
+"level": 3,
+"en": "Triangle",
+"raw": "Triangle",
+"id": "triangle",
+"alt": "triangle"
+},
+{
+"level": 3,
+"en": "Height Range",
+"raw": "Height Range",
+"id": "height-range",
+"alt": "height-range"
+},
+{
+"level": 3,
+"en": "Fill",
+"raw": "Fill",
+"id": "fill",
+"alt": "fill"
+},
+{
+"level": 2,
+"en": "Gap Fill",
+"raw": "Gap Fill",
+"id": "gap-fill",
+"alt": "gap-fill"
+}
+],
+"src": "print_prepare/prepare_color_painting.md"
+}

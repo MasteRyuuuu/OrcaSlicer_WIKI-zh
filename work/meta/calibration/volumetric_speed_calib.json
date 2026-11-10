@@ -1,0 +1,34 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![mvf_measurement_point](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/MVF/mvf_measurement_point.jpg?raw=true)",
+"![mvf_caliper_sample_mvf](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/MVF/mvf_caliper_sample_mvf.jpg?raw=true)",
+"![mvf_gui_flow](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/MVF/mvf_gui_flow.png?raw=true)",
+"![mvf_material_settings](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/MVF/mvf_material_settings.png?raw=true)"
+],
+"link": [
+"material_volumetric_speed_limitation",
+"calibration_guide",
+"temp_calib#nozzle-temp-tower"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Max Volumetric Speed (FlowRate) Calibration",
+"raw": "Max Volumetric Speed (FlowRate) Calibration",
+"id": "max-volumetric-speed-flowrate-calibration",
+"alt": "max-volumetric-speed-flowrate-calibration"
+},
+{
+"level": 2,
+"en": "Calibration Overview",
+"raw": "Calibration Overview",
+"id": "calibration-overview",
+"alt": "calibration-overview"
+}
+],
+"src": "calibration/volumetric_speed_calib.md"
+}

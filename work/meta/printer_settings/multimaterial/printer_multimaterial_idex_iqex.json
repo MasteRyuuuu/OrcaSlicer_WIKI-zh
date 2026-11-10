@@ -1,0 +1,408 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`is_imex`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--is-imex=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_firmware_managed_zones`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-firmware-managed-zones=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_gantry_count`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-gantry-count=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_tools_per_gantry`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-tools-per-gantry=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_tool_layout`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`front-left, front-right, rear-left, rear-right`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-tool-layout=front-left`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_nozzle_clearance_x`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-nozzle-clearance-x=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_nozzle_clearance_y`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-nozzle-clearance-y=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_carriage_margin`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-carriage-margin=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`imex_viz_theme`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`standard, deuteranopia, tritanopia, high_contrast`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--imex-viz-theme=standard`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "idexiqex-printer",
+"en": "IDEX/IQEX Printer"
+},
+{
+"indent": 0,
+"anchor": "firmware-managed-zones",
+"en": "Firmware-managed zones"
+},
+{
+"indent": 0,
+"anchor": "gantry-count",
+"en": "Gantry Count"
+},
+{
+"indent": 0,
+"anchor": "tools-per-gantry",
+"en": "Tools per Gantry"
+},
+{
+"indent": 0,
+"anchor": "tool-0-position",
+"en": "Tool 0 Position"
+},
+{
+"indent": 0,
+"anchor": "nozzle-clearance-x",
+"en": "Nozzle Clearance X"
+},
+{
+"indent": 0,
+"anchor": "nozzle-clearance-y",
+"en": "Nozzle Clearance Y"
+},
+{
+"indent": 0,
+"anchor": "safety-margin",
+"en": "Safety Margin"
+},
+{
+"indent": 0,
+"anchor": "pre-slice-warnings",
+"en": "Pre-slice warnings"
+},
+{
+"indent": 0,
+"anchor": "visualization-theme",
+"en": "Visualization Theme"
+},
+{
+"indent": 0,
+"anchor": "modes",
+"en": "Modes"
+},
+{
+"indent": 4,
+"anchor": "mode-name",
+"en": "Mode name"
+},
+{
+"indent": 4,
+"anchor": "tool-roles",
+"en": "Tool roles"
+},
+{
+"indent": 4,
+"anchor": "mode-g-code",
+"en": "Mode G-code"
+}
+]
+],
+"img": [
+"![idex_iqex_settings](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_settings.png?raw=true)",
+"![idex_iqex_nozzle_clearance_x](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_nozzle_clearance_x.svg?raw=true)",
+"![idex_iqex_nozzle_clearance_y](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/idex_iqex/idex_iqex_nozzle_clearance_y.svg?raw=true)"
+],
+"link": [
+"#idexiqex-printer",
+"#modes",
+"idex_iqex_parallel_printing",
+"idex_iqex_parallel_printing#firmware",
+"built_in_placeholders_variables#plates"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "IDEX/IQEX Configuration",
+"raw": "IDEX/IQEX Configuration",
+"id": "idexiqex-configuration",
+"alt": "idexiqex-configuration"
+},
+{
+"level": 2,
+"en": "IDEX/IQEX Printer",
+"raw": "IDEX/IQEX Printer",
+"id": "idexiqex-printer",
+"alt": "idexiqex-printer"
+},
+{
+"level": 2,
+"en": "Firmware-managed zones",
+"raw": "Firmware-managed zones",
+"id": "firmware-managed-zones",
+"alt": "firmware-managed-zones"
+},
+{
+"level": 2,
+"en": "Gantry Count",
+"raw": "Gantry Count",
+"id": "gantry-count",
+"alt": "gantry-count"
+},
+{
+"level": 2,
+"en": "Tools per Gantry",
+"raw": "Tools per Gantry",
+"id": "tools-per-gantry",
+"alt": "tools-per-gantry"
+},
+{
+"level": 2,
+"en": "Tool 0 Position",
+"raw": "Tool 0 Position",
+"id": "tool-0-position",
+"alt": "tool-0-position"
+},
+{
+"level": 2,
+"en": "Nozzle Clearance X",
+"raw": "Nozzle Clearance X",
+"id": "nozzle-clearance-x",
+"alt": "nozzle-clearance-x"
+},
+{
+"level": 2,
+"en": "Nozzle Clearance Y",
+"raw": "Nozzle Clearance Y",
+"id": "nozzle-clearance-y",
+"alt": "nozzle-clearance-y"
+},
+{
+"level": 2,
+"en": "Safety Margin",
+"raw": "Safety Margin",
+"id": "safety-margin",
+"alt": "safety-margin"
+},
+{
+"level": 2,
+"en": "Pre-slice warnings",
+"raw": "Pre-slice warnings",
+"id": "pre-slice-warnings",
+"alt": "pre-slice-warnings"
+},
+{
+"level": 2,
+"en": "Visualization Theme",
+"raw": "Visualization Theme",
+"id": "visualization-theme",
+"alt": "visualization-theme"
+},
+{
+"level": 2,
+"en": "Modes",
+"raw": "Modes",
+"id": "modes",
+"alt": "modes"
+},
+{
+"level": 3,
+"en": "Mode name",
+"raw": "Mode name",
+"id": "mode-name",
+"alt": "mode-name"
+},
+{
+"level": 3,
+"en": "Tool roles",
+"raw": "Tool roles",
+"id": "tool-roles",
+"alt": "tool-roles"
+},
+{
+"level": 3,
+"en": "Mode G-code",
+"raw": "Mode G-code",
+"id": "mode-g-code",
+"alt": "mode-g-code"
+}
+],
+"src": "printer_settings/multimaterial/printer_multimaterial_idex_iqex.md"
+}

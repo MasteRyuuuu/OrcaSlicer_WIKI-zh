@@ -1,0 +1,98 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "opening-the-troubleshoot-center",
+"en": "Opening the Troubleshoot Center"
+},
+{
+"indent": 0,
+"anchor": "system-information",
+"en": "System information"
+},
+{
+"indent": 0,
+"anchor": "information",
+"en": "Information"
+},
+{
+"indent": 0,
+"anchor": "profiles",
+"en": "Profiles"
+},
+{
+"indent": 0,
+"anchor": "more",
+"en": "More"
+},
+{
+"indent": 0,
+"anchor": "reporting-an-issue",
+"en": "Reporting an issue"
+}
+]
+],
+"img": [],
+"link": [
+"option_mode",
+"user_profiles",
+"#system-information",
+"#information"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Troubleshoot Center",
+"raw": "Troubleshoot Center",
+"id": "troubleshoot-center",
+"alt": "troubleshoot-center"
+},
+{
+"level": 2,
+"en": "Opening the Troubleshoot Center",
+"raw": "Opening the Troubleshoot Center",
+"id": "opening-the-troubleshoot-center",
+"alt": "opening-the-troubleshoot-center"
+},
+{
+"level": 2,
+"en": "System information",
+"raw": "System information",
+"id": "system-information",
+"alt": "system-information"
+},
+{
+"level": 2,
+"en": "Information",
+"raw": "Information",
+"id": "information",
+"alt": "information"
+},
+{
+"level": 2,
+"en": "Profiles",
+"raw": "Profiles",
+"id": "profiles",
+"alt": "profiles"
+},
+{
+"level": 2,
+"en": "More",
+"raw": "More",
+"id": "more",
+"alt": "more"
+},
+{
+"level": 2,
+"en": "Reporting an issue",
+"raw": "Reporting an issue",
+"id": "reporting-an-issue",
+"alt": "reporting-an-issue"
+}
+],
+"src": "general_settings/troubleshoot_center.md"
+}

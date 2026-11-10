@@ -1,0 +1,77 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![speed_dial](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed_dial/speed_dial.png?raw=true)",
+"![speed_dial_favourites](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed_dial/speed_dial_favourites.png?raw=true)",
+"![speed_dial_tooltip](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed_dial/speed_dial_tooltip.png?raw=true)",
+"![speed_dial_preferences](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed_dial/speed_dial_preferences.png?raw=true)",
+"![speed_dial_youtube_thumbnail](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/speed_dial/speed_dial_youtube_thumbnail.jpg?raw=true)"
+],
+"link": [
+"plugins_getting_started",
+"https://www.youtube.com/watch?v=DxJPhETR1Hs",
+"https://www.youtube.com/watch?v=DxJPhETR1Hs"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Speed Dial",
+"raw": "Speed Dial",
+"id": "speed-dial",
+"alt": "speed-dial"
+},
+{
+"level": 2,
+"en": "How to use",
+"raw": "How to use",
+"id": "how-to-use",
+"alt": "how-to-use"
+},
+{
+"level": 2,
+"en": "Favourites",
+"raw": "Favourites",
+"id": "favourites",
+"alt": "favourites"
+},
+{
+"level": 2,
+"en": "Recents and categories",
+"raw": "Recents and categories",
+"id": "recents-and-categories",
+"alt": "recents-and-categories"
+},
+{
+"level": 2,
+"en": "Details and Wiki",
+"raw": "Details and Wiki",
+"id": "details-and-wiki",
+"alt": "details-and-wiki"
+},
+{
+"level": 2,
+"en": "Plugins",
+"raw": "Plugins",
+"id": "plugins",
+"alt": "plugins"
+},
+{
+"level": 2,
+"en": "Preferences",
+"raw": "Preferences",
+"id": "preferences",
+"alt": "preferences"
+},
+{
+"level": 2,
+"en": "Video",
+"raw": "Video",
+"id": "video",
+"alt": "video"
+}
+],
+"src": "speed_dial/speed_dial.md"
+}

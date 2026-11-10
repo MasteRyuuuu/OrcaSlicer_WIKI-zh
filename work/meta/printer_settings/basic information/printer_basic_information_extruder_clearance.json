@@ -1,0 +1,137 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_clearance_radius`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-clearance-radius=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_clearance_dist_to_rod`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-clearance-dist-to-rod=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_clearance_height_to_rod`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-clearance-height-to-rod=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extruder_clearance_height_to_lid`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extruder-clearance-height-to-lid=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"multimaterial_settings_prime_tower#no-sparse-layers"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Extruder Clearance",
+"raw": "Extruder Clearance",
+"id": "extruder-clearance",
+"alt": "extruder-clearance"
+},
+{
+"level": 2,
+"en": "Radius",
+"raw": "Radius",
+"id": "radius",
+"alt": "radius"
+},
+{
+"level": 2,
+"en": "Distance to rod",
+"raw": "Distance to rod",
+"id": "distance-to-rod",
+"alt": "distance-to-rod"
+},
+{
+"level": 2,
+"en": "Height to rod",
+"raw": "Height to rod",
+"id": "height-to-rod",
+"alt": "height-to-rod"
+},
+{
+"level": 2,
+"en": "Height to lid",
+"raw": "Height to lid",
+"id": "height-to-lid",
+"alt": "height-to-lid"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_extruder_clearance.md"
+}

@@ -1,0 +1,20 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![transfer-discard-changes](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/GUI/transfer-discard-changes.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Transfer or Discard Changes popup dialog",
+"raw": "Transfer or Discard Changes popup dialog",
+"id": "transfer-or-discard-changes-popup-dialog",
+"alt": "transfer-or-discard-changes-popup-dialog"
+}
+],
+"src": "general_settings/transfer_discard_changes.md"
+}

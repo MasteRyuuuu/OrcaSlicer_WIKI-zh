@@ -1,0 +1,60 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![stl-transformation-split](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/STL-Transformation/stl-transformation-split.png?raw=true)"
+],
+"link": [
+"prepare_color_painting",
+"prepare_paint_on_fuzzy_skin",
+"prepare_seam_painting",
+"prepare_support_painting"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Object Set",
+"raw": "Object Set",
+"id": "object-set",
+"alt": "object-set"
+},
+{
+"level": 2,
+"en": "Part",
+"raw": "Part",
+"id": "part",
+"alt": "part"
+},
+{
+"level": 2,
+"en": "Instance",
+"raw": "Instance",
+"id": "instance",
+"alt": "instance"
+},
+{
+"level": 2,
+"en": "Splitting",
+"raw": "Splitting",
+"id": "splitting",
+"alt": "splitting"
+},
+{
+"level": 3,
+"en": "Split to Objects",
+"raw": "Split to Objects",
+"id": "split-to-objects",
+"alt": "split-to-objects"
+},
+{
+"level": 3,
+"en": "Split to Parts",
+"raw": "Split to Parts",
+"id": "split-to-parts",
+"alt": "split-to-parts"
+}
+],
+"src": "print_prepare/prepare_object_set.md"
+}

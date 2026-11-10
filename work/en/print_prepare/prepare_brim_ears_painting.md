@@ -1,0 +1,13 @@
+# Brim ears Painting
+
+This painting tool allows you to paint brim ears on the base of your 3D model to improve bed adhesion during printing.  
+It also includes an Auto-generate feature that automatically detects and applies brim ears to suitable areas of the model.
+
+## Parameters
+
+- **Brim ear radius**: Sets the radius of brim ears placed manually or with Auto-generate. Values from 0.1 mm to 100 mm are supported.
+- **Max angle**: Defines the maximum angle at which brim ears will be applied with Auto-generate.
+- **Detection radius**: Lower values can detect more candidate positions. Sets the radius for detecting areas (using the [Ramer–Douglas–Peucker algorithm]({{L1}})) where Auto-generate may place brim ears.
+- **Section view**: Adjusts the section view height to better visualize brim ear placement.
+
+When **Brim type** is set to **Painted**, enable [Brim ears outer only]({{L2}}) in **Process > Others > Brim** to exclude painted ears placed in holes or other enclosed sections when slicing.

@@ -1,0 +1,3 @@
+H script = 脚本
+G dialog = 对话框
+G model = 模型 / 型号

@@ -1,0 +1,45 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![publish_3mf_homepage](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_3mf_homepage.png?raw=true)",
+"![publish_3mf_youtube_thumbnail](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/publish_3mf/publish_3mf_youtube_thumbnail.jpg?raw=true)"
+],
+"link": [
+"https://www.youtube.com/watch?v=-xt1N29UIOg",
+"https://www.youtube.com/watch?v=-xt1N29UIOg"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "What does Publish 3MF do?",
+"raw": "What does Publish 3MF do?",
+"id": "what-does-publish-3mf-do",
+"alt": "what-does-publish-3mf-do"
+},
+{
+"level": 2,
+"en": "How to identify a Published 3MF file?",
+"raw": "How to identify a Published 3MF file?",
+"id": "how-to-identify-a-published-3mf-file",
+"alt": "how-to-identify-a-published-3mf-file"
+},
+{
+"level": 2,
+"en": "Opening a Published 3MF file",
+"raw": "Opening a Published 3MF file",
+"id": "opening-a-published-3mf-file",
+"alt": "opening-a-published-3mf-file"
+},
+{
+"level": 2,
+"en": "Video Guide",
+"raw": "Video Guide",
+"id": "video-guide",
+"alt": "video-guide"
+}
+],
+"src": "publishing_3mf/publish_3mf.md"
+}

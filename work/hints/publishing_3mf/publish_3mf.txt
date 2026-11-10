@@ -1,0 +1,7 @@
+H video guide = 视频指南
+G top = 顶部 / 俯视
+G model = 模型 / 型号
+G filament = 耗材丝
+  publish 3mf = 发布 3MF
+  save project = 保存项目
+  process settings = 工艺设置

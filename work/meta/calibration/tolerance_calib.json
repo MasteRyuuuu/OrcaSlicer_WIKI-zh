@@ -1,0 +1,48 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![FilamentShrinkageCompensation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Tolerance/FilamentShrinkageCompensation.png?raw=true)",
+"![QualityPrecision](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Tolerance/QualityPrecision.png?raw=true)",
+"![handy-models-list](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Handy-Models/handy-models-list.png?raw=true)",
+"![tolerance_hole](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Tolerance/tolerance_hole.svg?raw=true)",
+"![OrcaToleranceTes_m6](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Tolerance/OrcaToleranceTes_m6.jpg?raw=true)",
+"![OrcaToleranceTest_print](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Tolerance/OrcaToleranceTest_print.jpg?raw=true)"
+],
+"link": [
+"material_basic_information#shrinkage-xy",
+"material_basic_information#shrinkage-z",
+"quality_settings_precision",
+"quality_settings_precision#x-y-compensation",
+"quality_settings_precision#x-y-compensation",
+"quality_settings_precision#precise-wall",
+"quality_settings_precision#precise-z-height",
+"calibration_guide"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Filament Tolerance Calibration",
+"raw": "Filament Tolerance Calibration",
+"id": "filament-tolerance-calibration",
+"alt": "filament-tolerance-calibration"
+},
+{
+"level": 2,
+"en": "Handy Models",
+"raw": "Handy Models",
+"id": "handy-models",
+"alt": "handy-models"
+},
+{
+"level": 3,
+"en": "Orca Tolerance Test",
+"raw": "Orca Tolerance Test",
+"id": "orca-tolerance-test",
+"alt": "orca-tolerance-test"
+}
+],
+"src": "calibration/tolerance_calib.md"
+}

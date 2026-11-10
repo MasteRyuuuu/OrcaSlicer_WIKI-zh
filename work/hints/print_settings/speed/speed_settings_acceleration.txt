@@ -1,0 +1,17 @@
+H internal solid infill = 内部实心填充
+H outer wall = 外墙
+H sparse infill = 稀疏填充
+H inner wall = 内墙
+H travel = 空驶
+H bridge = 桥接
+H normal printing = 普通打印
+H top surface = 顶面
+H acceleration = 加速度
+G g-code flavor = G-code风格
+G layer = 层
+G infill = 填充
+G top = 顶部 / 俯视
+G plate = 盘
+G firmware = 固件
+  motion ability = 移动能力
+  first layer = 首层

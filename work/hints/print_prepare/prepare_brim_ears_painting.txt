@@ -1,0 +1,10 @@
+G brim ears = 耳状 Brim
+G section view = 剖面视图
+G brim = Brim
+G model = 模型 / 型号
+  brim ears outer only = 仅外轮廓生成耳状 Brim
+  brim ear radius = 耳状 Brim半径
+  max angle = 最大角度
+  detection radius = 检测半径
+  brim type = Brim类型
+  bed adhesion = 热床粘接

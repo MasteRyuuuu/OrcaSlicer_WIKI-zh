@@ -1,0 +1,1180 @@
+[
+ {
+  "level": 1,
+  "title": "V2.4.0 Beta",
+  "prose": [
+   "This is the OrcaSlicer V2.4.0 Beta. A lot of effort has gone into this release to improve stability, speed, and print quality, along with the interface and printer support. Bridging in particular has been greatly improved by @ianalexis, @kisslorand, and many others, and a new realistic rendering option from @RF47 makes your models look gorgeous right inside OrcaSlicer.",
+   "There's good news for multi-material users too: per-feature filament assignment got a big upgrade, opening up much more creative prints. Ever thought about printing the outer walls in TPU and the rest in PLA? Now you can — check out the details below.",
+   "**Note:** Everything from the 2.4.0 Alpha — Orca Cloud, Z Anti-Aliasing (ZAA) contouring, Machine Input Shaping, Optimized Gyroid infill, and the redesigned printer selection dialog — is included in this build. See the [2.4.0 Alpha release notes]({{L1}}) for details on those."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Realistic View: Phong shading, ambient occlusion, and cast shadows",
+    "rest": "by @RF47 in [13704]({{L2}})",
+    "links": [
+     [
+      "13704",
+      "{{L2}}"
+     ]
+    ]
+   },
+   {
+    "title": "Configurable lightning infill angles",
+    "rest": "by @RF47 in [13848]({{L3}}), with wiki documentation by @ianalexis in [13984]({{L4}})",
+    "links": [
+     [
+      "13848",
+      "{{L3}}"
+     ],
+     [
+      "13984",
+      "{{L4}}"
+     ]
+    ]
+   },
+   {
+    "title": "Double-click an object list row to frame it in the 3D view",
+    "rest": "by @RJAudas in [13804]({{L5}})",
+    "links": [
+     [
+      "13804",
+      "{{L5}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preview sliders overhaul",
+    "rest": "by @kisslorand in [13919]({{L6}})",
+    "links": [
+     [
+      "13919",
+      "{{L6}}"
+     ]
+    ]
+   },
+   {
+    "title": "Troubleshoot Center",
+    "rest": "by @yw4z in [12416]({{L7}})",
+    "links": [
+     [
+      "12416",
+      "{{L7}}"
+     ]
+    ]
+   },
+   {
+    "title": "Hide unsupported presets in the preset dropdown",
+    "rest": "by @Noisyfox in [13959]({{L8}})",
+    "links": [
+     [
+      "13959",
+      "{{L8}}"
+     ]
+    ]
+   },
+   {
+    "title": "Disable \"Slow down for curled perimeters\" by default and clarify its tooltip",
+    "rest": "by @igiannakas and @ianalexis in [13870]({{L9}}) and [13918]({{L10}})",
+    "links": [
+     [
+      "13870",
+      "{{L9}}"
+     ],
+     [
+      "13918",
+      "{{L10}}"
+     ]
+    ]
+   },
+   {
+    "title": "New `--logfile` option to write diagnostics to a file",
+    "rest": "by @gloth-3ds in [13931]({{L11}})",
+    "links": [
+     [
+      "13931",
+      "{{L11}}"
+     ]
+    ]
+   },
+   {
+    "title": "Add multiline fill to the infill type dropdown",
+    "rest": "by @RF47 in [13852]({{L12}})",
+    "links": [
+     [
+      "13852",
+      "{{L12}}"
+     ]
+    ]
+   },
+   {
+    "title": "Allow wipe with firmware retraction",
+    "rest": "by @vovodroid in [13812]({{L13}})",
+    "links": [
+     [
+      "13812",
+      "{{L13}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unify the Setup Guide and standalone Printer/Filament selection dialogs",
+    "rest": "by @yw4z in [13579]({{L14}})",
+    "links": [
+     [
+      "13579",
+      "{{L14}}"
+     ]
+    ]
+   },
+   {
+    "title": "OrcaSliced Handy Model",
+    "rest": "by @ianalexis in [13727]({{L15}}), with a menu fix by @SoftFever in [14102]({{L16}})",
+    "links": [
+     [
+      "13727",
+      "{{L15}}"
+     ],
+     [
+      "14102",
+      "{{L16}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Bridging",
+  "prose": [
+   "A major bridging overhaul — a dedicated bridge line width, smarter bridge-angle controls, and a batch of reliability fixes for external, counterbore, and per-modifier bridges."
+  ],
+  "items": [
+   {
+    "title": "Dedicated bridge line width for stronger, better-bonded bridges",
+    "rest": "by @ianalexis, @RF47, @Noisyfox, and @valerii-bokhan in [11255]({{L17}})",
+    "links": [
+     [
+      "11255",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Relative bridge direction and align bridge/ironing angles to the model",
+    "rest": "by @ianalexis in [12055]({{L18}})",
+    "links": [
+     [
+      "12055",
+      "{{L18}}"
+     ]
+    ]
+   },
+   {
+    "title": "More reliable external bridges on complex geometry",
+    "rest": "by @ianalexis and @RF47 in [12568]({{L19}})",
+    "links": [
+     [
+      "12568",
+      "{{L19}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stray bridge infill on top surfaces with \"Extra bridge layers\"",
+    "rest": "by @igiannakas in [13860]({{L20}})",
+    "links": [
+     [
+      "13860",
+      "{{L20}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix counterbore hole bridging",
+    "rest": "by @kisslorand in [13956]({{L21}})",
+    "links": [
+     [
+      "13956",
+      "{{L21}}"
+     ]
+    ]
+   },
+   {
+    "title": "Respect per-modifier bridge speed",
+    "rest": "by @kisslorand in [13971]({{L22}})",
+    "links": [
+     [
+      "13971",
+      "{{L22}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "Add a \"Default\" filament option for per-feature filament settings",
+    "rest": "by @ianalexis in [13887]({{L23}})",
+    "links": [
+     [
+      "13887",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "Expand \"filament for features\" (per-feature filament assignment)",
+    "rest": "by @ianalexis in [13937]({{L24}}), [14042]({{L25}}), and [14033]({{L26}})",
+    "links": [
+     [
+      "13937",
+      "{{L24}}"
+     ],
+     [
+      "14042",
+      "{{L25}}"
+     ],
+     [
+      "14033",
+      "{{L26}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Connectivity & Printer Hosts",
+  "prose": [],
+  "items": [
+   {
+    "title": "Native Moonraker (Klipper) print host support",
+    "rest": "by @packerlschupfer in [13991]({{L27}})",
+    "links": [
+     [
+      "13991",
+      "{{L27}}"
+     ]
+    ]
+   },
+   {
+    "title": "3DPrinterOS cloud host integration",
+    "rest": "by @3DPrinterOS-SDK in [10403]({{L28}})",
+    "links": [
+     [
+      "10403",
+      "{{L28}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge Adventurer 5 series local send with IFS slot mapping",
+    "rest": "by @marianomd in [12991]({{L29}})",
+    "links": [
+     [
+      "12991",
+      "{{L29}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo GIGA multi-printhead configuration",
+    "rest": "by @anjis-elegoo in [13901]({{L30}})",
+    "links": [
+     [
+      "13901",
+      "{{L30}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Creality K-series",
+  "prose": [
+   "Comprehensive support for Creality's K-series printers, combining new connectivity features with a full profile refresh."
+  ],
+  "items": [
+   {
+    "title": "LAN discovery, CFS filament sync, and K-series filament profiles",
+    "rest": "by @grant0013, @imammedo, @hamham999, @alysandreollo, and @SoftFever in [13752]({{L31}})",
+    "links": [
+     [
+      "13752",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "Refreshed Creality profiles and new printer support",
+    "rest": "by @hamham999 and @alysandreollo in [13947]({{L32}})",
+    "links": [
+     [
+      "13947",
+      "{{L32}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality profile fixes and cleanup",
+    "rest": "by @hamham999 in [14073]({{L33}}) and [14085]({{L34}})",
+    "links": [
+     [
+      "14073",
+      "{{L33}}"
+     ],
+     [
+      "14085",
+      "{{L34}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Orca Cloud & Privacy",
+  "prose": [],
+  "items": [
+   {
+    "title": "Guided resolution for cloud sync conflicts",
+    "rest": "by @peachismomo in [13900]({{L35}})",
+    "links": [
+     [
+      "13900",
+      "{{L35}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stealth Mode improvements and a new \"Hide login side panel\" option",
+    "rest": "by @SoftFever in [13963]({{L36}})",
+    "links": [
+     [
+      "13963",
+      "{{L36}}"
+     ]
+    ]
+   },
+   {
+    "title": "Disable Bambu cloud telemetry before the network plugin starts",
+    "rest": "by @SoftFever in [13898]({{L37}})",
+    "links": [
+     [
+      "13898",
+      "{{L37}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Slicing, Supports & G-code",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix Arachne duplicate extrusion on thin walls",
+    "rest": "by @akshimassar in [14031]({{L38}})",
+    "links": [
+     [
+      "14031",
+      "{{L38}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix tree support top interfaces printing in thin air and unsupported edges",
+    "rest": "by @kisslorand in [14040]({{L39}})",
+    "links": [
+     [
+      "14040",
+      "{{L39}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix organic tree support drift and floating branches with rafts",
+    "rest": "by @kisslorand in [14069]({{L40}}) and [14092]({{L41}})",
+    "links": [
+     [
+      "14069",
+      "{{L40}}"
+     ],
+     [
+      "14092",
+      "{{L41}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix organic tree support bottom interface layer count",
+    "rest": "by @kisslorand in [14095]({{L42}})",
+    "links": [
+     [
+      "14095",
+      "{{L42}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when slicing with non-organic tree supports",
+    "rest": "by @kisslorand in [14074]({{L43}})",
+    "links": [
+     [
+      "14074",
+      "{{L43}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix division-by-zero crash in organic tree support generation",
+    "rest": "by @kisslorand in [13936]({{L44}})",
+    "links": [
+     [
+      "13936",
+      "{{L44}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix overhang preview ignoring support threshold fallbacks at 0° angle",
+    "rest": "by @kisslorand in [12650]({{L45}})",
+    "links": [
+     [
+      "12650",
+      "{{L45}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix inconsistent ordering of support base outline and fill",
+    "rest": "by @kisslorand in [11761]({{L46}})",
+    "links": [
+     [
+      "11761",
+      "{{L46}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix `total_toolchanges` placeholder reporting 0 without a wipe tower",
+    "rest": "by @mrmees in [13895]({{L47}})",
+    "links": [
+     [
+      "13895",
+      "{{L47}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix built-in placeholders missing from custom G-code and output filenames",
+    "rest": "by @mrmees in [13892]({{L48}})",
+    "links": [
+     [
+      "13892",
+      "{{L48}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix air filtration G-code emitted on printers that don't support it",
+    "rest": "by @kisslorand in [13868]({{L49}})",
+    "links": [
+     [
+      "13868",
+      "{{L49}}"
+     ]
+    ]
+   },
+   {
+    "title": "Enhance G92 E0 case-sensitivity check",
+    "rest": "by @Wegerich in [13933]({{L50}})",
+    "links": [
+     [
+      "13933",
+      "{{L50}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix junction deviation and jerk settings behavior",
+    "rest": "by @kisslorand in [14004]({{L51}})",
+    "links": [
+     [
+      "14004",
+      "{{L51}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface & Usability",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix color swatch not updating when a different filament is selected",
+    "rest": "by @igiannakas in [14038]({{L52}})",
+    "links": [
+     [
+      "14038",
+      "{{L52}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix row spacing in the objects list",
+    "rest": "by @igiannakas in [14053]({{L53}})",
+    "links": [
+     [
+      "14053",
+      "{{L53}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preserve Z scale when Ctrl-dragging an XY corner",
+    "rest": "by @Calcousin55 in [13840]({{L54}})",
+    "links": [
+     [
+      "13840",
+      "{{L54}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cut: account for X offset when checking multi-dovetail connectors",
+    "rest": "by @Noisyfox in [13945]({{L55}})",
+    "links": [
+     [
+      "13945",
+      "{{L55}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix minor issues in the STEP import dialog",
+    "rest": "by @spr0u in [14067]({{L56}})",
+    "links": [
+     [
+      "14067",
+      "{{L56}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix stuck hover state after opening the printer preset dialog",
+    "rest": "by @spr0u in [14082]({{L57}})",
+    "links": [
+     [
+      "14082",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Print/Export dropdown closing before the cursor reaches the menu on macOS",
+    "rest": "by @JustNotesa in [13995]({{L58}})",
+    "links": [
+     [
+      "13995",
+      "{{L58}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix filament group popup dismissed too quickly on macOS",
+    "rest": "by @Noisyfox in [13837]({{L59}})",
+    "links": [
+     [
+      "13837",
+      "{{L59}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix incorrect grouping of custom printer profiles",
+    "rest": "by @igiannakas in [14044]({{L60}})",
+    "links": [
+     [
+      "14044",
+      "{{L60}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix printer variant validation and errors in profiles",
+    "rest": "by @SoftFever in [14084]({{L61}})",
+    "links": [
+     [
+      "14084",
+      "{{L61}}"
+     ]
+    ]
+   },
+   {
+    "title": "Allow unchecking URL association in Preferences",
+    "rest": "by @SoftFever in [13899]({{L62}})",
+    "links": [
+     [
+      "13899",
+      "{{L62}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Stability & Crashes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix crash when deleting filaments after switching profiles",
+    "rest": "by @igiannakas in [14055]({{L63}})",
+    "links": [
+     [
+      "14055",
+      "{{L63}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash with custom multi-extruder profiles based on a single-extruder printer",
+    "rest": "by @Noisyfox in [13896]({{L64}})",
+    "links": [
+     [
+      "13896",
+      "{{L64}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash when switching to a printer with fewer filaments",
+    "rest": "by @SoftFever in [14103]({{L65}})",
+    "links": [
+     [
+      "14103",
+      "{{L65}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash loading a user preset with inconsistent per-variant settings",
+    "rest": "by @SoftFever in [14106]({{L66}})",
+    "links": [
+     [
+      "14106",
+      "{{L66}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Connectivity & Cloud",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix mDNS discovery on Windows PCs with multiple network adapters",
+    "rest": "by @AnyOldName3 in [13993]({{L67}})",
+    "links": [
+     [
+      "13993",
+      "{{L67}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix CC2 device connection on Linux",
+    "rest": "by @anjis-elegoo in [14024]({{L68}})",
+    "links": [
+     [
+      "14024",
+      "{{L68}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix CC2 device panel showing Offline by passing the printer serial",
+    "rest": "by @DeathKhan in [13878]({{L69}})",
+    "links": [
+     [
+      "13878",
+      "{{L69}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix web-page communication with native code on Windows",
+    "rest": "by @anjis-elegoo in [13829]({{L70}})",
+    "links": [
+     [
+      "13829",
+      "{{L70}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preserve 3MF project settings when a cloud sync finishes",
+    "rest": "by @peachismomo in [13834]({{L71}})",
+    "links": [
+     [
+      "13834",
+      "{{L71}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix garbled non-ASCII Orca Cloud usernames",
+    "rest": "by @Noisyfox in [13856]({{L72}})",
+    "links": [
+     [
+      "13856",
+      "{{L72}}"
+     ]
+    ]
+   },
+   {
+    "title": "Retry preset migration when login warmup blocks the cloud check",
+    "rest": "by @ExPikaPaka in [14049]({{L73}})",
+    "links": [
+     [
+      "14049",
+      "{{L73}}"
+     ]
+    ]
+   },
+   {
+    "title": "Don't log out of Orca Cloud on transient token-refresh failures",
+    "rest": "by @SoftFever in [14110]({{L74}})",
+    "links": [
+     [
+      "14110",
+      "{{L74}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Calibration",
+  "prose": [],
+  "items": [
+   {
+    "title": "Stop VFA calibration from disabling input shaping (Marlin 2)",
+    "rest": "by @Argolein in [14079]({{L75}})",
+    "links": [
+     [
+      "14079",
+      "{{L75}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix false nozzle diameter mismatch error in manual calibration",
+    "rest": "by @SoftFever in [13882]({{L76}})",
+    "links": [
+     [
+      "13882",
+      "{{L76}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix nozzle diameter guards for printers that don't report nozzle info",
+    "rest": "by @cgarwood82 in [13255]({{L77}})",
+    "links": [
+     [
+      "13255",
+      "{{L77}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🐧 Linux",
+  "prose": [
+   "Linux-specific features and fixes — including several native Wayland improvements — gathered in one place."
+  ],
+  "items": [
+   {
+    "title": "Opt-in X11 backend to restore Device tab hardware acceleration",
+    "rest": "by @igiannakas in [14039]({{L78}})",
+    "links": [
+     [
+      "14039",
+      "{{L78}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix CPU spin in the Sidebar leave handler on inactive Wayland workspaces",
+    "rest": "by @d4not in [13897]({{L79}})",
+    "links": [
+     [
+      "13897",
+      "{{L79}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix freeze caused by the dynamically hidden printer edit button",
+    "rest": "by @spr0u in [14010]({{L80}})",
+    "links": [
+     [
+      "14010",
+      "{{L80}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix non-functional OBJ import dialog on Linux",
+    "rest": "by @yw4z in [13914]({{L81}})",
+    "links": [
+     [
+      "13914",
+      "{{L81}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix random startup crash on Linux",
+    "rest": "by @SoftFever in [14052]({{L82}})",
+    "links": [
+     [
+      "14052",
+      "{{L82}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash from a temporary string going out of scope on Linux",
+    "rest": "by @peachismomo in [13925]({{L83}})",
+    "links": [
+     [
+      "13925",
+      "{{L83}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Anycubic Kobra S1 Max",
+    "rest": "profiles by @ArtytheSecond2nd in [14017]({{L84}})",
+    "links": [
+     [
+      "14017",
+      "{{L84}}"
+     ]
+    ]
+   },
+   {
+    "title": "SeeMeCNC printer profiles",
+    "rest": "by @SoftFever in [13924]({{L85}}), with tuned print speeds by @Sewbot in [14075]({{L86}}), plus multicolor, support, and retraction fixes by @Sewbot in [14096]({{L87}})",
+    "links": [
+     [
+      "13924",
+      "{{L85}}"
+     ],
+     [
+      "14075",
+      "{{L86}}"
+     ],
+     [
+      "14096",
+      "{{L87}}"
+     ]
+    ]
+   },
+   {
+    "title": "DREMC filament profiles",
+    "rest": "(PLA, ABS, ASA) by @dremc in [13783]({{L88}})",
+    "links": [
+     [
+      "13783",
+      "{{L88}}"
+     ]
+    ]
+   },
+   {
+    "title": "More Polymaker filament presets",
+    "rest": "by @Jingxi-Polymaker in [13858]({{L89}})",
+    "links": [
+     [
+      "13858",
+      "{{L89}}"
+     ]
+    ]
+   },
+   {
+    "title": "FilAr filament vendor",
+    "rest": "(PLA, PLA-mate, PETG) by @gyarros in [13977]({{L90}})",
+    "links": [
+     [
+      "13977",
+      "{{L90}}"
+     ]
+    ]
+   },
+   {
+    "title": "LH Stinger",
+    "rest": "profile update by @lhndo in [13865]({{L91}})",
+    "links": [
+     [
+      "13865",
+      "{{L91}}"
+     ]
+    ]
+   },
+   {
+    "title": "re:3D",
+    "rest": "profile updates and cover-image naming fixes by @re3Dev in [13750]({{L92}}) and [13907]({{L93}})",
+    "links": [
+     [
+      "13750",
+      "{{L92}}"
+     ],
+     [
+      "13907",
+      "{{L93}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo",
+    "rest": "profile sync by @wujie-elegoo in [13790]({{L94}}), and Elegoo process profile fixes by @thelegendtubaguy in [14020]({{L95}})",
+    "links": [
+     [
+      "13790",
+      "{{L94}}"
+     ],
+     [
+      "14020",
+      "{{L95}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab X2D",
+    "rest": "0.4 nozzle profile and machine start G-code updates by @Bingo2023 in [13944]({{L96}}) and [13985]({{L97}}), with air filtration enabled by @diego-cr in [14090]({{L98}})",
+    "links": [
+     [
+      "13944",
+      "{{L96}}"
+     ],
+     [
+      "13985",
+      "{{L97}}"
+     ],
+     [
+      "14090",
+      "{{L98}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker U1",
+    "rest": "0.4 nozzle profile update by @KuzuriAo in [14066]({{L99}})",
+    "links": [
+     [
+      "14066",
+      "{{L99}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Snapmaker U1 collisions during print-by-object and material changes",
+    "rest": "by @KuzuriAo in [13854]({{L100}}), and @RF47 and @ianalexis in [14097]({{L101}})",
+    "links": [
+     [
+      "13854",
+      "{{L100}}"
+     ],
+     [
+      "14097",
+      "{{L101}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix Anycubic Kobra 3 Max bed exclusion zones",
+    "rest": "by @thelegendtubaguy in [13879]({{L102}})",
+    "links": [
+     [
+      "13879",
+      "{{L102}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove hardcoded Qidi Max 4 input shaper",
+    "rest": "by @thelegendtubaguy in [13864]({{L103}})",
+    "links": [
+     [
+      "13864",
+      "{{L103}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove redundant toolchange retraction/un-retraction",
+    "rest": "in the CC1 profile during filament change by @MatiasFernandez in [13456]({{L104}})",
+    "links": [
+     [
+      "13456",
+      "{{L104}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix printer variant for Voron 0.4 profiles",
+    "rest": "by @igiannakas in [14041]({{L105}})",
+    "links": [
+     [
+      "14041",
+      "{{L105}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [],
+  "items": [
+   {
+    "title": "Thai (th) localization",
+    "rest": "— complete translation, enabled in the GUI, with font and contextual fixes by @Icezaza2543 in [13916]({{L106}}), [14006]({{L107}}), and [14056]({{L108}})",
+    "links": [
+     [
+      "13916",
+      "{{L106}}"
+     ],
+     [
+      "14006",
+      "{{L107}}"
+     ],
+     [
+      "14056",
+      "{{L108}}"
+     ]
+    ]
+   },
+   {
+    "title": "French (fr)",
+    "rest": "translation completed to 100% (plus 3DPrinterOS dialog extraction) by @foXaCe in [14037]({{L109}})",
+    "links": [
+     [
+      "14037",
+      "{{L109}}"
+     ]
+    ]
+   },
+   {
+    "title": "German (de)",
+    "rest": "missing translations filled in by @hliebscher in [13819]({{L110}})",
+    "links": [
+     [
+      "13819",
+      "{{L110}}"
+     ]
+    ]
+   },
+   {
+    "title": "Brazilian Portuguese (pt-BR)",
+    "rest": "translation improvements by @afmenez in [13823]({{L111}}) and [13973]({{L112}})",
+    "links": [
+     [
+      "13823",
+      "{{L111}}"
+     ],
+     [
+      "13973",
+      "{{L112}}"
+     ]
+    ]
+   },
+   {
+    "title": "Hungarian (hu)",
+    "rest": "language update by @kisslorand in [13825]({{L113}}) and [13841]({{L114}})",
+    "links": [
+     [
+      "13825",
+      "{{L113}}"
+     ],
+     [
+      "13841",
+      "{{L114}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🧰 Misc",
+  "prose": [],
+  "items": [
+   {
+    "title": "Improve incremental compile speed on Windows",
+    "rest": "by @yw4z in [12881]({{L115}})",
+    "links": [
+     [
+      "12881",
+      "{{L115}}"
+     ]
+    ]
+   },
+   {
+    "title": "Publish build artifacts to a draft release via a maintainer-gated CI workflow",
+    "rest": "by @SoftFever in [14099]({{L116}})",
+    "links": [
+     [
+      "14099",
+      "{{L116}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L117}}\">{{I63}}</a>",
+   "<a href=\"{{L118}}\">{{I64}}</a>"
+  ],
+  "items": []
+ }
+]

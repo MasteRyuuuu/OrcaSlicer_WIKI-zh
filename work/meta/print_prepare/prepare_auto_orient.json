@@ -1,0 +1,27 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![auto_orientation](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/assembly/auto_orientation.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Auto Orientation",
+"raw": "Auto Orientation",
+"id": "auto-orientation",
+"alt": "auto-orientation"
+},
+{
+"level": 2,
+"en": "How It Works",
+"raw": "How It Works",
+"id": "how-it-works",
+"alt": "how-it-works"
+}
+],
+"src": "print_prepare/prepare_auto_orient.md"
+}

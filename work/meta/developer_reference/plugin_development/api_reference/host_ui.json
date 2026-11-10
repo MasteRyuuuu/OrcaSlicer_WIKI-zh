@@ -1,0 +1,149 @@
+{
+"code": [
+[
+"```python",
+"# Native message box -> returns \"ok\" | \"cancel\" | \"yes\" | \"no\"",
+"choice = orca.host.ui.message(\"Export finished. Open the folder?\",",
+"                              title=\"My Plugin\", buttons=\"yes_no\", icon=\"question\")",
+"",
+"# Modal HTML dialog -> returns the orca.submit() payload (dict), or None if dismissed",
+"result = orca.host.ui.show_dialog(html=\"<h2>Hello</h2> ...\", title=\"Report\",",
+"                                  width=820, height=600)",
+"",
+"# Non-modal, persistent, interactive window -> returns a UiWindow handle",
+"win = orca.host.ui.create_window(html=PAGE, title=\"Panel\",",
+"                                 on_message=self.on_message, on_close=self.on_close)",
+"win.post({\"type\": \"data\", \"rows\": [...]})   # push a payload to the page",
+"win.is_open()                                # bool",
+"win.close()",
+"```"
+],
+[
+"```python",
+"# Docked HTML panel -> returns a UiDockPanel handle",
+"panel = orca.host.ui.create_dock_panel(html=PAGE, title=\"My Panel\", width=320, height=480,",
+"                                       on_message=self.on_message, on_close=self.on_close,",
+"                                       dock=\"right\")",
+"panel.post({\"type\": \"data\", \"rows\": [...]})  # push a payload to the page",
+"panel.hide()                                  # keep it open but out of the way",
+"panel.show()",
+"panel.is_open()                               # True until closed; a hidden panel is still open",
+"panel.close()                                 # fires on_close",
+"```"
+],
+[
+"```python",
+"lvl = orca.host.ui.NotificationLevel",
+"orca.host.ui.push_notification(lvl.WarningNotificationLevel, \"Bed mesh is out of date.\")",
+"",
+"# With a clickable link: on_click() runs on the UI thread when the link is clicked",
+"def on_click():",
+"    open_report()",
+"    return True   # True (or None) closes the notification, False keeps it open",
+"",
+"orca.host.ui.push_notification(lvl.RegularNotificationLevel, \"Report ready.\",",
+"                               hyper_text=\"Open report\", on_click=on_click)",
+"```"
+],
+[
+"```python",
+"style = (orca.host.ui.PD_APP_MODAL |",
+"         orca.host.ui.PD_AUTO_HIDE |",
+"         orca.host.ui.PD_CAN_ABORT |",
+"         orca.host.ui.PD_ELAPSED_TIME |",
+"         orca.host.ui.PD_REMAINING_TIME)",
+"",
+"with orca.host.ui.create_progress_dialog(\"My Plugin\",",
+"                                         \"Preparing...\",",
+"                                         maximum=len(items),",
+"                                         style=style) as progress:",
+"    for index, item in enumerate(items, start=1):",
+"        process(item)",
+"",
+"        # update() returns False if the dialog was closed or cancelled.",
+"        if not progress.update(index, f\"Processed {index}/{len(items)}\"):",
+"            return orca.ExecutionResult.skipped(\"Cancelled by user\")",
+"```"
+],
+[
+"```python",
+"with orca.host.ui.create_progress_dialog(\"My Plugin\",",
+"                                         \"Waiting for printer...\",",
+"                                         style=orca.host.ui.PD_APP_MODAL |",
+"                                               orca.host.ui.PD_CAN_ABORT) as progress:",
+"    while not finished():",
+"        if not progress.pulse(\"Waiting for printer...\"):",
+"            return orca.ExecutionResult.skipped(\"Cancelled by user\")",
+"        wait_for_next_poll()",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"pages",
+"#page-messaging",
+"#theming"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Host UI",
+"raw": "Host UI",
+"id": "host-ui",
+"alt": "host-ui"
+},
+{
+"level": 2,
+"en": "Dialogs and Windows",
+"raw": "Dialogs and Windows",
+"id": "dialogs-and-windows",
+"alt": "dialogs-and-windows"
+},
+{
+"level": 2,
+"en": "Docked Panels",
+"raw": "Docked Panels",
+"id": "docked-panels",
+"alt": "docked-panels"
+},
+{
+"level": 2,
+"en": "Plater Notifications",
+"raw": "Plater Notifications",
+"id": "plater-notifications",
+"alt": "plater-notifications"
+},
+{
+"level": 2,
+"en": "Progress Dialogs",
+"raw": "Progress Dialogs",
+"id": "progress-dialogs",
+"alt": "progress-dialogs"
+},
+{
+"level": 2,
+"en": "Page Messaging",
+"raw": "Page Messaging",
+"id": "page-messaging",
+"alt": "page-messaging"
+},
+{
+"level": 2,
+"en": "Theming",
+"raw": "Theming",
+"id": "theming",
+"alt": "theming"
+},
+{
+"level": 2,
+"en": "Threading and Lifecycle",
+"raw": "Threading and Lifecycle",
+"id": "threading-and-lifecycle",
+"alt": "threading-and-lifecycle"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/host_ui.md"
+}

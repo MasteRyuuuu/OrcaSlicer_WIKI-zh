@@ -1,0 +1,8 @@
+H lay on face = 选择底面
+H object manipulation = 对象操作
+H move = 移动
+H scale = 缩放
+H rotate = 旋转
+G model = 模型 / 型号
+  on face = 在面上
+  uniform scale = 等比例缩放

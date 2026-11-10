@@ -1,0 +1,88 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "calibration-types",
+"en": "Calibration Types"
+},
+{
+"indent": 4,
+"anchor": "archimedean-chords--yolo-recommended",
+"en": "Archimedean chords + YOLO (Recommended)"
+},
+{
+"indent": 4,
+"anchor": "monotonic-line--2-pass-calibration",
+"en": "Monotonic Line + 2-Pass Calibration"
+},
+{
+"indent": 0,
+"anchor": "credits",
+"en": "Credits"
+}
+]
+],
+"img": [
+"![flowrate-Bambulab-uncheck](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowrate-Bambulab-uncheck.png?raw=true)",
+"![flowcalibration-yolo](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowcalibration-yolo.gif?raw=true)",
+"![flowcalibration-guide](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowcalibration-guide.png?raw=true)",
+"![flowcalibration-example](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowcalibration-example.png?raw=true)",
+"![flowcalibration_update_flowrate](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/flowcalibration_update_flowrate.png?raw=true)",
+"![flow-calibration-monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flow-calibration-monotonic.gif?raw=true)",
+"![flowrate-pass1-monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flowrate-pass1-monotonic.jpg?raw=true)",
+"![flowrate-0-5-monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flowrate-0-5-monotonic.jpg?raw=true)",
+"![flowrate-pass2-monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flowrate-pass2-monotonic.jpg?raw=true)",
+"![flowrate-6-monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flowrate-6-monotonic.jpg?raw=true)",
+"![flowcalibration_update_flowrate_monotonic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Flow-Rate/monotonic-flow-rate/flowcalibration_update_flowrate_monotonic.png?raw=true)"
+],
+"link": [
+"material_flow_ratio_and_pressure_advance#flow-ratio",
+"calibration_guide",
+"strength_settings_patterns#archimedean-chords",
+"https://github.com/ItsDeidara/Orca-Slicer-Assistant",
+"https://makerworld.com/es/models/189543-improved-flow-ratio-calibration-v3#profileId-209504",
+"https://makerworld.com/es/@jimcorner"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Flow Ratio Calibration",
+"raw": "Flow Ratio Calibration",
+"id": "flow-ratio-calibration",
+"alt": "flow-ratio-calibration"
+},
+{
+"level": 2,
+"en": "Calibration Types",
+"raw": "Calibration Types",
+"id": "calibration-types",
+"alt": "calibration-types"
+},
+{
+"level": 3,
+"en": "Archimedean chords + YOLO (Recommended)",
+"raw": "Archimedean chords + YOLO (Recommended)",
+"id": "archimedean-chords-yolo-recommended",
+"alt": "archimedean-chords-yolo-recommended"
+},
+{
+"level": 3,
+"en": "Monotonic Line + 2-Pass Calibration",
+"raw": "Monotonic Line + 2-Pass Calibration",
+"id": "monotonic-line-2-pass-calibration",
+"alt": "monotonic-line-2-pass-calibration"
+},
+{
+"level": 2,
+"en": "Credits",
+"raw": "Credits",
+"id": "credits",
+"alt": "credits"
+}
+],
+"src": "calibration/flow_ratio_calib.md"
+}

@@ -1,0 +1,53 @@
+{
+"code": [
+[
+"```python",
+"import orca",
+"",
+"class Stamp(orca.slicing.SlicingPipelineCapabilityBase):",
+"    def get_name(self):",
+"        return \"G-code Stamp\"",
+"",
+"    def execute(self, ctx):",
+"        if ctx.step != orca.slicing.Step.psGCodePostProcess:",
+"            return orca.ExecutionResult.success()",
+"        with open(ctx.gcode_path, \"a\", encoding=\"utf-8\") as gcode:",
+"            gcode.write(\"\\n; stamped by a plugin\\n\")",
+"        return orca.ExecutionResult.success(\"G-code updated\")",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"plugin_audit_hook",
+"registry",
+"host"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Slicing Pipeline",
+"raw": "Slicing Pipeline",
+"id": "slicing-pipeline",
+"alt": "slicing-pipeline"
+},
+{
+"level": 2,
+"en": "Context",
+"raw": "Context",
+"id": "context",
+"alt": "context"
+},
+{
+"level": 2,
+"en": "Pipeline steps",
+"raw": "Pipeline steps",
+"id": "pipeline-steps",
+"alt": "pipeline-steps"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/slicing.md"
+}

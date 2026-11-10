@@ -1,0 +1,2 @@
+G support = 支撑
+G clone = 克隆

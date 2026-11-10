@@ -1,0 +1,3 @@
+G line = 线 / 直线
+G preset = 预设
+G part = 零件

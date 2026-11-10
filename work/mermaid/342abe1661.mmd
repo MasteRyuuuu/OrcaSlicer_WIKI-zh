@@ -1,0 +1,7 @@
+flowchart LR
+    A[Model] --> B[Belt tilt rotation]
+    B --> C[Slice]
+    C --> D[Back-transform]
+    D --> E[G-code axis remap]
+    E --> F[Machine-frame tilt]
+    F --> G[G-code]

@@ -1,0 +1,206 @@
+{
+"code": [
+[
+"```gcode",
+"; Marlin don't support specify the probe count yet, so we only specify the probe area",
+"G29 L{adaptive_bed_mesh_min[0]} R{adaptive_bed_mesh_max[0]} F{adaptive_bed_mesh_min[1]} B{adaptive_bed_mesh_max[1]} T V4",
+"```"
+],
+[
+"```pwsh",
+"; Always pass `ADAPTIVE_MARGIN=0` because Orca has already handled `adaptive_bed_mesh_margin` internally",
+"; Make sure to set ADAPTIVE to 0 otherwise Klipper will use it's own adaptive bed mesh logic",
+"BED_MESH_CALIBRATE mesh_min={adaptive_bed_mesh_min[0]},{adaptive_bed_mesh_min[1]} mesh_max={adaptive_bed_mesh_max[0]},{adaptive_bed_mesh_max[1]} ALGORITHM=[bed_mesh_algo] PROBE_COUNT={bed_mesh_probe_count[0]},{bed_mesh_probe_count[1]} ADAPTIVE=0 ADAPTIVE_MARGIN=0",
+"```"
+],
+[
+"```c++",
+"M557 X{adaptive_bed_mesh_min[0]}:{adaptive_bed_mesh_max[0]} Y{adaptive_bed_mesh_min[1]}:{adaptive_bed_mesh_max[1]} P{bed_mesh_probe_count[0]}:{bed_mesh_probe_count[1]}",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`bed_mesh_min`, `bed_mesh_max`."
+},
+{
+"label": "Type",
+"target": "option_type#point",
+"value": "`Point`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bed-mesh-min=100,100` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bed_mesh_probe_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#point",
+"value": "`Point`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bed-mesh-probe-distance=100,100`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`adaptive_bed_mesh_margin`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--adaptive-bed-mesh-margin=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "bed-mesh",
+"en": "Bed mesh"
+},
+{
+"indent": 0,
+"anchor": "probe-point-distance",
+"en": "Probe point distance"
+},
+{
+"indent": 0,
+"anchor": "mesh-margin",
+"en": "Mesh margin"
+},
+{
+"indent": 0,
+"anchor": "available-g-code-variables-for-adaptive-bed-mesh-command",
+"en": "Available g-code variables for Adaptive Bed Mesh Command"
+},
+{
+"indent": 0,
+"anchor": "example-of-adaptive-bed-mesh-usage-in-orcaslicer",
+"en": "Example of Adaptive Bed Mesh usage in OrcaSlicer"
+},
+{
+"indent": 4,
+"anchor": "marlin",
+"en": "Marlin"
+},
+{
+"indent": 4,
+"anchor": "klipper",
+"en": "Klipper"
+},
+{
+"indent": 4,
+"anchor": "rrf",
+"en": "RRF"
+}
+]
+],
+"img": [
+"![ABM-PrinterConfig](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Adaptative-Bed-Mesh/ABM-PrinterConfig.png?raw=true)",
+"![ABM-Machine-G-code](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Adaptative-Bed-Mesh/ABM-Machine-G-code.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Adaptive Bed Mesh",
+"raw": "Adaptive Bed Mesh",
+"id": "adaptive-bed-mesh",
+"alt": "adaptive-bed-mesh"
+},
+{
+"level": 2,
+"en": "Bed mesh",
+"raw": "Bed mesh",
+"id": "bed-mesh",
+"alt": "bed-mesh"
+},
+{
+"level": 2,
+"en": "Probe point distance",
+"raw": "Probe point distance",
+"id": "probe-point-distance",
+"alt": "probe-point-distance"
+},
+{
+"level": 2,
+"en": "Mesh margin",
+"raw": "Mesh margin",
+"id": "mesh-margin",
+"alt": "mesh-margin"
+},
+{
+"level": 2,
+"en": "Available g-code variables for Adaptive Bed Mesh Command",
+"raw": "Available g-code variables for Adaptive Bed Mesh Command",
+"id": "available-g-code-variables-for-adaptive-bed-mesh-command",
+"alt": "available-g-code-variables-for-adaptive-bed-mesh-command"
+},
+{
+"level": 2,
+"en": "Example of Adaptive Bed Mesh usage in OrcaSlicer",
+"raw": "Example of Adaptive Bed Mesh usage in OrcaSlicer",
+"id": "example-of-adaptive-bed-mesh-usage-in-orcaslicer",
+"alt": "example-of-adaptive-bed-mesh-usage-in-orcaslicer"
+},
+{
+"level": 3,
+"en": "Marlin",
+"raw": "Marlin",
+"id": "marlin",
+"alt": "marlin"
+},
+{
+"level": 3,
+"en": "Klipper",
+"raw": "Klipper",
+"id": "klipper",
+"alt": "klipper"
+},
+{
+"level": 3,
+"en": "RRF",
+"raw": "RRF",
+"id": "rrf",
+"alt": "rrf"
+}
+],
+"src": "printer_settings/basic information/printer_basic_information_adaptive_bed_mesh.md"
+}

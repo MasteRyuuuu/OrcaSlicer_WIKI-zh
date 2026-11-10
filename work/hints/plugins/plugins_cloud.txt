@@ -1,0 +1,6 @@
+G plugin = 插件
+  plugin details = 插件详情
+  open file = 打开文件
+  not installed = 未安装
+  latest version = 最新版本
+  installed version = 已安装版本

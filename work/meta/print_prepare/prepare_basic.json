@@ -1,0 +1,60 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "add-objects",
+"en": "Add Objects"
+},
+{
+"indent": 0,
+"anchor": "add-plate",
+"en": "Add Plate"
+},
+{
+"indent": 0,
+"anchor": "measure-tool",
+"en": "Measure Tool"
+}
+]
+],
+"img": [],
+"link": [
+"prepare_object_set",
+"import_export#import-model"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Prepare Toolbar",
+"raw": "Prepare Toolbar",
+"id": "prepare-toolbar",
+"alt": "prepare-toolbar"
+},
+{
+"level": 2,
+"en": "Add Objects",
+"raw": "Add Objects",
+"id": "add-objects",
+"alt": "add-objects"
+},
+{
+"level": 2,
+"en": "Add Plate",
+"raw": "Add Plate",
+"id": "add-plate",
+"alt": "add-plate"
+},
+{
+"level": 2,
+"en": "Measure Tool",
+"raw": "Measure Tool",
+"id": "measure-tool",
+"alt": "measure-tool"
+}
+],
+"src": "print_prepare/prepare_basic.md"
+}

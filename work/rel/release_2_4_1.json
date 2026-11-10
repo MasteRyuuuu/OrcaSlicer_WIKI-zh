@@ -1,0 +1,346 @@
+[
+ {
+  "level": 1,
+  "title": "V2.4.1",
+  "prose": [
+   "This is the OrcaSlicer V2.4.1 release — a maintenance update on top of 2.4.0 with a broad round of profile and preset fixes at its core: it restores filaments that had gone missing or were miscategorized in the Orca Filament Library and the filament selection dialog, de-duplicates profile setting IDs, corrects ambiguous AMS filament matches, and improves how renamed and inherited presets are resolved. Other changes include a native Windows ARM64 build, a new minimal chamber temperature field, and a reworked skirt and brim generator (fixing a 2.4.0 regression that re-printed the skirt during per-object/sequential printing), alongside fixes for fuzzy skin, AMS sync ordering, CrealityPrint hosts, and Linux Wayland rendering. It also adds Snapmaker U1 nozzle profiles, Elegoo Centauri 2 support, and a refreshed translation catalog."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Native Windows ARM64 build (Snapdragon X Elite)",
+    "rest": "by @abehrman in [14059]({{L1}}), brought up to date and merged by @SoftFever in [14381]({{L2}})",
+    "links": [
+     [
+      "14059",
+      "{{L1}}"
+     ],
+     [
+      "14381",
+      "{{L2}}"
+     ]
+    ]
+   },
+   {
+    "title": "Minimal chamber temperature field",
+    "rest": "by @igiannakas in [14340]({{L3}})",
+    "links": [
+     [
+      "14340",
+      "{{L3}}"
+     ]
+    ]
+   },
+   {
+    "title": "Skirt and brim generation rework",
+    "rest": "by @kisslorand in [14333]({{L4}})",
+    "links": [
+     [
+      "14333",
+      "{{L4}}"
+     ]
+    ]
+   },
+   {
+    "title": "Warning dialog about the profile-sync change",
+    "rest": "by @SoftFever in [14377]({{L5}})",
+    "links": [
+     [
+      "14377",
+      "{{L5}}"
+     ]
+    ]
+   },
+   {
+    "title": "Specify the plate index for 3MF uploads",
+    "rest": "by @SoftFever in [14404]({{L6}})",
+    "links": [
+     [
+      "14404",
+      "{{L6}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Profiles & presets",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix filament inheritance issues in Custom Printer Creation",
+    "rest": "by @yw4z and @SoftFever in [12060]({{L7}})",
+    "links": [
+     [
+      "12060",
+      "{{L7}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restore filaments missing from the Filament Selection dialog",
+    "rest": "by @ExPikaPaka in [14398]({{L8}})",
+    "links": [
+     [
+      "14398",
+      "{{L8}}"
+     ]
+    ]
+   },
+   {
+    "title": "De-duplicate profile setting IDs",
+    "rest": "by @SoftFever in [14432]({{L9}})",
+    "links": [
+     [
+      "14432",
+      "{{L9}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix ambiguous AMS filament matches on Bambu Lab profiles",
+    "rest": "by @SoftFever in [14459]({{L10}})",
+    "links": [
+     [
+      "14459",
+      "{{L10}}"
+     ]
+    ]
+   },
+   {
+    "title": "More robust preset resolution on load",
+    "rest": "by @peachismomo in [14429]({{L11}}) and [14430]({{L12}})",
+    "links": [
+     [
+      "14429",
+      "{{L11}}"
+     ],
+     [
+      "14430",
+      "{{L12}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix syncing a shared preset bundle that contains a parentless preset",
+    "rest": "by @ExPikaPaka in [14287]({{L13}})",
+    "links": [
+     [
+      "14287",
+      "{{L13}}"
+     ]
+    ]
+   },
+   {
+    "title": "Remove duplicate Flashforge filaments from the system list",
+    "rest": "by @indyjonesnl in [14316]({{L14}})",
+    "links": [
+     [
+      "14316",
+      "{{L14}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Slicing & printing",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix fuzzy skin artifacting regression",
+    "rest": "by @SoftFever in [14382]({{L15}})",
+    "links": [
+     [
+      "14382",
+      "{{L15}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash with per-object skirt on an empty plate",
+    "rest": "by @SoftFever in [14403]({{L16}})",
+    "links": [
+     [
+      "14403",
+      "{{L16}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix AMS overwrite sync showing filaments in the wrong order",
+    "rest": "by @SoftFever in [14408]({{L17}})",
+    "links": [
+     [
+      "14408",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wait for nozzle temperature before the purge line",
+    "rest": "by @indyjonesnl in [14120]({{L18}})",
+    "links": [
+     [
+      "14120",
+      "{{L18}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Connectivity & hosts",
+  "prose": [],
+  "items": [
+   {
+    "title": "CrealityPrint: avoid a false \"End of file\" error on K1-family printers",
+    "rest": "by @sandman21vs in [14344]({{L19}})",
+    "links": [
+     [
+      "14344",
+      "{{L19}}"
+     ]
+    ]
+   },
+   {
+    "title": "CrealityPrint: don't hardcode port :4408 for the Device tab",
+    "rest": "by @totrytakeoff in [14326]({{L20}})",
+    "links": [
+     [
+      "14326",
+      "{{L20}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep pinned networking plugins across app updates",
+    "rest": "by @SoftFever in [19db9aa]({{L21}})",
+    "links": [
+     [
+      "19db9aa",
+      "{{L21}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Platform & UI",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix the Flow Rate Calibration wiki link",
+    "rest": "by @MarkusKgit in [14378]({{L22}})",
+    "links": [
+     [
+      "14378",
+      "{{L22}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux: fix blank/garbled web views on Wayland",
+    "rest": "by @SoftFever in [f9693c4]({{L23}})",
+    "links": [
+     [
+      "f9693c4",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux: allow AppImage execution for non-owner users",
+    "rest": "by @pallaswept in [14339]({{L24}})",
+    "links": [
+     [
+      "14339",
+      "{{L24}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Snapmaker U1",
+    "rest": "— adds 0.2 mm and 0.8 mm nozzle profiles and completes the 0.6 mm process lineup, and fixes the bed dimensions (270 × 270 mm) so all nozzle variants show the correct build area by @ni4223 in [14305]({{L25}}) and [14391]({{L26}})",
+    "links": [
+     [
+      "14305",
+      "{{L25}}"
+     ],
+     [
+      "14391",
+      "{{L26}}"
+     ]
+    ]
+   },
+   {
+    "title": "Elegoo Centauri 2",
+    "rest": "— adds machine, filament, and process profiles, synced from ElegooSlicer by @wujie-elegoo in [14402]({{L27}})",
+    "links": [
+     [
+      "14402",
+      "{{L27}}"
+     ]
+    ]
+   },
+   {
+    "title": "QIDI X-Max 4",
+    "rest": "— now uses the `qidi` printer agent by default, so it connects without having to set it manually by @thelegendtubaguy in [14334]({{L28}})",
+    "links": [
+     [
+      "14334",
+      "{{L28}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [],
+  "items": [
+   {
+    "title": "Translation catalog refresh",
+    "rest": "across the bundled languages — Catalan, Czech, German, Spanish, French, Hungarian, Italian, Japanese, Korean, Lithuanian, Dutch, Polish, Brazilian Portuguese, Russian, Swedish, Thai, Turkish, Ukrainian, Vietnamese, and Chinese (Simplified & Traditional) by @SoftFever in [e3eca45]({{L29}})",
+    "links": [
+     [
+      "e3eca45",
+      "{{L29}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L30}}\">{{I13}}</a>",
+   "<a href=\"{{L31}}\">{{I14}}</a>"
+  ],
+  "items": []
+ }
+]

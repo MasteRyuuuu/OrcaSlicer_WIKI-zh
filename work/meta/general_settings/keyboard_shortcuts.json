@@ -1,0 +1,112 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "customizing-shortcuts",
+"en": "Customizing Shortcuts"
+},
+{
+"indent": 0,
+"anchor": "global",
+"en": "Global"
+},
+{
+"indent": 0,
+"anchor": "design",
+"en": "Design"
+},
+{
+"indent": 0,
+"anchor": "prepare",
+"en": "Prepare"
+},
+{
+"indent": 0,
+"anchor": "painting",
+"en": "Painting"
+},
+{
+"indent": 0,
+"anchor": "objects-list",
+"en": "Objects list"
+},
+{
+"indent": 0,
+"anchor": "preview",
+"en": "Preview"
+}
+]
+],
+"img": [],
+"link": [
+"speed_dial",
+"printer_basic_information_printable_space#toolhead-collision-volumes",
+"speed_dial",
+"design_tab",
+"design_keyboard_shortcuts",
+"belt_printing#preview"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Keyboard Shortcuts",
+"raw": "Keyboard Shortcuts",
+"id": "keyboard-shortcuts",
+"alt": "keyboard-shortcuts"
+},
+{
+"level": 2,
+"en": "Customizing Shortcuts",
+"raw": "Customizing Shortcuts",
+"id": "customizing-shortcuts",
+"alt": "customizing-shortcuts"
+},
+{
+"level": 2,
+"en": "Global",
+"raw": "Global",
+"id": "global",
+"alt": "global"
+},
+{
+"level": 2,
+"en": "Design",
+"raw": "Design",
+"id": "design",
+"alt": "design"
+},
+{
+"level": 2,
+"en": "Prepare",
+"raw": "Prepare",
+"id": "prepare",
+"alt": "prepare"
+},
+{
+"level": 2,
+"en": "Painting",
+"raw": "Painting",
+"id": "painting",
+"alt": "painting"
+},
+{
+"level": 2,
+"en": "Objects list",
+"raw": "Objects list",
+"id": "objects-list",
+"alt": "objects-list"
+},
+{
+"level": 2,
+"en": "Preview",
+"raw": "Preview",
+"id": "preview",
+"alt": "preview"
+}
+],
+"src": "general_settings/keyboard_shortcuts.md"
+}

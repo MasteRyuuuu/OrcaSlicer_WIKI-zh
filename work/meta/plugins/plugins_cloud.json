@@ -1,0 +1,39 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![cloud-plugin-subscribed-inactive](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-subscribed-inactive.png?raw=true)",
+"![cloud-plugin-loading](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-loading.png?raw=true)",
+"![cloud-plugin-update-available](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-update-available.png?raw=true)",
+"![cloud-plugin-update-available](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-update-available.png?raw=true)",
+"![cloud-plugin-updating](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-updating.png?raw=true)",
+"![cloud-plugin-updated](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/cloud-plugin-updated.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Cloud Plugins",
+"raw": "Cloud Plugins",
+"id": "cloud-plugins",
+"alt": "cloud-plugins"
+},
+{
+"level": 2,
+"en": "Browse Cloud Plugins",
+"raw": "Browse Cloud Plugins",
+"id": "browse-cloud-plugins",
+"alt": "browse-cloud-plugins"
+},
+{
+"level": 2,
+"en": "Update a Cloud Plugin",
+"raw": "Update a Cloud Plugin",
+"id": "update-a-cloud-plugin",
+"alt": "update-a-cloud-plugin"
+}
+],
+"src": "plugins/plugins_cloud.md"
+}

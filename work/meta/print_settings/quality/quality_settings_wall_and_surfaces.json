@@ -1,0 +1,460 @@
+{
+"code": [
+[
+"```c++",
+"0,0;",
+"0.2,0.4444;",
+"0.4,0.6145;",
+"0.6,0.7059;",
+"0.8,0.7619;",
+"1.5,0.8571;",
+"2,0.8889;",
+"3,0.9231;",
+"5,0.9520;",
+"10,1;",
+"```"
+]
+],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_sequence`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`inner wall/outer wall, outer wall/inner wall, inner-outer-inner wall`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-sequence=\"inner wall/outer wall\"`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`is_infill_first`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--is-infill-first=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_direction`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`ccw, cw`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-direction=ccw`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`print_flow_ratio`, `top_solid_infill_flow_ratio`, `bottom_solid_infill_flow_ratio`, `set_other_flow_ratios`, `first_layer_flow_ratio`, `outer_wall_flow_ratio`, `inner_wall_flow_ratio`, `overhang_flow_ratio`, `sparse_infill_flow_ratio`, `internal_solid_infill_flow_ratio`, `gap_fill_flow_ratio`, `support_flow_ratio`, `support_interface_flow_ratio`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float` — every variable above except `set_other_flow_ratios`, which is a [Boolean](option_type#boolean) enable toggle for all the others (`--set-other-flow-ratios=1`)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--print-flow-ratio=1` (same pattern for the other Float variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`only_one_wall_first_layer`, `only_one_wall_top`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--only-one-wall-first-layer=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`min_width_top_surface`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--min-width-top-surface=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`reduce_crossing_wall`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--reduce-crossing-wall=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`max_travel_detour_distance`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--max-travel-detour-distance=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`small_area_infill_flow_compensation`, `small_area_infill_flow_compensation_model`."
+},
+{
+"label": "Type",
+"target": "option_type",
+"value": "`small_area_infill_flow_compensation` (Boolean), `small_area_infill_flow_compensation_model` (Text list)."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--small-area-infill-flow-compensation=1` (`small_area_infill_flow_compensation` shown; other variables above follow their own type)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "walls-printing-order",
+"en": "Walls printing order"
+},
+{
+"indent": 4,
+"anchor": "innerouter",
+"en": "Inner/Outer"
+},
+{
+"indent": 4,
+"anchor": "innerouterinner",
+"en": "Inner/Outer/Inner"
+},
+{
+"indent": 4,
+"anchor": "outerinner",
+"en": "Outer/Inner"
+},
+{
+"indent": 4,
+"anchor": "narrow-walls",
+"en": "Narrow walls"
+},
+{
+"indent": 4,
+"anchor": "print-infill-first",
+"en": "Print infill first"
+},
+{
+"indent": 0,
+"anchor": "wall-loop-direction",
+"en": "Wall loop direction"
+},
+{
+"indent": 0,
+"anchor": "surface-flow-ratio",
+"en": "Surface flow ratio"
+},
+{
+"indent": 0,
+"anchor": "only-one-wall",
+"en": "Only one wall"
+},
+{
+"indent": 4,
+"anchor": "threshold",
+"en": "Threshold"
+},
+{
+"indent": 0,
+"anchor": "avoid-crossing-walls",
+"en": "Avoid crossing walls"
+},
+{
+"indent": 4,
+"anchor": "max-detour-length",
+"en": "Max detour length"
+},
+{
+"indent": 0,
+"anchor": "small-area-flow-compensation",
+"en": "Small area flow compensation"
+},
+{
+"indent": 4,
+"anchor": "flow-compensation-model",
+"en": "Flow Compensation Model"
+}
+]
+],
+"img": [
+"![inner-outer](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/inner-outer.gif?raw=true)",
+"![inner-outer-inner](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/inner-outer-inner.gif?raw=true)",
+"![outer-inner](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/outer-inner.gif?raw=true)",
+"![infill-first](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/infill-first.gif?raw=true)",
+"![infill-ghosting](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/infill-ghosting.png?raw=true)",
+"![only-one-wall](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/only-one-wall.gif?raw=true)",
+"![only-one-wall-threshold](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/only-one-wall-threshold.png?raw=true)",
+"![avoid-crossing-walls](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/avoid-crossing-walls.png?raw=true)",
+"![flow-compensation-model](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/flow-compensation-model.png?raw=true)",
+"![flow-compensation-model-graph](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Wall-Order/flow-compensation-model-graph.png?raw=true)"
+],
+"link": [
+"others_settings_brim#outer",
+"others_settings_brim#outer-and-inner",
+"others_settings_brim#leading-edge-only",
+"others_settings_brim#auto",
+"others_settings_brim#mouse-ears",
+"others_settings_brim#painted",
+"#innerouter",
+"#outerinner",
+"#narrow-walls",
+"#innerouterinner",
+"#outerinner",
+"quality_settings_wall_generator#arachne",
+"#innerouterinner",
+"quality_settings_wall_generator#classic",
+"strength_settings_infill#apply-gap-fill",
+"strength_settings_infill",
+"strength_settings_top_bottom_shells",
+"quality_settings_precision#precise-wall",
+"#innerouterinner",
+"strength_settings_infill#infill-wall-overlap",
+"#narrow-walls",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/12669",
+"quality_settings_overhangs#reverse-on-even",
+"strength_settings_top_bottom_shells",
+"material_flow_ratio_and_pressure_advance#flow-ratio",
+"flow_ratio_calib",
+"strength_settings_top_bottom_shells#surface-pattern",
+"strength_settings_patterns#concentric",
+"strength_settings_top_bottom_shells#shell-layers",
+"strength_settings_top_bottom_shells#surface-expansion-and-only-one-wall",
+"strength_settings_patterns#rectilinear",
+"strength_settings_patterns#aligned-rectilinear",
+"strength_settings_patterns#monotonic",
+"strength_settings_patterns#monotonic-line",
+"https://github.com/Alexander-T-Moss/Small-Area-Flow-Comp"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Wall and surfaces",
+"raw": "Wall and surfaces",
+"id": "wall-and-surfaces",
+"alt": "wall-and-surfaces"
+},
+{
+"level": 2,
+"en": "Walls printing order",
+"raw": "Walls printing order",
+"id": "walls-printing-order",
+"alt": "walls-printing-order"
+},
+{
+"level": 3,
+"en": "Inner/Outer",
+"raw": "Inner/Outer",
+"id": "innerouter",
+"alt": "innerouter"
+},
+{
+"level": 3,
+"en": "Inner/Outer/Inner",
+"raw": "Inner/Outer/Inner",
+"id": "innerouterinner",
+"alt": "innerouterinner"
+},
+{
+"level": 3,
+"en": "Outer/Inner",
+"raw": "Outer/Inner",
+"id": "outerinner",
+"alt": "outerinner"
+},
+{
+"level": 3,
+"en": "Narrow walls",
+"raw": "Narrow walls",
+"id": "narrow-walls",
+"alt": "narrow-walls"
+},
+{
+"level": 3,
+"en": "Print infill first",
+"raw": "Print infill first",
+"id": "print-infill-first",
+"alt": "print-infill-first"
+},
+{
+"level": 2,
+"en": "Wall loop direction",
+"raw": "Wall loop direction",
+"id": "wall-loop-direction",
+"alt": "wall-loop-direction"
+},
+{
+"level": 2,
+"en": "Surface flow ratio",
+"raw": "Surface flow ratio",
+"id": "surface-flow-ratio",
+"alt": "surface-flow-ratio"
+},
+{
+"level": 2,
+"en": "Only one wall",
+"raw": "Only one wall",
+"id": "only-one-wall",
+"alt": "only-one-wall"
+},
+{
+"level": 3,
+"en": "Threshold",
+"raw": "Threshold",
+"id": "threshold",
+"alt": "threshold"
+},
+{
+"level": 2,
+"en": "Avoid crossing walls",
+"raw": "Avoid crossing walls",
+"id": "avoid-crossing-walls",
+"alt": "avoid-crossing-walls"
+},
+{
+"level": 3,
+"en": "Max detour length",
+"raw": "Max detour length",
+"id": "max-detour-length",
+"alt": "max-detour-length"
+},
+{
+"level": 2,
+"en": "Small area flow compensation",
+"raw": "Small area flow compensation",
+"id": "small-area-flow-compensation",
+"alt": "small-area-flow-compensation"
+},
+{
+"level": 3,
+"en": "Flow Compensation Model",
+"raw": "Flow Compensation Model",
+"id": "flow-compensation-model",
+"alt": "flow-compensation-model"
+}
+],
+"src": "print_settings/quality/quality_settings_wall_and_surfaces.md"
+}

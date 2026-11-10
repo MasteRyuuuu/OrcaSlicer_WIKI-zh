@@ -1,0 +1,100 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Simple`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`layer_height`, `initial_layer_print_height`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--layer-height=1` (same pattern for the other variables above)."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "quick-reference",
+"en": "Quick Reference"
+},
+{
+"indent": 0,
+"anchor": "layer-height-guidelines",
+"en": "Layer Height Guidelines"
+},
+{
+"indent": 0,
+"anchor": "first-layer-height",
+"en": "First Layer Height"
+},
+{
+"indent": 0,
+"anchor": "layer-height-overhangs-impacts",
+"en": "Layer Height Overhangs Impacts"
+}
+]
+],
+"img": [
+"![layer-height-spheres](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/layer-height-spheres.png?raw=true)",
+"![layer-height](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/Precision/layer-height.svg?raw=true)"
+],
+"link": [
+"prepare_variable_layer_height",
+"#layer-height-overhangs-impacts",
+"#first-layer-height",
+"quality_settings_overhangs#maximum-angle"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Layer Height",
+"raw": "Layer Height",
+"id": "layer-height",
+"alt": "layer-height"
+},
+{
+"level": 2,
+"en": "Quick Reference",
+"raw": "Quick Reference",
+"id": "quick-reference",
+"alt": "quick-reference"
+},
+{
+"level": 2,
+"en": "Layer Height Guidelines",
+"raw": "Layer Height Guidelines",
+"id": "layer-height-guidelines",
+"alt": "layer-height-guidelines"
+},
+{
+"level": 2,
+"en": "First Layer Height",
+"raw": "First Layer Height",
+"id": "first-layer-height",
+"alt": "first-layer-height"
+},
+{
+"level": 2,
+"en": "Layer Height Overhangs Impacts",
+"raw": "Layer Height Overhangs Impacts",
+"id": "layer-height-overhangs-impacts",
+"alt": "layer-height-overhangs-impacts"
+}
+],
+"src": "print_settings/quality/quality_settings_layer_height.md"
+}

@@ -1,0 +1,4 @@
+H preset = 预设
+H presetbundle = 预设包
+G filament = 耗材丝
+  printer preset = 打印机预设

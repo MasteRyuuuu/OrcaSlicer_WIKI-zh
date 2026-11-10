@@ -1,0 +1,9 @@
+G plate = 盘
+G travel = 空驶
+G toolhead = 工具头
+G gantry = 龙门
+  allow multiple materials on same plate = 允许同一盘中包含多种材料
+  auto rotate for arrangement = 自动旋转以优化自动摆放效果
+  align to y axis = 对齐到Y轴
+  auto rotate = 自动朝向
+  align to = 对齐到

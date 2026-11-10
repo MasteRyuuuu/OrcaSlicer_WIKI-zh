@@ -1,0 +1,327 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "opening-an-issue",
+"en": "Opening an Issue"
+},
+{
+"indent": 0,
+"anchor": "before-you-start-a-pr",
+"en": "Before You Start a PR"
+},
+{
+"indent": 0,
+"anchor": "what-every-pr-needs",
+"en": "What Every PR Needs"
+},
+{
+"indent": 4,
+"anchor": "keep-it-focused",
+"en": "Keep It Focused"
+},
+{
+"indent": 4,
+"anchor": "write-a-description-reviewers-can-use",
+"en": "Write a Description Reviewers Can Use"
+},
+{
+"indent": 4,
+"anchor": "build-and-test-it-yourself",
+"en": "Build and Test It Yourself"
+},
+{
+"indent": 0,
+"anchor": "what-each-kind-of-pr-needs",
+"en": "What Each Kind of PR Needs"
+},
+{
+"indent": 4,
+"anchor": "bug-fixes",
+"en": "Bug Fixes"
+},
+{
+"indent": 4,
+"anchor": "new-features-and-settings",
+"en": "New Features and Settings"
+},
+{
+"indent": 4,
+"anchor": "performance",
+"en": "Performance"
+},
+{
+"indent": 4,
+"anchor": "refactors",
+"en": "Refactors"
+},
+{
+"indent": 4,
+"anchor": "gui-changes",
+"en": "GUI Changes"
+},
+{
+"indent": 4,
+"anchor": "printer-profiles",
+"en": "Printer Profiles"
+},
+{
+"indent": 4,
+"anchor": "translations",
+"en": "Translations"
+},
+{
+"indent": 4,
+"anchor": "build-ci-and-dependencies",
+"en": "Build, CI and Dependencies"
+},
+{
+"indent": 4,
+"anchor": "tests",
+"en": "Tests"
+},
+{
+"indent": 4,
+"anchor": "documentation",
+"en": "Documentation"
+},
+{
+"indent": 0,
+"anchor": "after-you-open-the-pr",
+"en": "After You Open the PR"
+},
+{
+"indent": 4,
+"anchor": "ci-checks",
+"en": "CI Checks"
+},
+{
+"indent": 4,
+"anchor": "waiting-for-review",
+"en": "Waiting for Review"
+},
+{
+"indent": 4,
+"anchor": "if-your-pr-is-closed",
+"en": "If Your PR Is Closed"
+},
+{
+"indent": 0,
+"anchor": "other-ways-to-help",
+"en": "Other Ways to Help"
+}
+]
+],
+"img": [],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/CONTRIBUTING.md",
+"https://discord.gg/P4VE9UY9gJ",
+"https://github.com/OrcaSlicer/OrcaSlicer/discussions",
+"#other-ways-to-help",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/AGENTS.md",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/.github/pull_request_template.md",
+"how_to_build",
+"#tests",
+"how_to_test",
+"#bug-fixes",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/SECURITY.md",
+"#new-features-and-settings",
+"#performance",
+"#refactors",
+"#gui-changes",
+"#printer-profiles",
+"#translations",
+"#build-ci-and-dependencies",
+"#tests",
+"#documentation",
+"#tests",
+"how_to_wiki",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/AGENTS.md",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/.claude/skills/orca-wxwidgets/SKILL.md",
+"how_to_create_profiles",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/.claude/skills/orca-profiles/SKILL.md",
+"localization_guide",
+"localization_glossary",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/AGENTS.md",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/.claude/skills/orca-translations/SKILL.md",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/tests/AGENTS.md",
+"how_to_test",
+"how_to_wiki",
+"clang_tidy",
+"#other-ways-to-help",
+"https://github.com/OrcaSlicer/OrcaSlicer/blob/main/CONTRIBUTING.md#if-your-pr-is-closed",
+"how_to_download_pr_artifacts",
+"#opening-an-issue",
+"#printer-profiles",
+"#translations",
+"how_to_wiki"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "How to Contribute",
+"raw": "How to Contribute",
+"id": "how-to-contribute",
+"alt": "how-to-contribute"
+},
+{
+"level": 2,
+"en": "Opening an Issue",
+"raw": "Opening an Issue",
+"id": "opening-an-issue",
+"alt": "opening-an-issue"
+},
+{
+"level": 2,
+"en": "Before You Start a PR",
+"raw": "Before You Start a PR",
+"id": "before-you-start-a-pr",
+"alt": "before-you-start-a-pr"
+},
+{
+"level": 2,
+"en": "What Every PR Needs",
+"raw": "What Every PR Needs",
+"id": "what-every-pr-needs",
+"alt": "what-every-pr-needs"
+},
+{
+"level": 3,
+"en": "Keep It Focused",
+"raw": "Keep It Focused",
+"id": "keep-it-focused",
+"alt": "keep-it-focused"
+},
+{
+"level": 3,
+"en": "Write a Description Reviewers Can Use",
+"raw": "Write a Description Reviewers Can Use",
+"id": "write-a-description-reviewers-can-use",
+"alt": "write-a-description-reviewers-can-use"
+},
+{
+"level": 3,
+"en": "Build and Test It Yourself",
+"raw": "Build and Test It Yourself",
+"id": "build-and-test-it-yourself",
+"alt": "build-and-test-it-yourself"
+},
+{
+"level": 2,
+"en": "What Each Kind of PR Needs",
+"raw": "What Each Kind of PR Needs",
+"id": "what-each-kind-of-pr-needs",
+"alt": "what-each-kind-of-pr-needs"
+},
+{
+"level": 3,
+"en": "Bug Fixes",
+"raw": "Bug Fixes",
+"id": "bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 3,
+"en": "New Features and Settings",
+"raw": "New Features and Settings",
+"id": "new-features-and-settings",
+"alt": "new-features-and-settings"
+},
+{
+"level": 3,
+"en": "Performance",
+"raw": "Performance",
+"id": "performance",
+"alt": "performance"
+},
+{
+"level": 3,
+"en": "Refactors",
+"raw": "Refactors",
+"id": "refactors",
+"alt": "refactors"
+},
+{
+"level": 3,
+"en": "GUI Changes",
+"raw": "GUI Changes",
+"id": "gui-changes",
+"alt": "gui-changes"
+},
+{
+"level": 3,
+"en": "Printer Profiles",
+"raw": "Printer Profiles",
+"id": "printer-profiles",
+"alt": "printer-profiles"
+},
+{
+"level": 3,
+"en": "Translations",
+"raw": "Translations",
+"id": "translations",
+"alt": "translations"
+},
+{
+"level": 3,
+"en": "Build, CI and Dependencies",
+"raw": "Build, CI and Dependencies",
+"id": "build-ci-and-dependencies",
+"alt": "build-ci-and-dependencies"
+},
+{
+"level": 3,
+"en": "Tests",
+"raw": "Tests",
+"id": "tests",
+"alt": "tests"
+},
+{
+"level": 3,
+"en": "Documentation",
+"raw": "Documentation",
+"id": "documentation",
+"alt": "documentation"
+},
+{
+"level": 2,
+"en": "After You Open the PR",
+"raw": "After You Open the PR",
+"id": "after-you-open-the-pr",
+"alt": "after-you-open-the-pr"
+},
+{
+"level": 3,
+"en": "CI Checks",
+"raw": "CI Checks",
+"id": "ci-checks",
+"alt": "ci-checks"
+},
+{
+"level": 3,
+"en": "Waiting for Review",
+"raw": "Waiting for Review",
+"id": "waiting-for-review",
+"alt": "waiting-for-review"
+},
+{
+"level": 3,
+"en": "If Your PR Is Closed",
+"raw": "If Your PR Is Closed",
+"id": "if-your-pr-is-closed",
+"alt": "if-your-pr-is-closed"
+},
+{
+"level": 2,
+"en": "Other Ways to Help",
+"raw": "Other Ways to Help",
+"id": "other-ways-to-help",
+"alt": "other-ways-to-help"
+}
+],
+"src": "developer_reference/how_to_contribute.md"
+}

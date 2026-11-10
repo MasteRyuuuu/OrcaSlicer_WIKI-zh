@@ -1,0 +1,304 @@
+{
+"code": [
+[
+"```cpp",
+"// PythonPluginInterface.hpp",
+"class PluginCapabilityInterface {",
+"public:",
+"    void               set_audit_plugin_key(std::string key);",
+"    const std::string& audit_plugin_key() const;",
+"private:",
+"    std::string m_audit_plugin_key;   // == PluginDescriptor::plugin_key",
+"};",
+"```"
+],
+[
+"```cpp",
+"explicit ScopedPluginAuditContext(const std::string& plugin_key,",
+"                                   const std::string& capability_name = {});",
+"// destructor restores the previous plugin/capability/scoped-roots",
+"```"
+],
+[
+"```cpp",
+"enum class AuditEventCategory {",
+"    None, FsRead, FsReadWrite, FsCreate, FsDelete, Http, Socket, ProcessCreate, Threading,",
+"};",
+"```"
+],
+[
+"```json",
+"{",
+"    \"permissions\": {",
+"        \"fs_read\": [\"/path/to/declared/file.py\", \"/home/user/.bashrc\"],",
+"        \"fs_readwrite\": [],",
+"        \"network_http\": [\"http://example.com\"],",
+"        \"network_socket\": [\"('example.com', 80)\"],",
+"        \"process\": [\"/usr/bin/python3\"],",
+"        \"threading\": [\"thread\"],",
+"        \"events\": [\"Socket:socket.__new__\"]",
+"    }",
+"}",
+"```"
+],
+[
+"```python",
+"@orca.plugin",
+"class SamplePlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.request_permissions(",
+"            fs_read=[\"/path/to/input\"],",
+"            fs_readwrite=[\"/path/to/output\"],",
+"            network_http=[\"https://example.com\"],",
+"            network_socket=[\"('example.com', 443)\"],",
+"            process=[\"/usr/bin/convert\"],",
+"            threading=True)",
+"        orca.register_capability(SampleCapability)",
+"```"
+],
+[
+"```cpp",
+"#define ORCA_PY_AUDIT_SCOPE() \\",
+"    std::optional<::Slic3r::ScopedPluginAuditContext> _orca_audit_scope; \\",
+"    if (const std::string& _orca_audit_key = this->audit_plugin_key(); !_orca_audit_key.empty()) \\",
+"    _orca_audit_scope.emplace(_orca_audit_key, this->name())",
+"",
+"#define ORCA_PY_OVERRIDE_AUDITED(audit_setup, override_macro, ret, base, name, ...) \\",
+"    do { \\",
+"        ::Slic3r::PluginCapabilityInterface::RefCounter _orca_ref_counter(*this); \\",
+"        ::Slic3r::PythonGILState _orca_python_gil; \\",
+"        if (!_orca_python_gil) throw std::runtime_error(\"Python interpreter is shutting down\"); \\",
+"        ORCA_PY_AUDIT_SCOPE(); \\",
+"        if (_orca_audit_scope) audit_setup(); \\",
+"        ORCA_PY_LOGGED_OVERRIDE_BODY(override_macro(ret, base, name, ##__VA_ARGS__)); \\",
+"    } while (0)",
+"```"
+],
+[
+"```cpp",
+"// ScriptPluginCapabilityTrampoline.hpp",
+"ExecutionResult execute() override",
+"{",
+"    ORCA_PY_OVERRIDE_AUDITED([] {}, PYBIND11_OVERRIDE_PURE,",
+"                              ExecutionResult, ScriptPluginCapability, execute);",
+"}",
+"```"
+],
+[
+"```cpp",
+"// PrinterAgentPluginCapabilityTrampoline.hpp",
+"// ORCA_PY_AGENT_OVERRIDE(ret, name, ...) wraps",
+"//   ORCA_PY_OVERRIDE_AUDITED([] {}, PYBIND11_OVERRIDE_PURE, ret, PrinterAgentPluginCapability, name, ...)",
+"// in a try/catch that logs the failure and returns the agent's failure value (-1 / empty).",
+"int connect_printer(const PrinterConnectionParams& params) override",
+"{",
+"    ORCA_PY_AGENT_OVERRIDE(int, connect_printer, params);",
+"}",
+"```"
+],
+[
+"```cpp",
+"ExecutionResult execute(SlicingPipelineContext& ctx) override",
+"{",
+"    ORCA_PY_OVERRIDE_AUDITED(",
+"        [&] {                                               // runs only when a context is active",
+"            if (!ctx.gcode_path.empty())",
+"                ::Slic3r::PluginAuditManager::instance().add_scoped_allowed_root(",
+"                        boost::filesystem::path(ctx.gcode_path).parent_path());",
+"        },",
+"        PYBIND11_OVERRIDE_PURE,",
+"        ExecutionResult, SlicingPipelinePluginCapability, execute, ctx);",
+"}",
+"```"
+],
+[
+"```cpp",
+"void PluginAuditManager::install_hook()",
+"{",
+"    add_global_allowed_root(data_dir());",
+"    add_global_allowed_root(resources_dir(), /*allow_write=*/false);",
+"    // add_global_allowed_root(std::filesystem::temp_directory_path());  // e.g. to allow /tmp",
+"",
+"    for (const auto& name : default_denied_filenames())",
+"        add_denied_filename(name);",
+"    for (const auto& keyword : default_denied_path_keywords())",
+"        add_denied_path_keyword(keyword);",
+"",
+"    PySys_AddAuditHook(audit_hook, this);",
+"}",
+"```"
+],
+[
+"```",
+"[AUDIT BLOCKED] plugin=local:.../Environment_Report_Script_ event=open reason=...",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"#known-current-limitations",
+"#trampolines-and-the-audit-macros",
+"#3-category-resolution",
+"#allowed-roots-and-denied-paths",
+"#persistence",
+"#target-extraction",
+"#identity-wiring",
+"#allowed-roots-and-denied-paths",
+"#persistence"
+],
+"url": [
+"https://docs.python.org/3/library/audit_events.html"
+],
+"headings": [
+{
+"level": 1,
+"en": "Plugin Audit Hook",
+"raw": "Plugin Audit Hook",
+"id": "plugin-audit-hook",
+"alt": "plugin-audit-hook"
+},
+{
+"level": 2,
+"en": "What Is a Plugin Audit Hook?",
+"raw": "What Is a Plugin Audit Hook?",
+"id": "what-is-a-plugin-audit-hook",
+"alt": "what-is-a-plugin-audit-hook"
+},
+{
+"level": 2,
+"en": "How It Works",
+"raw": "How It Works",
+"id": "how-it-works",
+"alt": "how-it-works"
+},
+{
+"level": 3,
+"en": "1. Audit Identity",
+"raw": "1. Audit Identity",
+"id": "1-audit-identity",
+"alt": "1-audit-identity"
+},
+{
+"level": 3,
+"en": "2. Audit Context",
+"raw": "2. Audit Context",
+"id": "2-audit-context",
+"alt": "2-audit-context"
+},
+{
+"level": 3,
+"en": "3. Category Resolution",
+"raw": "3. Category Resolution",
+"id": "3-category-resolution",
+"alt": "3-category-resolution"
+},
+{
+"level": 3,
+"en": "4. The Decision Pipeline",
+"raw": "4. The Decision Pipeline",
+"id": "4-the-decision-pipeline",
+"alt": "4-the-decision-pipeline"
+},
+{
+"level": 4,
+"en": "Target extraction",
+"raw": "Target extraction",
+"id": "target-extraction",
+"alt": "target-extraction"
+},
+{
+"level": 4,
+"en": "Persistence",
+"raw": "Persistence",
+"id": "persistence",
+"alt": "persistence"
+},
+{
+"level": 4,
+"en": "The call-site ancestor cascade",
+"raw": "The call-site ancestor cascade",
+"id": "the-call-site-ancestor-cascade",
+"alt": "the-call-site-ancestor-cascade"
+},
+{
+"level": 3,
+"en": "Allowed Roots and Denied Paths",
+"raw": "Allowed Roots and Denied Paths",
+"id": "allowed-roots-and-denied-paths",
+"alt": "allowed-roots-and-denied-paths"
+},
+{
+"level": 2,
+"en": "Audit Hook Development",
+"raw": "Audit Hook Development",
+"id": "audit-hook-development",
+"alt": "audit-hook-development"
+},
+{
+"level": 3,
+"en": "Mapping a new event",
+"raw": "Mapping a new event",
+"id": "mapping-a-new-event",
+"alt": "mapping-a-new-event"
+},
+{
+"level": 3,
+"en": "Trampolines and the audit macros",
+"raw": "Trampolines and the audit macros",
+"id": "trampolines-and-the-audit-macros",
+"alt": "trampolines-and-the-audit-macros"
+},
+{
+"level": 3,
+"en": "Adding Per-Call Scoped Roots",
+"raw": "Adding Per-Call Scoped Roots",
+"id": "adding-per-call-scoped-roots",
+"alt": "adding-per-call-scoped-roots"
+},
+{
+"level": 3,
+"en": "Adding a Global Allowed Root",
+"raw": "Adding a Global Allowed Root",
+"id": "adding-a-global-allowed-root",
+"alt": "adding-a-global-allowed-root"
+},
+{
+"level": 3,
+"en": "Identity Wiring",
+"raw": "Identity Wiring",
+"id": "identity-wiring",
+"alt": "identity-wiring"
+},
+{
+"level": 2,
+"en": "Known Current Limitations",
+"raw": "Known Current Limitations",
+"id": "known-current-limitations",
+"alt": "known-current-limitations"
+},
+{
+"level": 2,
+"en": "Debugging",
+"raw": "Debugging",
+"id": "debugging",
+"alt": "debugging"
+},
+{
+"level": 2,
+"en": "Testing",
+"raw": "Testing",
+"id": "testing",
+"alt": "testing"
+},
+{
+"level": 2,
+"en": "Key Files",
+"raw": "Key Files",
+"id": "key-files",
+"alt": "key-files"
+}
+],
+"src": "developer_reference/plugin_development/plugin_audit_hook.md"
+}

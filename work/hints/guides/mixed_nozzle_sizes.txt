@@ -1,0 +1,17 @@
+H material = 材料
+H machine = 打印机
+H process = 工艺
+G direct drive = 近程挤出机
+G color painting = 涂色
+G nozzle = 喷嘴
+G line = 线 / 直线
+G extruder = 挤出机
+G filament = 耗材丝
+G infill = 填充
+G bowden = 远程挤出机
+  filament for features = 按走线类型指定耗材丝
+  nozzle diameter = 喷嘴直径
+  line width = 线宽
+  pressure advance = Pressure Advance
+  material settings = 材料设置
+  basic information = 基础信息 / 基本信息

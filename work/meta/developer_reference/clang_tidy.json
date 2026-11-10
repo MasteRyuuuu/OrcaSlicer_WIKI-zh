@@ -1,0 +1,176 @@
+{
+"code": [
+[
+"```shell",
+"./scripts/run_clang_tidy.sh",
+"```"
+],
+[
+"```shell",
+"# Debian, Ubuntu",
+"sudo apt-get install -y git python3 python3-venv cmake ninja-build clang",
+"# Fedora",
+"sudo dnf install -y git python3 cmake ninja-build clang",
+"# Arch",
+"sudo pacman -S --needed git python cmake ninja clang",
+"```"
+],
+[
+"```shell",
+"./scripts/run_clang_tidy.sh",
+"```"
+],
+[
+"```shell",
+"xcode-select --install",
+"brew install git python cmake ninja",
+"```"
+],
+[
+"```pwsh",
+"powershell -ExecutionPolicy Bypass -File scripts\\run_clang_tidy.ps1",
+"```"
+],
+[
+"```pwsh",
+"build_win.bat --install-deps",
+"build_win.bat --install-vs buildtools",
+"winget install -e --id Python.Python.3.12",
+"```"
+],
+[
+"```",
+"src/slic3r/GUI/Plater.cpp:1234:5: error: no header providing \"Slic3r::Polygon\" is directly included [misc-include-cleaner,-warnings-as-errors] (add #include <libslic3r/Polygon.hpp>)",
+"```"
+]
+],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "what-the-check-reports",
+"en": "What the Check Reports"
+},
+{
+"indent": 0,
+"anchor": "before-you-start",
+"en": "Before You Start"
+},
+{
+"indent": 0,
+"anchor": "linux",
+"en": "Linux"
+},
+{
+"indent": 0,
+"anchor": "macos",
+"en": "macOS"
+},
+{
+"indent": 0,
+"anchor": "windows",
+"en": "Windows"
+},
+{
+"indent": 0,
+"anchor": "options",
+"en": "Options"
+},
+{
+"indent": 0,
+"anchor": "fixing-what-it-reports",
+"en": "Fixing What It Reports"
+},
+{
+"indent": 0,
+"anchor": "how-closely-it-matches-ci",
+"en": "How Closely It Matches CI"
+},
+{
+"indent": 0,
+"anchor": "troubleshooting",
+"en": "Troubleshooting"
+}
+]
+],
+"img": [],
+"link": [
+"how_to_build",
+"how_to_build_windows"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Clang-Tidy Check",
+"raw": "Clang-Tidy Check",
+"id": "clang-tidy-check",
+"alt": "clang-tidy-check"
+},
+{
+"level": 2,
+"en": "What the Check Reports",
+"raw": "What the Check Reports",
+"id": "what-the-check-reports",
+"alt": "what-the-check-reports"
+},
+{
+"level": 2,
+"en": "Before You Start",
+"raw": "Before You Start",
+"id": "before-you-start",
+"alt": "before-you-start"
+},
+{
+"level": 2,
+"en": "Linux",
+"raw": "Linux",
+"id": "linux",
+"alt": "linux"
+},
+{
+"level": 2,
+"en": "macOS",
+"raw": "macOS",
+"id": "macos",
+"alt": "macos"
+},
+{
+"level": 2,
+"en": "Windows",
+"raw": "Windows",
+"id": "windows",
+"alt": "windows"
+},
+{
+"level": 2,
+"en": "Options",
+"raw": "Options",
+"id": "options",
+"alt": "options"
+},
+{
+"level": 2,
+"en": "Fixing What It Reports",
+"raw": "Fixing What It Reports",
+"id": "fixing-what-it-reports",
+"alt": "fixing-what-it-reports"
+},
+{
+"level": 2,
+"en": "How Closely It Matches CI",
+"raw": "How Closely It Matches CI",
+"id": "how-closely-it-matches-ci",
+"alt": "how-closely-it-matches-ci"
+},
+{
+"level": 2,
+"en": "Troubleshooting",
+"raw": "Troubleshooting",
+"id": "troubleshooting",
+"alt": "troubleshooting"
+}
+],
+"src": "developer_reference/clang_tidy.md"
+}

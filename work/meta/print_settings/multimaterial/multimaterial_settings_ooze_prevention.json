@@ -1,0 +1,130 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`ooze_prevention`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--ooze-prevention=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`standby_temperature_delta`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--standby-temperature-delta=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`preheat_time`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--preheat-time=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Developer`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`preheat_steps`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--preheat-steps=1`."
+}
+]
+],
+"toc": [],
+"img": [],
+"link": [
+"material_basic_information#idle-temperature"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Ooze prevention",
+"raw": "Ooze prevention",
+"id": "ooze-prevention",
+"alt": "ooze-prevention"
+},
+{
+"level": 2,
+"en": "Temperature variation",
+"raw": "Temperature variation",
+"id": "temperature-variation",
+"alt": "temperature-variation"
+},
+{
+"level": 2,
+"en": "Preheat time",
+"raw": "Preheat time",
+"id": "preheat-time",
+"alt": "preheat-time"
+},
+{
+"level": 2,
+"en": "Preheat steps",
+"raw": "Preheat steps",
+"id": "preheat-steps",
+"alt": "preheat-steps"
+}
+],
+"src": "print_settings/multimaterial/multimaterial_settings_ooze_prevention.md"
+}

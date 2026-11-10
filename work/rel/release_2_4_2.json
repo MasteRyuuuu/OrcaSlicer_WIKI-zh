@@ -1,0 +1,281 @@
+[
+ {
+  "level": 1,
+  "title": "V2.4.2",
+  "prose": [
+   "This is the OrcaSlicer V2.4.2 release — a maintenance update on top of 2.4.1, focused on making profiles, cloud sync, and printer connectivity more dependable. Upgrading from an older version is smoother: presets that were built on a printer or filament that has since been renamed or removed now load correctly, so you should see far fewer \"missing preset\" warnings. Cloud sync gets several fixes too — filament settings you had turned off no longer switch themselves back on, sync messages now tell you exactly which preset is involved, and running two copies of OrcaSlicer signed into the same account no longer logs you out at random. Installing and updating the Bambu network plugin is reliable again, including when you switch versions on Windows. On top of that, this release fixes several crashes (rotating the prime tower, using the Measure tool, and running a Pressure Advance calibration), a couple of slicing and print-time-estimate problems, and Reload from Disk for STEP models after you reopen a project. New this time: a filename placeholder for the first object's name, clickable wiki links in the Preferences dialog, and add:north filament profiles."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "`{first_object_name}` filename placeholder",
+    "rest": "by @raistlin7447 in [14497]({{L1}})",
+    "links": [
+     [
+      "14497",
+      "{{L1}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wiki links and a tidier Preferences dialog",
+    "rest": "by @yw4z in [13857]({{L2}})",
+    "links": [
+     [
+      "13857",
+      "{{L2}}"
+     ]
+    ]
+   },
+   {
+    "title": "Use number-or-percentage settings in custom G-code",
+    "rest": "by @Noisyfox in [14526]({{L3}})",
+    "links": [
+     [
+      "14526",
+      "{{L3}}"
+     ]
+    ]
+   },
+   {
+    "title": "Name the preset in cloud-sync messages",
+    "rest": "by @SoftFever in [14592]({{L4}})",
+    "links": [
+     [
+      "14592",
+      "{{L4}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Profiles & presets",
+  "prose": [],
+  "items": [
+   {
+    "title": "Repair presets that pointed at renamed or deleted profiles",
+    "rest": "by @SoftFever in [14595]({{L5}})",
+    "links": [
+     [
+      "14595",
+      "{{L5}}"
+     ]
+    ]
+   },
+   {
+    "title": "Reconnect older presets to renamed profiles",
+    "rest": "by @peachismomo and @SoftFever in [14507]({{L6}})",
+    "links": [
+     [
+      "14507",
+      "{{L6}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keep filaments compatible with renamed printers",
+    "rest": "by @peachismomo and @SoftFever in [14504]({{L7}})",
+    "links": [
+     [
+      "14504",
+      "{{L7}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct the type label in the preset bundle dialog",
+    "rest": "by @peachismomo in [14481]({{L8}})",
+    "links": [
+     [
+      "14481",
+      "{{L8}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Cloud sync & accounts",
+  "prose": [],
+  "items": [
+   {
+    "title": "Keep disabled filament overrides off after cloud sync",
+    "rest": "by @ExPikaPaka in [14550]({{L9}})",
+    "links": [
+     [
+      "14550",
+      "{{L9}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix version not updating correctly on Linux and macOS",
+    "rest": "by @SoftFever in [14617]({{L10}})",
+    "links": [
+     [
+      "14617",
+      "{{L10}}"
+     ]
+    ]
+   },
+   {
+    "title": "Stop two open copies from logging each other out",
+    "rest": "by @peachismomo in [14531]({{L11}})",
+    "links": [
+     [
+      "14531",
+      "{{L11}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Networking plugin",
+  "prose": [],
+  "items": [
+   {
+    "title": "Stop the repeated \"reinstall Bambu network plugin\" prompt",
+    "rest": "by @Noisyfox in [14511]({{L12}})",
+    "links": [
+     [
+      "14511",
+      "{{L12}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix \"plug-in file may be in use\" when switching plugin versions on Windows",
+    "rest": "by @ExPikaPaka in [14528]({{L13}})",
+    "links": [
+     [
+      "14528",
+      "{{L13}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Slicing & G-code",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix slicing failure when filament end G-code uses `{layer_z}` with a prime tower",
+    "rest": "by @raistlin7447 in [14462]({{L14}})",
+    "links": [
+     [
+      "14462",
+      "{{L14}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix an inaccurate print-time estimate",
+    "rest": "by @SoftFever in [14573]({{L15}})",
+    "links": [
+     [
+      "14573",
+      "{{L15}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Crashes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix crash when rotating the prime tower",
+    "rest": "by @raistlin7447 in [14499]({{L16}})",
+    "links": [
+     [
+      "14499",
+      "{{L16}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash in the Measure tool",
+    "rest": "by @raistlin7447 in [14538]({{L17}})",
+    "links": [
+     [
+      "14538",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fix crash in Pressure Advance pattern calibration",
+    "rest": "by @raistlin7447 in [14447]({{L18}})",
+    "links": [
+     [
+      "14447",
+      "{{L18}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Models & project",
+  "prose": [],
+  "items": [
+   {
+    "title": "Fix Reload from Disk for STEP models after reopening a project",
+    "rest": "by @SoftFever in [14591]({{L19}})",
+    "links": [
+     [
+      "14591",
+      "{{L19}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "add:north filaments",
+    "rest": "— adds ready-made profiles for add:north filaments to the Orca Filament Library by @valerii-bokhan in [13366]({{L20}})",
+    "links": [
+     [
+      "13366",
+      "{{L20}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L21}}\">{{I5}}</a>",
+   "<a href=\"{{L22}}\">{{I6}}</a>"
+  ],
+  "items": []
+ }
+]

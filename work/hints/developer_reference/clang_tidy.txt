@@ -1,0 +1,2 @@
+H options = 选项
+G line = 线 / 直线

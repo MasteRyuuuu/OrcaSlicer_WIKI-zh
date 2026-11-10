@@ -1,0 +1,303 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`outer_wall_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--outer-wall-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`inner_wall_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--inner-wall-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`top_surface_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--top-surface-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`sparse_infill_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--sparse-infill-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`internal_solid_infill_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--internal-solid-infill-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`support_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--support-line-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`bridge_line_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float or Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--bridge-line-width=20%`."
+}
+]
+],
+"toc": [],
+"img": [
+"![bridge_line_width_1](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge_line_width_1.svg?raw=true)",
+"![bridge_line_width_2](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/bridging/bridge_line_width_2.svg?raw=true)"
+],
+"link": [
+"https://manual.slic3r.org/advanced/flow-math",
+"quality_settings_wall_generator#classic",
+"quality_settings_wall_generator#arachne",
+"quality_settings_layer_height#first-layer-height",
+"others_settings_brim",
+"others_settings_skirt",
+"strength_settings_infill#fill-multiline",
+"strength_settings_infill#sparse-infill-density",
+"quality_settings_bridging#bridge-density",
+"#internal-solid-infill",
+"quality_settings_bridging#thick-bridges",
+"quality_settings_bridging#flow-ratio"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Line Width",
+"raw": "Line Width",
+"id": "line-width",
+"alt": "line-width"
+},
+{
+"level": 2,
+"en": "Line Types",
+"raw": "Line Types",
+"id": "line-types",
+"alt": "line-types"
+},
+{
+"level": 3,
+"en": "Default",
+"raw": "Default",
+"id": "default",
+"alt": "default"
+},
+{
+"level": 3,
+"en": "First Layer",
+"raw": "First Layer",
+"id": "first-layer",
+"alt": "first-layer"
+},
+{
+"level": 3,
+"en": "Outer Wall",
+"raw": "Outer Wall",
+"id": "outer-wall",
+"alt": "outer-wall"
+},
+{
+"level": 3,
+"en": "Inner Wall",
+"raw": "Inner Wall",
+"id": "inner-wall",
+"alt": "inner-wall"
+},
+{
+"level": 3,
+"en": "Top Surface",
+"raw": "Top Surface",
+"id": "top-surface",
+"alt": "top-surface"
+},
+{
+"level": 3,
+"en": "Sparse Infill",
+"raw": "Sparse Infill",
+"id": "sparse-infill",
+"alt": "sparse-infill"
+},
+{
+"level": 3,
+"en": "Internal Solid Infill",
+"raw": "Internal Solid Infill",
+"id": "internal-solid-infill",
+"alt": "internal-solid-infill"
+},
+{
+"level": 3,
+"en": "Support",
+"raw": "Support",
+"id": "support",
+"alt": "support"
+},
+{
+"level": 3,
+"en": "Bridge",
+"raw": "Bridge",
+"id": "bridge",
+"alt": "bridge"
+}
+],
+"src": "print_settings/quality/quality_settings_line_width.md"
+}

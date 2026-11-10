@@ -1,0 +1,6 @@
+H slicing pipeline = 切片流水线
+G plugin = 插件
+G seam = 接缝
+G model = 模型 / 型号
+G dialog = 对话框
+  post-processing scripts = 后处理脚本

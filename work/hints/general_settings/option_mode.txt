@@ -1,0 +1,4 @@
+G developer mode = 开发者模式
+G preferences = 偏好设置
+  troubleshoot center = 故障排查中心
+  advanced options = 高级选项

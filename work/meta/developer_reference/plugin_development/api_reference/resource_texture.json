@@ -1,0 +1,78 @@
+{
+"code": [
+[
+"```python",
+"import os",
+"import orca",
+"",
+"",
+"class WoodPack(orca.resource_texture.ResourceTexturePluginCapabilityBase):",
+"    def get_name(self):",
+"        return \"Wood Pack\"",
+"",
+"    def get_texture_dir(self):",
+"        return os.path.join(os.path.dirname(__file__), \"textures\")",
+"",
+"",
+"@orca.plugin",
+"class WoodPackPlugin(orca.base):",
+"    def register_capabilities(self):",
+"        orca.register_capability(WoodPack)",
+"```"
+]
+],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"registry",
+"plugin_development#wheel-whl-plugins",
+"registry"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Resource Texture",
+"raw": "Resource Texture",
+"id": "resource-texture",
+"alt": "resource-texture"
+},
+{
+"level": 2,
+"en": "Minimal Shape",
+"raw": "Minimal Shape",
+"id": "minimal-shape",
+"alt": "minimal-shape"
+},
+{
+"level": 2,
+"en": "The texture directory",
+"raw": "The texture directory",
+"id": "the-texture-directory",
+"alt": "the-texture-directory"
+},
+{
+"level": 2,
+"en": "Packaging",
+"raw": "Packaging",
+"id": "packaging",
+"alt": "packaging"
+},
+{
+"level": 2,
+"en": "Lifecycle",
+"raw": "Lifecycle",
+"id": "lifecycle",
+"alt": "lifecycle"
+},
+{
+"level": 2,
+"en": "See Also",
+"raw": "See Also",
+"id": "see-also",
+"alt": "see-also"
+}
+],
+"src": "developer_reference/plugin_development/api_reference/resource_texture.md"
+}

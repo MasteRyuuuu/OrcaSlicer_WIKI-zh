@@ -1,0 +1,12 @@
+H single extruder multi material = 单挤出机多材料
+H manual filament change = 手动更换耗材丝
+H extruders = 挤出机
+G tool change = 换工具头 / 换料
+G filament = 耗材丝
+G extruder = 挤出机
+G ramming = 尖端成型
+  change filament g-code = 耗材丝更换G-code
+  number of extruders = 挤出机数量
+  filament change = 更换耗材丝
+  change filament = 更换耗材丝
+  changing filament = 换料

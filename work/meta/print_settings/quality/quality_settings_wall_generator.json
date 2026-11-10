@@ -1,0 +1,424 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_generator`."
+},
+{
+"label": "Type",
+"target": "option_type#choice",
+"value": "`Choice`."
+},
+{
+"label": "Options",
+"target": "option_type#choice",
+"value": "`classic, arachne`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-generator=classic`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_transition_angle`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-transition-angle=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_transition_filter_deviation`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-transition-filter-deviation=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_transition_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-transition-length=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_distribution_count`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Integer`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-distribution-count=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`min_bead_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--min-bead-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`initial_layer_min_bead_width`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--initial-layer-min-bead-width=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`min_feature_size`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Percentage`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--min-feature-size=20%`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`min_length_factor`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--min-length-factor=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_maximum_resolution`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-maximum-resolution=1`."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Expert`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`wall_maximum_deviation`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--wall-maximum-deviation=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "classic",
+"en": "Classic"
+},
+{
+"indent": 0,
+"anchor": "arachne",
+"en": "Arachne"
+},
+{
+"indent": 4,
+"anchor": "wall-transitioning-threshold-angle",
+"en": "Wall transitioning threshold angle"
+},
+{
+"indent": 4,
+"anchor": "wall-transitioning-filter-margin",
+"en": "Wall transitioning filter margin"
+},
+{
+"indent": 4,
+"anchor": "wall-transitioning-length",
+"en": "Wall transitioning length"
+},
+{
+"indent": 4,
+"anchor": "wall-distribution-count",
+"en": "Wall distribution count"
+},
+{
+"indent": 4,
+"anchor": "minimum-wall-width",
+"en": "Minimum wall width"
+},
+{
+"indent": 8,
+"anchor": "first-layer-minimum-wall-width",
+"en": "First layer minimum wall width"
+},
+{
+"indent": 4,
+"anchor": "minimum-feature-size",
+"en": "Minimum feature size"
+},
+{
+"indent": 4,
+"anchor": "minimum-wall-length",
+"en": "Minimum wall length"
+},
+{
+"indent": 4,
+"anchor": "maximum-wall-resolution",
+"en": "Maximum wall resolution"
+},
+{
+"indent": 4,
+"anchor": "maximum-wall-deviation",
+"en": "Maximum wall deviation"
+}
+]
+],
+"img": [
+"![wallgenerator-classic](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/WallGenerator/wallgenerator-classic.png?raw=true)",
+"![wallgenerator-arachne](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/WallGenerator/wallgenerator-arachne.png?raw=true)"
+],
+"link": [
+"strength_settings_walls#wall-loops",
+"quality_settings_line_width",
+"https://www.sciencedirect.com/science/article/pii/S0010448520301007?via%3Dihub",
+"#minimum-feature-size",
+"#minimum-wall-width",
+"quality_settings_wall_and_surfaces#threshold",
+"#maximum-wall-resolution"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Wall Generator",
+"raw": "Wall Generator",
+"id": "wall-generator",
+"alt": "wall-generator"
+},
+{
+"level": 2,
+"en": "Classic",
+"raw": "Classic",
+"id": "classic",
+"alt": "classic"
+},
+{
+"level": 2,
+"en": "Arachne",
+"raw": "Arachne",
+"id": "arachne",
+"alt": "arachne"
+},
+{
+"level": 3,
+"en": "Wall transitioning threshold angle",
+"raw": "Wall transitioning threshold angle",
+"id": "wall-transitioning-threshold-angle",
+"alt": "wall-transitioning-threshold-angle"
+},
+{
+"level": 3,
+"en": "Wall transitioning filter margin",
+"raw": "Wall transitioning filter margin",
+"id": "wall-transitioning-filter-margin",
+"alt": "wall-transitioning-filter-margin"
+},
+{
+"level": 3,
+"en": "Wall transitioning length",
+"raw": "Wall transitioning length",
+"id": "wall-transitioning-length",
+"alt": "wall-transitioning-length"
+},
+{
+"level": 3,
+"en": "Wall distribution count",
+"raw": "Wall distribution count",
+"id": "wall-distribution-count",
+"alt": "wall-distribution-count"
+},
+{
+"level": 3,
+"en": "Minimum wall width",
+"raw": "Minimum wall width",
+"id": "minimum-wall-width",
+"alt": "minimum-wall-width"
+},
+{
+"level": 4,
+"en": "First layer minimum wall width",
+"raw": "First layer minimum wall width",
+"id": "first-layer-minimum-wall-width",
+"alt": "first-layer-minimum-wall-width"
+},
+{
+"level": 3,
+"en": "Minimum feature size",
+"raw": "Minimum feature size",
+"id": "minimum-feature-size",
+"alt": "minimum-feature-size"
+},
+{
+"level": 3,
+"en": "Minimum wall length",
+"raw": "Minimum wall length",
+"id": "minimum-wall-length",
+"alt": "minimum-wall-length"
+},
+{
+"level": 3,
+"en": "Maximum wall resolution",
+"raw": "Maximum wall resolution",
+"id": "maximum-wall-resolution",
+"alt": "maximum-wall-resolution"
+},
+{
+"level": 3,
+"en": "Maximum wall deviation",
+"raw": "Maximum wall deviation",
+"id": "maximum-wall-deviation",
+"alt": "maximum-wall-deviation"
+}
+],
+"src": "print_settings/quality/quality_settings_wall_generator.md"
+}

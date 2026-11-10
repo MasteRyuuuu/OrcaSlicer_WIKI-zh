@@ -1,0 +1,4 @@
+G slice = 切片
+G plate = 盘
+  slice plate = 切片单盘
+  time cost = 耗时

@@ -1,0 +1,36 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![vfa_test_menu](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/vfa/vfa_test_menu.png?raw=true)",
+"![vfa_test_speed_check](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/vfa/vfa_test_speed_check.png?raw=true)",
+"![vfa_test_print](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/vfa/vfa_test_print.jpg?raw=true)",
+"![vfa_resonance_avoidance](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/vfa/vfa_resonance_avoidance.png?raw=true)"
+],
+"link": [
+"cornering_calib",
+"input_shaping_calib",
+"calibration_guide",
+"printer_motion_ability#resonance-avoidance",
+"volumetric_speed_calib"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "VFA",
+"raw": "VFA",
+"id": "vfa",
+"alt": "vfa"
+},
+{
+"level": 2,
+"en": "VFA Test",
+"raw": "VFA Test",
+"id": "vfa-test",
+"alt": "vfa-test"
+}
+],
+"src": "calibration/vfa_calib.md"
+}

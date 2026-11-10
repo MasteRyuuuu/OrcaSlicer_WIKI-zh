@@ -1,0 +1,35 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [],
+"link": [
+"printer_extruder_retraction",
+"quality_settings_ironing"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Material Setting Overrides",
+"raw": "Material Setting Overrides",
+"id": "material-setting-overrides",
+"alt": "material-setting-overrides"
+},
+{
+"level": 2,
+"en": "Retraction",
+"raw": "Retraction",
+"id": "retraction",
+"alt": "retraction"
+},
+{
+"level": 2,
+"en": "Ironing",
+"raw": "Ironing",
+"id": "ironing",
+"alt": "ironing"
+}
+],
+"src": "material_settings/setting overrides/material_setting_overrides.md"
+}

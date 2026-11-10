@@ -1,0 +1,62 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![cube_line_width](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/multi-tool/cube_line_width.png?raw=true)",
+"![multi_nozzle_diam](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/extruder/multi_nozzle_diam.gif?raw=true)",
+"![line_width](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/multi-tool/line_width.png?raw=true)"
+],
+"link": [
+"printer_extruder_basic_information#nozzle-diameter",
+"quality_settings_line_width",
+"multimaterial_settings_filament_for_features",
+"prepare_color_painting"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Mixed Nozzle Sizes",
+"raw": "Mixed Nozzle Sizes",
+"id": "mixed-nozzle-sizes",
+"alt": "mixed-nozzle-sizes"
+},
+{
+"level": 2,
+"en": "Setup",
+"raw": "Setup",
+"id": "setup",
+"alt": "setup"
+},
+{
+"level": 3,
+"en": "Machine",
+"raw": "Machine",
+"id": "machine",
+"alt": "machine"
+},
+{
+"level": 3,
+"en": "Process",
+"raw": "Process",
+"id": "process",
+"alt": "process"
+},
+{
+"level": 3,
+"en": "Material",
+"raw": "Material",
+"id": "material",
+"alt": "material"
+},
+{
+"level": 2,
+"en": "Selecting Nozzle Sizes",
+"raw": "Selecting Nozzle Sizes",
+"id": "selecting-nozzle-sizes",
+"alt": "selecting-nozzle-sizes"
+}
+],
+"src": "guides/mixed_nozzle_sizes.md"
+}

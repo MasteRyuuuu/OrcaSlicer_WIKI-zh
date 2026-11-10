@@ -1,0 +1,66 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "arrangement",
+"en": "Arrangement"
+},
+{
+"indent": 0,
+"anchor": "geometry",
+"en": "Geometry"
+},
+{
+"indent": 0,
+"anchor": "object-handling",
+"en": "Object Handling"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode",
+"prepare_auto_arrange",
+"prepare_auto_orient",
+"prepare_stl_transformation#fix-model",
+"prepare_object_manipulation#rotate",
+"prepare_object_manipulation#scale",
+"cli_actions#slicing",
+"cli_misc#object-selection"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "CLI Transform",
+"raw": "CLI Transform",
+"id": "cli-transform",
+"alt": "cli-transform"
+},
+{
+"level": 2,
+"en": "Arrangement",
+"raw": "Arrangement",
+"id": "arrangement",
+"alt": "arrangement"
+},
+{
+"level": 2,
+"en": "Geometry",
+"raw": "Geometry",
+"id": "geometry",
+"alt": "geometry"
+},
+{
+"level": 2,
+"en": "Object Handling",
+"raw": "Object Handling",
+"id": "object-handling",
+"alt": "object-handling"
+}
+],
+"src": "cli/cli_transform.md"
+}

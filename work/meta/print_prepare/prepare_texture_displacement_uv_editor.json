@@ -1,0 +1,111 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "the-workflow",
+"en": "The workflow"
+},
+{
+"indent": 0,
+"anchor": "unwrapping",
+"en": "Unwrapping"
+},
+{
+"indent": 0,
+"anchor": "seams",
+"en": "Seams"
+},
+{
+"indent": 0,
+"anchor": "arranging-islands",
+"en": "Arranging islands"
+},
+{
+"indent": 0,
+"anchor": "checking-for-stretch",
+"en": "Checking for stretch"
+},
+{
+"indent": 0,
+"anchor": "tools",
+"en": "Tools"
+},
+{
+"indent": 0,
+"anchor": "navigation-and-shortcuts",
+"en": "Navigation and shortcuts"
+}
+]
+],
+"img": [
+"<img alt=\"td-shot-uv-editor\" src=\"https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-shot-uv-editor.png?raw=true\" height=\"540\">",
+"![td-uv-islands](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/texture_displacement/td-uv-islands.svg?raw=true)"
+],
+"link": [
+"prepare_texture_displacement",
+"#seams"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Texture Displacement UV Editor",
+"raw": "Texture Displacement UV Editor",
+"id": "texture-displacement-uv-editor",
+"alt": "texture-displacement-uv-editor"
+},
+{
+"level": 2,
+"en": "The workflow",
+"raw": "The workflow",
+"id": "the-workflow",
+"alt": "the-workflow"
+},
+{
+"level": 2,
+"en": "Unwrapping",
+"raw": "Unwrapping",
+"id": "unwrapping",
+"alt": "unwrapping"
+},
+{
+"level": 2,
+"en": "Seams",
+"raw": "Seams",
+"id": "seams",
+"alt": "seams"
+},
+{
+"level": 2,
+"en": "Arranging islands",
+"raw": "Arranging islands",
+"id": "arranging-islands",
+"alt": "arranging-islands"
+},
+{
+"level": 2,
+"en": "Checking for stretch",
+"raw": "Checking for stretch",
+"id": "checking-for-stretch",
+"alt": "checking-for-stretch"
+},
+{
+"level": 2,
+"en": "Tools",
+"raw": "Tools",
+"id": "tools",
+"alt": "tools"
+},
+{
+"level": 2,
+"en": "Navigation and shortcuts",
+"raw": "Navigation and shortcuts",
+"id": "navigation-and-shortcuts",
+"alt": "navigation-and-shortcuts"
+}
+],
+"src": "print_prepare/prepare_texture_displacement_uv_editor.md"
+}

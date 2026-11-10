@@ -1,0 +1,17 @@
+H minimum non-zero part cooling fan speed = 最小非零部件冷却风扇速度
+H fan speed-up time = 风扇响应时间
+H fan kick-start time = 风扇全速启动时间
+H cooling fan = 冷却风扇
+H only overhangs = 仅悬垂
+G part cooling fan = 部件冷却风扇
+G arc fitting = 圆弧拟合
+G cooling = 冷却
+G firmware = 固件
+G part = 零件
+G overhang = 悬垂
+G ironing = 熨烫
+G bridge = 桥接
+  fan speed = 风扇速度
+  time estimation = 时间预估
+  start g-code = 起始G-code
+  custom g-code = 自定义G-code

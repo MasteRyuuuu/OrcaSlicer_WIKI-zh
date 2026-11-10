@@ -1,0 +1,7 @@
+H mesh boolean = 网格布尔运算
+H intersection = 交集
+H union = 并集
+H difference = 差集
+G volume = 体积
+G part = 零件
+  shared by = 分享

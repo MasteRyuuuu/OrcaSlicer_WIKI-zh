@@ -1,0 +1,29 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"![install-local-plugin](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/install-local-plugin.png?raw=true)",
+"![local-plugin-installed-inactive](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/local-plugin-installed-inactive.png?raw=true)",
+"![local-plugin-activated-capabilities](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/plugins/local-plugin-activated-capabilities.png?raw=true)"
+],
+"link": [],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Local Plugins",
+"raw": "Local Plugins",
+"id": "local-plugins",
+"alt": "local-plugins"
+},
+{
+"level": 2,
+"en": "Install a Local Plugin",
+"raw": "Install a Local Plugin",
+"id": "install-a-local-plugin",
+"alt": "install-a-local-plugin"
+}
+],
+"src": "plugins/plugins_local.md"
+}

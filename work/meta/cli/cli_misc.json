@@ -1,0 +1,109 @@
+{
+"code": [],
+"meta": [],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "loading-settings-filaments",
+"en": "Loading Settings & Filaments"
+},
+{
+"indent": 0,
+"anchor": "object-selection",
+"en": "Object Selection"
+},
+{
+"indent": 0,
+"anchor": "output-logging",
+"en": "Output & Logging"
+},
+{
+"indent": 0,
+"anchor": "arrange-behavior",
+"en": "Arrange Behavior"
+},
+{
+"indent": 0,
+"anchor": "metadata",
+"en": "Metadata"
+},
+{
+"indent": 0,
+"anchor": "print-behavior",
+"en": "Print Behavior"
+}
+]
+],
+"img": [],
+"link": [
+"cli_mode",
+"import_export#export-preset-bundle",
+"cli_actions#misc-actions",
+"cli_actions#misc-actions",
+"printer_machine_gcode",
+"cli_transform#object-handling",
+"cli_transform",
+"how_to_build#portable-user-configuration",
+"cli_actions#export",
+"import_export#export-statistics",
+"prepare_auto_arrange#parameters",
+"prepare_auto_arrange#parameters",
+"prepare_auto_arrange#parameters",
+"prepare_auto_arrange#parameters",
+"others_settings_special_mode#timelapse"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "CLI Misc",
+"raw": "CLI Misc",
+"id": "cli-misc",
+"alt": "cli-misc"
+},
+{
+"level": 2,
+"en": "Loading Settings & Filaments",
+"raw": "Loading Settings & Filaments",
+"id": "loading-settings-filaments",
+"alt": "loading-settings-filaments"
+},
+{
+"level": 2,
+"en": "Object Selection",
+"raw": "Object Selection",
+"id": "object-selection",
+"alt": "object-selection"
+},
+{
+"level": 2,
+"en": "Output & Logging",
+"raw": "Output & Logging",
+"id": "output-logging",
+"alt": "output-logging"
+},
+{
+"level": 2,
+"en": "Arrange Behavior",
+"raw": "Arrange Behavior",
+"id": "arrange-behavior",
+"alt": "arrange-behavior"
+},
+{
+"level": 2,
+"en": "Metadata",
+"raw": "Metadata",
+"id": "metadata",
+"alt": "metadata"
+},
+{
+"level": 2,
+"en": "Print Behavior",
+"raw": "Print Behavior",
+"id": "print-behavior",
+"alt": "print-behavior"
+}
+],
+"src": "cli/cli_misc.md"
+}

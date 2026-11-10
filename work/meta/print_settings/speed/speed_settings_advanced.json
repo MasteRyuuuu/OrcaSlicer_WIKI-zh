@@ -1,0 +1,191 @@
+{
+"code": [],
+"meta": [
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variables",
+"target": "built_in_placeholders_variables",
+"value": "`max_volumetric_extrusion_rate_slope`, `max_volumetric_extrusion_rate_slope_segment_length`."
+},
+{
+"label": "Type",
+"target": "option_type#integer-float-percentage",
+"value": "`Float`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--max-volumetric-extrusion-rate-slope=1` (same pattern for the other variables above)."
+}
+],
+[
+{
+"label": "Mode",
+"target": "option_mode",
+"value": "`Advanced`."
+},
+{
+"label": "Variable",
+"target": "built_in_placeholders_variables",
+"value": "`extrusion_rate_smoothing_external_perimeter_only`."
+},
+{
+"label": "Type",
+"target": "option_type#boolean",
+"value": "`Boolean`."
+},
+{
+"label": "CLI Example",
+"target": "cli_mode#setting-overrides",
+"value": "`--extrusion-rate-smoothing-external-perimeter-only=1`."
+}
+]
+],
+"toc": [
+[
+{
+"indent": 0,
+"anchor": "theory",
+"en": "Theory"
+},
+{
+"indent": 4,
+"anchor": "acceleration-vs-extrusion-rate-smoothing",
+"en": "Acceleration vs. Extrusion rate smoothing"
+},
+{
+"indent": 4,
+"anchor": "pressure-advance-vs-extrusion-rate-smoothing",
+"en": "Pressure advance vs extrusion rate smoothing"
+},
+{
+"indent": 0,
+"anchor": "finding-the-ideal-extrusion-rate-smoothing-value",
+"en": "Finding the ideal Extrusion Rate smoothing value"
+},
+{
+"indent": 0,
+"anchor": "a-note-for-bowden-printers-using-marlin-without-pressure-advance",
+"en": "A note for Bowden printers using Marlin without pressure advance"
+},
+{
+"indent": 0,
+"anchor": "a-note-on-ers-segment-length",
+"en": "A note on ERS Segment length"
+},
+{
+"indent": 0,
+"anchor": "apply-only-on-external-features",
+"en": "Apply only on external features"
+},
+{
+"indent": 0,
+"anchor": "limitations",
+"en": "Limitations"
+},
+{
+"indent": 0,
+"anchor": "credits",
+"en": "Credits"
+}
+]
+],
+"img": [
+"![ers-intro](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ERS/ers-intro.png?raw=true)",
+"![ers-artefact](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ERS/ers-artefact.jpg?raw=true)",
+"![ers-printspeed](https://github.com/OrcaSlicer/OrcaSlicer_WIKI/blob/main/images/ERS/ers-printspeed.png?raw=true)"
+],
+"link": [
+"quality_settings_precision#arc-fitting",
+"https://klipper.discourse.group/t/pressure-advance-smooth-time-skews-pressure-advance/13451",
+"https://github.com/bubnikv",
+"https://github.com/hejllukas",
+"https://github.com/MGunlogson",
+"https://github.com/igiannakas",
+"https://github.com/Noisyfox",
+"https://github.com/igiannakas",
+"https://github.com/SoftFever",
+"https://github.com/HakunMatat4",
+"https://github.com/psiberfunk",
+"https://github.com/u3dreal"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "Speed Advanced - Extrusion Rate Smoothing",
+"raw": "Speed Advanced - Extrusion Rate Smoothing",
+"id": "speed-advanced-extrusion-rate-smoothing",
+"alt": "speed-advanced-extrusion-rate-smoothing"
+},
+{
+"level": 2,
+"en": "Theory",
+"raw": "Theory",
+"id": "theory",
+"alt": "theory"
+},
+{
+"level": 3,
+"en": "Acceleration vs. Extrusion rate smoothing",
+"raw": "Acceleration vs. Extrusion rate smoothing",
+"id": "acceleration-vs-extrusion-rate-smoothing",
+"alt": "acceleration-vs-extrusion-rate-smoothing"
+},
+{
+"level": 3,
+"en": "Pressure advance vs extrusion rate smoothing",
+"raw": "Pressure advance vs extrusion rate smoothing",
+"id": "pressure-advance-vs-extrusion-rate-smoothing",
+"alt": "pressure-advance-vs-extrusion-rate-smoothing"
+},
+{
+"level": 2,
+"en": "Finding the ideal Extrusion Rate smoothing value",
+"raw": "Finding the ideal Extrusion Rate smoothing value",
+"id": "finding-the-ideal-extrusion-rate-smoothing-value",
+"alt": "finding-the-ideal-extrusion-rate-smoothing-value"
+},
+{
+"level": 2,
+"en": "A note for Bowden printers using Marlin without pressure advance",
+"raw": "A note for Bowden printers using Marlin without pressure advance",
+"id": "a-note-for-bowden-printers-using-marlin-without-pressure-advance",
+"alt": "a-note-for-bowden-printers-using-marlin-without-pressure-advance"
+},
+{
+"level": 2,
+"en": "A note on ERS Segment length",
+"raw": "A note on ERS Segment length",
+"id": "a-note-on-ers-segment-length",
+"alt": "a-note-on-ers-segment-length"
+},
+{
+"level": 2,
+"en": "Apply only on external features",
+"raw": "Apply only on external features",
+"id": "apply-only-on-external-features",
+"alt": "apply-only-on-external-features"
+},
+{
+"level": 2,
+"en": "Limitations",
+"raw": "Limitations",
+"id": "limitations",
+"alt": "limitations"
+},
+{
+"level": 2,
+"en": "Credits",
+"raw": "Credits",
+"id": "credits",
+"alt": "credits"
+}
+],
+"src": "print_settings/speed/speed_settings_advanced.md"
+}
