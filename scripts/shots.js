@@ -1,4 +1,4 @@
-// usage: node shots.js <site/index.html> <outdir> [hash ...]
+// usage: node shots.js <docs/index.html> <outdir> [hash ...]
 const { chromium } = require('playwright');
 const path = require('path');
 (async () => {

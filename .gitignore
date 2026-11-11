@@ -8,5 +8,5 @@ __pycache__/
 work/sync/
 work/tmp/
 work/pub*.json
-site/_test.html
+docs/_test.html
 shots/

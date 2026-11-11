@@ -6,7 +6,9 @@
 > - `main` 分支：官方英文原稿；
 > - `zh-cn` 分支（本分支）：中文版。
 
-译文生成为一个单页网站，下载仓库后用浏览器打开 `site/index.html` 就能浏览，不需要联网。
+**在线浏览：https://masteryuuuu.github.io/OrcaSlicer_WIKI-zh/**
+
+这个网站由 GitHub Pages 从本分支的 `docs/` 目录发布。下载仓库后，用浏览器直接打开 `docs/index.html` 也能离线浏览。
 
 - 界面术语以 OrcaSlicer 官方简体中文版（zh_CN）为准，标题旁附英文原名。
 - 每页都有"英文原文"链接。
@@ -35,7 +37,7 @@
 | `work/rel/` | 版本发布页的摘要翻译（TSV） |
 | `work/hints/`、`work/terms.json` | 每页的术语提示（来自软件官方中文界面和 wiki 术语表） |
 | `scripts/` | 预处理、校验、构建、同步脚本 |
-| `site/` | 生成的网站 |
+| `docs/` | 生成的网站（GitHub Pages 发布这个目录） |
 
 ## 本地构建
 
@@ -43,7 +45,7 @@
 pip install -r requirements.txt
 npm ci --prefix node
 python3 scripts/sync.py src      # 拉取对应版本的英文 wiki（图片和导航来自这里）
-python3 scripts/build.py         # 生成 site/
+python3 scripts/build.py         # 生成 docs/
 python3 scripts/linkcheck.py     # 检查链接和图片
 ```
 

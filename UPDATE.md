@@ -98,7 +98,7 @@ python3 -I scripts/linkcheck.py       # broken links / duplicate ids / missing i
 ```
 
 - `verify` 输出的 `english-looking` 只是警告。命令、代码、专有名词可以保留英文，其他的要翻译。
-- 截图检查是可选的：`node scripts/shots.js site/index.html shots <页面id> ...`（页面 id 是文件名里的 `_` 换成 `-`）。
+- 截图检查是可选的：`node scripts/shots.js docs/index.html shots <页面id> ...`（页面 id 是文件名里的 `_` 换成 `-`）。
 
 ## 5. 提交并推送
 
@@ -107,6 +107,8 @@ git add -A
 git commit -m "同步上游 <旧提交>→<新提交>：<一句话说明改了什么>"
 git push origin zh-cn
 ```
+
+推送 `zh-cn` 后，GitHub Pages 会自动重新发布公开网站 https://masteryuuuu.github.io/OrcaSlicer_WIKI-zh/ ，通常一两分钟内生效，不需要额外操作。
 
 如果没能全部完成（`verify` 或 `linkcheck` 过不了），**不要推送到 `zh-cn`**。把进度推到 `zh-cn-wip` 分支，并在汇报里说明还剩什么。
 
@@ -117,9 +119,9 @@ git push origin zh-cn
 1. 先用 Artifact 的 `read` 读一次：`url=<网址>`，`path="index.html"`。新会话发布前必须先读；这个文件很大，读取时只会存成本地文件。
 2. 再用 `publish` 发布：
    - `url=<网址>`
-   - `file_path=<仓库绝对路径>/site/index.html`
-   - `root=<仓库绝对路径>/site`
-   - `files`：本次新增或改动的图片，路径相对于 `site/`。可以用 `git diff --name-only --diff-filter=AM HEAD~1 -- site/img | sed 's#^site/##'` 列出来。
+   - `file_path=<仓库绝对路径>/docs/index.html`
+   - `root=<仓库绝对路径>/docs`
+   - `files`：本次新增或改动的图片，路径相对于 `docs/`。可以用 `git diff --name-only --diff-filter=AM HEAD~1 -- docs/img | sed 's#^docs/##'` 列出来。
    - 不传 `icon`。
 
 ## 7. 汇报

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Check the built site: every internal #link resolves, element ids are unique, every image exists.
-usage: linkcheck.py        (reads site/index.html; exit 1 when something is broken)"""
+usage: linkcheck.py        (reads docs/index.html; exit 1 when something is broken)"""
 import collections
 import json
 import pathlib
@@ -9,7 +9,7 @@ import sys
 from urllib.parse import unquote
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = ROOT / 'site'
+SITE = ROOT / 'docs'
 
 
 def main():

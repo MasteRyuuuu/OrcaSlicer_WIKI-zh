@@ -21,9 +21,9 @@
 - 语气：平实、准确的技术文档中文，不加译者评论；原文的强调（粗体/斜体）保留。
 
 ## 发布
-- 站点：`python3 -I scripts/build.py` → site/index.html + site/img/；artifact URL 见 work/ARTIFACT_URL.txt
-- 再发布：Artifact publish url=<ARTIFACT_URL> file_path=<仓库>/site/index.html，root=<仓库>/site；新增/改动的图片才需要 files。新会话发布前先 Artifact read（path=index.html）一次。详见 UPDATE.md 第 6 步。
-- 渲染检查：`node scripts/shots.js site/index.html <outdir> <hash...>`
+- 站点：`python3 -I scripts/build.py` → docs/index.html + docs/img/（推送 zh-cn 后 GitHub Pages 自动发布公开网站）；artifact URL 见 work/ARTIFACT_URL.txt
+- 再发布：Artifact publish url=<ARTIFACT_URL> file_path=<仓库>/docs/index.html，root=<仓库>/docs；新增/改动的图片才需要 files。新会话发布前先 Artifact read（path=index.html）一次。详见 UPDATE.md 第 6 步。
+- 渲染检查：`node scripts/shots.js docs/index.html <outdir> <hash...>`
 
 ## 进度备忘
 - 已完成：全部 164 页（用户文档 + 全部开发者参考 + 版本发布）均已翻译，v8 已发布到同一链接（work/ARTIFACT_URL.txt）。版本发布页为摘要模式（概述 + 各项标题，详情链接英文原文），流程见 scripts/rel_parse.py / rel_build.py。

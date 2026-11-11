@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the Chinese OrcaSlicer wiki as one single-page site.
 
-usage: build.py            -> site/index.html + site/img/...
+usage: build.py            -> docs/index.html + docs/img/...  (GitHub Pages publishes docs/ of the zh-cn branch)
 Translated pages come from zh/<path>.md; anything not translated yet falls back to the
 prepared English in work/en (release notes fall back to a short pointer page).
 """
@@ -25,7 +25,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from common import HEAD, PH, headings_of, plain, slug_gh, slug_v
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC, WORK, ZH, OUT = ROOT / 'src' / 'wiki', ROOT / 'work', ROOT / 'zh', ROOT / 'site'
+SRC, WORK, ZH, OUT = ROOT / 'src' / 'wiki', ROOT / 'work', ROOT / 'zh', ROOT / 'docs'
 TEMPLATE = ROOT / 'scripts' / 'template.html'
 INLINE_MAX = 16_000
 
@@ -560,6 +560,7 @@ def build():
         shutil.rmtree(OUT)
     (OUT / 'img').mkdir(parents=True)
     (OUT / 'index.html').write_text(page, encoding='utf-8')
+    (OUT / '.nojekyll').write_text('', encoding='utf-8')   # GitHub Pages: serve files as they are
     for name, path in FILES.items():
         dst = OUT / name
         dst.parent.mkdir(parents=True, exist_ok=True)
