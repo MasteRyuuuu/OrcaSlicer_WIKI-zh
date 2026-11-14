@@ -1,0 +1,635 @@
+[
+ {
+  "level": 1,
+  "title": "V2.5.1",
+  "prose": [
+   "This is the OrcaSlicer V2.5.1 release, a maintenance update on top of 2.5.0. Thank you to everyone who reported problems with 2.5.0!",
+   "It fixes problems connecting and uploading to printers, crashes, slicing bugs and security issues. Toolchangers can now copy per-nozzle settings to every tool, and **Reload from disk** gets a keyboard shortcut.",
+   "If you chose an HTTPS CA file for a LAN printer before 2.5.1, see **Security** below: you may need to choose it again."
+  ],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Downloads",
+  "prose": [
+   "| Platform | File | | --- | --- | | Windows installer (x64) | [OrcaSlicer_Windows_Installer_V2.5.1_x64.exe]({{L1}}) | | Windows installer (ARM64) | [OrcaSlicer_Windows_Installer_V2.5.1_arm64.exe]({{L2}}) | | Windows portable (x64) | [OrcaSlicer_Windows_V2.5.1_x64_portable.zip]({{L3}}) | | Windows portable (ARM64) | [OrcaSlicer_Windows_V2.5.1_arm64_portable.zip]({{L4}}) | | macOS (Apple Silicon and Intel) | [OrcaSlicer_Mac_universal_V2.5.1.dmg]({{L5}}) | | Linux AppImage (x86_64) | [OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.5.1.AppImage]({{L6}}) | | Linux AppImage (aarch64) | [OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V2.5.1.AppImage]({{L7}}) | | Linux Flatpak (x86_64) | [OrcaSlicer-Linux-flatpak_V2.5.1_x86_64.flatpak]({{L8}}) | | Linux Flatpak (aarch64) | [OrcaSlicer-Linux-flatpak_V2.5.1_aarch64.flatpak]({{L9}}) | | Windows debug symbols (for developers) | [Debug_PDB_V2.5.1_for_developers_only.7z]({{L10}}) |"
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Copy per-nozzle settings to every tool of a toolchanger",
+    "rest": "by @ianalexis and @raistlin7447 in [17461]({{L11}})",
+    "links": [
+     [
+      "17461",
+      "{{L11}}"
+     ]
+    ]
+   },
+   {
+    "title": "Keyboard shortcut for Reload from disk",
+    "rest": "by @thelegendtubaguy in [17373]({{L12}}) — **Reload from disk** is bound to Ctrl+Shift+R (Cmd+Shift+R on macOS) in the 3D view and the object list, and you can change the key in the **Keyboard Shortcuts** dialog. The **Clone** and **Reload from disk** items in the right-click menu show the new key right away, without a restart. Fixes #8703. [Wiki]({{L13}})",
+    "links": [
+     [
+      "17373",
+      "{{L12}}"
+     ],
+     [
+      "Wiki",
+      "{{L13}}"
+     ]
+    ]
+   },
+   {
+    "title": "The printer connection guide shows the current interface",
+    "rest": "by @yw4z in [17421]({{L14}}) — the animation in the Device tab that shows how to connect a printer was re-recorded with the current interface.",
+    "links": [
+     [
+      "17421",
+      "{{L14}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Security",
+  "prose": [],
+  "items": [
+   {
+    "title": "AMF files can't freeze OrcaSlicer",
+    "rest": "by @lamweilun in [17290]({{L15}})",
+    "links": [
+     [
+      "17290",
+      "{{L15}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugin packages install over a trusted connection",
+    "rest": "by @HanifKoh in [17292]({{L16}}) — OrcaSlicer installs the Python packages a plugin needs from PyPI with a bundled tool called uv. That tool still trusted a root certificate whose intermediate keys had leaked, so someone between your computer and PyPI who held one of those keys could swap the packages a plugin installs. The bundled uv is updated and no longer trusts that certificate.",
+    "links": [
+     [
+      "17292",
+      "{{L16}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab LAN printers use the HTTPS CA file you choose",
+    "rest": "by @Alphakilo in [17062]({{L17}}) — the **HTTPS CA File** in the **Connect the printer using IP and access code** dialog had no effect on Bambu Lab printers, so connections that needed it, such as to a self-hosted proxy, failed. OrcaSlicer now saves the CA file with each printer and trusts it when connecting, and the field is no longer greyed out for Bambu Lab printers on Windows and macOS. The file must contain only CA certificates. A CA file chosen before 2.5.1 isn't carried over, so choose it again in the dialog. Fixes #17061.",
+    "links": [
+     [
+      "17062",
+      "{{L17}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Crashes",
+  "prose": [],
+  "items": [
+   {
+    "title": "No crash when editing an object's speed",
+    "rest": "by @HanifKoh in [17529]({{L18}})",
+    "links": [
+     [
+      "17529",
+      "{{L18}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash when clicking in the Measure tool",
+    "rest": "by @raistlin7447 and @yw4z in [17383]({{L19}})",
+    "links": [
+     [
+      "17383",
+      "{{L19}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Slicing & Print Quality",
+  "prose": [],
+  "items": [
+   {
+    "title": "Copies of an object print where they show on the plate",
+    "rest": "by @Eldenroot in [17183]({{L20}}) — when an object that isn't symmetric had a copy whose first instance was rotated by an angle that isn't a multiple of 90°, that copy could reuse the original's sliced layers. It then printed shifted from where it showed on the plate, with no warning. Such objects are now sliced separately.",
+    "links": [
+     [
+      "17183",
+      "{{L20}}"
+     ]
+    ]
+   },
+   {
+    "title": "Copies of an object keep their own height ranges",
+    "rest": "by @Art-Porto in [17279]({{L21}}) — when an object and a pasted copy of it had different height range modifiers, both were sliced the same way. The copy's range was ignored, or the first object's range, such as a filament change, was used on both. Objects whose height ranges differ are now sliced separately.",
+    "links": [
+     [
+      "17279",
+      "{{L21}}"
+     ]
+    ]
+   },
+   {
+    "title": "Spiral vase works with height range modifiers",
+    "rest": "by @kisslorand in [17143]({{L22}}) and [17154]({{L23}})",
+    "links": [
+     [
+      "17143",
+      "{{L22}}"
+     ],
+     [
+      "17154",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "Height ranges line up with Z shrinkage compensation",
+    "rest": "by @fa1k3 and @SoftFever in [16491]({{L24}}) — with **Shrinkage (Z)** set to anything other than 100%, height range modifiers applied their settings at the wrong heights, and a range that reached the top of the object could leave its top layers at the default layer height. Height ranges now follow the compensated height.",
+    "links": [
+     [
+      "16491",
+      "{{L24}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cleaner multiline infill paths",
+    "rest": "by @ianalexis in [17341]({{L25}}) — with **Fill Multiline** above 1, Adaptive Cubic, Support Cubic, Honeycomb, Quarter Cubic and Lightning infill could print paths that started in the middle of a line, ran along the walls and ended where they started. Those pieces are joined back together. Single-line infill doesn't change.",
+    "links": [
+     [
+      "17341",
+      "{{L25}}"
+     ]
+    ]
+   },
+   {
+    "title": "Slicing pipeline plugins run when the preset picks them",
+    "rest": "by @DIEHARDave in [16884]({{L26}}) — a plugin chosen in **Slicing Pipeline Plugin** in the process preset could be skipped at slice time with no warning, so the G-code was exported without the plugin's changes. This could happen when the preset's plugin list was built before the plugin finished loading. OrcaSlicer now finds the plugin by name in that case. A plugin that isn't loaded is still skipped.",
+    "links": [
+     [
+      "16884",
+      "{{L26}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Prime Tower & Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "The nozzle stays lifted until it's back over the print",
+    "rest": "by @gazi-faysal-jubayer in [16933]({{L27}})",
+    "links": [
+     [
+      "16933",
+      "{{L27}}"
+     ]
+    ]
+   },
+   {
+    "title": "The last filament is unloaded again on single extruder multi-material printers",
+    "rest": "by @fer-marino and @HanifKoh in [15917]({{L28}}) and [17496]({{L29}})",
+    "links": [
+     [
+      "15917",
+      "{{L28}}"
+     ],
+     [
+      "17496",
+      "{{L29}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower checks apply only when a tower is printed",
+    "rest": "by @Art-Porto in [16999]({{L30}})",
+    "links": [
+     [
+      "16999",
+      "{{L30}}"
+     ]
+    ]
+   },
+   {
+    "title": "Precise Z height no longer makes the prime tower too big",
+    "rest": "by @HanifKoh in [17204]({{L31}}) — with **Precise Z height** on, a filament change and objects of different heights, slicing could fail with \"Prime tower is partially outside the printable area\" even though Prepare showed a small tower. The very thin layers where one object ends a few microns above another now print their tower work on the tower layer below. Fixes #17083.",
+    "links": [
+     [
+      "17204",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "Gap infill uses the inner wall filament with Classic walls",
+    "rest": "by @ianalexis in [17229]({{L32}}) — with the Classic **Wall generator**, choosing an outer wall filament in **Filament for Features** also moved the gap infill between walls to that filament. It now prints with the inner wall filament, matching Arachne, which prints inner walls in that space. With a single wall loop, gap infill stays on the outer wall filament.",
+    "links": [
+     [
+      "17229",
+      "{{L32}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Command Line",
+  "prose": [],
+  "items": [
+   {
+    "title": "The CLI keeps the flushing volumes of multi-nozzle projects",
+    "rest": "by @HanifKoh in [17440]({{L33}}) — on a printer with more than one nozzle, such as the H2D, a project exported from the command line listed one nozzle volume type for all of its nozzles. When the CLI opened that export again, it recalculated the flushing volumes from the filament colors, so values you had set were lost. The CLI writes one volume type per nozzle instead. A project without volume types takes the printer's default types, as in the GUI, so a printer whose default is High Flow, such as the Prusa CORE One INDX 4T HF and 8T HF, now exports as High Flow.",
+    "links": [
+     [
+      "17440",
+      "{{L33}}"
+     ]
+    ]
+   },
+   {
+    "title": "No CLI crash when extruder areas don't overlap",
+    "rest": "by @HanifKoh in [17439]({{L34}}) — a printer profile can give each extruder its own printable area. When those areas only touched or didn't overlap at all, slicing from the command line crashed before placing any object. Objects are now placed on the whole bed in that case, and a prime tower is refused with a message that the extruders share no common area. No bundled printer profile is affected.",
+    "links": [
+     [
+      "17439",
+      "{{L34}}"
+     ]
+    ]
+   },
+   {
+    "title": "No CLI crash on a mismatched filament order",
+    "rest": "by @HanifKoh in [17243]({{L35}}) — a plate's custom filament order for other layers is stored as a count and a list of values. When the count didn't match the values, as with `--other-layers-print-sequence-nums 1`, the CLI read past the end of the list and could crash. Such a pair is now treated as no custom order, with a warning in the log.",
+    "links": [
+     [
+      "17243",
+      "{{L35}}"
+     ]
+    ]
+   },
+   {
+    "title": "No CLI crash on filament presets without a diameter",
+    "rest": "by @anselor in [16911]({{L36}}) — since 2.5.0, a CLI run that loaded filament presets without a color crashed when a preset didn't set a diameter, or stopped with a config error when a later filament didn't set the support flag. Missing values now follow the first filament or the option's default.",
+    "links": [
+     [
+      "16911",
+      "{{L36}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Preview",
+  "prose": [],
+  "items": [
+   {
+    "title": "The preview shows temperature changes on RepRapFirmware",
+    "rest": "by @ianalexis in [17464]({{L37}})",
+    "links": [
+     [
+      "17464",
+      "{{L37}}"
+     ]
+    ]
+   },
+   {
+    "title": "The nozzle marker tilts on belt printers",
+    "rest": "by @yw4z in [17427]({{L38}}) — in Preview, the nozzle marker stayed upright while the layers were drawn tilted. It now tilts to match the print direction at any belt angle.",
+    "links": [
+     [
+      "17427",
+      "{{L38}}"
+     ]
+    ]
+   },
+   {
+    "title": "The tool position readout shows the position on its own plate",
+    "rest": "by @Noisyfox in [17172]({{L39}}) — on plates after the first, the tool position readout in Preview included the plate's offset in the scene. It now shows the position on the current plate.",
+    "links": [
+     [
+      "17172",
+      "{{L39}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Design Tab",
+  "prose": [],
+  "items": [
+   {
+    "title": "Clicking a constraint's badge selects it",
+    "rest": "by @SoftFever in [17459]({{L40}})",
+    "links": [
+     [
+      "17459",
+      "{{L40}}"
+     ]
+    ]
+   },
+   {
+    "title": "A sketch's Constraints card shows the first time you edit it",
+    "rest": "by @SoftFever in [17458]({{L42}}) — opening an existing sketch for editing didn't show its **Constraints** card until the second time, and the card and the banner over the canvas named it as if it were a new sketch. Both now show on the first open and name the sketch you're editing.",
+    "links": [
+     [
+      "17458",
+      "{{L42}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "The mixed filament dialog is easier to use",
+    "rest": "by @thelegendtubaguy in [16866]({{L43}})",
+    "links": [
+     [
+      "16866",
+      "{{L43}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fill bed with instances puts the copies on their plate",
+    "rest": "by @SoftFever in [17480]({{L44}}) — copies made by **Fill bed with instances** showed in the Objects panel but weren't registered with their plate until you moved them, and with **Show Labels** on, only the original had a label. The copies now join their plate when the fill finishes, as copies made with **Set number of instances** do.",
+    "links": [
+     [
+      "17480",
+      "{{L44}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plate thumbnails update in Focus mode",
+    "rest": "by @RF47 in [17320]({{L45}}) — after you added a plate, a primitive or a pasted object, the plate toolbar could keep showing an old thumbnail.",
+    "links": [
+     [
+      "17320",
+      "{{L45}}"
+     ]
+    ]
+   },
+   {
+    "title": "Focus mode hides objects with large modifiers",
+    "rest": "by @HanifKoh in [17474]({{L46}}) — with Focus mode on, an object whose modifier reached over another plate stayed drawn on that plate. Focus mode now places an object by its parts only, so modifiers no longer pull it onto other plates. Fixes #17434.",
+    "links": [
+     [
+      "17474",
+      "{{L46}}"
+     ]
+    ]
+   },
+   {
+    "title": "Realistic View stays on while painting",
+    "rest": "by @ianalexis in [17317]({{L47}}) — opening seam, support or fuzzy skin painting turned the **Realistic View** preference off, and it could stay off, for example after you switched to another tool. Painting no longer changes it.",
+    "links": [
+     [
+      "17317",
+      "{{L47}}"
+     ]
+    ]
+   },
+   {
+    "title": "Lightning settings hide when there is no sparse infill",
+    "rest": "by @RF47 in [17277]({{L48}}) — with the Lightning pattern and **Sparse infill density** at 0%, **Lightning overhang angle**, **Prune angle** and **Straightening angle** still showed, though they do nothing. They're now hidden.",
+    "links": [
+     [
+      "17277",
+      "{{L48}}"
+     ]
+    ]
+   },
+   {
+    "title": "The view pans and rotates from the center of mass details box",
+    "rest": "by @thelegendtubaguy in [17137]({{L49}}) — the box sits over the model, and a drag that started on it did nothing, so you couldn't pan or rotate the view from there. A right drag that started on the box and ended off it also opened the context menu. A drag on the box now moves the view like a drag over empty space, and a right click off the box closes it, like a left click.",
+    "links": [
+     [
+      "17137",
+      "{{L49}}"
+     ]
+    ]
+   },
+   {
+    "title": "The printable tooltip shows only where it applies",
+    "rest": "by @kisslorand in [17076]({{L50}}) — the object list showed the printable tooltip on parts and layer ranges, which have no printable checkbox. It now shows only on objects and instances.",
+    "links": [
+     [
+      "17076",
+      "{{L50}}"
+     ]
+    ]
+   },
+   {
+    "title": "Scale to build volume is greyed out when it can't be used",
+    "rest": "by @Eldenroot and @yw4z in [16353]({{L51}}) — the right-click menu item was always enabled. It's now greyed out for parts, cut objects, an empty selection, and beds that aren't rectangular or round, the same as the Speed Dial command.",
+    "links": [
+     [
+      "16353",
+      "{{L51}}"
+     ]
+    ]
+   },
+   {
+    "title": "The Clone dialog's Fill button says what it does",
+    "rest": "by @Eldenroot in [17152]({{L52}}) — its tooltip said it fills the bed with copies, a method that no longer exists. It now says it fills the bed with instances.",
+    "links": [
+     [
+      "17152",
+      "{{L52}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Windows & macOS",
+  "prose": [],
+  "items": [
+   {
+    "title": "No stray horizontal scrollbar in the object list on Windows",
+    "rest": "by @yw4z in [17169]({{L53}}) — when the vertical scrollbar appeared or went away, the Name column kept its old width, so a horizontal scrollbar showed up. The column now fits the list again.",
+    "links": [
+     [
+      "17169",
+      "{{L53}}"
+     ]
+    ]
+   },
+   {
+    "title": "Closed settings dialogs stay hidden on Windows",
+    "rest": "by @HanifKoh in [17161]({{L54}}) — after **Material settings** or **Printer settings** had been opened once, the closed dialog still showed over the main window in the taskbar preview. Fixes #17124.",
+    "links": [
+     [
+      "17161",
+      "{{L54}}"
+     ]
+    ]
+   },
+   {
+    "title": "Double clicks on checkboxes and switches work on Windows",
+    "rest": "by @thelegendtubaguy in [17194]({{L55}}) — a quick double click on a checkbox, switch or radio button toggled it three times, so it looked like a click was lost, and a radio button could look selected while its value was cleared. A double click now toggles twice.",
+    "links": [
+     [
+      "17194",
+      "{{L55}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"DEV\" fits in the mode switch on Retina Macs",
+    "rest": "by @lamweilun in [17197]({{L56}}) — in Developer mode, the settings mode switch drew \"DEV\" at double size on Retina displays, so the text was cut off. Fixes #17180.",
+    "links": [
+     [
+      "17197",
+      "{{L56}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Printer Connectivity & Cloud",
+  "prose": [],
+  "items": [
+   {
+    "title": "Bambu Lab LAN printers saved before 2.5.0 are back",
+    "rest": "by @thelegendtubaguy in [17468]({{L57}})",
+    "links": [
+     [
+      "17468",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "Upload and Print starts the print on more Creality printers",
+    "rest": "by @raistlin7447 in [17365]({{L58}})",
+    "links": [
+     [
+      "17365",
+      "{{L58}}"
+     ]
+    ]
+   },
+   {
+    "title": "Moonraker printers keep their port",
+    "rest": "by @grant0013 in [17257]({{L59}})",
+    "links": [
+     [
+      "17257",
+      "{{L59}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filament sync keeps each slot's material",
+    "rest": "by @anselor in [17089]({{L60}}) — when a Creality, Moonraker, Qidi or Snapmaker printer reported a material that had no visible filament preset, sync could pick a preset for a different material, such as PLA, and show the slot as that material. It now uses OrcaSlicer's generic preset for the reported material, and also recognizes PLA+, PLA PRO, ABS+ and PETG+ as their base material.",
+    "links": [
+     [
+      "17089",
+      "{{L60}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flow Dynamics Calibration shows again for the A1 and A1 mini",
+    "rest": "by @brummbrum in [16055]({{L61}}) — on A1 and A1 mini printers with older firmware, the **Flow Dynamics Calibration** option was missing when sending a print. OrcaSlicer read the printer's support for it from a status flag that this firmware leaves off, even though the printer reports the support elsewhere. It now keeps the support the printer reports. Fixes #16033.",
+    "links": [
+     [
+      "16055",
+      "{{L61}}"
+     ]
+    ]
+   },
+   {
+    "title": "Configuration updates for vendors you don't use stop coming back",
+    "rest": "by @peachismomo in [17449]({{L62}}) — OrcaSlicer could keep asking to install a configuration update for a printer vendor you have no printers from, such as Qidi. Installing it didn't help, because the profiles of unused vendors are removed again at startup. Background update checks now skip vendors you don't use. Updates for OrcaSlicer's own bundles and for vendors you just added still show. Fixes #17400.",
+    "links": [
+     [
+      "17449",
+      "{{L62}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Profile Updates & Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Bed and hotend models load for more printers",
+    "rest": "by @yw4z in [17348]({{L63}}) — several printer profiles pointed at bed or hotend model files, or bed textures, whose names didn't match, some only on Linux, where file names are case-sensitive. They now load for the Chuanying X1, Vzbot 235 AWD and 330 AWD, Flashforge AD5X, Adventurer 4 Series, Adventurer 5M, Adventurer 5M Pro and Adventurer A5, Z-Bolt S1000 and S1000 Dual, Elegoo Neptune 4 and Centauri 2, MagicMaker, and Qidi Q2 and Q2C. Felix, Goofoo, Vivedino and Prusa CORE One L bed models are smaller, several printers have new cover pictures, and the profile folder is about 10 MB smaller.",
+    "links": [
+     [
+      "17348",
+      "{{L63}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [
+   "* All 22 languages translate every new string in 2.5.1, by @HanifKoh in [4eda9b5]({{L64}})"
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L68}}\">{{I9}}</a>",
+   "<a href=\"{{L69}}\">{{I10}}</a>"
+  ],
+  "items": []
+ }
+]

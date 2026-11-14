@@ -434,6 +434,7 @@ Windows：
 | 检查 | 发现的问题 |
 | --- | --- |
 | [`profile_tool`]({{L28}}) | 重复的键、`vendor_name.json` 条目与配置文件互不匹配、同一个配置包中两个配置文件同名、错误的耗材丝 `compatible_printers`、[`normalize` 或 `update-index`]({{L29}}) 仍会改写的配置文件或索引，以及 [`setting_id`]({{L30}}) 或 [`filament_id`]({{L31}}) 错误 |
+| `version_bump` | 改动过的配置包在 `vendor_name.json` 中的 `version` 不比改动前更新，或者不是四个数字。CI 会把拉取请求与它要合并进的分支比较；脚本则把你的检出与它从 `main` 分出时的提交比较（`--base REF` / `-Base REF` 可指定其他提交） |
 | `validate_system` | 无法加载的配置文件，例如 JSON 错误、缺少父配置，或者耗材丝没有 `filament_id` |
 | `validate_slice` | 自定义 G-code 错误，通过在每台打印机上切片一个测试立方体来发现 |
 | `validate_filament_subtypes` | 同一台打印机上有两个耗材丝预设使用相同的 `filament_id` |

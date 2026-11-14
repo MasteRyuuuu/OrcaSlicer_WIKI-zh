@@ -1,0 +1,209 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"<img width=\"500\" alt=\"Permissions tab of the Plugins window with the Full access switch and the File system, Network access, Execution and Audit events sections\" src=\"https://github.com/user-attachments/assets/4dac0928-a9b2-4d78-86ee-fbaea94cd834\" />",
+"<img width=\"450\" alt=\"Scarf seam in the preview stepping sideways between layers before, and straight after\" src=\"https://github.com/user-attachments/assets/46a7317b-8d3f-4569-86b3-5d342edf4c8c\" />",
+"<img width=\"400\" alt=\"Spiral Inset internal solid infill with wide gap fill strips in the middle of each island\" src=\"https://github.com/user-attachments/assets/81ab9ef9-264e-4afc-af8b-01907379e295\" />",
+"<img width=\"400\" alt=\"The same layer with the spirals filling the islands and only small gap fill\" src=\"https://github.com/user-attachments/assets/21bf36bc-20a8-4774-99cf-f8638ebe76df\" />",
+"<img width=\"450\" alt=\"Send G-code dialog for a K1C saying the printer reports no CFS connected, so the print will use the external spool\" src=\"https://github.com/user-attachments/assets/ad7612a1-d5cf-4a55-a2b5-e3d8c32cf773\" />",
+"<img src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"Support on Ko-fi\">",
+"<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"Donate via PayPal\">"
+],
+"link": [
+"https://www.orcaslicer.com/wiki/releases/release_2_5_0_alpha",
+"https://www.orcaslicer.com/wiki/releases/release_2_5_0_beta",
+"https://www.orcaslicer.com/wiki/releases/release_2_5_0_rc",
+"https://cloud.orcaslicer.com/app/plugins/plugin-hub",
+"https://www.orcaslicer.com/wiki/plugin_development",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15851",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17058",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Windows_Installer_V2.5.0_x64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Windows_Installer_V2.5.0_arm64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Windows_V2.5.0_x64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Windows_V2.5.0_arm64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Mac_universal_V2.5.0.dmg",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.5.0.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V2.5.0.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer-Linux-flatpak_V2.5.0_x86_64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer-Linux-flatpak_V2.5.0_aarch64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/Debug_PDB_V2.5.0_for_developers_only.7z",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17285",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17291",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17301",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17144",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17030",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17223",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17334",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17160",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17232",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16757",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16490",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17246",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17330",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17262",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17047",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17289",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17196",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16925",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17242",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17245",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17284",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17118",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17080",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17042",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17177",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17326",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17263",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17159",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17162",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17141",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17305",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17029",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17188",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17108",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17106",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17259",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17323",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17332",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17333",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17336",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17225",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17339",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17092",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17174",
+"https://ko-fi.com/G2G5IP3CP",
+"https://paypal.me/softfever3d"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "V2.5.0",
+"raw": "V2.5.0",
+"id": "v250",
+"alt": "v250"
+},
+{
+"level": 2,
+"en": "Downloads",
+"raw": "Downloads",
+"id": "downloads",
+"alt": "downloads"
+},
+{
+"level": 1,
+"en": "🌊 New Features & Improvements",
+"raw": "🌊 New Features & Improvements",
+"id": "-new-features-improvements",
+"alt": "new-features-improvements"
+},
+{
+"level": 1,
+"en": "🛠️ Bug Fixes",
+"raw": "🛠️ Bug Fixes",
+"id": "-bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 2,
+"en": "Slicing & Print Quality",
+"raw": "Slicing & Print Quality",
+"id": "slicing-print-quality",
+"alt": "slicing-print-quality"
+},
+{
+"level": 2,
+"en": "Belt Printers",
+"raw": "Belt Printers",
+"id": "belt-printers",
+"alt": "belt-printers"
+},
+{
+"level": 2,
+"en": "Prime Tower & Multi-Material",
+"raw": "Prime Tower & Multi-Material",
+"id": "prime-tower-multi-material",
+"alt": "prime-tower-multi-material"
+},
+{
+"level": 2,
+"en": "Presets & Projects",
+"raw": "Presets & Projects",
+"id": "presets-projects",
+"alt": "presets-projects"
+},
+{
+"level": 2,
+"en": "Plugins",
+"raw": "Plugins",
+"id": "plugins",
+"alt": "plugins"
+},
+{
+"level": 2,
+"en": "Interface Fixes",
+"raw": "Interface Fixes",
+"id": "interface-fixes",
+"alt": "interface-fixes"
+},
+{
+"level": 2,
+"en": "Crashes & Hangs",
+"raw": "Crashes & Hangs",
+"id": "crashes-hangs",
+"alt": "crashes-hangs"
+},
+{
+"level": 2,
+"en": "Printer Connectivity & Cloud",
+"raw": "Printer Connectivity & Cloud",
+"id": "printer-connectivity-cloud",
+"alt": "printer-connectivity-cloud"
+},
+{
+"level": 1,
+"en": "🧰 Platform & Build",
+"raw": "🧰 Platform & Build",
+"id": "-platform-build",
+"alt": "platform-build"
+},
+{
+"level": 1,
+"en": "🖨️ Printer & Filament Profiles",
+"raw": "🖨️ Printer & Filament Profiles",
+"id": "-printer-filament-profiles",
+"alt": "printer-filament-profiles"
+},
+{
+"level": 2,
+"en": "New Filament Profiles",
+"raw": "New Filament Profiles",
+"id": "new-filament-profiles",
+"alt": "new-filament-profiles"
+},
+{
+"level": 2,
+"en": "Profile Updates & Fixes",
+"raw": "Profile Updates & Fixes",
+"id": "profile-updates-fixes",
+"alt": "profile-updates-fixes"
+},
+{
+"level": 1,
+"en": "🗪 Localization",
+"raw": "🗪 Localization",
+"id": "-localization",
+"alt": "localization"
+},
+{
+"level": 1,
+"en": "❤️ Support OrcaSlicer",
+"raw": "❤️ Support OrcaSlicer",
+"id": "-support-orcaslicer",
+"alt": "support-orcaslicer"
+}
+],
+"src": "releases/release_2_5_0.md"
+}

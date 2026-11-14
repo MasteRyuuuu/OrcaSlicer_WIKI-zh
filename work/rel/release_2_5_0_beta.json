@@ -1,0 +1,1606 @@
+[
+ {
+  "level": 1,
+  "title": "V2.5.0 Beta",
+  "prose": [
+   "This is the OrcaSlicer V2.5.0 Beta. It builds on the alpha with new features, faster prints and slicing, and fixes for many of the problems reported since the alpha. **Toolhead collision volumes** let a printer profile mark bed clips, tool docks and other obstacles above the bed, so Arrange, brims, most supports and travel moves keep clear of them. Travel moves are **shorter** on every print, usually saving print time with nothing to turn on, **evenly rounded infill corners** make smoothed sparse infill print faster, and **slicing runs up to twice as fast** on detailed models and many times faster on objects with thousands of parts. **Translucent filaments** now look see-through in Preview, and the beta fixes Mesh Boolean on Windows, random crashes on Apple silicon Macs and hangs on exit.",
+   "**Note:** This is a beta build for testing. Back up projects and profiles you care about, and please report any problems on GitHub."
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Slicing & Print Quality",
+  "prose": [],
+  "items": [
+   {
+    "title": "Toolhead collision volumes",
+    "rest": "by @Harry-Loud in [13777]({{L1}})",
+    "links": [
+     [
+      "13777",
+      "{{L1}}"
+     ]
+    ]
+   },
+   {
+    "title": "Shorter travel moves on every print",
+    "rest": "by @ianalexis and @gloth-3ds in [16492]({{L2}}) and [16743]({{L3}})",
+    "links": [
+     [
+      "16492",
+      "{{L2}}"
+     ],
+     [
+      "16743",
+      "{{L3}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster sparse infill from evenly rounded corners",
+    "rest": "by @ianalexis and @RF47 in [16694]({{L4}}) and [16707]({{L5}})",
+    "links": [
+     [
+      "16694",
+      "{{L4}}"
+     ],
+     [
+      "16707",
+      "{{L5}}"
+     ]
+    ]
+   },
+   {
+    "title": "Arc fitting for sparse infill only",
+    "rest": "by @ianalexis in [16747]({{L6}})",
+    "links": [
+     [
+      "16747",
+      "{{L6}}"
+     ]
+    ]
+   },
+   {
+    "title": "Top and bottom paint penetration layers",
+    "rest": "by @ianalexis in [16818]({{L7}})",
+    "links": [
+     [
+      "16818",
+      "{{L7}}"
+     ]
+    ]
+   },
+   {
+    "title": "High precision G-code (experimental)",
+    "rest": "by @valerii-bokhan in [16568]({{L8}})",
+    "links": [
+     [
+      "16568",
+      "{{L8}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "G-code & Placeholders",
+  "prose": [],
+  "items": [
+   {
+    "title": "Print time estimates that follow Klipper's motion planner",
+    "rest": "by @Gabriel-Hiss in [15545]({{L9}})",
+    "links": [
+     [
+      "15545",
+      "{{L9}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print statistics placeholders work in custom G-code",
+    "rest": "by @PanJany, @raistlin7447 and @downtime0 in [16348]({{L10}}), [16597]({{L11}}), [16680]({{L12}}) and [16272]({{L13}})",
+    "links": [
+     [
+      "16348",
+      "{{L10}}"
+     ],
+     [
+      "16597",
+      "{{L11}}"
+     ],
+     [
+      "16680",
+      "{{L12}}"
+     ],
+     [
+      "16272",
+      "{{L13}}"
+     ]
+    ]
+   },
+   {
+    "title": "Outline tolerance for exclude-object outlines",
+    "rest": "by @ghzserg in [16503]({{L14}})",
+    "links": [
+     [
+      "16503",
+      "{{L14}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Performance",
+  "prose": [],
+  "items": [
+   {
+    "title": "Faster slicing of detailed, painted and many-part models",
+    "rest": "by @SoftFever and @ExPikaPaka in [16741]({{L15}}), [16733]({{L16}}) and [15985]({{L17}})",
+    "links": [
+     [
+      "16741",
+      "{{L15}}"
+     ],
+     [
+      "16733",
+      "{{L16}}"
+     ],
+     [
+      "15985",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Faster startup",
+    "rest": "by @yw4z and @raistlin7447 in [16642]({{L18}}), [16645]({{L19}}) and [16670]({{L20}})",
+    "links": [
+     [
+      "16642",
+      "{{L18}}"
+     ],
+     [
+      "16645",
+      "{{L19}}"
+     ],
+     [
+      "16670",
+      "{{L20}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface & Usability",
+  "prose": [],
+  "items": [
+   {
+    "title": "Reorganized right-click menus",
+    "rest": "by @yw4z and @colintrachte in [14787]({{L21}}) and [16589]({{L22}})",
+    "links": [
+     [
+      "14787",
+      "{{L21}}"
+     ],
+     [
+      "16589",
+      "{{L22}}"
+     ]
+    ]
+   },
+   {
+    "title": "Order By for plates",
+    "rest": "by @ianalexis in [16850]({{L23}})",
+    "links": [
+     [
+      "16850",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "Choose a primitive's size when adding it",
+    "rest": "by @ianalexis in [16848]({{L24}})",
+    "links": [
+     [
+      "16848",
+      "{{L24}}"
+     ]
+    ]
+   },
+   {
+    "title": "Settings explain why they are hidden or disabled",
+    "rest": "by @Noisyfox in [16657]({{L25}})",
+    "links": [
+     [
+      "16657",
+      "{{L25}}"
+     ]
+    ]
+   },
+   {
+    "title": "Translucent filaments look translucent",
+    "rest": "by @ianalexis in [16776]({{L26}})",
+    "links": [
+     [
+      "16776",
+      "{{L26}}"
+     ]
+    ]
+   },
+   {
+    "title": "Opacity and gradients for custom AMS colors",
+    "rest": "by @Noisyfox in [16538]({{L27}})",
+    "links": [
+     [
+      "16538",
+      "{{L27}}"
+     ]
+    ]
+   },
+   {
+    "title": "Pick a color from the screen",
+    "rest": "by @yw4z in [16587]({{L28}})",
+    "links": [
+     [
+      "16587",
+      "{{L28}}"
+     ]
+    ]
+   },
+   {
+    "title": "Home tab polish",
+    "rest": "by @yw4z in [15785]({{L29}})",
+    "links": [
+     [
+      "15785",
+      "{{L29}}"
+     ]
+    ]
+   },
+   {
+    "title": "See below the plate in the painting tools",
+    "rest": "by @lamweilun in [16681]({{L30}})",
+    "links": [
+     [
+      "16681",
+      "{{L30}}"
+     ]
+    ]
+   },
+   {
+    "title": "Compact Texture Displacement panel",
+    "rest": "by @yw4z in [16524]({{L31}}) — **Budget**, **Resolution** and **Triangles** move into a collapsible **Quality** section, and **+ Add layer** sits in the layers header, so it stays in place while you add layers.",
+    "links": [
+     [
+      "16524",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "Restyled Import Model dialog",
+    "rest": "by @yw4z in [16768]({{L32}}) — the dialog for textured and colored models matches the rest of the app, and its dropdowns open on click instead of on hover.",
+    "links": [
+     [
+      "16768",
+      "{{L32}}"
+     ]
+    ]
+   },
+   {
+    "title": "3Dconnexion settings in the View menu",
+    "rest": "by @eoyilmaz in [16345]({{L33}}) — **View > Show 3Dconnexion Settings** opens the 3D mouse settings, which were only reachable by a keyboard shortcut that many macOS users couldn't use. Fixes #5484.",
+    "links": [
+     [
+      "16345",
+      "{{L33}}"
+     ]
+    ]
+   },
+   {
+    "title": "Ctrl+Q quits on Linux and Windows",
+    "rest": "by @lamweilun in [16722]({{L34}}) — just like Cmd+Q on macOS. It is listed in the Keyboard Shortcuts dialog and can be rebound.",
+    "links": [
+     [
+      "16722",
+      "{{L34}}"
+     ]
+    ]
+   },
+   {
+    "title": "Display backend in the Troubleshoot dialog",
+    "rest": "by @yw4z in [16615]({{L35}}) — on Linux, the Package line shows whether OrcaSlicer is drawing through Wayland or X11.",
+    "links": [
+     [
+      "16615",
+      "{{L35}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Plugins",
+  "prose": [],
+  "items": [
+   {
+    "title": "Plugins can edit the active presets, and Scripts run in the background",
+    "rest": "by @peachismomo in [16518]({{L36}})",
+    "links": [
+     [
+      "16518",
+      "{{L36}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugin permissions declared up front and remembered",
+    "rest": "by @peachismomo and @SoftFever in [16688]({{L37}}), [16690]({{L38}}), [16793]({{L39}}) and [16658]({{L40}})",
+    "links": [
+     [
+      "16688",
+      "{{L37}}"
+     ],
+     [
+      "16690",
+      "{{L38}}"
+     ],
+     [
+      "16793",
+      "{{L39}}"
+     ],
+     [
+      "16658",
+      "{{L40}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Printer Connectivity",
+  "prose": [],
+  "items": [
+   {
+    "title": "Klipper filament sync by filament ID",
+    "rest": "by @broncosis in [14423]({{L41}}) — when the tool managing your lanes (for example spoolman-lane-sync) writes an OrcaSlicer filament ID into Moonraker's `lane_data`, filament sync picks that exact filament preset instead of guessing from the material type.",
+    "links": [
+     [
+      "14423",
+      "{{L41}}"
+     ]
+    ]
+   },
+   {
+    "title": "Select All in the printer's storage",
+    "rest": "by @Eldenroot in [16716]({{L42}}) — when picking files in the Device tab's timelapse or model list for batch download or deletion, **Select All** selects every file in the list.",
+    "links": [
+     [
+      "16716",
+      "{{L42}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Walls, Seams & Supports",
+  "prose": [],
+  "items": [
+   {
+    "title": "Seams stay aligned and inside painted areas",
+    "rest": "by @DImagine in [16447]({{L43}}) and [16334]({{L44}})",
+    "links": [
+     [
+      "16447",
+      "{{L43}}"
+     ],
+     [
+      "16334",
+      "{{L44}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct wall order for narrow tube walls and outer brims",
+    "rest": "by @ianalexis in [16421]({{L45}})",
+    "links": [
+     [
+      "16421",
+      "{{L45}}"
+     ]
+    ]
+   },
+   {
+    "title": "Arachne wall order at pinched holes and with one wall on top",
+    "rest": "by @igiannakas in [16894]({{L46}})",
+    "links": [
+     [
+      "16894",
+      "{{L46}}"
+     ]
+    ]
+   },
+   {
+    "title": "Tree supports print completely, with extra walls only where needed",
+    "rest": "by @kisslorand in [16549]({{L47}})",
+    "links": [
+     [
+      "16549",
+      "{{L47}}"
+     ]
+    ]
+   },
+   {
+    "title": "Features print with their assigned filament",
+    "rest": "by @ianalexis in [16805]({{L48}})",
+    "links": [
+     [
+      "16805",
+      "{{L48}}"
+     ]
+    ]
+   },
+   {
+    "title": "Adaptive pressure advance on every layer",
+    "rest": "by @HanifKoh in [16857]({{L49}}) — a print whose travel speed matched its wall speed kept the first layer's pressure advance for the whole print. Adaptive PA now uses the real extrusion speed on every layer. Fixes #16737.",
+    "links": [
+     [
+      "16857",
+      "{{L49}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bed temperature with By Highest Temp",
+    "rest": "by @SoftFever in [16770]({{L50}}) — a filament that only starts above the first layer, such as a PETG support interface on a PLA part, raised the bed from layer 2 on and softened the part. The bed now follows only the first-layer filaments for the whole print, as in Bambu Studio. Fixes #16644.",
+    "links": [
+     [
+      "16770",
+      "{{L50}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Prime Tower & Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "Improved prime tower placement and sizing",
+    "rest": "by @HanifKoh in [16728]({{L51}}) and [16726]({{L52}})",
+    "links": [
+     [
+      "16728",
+      "{{L51}}"
+     ],
+     [
+      "16726",
+      "{{L52}}"
+     ]
+    ]
+   },
+   {
+    "title": "Prime tower right on the first slice",
+    "rest": "by @thelegendtubaguy in [16326]({{L53}}) — after a plate went from one filament to two, for example by adding a filament change at a layer or moving an object to another filament, the first slice could come out without a prime tower, and exporting then quietly re-sliced with one. Removing the change could do the reverse. The tower is now decided from the current model on every slice. Fixes #15991.",
+    "links": [
+     [
+      "16326",
+      "{{L53}}"
+     ]
+    ]
+   },
+   {
+    "title": "Valid wipe tower G-code in decimal-comma languages",
+    "rest": "by @HanifKoh and @lamweilun in [16717]({{L54}}) and [16789]({{L55}})",
+    "links": [
+     [
+      "16717",
+      "{{L54}}"
+     ],
+     [
+      "16789",
+      "{{L55}}"
+     ]
+    ]
+   },
+   {
+    "title": "Delete filaments down to one on dual-nozzle printers",
+    "rest": "by @SoftFever in [16856]({{L56}}) — on the Bambu Lab H2D, X2D and other printers whose nozzles share filaments, deleting filaments down to one left an empty second filament that came back after reopening or restarting. You can now go down to one, and projects saved with the empty slot open with one filament again. Fixes #16833.",
+    "links": [
+     [
+      "16856",
+      "{{L56}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flow ratio of 0 is refused",
+    "rest": "by @HanifKoh in [16719]({{L57}}) — a filament with **Flow ratio** 0 sliced without complaint and wrote huge negative extrusion on every move. Slicing now stops with a message naming the filament. Fixes #16712.",
+    "links": [
+     [
+      "16719",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "Repeatable Type 1 prime tower slices",
+    "rest": "by @anselor in [15183]({{L58}}) — when a config didn't list a value for every filament, slicing the same plate again could give a different tower size and number of tool changes. Missing values now fall back like other settings.",
+    "links": [
+     [
+      "15183",
+      "{{L58}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "G-code & Export",
+  "prose": [],
+  "items": [
+   {
+    "title": "Post-processing scripts run on G-code inside .gcode.3mf",
+    "rest": "by @ghzserg in [16464]({{L59}}) — on non-Bambu printers, post-processing scripts and slicing-pipeline plugins didn't run on the G-code packed into a `.gcode.3mf`, whether exported or sent to a print host. They now run on each plate's G-code before it is packed, and a failing script stops the export with its error. Fixes #1248 and #3974.",
+    "links": [
+     [
+      "16464",
+      "{{L59}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct first-layer bounding boxes for every plate in 3MF",
+    "rest": "by @ghzserg in [16860]({{L60}}) — for every plate except the first, the first-layer bounding boxes saved in a 3MF were offset outside the bed, so tools that read them for an adaptive bed mesh or purge placement got wrong values.",
+    "links": [
+     [
+      "16860",
+      "{{L60}}"
+     ]
+    ]
+   },
+   {
+    "title": "`{plate_name}` follows the plate's name",
+    "rest": "by @vertigo235, @yw4z and @cook0001 in [16715]({{L61}}) and [16900]({{L62}}) — the placeholder could come out empty in the output filename even when the plate had a name. After you rename a sliced plate, G-code that uses `{plate_name}` is marked out of date, and slicing again re-exports it with the new name without re-slicing. Each rename is also its own undo step. Fixes #16126 and #11570.",
+    "links": [
+     [
+      "16715",
+      "{{L61}}"
+     ],
+     [
+      "16900",
+      "{{L62}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unindexed placeholders use the current filament",
+    "rest": "by @tejas-devkar in [16211]({{L63}}) — in custom G-code, a placeholder written without an index, such as `{z_hop}`, could take another filament's or extruder's value, for example filament 2's Z-hop override while printing filament 1. Fixes #12804.",
+    "links": [
+     [
+      "16211",
+      "{{L63}}"
+     ]
+    ]
+   },
+   {
+    "title": "Layer pauses on the right layer in Preview",
+    "rest": "by @HanifKoh in [16718]({{L64}}) — the Preview showed pauses and color changes one or more layers too high, and the layer slider could show extra layers. The G-code was always right. Fixes #16693.",
+    "links": [
+     [
+      "16718",
+      "{{L64}}"
+     ]
+    ]
+   },
+   {
+    "title": "Correct layer number in the G-code conflict warning",
+    "rest": "by @kisslorand in [16588]({{L65}}) — the warning could name a layer that didn't match the height it reported.",
+    "links": [
+     [
+      "16588",
+      "{{L65}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Models, Plates & Tools",
+  "prose": [],
+  "items": [
+   {
+    "title": "More dependable Arrange, Scale to build volume and Lay on Face",
+    "rest": "by @lamweilun and @peachismomo in [16691]({{L66}}) and [16796]({{L67}})",
+    "links": [
+     [
+      "16691",
+      "{{L66}}"
+     ],
+     [
+      "16796",
+      "{{L67}}"
+     ]
+    ]
+   },
+   {
+    "title": "Select All and Delete All on the current plate",
+    "rest": "by @fer-marino and @thelegendtubaguy in [15895]({{L68}}) and [16881]({{L69}})",
+    "links": [
+     [
+      "15895",
+      "{{L68}}"
+     ],
+     [
+      "16881",
+      "{{L69}}"
+     ]
+    ]
+   },
+   {
+    "title": "Objects with a part off the plate can't be sliced",
+    "rest": "by @kisslorand in [16564]({{L70}}) — a multipart object still sliced when one of its parts sat entirely outside the plate. It now counts as partly outside, which blocks slicing and highlights the parts. Parts sunk entirely below the bed are still ignored, so you can slice the rest after a failed print.",
+    "links": [
+     [
+      "16564",
+      "{{L70}}"
+     ]
+    ]
+   },
+   {
+    "title": "Per-extruder print areas checked before slicing on non-Bambu printers",
+    "rest": "by @cgarwood82 in [14140]({{L71}}) — on multi-nozzle printers whose extruders have different printable areas, an object placed where its extruder can't reach wasn't flagged in the 3D view and only failed after slicing, with a misleading message. It's now flagged before slicing, as on Bambu Lab printers. A conflict on extruder 3 or higher, which blocked slicing without any message, now explains itself, and these errors no longer offer a \"regroup\" link that doesn't apply to such printers. Fixes #14070.",
+    "links": [
+     [
+      "14140",
+      "{{L71}}"
+     ]
+    ]
+   },
+   {
+    "title": "Cut connector holes at the right depth",
+    "rest": "by @tejas-devkar and @HanifKoh in [16020]({{L72}}) and [16893]({{L73}})",
+    "links": [
+     [
+      "16020",
+      "{{L72}}"
+     ],
+     [
+      "16893",
+      "{{L73}}"
+     ]
+    ]
+   },
+   {
+    "title": "Drop clears sinking, and Auto Drop stays off in 2.4 projects",
+    "rest": "by @yw4z and @lamweilun in [16501]({{L74}}) and [16633]({{L75}})",
+    "links": [
+     [
+      "16501",
+      "{{L74}}"
+     ],
+     [
+      "16633",
+      "{{L75}}"
+     ]
+    ]
+   },
+   {
+    "title": "Move tool alignment follows the selection",
+    "rest": "by @lamweilun in [16730]({{L76}}) — align and distribute no longer get stuck in Plate mode, and with the **Object** coordinate system they work along the object's own rotated axes. The Move and Scale tools also no longer switch from Object back to World on their own.",
+    "links": [
+     [
+      "16730",
+      "{{L76}}"
+     ]
+    ]
+   },
+   {
+    "title": "Texture displacement bakes every painted part",
+    "rest": "by @ExPikaPaka in [16721]({{L77}}) — only the first part of an object was baked, and paint on the other parts was ignored. All painted parts are now baked together, in one job and one undo step. Fixes #16559.",
+    "links": [
+     [
+      "16721",
+      "{{L77}}"
+     ]
+    ]
+   },
+   {
+    "title": "Models with JPEG textures keep them on import",
+    "rest": "by @RJAudas in [16607]({{L78}}) — GLB and OBJ models textured with JPEG images lost their textures, and matching texture colors to filaments could crash. GLB, glTF and FBX files can now also be dropped onto the window or opened from the OS. Fixes #16606.",
+    "links": [
+     [
+      "16607",
+      "{{L78}}"
+     ]
+    ]
+   },
+   {
+    "title": "Chinese, Japanese and Korean input in the Text tool",
+    "rest": "by @SoftFever in [16824]({{L79}}) — on macOS, input methods didn't work in the Text tool and other text fields in the 3D view. With the interface in Chinese, Japanese or Korean, the Text tool's default text could also show as \"????\" when the system font lacked those characters; new text now starts in a bundled font that can show it.",
+    "links": [
+     [
+      "16824",
+      "{{L79}}"
+     ]
+    ]
+   },
+   {
+    "title": "Hold +/− to keep changing a value",
+    "rest": "by @yw4z in [16525]({{L80}}) — in the 3D-view tools, such as the Text tool's height and depth, holding the buttons next to a number field changed the value only once.",
+    "links": [
+     [
+      "16525",
+      "{{L80}}"
+     ]
+    ]
+   },
+   {
+    "title": "Lay on Face opens without a delay",
+    "rest": "by @raistlin7447 in [16846]({{L81}}) — with **Smooth normals** on, opening Lay on Face on a newly selected object froze the interface for about half a second.",
+    "links": [
+     [
+      "16846",
+      "{{L81}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Presets, Projects & Command Line",
+  "prose": [],
+  "items": [
+   {
+    "title": "Open 2.4 projects with custom filaments",
+    "rest": "by @raistlin7447 in [16569]({{L82}}) — a project saved by 2.4 with a custom filament based on a system filament could fail with \"bad allocation\" and load with no geometry. Fixes #16562.",
+    "links": [
+     [
+      "16569",
+      "{{L82}}"
+     ]
+    ]
+   },
+   {
+    "title": "Deleting a custom printer keeps presets other printers use",
+    "rest": "by @SoftFever in [16928]({{L83}})",
+    "links": [
+     [
+      "16928",
+      "{{L83}}"
+     ]
+    ]
+   },
+   {
+    "title": "Disabled filament overrides stay off",
+    "rest": "by @HanifKoh in [16650]({{L84}}) — an override switched off on the filament's **Setting Overrides** page, such as **Retract amount before wipe**, came back on after a restart whenever the parent preset set it. Fixes #13943.",
+    "links": [
+     [
+      "16650",
+      "{{L84}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash selecting a printer from a vendor that isn't installed",
+    "rest": "by @HanifKoh in [16579]({{L85}}) — selecting a user printer preset based on such a printer, which you get by saving the printer of another vendor's project, crashed OrcaSlicer, and so did the Create Printer and Create Filament dialogs. Fixes #16554.",
+    "links": [
+     [
+      "16579",
+      "{{L85}}"
+     ]
+    ]
+   },
+   {
+    "title": "Invalid preset names are refused",
+    "rest": "by @yw4z in [15579]({{L86}}) — the Save preset dialog accepted invalid names, including an empty one. **OK** stays greyed out until the name is valid, and preset and physical printer names can no longer contain control characters, use a Windows reserved name such as CON or COM1, or run too long to be saved as a file on every system.",
+    "links": [
+     [
+      "15579",
+      "{{L86}}"
+     ]
+    ]
+   },
+   {
+    "title": "No empty \"newer 3MF\" warning in nightlies",
+    "rest": "by @HanifKoh in [16791]({{L87}}) — opening a project saved by 2.5.0-alpha in a nightly build warned that the file was from a newer version and listed nothing. When the warning does appear, it now lists the unrecognized settings. Fixes #16771.",
+    "links": [
+     [
+      "16791",
+      "{{L87}}"
+     ]
+    ]
+   },
+   {
+    "title": "Command-line fixes",
+    "rest": "by @thelegendtubaguy, @thereprocase and @andrewgribben in [16703]({{L88}}), [16867]({{L89}}) and [15998]({{L90}}) — projects that don't record which settings differ from the system presets were sliced with the system values instead of their own, for example with supports turned off. Loading two or more filaments with `--load-filaments` and no `--filament-colour` could crash or silently drop layers printed with filament 2 or later. Fixes #16698, #15632, #14181 and #12426.",
+    "links": [
+     [
+      "16703",
+      "{{L88}}"
+     ],
+     [
+      "16867",
+      "{{L89}}"
+     ],
+     [
+      "15998",
+      "{{L90}}"
+     ]
+    ]
+   },
+   {
+    "title": "Command line reports values it replaced",
+    "rest": "by @packerlschupfer in [16305]({{L91}}) and [16303]({{L92}}) — when a preset or 3MF held a value OrcaSlicer can't read, such as an invalid **Ironing type**, the CLI quietly used the default instead, slicing with ironing off in that example. Each replacement is now printed to stderr and listed in `result.json` under `warnings` with the class `config_value_substituted`. Exit codes are unchanged, and `--strict` doesn't fail on these. `result.json` and `--pipe` progress are also written when an object or file name isn't valid UTF-8, where `result.json` used to be missing and a `--pipe` run aborted.",
+    "links": [
+     [
+      "16305",
+      "{{L91}}"
+     ],
+     [
+      "16303",
+      "{{L92}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Calibration",
+  "prose": [],
+  "items": [
+   {
+    "title": "Flow ratio calibration works with an automatic default line width",
+    "rest": "by @HanifKoh in [16725]({{L93}}) — with the process preset's **Default line width** at 0 (auto), the test crashed for every test type. It now works with any line width, and its speed cap uses the line width the test actually prints, so it stays within the filament's max volumetric speed. Fixes #16560 and #15193.",
+    "links": [
+     [
+      "16725",
+      "{{L93}}"
+     ]
+    ]
+   },
+   {
+    "title": "Calibrate AMS filaments on either nozzle with a Filament Track Switch",
+    "rest": "by @HanifKoh in [16632]({{L94}}) — on an H2C, H2D or X2D with a Filament Track Switch, the calibration wizard's Flow Dynamics page listed every AMS under the right nozzle only. Each AMS now appears under both nozzles, as in Bambu Studio, and a filament is calibrated on the nozzle you picked it for.",
+    "links": [
+     [
+      "16632",
+      "{{L94}}"
+     ]
+    ]
+   },
+   {
+    "title": "Temperature tower heats the right nozzle",
+    "rest": "by @HanifKoh in [16898]({{L95}}) — on multi-tool printers, a temperature tower printed with any tool but the first stepped the temperature of the wrong nozzle. Each step now names the tool printing the tower. Fixes #16896.",
+    "links": [
+     [
+      "16898",
+      "{{L95}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Keyboard shortcuts work again in the 3D view",
+    "rest": "by @raistlin7447 in [16558]({{L96}}) and [16673]({{L97}})",
+    "links": [
+     [
+      "16558",
+      "{{L96}}"
+     ],
+     [
+      "16673",
+      "{{L97}}"
+     ]
+    ]
+   },
+   {
+    "title": "Sidebar sections stay open after closing a dialog",
+    "rest": "by @yw4z in [16600]({{L98}}) — closing a filament, printer or connection dialog with its button over the Printer or Filament title bar could fold that section.",
+    "links": [
+     [
+      "16600",
+      "{{L98}}"
+     ]
+    ]
+   },
+   {
+    "title": "\"No available printers\" in the send dialogs",
+    "rest": "by @HanifKoh in [16611]({{L99}}) — with no printer available, the printer box was blank and opened an empty strip.",
+    "links": [
+     [
+      "16611",
+      "{{L99}}"
+     ]
+    ]
+   },
+   {
+    "title": "Nozzle card hidden when there's nothing to choose",
+    "rest": "by @thelegendtubaguy in [16803]({{L100}}) — on non-Bambu multi-tool printers without nozzle flow variants, the sidebar no longer lists every tool with a \"Standard\"-only dropdown.",
+    "links": [
+     [
+      "16803",
+      "{{L100}}"
+     ]
+    ]
+   },
+   {
+    "title": "Official Bambu filament colors",
+    "rest": "by @bwees in [16706]({{L101}}) — clicking the color of a Bambu filament such as Bambu PLA Basic opened the generic color picker instead of the list of official colors. Fixes #16700.",
+    "links": [
+     [
+      "16706",
+      "{{L101}}"
+     ]
+    ]
+   },
+   {
+    "title": "Text fields open with their values",
+    "rest": "by @kenrap in [15881]({{L102}}) — some fields that should start with a value opened empty, such as the rename box for files attached on the Project page and the Bambu Lab connect-by-IP dialog.",
+    "links": [
+     [
+      "15881",
+      "{{L102}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clearer Seam gap tooltip",
+    "rest": "by @tejas-devkar in [15983]({{L103}}) — it now says that a percentage value is relative to the nozzle diameter. Fixes #10147.",
+    "links": [
+     [
+      "15983",
+      "{{L103}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Plugins",
+  "prose": [],
+  "items": [
+   {
+    "title": "Bundled Python leaves the app untouched",
+    "rest": "by @HanifKoh in [16550]({{L104}}) — on macOS, the first start of the alpha rewrote files inside the app and broke its code signature, so a copy moved to another Mac failed Gatekeeper. Python's compiled files now go in OrcaSlicer's data folder, which also stops read-only installs such as the AppImage and Flatpak from recompiling them on every launch.",
+    "links": [
+     [
+      "16550",
+      "{{L104}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins can't change their own permissions",
+    "rest": "by @peachismomo in [16634]({{L105}}) — plugins can no longer read or edit the file that records their granted permissions and enabled state.",
+    "links": [
+     [
+      "16634",
+      "{{L105}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugin threads go through permission checks",
+    "rest": "by @peachismomo in [16682]({{L106}}) — work a plugin does in its own threads now gets the same prompts and remembered grants as its main code, so a background thread can't get around them.",
+    "links": [
+     [
+      "16682",
+      "{{L106}}"
+     ]
+    ]
+   },
+   {
+    "title": "No prompts for Python's standard library",
+    "rest": "by @peachismomo in [16669]({{L107}}) — importing part of the standard library no longer asks about every file involved.",
+    "links": [
+     [
+      "16669",
+      "{{L107}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins on Flatpak can use the data folder",
+    "rest": "by @peachismomo in [16685]({{L108}}) — every file a plugin opened in OrcaSlicer's data folder, its own included, was refused because the Flatpak's path contains a folder named `config`. Fixes #16656.",
+    "links": [
+     [
+      "16685",
+      "{{L108}}"
+     ]
+    ]
+   },
+   {
+    "title": "HTTPS works from plugins on macOS",
+    "rest": "by @SoftFever in [16638]({{L109}}) — every HTTPS request a plugin made failed with `CERTIFICATE_VERIFY_FAILED`. Fixes #16596.",
+    "links": [
+     [
+      "16638",
+      "{{L109}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins start on more Windows PCs",
+    "rest": "by @lamweilun in [16888]({{L110}}) — on some computers, activating plugins failed with \"Python Interpreter not initialized … The interpreter is already running.\"",
+    "links": [
+     [
+      "16888",
+      "{{L110}}"
+     ]
+    ]
+   },
+   {
+    "title": "Missing-plugin notices follow preset changes",
+    "rest": "by @lamweilun in [16897]({{L111}}) — the notice offering to install or enable a plugin the selected preset needs now appears or clears whenever presets change, plugins load or unload, or you start a new project.",
+    "links": [
+     [
+      "16897",
+      "{{L111}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Linux, macOS & Windows",
+  "prose": [],
+  "items": [
+   {
+    "title": "Mesh Boolean works again on Windows",
+    "rest": "by @raistlin7447 in [16651]({{L112}})",
+    "links": [
+     [
+      "16651",
+      "{{L112}}"
+     ]
+    ]
+   },
+   {
+    "title": "Random crashes on Apple silicon Macs",
+    "rest": "by @HanifKoh in [16686]({{L113}})",
+    "links": [
+     [
+      "16686",
+      "{{L113}}"
+     ]
+    ]
+   },
+   {
+    "title": "Linux no longer asks for the discrete GPU by default",
+    "rest": "by @HanifKoh in [16875]({{L114}})",
+    "links": [
+     [
+      "16875",
+      "{{L114}}"
+     ]
+    ]
+   },
+   {
+    "title": "Wayland dropdowns open and stay open",
+    "rest": "by @SoftFever in [16799]({{L115}}) and [16813]({{L116}}) — dropdowns open on the first click when a tooltip is showing, and resting on a preset with a truncated name no longer closes the list just as its full-name tooltip appears. Fixes #16595 and #16800.",
+    "links": [
+     [
+      "16799",
+      "{{L115}}"
+     ],
+     [
+      "16813",
+      "{{L116}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flatpak starts with any regional format",
+    "rest": "by @SoftFever in [16801]({{L117}}) — it failed to start when the desktop's currency, date or measurement formats used a language not installed for the Flatpak runtime. Fixes #16617.",
+    "links": [
+     [
+      "16801",
+      "{{L117}}"
+     ]
+    ]
+   },
+   {
+    "title": "Built-in web pages work in Linux virtual machines",
+    "rest": "by @lamweilun in [16598]({{L118}}) — in x86 VirtualBox, VMware and QEMU guests, the Device tab, setup wizard and other web pages were broken. They now work with WebKitGTK 2.44 or newer.",
+    "links": [
+     [
+      "16598",
+      "{{L118}}"
+     ]
+    ]
+   },
+   {
+    "title": "Web content at the right size on Windows",
+    "rest": "by @lamweilun in [16761]({{L119}}) — with the Windows text size above 100%, the web parts of dialogs such as the Color Picker, Plugins and Speed Dial looked zoomed in. They now scale with the monitor's DPI, like the rest of OrcaSlicer.",
+    "links": [
+     [
+      "16761",
+      "{{L119}}"
+     ]
+    ]
+   },
+   {
+    "title": "Mouse pointer stays visible after the Speed Dial on Windows",
+    "rest": "by @thelegendtubaguy and @lamweilun in [16880]({{L120}}) — with recent versions of Microsoft's WebView2, closing the Speed Dial with Enter after typing left the pointer hidden over all of OrcaSlicer until the dial was opened again. Fixes #16868.",
+    "links": [
+     [
+      "16880",
+      "{{L120}}"
+     ]
+    ]
+   },
+   {
+    "title": "Preview shows toolpaths on Parallels Desktop",
+    "rest": "by @SoftFever in [16829]({{L121}}) — Windows in a Parallels virtual machine on Apple silicon showed the legend and seams but no toolpaths.",
+    "links": [
+     [
+      "16829",
+      "{{L121}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Crashes & Closing",
+  "prose": [],
+  "items": [
+   {
+    "title": "OrcaSlicer always finishes closing",
+    "rest": "by @HanifKoh in [16766]({{L122}}), [16762]({{L123}}), [16763]({{L124}}), [16764]({{L125}}) and [16765]({{L126}})",
+    "links": [
+     [
+      "16766",
+      "{{L122}}"
+     ],
+     [
+      "16762",
+      "{{L123}}"
+     ],
+     [
+      "16763",
+      "{{L124}}"
+     ],
+     [
+      "16764",
+      "{{L125}}"
+     ],
+     [
+      "16765",
+      "{{L126}}"
+     ]
+    ]
+   },
+   {
+    "title": "Crash right after starting a multi-filament slice",
+    "rest": "by @HanifKoh in [16649]({{L127}}) — it was most likely to happen after changing a setting that only affects the prime tower or G-code, such as the cyclic toolchange order.",
+    "links": [
+     [
+      "16649",
+      "{{L127}}"
+     ]
+    ]
+   },
+   {
+    "title": "Random crash while slicing in Russian",
+    "rest": "by @raistlin7447 in [16664]({{L128}}) — one of the daily tips shown while slicing was malformed in Russian and crashed the app whenever it came up. A malformed tip can no longer crash it in any language.",
+    "links": [
+     [
+      "16664",
+      "{{L128}}"
+     ]
+    ]
+   },
+   {
+    "title": "Send dialog crash with mixed printers",
+    "rest": "by @elcolumbio in [16599]({{L129}}) — **Print plate** crashed when the plate was sliced for a single-nozzle printer such as an A1 while the send dialog had a two-extruder printer such as an X2D selected. The dialog now shows the usual incompatible-printer message.",
+    "links": [
+     [
+      "16599",
+      "{{L129}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Printer Connectivity & Cloud",
+  "prose": [],
+  "items": [
+   {
+    "title": "Klipper printers no longer hang closing or startup",
+    "rest": "by @raistlin7447 in [16604]({{L130}}), [16675]({{L131}}) and [16668]({{L132}})",
+    "links": [
+     [
+      "16604",
+      "{{L130}}"
+     ],
+     [
+      "16675",
+      "{{L131}}"
+     ],
+     [
+      "16668",
+      "{{L132}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality fixes for unresponsive printers and K1 prints without a CFS",
+    "rest": "by @raistlin7447 and @HanifKoh in [16772]({{L133}}) and [16794]({{L134}})",
+    "links": [
+     [
+      "16772",
+      "{{L133}}"
+     ],
+     [
+      "16794",
+      "{{L134}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi Box filament sync works with new firmware",
+    "rest": "by @thelegendtubaguy in [16679]({{L135}}) — after recent firmware updates for the Q2, Q2C, X-Plus 5 and X-Max 4, syncing filaments from the Qidi Box crashed OrcaSlicer. It now works with old and new firmware. Fixes #16660 and #16661.",
+    "links": [
+     [
+      "16679",
+      "{{L135}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab cloud features that did nothing",
+    "rest": "by @fer-marino in [15908]({{L136}}) — firmware information on the Device tab's Update page, rating a finished print on MakerWorld, the MakerWorld task list when sending to multiple printers, and the camera in the Part Skip and Send to Printer dialogs now reach the Bambu network plug-in.",
+    "links": [
+     [
+      "15908",
+      "{{L136}}"
+     ]
+    ]
+   },
+   {
+    "title": "HMS errors show their message on the X2D, A2L and H2C",
+    "rest": "by @downtime0 in [16267]({{L137}}) — printer errors showed as \"Unknown error.\" instead of their message and code.",
+    "links": [
+     [
+      "16267",
+      "{{L137}}"
+     ]
+    ]
+   },
+   {
+    "title": "No reconnect after a Bambu Lab LAN print",
+    "rest": "by @downtime0 in [16271]({{L138}}) — sending a print over LAN to the selected printer disconnected and reconnected it, which could crash OrcaSlicer right after the job was sent.",
+    "links": [
+     [
+      "16271",
+      "{{L138}}"
+     ]
+    ]
+   },
+   {
+    "title": "H2C nozzle rack recognizes the filament in each hotend",
+    "rest": "by @HanifKoh in [16612]({{L139}}) — the H2C couldn't tell that a rack hotend already held the requested filament, and the Device tab couldn't name the filament in a rack nozzle.",
+    "links": [
+     [
+      "16612",
+      "{{L139}}"
+     ]
+    ]
+   },
+   {
+    "title": "Web Device page keeps its state",
+    "rest": "by @lamweilun and @SoftFever in [16755]({{L140}}) and [16806]({{L141}}) — switching back to the web Device tab, or reselecting the same printer, reloaded the printer's web interface (Mainsail, Fluidd and so on) and lost its state. On macOS, OrcaSlicer could also crash shortly after startup when the page finished loading while a context menu was open. Fixes #16752.",
+    "links": [
+     [
+      "16755",
+      "{{L140}}"
+     ],
+     [
+      "16806",
+      "{{L141}}"
+     ]
+    ]
+   },
+   {
+    "title": "SimplyPrint imports the uploaded file",
+    "rest": "by @cjavad in [16555]({{L142}}) — with **Switch to Device tab after upload** ticked, the Device tab opened the SimplyPrint panel's home page instead of importing the file.",
+    "links": [
+     [
+      "16555",
+      "{{L142}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unexpected Orca Cloud sign-outs",
+    "rest": "by @andrewsoonqn in [14781]({{L143}}) — on macOS and Linux, two cloud operations refreshing your login at the same moment could sign you out.",
+    "links": [
+     [
+      "14781",
+      "{{L143}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🧰 Platform & Build",
+  "prose": [],
+  "items": [
+   {
+    "title": "Smaller install",
+    "rest": "by @yw4z in [16665]({{L144}}) — removing two unused Noto Sans KR fonts saves about 12 MB; Korean text has used NanumGothic for a long time. Embossed text set in Noto Sans KR on macOS and Flatpak now shows the \"Can't load exactly same font\" warning.",
+    "links": [
+     [
+      "16665",
+      "{{L144}}"
+     ]
+    ]
+   },
+   {
+    "title": "Image library security updates",
+    "rest": "by @mosfet80 and @raistlin7447 in [16819]({{L145}}), [16828]({{L146}}) and [16851]({{L147}}) — libpng is updated from 1.6.35 to 1.6.59, which fixes a long list of published vulnerabilities, and OpenCV, updated to 4.14.0, uses it instead of its own older copy for PNG textures in imported models.",
+    "links": [
+     [
+      "16819",
+      "{{L145}}"
+     ],
+     [
+      "16828",
+      "{{L146}}"
+     ],
+     [
+      "16851",
+      "{{L147}}"
+     ]
+    ]
+   },
+   {
+    "title": "FreeType removed",
+    "rest": "by @raistlin7447 in [16852]({{L148}}) — OrcaSlicer no longer builds or ships the unused library.",
+    "links": [
+     [
+      "16852",
+      "{{L148}}"
+     ]
+    ]
+   },
+   {
+    "title": "Build against system Boost 1.87 or newer",
+    "rest": "by @kenrap in [15835]({{L149}}) — for FreeBSD and Linux distribution packagers.",
+    "links": [
+     [
+      "15835",
+      "{{L149}}"
+     ]
+    ]
+   },
+   {
+    "title": "Gentoo in `build_linux.sh`",
+    "rest": "by @MihaiMocanuGit in [16566]({{L150}}) — `./build_linux.sh -u` recognizes Gentoo again and installs its dependencies. Fixes #16567.",
+    "links": [
+     [
+      "16566",
+      "{{L150}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "New Printer Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "Qidi X-Smart 5",
+    "rest": "— 180 × 180 × 180 mm Klipper printer with 0.2, 0.4, 0.6 and 0.8 mm nozzles, bed model, 17 process presets and about 57 filament profiles, by @QIDI-Official in [16734]({{L151}})",
+    "links": [
+     [
+      "16734",
+      "{{L151}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "School House Spools",
+    "rest": "— Matte PLA, Silk PLA, Marble PLA, TPU 95A, Matte PETG and Transparent PETG in the Orca Filament Library, by @getsmart77 in [16780]({{L152}})",
+    "links": [
+     [
+      "16780",
+      "{{L152}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Profile Updates & Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Profile changes reach existing installs",
+    "rest": "— the Orca Filament Library and the Elegoo, M3D, Meltingplot, OrcaArena, Pragostroj, Qidi, RH3D, Wanhao France and WonderMaker bundles changed without a version bump, so installs that already had them kept the old profiles. Their versions are raised, so changes such as the School House Spools filaments and the Qidi X-Smart 5 install on upgrade, by @HanifKoh in [16919]({{L153}}) and [16924]({{L154}})",
+    "links": [
+     [
+      "16919",
+      "{{L153}}"
+     ],
+     [
+      "16924",
+      "{{L154}}"
+     ]
+    ]
+   },
+   {
+    "title": "AnkerMake M5, M5 All-Metal and M5C",
+    "rest": "— G-code files start with the filament weight and length, layer height and first-layer nozzle temperature, so the printer's touchscreen shows the filament used, by @robertbaker in [16571]({{L155}})",
+    "links": [
+     [
+      "16571",
+      "{{L155}}"
+     ]
+    ]
+   },
+   {
+    "title": "Anycubic Kobra 2",
+    "rest": "— the 0.4 mm profile's layer-change G-code writes its layer line as a comment instead of an invalid command, by @RJAudas in [16381]({{L156}}) (Fixes #16219)",
+    "links": [
+     [
+      "16381",
+      "{{L156}}"
+     ]
+    ]
+   },
+   {
+    "title": "Bambu Lab",
+    "rest": "— the filament **Exhaust fan** settings are back on the X1, X1 Carbon, P1S, P2S, H2D, H2D Pro, H2S and X2D, including in projects saved with the alpha, so filaments that use air filtration run the exhaust fan again as in 2.4.2, by @SoftFever in [16792]({{L157}}) (Fixes #14013)",
+    "links": [
+     [
+      "16792",
+      "{{L157}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge",
+    "rest": "— Adventurer 5M, 5M Pro, AD5X, Adventurer A5, Creator 5 and Creator 5 Pro presets set **Outline tolerance** to 0.2 mm, so crowded plates are less likely to hit \"Timer too close\", by @ghzserg in [16687]({{L158}})",
+    "links": [
+     [
+      "16687",
+      "{{L158}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi",
+    "rest": "— the Q2, Q2C and X-Max 4 get the bed plate type selector, X-Max 4 and X-Plus 5 process presets turn off **Enable accel_to_decel**, and X-Plus 5 presets set the small perimeter threshold to 0, by @QIDI-Official in [16734]({{L159}})",
+    "links": [
+     [
+      "16734",
+      "{{L159}}"
+     ]
+    ]
+   },
+   {
+    "title": "re:3D GigabotX 2, GigabotX 2 XLT and TerabotX 2",
+    "rest": "— **Seam gap** is 10% of the nozzle diameter instead of 10 mm, by @re3Dev in [16739]({{L160}})",
+    "links": [
+     [
+      "16739",
+      "{{L160}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker U1",
+    "rest": "— the start G-code sets the top cover purifier from the filaments on the plate (strong cooling for PLA and TPU, weak for PETG, keep-warm for ABS and ASA) and follows the rest of Snapmaker's latest start G-code, with U1 filament softening temperatures from Snapmaker. It needs U1 firmware 1.3.0 or later; older firmware reports an unknown command and keeps printing. By @raistlin7447 in [16590]({{L161}})",
+    "links": [
+     [
+      "16590",
+      "{{L161}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker",
+    "rest": "— process presets use the top and bottom paint penetration values from Snapmaker's own build of OrcaSlicer: some U1 presets color deeper and others shallower, and many A250, A350, Artisan and J1 presets color fewer layers, saving filament changes on painted prints, by @ianalexis in [16821]({{L162}})",
+    "links": [
+     [
+      "16821",
+      "{{L162}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [
+   "* Simplified Chinese translation revised by @SoftFever in [16865]({{L165}}), fixing about 475 strings for meaning, consistent terms and natural wording, and the new strings translated into Simplified and Traditional Chinese in [16904]({{L166}}) * Japanese translation revised by @SoftFever in [16874]({{L167}}), fixing about 940 strings, including tooltips that said the opposite of the English, and the new strings translated in [16905]({{L168}}) * French translation updates by @Surfoo in [16591]({{L169}}), with about 425 new strings and term fixes, and the new strings translated by @SoftFever in [16908]({{L170}}) * German translation of the new strings by @SoftFever in [16907]({{L171}}) * Brazilian Portuguese color picker translated by @afmenez in [16585]({{L172}}), and about 350 AI translations reviewed in [16749]({{L173}}) * Basque translation updates by @mgoiogana in [16666]({{L174}}) * Consistent spelling of \"G-code\", \"SVG\", \"GitHub\" and \"IP\" in English messages by @afmenez in [16618]({{L175}})"
+  ],
+  "items": [
+   {
+    "title": "Translation gaps filled across all 22 languages",
+    "rest": "by @ianalexis in [16652]({{L163}}) and [16815]({{L164}})",
+    "links": [
+     [
+      "16652",
+      "{{L163}}"
+     ],
+     [
+      "16815",
+      "{{L164}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L179}}\">{{I34}}</a>",
+   "<a href=\"{{L180}}\">{{I35}}</a>"
+  ],
+  "items": []
+ }
+]

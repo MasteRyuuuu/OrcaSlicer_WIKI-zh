@@ -1,0 +1,263 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"<img width=\"500\" alt=\"Application section of the Keyboard Shortcuts dialog with the Go to tab shortcuts, unbound by default\" src=\"https://github.com/user-attachments/assets/a0e52375-e8a8-43b2-8a06-c41f3b77d4b3\" />",
+"<img width=\"400\" alt=\"Connection failure message with only the error code\" src=\"https://github.com/user-attachments/assets/8f0f9844-58b5-4180-9700-74a1ae02dcbd\" />",
+"<img width=\"400\" alt=\"Connection failure message listing what to check\" src=\"https://github.com/user-attachments/assets/295d0b29-3989-4e1d-a2c9-cc02c0655039\" />",
+"<img width=\"400\" alt=\"Tree supports growing into the XY clearance around the model\" src=\"https://github.com/user-attachments/assets/10d724ab-5562-4088-8f64-e3179ef9ae82\" />",
+"<img width=\"400\" alt=\"Tree supports staying outside the XY clearance\" src=\"https://github.com/user-attachments/assets/a0fd2556-045b-4727-83ce-84b60939d9c8\" />",
+"<img width=\"400\" alt=\"Slicing refused because of the prime tower layer height check\" src=\"https://github.com/user-attachments/assets/2982d71a-f5fd-49bb-a784-676a6b780b8d\" />",
+"<img width=\"400\" alt=\"The same project sliced with a prime tower\" src=\"https://github.com/user-attachments/assets/9c2835fc-58ae-4b50-a57e-8a692b2b0c20\" />",
+"<img width=\"400\" alt=\"A mixed-color object flagged against an extruder that doesn't print it\" src=\"https://github.com/user-attachments/assets/07db51e3-6393-4ac0-bf20-19255daffe8b\" />",
+"<img width=\"400\" alt=\"The same object accepted, checked against its component extruders\" src=\"https://github.com/user-attachments/assets/2b286ed8-a042-43cc-beac-c3dfdb03bc3c\" />",
+"<img width=\"650\" alt=\"AltGr+3 in Post-processing Scripts switching to Preview before, and staying in the box after\" src=\"https://github.com/user-attachments/assets/9d32e607-03fc-4609-ae35-dc8ed052871d\" />",
+"<img width=\"600\" alt=\"Filament slots after an AMS sync and a restart, before and after the fix\" src=\"https://github.com/user-attachments/assets/0e9cf91e-1fa2-451c-94dc-63d0451b51aa\" />",
+"<img width=\"700\" alt=\"H2C print dialog in German with the missing hotends warning before, and without it after\" src=\"https://github.com/user-attachments/assets/85f50387-4106-4ad1-bb4f-0a9c73775b6f\" />",
+"<img src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"Support on Ko-fi\">",
+"<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"Donate via PayPal\">"
+],
+"link": [
+"https://www.orcaslicer.com/wiki/releases/release_2_5_0_alpha",
+"https://www.orcaslicer.com/wiki/releases/release_2_5_0_beta",
+"https://cloud.orcaslicer.com/app/plugins/plugin-hub",
+"https://www.orcaslicer.com/wiki/plugin_development",
+"https://github.com/OrcaSlicer/OrcaSlicer/issues",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Windows_Installer_V2.5.0-rc_x64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Windows_Installer_V2.5.0-rc_arm64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Windows_V2.5.0-rc_x64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Windows_V2.5.0-rc_arm64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Mac_universal_V2.5.0-rc.dmg",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.5.0-rc.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V2.5.0-rc.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer-Linux-flatpak_V2.5.0-rc_x86_64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/OrcaSlicer-Linux-flatpak_V2.5.0-rc_aarch64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0-rc/Debug_PDB_V2.5.0-rc_for_developers_only.7z",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16301",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16918",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16273",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16723",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15180",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16931",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17058",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16965",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17060",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15441",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17000",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16947",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17074",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17002",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17095",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17016",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15296",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16942",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16958",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16957",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17003",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17011",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16940",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16971",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16984",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17014",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16978",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15896",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16536",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16882",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16918",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16921",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16967",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16973",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17087",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17040",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17066",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17013",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16963",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16948",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16983",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16997",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16994",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17015",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17045",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17086",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17079",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16968",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16970",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15547",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15857",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15858",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17021",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16986",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16926",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17082",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16976",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16951",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17032",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16932",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17028",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16922",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16914",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16943",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17052",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17055",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16871",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16849",
+"https://github.com/user-attachments/assets/d4e41d85-9431-453c-aac1-711c615416fd",
+"https://github.com/user-attachments/assets/9e957899-60a4-4dad-83ab-a899274c9306",
+"https://github.com/user-attachments/assets/53315b8c-5856-46cb-bde3-c641da342679",
+"https://github.com/user-attachments/assets/f57fd669-a63b-4072-8799-9072cc5c5925",
+"https://ko-fi.com/G2G5IP3CP",
+"https://paypal.me/softfever3d"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "V2.5.0 RC",
+"raw": "V2.5.0 RC",
+"id": "v250-rc",
+"alt": "v250-rc"
+},
+{
+"level": 2,
+"en": "Downloads",
+"raw": "Downloads",
+"id": "downloads",
+"alt": "downloads"
+},
+{
+"level": 1,
+"en": "🌊 New Features & Improvements",
+"raw": "🌊 New Features & Improvements",
+"id": "-new-features-improvements",
+"alt": "new-features-improvements"
+},
+{
+"level": 1,
+"en": "🛠️ Bug Fixes",
+"raw": "🛠️ Bug Fixes",
+"id": "-bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 2,
+"en": "Slicing & Supports",
+"raw": "Slicing & Supports",
+"id": "slicing-supports",
+"alt": "slicing-supports"
+},
+{
+"level": 2,
+"en": "Prime Tower & Multi-Material",
+"raw": "Prime Tower & Multi-Material",
+"id": "prime-tower-multi-material",
+"alt": "prime-tower-multi-material"
+},
+{
+"level": 2,
+"en": "G-code & Export",
+"raw": "G-code & Export",
+"id": "g-code-export",
+"alt": "g-code-export"
+},
+{
+"level": 2,
+"en": "Prepare & Preview",
+"raw": "Prepare & Preview",
+"id": "prepare-preview",
+"alt": "prepare-preview"
+},
+{
+"level": 2,
+"en": "Presets & Projects",
+"raw": "Presets & Projects",
+"id": "presets-projects",
+"alt": "presets-projects"
+},
+{
+"level": 2,
+"en": "Calibration",
+"raw": "Calibration",
+"id": "calibration",
+"alt": "calibration"
+},
+{
+"level": 2,
+"en": "Interface Fixes",
+"raw": "Interface Fixes",
+"id": "interface-fixes",
+"alt": "interface-fixes"
+},
+{
+"level": 2,
+"en": "Crashes & Hangs",
+"raw": "Crashes & Hangs",
+"id": "crashes-hangs",
+"alt": "crashes-hangs"
+},
+{
+"level": 2,
+"en": "Linux, macOS & Windows",
+"raw": "Linux, macOS & Windows",
+"id": "linux-macos-windows",
+"alt": "linux-macos-windows"
+},
+{
+"level": 2,
+"en": "Printer Connectivity & Cloud",
+"raw": "Printer Connectivity & Cloud",
+"id": "printer-connectivity-cloud",
+"alt": "printer-connectivity-cloud"
+},
+{
+"level": 1,
+"en": "🧰 Platform & Build",
+"raw": "🧰 Platform & Build",
+"id": "-platform-build",
+"alt": "platform-build"
+},
+{
+"level": 1,
+"en": "🖨️ Printer & Filament Profiles",
+"raw": "🖨️ Printer & Filament Profiles",
+"id": "-printer-filament-profiles",
+"alt": "printer-filament-profiles"
+},
+{
+"level": 2,
+"en": "New Printer Profiles",
+"raw": "New Printer Profiles",
+"id": "new-printer-profiles",
+"alt": "new-printer-profiles"
+},
+{
+"level": 2,
+"en": "New Filament Profiles",
+"raw": "New Filament Profiles",
+"id": "new-filament-profiles",
+"alt": "new-filament-profiles"
+},
+{
+"level": 2,
+"en": "Profile Updates & Fixes",
+"raw": "Profile Updates & Fixes",
+"id": "profile-updates-fixes",
+"alt": "profile-updates-fixes"
+},
+{
+"level": 1,
+"en": "🗪 Localization",
+"raw": "🗪 Localization",
+"id": "-localization",
+"alt": "localization"
+},
+{
+"level": 1,
+"en": "❤️ Support OrcaSlicer",
+"raw": "❤️ Support OrcaSlicer",
+"id": "-support-orcaslicer",
+"alt": "support-orcaslicer"
+}
+],
+"src": "releases/release_2_5_0_rc.md"
+}

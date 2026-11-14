@@ -1,0 +1,218 @@
+{
+"code": [],
+"meta": [],
+"toc": [],
+"img": [
+"<img width=\"500\" alt=\"Copy dialog on a Snapmaker U1 copying tool 1's Standard nozzle settings to tools 2 to 4\" src=\"https://github.com/user-attachments/assets/26fc5b9f-e83a-4680-9d02-5863a63cea96\" />",
+"<img width=\"500\" alt=\"Unsaved changes dialog with a checkbox for each changed value\" src=\"https://github.com/user-attachments/assets/f595d5f7-4587-49d7-9a22-00f86046c1ea\" />",
+"<img width=\"400\" alt=\"Spiral vase object with a height range sliced with several walls\" src=\"https://github.com/user-attachments/assets/c5f6acf7-d8e2-46e9-a6ce-be198b89ae92\" />",
+"<img width=\"400\" alt=\"The same object sliced with a single wall\" src=\"https://github.com/user-attachments/assets/570f7a96-2bcc-45c9-8ff6-5e367eaa1a26\" />",
+"<img width=\"400\" alt=\"Plate refused before slicing with the prime tower variable layer height error\" src=\"https://github.com/user-attachments/assets/2a545f25-7406-45f3-bdf8-aefb014c7d4d\" />",
+"<img width=\"400\" alt=\"The same plate sliced with no prime tower\" src=\"https://github.com/user-attachments/assets/b6c3905c-f2fd-4cbf-ab20-27e1bc18db6b\" />",
+"<img width=\"600\" alt=\"Temperature tower in the G-code preview on a RepRapFirmware printer, each block colored by its nozzle temperature\" src=\"https://github.com/user-attachments/assets/920c21af-b2f3-475f-abe0-72040081d8ab\" />",
+"<img width=\"400\" alt=\"Mixed filament triangle with the 10% minimum for each filament drawn as a dashed line\" src=\"https://github.com/user-attachments/assets/4a08baeb-0631-4cd0-8a0e-008e573fe9c8\" />",
+"<img src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"Support on Ko-fi\">",
+"<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"Donate via PayPal\">"
+],
+"link": [
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Windows_Installer_V2.5.1_x64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Windows_Installer_V2.5.1_arm64.exe",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Windows_V2.5.1_x64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Windows_V2.5.1_arm64_portable.zip",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Mac_universal_V2.5.1.dmg",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.5.1.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V2.5.1.AppImage",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer-Linux-flatpak_V2.5.1_x86_64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/OrcaSlicer-Linux-flatpak_V2.5.1_aarch64.flatpak",
+"https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.1/Debug_PDB_V2.5.1_for_developers_only.7z",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17461",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17373",
+"https://www.orcaslicer.com/wiki/keyboard_shortcuts#customizing-shortcuts",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17421",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17290",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17292",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17062",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17529",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17383",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17183",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17279",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17143",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17154",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16491",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17341",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16884",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16933",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/15917",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17496",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16999",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17204",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17229",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17440",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17439",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17243",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16911",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17464",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17427",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17172",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17459",
+"https://www.orcaslicer.com/wiki/design_sketching#constraints-and-dimensions",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17458",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16866",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17480",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17320",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17474",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17317",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17277",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17137",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17076",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16353",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17152",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17169",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17161",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17194",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17197",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17468",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17365",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17257",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17089",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/16055",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17449",
+"https://github.com/OrcaSlicer/OrcaSlicer/pull/17348",
+"https://github.com/OrcaSlicer/OrcaSlicer/commit/4eda9b55c9b32328a851711ffa27199a35f1f081",
+"https://github.com/user-attachments/assets/87eb0f02-3a07-450f-baf4-0a85bf3bfff2",
+"https://github.com/user-attachments/assets/cb3c0092-3eb8-4bbb-84ae-040139304cad",
+"https://github.com/user-attachments/assets/55c33ed5-5d70-46c2-9dcc-e67ceb9c38ad",
+"https://ko-fi.com/G2G5IP3CP",
+"https://paypal.me/softfever3d"
+],
+"url": [],
+"headings": [
+{
+"level": 1,
+"en": "V2.5.1",
+"raw": "V2.5.1",
+"id": "v251",
+"alt": "v251"
+},
+{
+"level": 2,
+"en": "Downloads",
+"raw": "Downloads",
+"id": "downloads",
+"alt": "downloads"
+},
+{
+"level": 1,
+"en": "🌊 New Features & Improvements",
+"raw": "🌊 New Features & Improvements",
+"id": "-new-features-improvements",
+"alt": "new-features-improvements"
+},
+{
+"level": 1,
+"en": "🛠️ Bug Fixes",
+"raw": "🛠️ Bug Fixes",
+"id": "-bug-fixes",
+"alt": "bug-fixes"
+},
+{
+"level": 2,
+"en": "Security",
+"raw": "Security",
+"id": "security",
+"alt": "security"
+},
+{
+"level": 2,
+"en": "Crashes",
+"raw": "Crashes",
+"id": "crashes",
+"alt": "crashes"
+},
+{
+"level": 2,
+"en": "Slicing & Print Quality",
+"raw": "Slicing & Print Quality",
+"id": "slicing-print-quality",
+"alt": "slicing-print-quality"
+},
+{
+"level": 2,
+"en": "Prime Tower & Multi-Material",
+"raw": "Prime Tower & Multi-Material",
+"id": "prime-tower-multi-material",
+"alt": "prime-tower-multi-material"
+},
+{
+"level": 2,
+"en": "Command Line",
+"raw": "Command Line",
+"id": "command-line",
+"alt": "command-line"
+},
+{
+"level": 2,
+"en": "Preview",
+"raw": "Preview",
+"id": "preview",
+"alt": "preview"
+},
+{
+"level": 2,
+"en": "Design Tab",
+"raw": "Design Tab",
+"id": "design-tab",
+"alt": "design-tab"
+},
+{
+"level": 2,
+"en": "Interface Fixes",
+"raw": "Interface Fixes",
+"id": "interface-fixes",
+"alt": "interface-fixes"
+},
+{
+"level": 2,
+"en": "Windows & macOS",
+"raw": "Windows & macOS",
+"id": "windows-macos",
+"alt": "windows-macos"
+},
+{
+"level": 2,
+"en": "Printer Connectivity & Cloud",
+"raw": "Printer Connectivity & Cloud",
+"id": "printer-connectivity-cloud",
+"alt": "printer-connectivity-cloud"
+},
+{
+"level": 1,
+"en": "🖨️ Printer & Filament Profiles",
+"raw": "🖨️ Printer & Filament Profiles",
+"id": "-printer-filament-profiles",
+"alt": "printer-filament-profiles"
+},
+{
+"level": 2,
+"en": "Profile Updates & Fixes",
+"raw": "Profile Updates & Fixes",
+"id": "profile-updates-fixes",
+"alt": "profile-updates-fixes"
+},
+{
+"level": 1,
+"en": "🗪 Localization",
+"raw": "🗪 Localization",
+"id": "-localization",
+"alt": "localization"
+},
+{
+"level": 1,
+"en": "❤️ Support OrcaSlicer",
+"raw": "❤️ Support OrcaSlicer",
+"id": "-support-orcaslicer",
+"alt": "support-orcaslicer"
+}
+],
+"src": "releases/release_2_5_1.md"
+}

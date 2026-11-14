@@ -1,0 +1,756 @@
+[
+ {
+  "level": 1,
+  "title": "V2.5.0 RC",
+  "prose": [
+   "OrcaSlicer 2.5.0 is nearly ready, and this release candidate is your chance to try it before the final release. 2.5.0 is OrcaSlicer's biggest update yet: you can add features with **Python plugins**, print on **belt printers**, mix new colors from the filaments you have loaded, give surfaces real 3D texture, and design parametric parts in the experimental **Design tab**. It also supports the **Bambu Lab H2C and A2L**, and it starts, slices and exports noticeably faster. The [alpha]({{L1}}) and [beta]({{L2}}) release notes walk through everything new.",
+   "🧩 **Give plugins a try!** The community has already created and shared lots of plugins on the [Orca Cloud plugin hub]({{L3}}), so take a look: you may find just the tool you've been missing. Plugins can add one-click tools, fine-tune how layers and G-code come out, or bring whole new panels into OrcaSlicer. Open **Plugins** from the main menu, subscribe to the ones you like with your Orca Cloud account, and OrcaSlicer installs them and offers updates as their authors improve them. A plugin always asks your permission before it goes online, starts other programs or reaches outside OrcaSlicer's data folder. Have an idea of your own? The [plugin development guide]({{L4}}) will get you started, and once you publish your plugin on the hub, everyone can enjoy it.",
+   "Thank you to everyone who tested the beta! This release candidate fixes many of the bugs and crashes you reported. Slicing works on the first click again, and several crashes are gone, including ones in the Device tab and when opening some projects. After a restart, OrcaSlicer reconnects to your last Bambu Lab printer and keeps the filaments it synced from your AMS. On the Bambu Lab H2D, X2D and H2C, each filament now goes to the nozzle it's actually loaded on. On Linux with Wayland, OrcaSlicer no longer quits when your mouse disconnects or goes to sleep, and lightning infill no longer freezes slicing on some models.",
+   "**Heads-up if you print with more than one filament:** in **Filament for Features**, a feature left on **Default** now always prints with the object's own filament. Before, choosing a filament for infill or a top or bottom surface could quietly switch other features left on Default to it as well. If an older project relied on that, set those features to the filament you want.",
+   "**Note:** This is the release candidate for 2.5.0 and is stable enough for everyday use. Please report any problems on [GitHub]({{L5}})."
+  ],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Downloads",
+  "prose": [
+   "| Platform | File | | --- | --- | | Windows installer (x64) | [OrcaSlicer_Windows_Installer_V2.5.0-rc_x64.exe]({{L6}}) | | Windows installer (ARM64) | [OrcaSlicer_Windows_Installer_V2.5.0-rc_arm64.exe]({{L7}}) | | Windows portable (x64) | [OrcaSlicer_Windows_V2.5.0-rc_x64_portable.zip]({{L8}}) | | Windows portable (ARM64) | [OrcaSlicer_Windows_V2.5.0-rc_arm64_portable.zip]({{L9}}) | | macOS (Apple Silicon and Intel) | [OrcaSlicer_Mac_universal_V2.5.0-rc.dmg]({{L10}}) | | Linux AppImage (x86_64) | [OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.5.0-rc.AppImage]({{L11}}) | | Linux AppImage (aarch64) | [OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V2.5.0-rc.AppImage]({{L12}}) | | Linux Flatpak (x86_64) | [OrcaSlicer-Linux-flatpak_V2.5.0-rc_x86_64.flatpak]({{L13}}) | | Linux Flatpak (aarch64) | [OrcaSlicer-Linux-flatpak_V2.5.0-rc_aarch64.flatpak]({{L14}}) | | Windows debug symbols (for developers) | [Debug_PDB_V2.5.0-rc_for_developers_only.7z]({{L15}}) |"
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "🌊 New Features & Improvements",
+  "prose": [],
+  "items": [
+   {
+    "title": "Shortcuts to switch the main tabs",
+    "rest": "by @Eldenroot and @raistlin7447 in [16301]({{L16}}) and [16918]({{L17}})",
+    "links": [
+     [
+      "16301",
+      "{{L16}}"
+     ],
+     [
+      "16918",
+      "{{L17}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clearer help for connection error -1",
+    "rest": "by @downtime0 in [16273]({{L18}})",
+    "links": [
+     [
+      "16273",
+      "{{L18}}"
+     ]
+    ]
+   },
+   {
+    "title": "Pick Qidi Box slots when printing",
+    "rest": "by @thelegendtubaguy in [16723]({{L19}})",
+    "links": [
+     [
+      "16723",
+      "{{L19}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🛠️ Bug Fixes",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "Slicing & Supports",
+  "prose": [],
+  "items": [
+   {
+    "title": "Slice works on the first click",
+    "rest": "by @anselor in [15180]({{L20}}) — one click on **Slice plate** or **Slice all** is enough again. Before, slicing sometimes opened the Preview with nothing sliced, and you had to click a second time.",
+    "links": [
+     [
+      "15180",
+      "{{L20}}"
+     ]
+    ]
+   },
+   {
+    "title": "No false \"G-code path exceeds the printable range\" error",
+    "rest": "by @cgarwood82 in [16931]({{L21}}) — printers whose nozzle printable area is inset from the bed on two or more adjacent sides now slice normally. Before, every slice failed with this error, wherever the object sat. Printers with an area inset on one side only, such as the Bambu Lab H2D and X2D, weren't affected. Fixes #15746.",
+    "links": [
+     [
+      "16931",
+      "{{L21}}"
+     ]
+    ]
+   },
+   {
+    "title": "Features left on Default use the object's filament",
+    "rest": "by @ianalexis in [17058]({{L22}})",
+    "links": [
+     [
+      "17058",
+      "{{L22}}"
+     ]
+    ]
+   },
+   {
+    "title": "Z-hop settings follow the filament that's printing",
+    "rest": "by @gazi-faysal-jubayer in [16965]({{L23}}) — **Only lift Z above**, **Only lift Z below** and **On surfaces** now use the override of the filament that's actually printing. Before, they were read by extruder instead of by filament, so on a single-extruder printer every filament used filament 1's values, and a filament set to lift only above 1 mm could still lift from the first layer. Fixes #16185.",
+    "links": [
+     [
+      "16965",
+      "{{L23}}"
+     ]
+    ]
+   },
+   {
+    "title": "Build-plate-only tree supports keep their XY clearance",
+    "rest": "by @kisslorand in [17060]({{L24}})",
+    "links": [
+     [
+      "17060",
+      "{{L24}}"
+     ]
+    ]
+   },
+   {
+    "title": "Toolchanges with No sparse layers stay clear of printed parts",
+    "rest": "by @alternativniy in [15441]({{L25}})",
+    "links": [
+     [
+      "15441",
+      "{{L25}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Prime Tower & Multi-Material",
+  "prose": [],
+  "items": [
+   {
+    "title": "Prime tower with different layer height limits per extruder",
+    "rest": "by @Art-Porto in [17000]({{L26}})",
+    "links": [
+     [
+      "17000",
+      "{{L26}}"
+     ]
+    ]
+   },
+   {
+    "title": "Mixed filaments checked against the right extruders",
+    "rest": "by @cgarwood82 in [16947]({{L27}})",
+    "links": [
+     [
+      "16947",
+      "{{L27}}"
+     ]
+    ]
+   },
+   {
+    "title": "Filaments grouped onto the nozzle they're loaded on",
+    "rest": "by @SoftFever in [17074]({{L28}})",
+    "links": [
+     [
+      "17074",
+      "{{L28}}"
+     ]
+    ]
+   },
+   {
+    "title": "Printable area checks on printers with 33 or more extruders",
+    "rest": "by @cgarwood82 in [17002]({{L29}}) — a printable area problem on extruder 33 or above is now reported against the right extruder. Before, it could be reported against a lower one, such as extruder 1 for extruder 33.",
+    "links": [
+     [
+      "17002",
+      "{{L29}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "G-code & Export",
+  "prose": [],
+  "items": [
+   {
+    "title": "Print and Export retry after a post-processing script or plugin fails",
+    "rest": "by @SoftFever and @HanifKoh in [17095]({{L30}}) and [17016]({{L31}})",
+    "links": [
+     [
+      "17095",
+      "{{L30}}"
+     ],
+     [
+      "17016",
+      "{{L31}}"
+     ]
+    ]
+   },
+   {
+    "title": "No doubled extension when exporting objects",
+    "rest": "by @nhchiu in [15296]({{L32}}) — when you export objects as separate STL or DRC files, an object named `bracket.stl` is now saved as `bracket.stl` instead of `bracket.stl.stl`.",
+    "links": [
+     [
+      "15296",
+      "{{L32}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Prepare & Preview",
+  "prose": [],
+  "items": [
+   {
+    "title": "Correct shadows in the realistic view",
+    "rest": "by @thelegendtubaguy in [16942]({{L33}}) — in Preview with the print sequence set to By object, objects that are already printed keep their shadows when the layer slider moves into a later object. In the section view, parts the section cuts away no longer cast shadows.",
+    "links": [
+     [
+      "16942",
+      "{{L33}}"
+     ]
+    ]
+   },
+   {
+    "title": "Smoother center of mass markers",
+    "rest": "by @thelegendtubaguy in [16958]({{L34}}) — you can zoom while the mouse is over the details box, and Esc closes it. On belt printers the markers sit where the toolpaths are, at the top layer you can click the finished print's marker again, and the section view hides markers on the cut-away side.",
+    "links": [
+     [
+      "16958",
+      "{{L34}}"
+     ]
+    ]
+   },
+   {
+    "title": "Support painting includes faces at the threshold angle",
+    "rest": "by @ianalexis in [16957]({{L35}}) — **Highlight overhangs** and **On highlighted overhangs only** now include faces at exactly the threshold angle, which get supports anyway. Before, a blocker painted on highlighted overhangs left a strip of support along its edge. Fixes #11321.",
+    "links": [
+     [
+      "16957",
+      "{{L35}}"
+     ]
+    ]
+   },
+   {
+    "title": "Unprintable objects stay grey after deleting a modifier",
+    "rest": "by @HanifKoh in [17003]({{L36}}) — deleting the last modifier of an unprintable object no longer draws it as printable in the 3D view. The object list and slicing already treated it as unprintable. Fixes #16988.",
+    "links": [
+     [
+      "17003",
+      "{{L36}}"
+     ]
+    ]
+   },
+   {
+    "title": "Arrange keeps short objects on the plate when printing by object",
+    "rest": "by @thelegendtubaguy in [17011]({{L37}}) — with the print sequence set to By object, Arrange now keeps objects shorter than the **Nozzle height** on the plate. Before, some of them could land off the plate, and the plate then reported them as too close together. Fixes #16991.",
+    "links": [
+     [
+      "17011",
+      "{{L37}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Presets & Projects",
+  "prose": [],
+  "items": [
+   {
+    "title": "Publish 3MF on multi-extruder printers and with filament variants",
+    "rest": "by @lamweilun in [16940]({{L38}}), [16971]({{L39}}), [16984]({{L40}}) and [17014]({{L41}})",
+    "links": [
+     [
+      "16940",
+      "{{L38}}"
+     ],
+     [
+      "16971",
+      "{{L39}}"
+     ],
+     [
+      "16984",
+      "{{L40}}"
+     ],
+     [
+      "17014",
+      "{{L41}}"
+     ]
+    ]
+   },
+   {
+    "title": "Fewer false adaptive pressure advance warnings",
+    "rest": "by @HanifKoh in [16978]({{L42}})",
+    "links": [
+     [
+      "16978",
+      "{{L42}}"
+     ]
+    ]
+   },
+   {
+    "title": "Edits stay in the filament slot you edited",
+    "rest": "by @fer-marino in [15896]({{L43}}) — on printers with several filament slots, if you edited one slot and closed the editor without saving, editing another slot no longer saves the first slot's edits into it, and the unsaved-changes dialog no longer crashes. Fixes #15767.",
+    "links": [
+     [
+      "15896",
+      "{{L43}}"
+     ]
+    ]
+   },
+   {
+    "title": "Extra extruders on user printers keep their values",
+    "rest": "by @SwineFlew931 in [16536]({{L44}}) — a user printer preset with more extruders than the system printer it inherits from, such as a Snapmaker U1 with an add-on multi-material unit, now keeps the extra extruders' retraction, Z-hop, wipe and other per-extruder values after a restart. Before, they came back as extruder 1's values. Fixes #16535.",
+    "links": [
+     [
+      "16536",
+      "{{L44}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Calibration",
+  "prose": [],
+  "items": [
+   {
+    "title": "PA Line test uses the assigned filament",
+    "rest": "by @gazi-faysal-jubayer in [16882]({{L45}}) — the test now takes its speed limit, line width and extrusion from the filament it's assigned to, and applies that filament's flow ratio as regular prints do. Before, it used the first filament's values whichever filament it was assigned to, so results on any other slot were off. Fixes #16530.",
+    "links": [
+     [
+      "16882",
+      "{{L45}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Interface Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "AltGr characters in settings boxes no longer switch tabs",
+    "rest": "by @raistlin7447 in [16918]({{L46}})",
+    "links": [
+     [
+      "16918",
+      "{{L46}}"
+     ]
+    ]
+   },
+   {
+    "title": "Gizmo values entered with Tab apply right away",
+    "rest": "by @kisslorand in [16921]({{L47}}) — in the Move, Rotate and Scale tools, a value you confirm with Tab now applies at once, instead of waiting for the mouse to move.",
+    "links": [
+     [
+      "16921",
+      "{{L47}}"
+     ]
+    ]
+   },
+   {
+    "title": "Camera orbit speed with a decimal comma",
+    "rest": "by @thelegendtubaguy in [16967]({{L48}}) — in languages that use a decimal comma, the **Orbit speed multiplier** now keeps its decimals. Before, 0.99 froze the camera and 1.99 acted as 1. Fixes #11534.",
+    "links": [
+     [
+      "16967",
+      "{{L48}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Crashes & Hangs",
+  "prose": [],
+  "items": [
+   {
+    "title": "Device tab works with the Bambu network plug-in 02.08.04",
+    "rest": "by @HanifKoh in [16973]({{L49}}) — the Device tab no longer crashes when it connects to a printer with a print task while the default Bambu network plug-in, 02.08.04, is installed. This crash first appeared in the beta. Fixes #16949.",
+    "links": [
+     [
+      "16973",
+      "{{L49}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash closing with a Bambu LAN printer connected",
+    "rest": "by @SoftFever in [17087]({{L50}}) — closing OrcaSlicer, or reloading the Bambu network plug-in, while a Bambu printer is connected over LAN no longer crashes inside the plug-in. With plug-in 02.03.00, closing can take up to about a second longer.",
+    "links": [
+     [
+      "17087",
+      "{{L50}}"
+     ]
+    ]
+   },
+   {
+    "title": "Projects with missing or empty settings open",
+    "rest": "by @raistlin7447 in [17040]({{L51}}) — a 3MF without a filament color setting, or a project from OrcaSlicer 2.3.1 or later with an empty settings file, now opens instead of crashing. If a project's settings can't be used, OrcaSlicer loads only its objects and keeps your presets, and objects on filaments past the first still get their filaments. Fixes #17008.",
+    "links": [
+     [
+      "17040",
+      "{{L51}}"
+     ]
+    ]
+   },
+   {
+    "title": "No slicing hang with lightning infill",
+    "rest": "by @raistlin7447 in [17066]({{L52}}) — some models used to stop at \"Generating infill regions\" while memory use grew until it ran out. The reporter's project, which has a vertical embossed text part, now slices in 4 seconds. Fixes #17051.",
+    "links": [
+     [
+      "17066",
+      "{{L52}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash slicing a very thin object with a raft",
+    "rest": "by @raistlin7447 in [17013]({{L53}}) — with raft layers on, slicing an object too thin for any layer now shows the \"No layers were detected\" error instead of crashing, as it does without a raft. Fixes #17009.",
+    "links": [
+     [
+      "17013",
+      "{{L53}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash transferring a post-processing script",
+    "rest": "by @raistlin7447 in [16963]({{L54}}) — picking **Transfer** to carry an unsaved post-processing script over to a print preset that has no scripts no longer crashes. Transferring onto a preset with more scripts now replaces them instead of keeping the extra ones, and the unsaved-changes dialog shows all scripts in one row. Fixes #16955.",
+    "links": [
+     [
+      "16963",
+      "{{L54}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash on exit with subscribed preset bundles",
+    "rest": "by @yw4z in [16948]({{L55}}) — OrcaSlicer no longer crashes while closing when a subscribed preset bundle has an update pending.",
+    "links": [
+     [
+      "16948",
+      "{{L55}}"
+     ]
+    ]
+   },
+   {
+    "title": "Windows starts with a hand-edited OrcaSlicer.conf",
+    "rest": "by @SoftFever in [16983]({{L56}}) — OrcaSlicer no longer refuses to start with \"invalid string position\" when `OrcaSlicer.conf` ends right at its closing brace, as it can after you or a tool edit and save it.",
+    "links": [
+     [
+      "16983",
+      "{{L56}}"
+     ]
+    ]
+   },
+   {
+    "title": "No crash on New Project after opening the Design tab",
+    "rest": "by @SoftFever in [16997]({{L57}}) — starting or opening a project no longer crashes when the Design tab was opened earlier in the session and OrcaSlicer isn't the active window.",
+    "links": [
+     [
+      "16997",
+      "{{L57}}"
+     ]
+    ]
+   },
+   {
+    "title": "No macOS hang when a message closes while a project opens",
+    "rest": "by @HMITCHR in [16994]({{L58}}) — opening a project with customized presets soon after launch no longer hangs OrcaSlicer at 100% CPU if you close the \"Customized Preset\" or \"Modified G-code\" message while the app is still preparing its pages in the background.",
+    "links": [
+     [
+      "16994",
+      "{{L58}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Linux, macOS & Windows",
+  "prose": [],
+  "items": [
+   {
+    "title": "No exit on Wayland when the mouse goes away",
+    "rest": "by @HanifKoh in [17015]({{L59}})",
+    "links": [
+     [
+      "17015",
+      "{{L59}}"
+     ]
+    ]
+   },
+   {
+    "title": "Plugins install in the Flatpak",
+    "rest": "by @peachismomo in [17045]({{L60}}) — plugins that need Python packages now install in the Flatpak too. It was missing uv, the tool OrcaSlicer uses to install those packages. Fixes #17006.",
+    "links": [
+     [
+      "17045",
+      "{{L60}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Printer Connectivity & Cloud",
+  "prose": [],
+  "items": [
+   {
+    "title": "Last Bambu printer and AMS-synced filaments kept after a restart",
+    "rest": "by @SoftFever in [17086]({{L61}})",
+    "links": [
+     [
+      "17086",
+      "{{L61}}"
+     ]
+    ]
+   },
+   {
+    "title": "Nozzle diameters read correctly with a decimal comma",
+    "rest": "by @SoftFever in [17079]({{L62}})",
+    "links": [
+     [
+      "17079",
+      "{{L62}}"
+     ]
+    ]
+   },
+   {
+    "title": "Print plate and Send upload G-code to Moonraker printers",
+    "rest": "by @raistlin7447 and @DIEHARDave in [16968]({{L63}}) — with **Use printer agents instead of print hosts** on, **Print plate** and **Send** now upload the plate's G-code, including any post-processing script changes, to Snapmaker, Creality, Qidi and other Moonraker printers under the job name. Before, they uploaded the plate's whole 3MF bundle as a `.gcode` file, so the printer cancelled the print right away (the Snapmaker U1 reported \"Unrecognized G-code Commands\"). Printers whose profile takes a 3MF, such as the Qidi Q2, Q2C, X-Max 4, X-Plus 5 and X-Smart 5, still get the 3MF, now named `<job>.gcode.3mf`, and Qidi printers can now print plates after the first. Fixes #16954.",
+    "links": [
+     [
+      "16968",
+      "{{L63}}"
+     ]
+    ]
+   },
+   {
+    "title": "Every printer reachable from the Print and Send dialogs",
+    "rest": "by @thelegendtubaguy in [16970]({{L64}}) — for printers connected through a printer agent, such as Moonraker and Qidi printers, the Print and Send dialogs no longer refuse an idle printer with \"Cannot send a print job while the printer is updating firmware.\" The Send dialog now lists each printer separately, even when several share a name, so you can send to any of them, and printers connected through a printer agent show their address, such as \"Qidi X-Max 4 (192.168.1.166)\", instead of \"(LAN)\".",
+    "links": [
+     [
+      "16970",
+      "{{L64}}"
+     ]
+    ]
+   },
+   {
+    "title": "Flashforge uploads with manual filament change",
+    "rest": "by @Gregman-js in [15547]({{L65}}) — sending a multi-filament plate to a Flashforge printer without an IFS, such as the Adventurer 5M, now works when the profile uses **Manual Filament Change**. Before, it failed with \"Enable IFS\". Fixes #15307.",
+    "links": [
+     [
+      "15547",
+      "{{L65}}"
+     ]
+    ]
+   },
+   {
+    "title": "Creality CFS filament sync fixes",
+    "rest": "by @Ruivalim in [15857]({{L66}}) — filament sync now reads the CFS slots on the Creality Hi. With an empty slot between loaded ones, selecting a filament after a sync no longer crashes, and loaded slots keep their color. When no brand preset matches, sync keeps the reported material type instead of picking a different material. Fixes #14143.",
+    "links": [
+     [
+      "15857",
+      "{{L66}}"
+     ]
+    ]
+   },
+   {
+    "title": "More Creality printers on the CrealityPrint host",
+    "rest": "by @mjkl-gh in [15858]({{L67}}) — the K1 Max and the CFS-C versions of the K1 Max, K1 SE and K1C now use the CrealityPrint host like the rest of the K1 family, and so does the K2 SE, so they can sync CFS filaments. The K1 Max also gets the LiDAR self-test option in the print dialog.",
+    "links": [
+     [
+      "15858",
+      "{{L67}}"
+     ]
+    ]
+   },
+   {
+    "title": "Clearer filament sync message on printers without a filament system",
+    "rest": "by @HanifKoh in [17021]({{L68}}) — syncing the filament list from a Moonraker or Creality printer that's online but has no AMS, CFS or other multi-material unit now says the printer is connected but has no filament system to sync. Before, it said OrcaSlicer couldn't connect.",
+    "links": [
+     [
+      "17021",
+      "{{L68}}"
+     ]
+    ]
+   },
+   {
+    "title": "Custom filament presets kept on AMS sync",
+    "rest": "by @peachismomo in [16986]({{L69}}) — syncing filaments from an AMS now keeps your custom filament preset in its slot, with your changes, instead of replacing it with the system preset it's based on. The tray's filament data still syncs.",
+    "links": [
+     [
+      "16986",
+      "{{L69}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🧰 Platform & Build",
+  "prose": [],
+  "items": [
+   {
+    "title": "Smaller Windows portable zip and Microsoft Store package",
+    "rest": "by @HanifKoh in [16926]({{L70}}) — they no longer ship about 14,600 preset files, roughly 100 MB unpacked, next to the bundled profile caches that already hold them. Like the installer, they now carry only the caches.",
+    "links": [
+     [
+      "16926",
+      "{{L70}}"
+     ]
+    ]
+   },
+   {
+    "title": "Arch Linux builds use the bundled libjpeg",
+    "rest": "by @SoftFever in [17082]({{L71}}) — when built on Arch-based distributions, OrcaSlicer now links its own libjpeg instead of the system one. Before, JPEG images failed to load or save, and a JPG G-code thumbnail could close the app. Rebuild the dependencies from scratch to pick up the fix.",
+    "links": [
+     [
+      "17082",
+      "{{L71}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🖨️ Printer & Filament Profiles",
+  "prose": [],
+  "items": []
+ },
+ {
+  "level": 2,
+  "title": "New Printer Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "BenFab 450",
+    "rest": "— 426 × 426 × 480 mm Klipper printer from BenGait Labs with 0.4, 0.6, 0.8 and 1.0 mm nozzles, Fine to Extra Draft process presets plus a Strength preset for the 0.4 mm nozzle, and a bed model and texture, by @Aditya-Sharma-12n in [16976]({{L72}})",
+    "links": [
+     [
+      "16976",
+      "{{L72}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "New Filament Profiles",
+  "prose": [],
+  "items": [
+   {
+    "title": "PrintaLot PLA",
+    "rest": "— 24 presets covering 56 Bambu Lab printer and nozzle combinations in the Orca Filament Library. The existing Printalot ABS profile is renamed PrintaLot ABS, and presets based on the old name keep working, by @sirjassam in [16951]({{L73}})",
+    "links": [
+     [
+      "16951",
+      "{{L73}}"
+     ]
+    ]
+   },
+   {
+    "title": "3D-Fuel",
+    "rest": "— Standard PLA, Tough Pro PLA, Pro PETG, Pro PCTG (also Matte, CF, GF and ESD) and PET CF, plus Refuel versions of Standard PLA, Tough Pro PLA, Pro PETG and Pro PCTG, in the Orca Filament Library, by @AlecJ88 in [17032]({{L74}})",
+    "links": [
+     [
+      "17032",
+      "{{L74}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 2,
+  "title": "Profile Updates & Fixes",
+  "prose": [],
+  "items": [
+   {
+    "title": "Blocks RF50 0.6 nozzle",
+    "rest": "— pressure advance is now set at print start, now that the start G-code no longer has a stray comma before its pressure advance line, by @HugoCLSC in [16932]({{L75}})",
+    "links": [
+     [
+      "16932",
+      "{{L75}}"
+     ]
+    ]
+   },
+   {
+    "title": "OpenEYE Peacock V2",
+    "rest": "— the profiles use the Moonraker host instead of OctoPrint, G-code file names use the model and plate names when they are set, and first-layer travel acceleration is 6000 mm/s², by @sezgynus in [17028]({{L76}})",
+    "links": [
+     [
+      "17028",
+      "{{L76}}"
+     ]
+    ]
+   },
+   {
+    "title": "Qidi",
+    "rest": "— process presets for the X-Plus 3, X-Max 3, X-Smart 3, X-Plus 4, Q1 Pro, Q2 and Q2C name G-code files after the filament being printed instead of the one in slot 1, by @foXaCe in [16922]({{L77}})",
+    "links": [
+     [
+      "16922",
+      "{{L77}}"
+     ]
+    ]
+   },
+   {
+    "title": "Snapmaker U1",
+    "rest": "— **Printer structure** shows CoreXY instead of Undefined, with no change to slicing, by @gazi-faysal-jubayer in [16914]({{L78}}) (Fixes #16413)",
+    "links": [
+     [
+      "16914",
+      "{{L78}}"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "level": 1,
+  "title": "🗪 Localization",
+  "prose": [
+   "* Turkish translation update by @emincan2000 in [16943]({{L79}}), filling 221 untranslated strings, most of them the new reasons shown when a setting is hidden or disabled * Basque can now be selected in Preferences, as Euskara, by @mgoiogana in [17052]({{L80}}) * Long tooltips are split into paragraphs, with notes and warnings on their own, a few no longer break lines mid-sentence, and words with several meanings, such as \"Line\" and \"Tools\", can now be translated separately, by @ianalexis in [17055]({{L81}}) * Brazilian Portuguese AI translations reviewed by @afmenez in [16871]({{L82}}) * Russian AI translations reviewed by @Felix14-v2 in [16849]({{L83}})"
+  ],
+  "items": []
+ },
+ {
+  "level": 1,
+  "title": "❤️ Support OrcaSlicer",
+  "prose": [
+   "<a href=\"{{L88}}\">{{I13}}</a>",
+   "<a href=\"{{L89}}\">{{I14}}</a>"
+  ],
+  "items": []
+ }
+]
